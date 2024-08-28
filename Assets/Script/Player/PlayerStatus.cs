@@ -5,23 +5,23 @@ namespace AshGreen.Player
     [CreateAssetMenu(fileName = "PlayerStatus", menuName = "Scriptable Objects/PlayerStatus")]
     public class PlayerStatus : ScriptableObject
     {
-        [Tooltip("ÃÖ´ëÃ¼·Â")]
+        [Tooltip("ìµœëŒ€ì²´ë ¥")]
         public int MaxHP = 0;
-        [Tooltip("°ø°İ·Â")]
+        [Tooltip("ê³µê²©ë ¥")]
         public float AttackPower = 0;
-        [Tooltip("ÀÌµ¿¼Óµµ")]
+        [Tooltip("ì´ë™ì†ë„")]
         public float MoveSpeed = 0;
-        [Tooltip("Á¡ÇÁÆÄ¿ö")]
+        [Tooltip("ì í”„íŒŒì›Œ")]
         public float JumpPower = 0;
-        [Tooltip("ÃÖ´ë Á¡ÇÁ È½¼ö")]
+        [Tooltip("ìµœëŒ€ ì í”„ íšŸìˆ˜")]
         public int JumMaxNum = 0;
-        [Tooltip("½ºÅ³°¡¼Ó")]
+        [Tooltip("ìŠ¤í‚¬ê°€ì†")]
         public float SkillAcceleration;
-        [Tooltip("¾ÆÀÌÅÛ °¡¼Ó")]
+        [Tooltip("ì•„ì´í…œ ê°€ì†")]
         public float ItemAcceleration;
-        [Tooltip("Ä¡¸íÅ¸ È®·ü")]
+        [Tooltip("ì¹˜ëª…íƒ€ í™•ë¥ ")]
         public float CriticalChance;
-        [Tooltip("½ºÅ³°¡¼Ó")]
+        [Tooltip("ì¹˜ëª…íƒ€ ë°ë¯¸ì§€")]
         public float CriticalDamage = 0;
     }
 }
