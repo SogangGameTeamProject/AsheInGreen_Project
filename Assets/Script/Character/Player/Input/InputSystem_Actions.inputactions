@@ -75,7 +75,7 @@
                 {
                     "name": "left",
                     "id": "12f75c8c-9f0b-450e-9f86-68ebe6666132",
-                    "path": "",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -86,7 +86,7 @@
                 {
                     "name": "right",
                     "id": "2594e84b-f5cf-4508-86ac-3f60aad98d37",
-                    "path": "",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -104,39 +104,6 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "One Modifier",
-                    "id": "c05c3398-6b73-469c-944f-6e6dde51ebea",
-                    "path": "OneModifier",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DownJump",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "modifier",
-                    "id": "fe0ab826-1627-445c-b2dd-6be3e6d10c9c",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DownJump",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "binding",
-                    "id": "2bfb9504-f8d6-487f-b2cd-8aaf05eb4eed",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DownJump",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -168,6 +135,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SpecialSkill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee1e124f-497b-4833-8a82-4cf51e86933b",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "DownJump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

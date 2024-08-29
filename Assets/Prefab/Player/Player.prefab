@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e937992967871b040a9da98c781d9cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionState: -1
+  transitionState: 301
 --- !u!1 &1213290544611421034
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477ebdfdbcee89a44b1579ba07a606ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionState: -1
+  transitionState: 201
 --- !u!1 &5101822164403743261
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c553ce9d6aee4cf4db09fc99fa6879ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionState: -1
+  transitionState: 6
 --- !u!1 &7162039420931834393
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf5b83f086e1554ba82e3eb3a1602c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionState: -1
+  transitionState: 101
 --- !u!1 &7587738997638191459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,23 +1122,83 @@ MonoBehaviour:
     m_ActionId: 1dbf0c9c-5f48-423c-8437-c173f893ddbb
     m_ActionName: Player/Move
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1616294030578084601}
+        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b3ad6c8b-48d6-46f1-8170-ca8c0141f515
     m_ActionName: 'Player/Jump[/Keyboard/upArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1616294030578084601}
+        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
+        m_MethodName: OnDownJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 77831ab9-2291-43fc-9d65-a88e52d581d2
     m_ActionName: 'Player/DownJump[/Keyboard/downArrow,/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1616294030578084601}
+        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
+        m_MethodName: OnMainSkill
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f68310ce-b295-4d13-91b5-1cc8cd94f310
     m_ActionName: 'Player/MainSkill[/Keyboard/z]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1616294030578084601}
+        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
+        m_MethodName: OnSecondarySkill
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e69cc638-e8c6-4760-aa34-1fc6c9c80b12
     m_ActionName: 'Player/SecondarySkill[/Keyboard/x]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1616294030578084601}
+        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
+        m_MethodName: OnSpecialSkill
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 813c9d65-f839-40dd-9591-6915e684d98f
     m_ActionName: 'Player/SpecialSkill[/Keyboard/c]'
   - m_PersistentCalls:

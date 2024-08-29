@@ -19,6 +19,7 @@ namespace AshGreen.Player
         public List<StateData> stateList//플레이어 상태 관리를 위한 리스트
             = new List<StateData>();
 
+        public PlayerStateType startStateType = PlayerStateType.OnGround;
 
         //------스테이터스 관련 전역 변수 선언------
         [SerializeField]
@@ -152,6 +153,7 @@ namespace AshGreen.Player
         {
             stateContext = new PlayerStateContext(this);//콘텍스트 생성
             OnSetStatus();//스테이터스 값 초기화
+            StateInit(startStateType);
         }
 
         //캐릭터 스테이터스값 초기 설정
