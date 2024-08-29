@@ -6,7 +6,7 @@ using AshGreen.Singleton;
 
 namespace AshGreen.Sound
 {
-    public class SoundManger : Singleton<SoundManger>
+    public class SoundManager : Singleton<SoundManager>
     {
         public AudioMixer audioMixer = null;
         // BGM과 SFX를 위한 AudioSources

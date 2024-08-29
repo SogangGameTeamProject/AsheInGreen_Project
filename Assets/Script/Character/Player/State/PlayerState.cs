@@ -4,7 +4,7 @@ namespace AshGreen.Player
 {
     public interface PlayerState
     {
-        public void Enter(PlayerController palyer, params object[] parameters)
+        public void Enter(PlayerController palyer)
         {
             // code that runs when we first enter the state
         }

@@ -4,7 +4,7 @@ namespace AshGreen.Player
     {
         Null = -1,
         //기본 상태
-        Idle = 0, Hit = 1, Death = 2, Move = 3, Jump = 4,
+        OnGround = 0, OnAir = 1, Hit = 2, Death = 3, Move = 4, Jump = 5, DownJump = 6,
         //주력 스킬
         MainSkill = 101,
         //보조 스킬

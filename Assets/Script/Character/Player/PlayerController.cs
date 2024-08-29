@@ -151,13 +151,29 @@ namespace AshGreen.Player
         private void Start()
         {
             stateContext = new PlayerStateContext(this);//콘텍스트 생성
-
+            OnSetStatus();//스테이터스 값 초기화
         }
 
+        //캐릭터 스테이터스값 초기 설정
+        private void OnSetStatus()
+        {
+            if (baseStatus)
+            {
+                baseMaxHP = baseStatus.MaxHP;
+                baseAttackPower = baseStatus.AttackPower;
+                baseMoveSpeed = baseStatus.MoveSpeed;
+                baseJumpPower = baseStatus.JumpPower;
+                baseJumMaxNum = baseStatus.JumMaxNum;
+                baseSkillAcceleration = baseStatus.SkillAcceleration;
+                baseItemAcceleration = baseStatus.ItemAcceleration;
+                baseCriticalChance = baseStatus.CriticalChance;
+                baseCriticalDamage = baseStatus.CriticalDamage;
+            }
+        }
 
         //상태패턴 관련 함수들
         //상태 초기화 함수
-        private void StateInit(PlayerStateType type)
+        public void StateInit(PlayerStateType type)
         {
             PlayerState state = null;
             StateData findState = stateList.Find(state => state.type == type);
@@ -169,7 +185,7 @@ namespace AshGreen.Player
             }
         }
         //상태 변환 함수
-        private void StateTransition(PlayerStateType type)
+        public void StateTransition(PlayerStateType type)
         {
             PlayerState state = null;
             StateData findState = stateList.Find(state => state.type == type);

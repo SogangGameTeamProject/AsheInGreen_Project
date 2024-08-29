@@ -10,7 +10,7 @@ namespace AshGreen.Sound
         void Start()
         {
             if (bgmClip != null)
-                SoundManger.Instance.PlayBGM(bgmClip);
+                SoundManager.Instance.PlayBGM(bgmClip);
         }
     }
 
