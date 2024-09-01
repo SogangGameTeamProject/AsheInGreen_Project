@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AshGreen.Player
+namespace AshGreen.Character.Player
 {
     public interface ICommand
     {
-        void Execute(PlayerController player);
+        void Execute(CharacterController player);
     }
 }

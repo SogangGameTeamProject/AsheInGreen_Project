@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4652295904628503298}
   - component: {fileID: 5674054878514744697}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MOVE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  onChangeType: 0
 --- !u!1 &667424640257540288
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 570088366656802659}
   - component: {fileID: 5849430675793163838}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpecialSkillCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8439401359860782599}
   - component: {fileID: 7064525913938430246}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,8 +146,8 @@ GameObject:
   m_Component:
   - component: {fileID: 460971286425467707}
   - component: {fileID: 7471496294023321380}
-  m_Layer: 0
-  m_Name: OnGround
+  m_Layer: 3
+  m_Name: Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,6 +181,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  onJumpType: 5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2304
+  groundChkOffset: {x: -0.03, y: 0.03}
+  groundChkRadius: 0.15
 --- !u!1 &2050740755304086830
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4949966248209138020}
   - component: {fileID: 3303825179608406192}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: JUMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,6 +232,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  onChangeType: 4
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2304
+  groundChkOffset: {x: -0.03, y: -0.03}
+  groundChkRadius: 0.1
 --- !u!1 &2375321093565454292
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7918839664564156851}
   - component: {fileID: 2804268330580424411}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: JumpCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3923464928168616201}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Skills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1303938596426948827}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MainSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7800845520629742333}
   - component: {fileID: 3379389013258795611}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DownJump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7898686766971843961}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CommandList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9199916697435128639}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Effects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626992365920435798}
   - component: {fileID: 4818640215982058056}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SecondarySkillCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,51 +506,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionState: 201
---- !u!1 &5101822164403743261
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7680484583113239691}
-  - component: {fileID: 5952880737058469773}
-  m_Layer: 0
-  m_Name: OnAir
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7680484583113239691
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5101822164403743261}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 884158332261646948}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5952880737058469773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5101822164403743261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32c99ba2abc2cc445a82bffdc17daa18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateSoundClip: {fileID: 0}
 --- !u!1 &5883773900904842054
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 254312122980215360}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ItemList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,7 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3107478903074036958}
   - component: {fileID: 4281676084335371935}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DownJumpCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8116779398082502759}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpecialSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 884158332261646948}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StateList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +643,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 460971286425467707}
-  - {fileID: 7680484583113239691}
   - {fileID: 1856476983800231259}
   - {fileID: 8439401359860782599}
   - {fileID: 4652295904628503298}
@@ -694,7 +661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395541237746630190}
   - component: {fileID: 2511929643863139911}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MainSkillCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1856476983800231259}
   - component: {fileID: 6597726585273871141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,7 +750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2568759751974793044}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SecondarySkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4201977833339405327}
   - component: {fileID: 5687526216093146878}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MoveCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,11 +829,12 @@ GameObject:
   - component: {fileID: 7446970713708843973}
   - component: {fileID: 5141303237562480953}
   - component: {fileID: 2675549718074678608}
-  - component: {fileID: 8597054123653301004}
+  - component: {fileID: 1916279589569673442}
+  - component: {fileID: 2328557855609860877}
   - component: {fileID: 942433221622638762}
   - component: {fileID: 1616294030578084601}
   - component: {fileID: 6167815754311996577}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +925,7 @@ Animator:
   m_GameObject: {fileID: 9204871404527705347}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 312496b25d842af4a938e96c7d5aaee0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7819097b6f64f0a4a866e365fae3e68a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -981,23 +949,23 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 5
+  m_LinearDamping: 1
   m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_GravityScale: 2
+  m_Material: {fileID: 6200000, guid: e75af63c04c1f7843bd74089f5330df8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &8597054123653301004
-CapsuleCollider2D:
+--- !u!61 &1916279589569673442
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1006,7 +974,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e75af63c04c1f7843bd74089f5330df8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1030,9 +998,54 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.23332238, y: -0.12858129}
-  m_Size: {x: 0.37425852, y: 1.0333228}
-  m_Direction: 0
+  m_Offset: {x: -0.030040264, y: 0.59337294}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4, y: 0.03}
+    oldSize: {x: 2.15625, y: 1.375}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.33979946, y: 0.84682345}
+  m_EdgeRadius: 0
+--- !u!58 &2328557855609860877
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204871404527705347}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 4d07bafd070e7cd4882c0b70965d6527, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.030034155, y: 0.17}
+  m_Radius: 0.17025551
 --- !u!114 &942433221622638762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,8 +1063,6 @@ MonoBehaviour:
   - type: 0
     state: {fileID: 7471496294023321380}
   - type: 1
-    state: {fileID: 5952880737058469773}
-  - type: 2
     state: {fileID: 6597726585273871141}
   - type: 3
     state: {fileID: 7064525913938430246}
@@ -1059,9 +1070,8 @@ MonoBehaviour:
     state: {fileID: 5674054878514744697}
   - type: 5
     state: {fileID: 3303825179608406192}
-  - type: 6
-    state: {fileID: 3379389013258795611}
-  baseStatus: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
+  startStateType: 0
+  baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
 --- !u!114 &1616294030578084601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,12 +1129,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5674054878514744697}
+        m_TargetAssemblyTypeName: AshGreen.Player.MoveState, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1dbf0c9c-5f48-423c-8437-c173f893ddbb
     m_ActionName: Player/Move
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1616294030578084601}
         m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3303825179608406192}
+        m_TargetAssemblyTypeName: AshGreen.Character.JumpState, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
         m_Arguments:

@@ -1,19 +1,19 @@
 using AshGreen.Sound;
 using UnityEngine;
 
-namespace AshGreen.Player
+namespace AshGreen.Character
 {
-    public abstract class PlayerStateBase : MonoBehaviour, PlayerState
+    public abstract class CharacterStateBase : MonoBehaviour, CharacterState
     {
-        protected PlayerController _player = null;
+        protected CharacterController _character = null;
         protected SoundManager _soundManager = null;
         public AudioClip stateSoundClip = null;
 
-        public virtual void Enter(PlayerController palyer)
+        public virtual void Enter(CharacterController character)
         {
             //플레이어 초기화
-            if (_player == null)
-                _player = palyer;
+            if (_character == null)
+                _character = character;
             //사운드 매니저 초기화
             if (_soundManager == null)
                 _soundManager = SoundManager.Instance;

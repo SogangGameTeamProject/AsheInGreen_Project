@@ -1,14 +1,14 @@
 using UnityEngine;
 
-namespace AshGreen.Player
+namespace AshGreen.Character.Player
 {
     public class SecondarySkillCommand : PlayerCommandInit
     {
-        public override void Execute(PlayerController player)
+        public override void Execute(CharacterController player)
         {
             //키입력 예외 처리
-            PlayerStateType runningState = player.runningStateType;
-            if (runningState != PlayerStateType.OnGround && runningState != PlayerStateType.OnAir)
+            CharacterStateType runningState = player.runningStateType;
+            if (runningState != CharacterStateType.Idle && runningState != CharacterStateType.Jump)
                 return;
 
             base.Execute(player);

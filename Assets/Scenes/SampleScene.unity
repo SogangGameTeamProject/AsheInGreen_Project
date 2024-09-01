@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 167052425}
   - component: {fileID: 167052427}
   - component: {fileID: 167052426}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 684559971}
   - component: {fileID: 684559970}
   - component: {fileID: 684559969}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1699,7 +1699,7 @@ CompositeCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4d07bafd070e7cd4882c0b70965d6527, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1724,7 +1724,7 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 0.5, y: 0.5, z: 1}
+    PositionDamping: {x: 1, y: 1, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -2204,30 +2204,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7321375806011874976, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 600944622
-      objectReference: {fileID: 0}
-    - target: {fileID: -7321375806011874976, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 3927212287
-      objectReference: {fileID: 0}
-    - target: {fileID: 7765772895149943935, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 2718262285
-      objectReference: {fileID: 0}
-    - target: {fileID: 7765772895149943935, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 1384715798
-      objectReference: {fileID: 0}
-    - target: {fileID: 8645153572625162712, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 1116136153
-      objectReference: {fileID: 0}
-    - target: {fileID: 8645153572625162712, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 2061882790
-      objectReference: {fileID: 0}
     - target: {fileID: 9135078203353011336, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -2,28 +2,29 @@ using UnityEngine;
 using AshGreen.Obsever;
 using System;
 using System.Collections.Generic;
-namespace AshGreen.Player
+using AshGreen.Character;
+namespace AshGreen.Character
 {
-    public class PlayerController : Subject
+    public class CharacterController : Subject
     {
         //------상태 패턴 관련 전역 변수 선언------
-        public PlayerStateType runningStateType;
-        private PlayerStateContext stateContext = null;
+        public CharacterStateType runningStateType;
+        private CharacterStateContext stateContext = null;
         //상태 정보 관리를 위한 클래스
         [System.Serializable]
         public class StateData
         {
-            public PlayerStateType type;//트리거할 타입
-            public PlayerStateBase state;//실행할 상태
+            public CharacterStateType type;//트리거할 타입
+            public CharacterStateBase state;//실행할 상태
         }
         public List<StateData> stateList//플레이어 상태 관리를 위한 리스트
             = new List<StateData>();
 
-        public PlayerStateType startStateType = PlayerStateType.OnGround;
+        public CharacterStateType startStateType;
 
         //------스테이터스 관련 전역 변수 선언------
         [SerializeField]
-        private PlayerStatus baseStatus = null;//기본능력치가 저장되는 변수
+        private CharacterConfig baseConfig = null;//기본능력치가 저장되는 변수
         //최대체력 관련 전역변수
         private int baseMaxHP = 0;
         private int addMaxHp = 0;
@@ -151,49 +152,54 @@ namespace AshGreen.Player
 
         private void Start()
         {
-            stateContext = new PlayerStateContext(this);//콘텍스트 생성
+            stateContext = new CharacterStateContext(this);//콘텍스트 생성
             OnSetStatus();//스테이터스 값 초기화
             StateInit(startStateType);
+        }
+
+        private void FixedUpdate()
+        {
+            stateContext.StateUpdate();
         }
 
         //캐릭터 스테이터스값 초기 설정
         private void OnSetStatus()
         {
-            if (baseStatus)
+            if (baseConfig)
             {
-                baseMaxHP = baseStatus.MaxHP;
-                baseAttackPower = baseStatus.AttackPower;
-                baseMoveSpeed = baseStatus.MoveSpeed;
-                baseJumpPower = baseStatus.JumpPower;
-                baseJumMaxNum = baseStatus.JumMaxNum;
-                baseSkillAcceleration = baseStatus.SkillAcceleration;
-                baseItemAcceleration = baseStatus.ItemAcceleration;
-                baseCriticalChance = baseStatus.CriticalChance;
-                baseCriticalDamage = baseStatus.CriticalDamage;
+                baseMaxHP = baseConfig.MaxHP;
+                baseAttackPower = baseConfig.AttackPower;
+                baseMoveSpeed = baseConfig.MoveSpeed;
+                baseJumpPower = baseConfig.JumpPower;
+                baseJumMaxNum = baseConfig.JumMaxNum;
+                baseSkillAcceleration = baseConfig.SkillAcceleration;
+                baseItemAcceleration = baseConfig.ItemAcceleration;
+                baseCriticalChance = baseConfig.CriticalChance;
+                baseCriticalDamage = baseConfig.CriticalDamage;
             }
         }
 
         //상태패턴 관련 함수들
         //상태 초기화 함수
-        public void StateInit(PlayerStateType type)
+        public void StateInit(CharacterStateType type)
         {
-            PlayerState state = null;
-            StateData findState = stateList.Find(state => state.type == type);
+            CharacterState state = null;
+            StateData findState = stateList.Find(state => state.type.Equals(type));
             if (findState != null)
             {
-                state = findState.state.GetComponent<PlayerState>();
+                state = findState.state.GetComponent<CharacterState>();
                 runningStateType = findState.type;
                 stateContext.Initialize(state);
             }
         }
         //상태 변환 함수
-        public void StateTransition(PlayerStateType type)
+        public void StateTransition(CharacterStateType type)
         {
-            PlayerState state = null;
-            StateData findState = stateList.Find(state => state.type == type);
+            CharacterState state = null;
+            StateData findState = stateList.Find(state => state.type.Equals(type));
             if (findState != null)
             {
-                state = findState.state.GetComponent<PlayerState>();
+                state = findState.state.GetComponent<CharacterState>();
                 runningStateType = findState.type;
                 stateContext.TransitionTo(state);
             }

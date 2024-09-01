@@ -1,13 +1,12 @@
-using AshGreen.Player;
 using UnityEngine;
 
-namespace AshGreen.Player
+namespace AshGreen.Character
 {
-    public class DownJumpState : PlayerStateBase
+    public class DeathState : CharacterStateBase
     {
-        public override void Enter(PlayerController palyer)
+        public override void Enter(CharacterController character)
         {
-            base.Enter(palyer);
+            base.Enter(character);
         }
 
         public override void StateUpdate()

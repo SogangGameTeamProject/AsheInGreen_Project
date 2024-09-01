@@ -1,10 +1,11 @@
 using UnityEngine;
 
-namespace AshGreen.Player
+namespace AshGreen.Character
 {
-    [CreateAssetMenu(fileName = "PlayerStatus", menuName = "Scriptable Objects/PlayerStatus")]
-    public class PlayerStatus : ScriptableObject
+    [CreateAssetMenu(fileName = "Character", menuName = "Scriptable Objects/Character/CharacterStatus")]
+    public class CharacterConfig : ScriptableObject
     {
+        [Header("초기 스테이터스")]
         [Tooltip("최대체력")]
         public int MaxHP = 0;
         [Tooltip("공격력")]
@@ -23,5 +24,8 @@ namespace AshGreen.Player
         public float CriticalChance;
         [Tooltip("치명타 데미지")]
         public float CriticalDamage = 0;
+
+        //[Header("액션 설정")]
+
     }
 }

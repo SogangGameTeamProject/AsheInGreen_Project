@@ -1,10 +1,10 @@
 using UnityEngine;
 
-namespace AshGreen.Player
+namespace AshGreen.Character
 {
-    public interface PlayerState
+    public interface CharacterState
     {
-        public void Enter(PlayerController palyer)
+        public void Enter(CharacterController character)
         {
             // code that runs when we first enter the state
         }

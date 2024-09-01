@@ -1,16 +1,16 @@
 using UnityEngine;
 
-namespace AshGreen.Player
+namespace AshGreen.Character.Player
 {
     public class DownJumpCommand : PlayerCommandInit
     {
-        public override void Execute(PlayerController player)
+        public override void Execute(CharacterController player)
         {
             //키입력 예외 처리
-            PlayerStateType runningState = player.runningStateType;
-            if (runningState != PlayerStateType.OnGround && runningState != PlayerStateType.OnAir)
+            CharacterStateType runningState = player.runningStateType;
+            if (runningState != CharacterStateType.Idle && runningState != CharacterStateType.Jump)
                 return;
-            Debug.Log("아래 점프 키 입력");
+
             base.Execute(player);
         }
     }
