@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace AshGreen.Character.Player
 {
-    public class InputHandler : MonoBehaviour
+    public class InputHandler : NetworkBehaviour
     {
         private CharacterController _player = null;//플레이어 컨트롤러
 
@@ -19,6 +20,13 @@ namespace AshGreen.Character.Player
 
         private void Start()
         {
+            //로컬 객체가 아니면 인풋 시스템 제거
+            if (!IsOwner)
+            {
+                PlayerInput playerInput = GetComponent<PlayerInput>();
+                Destroy(playerInput);
+            }
+                
             _player = GetComponent<CharacterController>();//플레이어 컨트롤러 초기화
         }
 

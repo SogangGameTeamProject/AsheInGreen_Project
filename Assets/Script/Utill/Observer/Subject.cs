@@ -1,27 +1,28 @@
 using System.Collections;
+using Unity.Netcode;
 using UnityEngine;
 
 
 namespace AshGreen.Obsever
 {
-    //¿ÉÀú¹ö ÆĞÅÏ ±¸ÇöÀ» À§ÇÑ ¼­ºêÁ§Æ® °´Ã¼
-    public abstract class Subject : MonoBehaviour
+    //ì˜µì €ë²„ íŒ¨í„´ êµ¬í˜„ì„ ìœ„í•œ ì„œë¸Œì íŠ¸ ê°ì²´
+    public abstract class Subject : NetworkBehaviour
     {
-        private readonly ArrayList _observers = new ArrayList();//¿ÉÀú¹öµéÀÌ ÀúÀåµÉ ¹è¿­¸®½ºÆ®
+        private readonly ArrayList _observers = new ArrayList();//ì˜µì €ë²„ë“¤ì´ ì €ì¥ë  ë°°ì—´ë¦¬ìŠ¤íŠ¸
 
-        //¿ÉÀú¹ö °´Ã¼ Ãß°¡
+        //ì˜µì €ë²„ ê°ì²´ ì¶”ê°€
         public void Attach(Observer observer)
         {
             _observers.Add(observer);
         }
 
-        //¿ÉÀú¹ö °´Ã¼ Á¦°Å
+        //ì˜µì €ë²„ ê°ì²´ ì œê±°
         public void Detach(Observer observer)
         {
             _observers.Remove(observer);
         }
 
-        //¿ÉÀú¹öµé¿¡°Ô ¾Ë¸² ¹ß»ı
+        //ì˜µì €ë²„ë“¤ì—ê²Œ ì•Œë¦¼ ë°œìƒ
         public void NotifyObservers()
         {
             foreach (Observer observer in _observers)
