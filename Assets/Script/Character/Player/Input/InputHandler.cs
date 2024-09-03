@@ -18,6 +18,8 @@ namespace AshGreen.Character.Player
         public PlayerCommandInit _secondarySkillCommand = null;
         public PlayerCommandInit _specialSkillCommand = null;
 
+       
+
         private void Start()
         {
             //로컬 객체가 아니면 인풋 시스템 제거

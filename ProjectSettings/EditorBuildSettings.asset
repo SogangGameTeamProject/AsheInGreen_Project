@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/NGO_Minimal_Setup/NGO_Setup.unity
-    guid: a92d781c2ac8a634e8e9676ec138c0e4
-  - enabled: 1
     path: Assets/Scenes/LobbyScene.unity
     guid: 1ae3ba98ceb3a8340aebb400df3b4911
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9231bd941e236204f935cee2aadb2c6b
+  - enabled: 1
+    path: Assets/NGO_Minimal_Setup/NGO_Setup.unity
+    guid: 458721997f6e4d54792f841ae00480fe
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2e7f2f68640015342907cb69b1567355, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b1409dc58847d0248a973629abc7df87, type: 3}
   m_UseUCBPForAssetBundles: 0
