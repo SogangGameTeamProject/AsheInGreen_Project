@@ -42,16 +42,19 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: BackGround
-    uniqueID: 3046863881
+    uniqueID: 515755701
     locked: 0
-  - name: Platform
-    uniqueID: 2160988657
+  - name: Playtform
+    uniqueID: 2457990567
     locked: 0
-  - name: Dcoration
-    uniqueID: 733544991
+  - name: Environment
+    uniqueID: 2105641507
     locked: 0
   - name: Character
-    uniqueID: 4102331137
+    uniqueID: 2363052051
+    locked: 0
+  - name: Effect
+    uniqueID: 288223265
     locked: 0
   m_RenderingLayers:
   - Default

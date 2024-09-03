@@ -155,6 +155,7 @@ namespace AshGreen.Character
             stateContext = new CharacterStateContext(this);//콘텍스트 생성
             OnSetStatus();//스테이터스 값 초기화
             StateInit(startStateType);
+            Debug.Log("캐릭터 생성");
         }
 
         private void FixedUpdate()
