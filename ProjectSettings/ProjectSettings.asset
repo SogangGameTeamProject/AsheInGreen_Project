@@ -685,10 +685,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 81613984-711c-458f-8268-da87ee75be79
+  cloudProjectId: 0b4014c6-8317-468f-a4b0-48433d5691be
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: AshGreenProject
+  projectName: My project
   organizationId: troy5830
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
