@@ -7,6 +7,9 @@ namespace AshGreen.Character
 {
     public class CharacterController : Subject
     {
+        //
+        public MovementController _movementController = null;
+
         //------상태 패턴 관련 전역 변수 선언------
         public CharacterStateType runningStateType;
         private CharacterStateContext stateContext = null;

@@ -834,6 +834,7 @@ GameObject:
   - component: {fileID: 7835904058551910854}
   - component: {fileID: 4309618130203827925}
   - component: {fileID: 942433221622638762}
+  - component: {fileID: 491064707563821348}
   - component: {fileID: 1616294030578084601}
   - component: {fileID: 6167815754311996577}
   - component: {fileID: 1540418265607757292}
@@ -1061,7 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3471441096
+  GlobalObjectIdHash: 608348716
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1116,6 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc58937b3a865bd4184dd59111ce7679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movementController: {fileID: 491064707563821348}
   runningStateType: 0
   stateList:
   - type: 0
@@ -1130,6 +1132,18 @@ MonoBehaviour:
     state: {fileID: 3303825179608406192}
   startStateType: 0
   baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
+--- !u!114 &491064707563821348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204871404527705347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfc6b4f16d324654089a056ad9914c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1616294030578084601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,18 +1191,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1616294030578084601}
         m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5674054878514744697}
-        m_TargetAssemblyTypeName: AshGreen.Player.MoveState, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:

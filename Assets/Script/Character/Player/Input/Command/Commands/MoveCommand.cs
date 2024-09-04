@@ -10,7 +10,6 @@ namespace AshGreen.Character.Player
             CharacterStateType runningState = player.runningStateType;
             if (runningState != CharacterStateType.Idle && runningState != CharacterStateType.Jump)
                 return;
-
             base.Execute(player);
         }
     }
