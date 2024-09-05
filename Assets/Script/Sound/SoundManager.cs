@@ -28,8 +28,7 @@ namespace AshGreen.Sound
             
         }
 
-
-        private void OnDestroy()
+        private void OnDisable()
         {
             if (audioMixer)
             {

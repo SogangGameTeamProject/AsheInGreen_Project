@@ -4,13 +4,17 @@ namespace AshGreen.Character.Player
 {
     public class MoveCommand: PlayerCommandInit
     {
-        public override void Execute(CharacterController player)
+        public override void Execute(CharacterController player, params object[] objects)
         {
-            //키입력 예외 처리
-            CharacterStateType runningState = player.runningStateType;
-            if (runningState != CharacterStateType.Idle && runningState != CharacterStateType.Jump)
-                return;
             base.Execute(player);
+            //키입력 예외 처리
+            MovementStateType runningState = _player.runningMovementStateType;
+            if (runningState != MovementStateType.Idle && runningState != MovementStateType.Jump)
+                return;
+
+            Vector2 moveVec = (Vector2)objects[0];
+
+            _player._movementController.OnMove(moveVec, _player.MoveSpeed);
         }
     }
 }

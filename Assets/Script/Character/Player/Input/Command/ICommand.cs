@@ -6,6 +6,6 @@ namespace AshGreen.Character.Player
 {
     public interface ICommand
     {
-        void Execute(CharacterController player);
+        void Execute(CharacterController player, params object[] objects);
     }
 }

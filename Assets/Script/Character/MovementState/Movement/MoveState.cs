@@ -5,7 +5,7 @@ namespace AshGreen.Character
 {
     public class MoveState : CharacterStateBase
     {
-        public CharacterStateType onChangeType = CharacterStateType.Idle;//이동 종료 시 전환할 상태타입
+        public MovementStateType onChangeType = MovementStateType.Idle;//이동 종료 시 전환할 상태타입
         private Rigidbody2D rBody = null;
 
         public override void Enter(CharacterController character)

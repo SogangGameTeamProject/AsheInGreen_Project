@@ -18,7 +18,7 @@ namespace AshGreen.Character.Player
         public PlayerCommandInit _secondarySkillCommand = null;
         public PlayerCommandInit _specialSkillCommand = null;
 
-       
+        private MovementStateType _runningStateType;//현재 진행중이 플레이어의 이동 상태
 
         private void Start()
         {
@@ -36,17 +36,18 @@ namespace AshGreen.Character.Player
         //이동 입력 처리
         public void OnMove(InputAction.CallbackContext context)
         {
-            
-            if (context.performed)
+            if (context.phase == InputActionPhase.Started || context.phase == InputActionPhase.Performed)
             {
-                _moveCommand.Execute(_player);
-                Debug.Log("Move");
+                _moveCommand.Execute(_player, context.ReadValue<Vector2>());
             }
+            Debug.Log("Move");
         }
 
         //점프 입력 처리
         public void OnJump(InputAction.CallbackContext context)
         {
+            _runningStateType = _player.runningMovementStateType;
+
             if (context.started)
                 _jumpCommand.Execute(_player);
         }

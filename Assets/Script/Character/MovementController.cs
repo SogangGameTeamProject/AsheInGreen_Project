@@ -15,11 +15,11 @@ namespace AshGreen.Character
         }
 
         //이동 구현
-        public void OnMove(Vector2 moveVec)
+        public void OnMove(Vector2 moveVec, float moveSpeed)
         {
             if (rBody)
             {
-                rBody.linearVelocityX = moveVec.x * _character.MoveSpeed;
+                rBody.linearVelocityX = moveVec.x * moveSpeed;
             }
         }
 

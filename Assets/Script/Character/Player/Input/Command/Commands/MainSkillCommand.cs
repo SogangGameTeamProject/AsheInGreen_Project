@@ -4,11 +4,11 @@ namespace AshGreen.Character.Player
 {
     public class MainSkillCommand : PlayerCommandInit
     {
-        public override void Execute(CharacterController player)
+        public override void Execute(CharacterController player, params object[] objects)
         {
             //키입력 예외 처리
-            CharacterStateType runningState = player.runningStateType;
-            if (runningState != CharacterStateType.Idle && runningState != CharacterStateType.Jump)
+            MovementStateType runningState = player.runningMovementStateType;
+            if (runningState != MovementStateType.Idle && runningState != MovementStateType.Jump)
                 return;
 
             base.Execute(player);
