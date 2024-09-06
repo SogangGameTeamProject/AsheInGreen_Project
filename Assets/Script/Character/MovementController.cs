@@ -23,6 +23,14 @@ namespace AshGreen.Character
             }
         }
 
-
+        //점프 구현 함수
+        public void OnPush(Vector2 jumpVec, float power)
+        {
+            if (rBody)
+            {
+                rBody.linearVelocity = Vector2.zero;
+                rBody.AddForce(jumpVec * power, ForceMode2D.Impulse);
+            }
+        }
     }
 }

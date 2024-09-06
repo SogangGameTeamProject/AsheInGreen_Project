@@ -18,7 +18,11 @@ namespace AshGreen.Character.Player
         public PlayerCommandInit _secondarySkillCommand = null;
         public PlayerCommandInit _specialSkillCommand = null;
 
-        private MovementStateType _runningStateType;//현재 진행중이 플레이어의 이동 상태
+        private MovementStateType _runningMovementType;//현재 진행중이 플레이어의 이동 상태
+        private CombatStateType _runningCombatType;//
+
+        //이동
+        private Vector2 _moveVec = Vector2.zero;
 
         private void Start()
         {
@@ -32,23 +36,33 @@ namespace AshGreen.Character.Player
             _player = GetComponent<CharacterController>();//플레이어 컨트롤러 초기화
         }
 
+
+        public void Update()
+        {
+            _runningMovementType = _player.runningMovementStateType;
+            //이동 입력예외 처리 후 커맨드 호출
+            if (_runningMovementType != MovementStateType.Unable)
+            {
+                _moveCommand.Execute(_player, _moveVec);
+            }
+        }
+
         //------입력 처리 부분------
         //이동 입력 처리
         public void OnMove(InputAction.CallbackContext context)
         {
-            if (context.phase == InputActionPhase.Started || context.phase == InputActionPhase.Performed)
-            {
-                _moveCommand.Execute(_player, context.ReadValue<Vector2>());
-            }
-            Debug.Log("Move");
+            
+            _moveVec = context.ReadValue<Vector2>();
         }
 
         //점프 입력 처리
         public void OnJump(InputAction.CallbackContext context)
         {
-            _runningStateType = _player.runningMovementStateType;
-
-            if (context.started)
+            //예외처리
+            if (context.started &&
+                _runningMovementType != MovementStateType.Unable &&
+                _runningCombatType == CombatStateType.Idle
+                )
                 _jumpCommand.Execute(_player);
         }
 

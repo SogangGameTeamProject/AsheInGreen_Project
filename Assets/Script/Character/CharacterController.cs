@@ -8,14 +8,15 @@ namespace AshGreen.Character
     //이동 상태 타입
     public enum MovementStateType
     {
-        Null = -1, Idle = 0, Move = 1, Jump = 2
+        Null = -1, Idle = 0, Move = 1, Unable = 2, Jump = 3,
     }
 
     //전투 상태 타입
     public enum CombatStateType
     {
-        Null = -1, Idle = 0, Hit = 1, Death = 2
+        Null = -1, Idle = 0, Hit = 1, Death = 2, 
     }
+
     public class CharacterController : Subject
     {
         //
@@ -179,8 +180,10 @@ namespace AshGreen.Character
         private void Start()
         {
             movementStateContext = new CharacterStateContext(this);//콘텍스트 생성
+            combatStateContext = new CharacterStateContext(this);//콘텍스트 생성
             OnSetStatus();//스테이터스 값 초기화
-            StateInit(MovementStateType.Idle);
+            MovementStateInit(MovementStateType.Idle);
+            CombatStateInit(CombatStateType.Idle);
         }
 
         private void FixedUpdate()
@@ -208,19 +211,21 @@ namespace AshGreen.Character
         //----------상태패턴 관련 함수들---------
         //-----이동 상태 관련 함수-----
         //이동 상태 초기화 함수
-        public void StateInit(MovementStateType type)
+        public void MovementStateInit(MovementStateType type)
         {
             CharacterState state = null;
             MovementStateData findState = movementStateList.Find(state => state.type.Equals(type));
+            Debug.Log(findState);
             if (findState != null)
             {
                 state = findState.state.GetComponent<CharacterState>();
                 runningMovementStateType = findState.type;
                 movementStateContext.Initialize(state);
+                Debug.Log("초기화");
             }
         }
         //이동 상태 변환 함수
-        public void StateTransition(MovementStateType type)
+        public void MovementStateTransition(MovementStateType type)
         {
             CharacterState state = null;
             MovementStateData findState = movementStateList.Find(state => state.type.Equals(type));
@@ -233,7 +238,7 @@ namespace AshGreen.Character
         }
         //-----전투 상태 과련 함수----
         //전투 상태 초기화 함수
-        public void StateInit(CombatStateType type)
+        public void CombatStateInit(CombatStateType type)
         {
             CharacterState state = null;
             CombatStateData findState = combatStateList.Find(state => state.type.Equals(type));
@@ -245,7 +250,7 @@ namespace AshGreen.Character
             }
         }
         //전투 상태 변환 함수
-        public void StateTransition(CombatStateType type)
+        public void CombatStateTransition(CombatStateType type)
         {
             CharacterState state = null;
             CombatStateData findState = combatStateList.Find(state => state.type.Equals(type));

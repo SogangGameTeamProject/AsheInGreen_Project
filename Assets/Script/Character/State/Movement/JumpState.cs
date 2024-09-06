@@ -16,10 +16,10 @@ namespace AshGreen.Character
         public override void Enter(CharacterController character)
         {
             base.Enter(character);
+
+            Debug.Log("점프 상태");
             if (rBody == null)
                 rBody = _character.GetComponent<Rigidbody2D>();
-
-            rBody.linearVelocityY = 0;
         }
 
         public override void StateUpdate()
@@ -31,7 +31,7 @@ namespace AshGreen.Character
                 RaycastHit2D groundHit =
                     Physics2D.CircleCast(playerPos + groundChkOffset, groundChkRadius, Vector2.up, groundChkRadius, groundLayer);
                 if (groundHit.collider != null)
-                    _character.StateTransition(onChangeType);
+                    _character.MovementStateTransition(onChangeType);
             }
         }
 

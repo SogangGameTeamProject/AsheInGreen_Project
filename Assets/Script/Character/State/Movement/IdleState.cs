@@ -16,6 +16,7 @@ namespace AshGreen.Character
         public override void Enter(CharacterController character)
         {
             base.Enter(character);
+            Debug.Log("아이들 상태");
             rBody = _character.GetComponent<Rigidbody2D>();
         }
 
@@ -27,14 +28,14 @@ namespace AshGreen.Character
                 Physics2D.CircleCast(playerPos + groundChkOffset, groundChkRadius, Vector2.up, groundChkRadius, groundLayer);
             if (groundHit.collider == null)
             {
-                _character.StateTransition(onJumpType);
+                _character.MovementStateTransition(onJumpType);
                 return;
             }
 
 
             //이동 체크
             if (rBody.linearVelocityX != 0)
-                _character.StateTransition(MovementStateType.Move);
+                _character.MovementStateTransition(onMoveType);
 
             Debug.Log("OnGround");
         }
