@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 2328557855609860877}
   - component: {fileID: 7835904058551910854}
   - component: {fileID: 4309618130203827925}
-  - component: {fileID: 7452173130858682330}
+  - component: {fileID: 7375616912998070963}
   - component: {fileID: 942433221622638762}
   - component: {fileID: 491064707563821348}
   - component: {fileID: 1616294030578084601}
@@ -925,8 +925,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -192636159
-  m_SortingLayer: 0
+  m_SortingLayerID: -1625722723
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -3318188226485093758, guid: ae72133dacba6ec4eb33ecde48f50e56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   SyncPositionZ: 0
   SyncRotAngleX: 0
   SyncRotAngleY: 0
-  SyncRotAngleZ: 0
+  SyncRotAngleZ: 1
   SyncScaleX: 1
   SyncScaleY: 1
   SyncScaleZ: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &7452173130858682330
+--- !u!114 &7375616912998070963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1178,6 +1178,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 2304
+  isPlatformed: 0
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 2048
   runningMovementStateType: 0
   movementStateList:
   - type: 0
@@ -1266,9 +1270,9 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1616294030578084601}
-        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
+        m_TargetAssemblyTypeName: AshGreen.Character.Player.InputHandler, Assembly-CSharp
         m_MethodName: OnDownJump
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

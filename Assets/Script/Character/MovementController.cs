@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.Events;
 using System;
-using Unity.VisualScripting;
+
 namespace AshGreen.Character
 {
     //이동 상태 타입
@@ -21,6 +21,8 @@ namespace AshGreen.Character
         public bool isGrounded = false;//땅위 체크
         public Collider2D groundChecker = null;
         public LayerMask groundLayer;//땅 레이어
+        public bool isPlatformed = false;//플렛폼 위 체크
+        public LayerMask platformLayer;//플렛폼 레이어
 
         //------이동 상태-------
         public MovementStateType runningMovementStateType;
@@ -39,6 +41,7 @@ namespace AshGreen.Character
         //각 이동관련 행동을 실행하는 액션 선언
         public Action<Vector2, float> OnMoveAction;
         public Action<float> OnJumpAction;
+        public Action OnDownJumpAction;
 
         private void Start()
         {
@@ -51,6 +54,7 @@ namespace AshGreen.Character
             //액션 초기화
             OnMoveAction += OnMove;
             OnJumpAction += OnJump;
+            OnDownJumpAction += OnDownJump;
         }
 
         void Update()
@@ -68,13 +72,13 @@ namespace AshGreen.Character
         {
             // groundChecker가 땅(LayerMask)에 닿았는지 여부를 확인
             isGrounded = groundChecker.IsTouchingLayers(groundLayer);
+            isPlatformed = groundChecker.IsTouchingLayers(platformLayer);
         }
 
-        
+
 
         //-----이동 상태 관련 함수-----
         //이동 상태 초기화 함수
-        
         public void MovementStateInit(MovementStateType type)
         {
             CharacterState state = null;
@@ -86,6 +90,7 @@ namespace AshGreen.Character
                 runningMovementStateType = findState.type;
                 movementStateContext.Initialize(state);
             }
+            
         }
         //이동 상태 변환 함수
         public void MovementStateTransition(MovementStateType type)
@@ -121,6 +126,14 @@ namespace AshGreen.Character
                 rBody.linearVelocity = Vector2.zero;
                 rBody.AddForce(Vector2.up * power, ForceMode2D.Impulse);
             }
+        }
+
+
+        //다운 점프 구현 함수
+        private void OnDownJump()
+        {
+            Vector3 playerPos = _character.transform.position;
+            _character.transform.position = new Vector3(playerPos.x, playerPos.y-1.5f, playerPos.z);
         }
     }
 }
