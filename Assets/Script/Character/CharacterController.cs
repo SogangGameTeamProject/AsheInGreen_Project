@@ -5,11 +5,7 @@ using System.Collections.Generic;
 using AshGreen.Character;
 namespace AshGreen.Character
 {
-    //이동 상태 타입
-    public enum MovementStateType
-    {
-        Null = -1, Idle = 0, Move = 1, Unable = 2, Jump = 3,
-    }
+    
 
     //전투 상태 타입
     public enum CombatStateType
@@ -23,19 +19,7 @@ namespace AshGreen.Character
         public MovementController _movementController = null;
 
         //------상태 패턴 관련 전역 변수 선언------
-        //------이동 상태-------
-        public MovementStateType runningMovementStateType;
-        private CharacterStateContext movementStateContext = null;
         
-        //상태 정보 관리를 위한 클래스
-        [System.Serializable]
-        public class MovementStateData
-        {
-            public MovementStateType type;//트리거할 타입
-            public CharacterStateBase state;//실행할 상태
-        }
-        public List<MovementStateData> movementStateList//상태 관리를 위한 리스트
-            = new List<MovementStateData>();
 
         //---------전투 상태--------
         public CombatStateType runningCombatStateType;
@@ -180,16 +164,14 @@ namespace AshGreen.Character
 
         private void Start()
         {
-            movementStateContext = new CharacterStateContext(this);//콘텍스트 생성
             combatStateContext = new CharacterStateContext(this);//콘텍스트 생성
             OnSetStatus();//스테이터스 값 초기화
-            MovementStateInit(MovementStateType.Idle);
             CombatStateInit(CombatStateType.Idle);
         }
 
         private void FixedUpdate()
         {
-            movementStateContext.StateUpdate();
+            combatStateContext.StateUpdate();
         }
 
         //캐릭터 스테이터스값 초기 설정
@@ -210,33 +192,7 @@ namespace AshGreen.Character
         }
 
         //----------상태패턴 관련 함수들---------
-        //-----이동 상태 관련 함수-----
-        //이동 상태 초기화 함수
-        public void MovementStateInit(MovementStateType type)
-        {
-            CharacterState state = null;
-            MovementStateData findState = movementStateList.Find(state => state.type.Equals(type));
-            Debug.Log(findState);
-            if (findState != null)
-            {
-                state = findState.state.GetComponent<CharacterState>();
-                runningMovementStateType = findState.type;
-                movementStateContext.Initialize(state);
-                Debug.Log("초기화");
-            }
-        }
-        //이동 상태 변환 함수
-        public void MovementStateTransition(MovementStateType type)
-        {
-            CharacterState state = null;
-            MovementStateData findState = movementStateList.Find(state => state.type.Equals(type));
-            if (findState != null)
-            {
-                state = findState.state.GetComponent<CharacterState>();
-                runningMovementStateType = findState.type;
-                movementStateContext.TransitionTo(state);
-            }
-        }
+        
         //-----전투 상태 과련 함수----
         //전투 상태 초기화 함수
         public void CombatStateInit(CombatStateType type)

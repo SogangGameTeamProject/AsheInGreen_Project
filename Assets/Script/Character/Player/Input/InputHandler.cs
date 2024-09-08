@@ -39,7 +39,7 @@ namespace AshGreen.Character.Player
 
         public void Update()
         {
-            _runningMovementType = _player.runningMovementStateType;
+            _runningMovementType = _player._movementController.runningMovementStateType;
             //이동 입력예외 처리 후 커맨드 호출
             if (_runningMovementType != MovementStateType.Unable)
             {

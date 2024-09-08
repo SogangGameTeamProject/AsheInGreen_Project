@@ -11,7 +11,6 @@ namespace AshGreen.Character
         public override void Enter(CharacterController character)
         {
             base.Enter(character);
-            Debug.Log("이동 상태");
             if(rBody == null)
                 rBody = _character.GetComponent<Rigidbody2D>();
         }
@@ -19,9 +18,9 @@ namespace AshGreen.Character
         public override void StateUpdate()
         {
 
-            if (rBody.linearVelocityX == 0)
+            if (rBody.linearVelocityX == 0 || !_character._movementController.isGrounded)
             {
-                _character.MovementStateTransition(onChangeType);
+                _character._movementController.MovementStateTransition(onChangeType);
                 return;
             }
                 
