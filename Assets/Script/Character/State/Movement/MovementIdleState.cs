@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace AshGreen.Character
 {
-    public class IdleState : CharacterStateBase
+    public class MovementIdleState : CharacterStateBase
     {
         public MovementStateType onJumpType = MovementStateType.Jump;//바닥에서 떨어질 시 전환할 상태
         public MovementStateType onMoveType = MovementStateType.Move;

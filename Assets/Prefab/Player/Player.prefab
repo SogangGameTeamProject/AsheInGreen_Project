@@ -291,6 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3103259856483584245}
+  - component: {fileID: 6258679949100761643}
   m_Layer: 3
   m_Name: Idle
   m_TagString: Untagged
@@ -313,6 +314,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1733162331067627674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6258679949100761643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409084871258227269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1face213e0d5e54e8ced0e060098cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateSoundClip: {fileID: 0}
 --- !u!1 &4144811368065318285
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,8 +448,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6410513662487870428}
+  - component: {fileID: 6175706039988721744}
   m_Layer: 3
-  m_Name: C
+  m_Name: GroundChker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,6 +471,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9135078203353011336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6175706039988721744
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390099488426859179}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 2304
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1791
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.05, y: 0.05}
+  m_Radius: 0.15
 --- !u!1 &5883773900904842054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,11 +1160,11 @@ MonoBehaviour:
   runningCombatStateType: 0
   combatStateList:
   - type: 0
-    state: {fileID: 0}
-  - type: 0
-    state: {fileID: 0}
-  - type: 0
-    state: {fileID: 0}
+    state: {fileID: 6258679949100761643}
+  - type: 1
+    state: {fileID: 1251446287621297002}
+  - type: 2
+    state: {fileID: 4808559951109672692}
   baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
 --- !u!114 &491064707563821348
 MonoBehaviour:

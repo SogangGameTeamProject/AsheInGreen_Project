@@ -26,6 +26,7 @@ namespace AshGreen.Character
         //------이동 상태-------
         public MovementStateType runningMovementStateType;
         private CharacterStateContext movementStateContext = null;
+        
         //상태 정보 관리를 위한 클래스
         [System.Serializable]
         public class MovementStateData
