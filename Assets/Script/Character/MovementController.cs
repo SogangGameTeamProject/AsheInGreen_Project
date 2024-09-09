@@ -93,6 +93,8 @@ namespace AshGreen.Character
         {
             // groundChecker가 땅(LayerMask)에 닿았는지 여부를 확인
             isGrounded = groundChecker.IsTouchingLayers(groundLayer);
+            if (isGrounded)
+                _character.jumCnt = 0;
             isPlatformed = groundChecker.IsTouchingLayers(platformLayer);
         }
 
@@ -142,6 +144,7 @@ namespace AshGreen.Character
         //점프 구현 함수
         private void OnJump(float power)
         {
+            _character.jumCnt++;
             if (rBody)
             {
                 rBody.linearVelocity = Vector2.zero;

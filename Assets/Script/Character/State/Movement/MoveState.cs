@@ -17,7 +17,13 @@ namespace AshGreen.Character
 
         public override void StateUpdate()
         {
+            //이동 방향에 따른 방향 전환
+            if (rBody.linearVelocityX > 0)
+                _character.CharacterDirection = CharacterDirection.Right;
+            else if (rBody.linearVelocityX < 0)
+                _character.CharacterDirection = CharacterDirection.Left;
 
+            //이동 상태 종료 체크
             if (rBody.linearVelocityX == 0 || !_character._movementController.isGrounded)
             {
                 _character._movementController.MovementStateTransition(onChangeType);

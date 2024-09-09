@@ -5,7 +5,11 @@ using System.Collections.Generic;
 using AshGreen.Character;
 namespace AshGreen.Character
 {
-    
+    //캐릭터 방향 타입
+    public enum CharacterDirection
+    {
+        Left = -1, Right = 1
+    }
 
     //전투 상태 타입
     public enum CombatStateType
@@ -20,7 +24,6 @@ namespace AshGreen.Character
 
         //------상태 패턴 관련 전역 변수 선언------
         
-
         //---------전투 상태--------
         public CombatStateType runningCombatStateType;
         private CharacterStateContext combatStateContext = null;
@@ -33,6 +36,25 @@ namespace AshGreen.Character
         }
         public List<CombatStateData> combatStateList//상태 관리를 위한 리스트
             = new List<CombatStateData>();
+
+        //캐릭터 방향 관련
+        private CharacterDirection characterDirection = CharacterDirection.Right;
+        public CharacterDirection CharacterDirection
+        {
+            get
+            {
+                return characterDirection;
+            }
+
+            set
+            {
+                characterDirection = value;
+                if (characterDirection == CharacterDirection.Left)
+                    transform.localScale = new Vector3(-1, 1, 1);
+                else if (characterDirection == CharacterDirection.Right)
+                    transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
 
         //------스테이터스 관련 전역 변수 선언------
         [SerializeField]
@@ -93,9 +115,9 @@ namespace AshGreen.Character
             }
         }
         //점프 횟수 관련 변수
-        private float baseJumMaxNum = 0;
-        private float addJumMaxNum = 0;
-        public float JumMaxNum
+        private int baseJumMaxNum = 0;
+        private int addJumMaxNum = 0;
+        public int JumMaxNum
         {
             get
             {
@@ -106,6 +128,7 @@ namespace AshGreen.Character
                 addJumMaxNum += value;
             }
         }
+        public int jumCnt { get; set; }
         //스킬가속 관련 변수
         private float baseSkillAcceleration = 0;
         private float addSkillAcceleration = 0;

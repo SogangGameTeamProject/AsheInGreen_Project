@@ -61,9 +61,13 @@ namespace AshGreen.Character.Player
             //예외처리
             if (context.started &&
                 _runningMovementType != MovementStateType.Unable &&
-                _runningCombatType == CombatStateType.Idle
+                _runningCombatType == CombatStateType.Idle &&
+                _player.JumMaxNum > _player.jumCnt
                 )
+            {
+
                 _jumpCommand.Execute(_player);
+            }
         }
 
         //아래 점프 입력 처리

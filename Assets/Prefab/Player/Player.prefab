@@ -500,7 +500,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.03003415, y: 0.05}
+  m_Offset: {x: -0.03190206, y: 0.049999997}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -510,7 +510,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.3, y: 0.15}
+  m_Size: {x: 0.23908469, y: 0.15}
   m_EdgeRadius: 0
 --- !u!1 &5883773900904842054
 GameObject:
@@ -984,7 +984,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 2
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -1137,7 +1137,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ad875da98725649ae659c3ee02935e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionStateInfoList: []
+  TransitionStateInfoList:
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: -357476191
+    DestinationState: -1590825758
+    TransitionDuration: 0
+    TriggerNameHash: -1505326268
+    TransitionIndex: 2
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: -1590825758
+    DestinationState: 646380074
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 1
   m_Animator: {fileID: 5141303237562480953}
 --- !u!114 &942433221622638762
 MonoBehaviour:
