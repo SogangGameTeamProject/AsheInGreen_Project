@@ -62,7 +62,7 @@ namespace AshGreen.Character.Player
             if (context.started &&
                 _runningMovementType != MovementStateType.Unable &&
                 _runningCombatType == CombatStateType.Idle &&
-                _player.JumMaxNum > _player.jumCnt
+                (_player._movementController.isGrounded || (!_player._movementController.isGrounded && _player.JumMaxNum > _player.jumCnt))
                 )
             {
 

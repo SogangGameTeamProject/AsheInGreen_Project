@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using System;
 using Unity.Mathematics;
 using Unity.Netcode.Components;
+using System.Collections;
 
 namespace AshGreen.Character
 {
@@ -29,6 +30,10 @@ namespace AshGreen.Character
         public bool isPlatformed = false;//플렛폼 위 체크
         public LayerMask platformLayer;//플렛폼 레이어
 
+        //충돌 관련
+        public Collider2D[] playerCol;
+        public float downJumpTime = 0.25f;
+
         //------이동 상태-------
         public MovementStateType runningMovementStateType;
         private CharacterStateContext movementStateContext = null;
@@ -46,7 +51,7 @@ namespace AshGreen.Character
         //각 이동관련 행동을 실행하는 액션 선언
         public Action<Vector2, float> OnMoveAction;
         public Action<float> OnJumpAction;
-        public Action OnDownJumpAction;
+        public Action<float> OnDownJumpAction;
 
         private void Start()
         {
@@ -144,7 +149,9 @@ namespace AshGreen.Character
         //점프 구현 함수
         private void OnJump(float power)
         {
-            _character.jumCnt++;
+            if(!isGrounded)
+                _character.jumCnt++;
+
             if (rBody)
             {
                 rBody.linearVelocity = Vector2.zero;
@@ -154,10 +161,38 @@ namespace AshGreen.Character
 
 
         //다운 점프 구현 함수
-        private void OnDownJump()
+        private void OnDownJump(float power)
         {
-            Vector3 playerPos = _character.transform.position;
-            _character.transform.position = new Vector3(playerPos.x, playerPos.y-1.5f, playerPos.z);
+            if (rBody)
+            {
+                rBody.linearVelocity = Vector2.zero;
+                rBody.AddForce(Vector2.down * power, ForceMode2D.Impulse);
+            }
+
+            StartCoroutine(ConflictAdjustment(downJumpTime));
+        }
+        IEnumerator ConflictAdjustment(float enableTIme)
+        {
+            SetCollisionWithLayer(platformLayer, false);
+            yield return new WaitForSeconds(enableTIme);
+            SetCollisionWithLayer(platformLayer, true);
+
+        }
+
+        // 특정 레이어와의 충돌을 켜고 끌 수 있는 메서드
+        public void SetCollisionWithLayer(LayerMask targetLayer, bool enable)
+        {
+            // playerCol 배열에 있는 모든 콜라이더에 대해
+            foreach (Collider2D col in playerCol)
+            {
+                if (col != null)
+                {
+                    // targetLayer와의 충돌을 끄거나 켜는 동작 수행
+                    int layer1 = col.gameObject.layer;
+                    int layer2 = (int)Mathf.Log(targetLayer.value, 2); // 타겟 레이어의 숫자를 계산
+                    Physics2D.IgnoreLayerCollision(layer1, layer2, !enable);
+                }
+            }
         }
     }
 }
