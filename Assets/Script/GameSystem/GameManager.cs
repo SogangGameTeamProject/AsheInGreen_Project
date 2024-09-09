@@ -6,21 +6,34 @@ namespace AshGreen
 {
     public class GameManager : Singleton<GameManager>
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        void OnGUI()
         {
-            
-        }
+            GUILayout.BeginArea(new Rect(10, 10, 300, 200));
 
-        // Update is called once per frame
-        void Update()
-        {
+            if (!NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
+            {
+                if (GUILayout.Button("Start Host"))
+                {
+                    NetworkManager.Singleton.StartHost();
+                }
 
-        }
+                if (GUILayout.Button("Start Client"))
+                {
+                    NetworkManager.Singleton.StartClient();
+                }
+            }
 
-        private void OnGUI()
-        {
-            
+            if (NetworkManager.Singleton.IsServer)
+            {
+                GUILayout.Label("Server is running...");
+            }
+
+            if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
+            {
+                GUILayout.Label("Client is connected...");
+            }
+
+            GUILayout.EndArea();
         }
     }
 

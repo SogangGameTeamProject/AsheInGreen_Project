@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.Events;
 using System;
+using Unity.Mathematics;
+using Unity.Netcode.Components;
 
 namespace AshGreen.Character
 {
@@ -17,6 +19,9 @@ namespace AshGreen.Character
     {
         private CharacterController _character;
         private Rigidbody2D rBody = null;
+
+        private Animator _characterAnimator;
+        private NetworkAnimator _networkAnimator;
 
         public bool isGrounded = false;//땅위 체크
         public Collider2D groundChecker = null;
@@ -47,6 +52,8 @@ namespace AshGreen.Character
         {
             _character = GetComponent<CharacterController>();
             rBody = GetComponent<Rigidbody2D>();
+            _characterAnimator = GetComponent<Animator>();
+            _networkAnimator = GetComponent<NetworkAnimator>();
 
             movementStateContext = new CharacterStateContext(_character);//콘텍스트 생성
             MovementStateInit(MovementStateType.Idle);
@@ -59,6 +66,8 @@ namespace AshGreen.Character
 
         void Update()
         {
+            if (IsOwner)
+                MoveAniUpdate();
             CheckIfGrounded();
         }
 
@@ -66,6 +75,18 @@ namespace AshGreen.Character
         {
             movementStateContext.StateUpdate();
         }
+
+        // 이동 시 애니메이션 파라미터 업데이트
+        private void MoveAniUpdate()
+        {
+            _characterAnimator.SetFloat("VelocityAbcX", Mathf.Abs(rBody.linearVelocityX));
+            _characterAnimator.SetFloat("VelocityY", rBody.linearVelocityY);
+            _characterAnimator.SetBool("IsGrounded", isGrounded);
+
+            // NetworkAnimator로 파라미터 변화를 동기화
+            _networkAnimator.SetTrigger("ParameterUpdated");
+        }
+
 
         // 땅에 있는지 확인하는 함수
         void CheckIfGrounded()

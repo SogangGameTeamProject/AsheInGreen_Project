@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 2328557855609860877}
   - component: {fileID: 7835904058551910854}
   - component: {fileID: 4309618130203827925}
-  - component: {fileID: 7375616912998070963}
+  - component: {fileID: 6028362171517852890}
   - component: {fileID: 942433221622638762}
   - component: {fileID: 491064707563821348}
   - component: {fileID: 1616294030578084601}
@@ -1125,7 +1125,7 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &7375616912998070963
+--- !u!114 &6028362171517852890
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9204871404527705347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Script: {fileID: 11500000, guid: 47ad875da98725649ae659c3ee02935e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TransitionStateInfoList: []
