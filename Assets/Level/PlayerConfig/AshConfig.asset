@@ -15,7 +15,7 @@ MonoBehaviour:
   MaxHP: 4
   AttackPower: 10
   MoveSpeed: 10
-  JumpPower: 60
+  JumpPower: 150
   JumMaxNum: 1
   SkillAcceleration: 0
   ItemAcceleration: 0

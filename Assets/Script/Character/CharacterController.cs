@@ -167,7 +167,7 @@ namespace AshGreen.Character
         private void Start()
         {
             combatStateContext = new CharacterStateContext(this);//콘텍스트 생성
-            OnSetStatus();//스테이터스 값 초기화
+            OnSetStatusServerRpc();//스테이터스 값 초기화
             CombatStateInit(CombatStateType.Idle);
         }
 
@@ -177,7 +177,8 @@ namespace AshGreen.Character
         }
 
         //캐릭터 스테이터스값 초기 설정
-        private void OnSetStatus()
+        [ServerRpc(RequireOwnership = false)]
+        private void OnSetStatusServerRpc()
         {
             if (baseConfig)
             {
