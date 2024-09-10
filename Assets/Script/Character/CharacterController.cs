@@ -72,27 +72,45 @@ namespace AshGreen.Character
                 return maxHp > 0 ? maxHp : 1;
             }
         }
-
         //현재 체력 관련 전역변수
         public NetworkVariable<int> nowHp = new NetworkVariable<int>(0);
+
+        /// <summary>
+        /// 플레이어의 체력을 조정하는 메서드
+        /// </summary>
+        /// <param name="addNowHp">증감 체력값</param>
+        /// <param name="addMaxHp">증감할 최대체력 값</param>
         [ServerRpc(RequireOwnership = false)]
-        public void SetNowHPServerRpc(int value)
+        public void SetHpServerRpc(int addNowHp, int addMaxHp = 0)
         {
-            nowHp.Value += value;
+            this.addMaxHp.Value += addMaxHp;
+            this.nowHp.Value += addNowHp;
         }
 
         //공격력 관련 전역변수
         private NetworkVariable<float> baseAttackPower = new NetworkVariable<float>(0);
         private NetworkVariable<float> addAttackPower = new NetworkVariable<float>(0);
-        private NetworkVariable<float> attackPerPower = new NetworkVariable<float>(1);
+        private NetworkVariable<float> addAttackPerPower = new NetworkVariable<float>(1);
         public float AttackPower
         {
             get
             {
-                float attackPower = (baseAttackPower.Value + addAttackPower.Value) * attackPerPower.Value;
+                float attackPower = (baseAttackPower.Value + addAttackPower.Value) * addAttackPerPower.Value;
                 return attackPower > 0 ? attackPower : 1;
             }
         }
+        /// <summary>
+        /// 플레이어 공격력을 조정하는 메서드
+        /// </summary>
+        /// <param name="addAttackPower">증감할 공격력(고정)</param>
+        /// <param name="addAttackPowerPer">증감할 공격력(%)</param>
+        [ServerRpc(RequireOwnership = false)]
+        public void SetAttackpowerServerRpc(float addAttackPower, float addAttackPerPower = 0)
+        {
+            this.addAttackPower.Value += addAttackPower;
+            this.addAttackPerPower.Value += addAttackPerPower;
+        }
+
         //이동속도 관련 변수
         private NetworkVariable<float> baseMoveSpeed = new NetworkVariable<float>(0);
         private NetworkVariable<float> addMoveSpeed = new NetworkVariable<float>(0);
@@ -104,6 +122,19 @@ namespace AshGreen.Character
                 return (baseMoveSpeed.Value + addMoveSpeed.Value) * addMovePerSpeed.Value;
             }
         }
+
+        /// <summary>
+        /// 이동속도 능력치 조정 메서드
+        /// </summary>
+        /// <param name="addMoveSpeed">증감할 이동속도(고정)</param>
+        /// <param name="addMovePerSpeed">증감할 이동속도(%)</param>
+        [ServerRpc(RequireOwnership = false)]
+        public void SetMovespeedServerRpc(float addMoveSpeed, float addMovePerSpeed = 0)
+        {
+            this.addMoveSpeed.Value += addMoveSpeed;
+            this.addMovePerSpeed.Value += addMovePerSpeed;
+        }
+
         //점프파워 관련 변수
         private NetworkVariable<float> baseJumpPower = new NetworkVariable<float>(0);
         private NetworkVariable<float> addJumpPower = new NetworkVariable<float>(0);
@@ -123,6 +154,18 @@ namespace AshGreen.Character
                 return baseJumMaxNum.Value + addJumMaxNum.Value;
             }
         }
+        /// <summary>
+        /// 점프관련 스탯 조정 메서드
+        /// </summary>
+        /// <param name="addJumMaxNum"></param>
+        /// <param name="addJumpPower"></param>
+        [ServerRpc(RequireOwnership = false)]
+        public void SetJumpServerRpc(int addJumMaxNum, float addJumpPower = 0)
+        {
+            this.addJumMaxNum.Value += addJumMaxNum;
+            this.addJumpPower.Value += addJumpPower;
+        }
+
         public int jumCnt { get; set; }
         //스킬가속 관련 변수
         private NetworkVariable<float> baseSkillAcceleration = new NetworkVariable<float>(0);
@@ -143,6 +186,17 @@ namespace AshGreen.Character
                 return baseItemAcceleration.Value + addItemAcceleration.Value;
             }
         }
+        /// <summary>
+        /// [스킬, 아이템] 가속 스탯 증감 조정 메서드
+        /// </summary>
+        /// <param name="addSkillAcceleration">증감할 스킬 가속</param>
+        /// <param name="addItemAcceleration">증감할 아이템 가속</param>
+        [ServerRpc(RequireOwnership = false)]
+        public void SetAccelerationServerRpc(float addSkillAcceleration, float addItemAcceleration = 0)
+        {
+            this.addSkillAcceleration.Value += addSkillAcceleration;
+            this.addItemAcceleration.Value += addItemAcceleration;
+        }
         //치명타 확률
         private NetworkVariable<float> baseCriticalChance = new NetworkVariable<float>(0);
         private NetworkVariable<float> addCriticalChance =  new NetworkVariable<float>(0);
@@ -162,6 +216,17 @@ namespace AshGreen.Character
             {
                 return baseCriticalDamage.Value + addCriticalDamage.Value;
             }
+        }
+        /// <summary>
+        /// 치명타 관련 스탯 증감 조정 메서드
+        /// </summary>
+        /// <param name="addCriticalChance">증감 치명타 확률</param>
+        /// <param name="addCriticalDamage">증감 치명타 데미지</param>
+        [ServerRpc(RequireOwnership = false)]
+        public void SetCriticalServerRpc(float addCriticalChance, float addCriticalDamage = 0)
+        {
+            this.addCriticalChance.Value += addCriticalChance;
+            this.addCriticalDamage.Value += addCriticalDamage;
         }
 
         private void Start()
