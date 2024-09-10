@@ -88,8 +88,6 @@ namespace AshGreen.Character
             _characterAnimator.SetFloat("VelocityY", rBody.linearVelocityY);
             _characterAnimator.SetBool("IsGrounded", isGrounded);
 
-            // NetworkAnimator로 파라미터 변화를 동기화
-            _networkAnimator.SetTrigger("ParameterUpdated");
         }
 
 
@@ -176,7 +174,6 @@ namespace AshGreen.Character
             SetCollisionWithLayer(platformLayer, false);
             yield return new WaitForSeconds(enableTIme);
             SetCollisionWithLayer(platformLayer, true);
-
         }
 
         // 특정 레이어와의 충돌을 켜고 끌 수 있는 메서드

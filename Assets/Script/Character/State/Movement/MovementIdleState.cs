@@ -16,7 +16,6 @@ namespace AshGreen.Character
         public override void Enter(CharacterController character)
         {
             base.Enter(character);
-            Debug.Log("아이들 상태");
             rBody = _character.GetComponent<Rigidbody2D>();
         }
 

@@ -73,7 +73,6 @@ namespace AshGreen.Character.Player
         //아래 점프 입력 처리
         public void OnDownJump(InputAction.CallbackContext context)
         {
-            Debug.Log("아래점프 입력");
             //예외처리
             if (context.started &&
                 _runningCombatType == CombatStateType.Idle &&

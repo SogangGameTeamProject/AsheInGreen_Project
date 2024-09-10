@@ -3,6 +3,7 @@ using AshGreen.Obsever;
 using System;
 using System.Collections.Generic;
 using AshGreen.Character;
+using Unity.Netcode;
 namespace AshGreen.Character
 {
     //캐릭터 방향 타입
@@ -48,11 +49,12 @@ namespace AshGreen.Character
 
             set
             {
-                characterDirection = value;
-                if (characterDirection == CharacterDirection.Left)
-                    transform.localScale = new Vector3(-1, 1, 1);
-                else if (characterDirection == CharacterDirection.Right)
-                    transform.localScale = new Vector3(1, 1, 1);
+                if(characterDirection != value)
+                {
+                    characterDirection = value;
+                    OnFlipServerRpc();
+                }
+                
             }
         }
 
@@ -214,8 +216,22 @@ namespace AshGreen.Character
             }
         }
 
+        //Flip구현 함수
+        [ServerRpc]
+        private void OnFlipServerRpc()
+        {
+            OnFlipClientRpc();
+        }
+        [ClientRpc]
+        private void OnFlipClientRpc()
+        {
+            Vector3 flipScale = transform.localScale;
+            flipScale.x *= -1;
+            transform.localScale = flipScale;
+        }
+
         //----------상태패턴 관련 함수들---------
-        
+
         //-----전투 상태 과련 함수----
         //전투 상태 초기화 함수
         public void CombatStateInit(CombatStateType type)
