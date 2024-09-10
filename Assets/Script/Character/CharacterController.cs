@@ -74,7 +74,7 @@ namespace AshGreen.Character
         }
 
         //현재 체력 관련 전역변수
-        public NetworkVariable<int> nowHp {  get; private set; }
+        public NetworkVariable<int> nowHp = new NetworkVariable<int>(0);
         [ServerRpc(RequireOwnership = false)]
         public void SetNowHPServerRpc(int value)
         {
@@ -84,7 +84,7 @@ namespace AshGreen.Character
         //공격력 관련 전역변수
         private NetworkVariable<float> baseAttackPower = new NetworkVariable<float>(0);
         private NetworkVariable<float> addAttackPower = new NetworkVariable<float>(0);
-        private NetworkVariable<float> attackPerPower = new NetworkVariable<float>(0);
+        private NetworkVariable<float> attackPerPower = new NetworkVariable<float>(1);
         public float AttackPower
         {
             get
@@ -96,7 +96,7 @@ namespace AshGreen.Character
         //이동속도 관련 변수
         private NetworkVariable<float> baseMoveSpeed = new NetworkVariable<float>(0);
         private NetworkVariable<float> addMoveSpeed = new NetworkVariable<float>(0);
-        private NetworkVariable<float> addMovePerSpeed = new NetworkVariable<float>(0);
+        private NetworkVariable<float> addMovePerSpeed = new NetworkVariable<float>(1);
         public float MoveSpeed
         {
             get
@@ -182,6 +182,7 @@ namespace AshGreen.Character
             if (baseConfig)
             {
                 baseMaxHP.Value = baseConfig.MaxHP;
+                Debug.Log(baseMaxHP.Value);
                 nowHp.Value = baseMaxHP.Value;
                 baseAttackPower.Value = baseConfig.AttackPower;
                 baseMoveSpeed.Value = baseConfig.MoveSpeed;
