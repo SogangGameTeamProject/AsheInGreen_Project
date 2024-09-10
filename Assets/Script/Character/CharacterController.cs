@@ -62,128 +62,105 @@ namespace AshGreen.Character
         [SerializeField]
         private CharacterConfig baseConfig = null;//기본능력치가 저장되는 변수
         //최대체력 관련 전역변수
-        private int baseMaxHP = 0;
-        private int addMaxHp = 0;
+        private NetworkVariable<int> baseMaxHP = new NetworkVariable<int>(0);
+        private NetworkVariable<int> addMaxHp = new NetworkVariable<int>(0);
         public int MaxHP
         {
             get
             {
-                int maxHp = baseMaxHP + addMaxHp;
+                int maxHp = baseMaxHP.Value + addMaxHp.Value;
                 return maxHp > 0 ? maxHp : 1;
             }
-            set
-            {
-                addMaxHp += value;
-            }
         }
+
+        //현재 체력 관련 전역변수
+        public NetworkVariable<int> nowHp {  get; private set; }
+        [ServerRpc(RequireOwnership = false)]
+        public void SetNowHPServerRpc(int value)
+        {
+            nowHp.Value += value;
+        }
+
         //공격력 관련 전역변수
-        private float baseAttackPower = 0;
-        private float addAttackPower = 0;
+        private NetworkVariable<float> baseAttackPower = new NetworkVariable<float>(0);
+        private NetworkVariable<float> addAttackPower = new NetworkVariable<float>(0);
+        private NetworkVariable<float> attackPerPower = new NetworkVariable<float>(0);
         public float AttackPower
         {
             get
             {
-                float attackPower = baseAttackPower + addAttackPower;
+                float attackPower = (baseAttackPower.Value + addAttackPower.Value) * attackPerPower.Value;
                 return attackPower > 0 ? attackPower : 1;
-            }
-            set
-            {
-                addAttackPower += value;
             }
         }
         //이동속도 관련 변수
-        private float baseMoveSpeed = 0;
-        private float addMoveSpeed = 0;
+        private NetworkVariable<float> baseMoveSpeed = new NetworkVariable<float>(0);
+        private NetworkVariable<float> addMoveSpeed = new NetworkVariable<float>(0);
+        private NetworkVariable<float> addMovePerSpeed = new NetworkVariable<float>(0);
         public float MoveSpeed
         {
             get
             {
-                return baseMoveSpeed + addMoveSpeed;
-            }
-            set { 
-                addMoveSpeed += value;
+                return (baseMoveSpeed.Value + addMoveSpeed.Value) * addMovePerSpeed.Value;
             }
         }
         //점프파워 관련 변수
-        private float baseJumpPower = 0;
-        private float addJumpPower = 0;
+        private NetworkVariable<float> baseJumpPower = new NetworkVariable<float>(0);
+        private NetworkVariable<float> addJumpPower = new NetworkVariable<float>(0);
         public float JumpPower
         {
             get { 
-                return baseJumpPower + addJumpPower; 
-            }
-            set { 
-                addJumpPower += value;
+                return baseJumpPower.Value + addJumpPower.Value; 
             }
         }
         //점프 횟수 관련 변수
-        private int baseJumMaxNum = 0;
-        private int addJumMaxNum = 0;
+        private NetworkVariable<int> baseJumMaxNum = new NetworkVariable<int>(0);
+        private NetworkVariable<int> addJumMaxNum =  new NetworkVariable<int>(0);
         public int JumMaxNum
         {
             get
             {
-                return baseJumMaxNum + addJumMaxNum;
-            }
-            set
-            {
-                addJumMaxNum += value;
+                return baseJumMaxNum.Value + addJumMaxNum.Value;
             }
         }
         public int jumCnt { get; set; }
         //스킬가속 관련 변수
-        private float baseSkillAcceleration = 0;
-        private float addSkillAcceleration = 0;
+        private NetworkVariable<float> baseSkillAcceleration = new NetworkVariable<float>(0);
+        private NetworkVariable<float> addSkillAcceleration =  new NetworkVariable<float>(0);
         public float SkillAcceleration {
             get
             {
-                return baseSkillAcceleration + addSkillAcceleration;
-            }
-            set
-            {
-                addSkillAcceleration += value;
+                return baseSkillAcceleration.Value + addSkillAcceleration.Value;
             }
         }
         //아이템가속 관련 변수
-        private float baseItemAcceleration = 0;
-        private float addItemAcceleration = 0;
+        private NetworkVariable<float> baseItemAcceleration = new NetworkVariable<float>(0);
+        private NetworkVariable<float> addItemAcceleration =  new NetworkVariable<float>(0);
         public float ItemAcceleration
         {
             get
             {
-                return baseItemAcceleration + addItemAcceleration;
-            }
-            set
-            {
-                addItemAcceleration += value;
+                return baseItemAcceleration.Value + addItemAcceleration.Value;
             }
         }
         //치명타 확률
-        private float baseCriticalChance = 0;
-        private float addCriticalChance = 0;
+        private NetworkVariable<float> baseCriticalChance = new NetworkVariable<float>(0);
+        private NetworkVariable<float> addCriticalChance =  new NetworkVariable<float>(0);
         public float CriticalChance
         {
             get
             {
-                return baseCriticalChance + addCriticalChance;
-            }
-            set
-            {
-                addCriticalChance += value;
+                return baseCriticalChance.Value + addCriticalChance.Value;
             }
         }
         //치명타 데미지
-        private float baseCriticalDamage = 0;
-        private float addCriticalDamage = 0;
+        private NetworkVariable<float> baseCriticalDamage = new NetworkVariable<float>(0);
+        private NetworkVariable<float> addCriticalDamage  = new NetworkVariable<float>(0);
         public float CriticalDamage
         {
             get
             {
-                return baseCriticalDamage + addCriticalDamage;
-            }
-            set
-            {
-                addCriticalDamage += value;
+                return baseCriticalDamage.Value + addCriticalDamage.Value;
             }
         }
 
@@ -204,15 +181,16 @@ namespace AshGreen.Character
         {
             if (baseConfig)
             {
-                baseMaxHP = baseConfig.MaxHP;
-                baseAttackPower = baseConfig.AttackPower;
-                baseMoveSpeed = baseConfig.MoveSpeed;
-                baseJumpPower = baseConfig.JumpPower;
-                baseJumMaxNum = baseConfig.JumMaxNum;
-                baseSkillAcceleration = baseConfig.SkillAcceleration;
-                baseItemAcceleration = baseConfig.ItemAcceleration;
-                baseCriticalChance = baseConfig.CriticalChance;
-                baseCriticalDamage = baseConfig.CriticalDamage;
+                baseMaxHP.Value = baseConfig.MaxHP;
+                nowHp.Value = baseMaxHP.Value;
+                baseAttackPower.Value = baseConfig.AttackPower;
+                baseMoveSpeed.Value = baseConfig.MoveSpeed;
+                baseJumpPower.Value = baseConfig.JumpPower;
+                baseJumMaxNum.Value = baseConfig.JumMaxNum;
+                baseSkillAcceleration.Value = baseConfig.SkillAcceleration;
+                baseItemAcceleration.Value = baseConfig.ItemAcceleration;
+                baseCriticalChance.Value = baseConfig.CriticalChance;
+                baseCriticalDamage.Value = baseConfig.CriticalDamage;
             }
         }
 
