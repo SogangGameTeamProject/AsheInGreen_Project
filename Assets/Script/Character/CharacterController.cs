@@ -291,7 +291,7 @@ namespace AshGreen.Character
         }
 
         //Flip구현 함수
-        [ServerRpc]
+        [ServerRpc(RequireOwnership = false)]
         private void OnFlipServerRpc()
         {
             OnFlipClientRpc();

@@ -9,7 +9,7 @@ namespace AshGreen.DamageObj
         private void OnTriggerEnter2D(Collider2D collision)
         {
             IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
-            Debug.Log(damageable);
+
             // 만약 인터페이스가 존재하면 실행
             if (damageable != null)
             {

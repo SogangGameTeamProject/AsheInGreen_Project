@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2de2960bac83d4e9d4ab213ea2a513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isDontDestroy: 0
+  _isDontDestroy: 1
 --- !u!1 &684559965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,7 +2620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf09a412da56bf458842fcdb1f563c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isDontDestroy: 0
+  _isDontDestroy: 1
   audioMixer: {fileID: 0}
   bgmSource: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -2792,12 +2792,12 @@ SceneRoots:
   m_Roots:
   - {fileID: 1520066186}
   - {fileID: 1925866502}
+  - {fileID: 573165291}
   - {fileID: 519420032}
   - {fileID: 1376333973}
   - {fileID: 1561649648}
   - {fileID: 306830106}
   - {fileID: 926074843}
   - {fileID: 1954254020}
-  - {fileID: 573165291}
   - {fileID: 1192094826}
   - {fileID: 1659097362}
