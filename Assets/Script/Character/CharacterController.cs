@@ -18,10 +18,13 @@ namespace AshGreen.Character
         Null = -1, Idle = 0, Hit = 1, Death = 2, 
     }
 
+    [System.Serializable]
     public class CharacterController : Subject
     {
-        //
+        //외부 컨트롤러들
         public MovementController _movementController = null;
+        public DamageReceiver _damageReceiver = null;
+        public StatusEffectManager _statusEffectManager = null;
 
         //------상태 패턴 관련 전역 변수 선언------
         
@@ -49,12 +52,10 @@ namespace AshGreen.Character
 
             set
             {
-                if(characterDirection != value)
-                {
-                    characterDirection = value;
+                characterDirection = value;
+                float localScaleX = transform.localScale.x;
+                if((localScaleX < 0 && value == CharacterDirection.Right) || (localScaleX > 0 && value == CharacterDirection.Left))
                     OnFlipServerRpc();
-                }
-                
             }
         }
 
@@ -75,6 +76,19 @@ namespace AshGreen.Character
         //현재 체력 관련 전역변수
         public NetworkVariable<int> nowHp = new NetworkVariable<int>(0);
 
+        public int NowHP
+        {
+            get
+            {
+                return nowHp.Value;
+            }
+            private set
+            {
+                nowHp.Value = Mathf.Clamp(value, 0, MaxHP);
+                Debug.Log("현재체력: " + nowHp.Value);
+            }
+        }
+
         /// <summary>
         /// 플레이어의 체력을 조정하는 메서드
         /// </summary>
@@ -84,7 +98,7 @@ namespace AshGreen.Character
         public void SetHpServerRpc(int addNowHp, int addMaxHp = 0)
         {
             this.addMaxHp.Value += addMaxHp;
-            this.nowHp.Value += addNowHp;
+            NowHP += addNowHp;
         }
 
         //공격력 관련 전역변수
@@ -229,11 +243,26 @@ namespace AshGreen.Character
             this.addCriticalDamage.Value += addCriticalDamage;
         }
 
-        private void Start()
+        public override void OnNetworkSpawn()
         {
+            base.OnNetworkSpawn();
+
             combatStateContext = new CharacterStateContext(this);//콘텍스트 생성
             OnSetStatusServerRpc();//스테이터스 값 초기화
             CombatStateInit(CombatStateType.Idle);
+
+            //피격 타격 액션 설정
+            _damageReceiver.TakeDamageAction += TakeDamage;
+            _damageReceiver.DealDamageAction += DealDamage;
+        }
+
+        public override void OnNetworkDespawn()
+        {
+            base.OnNetworkDespawn();
+
+            //피격 타격 액션 제거
+            _damageReceiver.TakeDamageAction -= TakeDamage;
+            _damageReceiver.DealDamageAction -= DealDamage;
         }
 
         private void FixedUpdate()
@@ -273,6 +302,24 @@ namespace AshGreen.Character
             Vector3 flipScale = transform.localScale;
             flipScale.x *= -1;
             transform.localScale = flipScale;
+        }
+
+        /// <summary>
+        /// 피격 타격 처리 메서드
+        /// </summary>
+        /// 
+        public void TakeDamage(float damage)
+        {
+            Debug.Log("플레이어 피격 처리");
+            SetHpServerRpc(-(int)damage);
+        }
+
+        public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
+        {
+            if(target.runningCombatStateType != CombatStateType.Death)
+            {
+                target._damageReceiver.TakeDamage(damage);
+            }
         }
 
         //----------상태패턴 관련 함수들---------

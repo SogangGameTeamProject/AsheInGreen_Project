@@ -852,7 +852,9 @@ GameObject:
   - component: {fileID: 4309618130203827925}
   - component: {fileID: 6028362171517852890}
   - component: {fileID: 942433221622638762}
+  - component: {fileID: 1434835013967201027}
   - component: {fileID: 491064707563821348}
+  - component: {fileID: 7291620524692100264}
   - component: {fileID: 1616294030578084601}
   - component: {fileID: 6167815754311996577}
   - component: {fileID: 1540418265607757292}
@@ -973,7 +975,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 7
   m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_GravityScale: 5
@@ -1157,6 +1159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementController: {fileID: 491064707563821348}
+  _damageReceiver: {fileID: 1434835013967201027}
+  _statusEffectManager: {fileID: 7291620524692100264}
   runningCombatStateType: 0
   combatStateList:
   - type: 0
@@ -1166,8 +1170,18 @@ MonoBehaviour:
   - type: 2
     state: {fileID: 4808559951109672692}
   baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
-  nowHp:
-    m_InternalValue: 0
+--- !u!114 &1434835013967201027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204871404527705347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dae4cefe5f935408f3af3550837bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &491064707563821348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,6 +1217,18 @@ MonoBehaviour:
     state: {fileID: 3303825179608406192}
   - type: 2
     state: {fileID: 8777053553272664512}
+--- !u!114 &7291620524692100264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204871404527705347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9cb4b2abafdd2448d669d6edf3e43d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1616294030578084601
 MonoBehaviour:
   m_ObjectHideFlags: 0

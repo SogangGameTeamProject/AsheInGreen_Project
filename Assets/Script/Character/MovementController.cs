@@ -49,12 +49,14 @@ namespace AshGreen.Character
             = new List<MovementStateData>();
 
         //각 이동관련 행동을 실행하는 액션 선언
-        public Action<Vector2, float> OnMoveAction;
-        public Action<float> OnJumpAction;
-        public Action<float> OnDownJumpAction;
+        public event Action<Vector2, float> MoveAction;
+        public event Action<float> JumpAction;
+        public event Action<float> DownJumpAction;
 
-        private void Start()
+        public override void OnNetworkSpawn()
         {
+            base.OnNetworkSpawn();
+
             _character = GetComponent<CharacterController>();
             rBody = GetComponent<Rigidbody2D>();
             _characterAnimator = GetComponent<Animator>();
@@ -64,9 +66,19 @@ namespace AshGreen.Character
             MovementStateInit(MovementStateType.Idle);
 
             //액션 초기화
-            OnMoveAction += OnMove;
-            OnJumpAction += OnJump;
-            OnDownJumpAction += OnDownJump;
+            MoveAction += OnMove;
+            JumpAction += OnJump;
+            DownJumpAction += OnDownJump;
+        }
+
+        public override void OnNetworkDespawn()
+        {
+            base.OnNetworkDespawn();
+
+            //액션 제거
+            MoveAction -= OnMove;
+            JumpAction -= OnJump;
+            DownJumpAction -= OnDownJump;
         }
 
         void Update()
@@ -129,6 +141,24 @@ namespace AshGreen.Character
                 runningMovementStateType = findState.type;
                 movementStateContext.TransitionTo(state);
             }
+        }
+
+        /// <summary>
+        /// 이동 관련 기능 수행을 호출받아 이벤트를 실행시키는 메서드들
+        /// </summary>
+        public void ExecuteMove(Vector2 moveVec, float moveSpeed)
+        {
+            MoveAction?.Invoke(moveVec, moveSpeed);
+        }
+        
+        public void ExecutJump(float power)
+        {
+            JumpAction?.Invoke(power);
+        }
+
+        public void ExecutDownJump(float power)
+        {
+            DownJumpAction?.Invoke(power);
         }
 
         /// <summary>

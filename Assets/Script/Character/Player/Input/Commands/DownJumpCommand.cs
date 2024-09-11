@@ -8,7 +8,7 @@ namespace AshGreen.Character.Player
         {
             base.Execute(player);
 
-            _player._movementController.OnDownJumpAction?.Invoke(_player.JumpPower);
+            _player._movementController.ExecutDownJump(_player.JumpPower);
         }
     }
 }

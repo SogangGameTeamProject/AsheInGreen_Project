@@ -10,7 +10,7 @@ namespace AshGreen.Character.Player
         {
             base.Execute(player);
             moveVec = (Vector2)objects[0];
-            _player._movementController.OnMoveAction?.Invoke(moveVec, _player.MoveSpeed);
+            _player._movementController.ExecuteMove(moveVec, _player.MoveSpeed);
         }
     }
 }
