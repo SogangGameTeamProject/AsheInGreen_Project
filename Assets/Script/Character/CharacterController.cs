@@ -312,6 +312,7 @@ namespace AshGreen.Character
         {
             Debug.Log("플레이어 피격 처리");
             SetHpServerRpc(-(int)damage);
+            CombatStateTransition(CombatStateType.Hit);
         }
 
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)

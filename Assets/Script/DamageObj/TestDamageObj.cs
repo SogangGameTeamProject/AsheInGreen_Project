@@ -13,7 +13,6 @@ namespace AshGreen.DamageObj
             // 만약 인터페이스가 존재하면 실행
             if (damageable != null)
             {
-                // 데미지 10을 전달
                 damageable.TakeDamage(damage);
             }
         }

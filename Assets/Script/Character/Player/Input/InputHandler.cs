@@ -41,7 +41,7 @@ namespace AshGreen.Character.Player
         {
             _runningMovementType = _player._movementController.runningMovementStateType;
             //이동 입력예외 처리 후 커맨드 호출
-            if (_runningMovementType != MovementStateType.Unable)
+            if (_runningMovementType != MovementStateType.Unable && _moveVec != Vector2.zero)
             {
                 _moveCommand.Execute(_player, _moveVec);
             }

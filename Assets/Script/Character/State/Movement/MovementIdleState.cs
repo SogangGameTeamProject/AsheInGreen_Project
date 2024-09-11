@@ -6,10 +6,6 @@ namespace AshGreen.Character
     {
         public MovementStateType onJumpType = MovementStateType.Jump;//바닥에서 떨어질 시 전환할 상태
         public MovementStateType onMoveType = MovementStateType.Move;
-        //바닥 체크를 위한 설정값
-        public LayerMask groundLayer;
-        public Vector2 groundChkOffset = Vector2.zero;
-        public float groundChkRadius = 0.15f;
 
         private Rigidbody2D rBody = null;
 
@@ -30,7 +26,7 @@ namespace AshGreen.Character
 
 
             //이동 체크
-            if (rBody.linearVelocityX != 0)
+            if (Mathf.Round(rBody.linearVelocityX) != 0)
                 _character._movementController.MovementStateTransition(onMoveType);
         }
 
