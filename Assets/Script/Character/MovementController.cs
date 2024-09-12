@@ -116,7 +116,19 @@ namespace AshGreen.Character
 
         //-----이동 상태 관련 함수-----
         //이동 상태 초기화 함수
-        public void MovementStateInit(MovementStateType type)
+        [ServerRpc(RequireOwnership = false)]
+        public void MovementStateInitServerRpc(MovementStateType type)
+        {
+            MovementStateInitClientRpc(type);
+        }
+        [ClientRpc]
+
+        public void MovementStateInitClientRpc(MovementStateType type)
+        {
+            MovementStateInit(type);
+        }
+
+        private void MovementStateInit(MovementStateType type)
         {
             CharacterState state = null;
             MovementStateData findState = movementStateList.Find(state => state.type.Equals(type));
@@ -127,9 +139,20 @@ namespace AshGreen.Character
                 runningMovementStateType = findState.type;
                 movementStateContext.Initialize(state);
             }
-            
+
         }
         //이동 상태 변환 함수
+        [ServerRpc(RequireOwnership = false)]
+        public void MovementStateTransitionServerRpc(MovementStateType type)
+        {
+            MovementStateTransitionClientRpc(type);
+        }
+
+        [ClientRpc]
+        public void MovementStateTransitionClientRpc(MovementStateType type)
+        {
+            MovementStateTransition(type);
+        }
         public void MovementStateTransition(MovementStateType type)
         {
             CharacterState state = null;

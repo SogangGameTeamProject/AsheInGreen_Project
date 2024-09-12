@@ -1,9 +1,10 @@
 using AshGreen.Sound;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace AshGreen.Character
 {
-    public abstract class CharacterStateBase : MonoBehaviour, CharacterState
+    public abstract class CharacterStateBase : NetworkBehaviour, CharacterState
     {
         protected CharacterController _character = null;
         protected SoundManager _soundManager = null;

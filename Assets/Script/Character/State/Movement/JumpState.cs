@@ -18,8 +18,11 @@ namespace AshGreen.Character
 
         public override void StateUpdate()
         {
+            if(!IsOwner) 
+                return;
+
             if (_character._movementController.isGrounded)
-                _character._movementController.MovementStateTransition(onChangeType);
+                _character._movementController.MovementStateTransitionServerRpc(onChangeType);
         }
 
         public override void Exit()

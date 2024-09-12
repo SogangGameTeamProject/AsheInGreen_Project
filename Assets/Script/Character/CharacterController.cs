@@ -54,7 +54,7 @@ namespace AshGreen.Character
             {
                 characterDirection = value;
                 float localScaleX = transform.localScale.x;
-                if((localScaleX < 0 && value == CharacterDirection.Right) || (localScaleX > 0 && value == CharacterDirection.Left))
+                if ((localScaleX < 0 && value == CharacterDirection.Right) || (localScaleX > 0 && value == CharacterDirection.Left))
                     OnFlipServerRpc();
             }
         }
@@ -300,6 +300,7 @@ namespace AshGreen.Character
         [ClientRpc]
         private void OnFlipClientRpc()
         {
+            Debug.Log("방향전환 요청 받음");
             Vector3 flipScale = transform.localScale;
             flipScale.x *= -1;
             transform.localScale = flipScale;

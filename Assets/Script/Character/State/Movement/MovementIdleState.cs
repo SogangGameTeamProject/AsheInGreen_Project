@@ -17,17 +17,21 @@ namespace AshGreen.Character
 
         public override void StateUpdate()
         {
+
+            if (!IsOwner)
+                return;
+
             //점프 체크
             if (!_character._movementController.isGrounded)
             {
-                _character._movementController.MovementStateTransition(onJumpType);
+                _character._movementController.MovementStateTransitionServerRpc(onJumpType);
                 return;
             }
 
 
             //이동 체크
             if (Mathf.Round(rBody.linearVelocityX) != 0)
-                _character._movementController.MovementStateTransition(onMoveType);
+                _character._movementController.MovementStateTransitionServerRpc(onMoveType);
         }
 
         public override void Exit()
