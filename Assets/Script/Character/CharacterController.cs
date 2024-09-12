@@ -249,7 +249,7 @@ namespace AshGreen.Character
 
             combatStateContext = new CharacterStateContext(this);//콘텍스트 생성
             OnSetStatusServerRpc();//스테이터스 값 초기화
-            CombatStateInit(CombatStateType.Idle);
+            CombatStateInitServerRpc(CombatStateType.Idle);
 
             //피격 타격 액션 설정
             _damageReceiver.TakeDamageAction += TakeDamage;
@@ -294,6 +294,7 @@ namespace AshGreen.Character
         [ServerRpc(RequireOwnership = false)]
         private void OnFlipServerRpc()
         {
+            Debug.Log("방향전환 요청");
             OnFlipClientRpc();
         }
         [ClientRpc]
@@ -312,7 +313,7 @@ namespace AshGreen.Character
         {
             Debug.Log("플레이어 피격 처리");
             SetHpServerRpc(-(int)damage);
-            CombatStateTransition(CombatStateType.Hit);
+            CombatStateTransitionServerRpc(CombatStateType.Hit);
         }
 
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
@@ -327,7 +328,19 @@ namespace AshGreen.Character
 
         //-----전투 상태 과련 함수----
         //전투 상태 초기화 함수
-        public void CombatStateInit(CombatStateType type)
+        [ServerRpc(RequireOwnership = false)]
+        public void CombatStateInitServerRpc(CombatStateType type)
+        {
+            CombatStateInitClientRpc(type);
+        }
+
+        [ClientRpc]
+        public void CombatStateInitClientRpc(CombatStateType type)
+        {
+            CombatStateInit(type);
+        }
+
+        private void CombatStateInit(CombatStateType type)
         {
             CharacterState state = null;
             CombatStateData findState = combatStateList.Find(state => state.type.Equals(type));
@@ -339,7 +352,18 @@ namespace AshGreen.Character
             }
         }
         //전투 상태 변환 함수
-        public void CombatStateTransition(CombatStateType type)
+        [ServerRpc(RequireOwnership = false)]
+        public void CombatStateTransitionServerRpc(CombatStateType type)
+        {
+            CombatStateTransitionClientRpc(type);
+        }
+
+        [ClientRpc]
+        public void CombatStateTransitionClientRpc(CombatStateType type)
+        {
+            CombatStateInit(type);
+        }
+        private void CombatStateTransition(CombatStateType type)
         {
             CharacterState state = null;
             CombatStateData findState = combatStateList.Find(state => state.type.Equals(type));

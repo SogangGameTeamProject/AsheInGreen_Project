@@ -810,7 +810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 981529334382131006}
-  - component: {fileID: 1251446287621297002}
+  - component: {fileID: 1170719951875528351}
   m_Layer: 3
   m_Name: HIT
   m_TagString: Untagged
@@ -833,7 +833,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1733162331067627674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1251446287621297002
+--- !u!114 &1170719951875528351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7697937528281615516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf681416e18ab8e4fb337b5a55943b67, type: 3}
+  m_Script: {fileID: 11500000, guid: 35b12860ad3e5494a8399dda517953ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 1605096689833728447}
   - component: {fileID: 7835904058551910854}
   - component: {fileID: 4309618130203827925}
-  - component: {fileID: 6028362171517852890}
+  - component: {fileID: 1345663172694577561}
   - component: {fileID: 942433221622638762}
   - component: {fileID: 1434835013967201027}
   - component: {fileID: 491064707563821348}
@@ -1179,9 +1179,9 @@ MonoBehaviour:
   SyncPositionX: 1
   SyncPositionY: 1
   SyncPositionZ: 0
-  SyncRotAngleX: 0
-  SyncRotAngleY: 0
-  SyncRotAngleZ: 0
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
   SyncScaleX: 0
   SyncScaleY: 0
   SyncScaleZ: 0
@@ -1192,9 +1192,9 @@ MonoBehaviour:
   UseQuaternionCompression: 0
   UseHalfFloatPrecision: 0
   InLocalSpace: 0
-  Interpolate: 1
+  Interpolate: 0
   SlerpPosition: 0
---- !u!114 &6028362171517852890
+--- !u!114 &1345663172694577561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   - type: 0
     state: {fileID: 6258679949100761643}
   - type: 1
-    state: {fileID: 1251446287621297002}
+    state: {fileID: 1170719951875528351}
   - type: 2
     state: {fileID: 4808559951109672692}
   baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
@@ -1281,9 +1281,6 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 2048
-  playerCol:
-  - {fileID: 0}
-  - {fileID: 0}
   downJumpTime: 0.25
   runningMovementStateType: 0
   movementStateList:

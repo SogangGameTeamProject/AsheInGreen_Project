@@ -8,15 +8,13 @@ namespace AshGreen.Character
         public float hitTIme = 0.6f;
         public float flashCycle = 0.05f;
         private SpriteRenderer spriteRenderer;
-        private Color originalColor; // 원래 색상 저장
+        private Color originalColor = Color.white; // 원래 색상 저장
         private Coroutine plashCoroutine = null;
         public override void Enter(CharacterController character)
         {
             base.Enter(character);
             if(spriteRenderer == null )
                 spriteRenderer = _character.GetComponent<SpriteRenderer>();
-            if (spriteRenderer)
-                originalColor = _character.GetComponent<SpriteRenderer>().color;
 
             plashCoroutine = StartCoroutine(FlashCharacter());
         }
@@ -67,7 +65,7 @@ namespace AshGreen.Character
 
             // 번쩍거림이 끝난 후, 원래 상태로 복구
             spriteRenderer.color = originalColor;
-            _character.CombatStateTransition(CombatStateType.Idle);
+            _character.CombatStateTransitionServerRpc(CombatStateType.Idle);
         }
     }
 }
