@@ -7,6 +7,8 @@ using System;
 using Unity.Mathematics;
 using Unity.Netcode.Components;
 using System.Collections;
+using AshGreen.State;
+using Unity.VisualScripting;
 
 namespace AshGreen.Character
 {
@@ -35,7 +37,7 @@ namespace AshGreen.Character
 
         //------이동 상태-------
         public MovementStateType runningMovementStateType;
-        private CharacterStateContext movementStateContext = null;
+        private StateContext<CharacterController> movementStateContext = null;
 
         //상태 정보 관리를 위한 클래스
         [System.Serializable]
@@ -51,6 +53,7 @@ namespace AshGreen.Character
         public event Action<Vector2, float> MoveAction;
         public event Action<float> JumpAction;
         public event Action<float> DownJumpAction;
+        public event Action<Vector2, float> NockBackAction;
 
         public override void OnNetworkSpawn()
         {
@@ -61,13 +64,14 @@ namespace AshGreen.Character
             _characterAnimator = GetComponent<Animator>();
             _networkAnimator = GetComponent<NetworkAnimator>();
 
-            movementStateContext = new CharacterStateContext(_character);//콘텍스트 생성
-            MovementStateInit(MovementStateType.Idle);
+            movementStateContext = new StateContext<CharacterController>(_character);//콘텍스트 생성
+            MovementStateTransitionServerRpc(MovementStateType.Idle);
 
             //액션 초기화
             MoveAction += OnMove;
             JumpAction += OnJump;
             DownJumpAction += OnDownJump;
+            NockBackAction += OnNockBack;
         }
 
         public override void OnNetworkDespawn()
@@ -115,32 +119,6 @@ namespace AshGreen.Character
 
 
         //-----이동 상태 관련 함수-----
-        //이동 상태 초기화 함수
-        [ServerRpc(RequireOwnership = false)]
-        public void MovementStateInitServerRpc(MovementStateType type)
-        {
-            MovementStateInitClientRpc(type);
-        }
-        [ClientRpc]
-
-        public void MovementStateInitClientRpc(MovementStateType type)
-        {
-            MovementStateInit(type);
-        }
-
-        private void MovementStateInit(MovementStateType type)
-        {
-            CharacterState state = null;
-            MovementStateData findState = movementStateList.Find(state => state.type.Equals(type));
-            Debug.Log(findState);
-            if (findState != null)
-            {
-                state = findState.state.GetComponent<CharacterState>();
-                runningMovementStateType = findState.type;
-                movementStateContext.Initialize(state);
-            }
-
-        }
         //이동 상태 변환 함수
         [ServerRpc(RequireOwnership = false)]
         public void MovementStateTransitionServerRpc(MovementStateType type)
@@ -155,11 +133,11 @@ namespace AshGreen.Character
         }
         public void MovementStateTransition(MovementStateType type)
         {
-            CharacterState state = null;
+            IState<CharacterController> state = null;
             MovementStateData findState = movementStateList.Find(state => state.type.Equals(type));
             if (findState != null)
             {
-                state = findState.state.GetComponent<CharacterState>();
+                state = findState.state.GetComponent<IState<CharacterController>>();
                 runningMovementStateType = findState.type;
                 movementStateContext.TransitionTo(state);
             }
@@ -181,6 +159,11 @@ namespace AshGreen.Character
         public void ExecutDownJump(float power)
         {
             DownJumpAction?.Invoke(power);
+        }
+
+        public void ExcutNockBack(Vector2 nockbackArrow, float power)
+        {
+            NockBackAction?.Invoke(nockbackArrow, power);
         }
 
         /// <summary>
@@ -221,6 +204,17 @@ namespace AshGreen.Character
 
             StartCoroutine(ConflictAdjustment(downJumpTime));
         }
+
+        //넉백 구현 함수
+        private void OnNockBack(Vector2 vector2, float power)
+        {
+            if (rBody)
+            {
+                rBody.linearVelocity = Vector2.zero;
+                rBody.AddForce(vector2 * power, ForceMode2D.Impulse);
+            }
+        }
+
         IEnumerator ConflictAdjustment(float enableTIme)
         {
             SetCollisionWithLayer(platformLayer, true);

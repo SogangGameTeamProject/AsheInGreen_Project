@@ -23,7 +23,6 @@ namespace AshGreen.Character
         {
             if (IsServer)
             {
-                Debug.Log("피격처리");
                 TakeDamageAction?.Invoke(damage);
             }
         }

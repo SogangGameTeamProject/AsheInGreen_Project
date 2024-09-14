@@ -4,6 +4,9 @@ using System;
 using System.Collections.Generic;
 using AshGreen.Character;
 using Unity.Netcode;
+using AshGreen.State;
+using Unity.VisualScripting;
+
 namespace AshGreen.Character
 {
     //캐릭터 방향 타입
@@ -30,7 +33,7 @@ namespace AshGreen.Character
         
         //---------전투 상태--------
         public CombatStateType runningCombatStateType;
-        private CharacterStateContext combatStateContext = null;
+        private StateContext<CharacterController> combatStateContext = null;
         //상태 정보 관리를 위한 클래스
         [System.Serializable]
         public class CombatStateData
@@ -243,13 +246,22 @@ namespace AshGreen.Character
             this.addCriticalDamage.Value += addCriticalDamage;
         }
 
+        //피해 면역 관련 
+        private NetworkVariable<bool> isDamageImmunity = new NetworkVariable<bool>(false);// 피해 면역
+        [ServerRpc(RequireOwnership = false)]
+        public void SetDamageimmunityServerRpc(bool damageImmunity)
+        {
+            Debug.Log("무적 설정: " + damageImmunity);
+            this.isDamageImmunity.Value = damageImmunity;
+        }
+
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
 
-            combatStateContext = new CharacterStateContext(this);//콘텍스트 생성
+            combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성
             OnSetStatusServerRpc();//스테이터스 값 초기화
-            CombatStateInitServerRpc(CombatStateType.Idle);
+            CombatStateTransitionServerRpc(CombatStateType.Idle);
 
             //피격 타격 액션 설정
             _damageReceiver.TakeDamageAction += TakeDamage;
@@ -312,9 +324,12 @@ namespace AshGreen.Character
         /// 
         public void TakeDamage(float damage)
         {
-            Debug.Log("플레이어 피격 처리");
-            SetHpServerRpc(-(int)damage);
-            CombatStateTransitionServerRpc(CombatStateType.Hit);
+            if (!isDamageImmunity.Value && runningCombatStateType != CombatStateType.Death)
+            {
+                Debug.Log("플레이어 피격 처리");
+                SetHpServerRpc(-(int)damage);
+                CombatStateTransitionServerRpc(CombatStateType.Hit);
+            }
         }
 
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
@@ -328,30 +343,6 @@ namespace AshGreen.Character
         //----------상태패턴 관련 함수들---------
 
         //-----전투 상태 과련 함수----
-        //전투 상태 초기화 함수
-        [ServerRpc(RequireOwnership = false)]
-        public void CombatStateInitServerRpc(CombatStateType type)
-        {
-            CombatStateInitClientRpc(type);
-        }
-
-        [ClientRpc]
-        public void CombatStateInitClientRpc(CombatStateType type)
-        {
-            CombatStateInit(type);
-        }
-
-        private void CombatStateInit(CombatStateType type)
-        {
-            CharacterState state = null;
-            CombatStateData findState = combatStateList.Find(state => state.type.Equals(type));
-            if (findState != null)
-            {
-                state = findState.state.GetComponent<CharacterState>();
-                runningCombatStateType = findState.type;
-                combatStateContext.Initialize(state);
-            }
-        }
         //전투 상태 변환 함수
         [ServerRpc(RequireOwnership = false)]
         public void CombatStateTransitionServerRpc(CombatStateType type)
@@ -362,15 +353,15 @@ namespace AshGreen.Character
         [ClientRpc]
         public void CombatStateTransitionClientRpc(CombatStateType type)
         {
-            CombatStateInit(type);
+            CombatStateTransition(type);
         }
         private void CombatStateTransition(CombatStateType type)
         {
-            CharacterState state = null;
+            IState<CharacterController> state = null;
             CombatStateData findState = combatStateList.Find(state => state.type.Equals(type));
             if (findState != null)
             {
-                state = findState.state.GetComponent<CharacterState>();
+                state = findState.state.GetComponent<IState<CharacterController>>();
                 runningCombatStateType = findState.type;
                 combatStateContext.TransitionTo(state);
             }

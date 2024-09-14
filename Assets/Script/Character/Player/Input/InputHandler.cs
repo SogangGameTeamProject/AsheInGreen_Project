@@ -40,8 +40,10 @@ namespace AshGreen.Character.Player
         public void Update()
         {
             _runningMovementType = _player._movementController.runningMovementStateType;
+            _runningCombatType = _player.runningCombatStateType;
             //이동 입력예외 처리 후 커맨드 호출
-            if (_runningMovementType != MovementStateType.Unable && _moveVec != Vector2.zero)
+            if (_runningMovementType != MovementStateType.Unable && _moveVec != Vector2.zero &&
+                _runningCombatType == CombatStateType.Idle)
             {
                 _moveCommand.Execute(_player, _moveVec);
             }
@@ -65,7 +67,7 @@ namespace AshGreen.Character.Player
                 (_player._movementController.isGrounded || (!_player._movementController.isGrounded && _player.JumMaxNum > _player.jumCnt))
                 )
             {
-
+                Debug.Log(_runningCombatType == CombatStateType.Idle);
                 _jumpCommand.Execute(_player);
             }
         }

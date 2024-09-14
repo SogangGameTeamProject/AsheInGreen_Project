@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  _animator: {fileID: 0}
   onChangeType: 0
 --- !u!1 &667424640257540288
 GameObject:
@@ -135,6 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  _animator: {fileID: 0}
+  stateAni: IsDeath
 --- !u!1 &1285062107557988456
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  _animator: {fileID: 0}
   onJumpType: 3
   onMoveType: 1
 --- !u!1 &2050740755304086830
@@ -227,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  _animator: {fileID: 0}
   onChangeType: 0
 --- !u!1 &2375321093565454292
 GameObject:
@@ -317,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  _animator: {fileID: 0}
 --- !u!1 &3423287262508431186
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,8 +852,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  _animator: {fileID: 0}
   hitTIme: 0.6
   flashCycle: 0.05
+  stateAni: IsHeart
 --- !u!1 &7809112534474614861
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateSoundClip: {fileID: 0}
+  _animator: {fileID: 0}
 --- !u!1 &8132376418604781229
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,8 +963,8 @@ GameObject:
   - component: {fileID: 4309618130203827925}
   - component: {fileID: 1345663172694577561}
   - component: {fileID: 942433221622638762}
-  - component: {fileID: 1434835013967201027}
   - component: {fileID: 491064707563821348}
+  - component: {fileID: 1434835013967201027}
   - component: {fileID: 7291620524692100264}
   - component: {fileID: 1616294030578084601}
   - component: {fileID: 6167815754311996577}
@@ -1151,7 +1160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3471441096
+  GlobalObjectIdHash: 608348716
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1216,11 +1225,39 @@ MonoBehaviour:
     TransitionIndex: 2
   - IsCrossFadeExit: 0
     Layer: 0
+    OriginatingState: 608663733
+    DestinationState: -1590825758
+    TransitionDuration: 0
+    TriggerNameHash: -1505326268
+    TransitionIndex: 2
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: -1289821550
+    DestinationState: -1590825758
+    TransitionDuration: 0
+    TriggerNameHash: -1505326268
+    TransitionIndex: 2
+  - IsCrossFadeExit: 0
+    Layer: 0
     OriginatingState: -1590825758
     DestinationState: 646380074
     TransitionDuration: 0
     TriggerNameHash: 569220492
     TransitionIndex: 1
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 1748754976
+    DestinationState: -1590825758
+    TransitionDuration: 0
+    TriggerNameHash: -1505326268
+    TransitionIndex: 2
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 125937960
+    DestinationState: -1590825758
+    TransitionDuration: 0
+    TriggerNameHash: -1505326268
+    TransitionIndex: 3
   m_Animator: {fileID: 5141303237562480953}
 --- !u!114 &942433221622638762
 MonoBehaviour:
@@ -1248,18 +1285,6 @@ MonoBehaviour:
   baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
   nowHp:
     m_InternalValue: 0
---- !u!114 &1434835013967201027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9204871404527705347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37dae4cefe5f935408f3af3550837bd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &491064707563821348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,6 +1317,18 @@ MonoBehaviour:
     state: {fileID: 3303825179608406192}
   - type: 2
     state: {fileID: 8777053553272664512}
+--- !u!114 &1434835013967201027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204871404527705347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dae4cefe5f935408f3af3550837bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7291620524692100264
 MonoBehaviour:
   m_ObjectHideFlags: 0

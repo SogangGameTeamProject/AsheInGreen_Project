@@ -5,6 +5,8 @@ namespace AshGreen.DamageObj
     public class TestDamageObj : MonoBehaviour
     {
         private int damage = 1;
+        public bool isNockback = false;
+        public float nockbackPower = 100f;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -14,7 +16,20 @@ namespace AshGreen.DamageObj
             if (damageable != null)
             {
                 damageable.TakeDamage(damage);
+
+                //넉백 여부에 따른 넉백
+                if (isNockback)
+                {
+                    MovementController movementController = collision.gameObject.GetComponent<MovementController>();
+                    float nockBackForceX =
+                        collision.gameObject.transform.position.x > this.transform.position.x ?
+                        1 : -1;
+                    Vector2 nockBackForce = new Vector2(nockBackForceX, 1);
+
+                    movementController.ExcutNockBack(nockBackForce, nockbackPower);
+                }
             }
+
         }
     }
 

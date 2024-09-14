@@ -10,6 +10,7 @@ namespace AshGreen.Character
         public int MaxHP = 0;
         [Tooltip("공격력")]
         public float AttackPower = 0;
+
         [Tooltip("이동속도")]
         public float MoveSpeed = 0;
         [Tooltip("점프파워")]
