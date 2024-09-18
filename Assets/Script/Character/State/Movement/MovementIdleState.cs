@@ -21,6 +21,8 @@ namespace AshGreen.Character
             if (!IsOwner)
                 return;
 
+            Debug.Log("아이들 체크");
+
             //점프 체크
             if (!_character._movementController.isGrounded)
             {

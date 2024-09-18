@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd2d0a1f50a4bfb8457be4b41099277, type: 3}
-  m_Name: DefaultWidgetConfiguration
+  m_Script: {fileID: 11500000, guid: b58a3bc647e70774b8c7225eb3b51e7e, type: 3}
+  m_Name: UnityPlayerAccountSettings
   m_EditorClassIdentifier: 
-  Name: Session
-  connectionType: 3
-  connectionMode: 0
-  ListenIpAddress: 127.0.0.1
-  PublishIpAddress: 127.0.0.1
-  Port: 0
-  MaxPlayers: 2
-  EnableVoiceChat: 0
+  clientId: 
+  scopeMask: 7
+  useCustomDeepLinkUri: 0
+  customScheme: 
+  customHost: 

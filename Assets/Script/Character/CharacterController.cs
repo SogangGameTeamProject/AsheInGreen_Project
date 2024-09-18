@@ -45,21 +45,28 @@ namespace AshGreen.Character
             = new List<CombatStateData>();
 
         //캐릭터 방향 관련
-        private CharacterDirection characterDirection = CharacterDirection.Right;
+        private NetworkVariable<CharacterDirection> characterDirection = 
+            new NetworkVariable< CharacterDirection>(CharacterDirection.Right);
         public CharacterDirection CharacterDirection
         {
             get
             {
-                return characterDirection;
+                return characterDirection.Value;
             }
 
             set
             {
-                characterDirection = value;
-                float localScaleX = transform.localScale.x;
-                if ((localScaleX < 0 && value == CharacterDirection.Right) || (localScaleX > 0 && value == CharacterDirection.Left))
-                    OnFlipServerRpc();
+                characterDirection.Value = value;
             }
+        }
+
+        //방향 전환 매서드
+        private void OnFlip(CharacterDirection previousValue, CharacterDirection newValue)
+        {
+            Debug.Log("방향 전환");
+            Vector3 flipScale = transform.localScale;
+            flipScale.x *= -1;
+            transform.localScale = flipScale;
         }
 
         //------스테이터스 관련 전역 변수 선언------
@@ -97,8 +104,7 @@ namespace AshGreen.Character
         /// </summary>
         /// <param name="addNowHp">증감 체력값</param>
         /// <param name="addMaxHp">증감할 최대체력 값</param>
-        [ServerRpc(RequireOwnership = false)]
-        public void SetHpServerRpc(int addNowHp, int addMaxHp = 0)
+        public void SetHp(int addNowHp, int addMaxHp = 0)
         {
             this.addMaxHp.Value += addMaxHp;
             NowHP += addNowHp;
@@ -121,8 +127,7 @@ namespace AshGreen.Character
         /// </summary>
         /// <param name="addAttackPower">증감할 공격력(고정)</param>
         /// <param name="addAttackPowerPer">증감할 공격력(%)</param>
-        [ServerRpc(RequireOwnership = false)]
-        public void SetAttackpowerServerRpc(float addAttackPower, float addAttackPerPower = 0)
+        public void SetAttackpower(float addAttackPower, float addAttackPerPower = 0)
         {
             this.addAttackPower.Value += addAttackPower;
             this.addAttackPerPower.Value += addAttackPerPower;
@@ -145,8 +150,7 @@ namespace AshGreen.Character
         /// </summary>
         /// <param name="addMoveSpeed">증감할 이동속도(고정)</param>
         /// <param name="addMovePerSpeed">증감할 이동속도(%)</param>
-        [ServerRpc(RequireOwnership = false)]
-        public void SetMovespeedServerRpc(float addMoveSpeed, float addMovePerSpeed = 0)
+        public void SetMovespeed(float addMoveSpeed, float addMovePerSpeed = 0)
         {
             this.addMoveSpeed.Value += addMoveSpeed;
             this.addMovePerSpeed.Value += addMovePerSpeed;
@@ -176,8 +180,7 @@ namespace AshGreen.Character
         /// </summary>
         /// <param name="addJumMaxNum"></param>
         /// <param name="addJumpPower"></param>
-        [ServerRpc(RequireOwnership = false)]
-        public void SetJumpServerRpc(int addJumMaxNum, float addJumpPower = 0)
+        public void SetJump(int addJumMaxNum, float addJumpPower = 0)
         {
             this.addJumMaxNum.Value += addJumMaxNum;
             this.addJumpPower.Value += addJumpPower;
@@ -208,8 +211,7 @@ namespace AshGreen.Character
         /// </summary>
         /// <param name="addSkillAcceleration">증감할 스킬 가속</param>
         /// <param name="addItemAcceleration">증감할 아이템 가속</param>
-        [ServerRpc(RequireOwnership = false)]
-        public void SetAccelerationServerRpc(float addSkillAcceleration, float addItemAcceleration = 0)
+        public void SetAcceleration(float addSkillAcceleration, float addItemAcceleration = 0)
         {
             this.addSkillAcceleration.Value += addSkillAcceleration;
             this.addItemAcceleration.Value += addItemAcceleration;
@@ -239,17 +241,15 @@ namespace AshGreen.Character
         /// </summary>
         /// <param name="addCriticalChance">증감 치명타 확률</param>
         /// <param name="addCriticalDamage">증감 치명타 데미지</param>
-        [ServerRpc(RequireOwnership = false)]
-        public void SetCriticalServerRpc(float addCriticalChance, float addCriticalDamage = 0)
+        public void SetCritical(float addCriticalChance, float addCriticalDamage = 0)
         {
             this.addCriticalChance.Value += addCriticalChance;
             this.addCriticalDamage.Value += addCriticalDamage;
         }
 
         //피해 면역 관련 
-        private NetworkVariable<bool> isDamageImmunity = new NetworkVariable<bool>(false);// 피해 면역
-        [ServerRpc(RequireOwnership = false)]
-        public void SetDamageimmunityServerRpc(bool damageImmunity)
+        public NetworkVariable<bool> isDamageImmunity = new NetworkVariable<bool>(false);// 피해 면역
+        public void SetDamageimmunity(bool damageImmunity)
         {
             Debug.Log("무적 설정: " + damageImmunity);
             this.isDamageImmunity.Value = damageImmunity;
@@ -260,8 +260,13 @@ namespace AshGreen.Character
             base.OnNetworkSpawn();
 
             combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성
-            OnSetStatusServerRpc();//스테이터스 값 초기화
-            CombatStateTransitionServerRpc(CombatStateType.Idle);
+            if (IsOwner)
+            {
+                OnSetStatus();//스테이터스 값 초기화
+                CombatStateTransitionServerRpc(CombatStateType.Idle);
+            }
+                
+            characterDirection.OnValueChanged += OnFlip;
 
             //피격 타격 액션 설정
             _damageReceiver.TakeDamageAction += TakeDamage;
@@ -283,13 +288,11 @@ namespace AshGreen.Character
         }
 
         //캐릭터 스테이터스값 초기 설정
-        [ServerRpc(RequireOwnership = false)]
-        private void OnSetStatusServerRpc()
+        private void OnSetStatus()
         {
             if (baseConfig)
             {
                 baseMaxHP.Value = baseConfig.MaxHP;
-                Debug.Log(baseMaxHP.Value);
                 nowHp.Value = baseMaxHP.Value;
                 baseAttackPower.Value = baseConfig.AttackPower;
                 baseMoveSpeed.Value = baseConfig.MoveSpeed;
@@ -302,22 +305,6 @@ namespace AshGreen.Character
             }
         }
 
-        //Flip구현 함수
-        [ServerRpc(RequireOwnership = false)]
-        private void OnFlipServerRpc()
-        {
-            Debug.Log("방향전환 요청");
-            OnFlipClientRpc();
-        }
-        [ClientRpc]
-        private void OnFlipClientRpc()
-        {
-            Debug.Log("방향전환 요청 받음");
-            Vector3 flipScale = transform.localScale;
-            flipScale.x *= -1;
-            transform.localScale = flipScale;
-        }
-
         /// <summary>
         /// 피격 타격 처리 메서드
         /// </summary>
@@ -327,8 +314,11 @@ namespace AshGreen.Character
             if (!isDamageImmunity.Value && runningCombatStateType != CombatStateType.Death)
             {
                 Debug.Log("플레이어 피격 처리");
-                SetHpServerRpc(-(int)damage);
-                CombatStateTransitionServerRpc(CombatStateType.Hit);
+                nowHp.Value -= (int)damage;
+                if(nowHp.Value > 0)
+                    CombatStateTransitionServerRpc(CombatStateType.Hit);
+                else
+                    CombatStateTransitionServerRpc(CombatStateType.Death);
             }
         }
 
@@ -344,7 +334,7 @@ namespace AshGreen.Character
 
         //-----전투 상태 과련 함수----
         //전투 상태 변환 함수
-        [ServerRpc(RequireOwnership = false)]
+        [ServerRpc]
         public void CombatStateTransitionServerRpc(CombatStateType type)
         {
             CombatStateTransitionClientRpc(type);

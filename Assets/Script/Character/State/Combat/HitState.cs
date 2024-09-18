@@ -65,10 +65,11 @@ namespace AshGreen.Character
 
             // 번쩍거림이 끝난 후, 원래 상태로 복구
             spriteRenderer.color = originalColor;
-            if(_character.NowHP > 0)
+
+            if (IsOwner)
+            {
                 _character.CombatStateTransitionServerRpc(CombatStateType.Idle);
-            else
-                _character.CombatStateTransitionServerRpc(CombatStateType.Death);
+            }
 
         }
     }

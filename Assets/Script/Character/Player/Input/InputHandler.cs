@@ -42,8 +42,9 @@ namespace AshGreen.Character.Player
             _runningMovementType = _player._movementController.runningMovementStateType;
             _runningCombatType = _player.runningCombatStateType;
             //이동 입력예외 처리 후 커맨드 호출
-            if (_runningMovementType != MovementStateType.Unable && _moveVec != Vector2.zero &&
-                _runningCombatType == CombatStateType.Idle)
+            if (!_player._movementController.isUnableMove
+                && _moveVec != Vector2.zero &&
+                _runningCombatType != CombatStateType.Death)
             {
                 _moveCommand.Execute(_player, _moveVec);
             }
@@ -62,8 +63,8 @@ namespace AshGreen.Character.Player
         {
             //예외처리
             if (context.started &&
-                _runningMovementType != MovementStateType.Unable &&
-                _runningCombatType == CombatStateType.Idle &&
+                !_player._movementController.isUnableMove &&
+                _runningCombatType != CombatStateType.Death &&
                 (_player._movementController.isGrounded || (!_player._movementController.isGrounded && _player.JumMaxNum > _player.jumCnt))
                 )
             {
@@ -77,7 +78,7 @@ namespace AshGreen.Character.Player
         {
             //예외처리
             if (context.started &&
-                _runningCombatType == CombatStateType.Idle &&
+                _runningCombatType != CombatStateType.Death &&
                 (_runningMovementType == MovementStateType.Idle || _runningMovementType == MovementStateType.Move)&&
                 _player._movementController.isPlatformed
                 )

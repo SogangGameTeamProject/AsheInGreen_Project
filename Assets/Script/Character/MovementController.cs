@@ -32,6 +32,10 @@ namespace AshGreen.Character
         public bool isPlatformed = false;//플렛폼 위 체크
         public LayerMask platformLayer;//플렛폼 레이어
 
+        public bool isUnableMove = false;//이동 불가 상태
+        //넉백 관련
+        private Coroutine nockbackCorutine = null;
+
         //충돌 관련
         public float downJumpTime = 0.25f;
 
@@ -53,7 +57,7 @@ namespace AshGreen.Character
         public event Action<Vector2, float> MoveAction;
         public event Action<float> JumpAction;
         public event Action<float> DownJumpAction;
-        public event Action<Vector2, float> NockBackAction;
+        public event Action<Vector2, float, float> NockBackAction;
 
         public override void OnNetworkSpawn()
         {
@@ -65,7 +69,8 @@ namespace AshGreen.Character
             _networkAnimator = GetComponent<NetworkAnimator>();
 
             movementStateContext = new StateContext<CharacterController>(_character);//콘텍스트 생성
-            MovementStateTransitionServerRpc(MovementStateType.Idle);
+            if(IsOwner)
+                MovementStateTransitionServerRpc(MovementStateType.Idle);
 
             //액션 초기화
             MoveAction += OnMove;
@@ -89,10 +94,6 @@ namespace AshGreen.Character
             if (IsOwner)
                 MoveAniUpdate();
             CheckIfGrounded();
-        }
-
-        private void FixedUpdate()
-        {
             movementStateContext.StateUpdate();
         }
 
@@ -120,10 +121,11 @@ namespace AshGreen.Character
 
         //-----이동 상태 관련 함수-----
         //이동 상태 변환 함수
-        [ServerRpc(RequireOwnership = false)]
+        [ServerRpc]
         public void MovementStateTransitionServerRpc(MovementStateType type)
         {
-            MovementStateTransitionClientRpc(type);
+            if(IsOwner)
+                MovementStateTransitionClientRpc(type);
         }
 
         [ClientRpc]
@@ -148,7 +150,8 @@ namespace AshGreen.Character
         /// </summary>
         public void ExecuteMove(Vector2 moveVec, float moveSpeed)
         {
-            MoveAction?.Invoke(moveVec, moveSpeed);
+            if(!isUnableMove)
+                MoveAction?.Invoke(moveVec, moveSpeed);
         }
         
         public void ExecutJump(float power)
@@ -161,9 +164,10 @@ namespace AshGreen.Character
             DownJumpAction?.Invoke(power);
         }
 
-        public void ExcutNockBack(Vector2 nockbackArrow, float power)
+        public void ExcutNockBack(Vector2 nockbackArrow, float power, float time)
         {
-            NockBackAction?.Invoke(nockbackArrow, power);
+            if(IsOwner)
+                NockBackAction?.Invoke(nockbackArrow, power, time);
         }
 
         /// <summary>
@@ -205,21 +209,38 @@ namespace AshGreen.Character
             StartCoroutine(ConflictAdjustment(downJumpTime));
         }
 
-        //넉백 구현 함수
-        private void OnNockBack(Vector2 vector2, float power)
-        {
-            if (rBody)
-            {
-                rBody.linearVelocity = Vector2.zero;
-                rBody.AddForce(vector2 * power, ForceMode2D.Impulse);
-            }
-        }
-
+        //다운 점프 구현 코루틴
         IEnumerator ConflictAdjustment(float enableTIme)
         {
             SetCollisionWithLayer(platformLayer, true);
             yield return new WaitForSeconds(enableTIme);
             SetCollisionWithLayer(platformLayer, false);
+        }
+
+        //넉백 구현 함수
+        private void OnNockBack(Vector2 vector2, float power, float time)
+        {
+            if (rBody && !_character.isDamageImmunity.Value)
+            {
+                if(nockbackCorutine != null)
+                    StopCoroutine(nockbackCorutine);
+                StartCoroutine(NockBackTreatment(vector2, power, time));
+
+            }
+        }
+        
+        //넉백 종료 처리 코루틴
+        private IEnumerator NockBackTreatment(Vector2 vector2, float power, float time)
+        {
+            MovementStateTransitionServerRpc(MovementStateType.Unable);
+            isUnableMove = true;
+            rBody.linearVelocity = Vector2.zero;
+            rBody.AddForce(vector2 * power, ForceMode2D.Impulse);
+
+            yield return new WaitForSeconds(time);
+
+            MovementStateTransitionServerRpc(MovementStateType.Idle);
+            isUnableMove = false;
         }
 
         // 특정 레이어와의 충돌을 켜고 끌 수 있는 메서드

@@ -11,13 +11,15 @@ namespace AshGreen.Character
             base.Enter(character);
             _animator.SetTrigger(stateAni);
 
-            _character.SetDamageimmunityServerRpc(true);
+            if (IsOwner)
+                _character.SetDamageimmunity(true);
         }
 
         public override void Exit()
         {
             base.Exit();
-            _character.SetDamageimmunityServerRpc(false);
+            if (IsOwner)
+                _character.SetDamageimmunity(false);
         }
     }
 }

@@ -7,6 +7,7 @@ namespace AshGreen.DamageObj
         private int damage = 1;
         public bool isNockback = false;
         public float nockbackPower = 100f;
+        public float nockbackTime = 0.3f;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -15,8 +16,6 @@ namespace AshGreen.DamageObj
             // 만약 인터페이스가 존재하면 실행
             if (damageable != null)
             {
-                damageable.TakeDamage(damage);
-
                 //넉백 여부에 따른 넉백
                 if (isNockback)
                 {
@@ -26,8 +25,10 @@ namespace AshGreen.DamageObj
                         1 : -1;
                     Vector2 nockBackForce = new Vector2(nockBackForceX, 1);
 
-                    movementController.ExcutNockBack(nockBackForce, nockbackPower);
+                    movementController.ExcutNockBack(nockBackForce, nockbackPower, nockbackTime);
                 }
+
+                damageable.TakeDamage(damage);
             }
 
         }
