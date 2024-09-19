@@ -19,7 +19,7 @@ namespace AshGreen.Character
         {
             if (!IsOwner)
                 return;
-            Debug.Log("이동 체크");
+
             //이동 방향에 따른 방향 전환
             if (rBody.linearVelocityX > 0 && _character.CharacterDirection == CharacterDirection.Left
                 && _character.runningCombatStateType == CombatStateType.Idle)
@@ -37,7 +37,7 @@ namespace AshGreen.Character
             //이동 상태 종료 체크
             if (rBody.linearVelocityX == 0 || !_character._movementController.isGrounded)
             {
-                _character._movementController.MovementStateTransitionServerRpc(onChangeType);
+                _character._movementController.MovementStateTransition(onChangeType);
                 return;
             }
                 

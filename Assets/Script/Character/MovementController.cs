@@ -40,7 +40,7 @@ namespace AshGreen.Character
         public float downJumpTime = 0.25f;
 
         //------이동 상태-------
-        public MovementStateType runningMovementStateType;
+        public MovementStateType runningMovementStateType = MovementStateType.Null;
         private StateContext<CharacterController> movementStateContext = null;
 
         //상태 정보 관리를 위한 클래스
@@ -69,8 +69,12 @@ namespace AshGreen.Character
             _networkAnimator = GetComponent<NetworkAnimator>();
 
             movementStateContext = new StateContext<CharacterController>(_character);//콘텍스트 생성
-            if(IsOwner)
+            Debug.Log("movementStateContext: " + movementStateContext);
+            if (IsOwner)
+            {
+                Debug.Log("이동상태 초기화");
                 MovementStateTransitionServerRpc(MovementStateType.Idle);
+            }
 
             //액션 초기화
             MoveAction += OnMove;
@@ -78,6 +82,7 @@ namespace AshGreen.Character
             DownJumpAction += OnDownJump;
             NockBackAction += OnNockBack;
         }
+
 
         public override void OnNetworkDespawn()
         {
@@ -106,7 +111,6 @@ namespace AshGreen.Character
 
         }
 
-
         // 땅에 있는지 확인하는 함수
         void CheckIfGrounded()
         {
@@ -124,17 +128,19 @@ namespace AshGreen.Character
         [ServerRpc]
         public void MovementStateTransitionServerRpc(MovementStateType type)
         {
-            if(IsOwner)
-                MovementStateTransitionClientRpc(type);
+            Debug.Log("서버 Rpc 호출");
+            MovementStateTransitionClientRpc(type);
         }
 
         [ClientRpc]
         public void MovementStateTransitionClientRpc(MovementStateType type)
         {
+            Debug.Log("클라이언트 Rpc 호출");
             MovementStateTransition(type);
         }
         public void MovementStateTransition(MovementStateType type)
         {
+            Debug.Log("이동 상태 전환: " +  type);
             IState<CharacterController> state = null;
             MovementStateData findState = movementStateList.Find(state => state.type.Equals(type));
             if (findState != null)

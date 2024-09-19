@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeedac286ed69674b83e9dea01eb26d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   _animator: {fileID: 0}
   onChangeType: 0
@@ -135,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fea1a9097b4f264f9945ca815334c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   _animator: {fileID: 0}
   stateAni: IsDeath
@@ -182,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97301ceebc95fc4da99dbb37faa33ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   _animator: {fileID: 0}
   onJumpType: 3
@@ -230,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d651def7c9cf9241863f8502e0683fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   _animator: {fileID: 0}
   onChangeType: 0
@@ -321,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1face213e0d5e54e8ced0e060098cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   _animator: {fileID: 0}
 --- !u!1 &3423287262508431186
@@ -851,6 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b12860ad3e5494a8399dda517953ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   _animator: {fileID: 0}
   hitTIme: 0.6
@@ -900,6 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfc6f8111d714e458f0e7e9a8f479d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   _animator: {fileID: 0}
 --- !u!1 &8132376418604781229
@@ -1160,7 +1167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3471441096
+  GlobalObjectIdHash: 608348716
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1171,6 +1178,8 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
 --- !u!114 &4309618130203827925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,7 +1192,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da52bf8bbc1de48cfb221a6ff30f7972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  NetworkTransformExpanded: 1
   AuthorityMode: 0
+  TickSyncChildren: 0
   UseUnreliableDeltas: 0
   SyncPositionX: 1
   SyncPositionY: 1
@@ -1201,7 +1213,8 @@ MonoBehaviour:
   UseQuaternionCompression: 0
   UseHalfFloatPrecision: 0
   InLocalSpace: 0
-  Interpolate: 0
+  SwitchTransformSpaceWhenParented: 0
+  Interpolate: 1
   SlerpPosition: 0
 --- !u!114 &1345663172694577561
 MonoBehaviour:
@@ -1215,6 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ad875da98725649ae659c3ee02935e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   TransitionStateInfoList:
   - IsCrossFadeExit: 0
     Layer: 0
@@ -1225,11 +1239,25 @@ MonoBehaviour:
     TransitionIndex: 2
   - IsCrossFadeExit: 0
     Layer: 0
+    OriginatingState: -357476191
+    DestinationState: 646380074
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 3
+  - IsCrossFadeExit: 0
+    Layer: 0
     OriginatingState: 608663733
     DestinationState: -1590825758
     TransitionDuration: 0
     TriggerNameHash: -1505326268
     TransitionIndex: 2
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 608663733
+    DestinationState: 646380074
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 3
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: -1289821550
@@ -1239,11 +1267,11 @@ MonoBehaviour:
     TransitionIndex: 2
   - IsCrossFadeExit: 0
     Layer: 0
-    OriginatingState: -1590825758
+    OriginatingState: -1289821550
     DestinationState: 646380074
     TransitionDuration: 0
     TriggerNameHash: 569220492
-    TransitionIndex: 1
+    TransitionIndex: 3
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: 1748754976
@@ -1251,6 +1279,13 @@ MonoBehaviour:
     TransitionDuration: 0
     TriggerNameHash: -1505326268
     TransitionIndex: 2
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 1748754976
+    DestinationState: 646380074
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 3
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: 125937960
@@ -1271,6 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc58937b3a865bd4184dd59111ce7679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   _movementController: {fileID: 491064707563821348}
   _damageReceiver: {fileID: 1434835013967201027}
   _statusEffectManager: {fileID: 7291620524692100264}
@@ -1285,6 +1321,8 @@ MonoBehaviour:
   baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
   nowHp:
     m_InternalValue: 0
+  isDamageImmunity:
+    m_InternalValue: 0
 --- !u!114 &491064707563821348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,6 +1335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc6b4f16d324654089a056ad9914c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   isGrounded: 0
   groundChecker: {fileID: 9170925046341925770}
   groundLayer:
@@ -1306,8 +1345,9 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 2048
+  isUnableMove: 0
   downJumpTime: 0.25
-  runningMovementStateType: 0
+  runningMovementStateType: -1
   movementStateList:
   - type: 0
     state: {fileID: 7471496294023321380}
@@ -1329,6 +1369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37dae4cefe5f935408f3af3550837bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
 --- !u!114 &7291620524692100264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1353,6 +1394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d6a0db049743c4398eda417a1ac92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   _moveCommand: {fileID: 5687526216093146878}
   _jumpCommand: {fileID: 2804268330580424411}
   _downJumpCommand: {fileID: 4281676084335371935}

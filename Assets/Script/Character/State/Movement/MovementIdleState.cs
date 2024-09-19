@@ -13,6 +13,7 @@ namespace AshGreen.Character
         {
             base.Enter(character);
             rBody = _character.GetComponent<Rigidbody2D>();
+            Debug.Log("무브먼트 아이들 상태 전환");
         }
 
         public override void StateUpdate()
@@ -21,19 +22,17 @@ namespace AshGreen.Character
             if (!IsOwner)
                 return;
 
-            Debug.Log("아이들 체크");
-
             //점프 체크
             if (!_character._movementController.isGrounded)
             {
-                _character._movementController.MovementStateTransitionServerRpc(onJumpType);
+                _character._movementController.MovementStateTransition(onJumpType);
                 return;
             }
 
 
             //이동 체크
             if (Mathf.Round(rBody.linearVelocityX) != 0)
-                _character._movementController.MovementStateTransitionServerRpc(onMoveType);
+                _character._movementController.MovementStateTransition(onMoveType);
         }
 
         public override void Exit()
