@@ -288,7 +288,6 @@ namespace AshGreen.Character
             characterDirection.OnValueChanged += OnFlipRpc;
             //피격 타격 액션 설정
             _damageReceiver.TakeDamageAction += TakeDamage;
-            _damageReceiver.DealDamageAction += DealDamage;
         }
 
         public override void OnNetworkDespawn()
@@ -298,7 +297,6 @@ namespace AshGreen.Character
 
             //피격 타격 액션 제거
             _damageReceiver.TakeDamageAction -= TakeDamage;
-            _damageReceiver.DealDamageAction -= DealDamage;
 
         }
 
@@ -338,14 +336,6 @@ namespace AshGreen.Character
                     CombatStateTransitionRpc(CombatStateType.Death);
 
                 SetHpRpc(-(int)damage);
-            }
-        }
-
-        public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
-        {
-            if(target.runningCombatStateType != CombatStateType.Death)
-            {
-                target._damageReceiver.TakeDamage(damage);
             }
         }
 
