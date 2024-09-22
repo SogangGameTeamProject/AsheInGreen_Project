@@ -106,6 +106,7 @@ namespace AshGreen.Character
             _characterAnimator.SetFloat("VelocityAbcX", Mathf.Abs(rBody.linearVelocityX));
             _characterAnimator.SetFloat("VelocityY", rBody.linearVelocityY);
             _characterAnimator.SetBool("IsGrounded", isGrounded);
+            _characterAnimator.SetFloat("NowHp", _character.NowHP);
         }
 
         // 땅에 있는지 확인하는 함수

@@ -139,7 +139,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   _animator: {fileID: 0}
-  stateAni: IsDeath
+  stateAni: IsHeart
 --- !u!1 &1285062107557988456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3471441096
+  GlobalObjectIdHash: 608348716
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1239,60 +1239,18 @@ MonoBehaviour:
     TransitionIndex: 2
   - IsCrossFadeExit: 0
     Layer: 0
-    OriginatingState: -357476191
-    DestinationState: 646380074
-    TransitionDuration: 0
-    TriggerNameHash: 569220492
-    TransitionIndex: 3
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 608663733
-    DestinationState: -1590825758
-    TransitionDuration: 0
-    TriggerNameHash: -1505326268
-    TransitionIndex: 2
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 608663733
-    DestinationState: 646380074
-    TransitionDuration: 0
-    TriggerNameHash: 569220492
-    TransitionIndex: 3
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -1289821550
-    DestinationState: -1590825758
-    TransitionDuration: 0
-    TriggerNameHash: -1505326268
-    TransitionIndex: 2
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -1289821550
-    DestinationState: 646380074
-    TransitionDuration: 0
-    TriggerNameHash: 569220492
-    TransitionIndex: 3
-  - IsCrossFadeExit: 0
-    Layer: 0
     OriginatingState: 1748754976
     DestinationState: -1590825758
     TransitionDuration: 0
     TriggerNameHash: -1505326268
     TransitionIndex: 2
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 1748754976
-    DestinationState: 646380074
-    TransitionDuration: 0
-    TriggerNameHash: 569220492
-    TransitionIndex: 3
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: 125937960
     DestinationState: -1590825758
     TransitionDuration: 0
     TriggerNameHash: -1505326268
-    TransitionIndex: 3
+    TransitionIndex: 1
   m_Animator: {fileID: 5141303237562480953}
 --- !u!114 &942433221622638762
 MonoBehaviour:

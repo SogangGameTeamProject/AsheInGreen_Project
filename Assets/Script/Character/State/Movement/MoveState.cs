@@ -21,13 +21,13 @@ namespace AshGreen.Character
                 return;
 
             //이동 방향에 따른 방향 전환
-            if (rBody.linearVelocityX > 0 && _character.CharacterDirection == CharacterDirection.Left
+            if (rBody.linearVelocityX > 0.1f && _character.CharacterDirection == CharacterDirection.Left
                 && _character.runningCombatStateType == CombatStateType.Idle)
             {
                 _character.SetCharacterDirectionRpc(CharacterDirection.Right);
                 Debug.Log("오른쪽 방향 전환");
             }
-            else if (rBody.linearVelocityX < 0 && _character.CharacterDirection == CharacterDirection.Right
+            else if (rBody.linearVelocityX < -0.1f && _character.CharacterDirection == CharacterDirection.Right
                 && _character.runningCombatStateType == CombatStateType.Idle)
             {
                 _character.SetCharacterDirectionRpc(CharacterDirection.Left);
