@@ -22,7 +22,7 @@ namespace AshGreen.Character
                 return;
 
             if (_character._movementController.isGrounded)
-                _character._movementController.MovementStateTransition(onChangeType);
+                _character._movementController.MovementStateTransitionRpc(onChangeType);
         }
 
         public override void Exit()

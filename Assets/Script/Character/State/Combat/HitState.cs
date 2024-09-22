@@ -68,7 +68,7 @@ namespace AshGreen.Character
 
             if (IsOwner)
             {
-                _character.CombatStateTransitionServerRpc(CombatStateType.Idle);
+                _character.CombatStateTransitionRpc(CombatStateType.Idle);
             }
 
         }

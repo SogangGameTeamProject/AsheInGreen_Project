@@ -24,20 +24,20 @@ namespace AshGreen.Character
             if (rBody.linearVelocityX > 0 && _character.CharacterDirection == CharacterDirection.Left
                 && _character.runningCombatStateType == CombatStateType.Idle)
             {
-                _character.CharacterDirection = CharacterDirection.Right;
+                _character.SetCharacterDirectionRpc(CharacterDirection.Right);
                 Debug.Log("오른쪽 방향 전환");
             }
             else if (rBody.linearVelocityX < 0 && _character.CharacterDirection == CharacterDirection.Right
                 && _character.runningCombatStateType == CombatStateType.Idle)
             {
-                _character.CharacterDirection = CharacterDirection.Left;
+                _character.SetCharacterDirectionRpc(CharacterDirection.Left);
                 Debug.Log("왼쪽 방향 전환");
             }
 
             //이동 상태 종료 체크
             if (rBody.linearVelocityX == 0 || !_character._movementController.isGrounded)
             {
-                _character._movementController.MovementStateTransition(onChangeType);
+                _character._movementController.MovementStateTransitionRpc(onChangeType);
                 return;
             }
                 

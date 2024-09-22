@@ -6,7 +6,6 @@ namespace AshGreen
 {
     public class GameManager : Singleton<GameManager>
     {
-
+        
     }
-
 }

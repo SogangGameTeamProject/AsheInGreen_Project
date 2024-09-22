@@ -69,12 +69,8 @@ namespace AshGreen.Character
             _networkAnimator = GetComponent<NetworkAnimator>();
 
             movementStateContext = new StateContext<CharacterController>(_character);//콘텍스트 생성
-            Debug.Log("movementStateContext: " + movementStateContext);
-            if (IsOwner)
-            {
-                Debug.Log("이동상태 초기화");
-                MovementStateTransitionServerRpc(MovementStateType.Idle);
-            }
+
+            MovementStateTransitionRpc(MovementStateType.Idle);
 
             //액션 초기화
             MoveAction += OnMove;
@@ -92,6 +88,7 @@ namespace AshGreen.Character
             MoveAction -= OnMove;
             JumpAction -= OnJump;
             DownJumpAction -= OnDownJump;
+            NockBackAction -= OnNockBack;
         }
 
         void Update()
@@ -103,12 +100,12 @@ namespace AshGreen.Character
         }
 
         // 이동 시 애니메이션 파라미터 업데이트
+        
         private void MoveAniUpdate()
         {
             _characterAnimator.SetFloat("VelocityAbcX", Mathf.Abs(rBody.linearVelocityX));
             _characterAnimator.SetFloat("VelocityY", rBody.linearVelocityY);
             _characterAnimator.SetBool("IsGrounded", isGrounded);
-
         }
 
         // 땅에 있는지 확인하는 함수
@@ -125,20 +122,8 @@ namespace AshGreen.Character
 
         //-----이동 상태 관련 함수-----
         //이동 상태 변환 함수
-        [ServerRpc]
-        public void MovementStateTransitionServerRpc(MovementStateType type)
-        {
-            Debug.Log("서버 Rpc 호출");
-            MovementStateTransitionClientRpc(type);
-        }
-
-        [ClientRpc]
-        public void MovementStateTransitionClientRpc(MovementStateType type)
-        {
-            Debug.Log("클라이언트 Rpc 호출");
-            MovementStateTransition(type);
-        }
-        public void MovementStateTransition(MovementStateType type)
+        [Rpc(SendTo.ClientsAndHost)]
+        public void MovementStateTransitionRpc(MovementStateType type)
         {
             Debug.Log("이동 상태 전환: " +  type);
             IState<CharacterController> state = null;
@@ -238,14 +223,14 @@ namespace AshGreen.Character
         //넉백 종료 처리 코루틴
         private IEnumerator NockBackTreatment(Vector2 vector2, float power, float time)
         {
-            MovementStateTransitionServerRpc(MovementStateType.Unable);
+            MovementStateTransitionRpc(MovementStateType.Unable);
             isUnableMove = true;
             rBody.linearVelocity = Vector2.zero;
             rBody.AddForce(vector2 * power, ForceMode2D.Impulse);
 
             yield return new WaitForSeconds(time);
 
-            MovementStateTransitionServerRpc(MovementStateType.Idle);
+            MovementStateTransitionRpc(MovementStateType.Idle);
             isUnableMove = false;
         }
 

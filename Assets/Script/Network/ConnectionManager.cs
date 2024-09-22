@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Multiplayer;
@@ -8,99 +9,35 @@ using UnityEngine;
 
 public class ConnectionManager : MonoBehaviour
 {
-    private string _profileName;
-    private string _sessionName;
-    private int _maxPlayers = 10;
-    private ConnectionState _state = ConnectionState.Disconnected;
-    private ISession _session;
-    private NetworkManager m_NetworkManager;
+    private string ipAddress = "127.0.0.1"; // 기본 IP 주소
+    private bool isServerStarted = false;
+    private bool isClientConnected = false;
 
-    private enum ConnectionState
+    void OnGUI()
     {
-        Disconnected,
-        Connecting,
-        Connected,
-    }
+        GUILayout.BeginArea(new Rect(10, 10, 300, 300));
 
-    private async void Awake()
-    {
-        m_NetworkManager = GetComponent<NetworkManager>();
-        m_NetworkManager.OnClientConnectedCallback += OnClientConnectedCallback;
-        m_NetworkManager.OnSessionOwnerPromoted += OnSessionOwnerPromoted;
-        await UnityServices.InitializeAsync();
-    }
-
-    private void OnSessionOwnerPromoted(ulong sessionOwnerPromoted)
-    {
-        if (m_NetworkManager.LocalClient.IsSessionOwner)
+        // 호스트 시작 버튼
+        if (!isServerStarted && GUILayout.Button("Start Host"))
         {
-            Debug.Log($"Client-{m_NetworkManager.LocalClientId} is the session owner!");
-        }
-    }
-
-    private void OnClientConnectedCallback(ulong clientId)
-    {
-        if (m_NetworkManager.LocalClientId == clientId)
-        {
-            Debug.Log($"Client-{clientId} is connected and can spawn {nameof(NetworkObject)}s.");
-        }
-    }
-
-    private void OnGUI()
-    {
-        if (_state == ConnectionState.Connected)
-            return;
-
-        GUI.enabled = _state != ConnectionState.Connecting;
-
-        using (new GUILayout.HorizontalScope(GUILayout.Width(250)))
-        {
-            GUILayout.Label("Profile Name", GUILayout.Width(100));
-            _profileName = GUILayout.TextField(_profileName);
+            NetworkManager.Singleton.StartHost();
+            isServerStarted = true;
+            Debug.Log("Server started");
         }
 
-        using (new GUILayout.HorizontalScope(GUILayout.Width(250)))
+        // 클라이언트 연결 버튼
+        if (!isClientConnected && GUILayout.Button("Connect as Client"))
         {
-            GUILayout.Label("Session Name", GUILayout.Width(100));
-            _sessionName = GUILayout.TextField(_sessionName);
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(ipAddress, 7777);
+            NetworkManager.Singleton.StartClient();
+            isClientConnected = true;
+            Debug.Log("Connecting to server at " + ipAddress);
         }
 
-        GUI.enabled = GUI.enabled && !string.IsNullOrEmpty(_profileName) && !string.IsNullOrEmpty(_sessionName);
+        // IP 주소 입력 필드
+        GUILayout.Label("IP Address:");
+        ipAddress = GUILayout.TextField(ipAddress, 15);
 
-        if (GUILayout.Button("Create or Join Session"))
-        {
-            CreateOrJoinSessionAsync();
-        }
-    }
-
-    private void OnDestroy()
-    {
-        _session?.LeaveAsync();
-    }
-
-    private async Task CreateOrJoinSessionAsync()
-    {
-        _state = ConnectionState.Connecting;
-
-        try
-        {
-            AuthenticationService.Instance.SwitchProfile(_profileName);
-            await AuthenticationService.Instance.SignInAnonymouslyAsync();
-
-            var options = new SessionOptions()
-            {
-                Name = _sessionName,
-                MaxPlayers = _maxPlayers
-            }.WithDistributedAuthorityNetwork();
-
-            _session = await MultiplayerService.Instance.CreateOrJoinSessionAsync(_sessionName, options);
-
-            _state = ConnectionState.Connected;
-        }
-        catch (Exception e)
-        {
-            _state = ConnectionState.Disconnected;
-            Debug.LogException(e);
-        }
+        GUILayout.EndArea();
     }
 }

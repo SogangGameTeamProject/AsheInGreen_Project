@@ -2270,7 +2270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3208670925667392644, guid: ff2674daaaa501b4f8a5046e93cec5ee, type: 3}
       propertyPath: NetworkConfig.NetworkTopology
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4664646463607555396, guid: ff2674daaaa501b4f8a5046e93cec5ee, type: 3}
       propertyPath: m_LocalPosition.x

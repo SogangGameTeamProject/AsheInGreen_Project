@@ -322,7 +322,7 @@
     },
     "com.unity.services.authentication": {
       "version": "3.3.3",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0",

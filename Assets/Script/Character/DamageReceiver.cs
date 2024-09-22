@@ -9,7 +9,6 @@ namespace AshGreen.Character
     {
         private CharacterController _character;
 
-        
         public event Action<float> TakeDamageAction;//피격 시 호출되는 액션
         public event Action<CharacterController, float, AttackType, bool> DealDamageAction;//타격 시 호출되는 액션
 
@@ -23,8 +22,10 @@ namespace AshGreen.Character
         {
             if (IsOwner)
             {
+                Debug.Log("피격: "+this.gameObject.name);
                 TakeDamageAction?.Invoke(damage);
             }
+                
         }
 
         //타격 처리 메서드
@@ -32,8 +33,10 @@ namespace AshGreen.Character
         {
             if (IsOwner)
             {
+                Debug.Log("타격: " + this.gameObject.name);
                 DealDamageAction?.Invoke(target, damage, attackType, isCritical);
             }
+                
         }
     }
 }
