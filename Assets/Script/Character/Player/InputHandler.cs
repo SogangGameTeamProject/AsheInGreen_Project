@@ -9,7 +9,7 @@ namespace AshGreen.Character.Player
     public class InputHandler : NetworkBehaviour
     {
         private CharacterController _player = null;//플레이어 컨트롤러
-
+        private PlayerSkillManager _skillManager = null;//스킬 메니저
 
         private MovementStateType _runningMovementType;//현재 진행중이 플레이어의 이동 상태
         private CombatStateType _runningCombatType;//
@@ -17,13 +17,12 @@ namespace AshGreen.Character.Player
         //이동
         private Vector2 _moveVec = Vector2.zero;
 
-        //스킬 관련
-        private PlayerSkillHolder mainSkillHolder = null;
-        private PlayerSkillHolder secondarySkillHolder = null;
-        private PlayerSkillHolder specialSkillHolder = null;
 
         private void Start()
         {
+            _player = GetComponent<CharacterController>();//플레이어 컨트롤러 초기화
+            _skillManager = GetComponent<PlayerSkillManager>();
+
             //로컬 객체가 아니면 인풋 시스템 제거
             if (!IsOwner)
             {
@@ -31,7 +30,7 @@ namespace AshGreen.Character.Player
                 Destroy(playerInput);
             }
                 
-            _player = GetComponent<CharacterController>();//플레이어 컨트롤러 초기화
+            
         }
 
 
@@ -52,7 +51,6 @@ namespace AshGreen.Character.Player
         //이동 입력 처리
         public void OnMove(InputAction.CallbackContext context)
         {
-            
             _moveVec = context.ReadValue<Vector2>();
         }
 
@@ -85,7 +83,15 @@ namespace AshGreen.Character.Player
         //메인 스킬 입력 처리
         public void OnMainSkill(InputAction.CallbackContext context)
         {
-            
+            if (context.started)
+            {
+                
+            }
+            else if (context.canceled)
+            {
+                
+            }
+
         }
 
         //보조스킬 입력 처리

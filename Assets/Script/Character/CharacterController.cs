@@ -81,8 +81,7 @@ namespace AshGreen.Character
         }
 
         //------스테이터스 관련 전역 변수 선언------
-        [SerializeField]
-        private CharacterConfig baseConfig = null;//기본능력치가 저장되는 변수
+        public CharacterConfig baseConfig = null;//기본능력치가 저장되는 변수
         //레벨 관련
         private NetworkVariable<int> level = new NetworkVariable<int>(1);
         //최대체력 관련 전역변수

@@ -673,6 +673,7 @@ GameObject:
   - component: {fileID: 1434835013967201027}
   - component: {fileID: 7291620524692100264}
   - component: {fileID: 1616294030578084601}
+  - component: {fileID: 3428477602277048599}
   - component: {fileID: 6167815754311996577}
   - component: {fileID: 1540418265607757292}
   m_Layer: 3
@@ -891,7 +892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  NetworkTransformExpanded: 1
+  NetworkTransformExpanded: 0
   AuthorityMode: 0
   TickSyncChildren: 0
   UseUnreliableDeltas: 0
@@ -1051,12 +1052,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  _moveCommand: {fileID: 0}
-  _jumpCommand: {fileID: 0}
-  _downJumpCommand: {fileID: 0}
-  _mainSkillCommand: {fileID: 0}
-  _secondarySkillCommand: {fileID: 0}
-  _specialSkillCommand: {fileID: 0}
+--- !u!114 &3428477602277048599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204871404527705347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248c8d0d89e374d448ad4240d541adc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6167815754311996577
 MonoBehaviour:
   m_ObjectHideFlags: 0

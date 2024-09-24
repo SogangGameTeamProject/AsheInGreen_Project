@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace AshGreen.Character.Skill
@@ -17,10 +15,8 @@ namespace AshGreen.Character.Skill
         public string animationTrigger; // 스킬 발동 시 애니메이션 트리거
         public AudioClip skillSound;    // 스킬 발동 소리
 
-        public abstract void Initialize(CharacterController caster);
-
         // 스킬의 발동 로직
-        public abstract void Use(float chageTime = 0);
+        public abstract void Use(CharacterController caster, float chageTime = 0);
     }
 }
 
