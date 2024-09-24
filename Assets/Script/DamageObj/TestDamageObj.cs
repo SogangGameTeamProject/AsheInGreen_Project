@@ -9,7 +9,7 @@ namespace AshGreen.DamageObj
         public float nockbackPower = 100f;
         public float nockbackTime = 0.3f;
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerStay2D(Collider2D collision)
         {
             IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
 

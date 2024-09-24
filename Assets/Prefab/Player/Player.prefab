@@ -859,7 +859,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   _animator: {fileID: 0}
-  hitTIme: 0.6
+  hitTIme: 1.5
   flashCycle: 0.05
   stateAni: IsHeart
 --- !u!1 &7809112534474614861

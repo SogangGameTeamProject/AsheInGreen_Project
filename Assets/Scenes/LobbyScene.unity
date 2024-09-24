@@ -126,6 +126,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 374883715091431986, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1716143489608689542, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: m_Name
       value: DamageObj (2)
@@ -137,6 +141,10 @@ PrefabInstance:
     - target: {fileID: 3326322920860970694, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: nockbackTime
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: nockbackPower
@@ -199,6 +207,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 374883715091431986, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1716143489608689542, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: m_Name
       value: DamageObj (1)
