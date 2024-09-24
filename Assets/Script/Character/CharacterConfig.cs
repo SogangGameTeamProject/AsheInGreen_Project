@@ -1,5 +1,7 @@
 using UnityEngine;
-
+using AshGreen.Character.Skill;
+using NUnit.Framework;
+using System.Collections.Generic;
 namespace AshGreen.Character
 {
     [CreateAssetMenu(fileName = "Character", menuName = "Scriptable Objects/Character/CharacterStatus")]
@@ -17,7 +19,7 @@ namespace AshGreen.Character
         [Tooltip("최대 점프 횟수")]
         public int JumMaxNum = 0;
 
-        //[Header("액션 설정")]
-
+        [Header("스킬 설정")]
+        public List<CharacterSkill> skills;
     }
 }

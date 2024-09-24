@@ -17,7 +17,4 @@ MonoBehaviour:
   MoveSpeed: 10
   JumpPower: 150
   JumMaxNum: 1
-  SkillAcceleration: 0
-  ItemAcceleration: 0
-  CriticalChance: 0
-  CriticalDamage: 100
+  skills: []

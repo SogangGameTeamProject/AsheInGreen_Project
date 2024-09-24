@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using AshGreen.Character.Skill;
 namespace AshGreen.Character.Player
 {
     public class InputHandler : NetworkBehaviour
     {
         private CharacterController _player = null;//플레이어 컨트롤러
 
-        //커맨드들
-        public PlayerCommandInit _moveCommand = null;
-        public PlayerCommandInit _jumpCommand = null;
-        public PlayerCommandInit _downJumpCommand = null;
-        public PlayerCommandInit _mainSkillCommand = null;
-        public PlayerCommandInit _secondarySkillCommand = null;
-        public PlayerCommandInit _specialSkillCommand = null;
 
         private MovementStateType _runningMovementType;//현재 진행중이 플레이어의 이동 상태
         private CombatStateType _runningCombatType;//
 
         //이동
         private Vector2 _moveVec = Vector2.zero;
+
+        //스킬 관련
+        private PlayerSkillHolder mainSkillHolder = null;
+        private PlayerSkillHolder secondarySkillHolder = null;
+        private PlayerSkillHolder specialSkillHolder = null;
 
         private void Start()
         {
@@ -46,7 +44,7 @@ namespace AshGreen.Character.Player
                 && _moveVec != Vector2.zero &&
                 _runningCombatType != CombatStateType.Death)
             {
-                _moveCommand.Execute(_player, _moveVec);
+                _player._movementController.ExecuteMove(_moveVec, _player.MoveSpeed);
             }
         }
 
@@ -68,8 +66,7 @@ namespace AshGreen.Character.Player
                 (_player._movementController.isGrounded || (!_player._movementController.isGrounded && _player.JumMaxNum > _player.jumCnt))
                 )
             {
-                Debug.Log(_runningCombatType == CombatStateType.Idle);
-                _jumpCommand.Execute(_player);
+                _player._movementController.ExecutJump(_player.JumpPower);
             }
         }
 
@@ -82,28 +79,25 @@ namespace AshGreen.Character.Player
                 (_runningMovementType == MovementStateType.Idle || _runningMovementType == MovementStateType.Move)&&
                 _player._movementController.isPlatformed
                 )
-                _downJumpCommand.Execute(_player);
+                _player._movementController.ExecutDownJump(_player.JumpPower);
         }
 
         //메인 스킬 입력 처리
         public void OnMainSkill(InputAction.CallbackContext context)
         {
-            if (context.started)
-                _mainSkillCommand.Execute(_player);
+            
         }
 
         //보조스킬 입력 처리
         public void OnSecondarySkill(InputAction.CallbackContext context)
         {
-            if (context.started)
-                _secondarySkillCommand.Execute(_player);
+            
         }
 
         //특수스킬 입력 처리
         public void OnSpecialSkill(InputAction.CallbackContext context)
         {
-            if (context.started)
-                _specialSkillCommand.Execute(_player);
+            
         }
     }
 }
