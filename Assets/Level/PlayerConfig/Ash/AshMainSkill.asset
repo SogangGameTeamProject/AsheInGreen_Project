@@ -15,7 +15,7 @@ MonoBehaviour:
   skillName: "\uD640\uB4DC \uACF5\uACA9"
   activeTime: 0
   cooldownTime: 0
-  charging: 0
+  charging: 1
   chargingMoveSpeed: 0.75
   maxChageCnt: 1
   damageMultiplier: 1
