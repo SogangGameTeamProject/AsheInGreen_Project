@@ -2267,6 +2267,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9127776213851048245, guid: 460f70ec337fac0438184b553c914d7f, type: 3}
+      propertyPath: JoiningSession.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127776213851048245, guid: 460f70ec337fac0438184b553c914d7f, type: 3}
+      propertyPath: JoiningSession.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

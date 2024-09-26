@@ -6,6 +6,7 @@ using AshGreen.Character;
 using Unity.Netcode;
 using AshGreen.State;
 using Unity.VisualScripting;
+using AshGreen.Character.Skill;
 
 namespace AshGreen.Character
 {
@@ -28,6 +29,7 @@ namespace AshGreen.Character
         public MovementController _movementController = null;
         public DamageReceiver _damageReceiver = null;
         public StatusEffectManager _statusEffectManager = null;
+        public CharacterSkillManager _characterSkillManager = null;
 
         //------상태 패턴 관련 전역 변수 선언------
         
@@ -71,6 +73,9 @@ namespace AshGreen.Character
         [Rpc(SendTo.ClientsAndHost)]
         private void OnFlipRpc(CharacterDirection previousValue, CharacterDirection newValue)
         {
+            if (runningCombatStateType == CombatStateType.Death)
+                return;
+
             Vector3 flipScale = transform.localScale;
             if (CharacterDirection == CharacterDirection.Left)
                 flipScale.x = Mathf.Abs(flipScale.x) * -1;
@@ -281,8 +286,6 @@ namespace AshGreen.Character
                 OnSetStatusRpc();//스테이터스 값 초기화
 
                 CombatStateTransitionRpc(CombatStateType.Idle);
-
-                
             }
             characterDirection.OnValueChanged += OnFlipRpc;
             //피격 타격 액션 설정

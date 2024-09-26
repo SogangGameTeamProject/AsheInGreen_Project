@@ -46,7 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
-  _animator: {fileID: 0}
   onChangeType: 0
 --- !u!1 &948538812523840910
 GameObject:
@@ -94,7 +93,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
-  _animator: {fileID: 0}
   stateAni: IsHeart
 --- !u!1 &1285062107557988456
 GameObject:
@@ -142,7 +140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
-  _animator: {fileID: 0}
   onJumpType: 3
   onMoveType: 1
 --- !u!1 &2050740755304086830
@@ -191,7 +188,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
-  _animator: {fileID: 0}
   onChangeType: 0
 --- !u!1 &3409084871258227269
 GameObject:
@@ -239,7 +235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
-  _animator: {fileID: 0}
 --- !u!1 &3423287262508431186
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
-  _animator: {fileID: 0}
   hitTIme: 1.5
   flashCycle: 0.05
   stateAni: IsHeart
@@ -651,7 +645,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
-  _animator: {fileID: 0}
+--- !u!1 &7931520785498913007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1690893657098394212}
+  m_Layer: 3
+  m_Name: SkillManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1690893657098394212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931520785498913007}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9135078203353011336}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9204871404527705347
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,10 +694,10 @@ GameObject:
   - component: {fileID: 1345663172694577561}
   - component: {fileID: 942433221622638762}
   - component: {fileID: 491064707563821348}
+  - component: {fileID: 7129309876504772456}
   - component: {fileID: 1434835013967201027}
   - component: {fileID: 7291620524692100264}
   - component: {fileID: 1616294030578084601}
-  - component: {fileID: 3428477602277048599}
   - component: {fileID: 6167815754311996577}
   - component: {fileID: 1540418265607757292}
   m_Layer: 3
@@ -696,6 +720,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1690893657098394212}
   - {fileID: 884158332261646948}
   - {fileID: 1733162331067627674}
   - {fileID: 254312122980215360}
@@ -967,6 +992,7 @@ MonoBehaviour:
   _movementController: {fileID: 491064707563821348}
   _damageReceiver: {fileID: 1434835013967201027}
   _statusEffectManager: {fileID: 7291620524692100264}
+  _characterSkillManager: {fileID: 7129309876504772456}
   runningCombatStateType: -1
   combatStateList:
   - type: 0
@@ -1014,6 +1040,23 @@ MonoBehaviour:
     state: {fileID: 3303825179608406192}
   - type: 2
     state: {fileID: 8777053553272664512}
+--- !u!114 &7129309876504772456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204871404527705347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db4e346afa60bb47bea07c1d652eef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  skillList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1434835013967201027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,18 +1095,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
---- !u!114 &3428477602277048599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9204871404527705347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 248c8d0d89e374d448ad4240d541adc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6167815754311996577
 MonoBehaviour:
   m_ObjectHideFlags: 0

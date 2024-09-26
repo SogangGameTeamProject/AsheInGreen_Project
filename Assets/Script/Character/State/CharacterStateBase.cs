@@ -10,7 +10,7 @@ namespace AshGreen.Character
         protected CharacterController _character = null;
         protected SoundManager _soundManager = null;
         public AudioClip stateSoundClip = null;
-        public Animator _animator = null;
+        protected Animator _animator = null;
 
         public virtual void Enter(CharacterController character)
         {

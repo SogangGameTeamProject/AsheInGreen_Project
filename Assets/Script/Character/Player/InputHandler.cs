@@ -9,7 +9,6 @@ namespace AshGreen.Character.Player
     public class InputHandler : NetworkBehaviour
     {
         private CharacterController _player = null;//플레이어 컨트롤러
-        private PlayerSkillManager _skillManager = null;//스킬 메니저
 
         private MovementStateType _runningMovementType;//현재 진행중이 플레이어의 이동 상태
         private CombatStateType _runningCombatType;//
@@ -21,7 +20,6 @@ namespace AshGreen.Character.Player
         private void Start()
         {
             _player = GetComponent<CharacterController>();//플레이어 컨트롤러 초기화
-            _skillManager = GetComponent<PlayerSkillManager>();
 
             //로컬 객체가 아니면 인풋 시스템 제거
             if (!IsOwner)

@@ -8,9 +8,9 @@ namespace AshGreen.Character.Skill
     public class AshSecondarySkill : CharacterSkill
     {
 
-        public override void Use(CharacterController caster, float chageTime = 0)
+        public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
         {
-            
+            yield return null;
         }
     }
 }
