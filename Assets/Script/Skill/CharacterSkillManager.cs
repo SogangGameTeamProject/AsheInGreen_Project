@@ -54,10 +54,13 @@ namespace AshGreen.Character.Skill
         //스킬 입력 처리
         public void PresseSkill(int index)
         {
-            if (skillList[index].skill.charging)
-                skillList[index].Charging();
-            else
-                skillList[index].Use();
+            if (skillList[index].NowChargeCnt > 0 && skillList[index].state == SkillState.Idle)
+            {
+                if (skillList[index].skill.charging)
+                    skillList[index].Charging();
+                else
+                    skillList[index].Use();
+            }
         }
 
         public void ReleaseSkill(int index)

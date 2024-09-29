@@ -276,6 +276,22 @@ namespace AshGreen.Character
             this.isDamageImmunity.Value = damageImmunity;
         }
 
+        //에너지 관련
+        //최대 에너지
+        private NetworkVariable<float> maxEnergyGauge = new NetworkVariable<float>(0);
+        [Rpc(SendTo.Server)]
+        public void SetMaxEnergyGaugeRpc(int value)
+        {
+            maxEnergyGauge.Value = value;
+        }
+        //현재 에너지
+        private NetworkVariable<float> energyGauge = new NetworkVariable<float>(0);
+        [Rpc(SendTo.Server)]
+        public void SetEnergyGaugeRpc(int value)
+        {
+            energyGauge.Value = Mathf.Clamp(value, 0, maxEnergyGauge.Value);
+        }
+
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
@@ -319,6 +335,7 @@ namespace AshGreen.Character
                 baseMoveSpeed.Value = baseConfig.MoveSpeed;
                 baseJumpPower.Value = baseConfig.JumpPower;
                 baseJumMaxNum.Value = baseConfig.JumMaxNum;
+                maxEnergyGauge.Value = baseConfig.MaxEnerge;
             }
         }
 

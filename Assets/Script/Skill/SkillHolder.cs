@@ -11,7 +11,9 @@ namespace AshGreen.Character.Skill
         {
             _caster = caster;
             this.skill = skill;
+            MaxChargeCnt = skill.maxChageCnt;
             nowChargeCnt = skill.maxChageCnt;
+            coolTime = skill.cooldownTime;
             state = SkillState.Idle;
         }
 
@@ -26,19 +28,18 @@ namespace AshGreen.Character.Skill
         }
 
         public CharacterSkill skill = null;
-        private float nowChargeCnt = 0;//현재 스킬 충전 횟수
-        public float NowChargeCnt
+        public int MaxChargeCnt = 0;// 최대 스킬 충전 횟수
+        private int nowChargeCnt = 0;//현재 스킬 충전 횟수
+        public int NowChargeCnt
         {
             get { return nowChargeCnt; }
             set
             {
-                if (value <= skill.maxChageCnt)
-                {
-                    nowChargeCnt = value;
-                    currentCoolTime = 0;
-                }
+                nowChargeCnt = Mathf.Clamp(value, 0, skill.maxChageCnt);
+                currentCoolTime = 0;
             }
         }
+        public float coolTime = 0;
         public float currentCoolTime { get; private set; }//지속 쿨타임 
         public SkillState state { get; set; }//스킬 상태
         
@@ -49,7 +50,7 @@ namespace AshGreen.Character.Skill
             //쿨타임 적용
             if(nowChargeCnt < skill.maxChageCnt)
             {
-                if (currentCoolTime < skill.cooldownTime)
+                if (currentCoolTime < coolTime)
                     currentCoolTime += Time.deltaTime;
                 else
                     NowChargeCnt++;
@@ -65,6 +66,9 @@ namespace AshGreen.Character.Skill
         //스킬 사용 메서드
         public void Use()
         {
+
+            Debug.Log(NowChargeCnt);
+            NowChargeCnt--;
             if (state == SkillState.Idle)
                 holderCorutine = _caster.StartCoroutine(skill.Use(this));
             else
@@ -76,9 +80,8 @@ namespace AshGreen.Character.Skill
         {
             if(state == SkillState.active)
             {
-                state = SkillState.Idle;
                 _caster.StopCoroutine(holderCorutine);
-                holderCorutine = null;
+                holderCorutine = _caster.StartCoroutine(skill.End(this));
             }
         }
     }

@@ -18,6 +18,8 @@ namespace AshGreen.Character
         public float JumpPower = 0;
         [Tooltip("최대 점프 횟수")]
         public int JumMaxNum = 0;
+        [Tooltip("최대 에너지")]
+        public float MaxEnerge = 0;
 
         [Header("스킬 설정")]
         public List<CharacterSkill> skills;

@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uD640\uB4DC \uACF5\uACA9"
   activeTime: 0
-  cooldownTime: 0
+  cooldownTime: 2
+  maxChageCnt: 1
   charging: 1
   chargingMoveSpeed: 0.75
-  maxChageCnt: 1
+  useType: 0
+  isCansleUse: 0
+  isMultipleUse: 0
+  skillType: 0
   damageMultiplier: 1
+  utillValue: 1
+  utillTime: 1
   skillIcon: {fileID: 0}
   animationTrigger: 
   skillSound: {fileID: 0}

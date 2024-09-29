@@ -18,7 +18,7 @@ namespace AshGreen.Character.Skill
         public string skillName;   // 스킬 이름
         public float activeTime;   // 스킬 사용 시간
         public float cooldownTime; // 스킬 쿨타임
-        public int maxChageCnt = 1;//최대 충전 수
+        public int maxChageCnt = 1;// 최대 충전 수
 
         public bool charging = false; //스킬 차징 여부
         public float chargingMoveSpeed = 0.75f; // 차징 시 이속
