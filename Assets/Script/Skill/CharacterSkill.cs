@@ -25,6 +25,9 @@ namespace AshGreen.Character.Skill
 
         public UseType useType = UseType.Time;
 
+        //캔슬 여부
+        public bool isCansleUse = false;   // 캔슬 여부
+        public bool isMultipleUse = false; // 다중 사용 가능 여부
 
         public SkillType skillType;//스킬 타입
 
@@ -40,9 +43,9 @@ namespace AshGreen.Character.Skill
         public AudioClip skillSound;    // 스킬 발동 소리
 
         //스킬 차징
-        public virtual IEnumerator Chargin(SkillHolder holder)
+        public virtual IEnumerator Charging(SkillHolder holder)
         {
-            holder.state = SkillHolder.SkillState.charge;//차징
+            holder.state = SkillHolder.SkillState.charge;//차징 상태 전환
             float charginTime = 0;
 
             while (holder.state == SkillHolder.SkillState.charge)
@@ -51,11 +54,24 @@ namespace AshGreen.Character.Skill
                 yield return null;
             }
 
-            holder.holderCorutine = holder.StartCoroutine(Use(holder, charginTime));//차징 후 
+            holder.holderCorutine = holder._caster.StartCoroutine(Use(holder, charginTime));//차징 후 
         }
 
         //스킬 사용
-        public abstract IEnumerator Use(SkillHolder holder, float chageTime = 0);
+        public virtual IEnumerator Use(SkillHolder holder, float chageTime = 0)
+        {
+            
+            holder.holderCorutine = holder._caster.StartCoroutine(End(holder));
+            yield return null;
+        }
+
+        //스킬 종료 처리
+        public virtual IEnumerator End(SkillHolder holder)
+        {
+            holder.state = SkillHolder.SkillState.Idle;
+
+            yield return null;
+        }
     }
 }
 

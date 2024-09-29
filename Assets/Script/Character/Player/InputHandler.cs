@@ -27,8 +27,6 @@ namespace AshGreen.Character.Player
                 PlayerInput playerInput = GetComponent<PlayerInput>();
                 Destroy(playerInput);
             }
-                
-            
         }
 
 
@@ -83,25 +81,38 @@ namespace AshGreen.Character.Player
         {
             if (context.started)
             {
-                
+                _player._characterSkillManager.PresseSkill(0);
             }
             else if (context.canceled)
             {
-                
+                _player._characterSkillManager.ReleaseSkill(0);
             }
-
         }
 
         //보조스킬 입력 처리
         public void OnSecondarySkill(InputAction.CallbackContext context)
         {
-            
+            if (context.started)
+            {
+                _player._characterSkillManager.PresseSkill(1);
+            }
+            else if (context.canceled)
+            {
+                _player._characterSkillManager.ReleaseSkill(1);
+            }
         }
 
         //특수스킬 입력 처리
         public void OnSpecialSkill(InputAction.CallbackContext context)
         {
-            
+            if (context.started)
+            {
+                _player._characterSkillManager.PresseSkill(2);
+            }
+            else if (context.canceled)
+            {
+                _player._characterSkillManager.ReleaseSkill(2);
+            }
         }
     }
 }

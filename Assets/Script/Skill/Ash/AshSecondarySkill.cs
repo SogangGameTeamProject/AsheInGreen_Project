@@ -10,7 +10,9 @@ namespace AshGreen.Character.Skill
 
         public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
         {
-            yield return null;
+            Debug.Log("서브 스킬 사용");
+
+            yield return base.End(holder);
         }
     }
 }

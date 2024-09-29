@@ -654,6 +654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1690893657098394212}
+  - component: {fileID: 5175599678637926579}
   m_Layer: 3
   m_Name: SkillManager
   m_TagString: Untagged
@@ -676,6 +677,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9135078203353011336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5175599678637926579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931520785498913007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db4e346afa60bb47bea07c1d652eef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  _character: {fileID: 942433221622638762}
+  skillList: []
 --- !u!1 &9204871404527705347
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +710,6 @@ GameObject:
   - component: {fileID: 1345663172694577561}
   - component: {fileID: 942433221622638762}
   - component: {fileID: 491064707563821348}
-  - component: {fileID: 7129309876504772456}
   - component: {fileID: 1434835013967201027}
   - component: {fileID: 7291620524692100264}
   - component: {fileID: 1616294030578084601}
@@ -992,7 +1007,7 @@ MonoBehaviour:
   _movementController: {fileID: 491064707563821348}
   _damageReceiver: {fileID: 1434835013967201027}
   _statusEffectManager: {fileID: 7291620524692100264}
-  _characterSkillManager: {fileID: 7129309876504772456}
+  _characterSkillManager: {fileID: 5175599678637926579}
   runningCombatStateType: -1
   combatStateList:
   - type: 0
@@ -1040,23 +1055,6 @@ MonoBehaviour:
     state: {fileID: 3303825179608406192}
   - type: 2
     state: {fileID: 8777053553272664512}
---- !u!114 &7129309876504772456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9204871404527705347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db4e346afa60bb47bea07c1d652eef5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  skillList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &1434835013967201027
 MonoBehaviour:
   m_ObjectHideFlags: 0
