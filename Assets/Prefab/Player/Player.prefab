@@ -1007,7 +1007,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   _damageReceiver: {fileID: 1434835013967201027}
   _statusEffectManager: {fileID: 7291620524692100264}
-  runningCombatStateType: -1
+  runningCombatStateType: 0
   combatStateList:
   - type: 0
     state: {fileID: 7471496294023321380}
