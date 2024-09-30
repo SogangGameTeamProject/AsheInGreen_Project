@@ -391,6 +391,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5478093324643512262, guid: ff2674daaaa501b4f8a5046e93cec5ee, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 1208111552
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478093324643512262, guid: ff2674daaaa501b4f8a5046e93cec5ee, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 4224695479
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -444,6 +452,7 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!114 &2028953462
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,10 +26,8 @@ namespace AshGreen.Character
     public class CharacterController : Subject
     {
         //외부 컨트롤러들
-        public MovementController _movementController = null;
         public DamageReceiver _damageReceiver = null;
         public StatusEffectManager _statusEffectManager = null;
-        public CharacterSkillManager _characterSkillManager = null;
 
         //------상태 패턴 관련 전역 변수 선언------
         
@@ -295,7 +293,7 @@ namespace AshGreen.Character
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
-
+            Debug.Log("context 생성");
             combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성
             if (IsOwner)
             {

@@ -1,16 +1,12 @@
+using AshGreen.Character;
+using AshGreen.Character.Skill;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+namespace AshGreen.Character.Player
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class PlayerController : CharacterController
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public MovementController _movementController = null;
+        public CharacterSkillManager _characterSkillManager = null;
     }
 }

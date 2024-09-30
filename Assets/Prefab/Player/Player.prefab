@@ -708,6 +708,7 @@ GameObject:
   - component: {fileID: 7835904058551910854}
   - component: {fileID: 4309618130203827925}
   - component: {fileID: 1345663172694577561}
+  - component: {fileID: 776473998259894186}
   - component: {fileID: 942433221622638762}
   - component: {fileID: 491064707563821348}
   - component: {fileID: 1434835013967201027}
@@ -906,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3471441096
+  GlobalObjectIdHash: 608348716
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -991,6 +992,36 @@ MonoBehaviour:
     TriggerNameHash: -1505326268
     TransitionIndex: 1
   m_Animator: {fileID: 5141303237562480953}
+--- !u!114 &776473998259894186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204871404527705347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0fd753d02e8771459d077b0bd13098e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  _damageReceiver: {fileID: 1434835013967201027}
+  _statusEffectManager: {fileID: 7291620524692100264}
+  runningCombatStateType: -1
+  combatStateList:
+  - type: 0
+    state: {fileID: 7471496294023321380}
+  - type: 1
+    state: {fileID: 1170719951875528351}
+  - type: 2
+    state: {fileID: 4808559951109672692}
+  baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
+  nowHp:
+    m_InternalValue: 0
+  isDamageImmunity:
+    m_InternalValue: 0
+  _movementController: {fileID: 491064707563821348}
+  _characterSkillManager: {fileID: 5175599678637926579}
 --- !u!114 &942433221622638762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,10 +1035,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  _movementController: {fileID: 491064707563821348}
   _damageReceiver: {fileID: 1434835013967201027}
   _statusEffectManager: {fileID: 7291620524692100264}
-  _characterSkillManager: {fileID: 5175599678637926579}
   runningCombatStateType: -1
   combatStateList:
   - type: 0

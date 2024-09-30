@@ -1,3 +1,4 @@
+using AshGreen.Character.Player;
 using UnityEngine;
 
 namespace AshGreen.Character
@@ -23,16 +24,16 @@ namespace AshGreen.Character
                 return;
 
             //점프 체크
-            if (!_character._movementController.isGrounded)
+            if (!((PlayerController)_character)._movementController.isGrounded)
             {
-                _character._movementController.MovementStateTransitionRpc(onJumpType);
+                ((PlayerController)_character)._movementController.MovementStateTransitionRpc(onJumpType);
                 return;
             }
 
 
             //이동 체크
             if (Mathf.Round(rBody.linearVelocityX) != 0)
-                _character._movementController.MovementStateTransitionRpc(onMoveType);
+                ((PlayerController)_character)._movementController.MovementStateTransitionRpc(onMoveType);
         }
 
         public override void Exit()

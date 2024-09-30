@@ -25,6 +25,8 @@ namespace AshGreen.Character.Skill
 
         public UseType useType = UseType.Time;
 
+        public CombatStateType _casterCombatState;
+
         //캔슬 여부
         public bool isNotCancellation = false; // 해당 스킬 캔슬 불가능 여불
         public bool skillCancel = false;       // 타 스킬 캔슬 여부
@@ -71,6 +73,7 @@ namespace AshGreen.Character.Skill
         //스킬 종료 처리
         public virtual IEnumerator End(SkillHolder holder)
         {
+            Debug.Log("종료");
             holder.state = SkillHolder.SkillState.Idle;
 
             yield return null;

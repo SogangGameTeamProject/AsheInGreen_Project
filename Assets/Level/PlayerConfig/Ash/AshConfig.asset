@@ -17,6 +17,8 @@ MonoBehaviour:
   MoveSpeed: 10
   JumpPower: 150
   JumMaxNum: 1
+  UseEnerge: 1
+  MaxEnerge: 10
   skills:
   - {fileID: 11400000, guid: 6d9b91f14b4da484d98a586995324083, type: 2}
   - {fileID: 11400000, guid: 35051a0c030e3cb47a5959a2d3afe5ae, type: 2}

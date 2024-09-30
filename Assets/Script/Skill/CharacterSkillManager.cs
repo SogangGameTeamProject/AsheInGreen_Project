@@ -78,7 +78,7 @@ namespace AshGreen.Character.Skill
                         if (isNotCancellation || (!skillCancel && !multipleUse))
                             return;
                         else if(skillCancel)
-                            holder.state = SkillState.Idle;
+                            holder.Stop();
                     }
                 }
 
@@ -94,6 +94,11 @@ namespace AshGreen.Character.Skill
             //스킬 입력처리
             if (skillList[index].skill.charging && skillList[index].state == SkillState.charge)
                 skillList[index].Use();
+        }
+
+        public void AllStop()
+        {
+
         }
     }
 }

@@ -1,3 +1,4 @@
+using AshGreen.Character.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,8 +22,8 @@ namespace AshGreen.Character
             if(!IsOwner) 
                 return;
 
-            if (_character._movementController.isGrounded)
-                _character._movementController.MovementStateTransitionRpc(onChangeType);
+            if (((PlayerController)_character)._movementController.isGrounded)
+                ((PlayerController)_character)._movementController.MovementStateTransitionRpc(onChangeType);
         }
 
         public override void Exit()

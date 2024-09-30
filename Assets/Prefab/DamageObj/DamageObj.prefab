@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3326322920860970694}
   - component: {fileID: 374883715091431986}
   - component: {fileID: 5448967465036515041}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DamageObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,10 +102,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

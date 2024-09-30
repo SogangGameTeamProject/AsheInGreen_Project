@@ -7,6 +7,7 @@ namespace AshGreen.Character.Skill
     [System.Serializable]
     public class SkillHolder
     {
+
         public SkillHolder(CharacterController caster, CharacterSkill skill)
         {
             _caster = caster;
@@ -41,7 +42,7 @@ namespace AshGreen.Character.Skill
         }
         public float coolTime = 0;
         public float currentCoolTime { get; private set; }//지속 쿨타임 
-        public SkillState state { get; set; }//스킬 상태
+        public SkillState state;//스킬 상태
         
         public Coroutine holderCorutine = null;
 
@@ -56,9 +57,11 @@ namespace AshGreen.Character.Skill
                     NowChargeCnt++;
             }
 
-            //차칭 캔슬 체크
-            if(state == SkillState.charge && _caster.runningCombatStateType != CombatStateType.Idle)
-                state = SkillState.Idle;
+            ////피격 시 스킬 캔슬
+            //if (state != SkillState.Idle && _caster.runningCombatStateType != CombatStateType.Idle)
+            //{
+            //    Stop();
+            //}
         }
 
         //스킬 차징 메서드
@@ -80,11 +83,8 @@ namespace AshGreen.Character.Skill
         //스킬 정지 메서드
         public void Stop()
         {
-            if(state == SkillState.active)
-            {
-                _caster.StopCoroutine(holderCorutine);
-                holderCorutine = _caster.StartCoroutine(skill.End(this));
-            }
+             _caster.StopCoroutine(holderCorutine);
+             holderCorutine = _caster.StartCoroutine(skill.End(this));
         }
     }
 }

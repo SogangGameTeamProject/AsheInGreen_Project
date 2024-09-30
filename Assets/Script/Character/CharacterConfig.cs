@@ -18,6 +18,8 @@ namespace AshGreen.Character
         public float JumpPower = 0;
         [Tooltip("최대 점프 횟수")]
         public int JumMaxNum = 0;
+        [Tooltip("에너지 사용 여부")]
+        public bool UseEnerge = true;
         [Tooltip("최대 에너지")]
         public float MaxEnerge = 0;
 

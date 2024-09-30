@@ -1,3 +1,4 @@
+using AshGreen.Character.Player;
 using System.Collections;
 using UnityEngine;
 
@@ -12,7 +13,9 @@ namespace AshGreen.Character
             _animator.SetTrigger(stateAni);
 
             if (IsOwner)
+            {
                 _character.SetDamageimmunityRpc(true);
+            }
         }
 
         public override void Exit()
