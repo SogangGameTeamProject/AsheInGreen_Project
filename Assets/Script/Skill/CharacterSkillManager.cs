@@ -54,8 +54,34 @@ namespace AshGreen.Character.Skill
         //스킬 입력 처리
         public void PresseSkill(int index)
         {
+            //스킬 입력 처리
             if (skillList[index].NowChargeCnt > 0 && skillList[index].state == SkillState.Idle)
             {
+                //스킬 캔슬 여부 체크 및 처리
+                bool skillCancel = skillList[index].skill.skillCancel;
+                bool multipleUse = skillList[index].skill.multipleUse;
+
+                int cnt = -1;
+                foreach (SkillHolder holder in skillList)
+                {
+                    cnt++;
+
+                    //자기거 체크 X
+                    if (cnt == index)
+                        continue;
+
+                    SkillState state = holder.state;
+                    bool isNotCancellation = holder.skill.isNotCancellation;
+
+                    if(state != SkillState.Idle)
+                    {
+                        if (isNotCancellation || (!skillCancel && !multipleUse))
+                            return;
+                        else if(skillCancel)
+                            holder.state = SkillState.Idle;
+                    }
+                }
+
                 if (skillList[index].skill.charging)
                     skillList[index].Charging();
                 else
@@ -65,6 +91,7 @@ namespace AshGreen.Character.Skill
 
         public void ReleaseSkill(int index)
         {
+            //스킬 입력처리
             if (skillList[index].skill.charging && skillList[index].state == SkillState.charge)
                 skillList[index].Use();
         }

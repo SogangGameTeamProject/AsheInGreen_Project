@@ -55,6 +55,10 @@ namespace AshGreen.Character.Skill
                 else
                     NowChargeCnt++;
             }
+
+            //차칭 캔슬 체크
+            if(state == SkillState.charge && _caster.runningCombatStateType != CombatStateType.Idle)
+                state = SkillState.Idle;
         }
 
         //스킬 차징 메서드
@@ -66,8 +70,6 @@ namespace AshGreen.Character.Skill
         //스킬 사용 메서드
         public void Use()
         {
-
-            Debug.Log(NowChargeCnt);
             NowChargeCnt--;
             if (state == SkillState.Idle)
                 holderCorutine = _caster.StartCoroutine(skill.Use(this));

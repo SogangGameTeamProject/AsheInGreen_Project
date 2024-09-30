@@ -15,13 +15,13 @@ MonoBehaviour:
   skillName: "\uC5F4\uAE30 \uBC29\uCD9C"
   activeTime: 0
   cooldownTime: 0
-  coast: 3
   maxChageCnt: 1
   charging: 1
   chargingMoveSpeed: 0.75
   useType: 0
-  isCansleUse: 0
-  isMultipleUse: 0
+  isNotCancellation: 1
+  skillCancel: 1
+  multipleUse: 0
   skillType: 0
   damageMultiplier: 1
   utillValue: 1

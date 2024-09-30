@@ -26,8 +26,9 @@ namespace AshGreen.Character.Skill
         public UseType useType = UseType.Time;
 
         //캔슬 여부
-        public bool isCansleUse = false;   // 캔슬 여부
-        public bool isMultipleUse = false; // 다중 사용 가능 여부
+        public bool isNotCancellation = false; // 해당 스킬 캔슬 불가능 여불
+        public bool skillCancel = false;       // 타 스킬 캔슬 여부
+        public bool multipleUse = false;       // 다중 사용 가능 여부
 
         public SkillType skillType;//스킬 타입
 
@@ -48,9 +49,11 @@ namespace AshGreen.Character.Skill
             holder.state = SkillHolder.SkillState.charge;//차징 상태 전환
             float charginTime = 0;
 
-            while (holder.state == SkillHolder.SkillState.charge)
+            while (true)
             {
                 charginTime += Time.deltaTime;
+                if (holder.state == SkillHolder.SkillState.active)
+                    break;
                 yield return null;
             }
 

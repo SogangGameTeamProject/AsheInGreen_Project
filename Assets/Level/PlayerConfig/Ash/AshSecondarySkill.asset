@@ -19,8 +19,9 @@ MonoBehaviour:
   charging: 0
   chargingMoveSpeed: 0.75
   useType: 0
-  isCansleUse: 0
-  isMultipleUse: 0
+  isNotCancellation: 0
+  skillCancel: 0
+  multipleUse: 1
   skillType: 0
   damageMultiplier: 1
   utillValue: 1
