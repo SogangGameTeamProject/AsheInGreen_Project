@@ -293,7 +293,6 @@ namespace AshGreen.Character
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
-            Debug.Log("context 생성");
             combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성
             if (IsOwner)
             {
@@ -369,6 +368,7 @@ namespace AshGreen.Character
             {
                 state = findState.state.GetComponent<IState<CharacterController>>();
                 runningCombatStateType = findState.type;
+                Debug.Log(runningCombatStateType);
                 combatStateContext.TransitionTo(state);
             }
         }

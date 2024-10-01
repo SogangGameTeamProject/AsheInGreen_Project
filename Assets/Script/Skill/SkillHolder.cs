@@ -56,13 +56,6 @@ namespace AshGreen.Character.Skill
                 else
                     NowChargeCnt++;
             }
-
-            ////피격 시 스킬 캔슬
-            if (state == SkillState.charge && _caster.runningCombatStateType != CombatStateType.Idle)
-            {
-                Debug.Log(_caster.runningCombatStateType);
-                Stop();
-            }
         }
 
         //스킬 차징 메서드

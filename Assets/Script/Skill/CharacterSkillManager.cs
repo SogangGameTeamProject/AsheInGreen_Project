@@ -27,8 +27,6 @@ namespace AshGreen.Character.Skill
 
             if (IsOwner)
             {
-                Debug.Log(_character.baseConfig);
-                Debug.Log(_character.baseConfig.skills);
                 //스킬 초기화
                 foreach(CharacterSkill skill in _character.baseConfig.skills)
                 {
@@ -96,9 +94,14 @@ namespace AshGreen.Character.Skill
                 skillList[index].Use();
         }
 
+        //모든 스킬 캔슬
         public void AllStop()
         {
-
+            foreach (SkillHolder holder in skillList)
+            {
+                if(holder.state != SkillState.Idle)
+                    holder.Stop();
+            }
         }
     }
 }

@@ -126,7 +126,6 @@ namespace AshGreen.Character
         [Rpc(SendTo.ClientsAndHost)]
         public void MovementStateTransitionRpc(MovementStateType type)
         {
-            Debug.Log("이동 상태 전환: " +  type);
             IState<CharacterController> state = null;
             MovementStateData findState = movementStateList.Find(state => state.type.Equals(type));
             if (findState != null)

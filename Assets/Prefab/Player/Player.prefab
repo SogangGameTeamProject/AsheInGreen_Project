@@ -245,7 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2878667074830220158}
   - component: {fileID: 2327162149935828030}
-  - component: {fileID: 1898003870989920331}
+  - component: {fileID: 2777045095186362253}
   m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
@@ -305,8 +305,8 @@ CapsuleCollider2D:
   m_Offset: {x: -0.06070295, y: 1.0576952}
   m_Size: {x: 0.69973224, y: 1.9706693}
   m_Direction: 0
---- !u!58 &1898003870989920331
-CircleCollider2D:
+--- !u!61 &2777045095186362253
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -339,8 +339,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.06, y: 0.19}
-  m_Radius: 0.2
+  m_Offset: {x: -0.05996111, y: 0.27224517}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.69878477, y: 0.45550966}
+  m_EdgeRadius: 0
 --- !u!1 &4348309236527392776
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +448,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.06938006, y: 0.0004528761}
+  m_Offset: {x: -0.080771774, y: 0.0004528761}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -448,7 +458,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.44108477, y: 0.17286801}
+  m_Size: {x: 0.62925917, y: 0.17286801}
   m_EdgeRadius: 0
 --- !u!1 &5883773900904842054
 GameObject:
@@ -690,7 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  _character: {fileID: 942433221622638762}
+  _character: {fileID: 776473998259894186}
   skillList: []
 --- !u!1 &9204871404527705347
 GameObject:
@@ -709,7 +719,6 @@ GameObject:
   - component: {fileID: 4309618130203827925}
   - component: {fileID: 1345663172694577561}
   - component: {fileID: 776473998259894186}
-  - component: {fileID: 942433221622638762}
   - component: {fileID: 491064707563821348}
   - component: {fileID: 1434835013967201027}
   - component: {fileID: 7291620524692100264}
@@ -1022,34 +1031,6 @@ MonoBehaviour:
     m_InternalValue: 0
   _movementController: {fileID: 491064707563821348}
   _characterSkillManager: {fileID: 5175599678637926579}
---- !u!114 &942433221622638762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9204871404527705347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc58937b3a865bd4184dd59111ce7679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  _damageReceiver: {fileID: 1434835013967201027}
-  _statusEffectManager: {fileID: 7291620524692100264}
-  runningCombatStateType: -1
-  combatStateList:
-  - type: 0
-    state: {fileID: 6258679949100761643}
-  - type: 1
-    state: {fileID: 1170719951875528351}
-  - type: 2
-    state: {fileID: 4808559951109672692}
-  baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
-  nowHp:
-    m_InternalValue: 0
-  isDamageImmunity:
-    m_InternalValue: 0
 --- !u!114 &491064707563821348
 MonoBehaviour:
   m_ObjectHideFlags: 0

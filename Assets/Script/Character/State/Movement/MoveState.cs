@@ -25,12 +25,10 @@ namespace AshGreen.Character
             if (rBody.linearVelocityX > 0.1f && _character.CharacterDirection == CharacterDirection.Left)
             {
                 _character.SetCharacterDirectionRpc(CharacterDirection.Right);
-                Debug.Log("오른쪽 방향 전환");
             }
             else if (rBody.linearVelocityX < -0.1f && _character.CharacterDirection == CharacterDirection.Right)
             {
                 _character.SetCharacterDirectionRpc(CharacterDirection.Left);
-                Debug.Log("왼쪽 방향 전환");
             }
 
             //이동 상태 종료 체크

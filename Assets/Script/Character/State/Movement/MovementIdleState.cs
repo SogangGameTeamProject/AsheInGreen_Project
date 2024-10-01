@@ -14,7 +14,6 @@ namespace AshGreen.Character
         {
             base.Enter(character);
             rBody = _character.GetComponent<Rigidbody2D>();
-            Debug.Log("무브먼트 아이들 상태 전환");
         }
 
         public override void StateUpdate()

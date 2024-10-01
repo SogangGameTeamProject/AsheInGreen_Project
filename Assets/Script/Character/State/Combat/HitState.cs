@@ -26,6 +26,7 @@ namespace AshGreen.Character
 
         public override void Exit()
         {
+            
             //번쩍임 취소
             if (plashCoroutine != null)
             {
@@ -70,7 +71,6 @@ namespace AshGreen.Character
             {
                 _character.CombatStateTransitionRpc(CombatStateType.Idle);
             }
-
         }
     }
 }
