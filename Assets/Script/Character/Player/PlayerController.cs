@@ -8,5 +8,6 @@ namespace AshGreen.Character.Player
     {
         public MovementController _movementController = null;
         public CharacterSkillManager _characterSkillManager = null;
+        public Transform firePoint = null;
     }
 }

@@ -11,7 +11,7 @@ namespace AshGreen.Character.Skill
         {
             Debug.Log("특수스킬 사용");
 
-            yield return base.End(holder);
+            yield return End(holder);
         }
     }
 }

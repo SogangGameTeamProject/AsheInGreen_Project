@@ -4,13 +4,14 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using static AshGreen.Character.Skill.SkillHolder;
 using UnityEditor.Experimental.GraphView;
+using AshGreen.Character.Player;
 
 namespace AshGreen.Character.Skill
 {
     
     public class CharacterSkillManager : NetworkBehaviour
     {
-        public CharacterController _character = null;
+        public PlayerController _player = null;
 
         public enum CharacterSkillStatetype
         {
@@ -28,9 +29,9 @@ namespace AshGreen.Character.Skill
             if (IsOwner)
             {
                 //스킬 초기화
-                foreach(CharacterSkill skill in _character.baseConfig.skills)
+                foreach(CharacterSkill skill in _player.baseConfig.skills)
                 {
-                    SkillHolder skillHolder = new SkillHolder(_character, skill);
+                    SkillHolder skillHolder = new SkillHolder(_player, skill);
                     skillList.Add(skillHolder);
                 }
             }

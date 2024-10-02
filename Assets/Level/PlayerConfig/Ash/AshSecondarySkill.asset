@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: AshSecondarySkill
   m_EditorClassIdentifier: 
   skillName: "\uB300\uC26C"
-  activeTime: 0
-  cooldownTime: 5
+  activeTime: 0.1
+  cooldownTime: 1
   maxChageCnt: 1
   charging: 0
-  chargingMoveSpeed: 0.75
+  chargingMoveSpeed: 0
   useType: 0
+  _casterCombatState: 0
   isNotCancellation: 0
   skillCancel: 0
   multipleUse: 1
@@ -29,3 +30,5 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   animationTrigger: 
   skillSound: {fileID: 0}
+  dashPower: 300
+  energyIncrease: 1

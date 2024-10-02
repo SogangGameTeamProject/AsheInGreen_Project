@@ -460,6 +460,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.62925917, y: 0.17286801}
   m_EdgeRadius: 0
+--- !u!1 &5432634746265272841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5105890872324677893}
+  m_Layer: 3
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5105890872324677893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432634746265272841}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.318, y: 1.004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9135078203353011336}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5883773900904842054
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  _character: {fileID: 776473998259894186}
+  _player: {fileID: 776473998259894186}
   skillList: []
 --- !u!1 &9204871404527705347
 GameObject:
@@ -752,6 +783,7 @@ Transform:
   - {fileID: 9199916697435128639}
   - {fileID: 2878667074830220158}
   - {fileID: 6410513662487870428}
+  - {fileID: 5105890872324677893}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7446970713708843973
@@ -819,7 +851,7 @@ Animator:
   m_GameObject: {fileID: 9204871404527705347}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7819097b6f64f0a4a866e365fae3e68a, type: 2}
+  m_Controller: {fileID: 22100000, guid: 19058269b13cf744cabb1cf2f70e880f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -916,7 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 608348716
+  GlobalObjectIdHash: 3471441096
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -978,28 +1010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  TransitionStateInfoList:
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -357476191
-    DestinationState: -1590825758
-    TransitionDuration: 0
-    TriggerNameHash: -1505326268
-    TransitionIndex: 2
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 1748754976
-    DestinationState: -1590825758
-    TransitionDuration: 0
-    TriggerNameHash: -1505326268
-    TransitionIndex: 2
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 125937960
-    DestinationState: -1590825758
-    TransitionDuration: 0
-    TriggerNameHash: -1505326268
-    TransitionIndex: 1
+  TransitionStateInfoList: []
   m_Animator: {fileID: 5141303237562480953}
 --- !u!114 &776473998259894186
 MonoBehaviour:
@@ -1031,6 +1042,7 @@ MonoBehaviour:
     m_InternalValue: 0
   _movementController: {fileID: 491064707563821348}
   _characterSkillManager: {fileID: 5175599678637926579}
+  firePoint: {fileID: 5105890872324677893}
 --- !u!114 &491064707563821348
 MonoBehaviour:
   m_ObjectHideFlags: 0

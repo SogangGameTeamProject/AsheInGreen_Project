@@ -1,3 +1,4 @@
+using AshGreen.Character.Player;
 using NUnit.Framework;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -8,7 +9,7 @@ namespace AshGreen.Character.Skill
     public class SkillHolder
     {
 
-        public SkillHolder(CharacterController caster, CharacterSkill skill)
+        public SkillHolder(PlayerController caster, CharacterSkill skill)
         {
             _caster = caster;
             this.skill = skill;
@@ -18,7 +19,7 @@ namespace AshGreen.Character.Skill
             state = SkillState.Idle;
         }
 
-        public CharacterController _caster = null;
+        public PlayerController _caster = null;
 
         //스킬 상태
         public enum SkillState

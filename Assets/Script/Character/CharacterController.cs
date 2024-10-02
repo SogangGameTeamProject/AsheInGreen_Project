@@ -287,7 +287,7 @@ namespace AshGreen.Character
         [Rpc(SendTo.Server)]
         public void SetEnergyGaugeRpc(int value)
         {
-            energyGauge.Value = Mathf.Clamp(value, 0, maxEnergyGauge.Value);
+            energyGauge.Value = Mathf.Clamp(energyGauge.Value+value, 0, maxEnergyGauge.Value);
         }
 
         public override void OnNetworkSpawn()

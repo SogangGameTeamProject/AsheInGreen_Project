@@ -19,8 +19,10 @@ MonoBehaviour:
   charging: 1
   chargingMoveSpeed: 0.75
   useType: 0
-  isCansleUse: 0
-  isMultipleUse: 0
+  _casterCombatState: 0
+  isNotCancellation: 0
+  skillCancel: 0
+  multipleUse: 0
   skillType: 0
   damageMultiplier: 1
   utillValue: 1
@@ -28,3 +30,6 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   animationTrigger: 
   skillSound: {fileID: 0}
+  prjectilesPre: {fileID: 4103001482771199239, guid: 5ae38f222b01af749b6ec291a8134cb3, type: 3}
+  chargingTime: 1.25
+  maxChargingCnt: 0
