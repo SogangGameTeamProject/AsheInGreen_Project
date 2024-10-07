@@ -293,16 +293,24 @@ namespace AshGreen.Character
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
+
             combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성
+
+            characterDirection.OnValueChanged += OnFlipRpc;
+            //피격 타격 액션 설정
+            _damageReceiver.TakeDamageAction += TakeDamage;
+
             if (IsOwner)
             {
                 OnSetStatusRpc();//스테이터스 값 초기화
 
                 CombatStateTransitionRpc(CombatStateType.Idle);
             }
-            characterDirection.OnValueChanged += OnFlipRpc;
-            //피격 타격 액션 설정
-            _damageReceiver.TakeDamageAction += TakeDamage;
+        }
+
+        private void Start()
+        {
+            
         }
 
         public override void OnNetworkDespawn()

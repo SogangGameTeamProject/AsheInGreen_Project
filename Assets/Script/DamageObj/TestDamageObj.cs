@@ -22,19 +22,19 @@ namespace AshGreen.DamageObj
                 if (isNockback)
                 {
                     MovementController movementController = collision.gameObject.GetComponent<MovementController>();
-                    float nockBackForceX =
+                    if (movementController)
+                    {
+                        float nockBackForceX =
                         collision.gameObject.transform.position.x > this.transform.position.x ?
                         1 : -1;
-                    Vector2 nockBackForce = new Vector2(nockBackForceX, 1);
+                        Vector2 nockBackForce = new Vector2(nockBackForceX, 1);
 
-                    movementController.ExcutNockBack(nockBackForce, nockbackPower, nockbackTime);
+                        movementController.ExcutNockBack(nockBackForce, nockbackPower, nockbackTime);
+                    }
+                    
                 }
 
                 damageable.TakeDamage(damage);
-
-                //제거여부
-                if (isDestroy)
-                    Destroy(this.gameObject);
             }
 
         }
