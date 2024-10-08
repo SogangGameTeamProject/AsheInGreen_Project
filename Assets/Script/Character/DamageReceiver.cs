@@ -20,7 +20,7 @@ namespace AshGreen.Character
         //피격 처리 메서드
         public void TakeDamage(float damage)
         {
-            if (IsOwner)
+            if (IsServer)
             {
                 Debug.Log("피격: "+this.gameObject.name);
                 TakeDamageAction?.Invoke(damage);
@@ -31,10 +31,14 @@ namespace AshGreen.Character
         //타격 처리 메서드
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
         {
-            if (IsOwner)
+            if (IsServer)
             {
                 Debug.Log("타격: " + this.gameObject.name);
                 DealDamageAction?.Invoke(target, damage, attackType, isCritical);
+                if (target.TryGetComponent<IDamageable>(out var damageable))
+                {
+                    damageable.TakeDamage(damage);
+                }
             }
                 
         }

@@ -35,6 +35,9 @@ namespace AshGreen.DamageObj
                 }
 
                 damageable.TakeDamage(damage);
+
+                if (isDestroy)
+                    Destroy(this.gameObject);
             }
 
         }
