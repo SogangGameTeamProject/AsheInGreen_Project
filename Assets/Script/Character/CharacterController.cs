@@ -308,11 +308,6 @@ namespace AshGreen.Character
             }
         }
 
-        private void Start()
-        {
-            
-        }
-
         public override void OnNetworkDespawn()
         {
             base.OnNetworkDespawn();
@@ -325,7 +320,8 @@ namespace AshGreen.Character
 
         private void FixedUpdate()
         {
-            combatStateContext.StateUpdate();
+            if (IsSpawned)
+                combatStateContext.StateUpdate();
         }
 
         //캐릭터 스테이터스값 초기 설정

@@ -1,8 +1,9 @@
 using UnityEngine;
 using AshGreen.Character;
+using Unity.Netcode;
 namespace AshGreen.DamageObj
 {
-    public class DamageObjBase : MonoBehaviour
+    public class DamageObjBase : NetworkBehaviour
     {
         public int damage = 1;
         public bool isCritical = false;
@@ -13,6 +14,9 @@ namespace AshGreen.DamageObj
 
         private void OnTriggerStay2D(Collider2D collision)
         {
+            if (!IsServer)
+                return;
+
             IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
 
             // 만약 인터페이스가 존재하면 실행
