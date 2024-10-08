@@ -31,7 +31,7 @@ namespace AshGreen.Character
 
 
             //이동 체크
-            if (Mathf.Round(rBody.linearVelocityX) != 0)
+            if (Mathf.Clamp(rBody.linearVelocityX, -0.1f, 0.1f) != 0)
                 ((PlayerController)_character)._movementController.MovementStateTransitionRpc(onMoveType);
         }
 

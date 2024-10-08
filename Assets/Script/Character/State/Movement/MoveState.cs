@@ -32,7 +32,7 @@ namespace AshGreen.Character
             }
 
             //이동 상태 종료 체크
-            if (rBody.linearVelocityX == 0 || !((PlayerController)_character)._movementController.isGrounded)
+            if (rBody.linearVelocityX == 0 && ((PlayerController)_character)._movementController.isGrounded)
             {
                 ((PlayerController)_character)._movementController.MovementStateTransitionRpc(onChangeType);
                 return;

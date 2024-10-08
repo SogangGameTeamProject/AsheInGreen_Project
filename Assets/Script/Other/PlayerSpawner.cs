@@ -17,9 +17,12 @@ public class PlayerSpawner : MonoBehaviour
     // 로컬 플레이어를 찾는 함수
     public NetworkObject GetLocalPlayer()
     {
+        if (NetworkManager.Singleton.SpawnManager == null)
+            return null;
+        
         // 현재 클라이언트 ID를 얻음
         ulong localClientId = NetworkManager.Singleton.LocalClientId;
-
+        
         // 모든 네트워크 객체 중 OwnerClientId가 현재 클라이언트 ID와 일치하는 객체 찾기
         foreach (var networkObject in NetworkManager.Singleton.SpawnManager.SpawnedObjects.Values)
         {

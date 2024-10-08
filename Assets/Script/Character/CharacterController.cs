@@ -359,6 +359,18 @@ namespace AshGreen.Character
             }
         }
 
+        /// <summary>
+        /// 피격 타격 처리 메서드
+        /// </summary>
+        /// 
+        public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
+        {
+            if (IsServer)
+            {
+                _damageReceiver.TakeDamage(damage);
+            }
+        }
+
         //----------상태패턴 관련 함수들---------
 
         //-----전투 상태 과련 함수----

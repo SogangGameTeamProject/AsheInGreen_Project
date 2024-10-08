@@ -35,10 +35,6 @@ namespace AshGreen.Character
             {
                 Debug.Log("타격: " + this.gameObject.name);
                 DealDamageAction?.Invoke(target, damage, attackType, isCritical);
-                if (target.TryGetComponent<IDamageable>(out var damageable))
-                {
-                    damageable.TakeDamage(damage);
-                }
             }
                 
         }
