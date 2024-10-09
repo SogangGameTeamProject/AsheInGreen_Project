@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uB300\uC26C"
   activeTime: 0.1
-  cooldownTime: 5
+  cooldownTime: 2
   maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
@@ -31,5 +31,5 @@ MonoBehaviour:
   animationTrigger: 
   skillSound: {fileID: 0}
   dashPower: 300
-  energyIncrease: 1
+  energyIncrease: 3
   casterGrvity: 5

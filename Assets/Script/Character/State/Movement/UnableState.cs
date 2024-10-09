@@ -5,8 +5,6 @@ namespace AshGreen.Character
 {
     public class UnableState : CharacterStateBase
     {
-        private Rigidbody2D rBody = null;
-
         public override void Enter(CharacterController character)
         {
             base.Enter(character);

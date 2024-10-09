@@ -10,6 +10,9 @@ namespace AshGreen.Character.Skill
         public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
         {
             Debug.Log("특수스킬 사용");
+            Debug.Log("소모 에너지: " + holder.NowEnergy);
+
+            holder.NowEnergy = 0;
 
             yield return End(holder);
         }

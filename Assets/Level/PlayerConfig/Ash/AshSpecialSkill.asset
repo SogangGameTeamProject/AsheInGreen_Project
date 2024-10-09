@@ -16,9 +16,10 @@ MonoBehaviour:
   activeTime: 0
   cooldownTime: 0
   maxChageCnt: 1
+  MaxHaveEnergy: 10
+  MinUseCoast: 3
   charging: 0
   chargingMoveSpeed: 0.75
-  useType: 0
   isNotCancellation: 1
   skillCancel: 1
   multipleUse: 0

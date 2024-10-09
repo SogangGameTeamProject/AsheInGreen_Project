@@ -82,7 +82,7 @@ namespace AshGreen.Character.Skill
                 }
 
                 //코스트 체크 후 사용 처리
-                if(skillList[index].nowEnergy >= skillList[index].minUseCoast)
+                if(skillList[index].NowEnergy >= skillList[index].minUseCoast)
                 {
                     if (skillList[index].skill.charging)
                         skillList[index].Charging();
