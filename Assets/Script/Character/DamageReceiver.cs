@@ -25,7 +25,6 @@ namespace AshGreen.Character
                 Debug.Log("피격: "+this.gameObject.name);
                 TakeDamageAction?.Invoke(damage);
             }
-            
         }
 
         //타격 처리 메서드
@@ -35,8 +34,7 @@ namespace AshGreen.Character
             {
                 Debug.Log("타격: " + this.gameObject.name);
                 DealDamageAction?.Invoke(target, damage, attackType, isCritical);
-            }
-                
+            }  
         }
     }
 }

@@ -14,6 +14,7 @@ namespace AshGreen.Character.Skill
         public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
         {
             Debug.Log("서브 스킬");
+            holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease;//특수스킬 에너지 충전
             //스킬 시작 시 처리
             holder._caster.SetDamageimmunityRpc(true);//무적
             holder._caster._movementController.isUnableMove = true;//이동 불가

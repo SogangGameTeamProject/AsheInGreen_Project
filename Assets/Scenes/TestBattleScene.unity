@@ -132,7 +132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2026440609202315854, guid: 56952ef685c70fa4f81e3f2729102a9a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2311938511817404395, guid: 56952ef685c70fa4f81e3f2729102a9a, type: 3}
       propertyPath: m_Controller
@@ -180,6 +180,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6716363405069832563, guid: 56952ef685c70fa4f81e3f2729102a9a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952470658650771724, guid: 56952ef685c70fa4f81e3f2729102a9a, type: 3}
+      propertyPath: TransitionStateInfoList.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

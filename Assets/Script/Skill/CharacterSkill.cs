@@ -8,11 +8,6 @@ namespace AshGreen.Character.Skill
         Attack, Utill
     }
 
-    public enum UseType
-    {
-        Time, Coast
-    }
-
     public abstract class CharacterSkill : ScriptableObject
     {
         public string skillName;   // 스킬 이름
@@ -20,12 +15,12 @@ namespace AshGreen.Character.Skill
         public float cooldownTime; // 스킬 쿨타임
         public int maxChageCnt = 1;// 최대 충전 수
 
+        //코스트 관련
+        public int MaxHaveEnergy = 0;
+        public int MinUseCoast = 0;
+
         public bool charging = false; //스킬 차징 여부
         public float chargingMoveSpeed = 0.75f; // 차징 시 이속
-
-        public UseType useType = UseType.Time;
-
-        public CombatStateType _casterCombatState;
 
         //캔슬 여부
         public bool isNotCancellation = false; // 해당 스킬 캔슬 불가능 여불

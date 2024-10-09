@@ -8,7 +8,7 @@ namespace AshGreen.Character.Skill
     [System.Serializable]
     public class SkillHolder
     {
-
+        //홀더 생성자
         public SkillHolder(PlayerController caster, CharacterSkill skill)
         {
             _caster = caster;
@@ -17,6 +17,8 @@ namespace AshGreen.Character.Skill
             nowChargeCnt = skill.maxChageCnt;
             coolTime = skill.cooldownTime;
             state = SkillState.Idle;
+            maxHaveEnergy = skill.MaxHaveEnergy;
+            minUseCoast = skill.MinUseCoast;
         }
 
         public PlayerController _caster = null;
@@ -32,6 +34,20 @@ namespace AshGreen.Character.Skill
         public CharacterSkill skill = null;
         public int MaxChargeCnt = 0;// 최대 스킬 충전 횟수
         private int nowChargeCnt = 0;//현재 스킬 충전 횟수
+        public int maxHaveEnergy = 0;//최대 충전 에너지
+        public int minUseCoast = 0;//사용시 최소 소모 코스트
+        private int nowEnergy = 0;//현재 에너지 량
+        public int NowEnergy
+        {
+            get
+            {
+                return nowEnergy;
+            }
+            set
+            {
+                nowEnergy = Mathf.Clamp(value, 0, maxHaveEnergy);
+            }
+        }
         public int NowChargeCnt
         {
             get { return nowChargeCnt; }
@@ -68,6 +84,7 @@ namespace AshGreen.Character.Skill
         //스킬 사용 메서드
         public void Use()
         {
+            Debug.Log("스킬 쿨타임"+coolTime * (100 / (100 + _caster.SkillAcceleration)));
             NowChargeCnt--;
             if (state == SkillState.Idle)
                 holderCorutine = _caster.StartCoroutine(skill.Use(this));

@@ -355,12 +355,10 @@ namespace AshGreen.Character
 
             if (newValue)
             {
-                Debug.Log("면역 활성화");
                 rBody.excludeLayers |= projectilesLayer;
             }
             else
             {
-                Debug.Log("면역 비활성화");
                 rBody.excludeLayers &= ~projectilesLayer;
             }
         }
@@ -425,6 +423,7 @@ namespace AshGreen.Character
         [Rpc(SendTo.ClientsAndHost)]
         public void CombatStateTransitionRpc(CombatStateType type)
         {
+            Debug.Log("상태전환: " + type);
             IState<CharacterController> state = null;
             CombatStateData findState = combatStateList.Find(state => state.type.Equals(type));
             if (findState != null)
