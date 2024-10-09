@@ -8,4 +8,12 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: AshAnimation
   m_Controller: {fileID: 9100000, guid: 7819097b6f64f0a4a866e365fae3e68a, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: cfa1e57a1eea8d843b0510a4c69cfc27, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5699a0c7956a68a42a66c3cc19593116, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 100b9a202cd224d43af6aa9cf9cad1ef, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 32cc60ac77aed6a40995108f96f19f65, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 30ae1e5f264b22e429aa0ca48e06cf65, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7070e6e74a28d5242b7c750a921de915, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6c356683e5bc30a479a4be4edd134025, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e0bb67748faf5954fa432d7005f6eb75, type: 2}
