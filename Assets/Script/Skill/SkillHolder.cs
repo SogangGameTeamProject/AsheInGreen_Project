@@ -52,7 +52,7 @@ namespace AshGreen.Character.Skill
             //쿨타임 적용
             if(nowChargeCnt < skill.maxChageCnt)
             {
-                if (currentCoolTime < coolTime)
+                if (currentCoolTime < coolTime*(100/(100+_caster.SkillAcceleration)))
                     currentCoolTime += Time.deltaTime;
                 else
                     NowChargeCnt++;

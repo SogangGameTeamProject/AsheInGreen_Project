@@ -28,6 +28,7 @@ namespace AshGreen.Character
         //외부 컨트롤러들
         public DamageReceiver _damageReceiver = null;
         public StatusEffectManager _statusEffectManager = null;
+        public Animator _animator = null;
 
         //------상태 패턴 관련 전역 변수 선언------
         
@@ -86,15 +87,39 @@ namespace AshGreen.Character
         //------스테이터스 관련 전역 변수 선언------
         public CharacterConfig baseConfig = null;//기본능력치가 저장되는 변수
         //레벨 관련
+        private NetworkVariable<int> LevelUpEx = new NetworkVariable<int>(0);
         private NetworkVariable<int> level = new NetworkVariable<int>(1);
+        private NetworkVariable<int> experience = new NetworkVariable<int>(0);
+
+        public int Experience
+        {
+            get
+            {
+                return experience.Value;
+            }
+            private set
+            {
+                int ex = experience.Value + value;
+                if(ex >= LevelUpEx.Value)
+                {
+                    ex -= LevelUpEx.Value;
+                    level.Value++;
+                }
+                experience.Value = ex;
+            }
+        }
+
         //최대체력 관련 전역변수
         private NetworkVariable<int> baseMaxHP = new NetworkVariable<int>(0);
         private NetworkVariable<int> addMaxHp = new NetworkVariable<int>(0);
+        private NetworkVariable<int> GrowthMaxHP = new NetworkVariable<int>(0);
+        private NetworkVariable<float> GrowthPerMaxHP = new NetworkVariable<float>(0);
         public int MaxHP
         {
             get
             {
-                int maxHp = baseMaxHP.Value + addMaxHp.Value;
+                int maxHp =
+                    (int)(baseMaxHP.Value + addMaxHp.Value + (level.Value * GrowthMaxHP.Value) * (level.Value * GrowthPerMaxHP.Value));
                 return maxHp > 0 ? maxHp : 1;
             }
         }
@@ -127,15 +152,20 @@ namespace AshGreen.Character
         }
 
         //공격력 관련 전역변수
-        private NetworkVariable<float> baseAttackPower = new NetworkVariable<float>(0);
-        private NetworkVariable<float> addAttackPower = new NetworkVariable<float>(0);
+        private NetworkVariable<int> baseAttackPower = new NetworkVariable<int>(0);
+        private NetworkVariable<int> GrowthAttackPower = new NetworkVariable<int>(0);
+        private NetworkVariable<float> GrowthPerAttackPower = new NetworkVariable<float>(0);
+        private NetworkVariable<int> addAttackPower = new NetworkVariable<int>(0);
         private NetworkVariable<float> addAttackPerPower = new NetworkVariable<float>(1);
-        public float AttackPower
+
+        public int AttackPower
         {
             get
             {
-                float attackPower = (baseAttackPower.Value + addAttackPower.Value) * addAttackPerPower.Value;
-                return attackPower > 0 ? attackPower : 1;
+                float attackPower =
+                    (baseAttackPower.Value * (level.Value * GrowthPerAttackPower.Value) + addAttackPower.Value)
+                    * addAttackPerPower.Value;
+                return attackPower > 0 ? (int)attackPower : 1;
             }
         }
         /// <summary>
@@ -144,7 +174,7 @@ namespace AshGreen.Character
         /// <param name="addAttackPower">증감할 공격력(고정)</param>
         /// <param name="addAttackPowerPer">증감할 공격력(%)</param>
         [Rpc(SendTo.Server)]
-        public void SetAttackpowerRpc(float addAttackPower, float addAttackPerPower = 0)
+        public void SetAttackpowerRpc(int addAttackPower, float addAttackPerPower = 0)
         {
             this.addAttackPower.Value += addAttackPower;
             this.addAttackPerPower.Value += addAttackPerPower;
@@ -274,22 +304,6 @@ namespace AshGreen.Character
             this.isDamageImmunity.Value = damageImmunity;
         }
 
-        //에너지 관련
-        //최대 에너지
-        private NetworkVariable<float> maxEnergyGauge = new NetworkVariable<float>(0);
-        [Rpc(SendTo.Server)]
-        public void SetMaxEnergyGaugeRpc(int value)
-        {
-            maxEnergyGauge.Value = value;
-        }
-        //현재 에너지
-        private NetworkVariable<float> energyGauge = new NetworkVariable<float>(0);
-        [Rpc(SendTo.Server)]
-        public void SetEnergyGaugeRpc(int value)
-        {
-            energyGauge.Value = Mathf.Clamp(energyGauge.Value+value, 0, maxEnergyGauge.Value);
-        }
-
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
@@ -330,13 +344,19 @@ namespace AshGreen.Character
         {
             if (baseConfig)
             {
+                _animator.runtimeAnimatorController = baseConfig.animator;
+
+                LevelUpEx.Value = baseConfig.LevelUpEx;
                 baseMaxHP.Value = baseConfig.MaxHP;
                 nowHp.Value = baseMaxHP.Value;
+                GrowthAttackPower.Value = baseConfig.GrowthAttackPower;
+                GrowthPerAttackPower.Value = baseConfig.GrowthPerAttackPower;
                 baseAttackPower.Value = baseConfig.AttackPower;
+                GrowthAttackPower.Value = baseConfig.GrowthAttackPower;
+                GrowthPerAttackPower.Value = baseConfig.GrowthPerAttackPower;
                 baseMoveSpeed.Value = baseConfig.MoveSpeed;
                 baseJumpPower.Value = baseConfig.JumpPower;
                 baseJumMaxNum.Value = baseConfig.JumMaxNum;
-                maxEnergyGauge.Value = baseConfig.MaxEnerge;
             }
         }
 

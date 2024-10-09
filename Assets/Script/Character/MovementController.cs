@@ -103,8 +103,8 @@ namespace AshGreen.Character
         
         private void MoveAniUpdate()
         {
-            _characterAnimator.SetFloat("VelocityAbcX", Mathf.Abs(rBody.linearVelocityX));
-            _characterAnimator.SetFloat("VelocityY", rBody.linearVelocityY);
+            _characterAnimator.SetFloat("VelocityX", Mathf.Floor(Mathf.Abs(rBody.linearVelocityX)));
+            _characterAnimator.SetFloat("VelocityY", Mathf.Floor(rBody.linearVelocityY));
             _characterAnimator.SetBool("IsGrounded", isGrounded);
             _characterAnimator.SetFloat("NowHp", _character.NowHP);
         }

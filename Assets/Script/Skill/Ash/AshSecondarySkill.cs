@@ -17,7 +17,6 @@ namespace AshGreen.Character.Skill
             //스킬 시작 시 처리
             holder._caster.SetDamageimmunityRpc(true);//무적
             holder._caster._movementController.isUnableMove = true;//이동 불가
-            holder._caster.SetEnergyGaugeRpc(energyIncrease);//에너지 증가
 
             //대쉬 방향 구하기
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();

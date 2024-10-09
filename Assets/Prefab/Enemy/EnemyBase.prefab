@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -355,6 +355,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   _damageReceiver: {fileID: 924884067952727375}
   _statusEffectManager: {fileID: 4814974705118643328}
+  _animator: {fileID: 2311938511817404395}
   runningCombatStateType: -1
   combatStateList:
   - type: 0
@@ -363,7 +364,7 @@ MonoBehaviour:
     state: {fileID: 8146044977604259081}
   - type: 2
     state: {fileID: 4769585176895150063}
-  baseConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
+  baseConfig: {fileID: 11400000, guid: 2ed7ea5876deeeb4cbc67290001e283f, type: 2}
   nowHp:
     m_InternalValue: 0
   isDamageImmunity:

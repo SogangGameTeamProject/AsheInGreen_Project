@@ -10,19 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cfc33b82498a37409503bd8a970b394, type: 3}
-  m_Name: AshConfig
+  m_Name: EnemyBaseConfig
   m_EditorClassIdentifier: 
   animator: {fileID: 22100000, guid: 19058269b13cf744cabb1cf2f70e880f, type: 2}
-  MaxHP: 4
-  GrowthMaxHP: 1
+  LevelUpEx: 0
+  MaxHP: 100
+  GrowthMaxHP: 0
   GrowthPerMaxHP: 10
-  AttackPower: 10
-  GrowthAttackPower: 8
+  AttackPower: 1
+  GrowthAttackPower: 1
   GrowthPerAttackPower: 0
-  MoveSpeed: 10
-  JumpPower: 150
-  JumMaxNum: 1
-  skills:
-  - {fileID: 11400000, guid: 6d9b91f14b4da484d98a586995324083, type: 2}
-  - {fileID: 11400000, guid: 35051a0c030e3cb47a5959a2d3afe5ae, type: 2}
-  - {fileID: 11400000, guid: ba7a820b022b3bc4895adddfb754f892, type: 2}
+  MoveSpeed: 0
+  JumpPower: 0
+  JumMaxNum: 0
+  skills: []
