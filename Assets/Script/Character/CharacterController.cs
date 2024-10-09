@@ -298,6 +298,7 @@ namespace AshGreen.Character
 
         //피해 면역 관련 
         public NetworkVariable<bool> isDamageImmunity = new NetworkVariable<bool>(false);// 피해 면역
+        public LayerMask projectilesLayer;
         [Rpc(SendTo.Server)]
         public void SetDamageimmunityRpc(bool damageImmunity)
         {
@@ -310,7 +311,12 @@ namespace AshGreen.Character
 
             combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성
 
+            //캐릭터 방향 값 변경 시 처리
             characterDirection.OnValueChanged += OnFlipRpc;
+
+            //피해 면역 처리
+            isDamageImmunity.OnValueChanged += DamageImmunityRpc;
+
             //피격 타격 액션 설정
             _damageReceiver.TakeDamageAction += TakeDamage;
 
@@ -326,8 +332,9 @@ namespace AshGreen.Character
         {
             base.OnNetworkDespawn();
 
-
-            //피격 타격 액션 제거
+            //델리게이터 제거
+            characterDirection.OnValueChanged -= OnFlipRpc;
+            isDamageImmunity.OnValueChanged -= DamageImmunityRpc;
             _damageReceiver.TakeDamageAction -= TakeDamage;
 
         }
@@ -336,6 +343,26 @@ namespace AshGreen.Character
         {
             if (IsSpawned)
                 combatStateContext.StateUpdate();
+        }
+
+        //피해면역 처리
+        [Rpc(SendTo.ClientsAndHost)]
+        public void DamageImmunityRpc(bool preValue, bool newValue)
+        {
+            if(preValue == newValue) return;
+
+            Rigidbody2D rBody = GetComponent<Rigidbody2D>();
+
+            if (newValue)
+            {
+                Debug.Log("면역 활성화");
+                rBody.excludeLayers |= projectilesLayer;
+            }
+            else
+            {
+                Debug.Log("면역 비활성화");
+                rBody.excludeLayers &= ~projectilesLayer;
+            }
         }
 
         //캐릭터 스테이터스값 초기 설정
@@ -366,7 +393,7 @@ namespace AshGreen.Character
         /// 
         public void TakeDamage(float damage)
         {
-            if (!isDamageImmunity.Value && runningCombatStateType != CombatStateType.Death)
+            if (runningCombatStateType != CombatStateType.Death)
             {
                 Debug.Log("플레이어 피격 처리");
 

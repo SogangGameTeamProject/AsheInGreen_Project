@@ -25,7 +25,7 @@ namespace AshGreen.Character
                 Debug.Log("피격: "+this.gameObject.name);
                 TakeDamageAction?.Invoke(damage);
             }
-                
+            
         }
 
         //타격 처리 메서드

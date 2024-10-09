@@ -369,6 +369,9 @@ MonoBehaviour:
     m_InternalValue: 0
   isDamageImmunity:
     m_InternalValue: 0
+  projectilesLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &924884067952727375
 MonoBehaviour:
   m_ObjectHideFlags: 0
