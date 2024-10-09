@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AshSecondarySkill
   m_EditorClassIdentifier: 
   skillName: "\uB300\uC26C"
-  activeTime: 0.1
+  activeTime: 0.15
   cooldownTime: 2
   maxChageCnt: 1
   MaxHaveEnergy: 0

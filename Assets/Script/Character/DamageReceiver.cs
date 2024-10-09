@@ -20,21 +20,15 @@ namespace AshGreen.Character
         //피격 처리 메서드
         public void TakeDamage(float damage)
         {
-            if (IsServer)
-            {
-                Debug.Log("피격: "+this.gameObject.name);
-                TakeDamageAction?.Invoke(damage);
-            }
+            Debug.Log("피격: "+this.gameObject.name);
+            TakeDamageAction?.Invoke(damage);
         }
 
         //타격 처리 메서드
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
         {
-            if (IsServer)
-            {
-                Debug.Log("타격: " + this.gameObject.name);
-                DealDamageAction?.Invoke(target, damage, attackType, isCritical);
-            }  
+            Debug.Log("타격: " + this.gameObject.name);
+            DealDamageAction?.Invoke(target, damage, attackType, isCritical);
         }
     }
 }

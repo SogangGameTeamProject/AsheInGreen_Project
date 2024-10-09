@@ -89,7 +89,6 @@ namespace AshGreen.Character.Skill
                     else
                         skillList[index].Use();
                 }
-                
             }
         }
 

@@ -2516,9 +2516,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageObj
       objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: isDestroy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: Ownership
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 4081307607
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: AutoObjectParentSync
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: SyncOwnerTransformWhenParented
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash

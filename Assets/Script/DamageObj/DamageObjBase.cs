@@ -12,7 +12,15 @@ namespace AshGreen.DamageObj
         public float nockbackTime = 0.3f;
         public bool isDestroy = false;
 
-        private void OnTriggerStay2D(Collider2D collision)
+        protected void DestoryObj()
+        {
+            if (!NetworkObject.IsSpawned)
+                return;
+
+            NetworkObject.Despawn();
+        }
+
+        protected void OnTriggerEnter2D(Collider2D collision)
         {
             if (!IsServer)
                 return;
@@ -35,13 +43,12 @@ namespace AshGreen.DamageObj
 
                         movementController.ExcutNockBack(nockBackForce, nockbackPower, nockbackTime);
                     }
-                    
                 }
 
                 damageable.TakeDamage(damage);
 
                 if (isDestroy)
-                    Destroy(this.gameObject);
+                    DestoryObj();
             }
 
         }

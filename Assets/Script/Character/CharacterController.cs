@@ -346,11 +346,11 @@ namespace AshGreen.Character
         }
 
         //피해면역 처리
-        [Rpc(SendTo.ClientsAndHost)]
+        [Rpc(SendTo.Server)]
         public void DamageImmunityRpc(bool preValue, bool newValue)
         {
             if(preValue == newValue) return;
-
+            Debug.Log("무적 상태 전환");
             Rigidbody2D rBody = GetComponent<Rigidbody2D>();
 
             if (newValue)
@@ -410,10 +410,7 @@ namespace AshGreen.Character
         /// 
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
         {
-            if (IsServer)
-            {
-                _damageReceiver.TakeDamage(damage);
-            }
+            _damageReceiver.TakeDamage(damage);
         }
 
         //----------상태패턴 관련 함수들---------
