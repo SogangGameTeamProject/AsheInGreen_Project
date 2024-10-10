@@ -19,6 +19,9 @@ namespace AshGreen.Character.Skill
             holder._caster.SetDamageimmunityRpc(true);//무적
             holder._caster._movementController.isUnableMove = true;//이동 불가
 
+            //무적 처리 대기
+
+
             //대쉬 방향 구하기
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
             casterGrvity = casterRbody.gravityScale;

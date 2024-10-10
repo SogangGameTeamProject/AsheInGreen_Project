@@ -20,8 +20,11 @@ namespace AshGreen.Character
         //피격 처리 메서드
         public void TakeDamage(float damage)
         {
-            Debug.Log("피격: "+this.gameObject.name);
-            TakeDamageAction?.Invoke(damage);
+            if(_character.runningCombatStateType != CombatStateType.Death)
+            {
+                Debug.Log("피격: " + this.gameObject.name);
+                TakeDamageAction?.Invoke(damage);
+            }
         }
 
         //타격 처리 메서드

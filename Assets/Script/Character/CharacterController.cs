@@ -320,6 +320,9 @@ namespace AshGreen.Character
             //피격 타격 액션 설정
             _damageReceiver.TakeDamageAction += TakeDamage;
 
+
+            _animator.runtimeAnimatorController = baseConfig.animator;
+
             if (IsOwner)
             {
                 OnSetStatusRpc();//스테이터스 값 초기화
@@ -346,11 +349,11 @@ namespace AshGreen.Character
         }
 
         //피해면역 처리
-        [Rpc(SendTo.Server)]
+        [Rpc(SendTo.ClientsAndHost)]
         public void DamageImmunityRpc(bool preValue, bool newValue)
         {
             if(preValue == newValue) return;
-            Debug.Log("무적 상태 전환");
+            Debug.Log("무적 상태 전환: " + newValue);
             Rigidbody2D rBody = GetComponent<Rigidbody2D>();
 
             if (newValue)
@@ -369,7 +372,6 @@ namespace AshGreen.Character
         {
             if (baseConfig)
             {
-                _animator.runtimeAnimatorController = baseConfig.animator;
 
                 LevelUpEx.Value = baseConfig.LevelUpEx;
                 baseMaxHP.Value = baseConfig.MaxHP;

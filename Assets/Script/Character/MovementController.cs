@@ -157,8 +157,9 @@ namespace AshGreen.Character
 
         public void ExcutNockBack(Vector2 nockbackArrow, float power, float time)
         {
-            if(IsOwner)
-                NockBackAction?.Invoke(nockbackArrow, power, time);
+            if (_character.runningCombatStateType == CombatStateType.Death)
+                return;
+            NockBackAction?.Invoke(nockbackArrow, power, time);
         }
 
         /// <summary>
@@ -211,7 +212,7 @@ namespace AshGreen.Character
         //넉백 구현 함수
         private void OnNockBack(Vector2 vector2, float power, float time)
         {
-            if (rBody && !_character.isDamageImmunity.Value)
+            if (rBody)
             {
                 if(nockbackCorutine != null)
                     StopCoroutine(nockbackCorutine);
