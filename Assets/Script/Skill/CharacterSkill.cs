@@ -58,7 +58,7 @@ namespace AshGreen.Character.Skill
         }
 
         //스킬 사용
-        public virtual IEnumerator Use(SkillHolder holder, float chageTime = 0)
+        public virtual IEnumerator Use(SkillHolder holder, float chargeTime = 0)
         {
             
             holder.holderCorutine = holder._caster.StartCoroutine(End(holder));
@@ -73,6 +73,7 @@ namespace AshGreen.Character.Skill
 
             yield return null;
         }
+
     }
 }
 

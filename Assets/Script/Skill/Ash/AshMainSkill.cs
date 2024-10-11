@@ -23,40 +23,44 @@ namespace AshGreen.Character.Skill
             return base.Charging(holder);
         }
 
-        public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
+        public override IEnumerator Use(SkillHolder holder, float chargeTime = 0)
         {
             Debug.Log("메인스킬 사용");
 
-            int chargeCnt = 
-                Mathf.Clamp((int)(chageTime / chargingTime), 0, maxChargingCnt);//차징 단계 구하기
-            Debug.Log("충전 량: " + chargeCnt);
-            //차징 정도에 따른 에너지 충전
-            holder._caster._characterSkillManager.skillList[2].NowEnergy
-                += energyIncrease*chargeCnt;//특수스킬 에너지 충전
+            int chargeCnt = Mathf.Clamp((int)(chargeTime / chargingTime), 0, maxChargingCnt); // 차징 단계 구하기
+            Debug.Log("충전량: " + chargeCnt);
 
-            //총알 발사 구현
-            //총알 데미지 적용
+            // 차징 정도에 따른 에너지 충전
+            holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease * chargeCnt; // 특수스킬 에너지 충전
 
-            // 총알을 소환할 위치와 회전
-            GameObject bullet = 
-                Instantiate(bulletPrefab, holder._caster.firePoint.position, holder._caster.firePoint.rotation);
-            
-            // 총알을 NetworkObject로 인식하도록 설정
+            // 서버에 총알 생성을 요청하는 RPC 호출
+            Vector3 firePointPosition = holder._caster.firePoint.position;
+            Quaternion firePointRotation = holder._caster.firePoint.rotation;
+            RequestBulletSpawnServerRpc(firePointPosition, firePointRotation, (int)holder._caster.CharacterDirection);
+
+            return base.Use(holder);
+        }
+
+        // 서버 RPC: 클라이언트가 서버에 총알 생성을 요청
+        [ServerRpc]
+        private void RequestBulletSpawnServerRpc(Vector3 position, Quaternion rotation, int direction)
+        {
+            // 서버에서 총알 생성
+            GameObject bullet = Instantiate(bulletPrefab, position, rotation);
+
+            // 총알을 네트워크 오브젝트로 설정하고 스폰
             NetworkObject bulletNetworkObject = bullet.GetComponent<NetworkObject>();
-
             if (bulletNetworkObject != null)
             {
-                bulletNetworkObject.Spawn(); // 총알을 네트워크 오브젝트로 생성 및 모든 클라이언트에 동기화
+                bulletNetworkObject.Spawn();
             }
 
             // 총알의 물리적 움직임 처리
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.linearVelocityX = (int)holder._caster.CharacterDirection * bulletSpeed; // 발사 방향 설정
+            rb.linearVelocity = new Vector2(direction * bulletSpeed, 0); // 발사 방향 설정
 
             // 시간 경과 후 총알 파괴
             Destroy(bullet, BulletDecayTime);
-
-            return base.Use(holder);
         }
     }
 }

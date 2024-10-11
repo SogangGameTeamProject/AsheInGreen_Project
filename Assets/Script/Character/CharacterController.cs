@@ -135,7 +135,7 @@ namespace AshGreen.Character
             private set
             {
                 nowHp.Value = Mathf.Clamp(value, 0, MaxHP);
-                Debug.Log("현재체력: " + nowHp.Value);
+                Debug.Log("현재체력: " + nowHp.Value + ", " + isDamageImmunity.Value);
             }
         }
 
@@ -364,6 +364,7 @@ namespace AshGreen.Character
             {
                 rBody.excludeLayers &= ~projectilesLayer;
             }
+            Debug.Log(rBody.excludeLayers.value);
         }
 
         //캐릭터 스테이터스값 초기 설정

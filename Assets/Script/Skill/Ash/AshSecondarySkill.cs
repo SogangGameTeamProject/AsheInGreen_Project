@@ -11,7 +11,7 @@ namespace AshGreen.Character.Skill
         public float dashPower = 100;
         public int energyIncrease = 1;
         public float casterGrvity = 5;
-        public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
+        public override IEnumerator Use(SkillHolder holder, float chargeTime = 0)
         {
             Debug.Log("서브 스킬");
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease;//특수스킬 에너지 충전
@@ -20,7 +20,10 @@ namespace AshGreen.Character.Skill
             holder._caster._movementController.isUnableMove = true;//이동 불가
 
             //무적 처리 대기
-
+            while (holder._caster.isDamageImmunity.Value)
+            {
+                yield return null;
+            }
 
             //대쉬 방향 구하기
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
