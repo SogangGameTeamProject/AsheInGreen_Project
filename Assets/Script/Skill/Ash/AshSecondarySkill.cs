@@ -20,27 +20,24 @@ namespace AshGreen.Character.Skill
             holder._caster._movementController.isUnableMove = true;//이동 불가
 
             //무적 처리 대기
-            while (holder._caster.isDamageImmunity.Value)
+            while (!holder._caster.isDamageImmunity.Value)
             {
                 yield return null;
             }
 
             //대쉬 방향 구하기
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
-            casterGrvity = casterRbody.gravityScale;
             casterRbody.gravityScale = 0;//중력 설정
             float dashVecX = (new Vector2(casterRbody.linearVelocity.x, 0)).normalized.x;
-            Debug.Log(dashVecX);
             dashVecX = (dashVecX) == 0 ? (float)holder._caster.CharacterDirection : dashVecX;
-            Debug.Log(dashVecX);
+
             //벨로시티 0으로 초기화 후 대쉬
             casterRbody.linearVelocity = Vector2.zero;
             casterRbody.AddForceX(dashVecX*dashPower, ForceMode2D.Impulse);
-            Debug.Log(dashVecX * dashPower);
 
             yield return new WaitForSeconds(activeTime);
 
-            yield return End(holder);
+            yield return base.Use(holder);
         }
 
         public override IEnumerator End(SkillHolder holder)
