@@ -168,6 +168,7 @@ namespace AshGreen.Character
                 return attackPower > 0 ? (int)attackPower : 1;
             }
         }
+
         /// <summary>
         /// 플레이어 공격력을 조정하는 메서드
         /// </summary>
@@ -275,7 +276,7 @@ namespace AshGreen.Character
             }
         }
         //치명타 데미지
-        private NetworkVariable<float> baseCriticalDamage = new NetworkVariable<float>(0);
+        private NetworkVariable<float> baseCriticalDamage = new NetworkVariable<float>(1.2f);
         private NetworkVariable<float> addCriticalDamage  = new NetworkVariable<float>(0);
         public float CriticalDamage
         {

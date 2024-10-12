@@ -34,7 +34,23 @@ namespace AshGreen.Character.Skill
                 // 서버에 총알 생성을 요청하는 RPC 호출
                 Vector3 firePointPosition = holder._caster.firePoint.position;
                 Quaternion firePointRotation = holder._caster.firePoint.rotation;
-                RequestBulletSpawnServerRpc(firePointPosition, firePointRotation, (int)holder._caster.CharacterDirection);
+
+                // 서버에서 총알 생성
+                GameObject bullet = Instantiate(bulletPrefab, firePointPosition, firePointRotation);
+
+                // 총알을 네트워크 오브젝트로 설정하고 스폰
+                NetworkObject bulletNetworkObject = bullet.GetComponent<NetworkObject>();
+                if (bulletNetworkObject != null)
+                {
+                    bulletNetworkObject.Spawn();
+                }
+
+                // 시간 경과 후 총알 파괴
+                Destroy(bullet, BulletDecayTime);
+
+                // 총알의 물리적 움직임 처리
+                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                rb.linearVelocity = new Vector2((int)holder._caster.CharacterDirection * bulletSpeed, 0); // 발사 방향 설정
 
                 yield return new WaitForSeconds(fireDelay);
             }
@@ -50,28 +66,6 @@ namespace AshGreen.Character.Skill
             casterRbody.gravityScale = casterGrvity;//중력 설정
 
             return base.End(holder);
-        }
-
-        // 서버 RPC: 클라이언트가 서버에 총알 생성을 요청
-        [ServerRpc]
-        private void RequestBulletSpawnServerRpc(Vector3 position, Quaternion rotation, int direction)
-        {
-            // 서버에서 총알 생성
-            GameObject bullet = Instantiate(bulletPrefab, position, rotation);
-
-            // 총알을 네트워크 오브젝트로 설정하고 스폰
-            NetworkObject bulletNetworkObject = bullet.GetComponent<NetworkObject>();
-            if (bulletNetworkObject != null)
-            {
-                bulletNetworkObject.Spawn();
-            }
-
-            // 총알의 물리적 움직임 처리
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.linearVelocity = new Vector2(direction * bulletSpeed, 0); // 발사 방향 설정
-
-            // 시간 경과 후 총알 파괴
-            Destroy(bullet, BulletDecayTime);
         }
     }
 }
