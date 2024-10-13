@@ -30,7 +30,7 @@ namespace AshGreen.Character.Skill
         public SkillType skillType;//스킬 타입
 
         //공격 스킬 시 설정
-        public float damageMultiplier = 1; // 스킬 데미지 배수
+        public float damageCoefficient = 1; // 스킬 데미지 배수
 
         //유틸 스킬 시 설정
         public float utillValue = 1;

@@ -23,15 +23,23 @@ namespace AshGreen.Character
             if(_character.runningCombatStateType != CombatStateType.Death)
             {
                 Debug.Log("피격: " + this.gameObject.name);
+                damage *= _character.TakenDamageCoefficient;
                 TakeDamageAction?.Invoke(damage);
             }
         }
 
         //타격 처리 메서드
-        public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
+        public void DealDamage(CharacterController target, float damageCoefficient, AttackType attackType)
         {
             Debug.Log("타격: " + this.gameObject.name);
-            DealDamageAction?.Invoke(target, damage, attackType, isCritical);
+
+            //데미지 계산
+            float damage = 0;
+            bool isCriticale = UnityEngine.Random.value <= _character.CriticalChance;
+            damage = _character.AttackPower * damageCoefficient * _character.DealDamageCoefficient;
+
+
+            DealDamageAction?.Invoke(target, damage, attackType, isCriticale);
         }
     }
 }

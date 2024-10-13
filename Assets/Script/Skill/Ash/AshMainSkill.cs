@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using AshGreen.DamageObj;
 
 namespace AshGreen.Character.Skill
 {
@@ -14,7 +15,8 @@ namespace AshGreen.Character.Skill
         public float BulletDecayTime = 2;
         public float chargingTime = 0.3f;//차징 단계별 시간
         public int maxChargingCnt = 3;//최대 차징 횟수
-        public int energyIncrease = 1; //단계별 충전 량
+        public int energyIncrease = 1; //충전 량
+        public float ChargingDamageCoefficient = 0.2f;//차징별 데미지 계수
 
         public override IEnumerator Charging(SkillHolder holder)
         {
@@ -27,7 +29,11 @@ namespace AshGreen.Character.Skill
         {
             Debug.Log("메인스킬 사용");
 
-            int chargeCnt = Mathf.Clamp((int)(chargeTime / chargingTime), 0, maxChargingCnt); // 차징 단계 구하기
+            // 차징 단계 구하기
+            int chargeCnt = 
+                Mathf.Clamp((int)(chargeTime / (chargingTime*100f/(100f+holder._caster.SkillAcceleration)))
+                , 0, maxChargingCnt); 
+
             Debug.Log("충전량: " + chargeCnt);
 
             // 차징 정도에 따른 에너지 충전
@@ -39,6 +45,12 @@ namespace AshGreen.Character.Skill
 
             // 서버에서 총알 생성
             GameObject bullet = Instantiate(bulletPrefab, firePointPosition, firePointRotation);
+
+            //투사체 설정
+            DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();
+            damageObj.caster = holder._caster;
+            damageObj.dealType = AttackType.MainSkill;
+            damageObj.damage = damageCoefficient + (chargeCnt * ChargingDamageCoefficient);
 
             // 총알을 네트워크 오브젝트로 설정하고 스폰
             NetworkObject bulletNetworkObject = bullet.GetComponent<NetworkObject>();

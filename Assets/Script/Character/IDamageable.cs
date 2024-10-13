@@ -25,6 +25,6 @@ namespace AshGreen.Character
         public void TakeDamage(float damage);
 
         //타격 처리 메서드
-        public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false);
+        public void DealDamage(CharacterController target, float damageCoefficient, AttackType attackType);
     }
 }

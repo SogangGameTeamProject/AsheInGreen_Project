@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using AshGreen.DamageObj;
 
 namespace AshGreen.Character.Skill
 {
@@ -37,6 +38,12 @@ namespace AshGreen.Character.Skill
 
                 // 서버에서 총알 생성
                 GameObject bullet = Instantiate(bulletPrefab, firePointPosition, firePointRotation);
+
+                //투사체 설정
+                DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();
+                damageObj.caster = holder._caster;
+                damageObj.dealType = AttackType.MainSkill;
+                damageObj.damage = damageCoefficient;
 
                 // 총알을 네트워크 오브젝트로 설정하고 스폰
                 NetworkObject bulletNetworkObject = bullet.GetComponent<NetworkObject>();

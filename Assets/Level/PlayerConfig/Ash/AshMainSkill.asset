@@ -24,7 +24,7 @@ MonoBehaviour:
   skillCancel: 0
   multipleUse: 0
   skillType: 0
-  damageMultiplier: 1
+  damageCoefficient: 0.5
   utillValue: 1
   utillTime: 1
   skillIcon: {fileID: 0}
@@ -36,3 +36,4 @@ MonoBehaviour:
   chargingTime: 0.5
   maxChargingCnt: 3
   energyIncrease: 1
+  ChargingDamageCoefficient: 0.45

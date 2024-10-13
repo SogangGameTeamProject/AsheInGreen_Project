@@ -1,11 +1,15 @@
 using UnityEngine;
 using AshGreen.Character;
 using Unity.Netcode;
+using CharacterController = AshGreen.Character.CharacterController;
+
 namespace AshGreen.DamageObj
 {
     public class DamageObjBase : NetworkBehaviour
     {
-        public int damage = 1;
+        public CharacterController caster = null;
+        public float damage = 1;
+        public AttackType dealType = AttackType.None;
         public bool isCritical = false;
         public bool isNockback = false;
         public float nockbackPower = 100f;
@@ -45,7 +49,10 @@ namespace AshGreen.DamageObj
                     }
                 }
 
-                damageable.TakeDamage(damage);
+                if (caster == null)
+                    damageable.TakeDamage(damage);
+                else
+                    damageable.DealDamage(caster, damage, dealType);
 
                 if (isDestroy)
                     DestoryObj();

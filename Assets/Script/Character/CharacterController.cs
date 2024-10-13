@@ -238,7 +238,7 @@ namespace AshGreen.Character
 
         public int jumCnt { get; set; }
         //스킬가속 관련 변수
-        private NetworkVariable<float> addSkillAcceleration =  new NetworkVariable<float>(0);
+        private NetworkVariable<float> addSkillAcceleration =  new NetworkVariable<float>(50);
         public float SkillAcceleration {
             get
             {
@@ -272,7 +272,9 @@ namespace AshGreen.Character
         {
             get
             {
-                return baseCriticalChance.Value + addCriticalChance.Value;
+                float chance = baseCriticalChance.Value + addCriticalChance.Value;
+                chance = Mathf.Clamp(chance, 0, 1);
+                return chance;
             }
         }
         //치명타 데미지
@@ -282,7 +284,9 @@ namespace AshGreen.Character
         {
             get
             {
-                return baseCriticalDamage.Value + addCriticalDamage.Value;
+                float damage = baseCriticalDamage.Value + addCriticalDamage.Value;
+                damage = Mathf.Clamp(damage, 1, 99);
+                return damage;
             }
         }
         /// <summary>
@@ -295,6 +299,36 @@ namespace AshGreen.Character
         {
             this.addCriticalChance.Value += addCriticalChance;
             this.addCriticalDamage.Value += addCriticalDamage;
+        }
+
+        //받는 피해 증가 관련 스탯
+        public NetworkVariable<float> takenDamageCoefficient = new NetworkVariable<float>(1);
+        public float TakenDamageCoefficient
+        {
+            get
+            {
+                return takenDamageCoefficient.Value;
+            }
+        }
+        [Rpc(SendTo.Server)]
+        public void SetTakenDamageCoefficientRpc(float value)
+        {
+            takenDamageCoefficient.Value = Mathf.Clamp(takenDamageCoefficient.Value + value, 0, 10);
+        }
+
+        //가하는 데미지 증가 
+        private NetworkVariable<float> dealDamageCoefficient = new NetworkVariable<float>(1);
+        public float DealDamageCoefficient
+        {
+            get
+            {
+                return dealDamageCoefficient.Value;
+            }
+        }
+        [Rpc(SendTo.Server)]
+        public void SetDealDamageCoefficientRpc(float value)
+        {
+            dealDamageCoefficient.Value = Mathf.Clamp(dealDamageCoefficient.Value + value, 0, 10);
         }
 
         //피해 면역 관련 
@@ -414,7 +448,7 @@ namespace AshGreen.Character
         /// 
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
         {
-            _damageReceiver.TakeDamage(damage);
+            target._damageReceiver.TakeDamage(damage);
         }
 
         //----------상태패턴 관련 함수들---------
