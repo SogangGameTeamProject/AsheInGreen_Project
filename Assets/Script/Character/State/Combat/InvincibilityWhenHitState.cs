@@ -15,7 +15,7 @@ namespace AshGreen.Character
             if (IsOwner)
             {
                 //스킬 캔슬
-                ((PlayerController)_character)._characterSkillManager.AllStop();
+                ((PlayerController)_character)._characterSkillManager.AllStopRpc();
                 _character.SetDamageimmunityRpc(true);
             }
         }

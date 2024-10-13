@@ -167,7 +167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  caster: {fileID: 0}
   damage: 1
+  dealType: 0
   isCritical: 0
   isNockback: 1
   nockbackPower: 100

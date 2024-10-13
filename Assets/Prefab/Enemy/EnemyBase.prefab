@@ -367,6 +367,8 @@ MonoBehaviour:
   baseConfig: {fileID: 11400000, guid: 2ed7ea5876deeeb4cbc67290001e283f, type: 2}
   nowHp:
     m_InternalValue: 0
+  takenDamageCoefficient:
+    m_InternalValue: 1
   isDamageImmunity:
     m_InternalValue: 0
   projectilesLayer:

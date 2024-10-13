@@ -26,21 +26,18 @@ namespace AshGreen.Character.Skill
         {
             base.OnNetworkSpawn();
 
-            if (IsOwner)
+            //스킬 초기화
+            foreach (CharacterSkill skill in _player.baseConfig.skills)
             {
-                //스킬 초기화
-                foreach(CharacterSkill skill in _player.baseConfig.skills)
-                {
-                    SkillHolder skillHolder = new SkillHolder(_player, skill);
-                    skillList.Add(skillHolder);
-                }
+                SkillHolder skillHolder = new SkillHolder(_player, skill);
+                skillList.Add(skillHolder);
             }
         }
 
         public void Update()
         {
             //홀더 업데이트
-            if (IsOwner)
+            if (IsServer)
             {
                 //스킬 초기화
                 foreach (SkillHolder holder in skillList)
@@ -51,7 +48,8 @@ namespace AshGreen.Character.Skill
         }
 
         //스킬 입력 처리
-        public void PresseSkill(int index)
+        [Rpc(SendTo.Server)]
+        public void PresseSkillRpc(int index)
         {
             //스킬 입력 처리
             if (skillList[index].NowChargeCnt > 0 && skillList[index].state == SkillState.Idle)
@@ -92,15 +90,19 @@ namespace AshGreen.Character.Skill
             }
         }
 
-        public void ReleaseSkill(int index)
+
+        [Rpc(SendTo.Server)]
+        public void ReleaseSkillRpc(int index)
         {
             //스킬 입력처리
             if (skillList[index].skill.charging && skillList[index].state == SkillState.charge)
                 skillList[index].Use();
         }
 
+
         //모든 스킬 캔슬
-        public void AllStop()
+        [Rpc(SendTo.Server)]
+        public void AllStopRpc()
         {
             foreach (SkillHolder holder in skillList)
             {

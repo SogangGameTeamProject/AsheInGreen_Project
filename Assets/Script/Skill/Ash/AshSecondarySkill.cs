@@ -19,11 +19,6 @@ namespace AshGreen.Character.Skill
             holder._caster.SetDamageimmunityRpc(true);//무적
             holder._caster._movementController.isUnableMove = true;//이동 불가
 
-            //무적 처리 대기
-            while (!holder._caster.isDamageImmunity.Value)
-            {
-                yield return null;
-            }
 
             //대쉬 방향 구하기
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
@@ -45,11 +40,6 @@ namespace AshGreen.Character.Skill
             Debug.Log("종료 처리");
             //스킬 종료 시 처리
             holder._caster.SetDamageimmunityRpc(false);//무적
-            //무적 처리 대기
-            while (holder._caster.isDamageImmunity.Value)
-            {
-                yield return null;
-            }
             holder._caster._movementController.isUnableMove = false;//이동 가능
             holder._caster.GetComponent<Rigidbody2D>().gravityScale = casterGrvity;
             holder._caster.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
