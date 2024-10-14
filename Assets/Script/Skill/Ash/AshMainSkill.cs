@@ -44,7 +44,9 @@ namespace AshGreen.Character.Skill
             Quaternion firePointRotation = holder._caster.firePoint.rotation;
             GameObject bullet = Instantiate(bulletPrefab, firePointPosition, firePointRotation);
 
-            Debug.Log("총알 생성"+bullet);
+            // 시간 경과 후 총알 파괴
+            Destroy(bullet, bulletDecayTime);
+
             //투사체 설정
             DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();
             damageObj.caster = holder._caster;
