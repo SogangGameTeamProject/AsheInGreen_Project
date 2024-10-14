@@ -204,9 +204,9 @@ namespace AshGreen.Character
         //다운 점프 구현 코루틴
         IEnumerator ConflictAdjustment(float enableTIme)
         {
-            SetCollisionWithLayer(platformLayer, true);
+            _character.ConflictSettings(rBody, platformLayer, true);
             yield return new WaitForSeconds(enableTIme);
-            SetCollisionWithLayer(platformLayer, false);
+            _character.ConflictSettings(rBody, platformLayer, false);
         }
 
         //넉백 구현 함수
@@ -233,15 +233,6 @@ namespace AshGreen.Character
 
             MovementStateTransitionRpc(MovementStateType.Idle);
             isUnableMove = false;
-        }
-
-        // 특정 레이어와의 충돌을 켜고 끌 수 있는 메서드
-        public void SetCollisionWithLayer(LayerMask targetLayer, bool enable)
-        {
-            if(enable)
-                rBody.excludeLayers |= targetLayer;
-            else 
-                rBody.excludeLayers &= ~targetLayer;
         }
     }
 }

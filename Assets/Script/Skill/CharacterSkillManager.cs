@@ -8,7 +8,6 @@ using AshGreen.Character.Player;
 
 namespace AshGreen.Character.Skill
 {
-    
     public class CharacterSkillManager : NetworkBehaviour
     {
         public PlayerController _player = null;
@@ -26,18 +25,21 @@ namespace AshGreen.Character.Skill
         {
             base.OnNetworkSpawn();
 
-            //스킬 초기화
-            foreach (CharacterSkill skill in _player.baseConfig.skills)
+            if (IsOwner)
             {
-                SkillHolder skillHolder = new SkillHolder(_player, skill);
-                skillList.Add(skillHolder);
+                //스킬 초기화
+                foreach (CharacterSkill skill in _player.baseConfig.skills)
+                {
+                    SkillHolder skillHolder = new SkillHolder(_player, skill);
+                    skillList.Add(skillHolder);
+                }
             }
         }
 
         public void Update()
         {
             //홀더 업데이트
-            if (IsServer)
+            if (IsOwner)
             {
                 //스킬 초기화
                 foreach (SkillHolder holder in skillList)
@@ -48,8 +50,7 @@ namespace AshGreen.Character.Skill
         }
 
         //스킬 입력 처리
-        [Rpc(SendTo.Server)]
-        public void PresseSkillRpc(int index)
+        public void PresseSkill(int index)
         {
             //스킬 입력 처리
             if (skillList[index].NowChargeCnt > 0 && skillList[index].state == SkillState.Idle)
@@ -91,8 +92,7 @@ namespace AshGreen.Character.Skill
         }
 
 
-        [Rpc(SendTo.Server)]
-        public void ReleaseSkillRpc(int index)
+        public void ReleaseSkill(int index)
         {
             //스킬 입력처리
             if (skillList[index].skill.charging && skillList[index].state == SkillState.charge)
@@ -101,8 +101,7 @@ namespace AshGreen.Character.Skill
 
 
         //모든 스킬 캔슬
-        [Rpc(SendTo.Server)]
-        public void AllStopRpc()
+        public void AllStop()
         {
             foreach (SkillHolder holder in skillList)
             {

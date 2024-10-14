@@ -12,7 +12,7 @@ namespace AshGreen.Character.Skill
         [Header("메인스킬 옵션")]
         public GameObject bulletPrefab;//투사체 프리펩
         public float bulletSpeed = 200f;
-        public float BulletDecayTime = 2;
+        public float bulletDecayTime = 2;
         public float chargingTime = 0.3f;//차징 단계별 시간
         public int maxChargingCnt = 3;//최대 차징 횟수
         public int energyIncrease = 1; //충전 량
@@ -42,25 +42,14 @@ namespace AshGreen.Character.Skill
             // 서버에 총알 생성을 요청하는 RPC 호출
             Vector3 firePointPosition = holder._caster.firePoint.position;
             Quaternion firePointRotation = holder._caster.firePoint.rotation;
-
-            // 서버에서 총알 생성
             GameObject bullet = Instantiate(bulletPrefab, firePointPosition, firePointRotation);
 
+            Debug.Log("총알 생성"+bullet);
             //투사체 설정
             DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();
             damageObj.caster = holder._caster;
             damageObj.dealType = AttackType.MainSkill;
             damageObj.damage = damageCoefficient + (chargeCnt * ChargingDamageCoefficient);
-
-            // 총알을 네트워크 오브젝트로 설정하고 스폰
-            NetworkObject bulletNetworkObject = bullet.GetComponent<NetworkObject>();
-            if (bulletNetworkObject != null)
-            {
-                bulletNetworkObject.Spawn();
-            }
-
-            // 시간 경과 후 총알 파괴
-            Destroy(bullet, BulletDecayTime);
 
             // 총알의 물리적 움직임 처리
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

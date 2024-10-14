@@ -81,11 +81,11 @@ namespace AshGreen.Character.Player
         {
             if (context.started)
             {
-                _player._characterSkillManager.PresseSkillRpc(0);
+                _player._characterSkillManager.PresseSkill(0);
             }
             else if (context.canceled)
             {
-                _player._characterSkillManager.ReleaseSkillRpc(0);
+                _player._characterSkillManager.ReleaseSkill(0);
             }
         }
 
@@ -94,11 +94,11 @@ namespace AshGreen.Character.Player
         {
             if (context.started)
             {
-                _player._characterSkillManager.PresseSkillRpc(1);
+                _player._characterSkillManager.PresseSkill(1);
             }
             else if (context.canceled)
             {
-                _player._characterSkillManager.ReleaseSkillRpc(1);
+                _player._characterSkillManager.ReleaseSkill(1);
             }
         }
 
@@ -107,11 +107,11 @@ namespace AshGreen.Character.Player
         {
             if (context.started)
             {
-                _player._characterSkillManager.PresseSkillRpc(2);
+                _player._characterSkillManager.PresseSkill(2);
             }
             else if (context.canceled)
             {
-                _player._characterSkillManager.ReleaseSkillRpc(2);
+                _player._characterSkillManager.ReleaseSkill(2);
             }
         }
     }
