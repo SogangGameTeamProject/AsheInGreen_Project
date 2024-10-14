@@ -20,6 +20,8 @@ namespace AshGreen.Character
         //피격 처리 메서드
         public void TakeDamage(float damage)
         {
+            if (!IsOwner) return;
+
             if(_character.runningCombatStateType != CombatStateType.Death)
             {
                 Debug.Log("피격: " + this.gameObject.name);
@@ -31,6 +33,8 @@ namespace AshGreen.Character
         //타격 처리 메서드
         public void DealDamage(CharacterController target, float damageCoefficient, AttackType attackType)
         {
+            if (!IsOwner) return;
+
             Debug.Log("타격: " + this.gameObject.name);
 
             //데미지 계산

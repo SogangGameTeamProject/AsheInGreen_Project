@@ -5,8 +5,7 @@ using System.Collections.Generic;
 using AshGreen.Character;
 using Unity.Netcode;
 using AshGreen.State;
-using Unity.VisualScripting;
-using AshGreen.Character.Skill;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace AshGreen.Character
 {
@@ -29,6 +28,8 @@ namespace AshGreen.Character
         public DamageReceiver _damageReceiver = null;
         public StatusEffectManager _statusEffectManager = null;
         public Animator _animator = null;
+
+        private Rigidbody2D rBody = null;
 
         //------상태 패턴 관련 전역 변수 선언------
         
@@ -334,15 +335,36 @@ namespace AshGreen.Character
         //피해 면역 관련 
         public NetworkVariable<bool> isDamageImmunity = new NetworkVariable<bool>(false);// 피해 면역
         public LayerMask projectilesLayer;
+
+        public void SetDamageimmunity(bool value)
+        {
+            ConflictSettings(rBody, projectilesLayer, value);
+            SetDamageimmunityRpc(value);
+        }
+
         [Rpc(SendTo.Server)]
-        public void SetDamageimmunityRpc(bool damageImmunity)
+        private void SetDamageimmunityRpc(bool damageImmunity)
         {
             this.isDamageImmunity.Value = damageImmunity;
         }
 
+        //피해면역 처리
+        [Rpc(SendTo.ClientsAndHost)]
+        public void DamageImmunityRpc(bool preValue, bool newValue)
+        {
+            if (preValue == newValue) return;
+            if (IsOwner) return;
+
+            ConflictSettings(rBody, projectilesLayer, newValue);
+        }
+
+        
+
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
+
+            rBody = GetComponent<Rigidbody2D>();
 
             combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성
 
@@ -381,25 +403,6 @@ namespace AshGreen.Character
         {
             if (IsSpawned)
                 combatStateContext.StateUpdate();
-        }
-
-        //피해면역 처리
-        [Rpc(SendTo.ClientsAndHost)]
-        public void DamageImmunityRpc(bool preValue, bool newValue)
-        {
-            if(preValue == newValue) return;
-            Debug.Log("무적 상태 전환: " + newValue);
-            Rigidbody2D rBody = GetComponent<Rigidbody2D>();
-
-            if (newValue)
-            {
-                rBody.excludeLayers |= projectilesLayer;
-            }
-            else
-            {
-                rBody.excludeLayers &= ~projectilesLayer;
-            }
-            Debug.Log(rBody.excludeLayers.value);
         }
 
         //캐릭터 스테이터스값 초기 설정
@@ -449,6 +452,24 @@ namespace AshGreen.Character
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
         {
             target._damageReceiver.TakeDamage(damage);
+        }
+
+        /// <summary>
+        /// 특정 레이어와의 충돌을 끄고 키는 함수
+        /// </summary>
+        /// <param name="rBody">충돌 설정할 리지드 바디</param>
+        /// <param name="layerMask">설정할 레이어</param>
+        /// <param name="onOffVlaue">끌지 킬지 여부</param>
+        public void ConflictSettings(Rigidbody2D rBody, LayerMask layerMask, bool onOffVlaue)
+        {
+            if (onOffVlaue)
+            {
+                rBody.excludeLayers |= layerMask;
+            }
+            else
+            {
+                rBody.excludeLayers &= ~layerMask;
+            }
         }
 
         //----------상태패턴 관련 함수들---------
