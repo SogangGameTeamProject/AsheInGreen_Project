@@ -356,6 +356,7 @@ MonoBehaviour:
   _damageReceiver: {fileID: 924884067952727375}
   _statusEffectManager: {fileID: 4814974705118643328}
   _animator: {fileID: 2311938511817404395}
+  _characterProjectileFactory: {fileID: 0}
   runningCombatStateType: -1
   combatStateList:
   - type: 0

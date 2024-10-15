@@ -34,5 +34,7 @@ namespace AshGreen.Character
 
         [Header("스킬 설정")]
         public List<CharacterSkill> skills;
+        [Header("투사체 설정")]
+        public List<GameObject> projectileObjects = new List<GameObject>();
     }
 }

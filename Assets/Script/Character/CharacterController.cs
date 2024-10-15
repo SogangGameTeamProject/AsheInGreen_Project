@@ -365,6 +365,8 @@ namespace AshGreen.Character
         {
             base.OnNetworkSpawn();
 
+            _characterProjectileFactory.projectileObjts = baseConfig.projectileObjects;//투사체 설정
+
             rBody = GetComponent<Rigidbody2D>();
 
             combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성

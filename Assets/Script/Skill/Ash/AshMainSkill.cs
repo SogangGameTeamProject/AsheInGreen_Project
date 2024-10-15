@@ -11,8 +11,9 @@ namespace AshGreen.Character.Skill
     {
         [Header("메인스킬 옵션")]
         public GameObject bulletPrefab;//투사체 프리펩
+        public int bulletPreIndex = 0;
         public float bulletSpeed = 200f;
-        public float bulletDecayTime = 2;
+        public float bulletDestroyTime = 2;
         public float chargingTime = 0.3f;//차징 단계별 시간
         public int maxChargingCnt = 3;//최대 차징 횟수
         public int energyIncrease = 1; //충전 량
@@ -40,22 +41,16 @@ namespace AshGreen.Character.Skill
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease * chargeCnt; // 특수스킬 에너지 충전
 
             // 서버에 총알 생성을 요청하는 RPC 호출
-            Vector3 firePointPosition = holder._caster.firePoint.position;
-            Quaternion firePointRotation = holder._caster.firePoint.rotation;
-            GameObject bullet = Instantiate(bulletPrefab, firePointPosition, firePointRotation);
+            Vector3 firePointPosition = holder._caster.firePoint.position;//투사체 발사 위치 조정
+            Quaternion firePointRotation = holder._caster.firePoint.rotation;//투사체 회전 조정
+            NetworkObject owner = holder._caster.GetComponent<NetworkObject>();//공격자 설정
+            float damage = damageCoefficient * (ChargingDamageCoefficient * chargeCnt);//데미지 설정
+            Vector2 fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;//발사 방향 조정
 
-            // 시간 경과 후 총알 파괴
-            Destroy(bullet, bulletDecayTime);
-
-            //투사체 설정
-            DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();
-            damageObj.caster = holder._caster;
-            damageObj.dealType = AttackType.MainSkill;
-            damageObj.damage = damageCoefficient + (chargeCnt * ChargingDamageCoefficient);
-
-            // 총알의 물리적 움직임 처리
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.linearVelocity = new Vector2((int)holder._caster.CharacterDirection * bulletSpeed, 0); // 발사 방향 설정
+            holder._caster._characterProjectileFactory.RequestProjectileFireServerRpc(
+               owner, bulletPreIndex, AttackType.MainSkill, damage, fireDir, 
+               firePointPosition, firePointRotation, bulletDestroyTime
+               );
 
             return base.Use(holder);
         }
