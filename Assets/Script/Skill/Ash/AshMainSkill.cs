@@ -18,6 +18,7 @@ namespace AshGreen.Character.Skill
         public int maxChargingCnt = 3;//최대 차징 횟수
         public int energyIncrease = 1; //충전 량
         public float ChargingDamageCoefficient = 0.2f;//차징별 데미지 계수
+        public float casterGrvity = 5; // 캐릭터 중력
 
         public override IEnumerator Charging(SkillHolder holder)
         {
@@ -30,6 +31,12 @@ namespace AshGreen.Character.Skill
         {
             Debug.Log("메인스킬 사용");
 
+            //스킬 시작 처리
+            holder._caster._movementController.isUnableMove = true;//이동 불가
+            Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
+            casterRbody.linearVelocity = Vector2.zero;
+            casterRbody.gravityScale = 0;//중력 설정
+
             // 차징 단계 구하기
             int chargeCnt = 
                 Mathf.Clamp((int)(chargeTime / (chargingTime*100f/(100f+holder._caster.SkillAcceleration)))
@@ -39,6 +46,7 @@ namespace AshGreen.Character.Skill
 
             // 차징 정도에 따른 에너지 충전
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease * chargeCnt; // 특수스킬 에너지 충전
+
 
             // 서버에 총알 생성을 요청하는 RPC 호출
             Vector3 firePointPosition = holder._caster.firePoint.position;//투사체 발사 위치 조정
@@ -52,7 +60,21 @@ namespace AshGreen.Character.Skill
                firePointPosition, firePointRotation, bulletDestroyTime
                );
 
-            return base.Use(holder);
+
+            //시간 경과
+            yield return new WaitForSeconds(activeTime);
+
+            yield return base.Use(holder);
+        }
+
+        public override IEnumerator End(SkillHolder holder)
+        {
+            //스킬 종료 처리
+            holder._caster._movementController.isUnableMove = false;//이동 가능
+            Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
+            casterRbody.gravityScale = casterGrvity;//중력 설정
+
+            return base.End(holder);
         }
     }
 }

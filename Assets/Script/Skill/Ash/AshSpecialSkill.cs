@@ -24,7 +24,7 @@ namespace AshGreen.Character.Skill
             int nowEnergy = holder.NowEnergy;
             holder.NowEnergy = 0;//에너지 비우기
 
-            //스킬 종료 처리
+            //스킬 시작 처리
             holder._caster._movementController.isUnableMove = true;//이동 불가
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
             casterRbody.linearVelocity = Vector2.zero;
