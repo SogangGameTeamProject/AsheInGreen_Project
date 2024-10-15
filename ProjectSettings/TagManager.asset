@@ -53,6 +53,9 @@ TagManager:
   - name: Character
     uniqueID: 2669244573
     locked: 0
+  - name: Prajectile
+    uniqueID: 4079294223
+    locked: 0
   - name: Effect
     uniqueID: 3433093033
     locked: 0
