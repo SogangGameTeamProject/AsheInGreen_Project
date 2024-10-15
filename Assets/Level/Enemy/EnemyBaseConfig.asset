@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 22100000, guid: 19058269b13cf744cabb1cf2f70e880f, type: 2}
   LevelUpEx: 0
-  MaxHP: 100
+  MaxHP: 1000
   GrowthMaxHP: 0
   GrowthPerMaxHP: 10
   AttackPower: 1
@@ -24,3 +24,4 @@ MonoBehaviour:
   JumpPower: 0
   JumMaxNum: 0
   skills: []
+  projectileObjects: []

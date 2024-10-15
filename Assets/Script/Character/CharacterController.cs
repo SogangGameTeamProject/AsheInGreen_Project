@@ -163,10 +163,17 @@ namespace AshGreen.Character
         public int AttackPower
         {
             get
-            {
-                float attackPower =
-                    (baseAttackPower.Value * (level.Value * GrowthPerAttackPower.Value) + addAttackPower.Value)
-                    * addAttackPerPower.Value;
+            {   
+                float attackPower = baseAttackPower.Value + (level.Value * GrowthAttackPower.Value) + addAttackPower.Value;
+                Debug.Log(baseAttackPower.Value);
+                Debug.Log((level.Value * GrowthAttackPower.Value));
+                Debug.Log(addAttackPower.Value);
+                Debug.Log(attackPower);
+                if(GrowthPerAttackPower.Value > 0)
+                    attackPower *= GrowthPerAttackPower.Value;
+                if(addAttackPerPower.Value > 0)
+                    attackPower *= addAttackPerPower.Value;
+
                 return attackPower > 0 ? (int)attackPower : 1;
             }
         }
@@ -379,6 +386,7 @@ namespace AshGreen.Character
 
             //피격 타격 액션 설정
             _damageReceiver.TakeDamageAction += TakeDamage;
+            _damageReceiver.DealDamageAction += DealDamage;
 
 
             _animator.runtimeAnimatorController = baseConfig.animator;
@@ -399,6 +407,7 @@ namespace AshGreen.Character
             characterDirection.OnValueChanged -= OnFlipRpc;
             isDamageImmunity.OnValueChanged -= DamageImmunityRpc;
             _damageReceiver.TakeDamageAction -= TakeDamage;
+            _damageReceiver.DealDamageAction -= DealDamage;
 
         }
 
@@ -421,8 +430,6 @@ namespace AshGreen.Character
                 GrowthAttackPower.Value = baseConfig.GrowthAttackPower;
                 GrowthPerAttackPower.Value = baseConfig.GrowthPerAttackPower;
                 baseAttackPower.Value = baseConfig.AttackPower;
-                GrowthAttackPower.Value = baseConfig.GrowthAttackPower;
-                GrowthPerAttackPower.Value = baseConfig.GrowthPerAttackPower;
                 baseMoveSpeed.Value = baseConfig.MoveSpeed;
                 baseJumpPower.Value = baseConfig.JumpPower;
                 baseJumMaxNum.Value = baseConfig.JumMaxNum;
@@ -454,6 +461,7 @@ namespace AshGreen.Character
         /// 
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
         {
+            Debug.Log("타겟"+target);
             target._damageReceiver.TakeDamage(damage);
         }
 

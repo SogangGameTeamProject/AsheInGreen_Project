@@ -52,7 +52,7 @@ namespace AshGreen.Character.Skill
             Vector3 firePointPosition = holder._caster.firePoint.position;//투사체 발사 위치 조정
             Quaternion firePointRotation = holder._caster.firePoint.rotation;//투사체 회전 조정
             NetworkObject owner = holder._caster.GetComponent<NetworkObject>();//공격자 설정
-            float damage = damageCoefficient * (ChargingDamageCoefficient * chargeCnt);//데미지 설정
+            float damage = damageCoefficient + (ChargingDamageCoefficient * chargeCnt);//데미지 설정
             Vector2 fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;//발사 방향 조정
 
             holder._caster._characterProjectileFactory.RequestProjectileFireServerRpc(

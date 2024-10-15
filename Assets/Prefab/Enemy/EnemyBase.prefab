@@ -66,7 +66,6 @@ GameObject:
   - component: {fileID: 3181452707113295431}
   - component: {fileID: 924884067952727375}
   - component: {fileID: 4814974705118643328}
-  - component: {fileID: 7469248102546534340}
   - component: {fileID: 55478811726622643}
   m_Layer: 6
   m_Name: EnemyBase
@@ -91,6 +90,7 @@ Transform:
   - {fileID: 8222472081722561548}
   - {fileID: 2528669580427623095}
   - {fileID: 1407973278392425528}
+  - {fileID: 7420561725193434779}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8863258458843000807
@@ -137,7 +137,7 @@ SpriteRenderer:
   m_SortingLayerID: -1625722723
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3318188226485093758, guid: ae72133dacba6ec4eb33ecde48f50e56, type: 3}
+  m_Sprite: {fileID: 564201052, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -231,17 +231,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.045714945, y: 0.98319507}
+  m_Offset: {x: -0.03873849, y: 1.6075686}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4, y: 0.03}
-    oldSize: {x: 4.3125, y: 2.75}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 3, y: 3.125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.560376, y: 1.9348235}
+  m_Size: {x: 1.9277196, y: 3.1835706}
   m_EdgeRadius: 0
 --- !u!114 &5569701028295483103
 MonoBehaviour:
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -356,13 +356,13 @@ MonoBehaviour:
   _damageReceiver: {fileID: 924884067952727375}
   _statusEffectManager: {fileID: 4814974705118643328}
   _animator: {fileID: 2311938511817404395}
-  _characterProjectileFactory: {fileID: 0}
+  _characterProjectileFactory: {fileID: 2086103707549596479}
   runningCombatStateType: -1
   combatStateList:
   - type: 0
     state: {fileID: 8391703562499923371}
   - type: 1
-    state: {fileID: 8146044977604259081}
+    state: {fileID: 6300172891334614720}
   - type: 2
     state: {fileID: 4769585176895150063}
   baseConfig: {fileID: 11400000, guid: 2ed7ea5876deeeb4cbc67290001e283f, type: 2}
@@ -400,172 +400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9cb4b2abafdd2448d669d6edf3e43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7469248102546534340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026440609202315854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: b1409dc58847d0248a973629abc7df87, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1dbf0c9c-5f48-423c-8437-c173f893ddbb
-    m_ActionName: Player/Move
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b3ad6c8b-48d6-46f1-8170-ca8c0141f515
-    m_ActionName: 'Player/Jump[/Keyboard/upArrow]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AshGreen.Character.Player.InputHandler, Assembly-CSharp
-        m_MethodName: OnDownJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 77831ab9-2291-43fc-9d65-a88e52d581d2
-    m_ActionName: 'Player/DownJump[/Keyboard/downArrow,/Keyboard/space]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
-        m_MethodName: OnMainSkill
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: f68310ce-b295-4d13-91b5-1cc8cd94f310
-    m_ActionName: 'Player/MainSkill[/Keyboard/z]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
-        m_MethodName: OnSecondarySkill
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: e69cc638-e8c6-4760-aa34-1fc6c9c80b12
-    m_ActionName: 'Player/SecondarySkill[/Keyboard/x]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AshGreen.Player.InputHandler, Assembly-CSharp
-        m_MethodName: OnSpecialSkill
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 813c9d65-f839-40dd-9591-6915e684d98f
-    m_ActionName: 'Player/SpecialSkill[/Keyboard/c]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c95b2375-e6d9-4b88-9c4c-c5e76515df4b
-    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7607c7b6-cd76-4816-beef-bd0341cfe950
-    m_ActionName: 'UI/Submit[/Keyboard/enter]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 15cef263-9014-4fd5-94d9-4e4a6234a6ef
-    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 32b35790-4ed0-4e9a-aa41-69ac6d629449
-    m_ActionName: 'UI/Point[/Mouse/position]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3c7022bf-7922-4f7c-a998-c437916075ad
-    m_ActionName: 'UI/Click[/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 44b200b1-1557-4083-816c-b22cbdf77ddf
-    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: dad70c86-b58c-4b17-88ad-f5e53adf419e
-    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0489e84a-4833-4c40-bfae-cea84b696689
-    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 24908448-c609-4bc3-a128-ea258674378a
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
-    m_ActionName: UI/TrackedDeviceOrientation
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!210 &55478811726622643
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -578,6 +412,52 @@ SortingGroup:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!1 &2050246702895318455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7420561725193434779}
+  - component: {fileID: 2086103707549596479}
+  m_Layer: 6
+  m_Name: Projectile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7420561725193434779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050246702895318455}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6716363405069832563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2086103707549596479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050246702895318455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d946423274e552f4c942a74de9ef123e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  projectileObjts: []
 --- !u!1 &2436293096249670835
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7212066415820729437}
-  - component: {fileID: 8146044977604259081}
+  - component: {fileID: 6300172891334614720}
   m_Layer: 6
   m_Name: HIT
   m_TagString: Untagged
@@ -610,7 +490,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8222472081722561548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8146044977604259081
+--- !u!114 &6300172891334614720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -619,14 +499,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2436293096249670835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35b12860ad3e5494a8399dda517953ac, type: 3}
+  m_Script: {fileID: 11500000, guid: bf681416e18ab8e4fb337b5a55943b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
-  hitTIme: 1.5
+  hitTIme: 0.6
   flashCycle: 0.05
-  stateAni: IsHeart
 --- !u!1 &3518912508865885275
 GameObject:
   m_ObjectHideFlags: 0

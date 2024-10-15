@@ -32,7 +32,7 @@ MonoBehaviour:
   skillSound: {fileID: 0}
   bulletPrefab: {fileID: 7789176575942843153, guid: 6c00f569535ff7c40a937cfce63c775d, type: 3}
   bulletPreIndex: 0
-  bulletSpeed: 300
+  bulletSpeed: 100
   bulletDestroyTime: 2
   fireDelay: 0.05
   casterGrvity: 5
