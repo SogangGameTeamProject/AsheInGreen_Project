@@ -2526,7 +2526,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3856738490003642777, guid: ff2674daaaa501b4f8a5046e93cec5ee, type: 3}
       propertyPath: NetworkConfig.TickRate
-      value: 120
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4664646463607555396, guid: ff2674daaaa501b4f8a5046e93cec5ee, type: 3}
       propertyPath: m_LocalPosition.x

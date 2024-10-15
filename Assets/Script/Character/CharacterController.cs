@@ -28,6 +28,7 @@ namespace AshGreen.Character
         public DamageReceiver _damageReceiver = null;
         public StatusEffectManager _statusEffectManager = null;
         public Animator _animator = null;
+        public CharacterProjectileFactory _characterProjectileFactory = null;
 
         private Rigidbody2D rBody = null;
 

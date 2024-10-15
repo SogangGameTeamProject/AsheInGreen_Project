@@ -751,6 +751,7 @@ GameObject:
   - component: {fileID: 776473998259894186}
   - component: {fileID: 491064707563821348}
   - component: {fileID: 1434835013967201027}
+  - component: {fileID: 5548809430806966878}
   - component: {fileID: 7291620524692100264}
   - component: {fileID: 1616294030578084601}
   - component: {fileID: 6167815754311996577}
@@ -947,7 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3471441096
+  GlobalObjectIdHash: 608348716
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1048,6 +1049,7 @@ MonoBehaviour:
   _damageReceiver: {fileID: 1434835013967201027}
   _statusEffectManager: {fileID: 7291620524692100264}
   _animator: {fileID: 5141303237562480953}
+  _characterProjectileFactory: {fileID: 5548809430806966878}
   runningCombatStateType: 0
   combatStateList:
   - type: 0
@@ -1116,6 +1118,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+--- !u!114 &5548809430806966878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204871404527705347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d946423274e552f4c942a74de9ef123e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  projectilePre:
+    m_InternalValue: 0
 --- !u!114 &7291620524692100264
 MonoBehaviour:
   m_ObjectHideFlags: 0

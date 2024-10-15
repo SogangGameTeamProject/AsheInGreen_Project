@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uD640\uB4DC \uACF5\uACA9"
   activeTime: 0
-  cooldownTime: 2
+  cooldownTime: 1
   maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
   skillSound: {fileID: 0}
   bulletPrefab: {fileID: 7789176575942843153, guid: 6c00f569535ff7c40a937cfce63c775d, type: 3}
   bulletSpeed: 300
-  BulletDecayTime: 2
+  bulletDecayTime: 2
   chargingTime: 0.5
   maxChargingCnt: 3
   energyIncrease: 1
