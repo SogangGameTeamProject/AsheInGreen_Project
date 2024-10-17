@@ -87,7 +87,7 @@ namespace AshGreen.Character
         }
 
         //------스테이터스 관련 전역 변수 선언------
-        public CharacterConfig baseConfig = null;//기본능력치가 저장되는 변수
+        public CharacterConfig characterConfig = null;//기본능력치가 저장되는 변수
         //레벨 관련
         private NetworkVariable<int> LevelUpEx = new NetworkVariable<int>(0);
         private NetworkVariable<int> level = new NetworkVariable<int>(1);
@@ -372,7 +372,7 @@ namespace AshGreen.Character
         {
             base.OnNetworkSpawn();
 
-            _characterProjectileFactory.projectileObjts = baseConfig.projectileObjects;//투사체 설정
+            _characterProjectileFactory.projectileObjts = characterConfig.projectileObjects;//투사체 설정
 
             rBody = GetComponent<Rigidbody2D>();
 
@@ -389,7 +389,7 @@ namespace AshGreen.Character
             _damageReceiver.DealDamageAction += DealDamage;
 
 
-            _animator.runtimeAnimatorController = baseConfig.animator;
+            _animator.runtimeAnimatorController = characterConfig.animator;
 
             if (IsOwner)
             {
@@ -421,18 +421,18 @@ namespace AshGreen.Character
         [Rpc(SendTo.Server)]
         private void OnSetStatusRpc()
         {
-            if (baseConfig)
+            if (characterConfig)
             {
 
-                LevelUpEx.Value = baseConfig.LevelUpEx;
-                baseMaxHP.Value = baseConfig.MaxHP;
+                LevelUpEx.Value = characterConfig.LevelUpEx;
+                baseMaxHP.Value = characterConfig.MaxHP;
                 nowHp.Value = baseMaxHP.Value;
-                GrowthAttackPower.Value = baseConfig.GrowthAttackPower;
-                GrowthPerAttackPower.Value = baseConfig.GrowthPerAttackPower;
-                baseAttackPower.Value = baseConfig.AttackPower;
-                baseMoveSpeed.Value = baseConfig.MoveSpeed;
-                baseJumpPower.Value = baseConfig.JumpPower;
-                baseJumMaxNum.Value = baseConfig.JumMaxNum;
+                GrowthAttackPower.Value = characterConfig.GrowthAttackPower;
+                GrowthPerAttackPower.Value = characterConfig.GrowthPerAttackPower;
+                baseAttackPower.Value = characterConfig.AttackPower;
+                baseMoveSpeed.Value = characterConfig.MoveSpeed;
+                baseJumpPower.Value = characterConfig.JumpPower;
+                baseJumMaxNum.Value = characterConfig.JumMaxNum;
             }
         }
 
