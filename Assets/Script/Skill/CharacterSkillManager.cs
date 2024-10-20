@@ -28,7 +28,7 @@ namespace AshGreen.Character.Skill
             if (IsOwner)
             {
                 //스킬 초기화
-                foreach (CharacterSkill skill in _player.baseConfig.skills)
+                foreach (CharacterSkill skill in _player.characterConfig.skills)
                 {
                     SkillHolder skillHolder = new SkillHolder(_player, skill);
                     skillList.Add(skillHolder);

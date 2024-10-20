@@ -43,6 +43,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         if (musicToPlay == MusicName.intro)
         {
+            if (m_introSource == null) return;
             m_introSource.enabled = true;
             m_introSource.volume = m_maxMusicVolume;
             m_introSource.Play();
@@ -52,6 +53,7 @@ public class AudioManager : Singleton<AudioManager>
         }
         else
         {
+            if (m_gameplaySource == null) return;
             m_gameplaySource.enabled = true;
             m_gameplaySource.volume = m_maxMusicVolume;
             m_gameplaySource.Play();

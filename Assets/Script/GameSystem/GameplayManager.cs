@@ -111,15 +111,15 @@ public class GameplayManager : Singleton<GameplayManager>
         PlayerController playerController =
             playerSpaceship.GetComponent<PlayerController>();
 
-        m_playersUI[m_charactersData[charIndex].playerId].SetUI(
+        /*m_playersUI[m_charactersData[charIndex].playerId].SetUI(
             m_charactersData[charIndex].playerId,
             m_charactersData[charIndex].iconSprite,
             m_charactersData[charIndex].iconDeathSprite,
             playerController.nowHp.Value,
-            m_charactersData[charIndex].darkColor);
+            m_charactersData[charIndex].darkColor);*/
 
         // Pass the UI to the player
-        playerController.playerUI = m_playersUI[m_charactersData[charIndex].playerId];
+        //playerController.playerUI = m_playersUI[m_charactersData[charIndex].playerId];
     }
 
     private IEnumerator HostShutdown()
@@ -189,13 +189,13 @@ public class GameplayManager : Singleton<GameplayManager>
 
             foreach (CharacterConfig data in m_charactersData)
             {
-                if (data.isSelected && data.clientId == client)
+                if (data.clientId == clientId)
                 {
                     GameObject playerSpaceship =
                         NetworkObjectSpawner.SpawnNewNetworkObjectAsPlayerObject(
-                            data.spaceshipPrefab,
+                            data.playerPre,
                             m_shipStartingPositions[m_numberOfPlayerConnected].position,
-                            data.clientId,
+                            client,
                             true);
 
                     PlayerController playerController =

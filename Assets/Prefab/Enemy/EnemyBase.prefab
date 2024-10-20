@@ -365,7 +365,7 @@ MonoBehaviour:
     state: {fileID: 6300172891334614720}
   - type: 2
     state: {fileID: 4769585176895150063}
-  baseConfig: {fileID: 11400000, guid: 2ed7ea5876deeeb4cbc67290001e283f, type: 2}
+  characterConfig: {fileID: 0}
   nowHp:
     m_InternalValue: 0
   takenDamageCoefficient:

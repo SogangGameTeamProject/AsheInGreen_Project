@@ -42,6 +42,8 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
     // Coroutine for the loading effect. It use an alpha in out effect
     private IEnumerator Loading(SceneName sceneToLoad, bool isNetworkSessionActive)
     {
+
+        Debug.Log("페이드 인");
         LoadingFadeEffect.Instance.FadeIn();
 
         // Here the player still sees the black screen
@@ -61,7 +63,7 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
         // In case the scene is heavy instead we should use additive loading to wait for the
         // scene to load before we continue
         yield return new WaitForSeconds(1f);
-
+        Debug.Log("페이드 아웃");
         LoadingFadeEffect.Instance.FadeOut();
     }
 
@@ -118,7 +120,7 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
             // play the right SFX
             case SceneName.Victory:
             case SceneName.Defeat:
-                EndGameManager.Instance.ServerSceneInit(clientId);
+                //EndGameManager.Instance.ServerSceneInit(clientId);
                 break;
         }
     }

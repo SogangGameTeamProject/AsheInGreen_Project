@@ -1,13 +1,19 @@
 using UnityEngine;
+using System;
 using AshGreen.Character.Skill;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Collections;
+using Unity.Netcode;
 namespace AshGreen.Character
 {
     [CreateAssetMenu(fileName = "CharacterConfig", menuName = "Scriptable Objects/Character/CharacterConfig")]
     public class CharacterConfig : ScriptableObject
     {
+        [Header("Data")]
+        public string characterName;            // 캐릭터명
+        public Sprite iconSprite;          // 캐릭터 icon
+        public GameObject playerPre; //플레이어 프리펩
         [Header("애니메이션 설정")]
         public RuntimeAnimatorController animator;
         [Header("초기 스테이터스")]
@@ -32,24 +38,61 @@ namespace AshGreen.Character
         [Tooltip("최대 점프 횟수")]
         public int JumMaxNum = 0;
 
-        [Header("Data")]
-        public Sprite characterSprite;          // CharacterSprite for the character selection scene
-        public Sprite characterShipSprite;      // The character ship sprite for the character selection scene
-        public Sprite iconSprite;               // Sprite use on the player UI on gameplay scene
-        public Sprite iconDeathSprite;          // Sprite use on the player UI on gameplay scene for his death
-        public string characterName;            // Character name
-        public GameObject spaceshipPrefab;      // Prefab of the spaceship to use on gameplay scene
-        public GameObject spaceshipScorePrefab; // Sprite for the ship on the endgame scene UI    
-        public Color Color;
-        public Color darkColor;
-
         [Header("스킬 설정")]
         public List<CharacterSkill> skills;
         [Header("투사체 설정")]
         public List<GameObject> projectileObjects = new List<GameObject>();
-        [Header("ClientId")]
-        public ulong clientId = 0;
-        public int playerId = 0;
-        public bool isSelected;
+
+        [Header("아디")]
+        //클라이언트 아이디
+        public Dictionary<ulong, int> selectClientIds = new Dictionary<ulong, int>();
+
+        public void EmptyData()
+        {
+            selectClientIds.Clear();
+        }
+
+        public ulong clientId
+        {
+            get
+            {
+                ulong id = 0;
+
+                ulong localId = NetworkManager.Singleton.LocalClientId;
+                if (selectClientIds.ContainsKey(localId))
+                    id = localId;
+
+                return id;
+            }
+            set
+            {
+                if (value == 0UL)
+                    selectClientIds.Remove(NetworkManager.Singleton.LocalClientId);
+                else
+                    selectClientIds.Add(NetworkManager.Singleton.LocalClientId, -1);
+
+            }
+        }
+
+        public int playerId
+        {
+            get
+            {
+                int id = -1;
+                selectClientIds.TryGetValue(NetworkManager.Singleton.LocalClientId, out id);
+                return id;
+            }
+            set
+            {
+                selectClientIds[NetworkManager.Singleton.LocalClientId] = value;
+            }
+        }
+        public bool isSelected
+        {
+            get
+            {
+                return selectClientIds.ContainsKey(NetworkManager.Singleton.LocalClientId);
+            }
+        }
     }
 }

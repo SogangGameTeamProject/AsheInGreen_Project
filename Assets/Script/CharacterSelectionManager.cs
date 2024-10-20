@@ -132,14 +132,6 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
         LoadingFadeEffect.Instance.FadeAll();
     }
 
-    void RemoveSelectedStates()
-    {
-        for (int i = 0; i < charactersData.Length; i++)
-        {
-            charactersData[i].isSelected = false;
-        }
-    }
-
     void RemoveReadyStates(ulong clientId, bool disconected)
     {
         for (int i = 0; i < m_playerStates.Length; i++)
@@ -223,7 +215,7 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
 
     public void SetCharacterUI(int playerId, int characterSelected)
     {
-        m_charactersContainers[playerId].imageContainer.sprite =
+        /*m_charactersContainers[playerId].imageContainer.sprite =
             charactersData[characterSelected].characterSprite;
 
         m_charactersContainers[playerId].backgroundShipImage.sprite =
@@ -233,7 +225,7 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
             charactersData[characterSelected].characterShipSprite;
 
         m_charactersContainers[playerId].backgroundClientShipReadyImage.sprite =
-            charactersData[characterSelected].characterShipSprite;
+            charactersData[characterSelected].characterShipSprite;*/
 
         m_charactersContainers[playerId].nameContainer.text =
             charactersData[characterSelected].characterName;
@@ -412,7 +404,6 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
     [ClientRpc]
     void PlayerReadyClientRpc(ulong clientId, int playerId, int characterSelected)
     {
-        charactersData[characterSelected].isSelected = true;
         charactersData[characterSelected].clientId = clientId;
         charactersData[characterSelected].playerId = playerId;
         m_playerStates[playerId].playerState = ConnectionState.ready;
@@ -448,7 +439,6 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
     [ClientRpc]
     void PlayerNotReadyClientRpc(ulong clientId, int playerId, int characterSelected)
     {
-        charactersData[characterSelected].isSelected = false;
         charactersData[characterSelected].clientId = 0UL;
         charactersData[characterSelected].playerId = -1;
 
@@ -485,9 +475,6 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
     public void PlayerDisconnectedClientRpc(int playerId)
     {
         SetNonPlayableChar(playerId);
-
-        // All character data unselected
-        RemoveSelectedStates();
 
         m_playerStates[playerId].playerState = ConnectionState.disconnected;
     }
