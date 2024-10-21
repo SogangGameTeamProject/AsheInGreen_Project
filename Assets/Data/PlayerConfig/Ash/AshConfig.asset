@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfc33b82498a37409503bd8a970b394, type: 3}
   m_Name: AshConfig
   m_EditorClassIdentifier: 
-  characterName: "\uC560\uC26C"
+  characterName: Ash
+  profileImg: {fileID: 491125644, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
+  ingameImg: {fileID: 491125644, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
   iconSprite: {fileID: 491125644, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
   playerPre: {fileID: 9204871404527705347, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
   animator: {fileID: 22100000, guid: 19058269b13cf744cabb1cf2f70e880f, type: 2}

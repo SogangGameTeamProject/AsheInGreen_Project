@@ -605,7 +605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8987182723089455022
 RectTransform:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ash
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -833,13 +833,13 @@ RectTransform:
   - {fileID: 3516916287705900467}
   - {fileID: 8990441230680293687}
   - {fileID: 6500613005337561078}
-  - {fileID: 2513388106227304517}
   - {fileID: 6633046359797199381}
   - {fileID: 7534170355466202370}
   - {fileID: 8987182723089455022}
   - {fileID: 1229347968264908228}
   - {fileID: 2797835993295249691}
   - {fileID: 5210668250250922050}
+  - {fileID: 2513388106227304517}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

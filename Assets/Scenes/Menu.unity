@@ -661,8 +661,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3254694443786492208, guid: 460f70ec337fac0438184b553c914d7f, type: 3}
+      propertyPath: JoinedSession.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254694443786492208, guid: 460f70ec337fac0438184b553c914d7f, type: 3}
       propertyPath: JoinedSession.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1660715609}
+    - target: {fileID: 3254694443786492208, guid: 460f70ec337fac0438184b553c914d7f, type: 3}
+      propertyPath: JoinedSession.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickJoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254694443786492208, guid: 460f70ec337fac0438184b553c914d7f, type: 3}
+      propertyPath: JoinedSession.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4768013460188722031, guid: 460f70ec337fac0438184b553c914d7f, type: 3}
       propertyPath: m_AnchorMax.y

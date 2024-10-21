@@ -65,6 +65,6 @@ public class MenuManager : MonoBehaviour
 
         yield return new WaitUntil(() => LoadingFadeEffect.s_canLoad);
 
-        NetworkManager.Singleton.StartClient();
+        //NetworkManager.Singleton.StartClient();
     }
 }

@@ -214,17 +214,17 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
 
     public void SetCharacterUI(int playerId, int characterSelected)
     {
-        /*m_charactersContainers[playerId].imageContainer.sprite =
-            charactersData[characterSelected].characterSprite;
+        m_charactersContainers[playerId].imageContainer.sprite =
+            charactersData[characterSelected].profileImg;
 
         m_charactersContainers[playerId].backgroundCharacterImage.sprite =
-            charactersData[characterSelected].characterCharacterSprite;
+            charactersData[characterSelected].ingameImg;
 
         m_charactersContainers[playerId].backgroundCharacterReadyImage.sprite =
-            charactersData[characterSelected].characterCharacterSprite;
+            charactersData[characterSelected].ingameImg;
 
         m_charactersContainers[playerId].backgroundClientCharacterReadyImage.sprite =
-            charactersData[characterSelected].characterCharacterSprite;*/
+            charactersData[characterSelected].ingameImg;
 
         m_charactersContainers[playerId].nameContainer.text =
             charactersData[characterSelected].characterName;
