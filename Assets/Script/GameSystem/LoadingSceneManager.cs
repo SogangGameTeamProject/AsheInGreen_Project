@@ -1,4 +1,3 @@
-using AshGreen.Singleton;
 using System;
 using System.Collections;
 using Unity.Netcode;
@@ -20,7 +19,7 @@ public enum SceneName : byte
     // Add more scenes states if needed
 };
 
-public class LoadingSceneManager : Singleton<LoadingSceneManager>
+public class LoadingSceneManager : NetworkSingleton<LoadingSceneManager>
 {
     public SceneName SceneActive => m_sceneActive;
 

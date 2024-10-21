@@ -1,6 +1,5 @@
 using AshGreen.Character;
 using AshGreen.Obsever;
-using AshGreen.Singleton;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +7,7 @@ using Unity.Netcode;
 using UnityEngine;
 using AshGreen.Character.Player;
 
-public class GameplayManager : Singleton<GameplayManager>
+public class GameplayManager : NetworkSingleton<GameplayManager>
 {
     public static Action<ulong> OnPlayerDefeated;
 

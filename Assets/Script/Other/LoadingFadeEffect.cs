@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using AshGreen.Singleton;
 
 /*
     Script to do the fade effect on loading scenes

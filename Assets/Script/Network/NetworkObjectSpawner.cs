@@ -88,7 +88,7 @@ public class NetworkObjectSpawner
         return newGameObject;
     }
 
-    public static GameObject SpawnNewNetworkObjectChangeOwnershipToClient(
+    public static GameObject SpawnNewNetworkObjectChangeOwnerCharacterToClient(
         GameObject prefab,
         Vector3 position,
         ulong newClientOwnerId,

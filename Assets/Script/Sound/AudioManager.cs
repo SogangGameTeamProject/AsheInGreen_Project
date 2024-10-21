@@ -1,4 +1,3 @@
-using AshGreen.Singleton;
 using System.Collections;
 using UnityEngine;
 

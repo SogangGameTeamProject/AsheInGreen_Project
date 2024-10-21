@@ -1,10 +1,9 @@
 using AshGreen.Obsever;
 using Unity.Netcode;
 using UnityEngine;
-using AshGreen.Singleton;
 using AshGreen.Character;
 
-public class ClientConnection : Singleton<ClientConnection>
+public class ClientConnection : NetworkSingleton<ClientConnection>
 {
     [SerializeField]
     private int m_maxConnections;

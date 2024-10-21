@@ -4,7 +4,6 @@ using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
-using AshGreen.Singleton;
 using AshGreen.Character;
 
 /*
@@ -40,15 +39,15 @@ public struct CharacterContainer
     public GameObject borderClient;                 // Client border of the character container
     public Image playerIcon;                        // The background icon of the player (p1, p2)
     public GameObject waitingText;                  // The waiting text on the container were no client connected
-    public GameObject backgroundShip;               // The background of the ship when not ready
-    public Image backgroundShipImage;               // The image of the ship when not ready
-    public GameObject backgroundShipReady;          // The background of the ship when ready
-    public Image backgroundShipReadyImage;          // The image of the ship when ready
-    public GameObject backgroundClientShipReady;    // Client background of the ship when ready
-    public Image backgroundClientShipReadyImage;    // Client image of the ship when ready
+    public GameObject backgroundCharacter;               // The background of the Character when not ready
+    public Image backgroundCharacterImage;               // The image of the Character when not ready
+    public GameObject backgroundCharacterReady;          // The background of the Character when ready
+    public Image backgroundCharacterReadyImage;          // The image of the Character when ready
+    public GameObject backgroundClientCharacterReady;    // Client background of the Character when ready
+    public Image backgroundClientCharacterReadyImage;    // Client image of the Character when ready
 }
 
-public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
+public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionManager>
 {
     public CharacterConfig[] charactersData;
 
@@ -188,9 +187,9 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
         m_charactersContainers[playerId].borderReady.SetActive(false);
         m_charactersContainers[playerId].playerIcon.gameObject.SetActive(false);
         m_charactersContainers[playerId].playerIcon.color = m_playerColor;
-        m_charactersContainers[playerId].backgroundShip.SetActive(false);
-        m_charactersContainers[playerId].backgroundShipReady.SetActive(false);
-        m_charactersContainers[playerId].backgroundClientShipReady.SetActive(false);
+        m_charactersContainers[playerId].backgroundCharacter.SetActive(false);
+        m_charactersContainers[playerId].backgroundCharacterReady.SetActive(false);
+        m_charactersContainers[playerId].backgroundClientCharacterReady.SetActive(false);
         m_charactersContainers[playerId].waitingText.SetActive(true);
     }
 
@@ -218,14 +217,14 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
         /*m_charactersContainers[playerId].imageContainer.sprite =
             charactersData[characterSelected].characterSprite;
 
-        m_charactersContainers[playerId].backgroundShipImage.sprite =
-            charactersData[characterSelected].characterShipSprite;
+        m_charactersContainers[playerId].backgroundCharacterImage.sprite =
+            charactersData[characterSelected].characterCharacterSprite;
 
-        m_charactersContainers[playerId].backgroundShipReadyImage.sprite =
-            charactersData[characterSelected].characterShipSprite;
+        m_charactersContainers[playerId].backgroundCharacterReadyImage.sprite =
+            charactersData[characterSelected].characterCharacterSprite;
 
-        m_charactersContainers[playerId].backgroundClientShipReadyImage.sprite =
-            charactersData[characterSelected].characterShipSprite;*/
+        m_charactersContainers[playerId].backgroundClientCharacterReadyImage.sprite =
+            charactersData[characterSelected].characterCharacterSprite;*/
 
         m_charactersContainers[playerId].nameContainer.text =
             charactersData[characterSelected].characterName;
@@ -252,7 +251,7 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
             m_charactersContainers[playerId].playerIcon.color = m_playerColor;
         }
 
-        m_charactersContainers[playerId].backgroundShip.SetActive(true);
+        m_charactersContainers[playerId].backgroundCharacter.SetActive(true);
         m_charactersContainers[playerId].waitingText.SetActive(false);
     }
 
@@ -267,7 +266,7 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
     public void ServerSceneInit(ulong clientId)
     {
         GameObject go =
-            NetworkObjectSpawner.SpawnNewNetworkObjectChangeOwnershipToClient(
+            NetworkObjectSpawner.SpawnNewNetworkObjectChangeOwnerCharacterToClient(
                 m_playerPrefab,
                 transform.position,
                 clientId,
@@ -410,15 +409,15 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
 
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
-            m_charactersContainers[playerId].backgroundClientShipReady.SetActive(true);
-            m_charactersContainers[playerId].backgroundShip.SetActive(false);
+            m_charactersContainers[playerId].backgroundClientCharacterReady.SetActive(true);
+            m_charactersContainers[playerId].backgroundCharacter.SetActive(false);
         }
         else
         {
             m_charactersContainers[playerId].border.SetActive(false);
             m_charactersContainers[playerId].borderReady.SetActive(true);
-            m_charactersContainers[playerId].backgroundShip.SetActive(false);
-            m_charactersContainers[playerId].backgroundShipReady.SetActive(true);
+            m_charactersContainers[playerId].backgroundCharacter.SetActive(false);
+            m_charactersContainers[playerId].backgroundCharacterReady.SetActive(true);
         }
 
         for (int i = 0; i < m_playerStates.Length; i++)
@@ -445,16 +444,16 @@ public class CharacterSelectionManager : Singleton<CharacterSelectionManager>
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
             m_charactersContainers[playerId].borderClient.SetActive(true);
-            m_charactersContainers[playerId].backgroundClientShipReady.SetActive(false);
-            m_charactersContainers[playerId].backgroundShip.SetActive(true);
+            m_charactersContainers[playerId].backgroundClientCharacterReady.SetActive(false);
+            m_charactersContainers[playerId].backgroundCharacter.SetActive(true);
         }
         else
         {
             m_charactersContainers[playerId].border.SetActive(true);
             m_charactersContainers[playerId].borderReady.SetActive(false);
             m_charactersContainers[playerId].borderClient.SetActive(false);
-            m_charactersContainers[playerId].backgroundShip.SetActive(true);
-            m_charactersContainers[playerId].backgroundShipReady.SetActive(false);
+            m_charactersContainers[playerId].backgroundCharacter.SetActive(true);
+            m_charactersContainers[playerId].backgroundCharacterReady.SetActive(false);
         }
 
         AudioManager.Instance.PlaySoundEffect(m_cancelClip);

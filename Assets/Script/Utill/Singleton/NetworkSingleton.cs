@@ -4,7 +4,7 @@ using UnityEngine;
 using Unity.Netcode;
 
 //게임 매니저 구현을 위한 제너릭 클래스 구현
-public class Singleton<T> : MonoBehaviour where T : Component
+public class NetworkSingleton<T> : NetworkBehaviour where T : Component
 {
     private static T _instance;//게임 매니저의 인스턴스
     [SerializeField]
