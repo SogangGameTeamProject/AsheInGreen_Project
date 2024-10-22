@@ -5,6 +5,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 using AshGreen.Character;
+using System.Collections.Generic;
 
 /*
 * Singleton to control the changes on the char sprites and the flow of the scene
@@ -195,12 +196,12 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
 
     public bool IsReady(int playerId)
     {
-        return charactersData[playerId].isSelected;
+        return charactersData[playerId].isSelectedForPlayerId(playerId);
     }
 
     public void SetCharacterColor(int playerId, int characterSelected)
     {
-        if (charactersData[characterSelected].isSelected)
+        if (charactersData[characterSelected].isSelectedForPlayerId(playerId))
         {
             m_charactersContainers[playerId].imageContainer.color = k_selectedColor;
             m_charactersContainers[playerId].nameContainer.color = k_selectedColor;
@@ -371,7 +372,14 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     // Set the player ready if the player is not selected and check if all player are ready to start the countdown
     public void PlayerReady(ulong clientId, int playerId, int characterSelected)
     {
-        if (!charactersData[characterSelected].isSelected)
+        Debug.Log($"준비 여부 체크: {charactersData[characterSelected].isSelectedForClientId(clientId)}");
+
+        foreach (KeyValuePair<ulong, int> kvp in charactersData[characterSelected].selectClientIds)
+        {
+            Debug.Log("Key: " + kvp.Key + ", Value: " + kvp.Value);
+        }
+
+        if (!charactersData[characterSelected].isSelectedForClientId(clientId))
         {
             PlayerReadyClientRpc(clientId, playerId, characterSelected);
 
@@ -382,12 +390,12 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     // Set the players UI button
     public void SetPlayerReadyUIButtons(bool isReady, int characterSelected)
     {
-        if (isReady && !charactersData[characterSelected].isSelected)
+        if (isReady && !charactersData[characterSelected].isSelectedForClientId(NetworkManager.Singleton.LocalClientId))
         {
             m_readyButton.SetActive(false);
             m_cancelButton.SetActive(true);
         }
-        else if (!isReady && charactersData[characterSelected].isSelected)
+        else if (!isReady && charactersData[characterSelected].isSelectedForClientId(NetworkManager.Singleton.LocalClientId))
         {
             m_readyButton.SetActive(true);
             m_cancelButton.SetActive(false);
@@ -397,14 +405,17 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     // Check if the player has selected the character
     public bool IsSelectedByPlayer(int playerId, int characterSelected)
     {
-        return charactersData[characterSelected].playerId == playerId ? true : false;
+        return charactersData[characterSelected].isPlayerId(playerId);
     }
 
     [ClientRpc]
     void PlayerReadyClientRpc(ulong clientId, int playerId, int characterSelected)
     {
-        charactersData[characterSelected].clientId = clientId;
-        charactersData[characterSelected].playerId = playerId;
+        charactersData[characterSelected].SetClientId(clientId);
+        charactersData[characterSelected].SetPlayerId(clientId, playerId);
+        Debug.Log("데이터 확인");
+        Debug.Log(charactersData[characterSelected].GetClientId(clientId));
+        Debug.Log(charactersData[characterSelected].GetPlayerId(clientId));
         m_playerStates[playerId].playerState = ConnectionState.ready;
 
         if (clientId == NetworkManager.Singleton.LocalClientId)
@@ -438,8 +449,11 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     [ClientRpc]
     void PlayerNotReadyClientRpc(ulong clientId, int playerId, int characterSelected)
     {
-        charactersData[characterSelected].clientId = 0UL;
-        charactersData[characterSelected].playerId = -1;
+        charactersData[characterSelected].SetClientId(clientId, true);
+        charactersData[characterSelected].SetPlayerId(clientId, -1);
+        Debug.Log("데이터 확인");
+        Debug.Log(charactersData[characterSelected].GetClientId(clientId));
+        Debug.Log(charactersData[characterSelected].GetPlayerId(clientId));
 
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {

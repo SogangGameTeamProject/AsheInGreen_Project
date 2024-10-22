@@ -74,7 +74,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         {
             if (player != null)
             {
-                if (player.characterConfig.clientId == clientId)
+                if (player.characterConfig.GetClientId(clientId) == clientId)
                 {
                     player._damageReceiver.TakeDamage(999); // Do critical damage
                 }
@@ -188,7 +188,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
             foreach (CharacterConfig data in m_charactersData)
             {
-                if (data.clientId == clientId)
+                if (data.GetClientId(clientId) == clientId)
                 {
                     GameObject playerSpaceship =
                         NetworkObjectSpawner.SpawnNewNetworkObjectAsPlayerObject(

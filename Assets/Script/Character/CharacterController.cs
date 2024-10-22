@@ -371,7 +371,8 @@ namespace AshGreen.Character
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
-
+            Debug.Log(_characterProjectileFactory);
+            Debug.Log(characterConfig);
             _characterProjectileFactory.projectileObjts = characterConfig.projectileObjects;//투사체 설정
 
             rBody = GetComponent<Rigidbody2D>();

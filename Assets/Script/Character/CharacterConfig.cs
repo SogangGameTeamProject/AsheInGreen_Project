@@ -5,6 +5,8 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Collections;
 using Unity.Netcode;
+using static UnityEngine.Rendering.DebugUI;
+using Newtonsoft.Json.Linq;
 namespace AshGreen.Character
 {
     [CreateAssetMenu(fileName = "CharacterConfig", menuName = "Scriptable Objects/Character/CharacterConfig")]
@@ -54,47 +56,48 @@ namespace AshGreen.Character
             selectClientIds.Clear();
         }
 
-        public ulong clientId
+        public ulong GetClientId(ulong clientId)
         {
-            get
-            {
-                ulong id = 0;
+            ulong id = 0;
 
-                ulong localId = NetworkManager.Singleton.LocalClientId;
-                if (selectClientIds.ContainsKey(localId))
-                    id = localId;
+            ulong localId = clientId;
+            if (selectClientIds.ContainsKey(localId))
+                id = localId;
 
-                return id;
-            }
-            set
-            {
-                if (value == 0UL)
-                    selectClientIds.Remove(NetworkManager.Singleton.LocalClientId);
-                else
-                    selectClientIds.Add(NetworkManager.Singleton.LocalClientId, -1);
-
-            }
+            return id;
         }
 
-        public int playerId
+        public void SetClientId(ulong clientId, bool OUL = false)
         {
-            get
-            {
-                int id = -1;
-                selectClientIds.TryGetValue(NetworkManager.Singleton.LocalClientId, out id);
-                return id;
-            }
-            set
-            {
-                selectClientIds[NetworkManager.Singleton.LocalClientId] = value;
-            }
+            if (OUL)
+                selectClientIds.Remove(clientId);
+            else
+                selectClientIds.Add(clientId, -1);
         }
-        public bool isSelected
+
+        public int GetPlayerId(ulong clientId)
         {
-            get
-            {
-                return selectClientIds.ContainsKey(NetworkManager.Singleton.LocalClientId);
-            }
+            int id = -1;
+            selectClientIds.TryGetValue(clientId, out id);
+            return id;
+        }
+        public bool isPlayerId(int playerId)
+        {
+            bool value = false;
+            value = selectClientIds.ContainsValue(playerId);
+            return value;
+        }
+        public void SetPlayerId(ulong clientId, int playerId)
+        {
+            selectClientIds[clientId] = playerId;
+        }
+        public bool isSelectedForClientId(ulong clientId)
+        {
+            return selectClientIds.ContainsKey(clientId);
+        }
+        public bool isSelectedForPlayerId(int playerId)
+        {
+            return selectClientIds.ContainsValue(playerId);
         }
     }
 }

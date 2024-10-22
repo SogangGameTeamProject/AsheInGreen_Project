@@ -89,7 +89,7 @@ public class ClientConnection : NetworkSingleton<ClientConnection>
     {
         foreach (var data in m_characterDatas)
         {
-            if (data.clientId == clientId)
+            if (data.GetClientId(clientId) == clientId)
             {
                 return true;
             }
@@ -106,6 +106,7 @@ public class ClientConnection : NetworkSingleton<ClientConnection>
 
     private void Shutdown()
     {
+        Debug.Log("Shutdown");
         NetworkManager.Singleton.Shutdown();
         LoadingSceneManager.Instance.LoadScene(SceneName.Menu, false);
     }
