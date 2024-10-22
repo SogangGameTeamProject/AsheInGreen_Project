@@ -62,6 +62,9 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     GameObject m_cancelButton;
 
     [SerializeField]
+    TextMeshProUGUI sessionCode;
+
+    [SerializeField]
     float m_timeToStartGame;
 
     [SerializeField]
@@ -94,6 +97,7 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     void Start()
     {
         m_timer = m_timeToStartGame;
+        sessionCode.text = PlayerPrefs.GetString("SessionCode");
     }
 
     void Update()
@@ -339,6 +343,7 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
 
     public void PlayerNotReady(ulong clientId, int characterSelected = 0, bool isDisconected = false)
     {
+
         int playerId = GetPlayerId(clientId);
         m_isTimerOn = false;
         m_timer = m_timeToStartGame;
@@ -372,12 +377,6 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     // Set the player ready if the player is not selected and check if all player are ready to start the countdown
     public void PlayerReady(ulong clientId, int playerId, int characterSelected)
     {
-        Debug.Log($"준비 여부 체크: {charactersData[characterSelected].isSelectedForClientId(clientId)}");
-
-        foreach (KeyValuePair<ulong, int> kvp in charactersData[characterSelected].selectClientIds)
-        {
-            Debug.Log("Key: " + kvp.Key + ", Value: " + kvp.Value);
-        }
 
         if (!charactersData[characterSelected].isSelectedForClientId(clientId))
         {
@@ -413,9 +412,6 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     {
         charactersData[characterSelected].SetClientId(clientId);
         charactersData[characterSelected].SetPlayerId(clientId, playerId);
-        Debug.Log("데이터 확인");
-        Debug.Log(charactersData[characterSelected].GetClientId(clientId));
-        Debug.Log(charactersData[characterSelected].GetPlayerId(clientId));
         m_playerStates[playerId].playerState = ConnectionState.ready;
 
         if (clientId == NetworkManager.Singleton.LocalClientId)
@@ -450,10 +446,6 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     void PlayerNotReadyClientRpc(ulong clientId, int playerId, int characterSelected)
     {
         charactersData[characterSelected].SetClientId(clientId, true);
-        charactersData[characterSelected].SetPlayerId(clientId, -1);
-        Debug.Log("데이터 확인");
-        Debug.Log(charactersData[characterSelected].GetClientId(clientId));
-        Debug.Log(charactersData[characterSelected].GetPlayerId(clientId));
 
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {

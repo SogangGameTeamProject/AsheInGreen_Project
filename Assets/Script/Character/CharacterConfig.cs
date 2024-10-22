@@ -70,9 +70,21 @@ namespace AshGreen.Character
         public void SetClientId(ulong clientId, bool OUL = false)
         {
             if (OUL)
+            {
                 selectClientIds.Remove(clientId);
+                foreach (KeyValuePair<ulong, int> kvp in selectClientIds)
+                {
+                    Debug.Log("Key: " + kvp.Key + ", Value: " + kvp.Value);
+                }
+            }
             else
+            {
+                foreach (KeyValuePair<ulong, int> kvp in selectClientIds)
+                {
+                    Debug.Log("Key: " + kvp.Key + ", Value: " + kvp.Value);
+                }
                 selectClientIds.Add(clientId, -1);
+            }
         }
 
         public int GetPlayerId(ulong clientId)

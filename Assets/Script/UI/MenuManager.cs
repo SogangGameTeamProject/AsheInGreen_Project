@@ -1,6 +1,7 @@
 using AshGreen.Character;
 using System.Collections;
 using Unity.Netcode;
+using Unity.Services.Multiplayer;
 using UnityEditor.U2D.Animation;
 using UnityEngine;
 
@@ -30,14 +31,17 @@ public class MenuManager : MonoBehaviour
         LoadingSceneManager.Instance.Init();
     }
 
-    public void OnClickHost()
+    public void OnClickHost(ISession session)
     {
         //AudioManager.Instance.PlaySoundEffect(m_confirmClip);
+        Debug.Log(session.Code);
+        PlayerPrefs.SetString("SessionCode", session.Code);
         LoadingSceneManager.Instance.LoadScene(nextScene);
     }
 
-    public void OnClickJoin()
+    public void OnClickJoin(ISession session)
     {
+        PlayerPrefs.SetString("SessionCode", session.Code);
         AudioManager.Instance.PlaySoundEffect(m_confirmClip);
         StartCoroutine(Join());
     }
