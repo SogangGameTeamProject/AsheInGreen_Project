@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2590602982
+  GlobalObjectIdHash: 2403542861
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -75,3 +75,4 @@ MonoBehaviour:
   m_maxConnections: 2
   m_characterDatas:
   - {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
+  - {fileID: 11400000, guid: ba449e0da3f9d564eabec2970e5912ed, type: 2}

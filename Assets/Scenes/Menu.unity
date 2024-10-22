@@ -448,6 +448,7 @@ MonoBehaviour:
   m_menuAnimator: {fileID: 0}
   m_characterDatas:
   - {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
+  - {fileID: 11400000, guid: ba449e0da3f9d564eabec2970e5912ed, type: 2}
   m_confirmClip: {fileID: 0}
   nextScene: 2
 --- !u!4 &1660715610

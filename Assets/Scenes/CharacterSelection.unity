@@ -748,62 +748,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 88382438}
     - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_playerPrefab
-      value: 
-      objectReference: {fileID: 6173499564743004011, guid: baa5072b3a4c9234580ee4452bc1a79b, type: 3}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_clientColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_clientColor.g
-      value: 0.8720887
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_clientColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_playerColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_playerColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_playerColor.r
-      value: 0.14651251
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_timeToStartGame
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: charactersData.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_playerStates.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: 'charactersData.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_charactersContainers.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_playerStates.Array.data[0].playerState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: m_playerStates.Array.data[1].playerState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822599479169932402, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
       propertyPath: m_charactersContainers.Array.data[0].border
       value: 
       objectReference: {fileID: 306557948}
@@ -950,10 +894,6 @@ PrefabInstance:
     - target: {fileID: 6747574573229247842, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 792534716
-      objectReference: {fileID: 0}
-    - target: {fileID: 6747574573229247842, guid: 00e3eac2f0049294b95d18635e0a70e9, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 4188246512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
