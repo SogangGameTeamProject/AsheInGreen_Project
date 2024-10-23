@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.WSA;
 
 namespace AshGreen.Character{
-    public class CharacterProjectileFactory : NetworkBehaviour
+    public class ProjectileFactory : NetworkSingleton<ProjectileFactory>
     {
         public List<GameObject> projectileObjts = new List<GameObject>();//사용할 투사체 프리펩 리스트
 
@@ -21,13 +21,15 @@ namespace AshGreen.Character{
         /// <param name="firePos"></param>
         /// <param name="fireRotation"></param>
         /// <param name="destroyTime"></param>
-        [ServerRpc]
-        public void RequestProjectileFireServerRpc
-            (NetworkObjectReference owner, int index, AttackType attackType, float damage, Vector2 fireDir,
+        public void RequestProjectileFire
+            (CharacterController owner, GameObject pre, AttackType attackType, float damage, Vector2 fireDir,
             Vector3 firePos, Quaternion fireRotation, float destroyTime = 0)
         {
+            int index = projectileObjts.IndexOf(pre);
+            Debug.Log("index: " + index);
+            NetworkObject networkOwer = owner.GetComponent<NetworkObject>();
             if (projectileObjts != null)
-                ProjectileFire(owner, index, attackType, damage, fireDir, firePos, fireRotation, destroyTime);
+                ProjectileFireRpc(networkOwer, index, attackType, damage, fireDir, firePos, fireRotation, destroyTime);
         }
 
         /// <summary>
@@ -40,10 +42,12 @@ namespace AshGreen.Character{
         /// <param name="firePos"></param>
         /// <param name="fireRotation"></param>
         /// <param name="destroyTime"></param>
-        private void ProjectileFire
+        [Rpc(SendTo.Server)]
+        private void ProjectileFireRpc
             (NetworkObjectReference owner, int index, AttackType attackType, float damage, Vector2 fireDir,
             Vector3 firePos, Quaternion fireRotation, float destroyTime = 0)
         {
+            Debug.Log("IsServer: "+IsServer);
             GameObject bullet = Instantiate(projectileObjts[index], firePos, fireRotation);
 
             bullet.GetComponent<NetworkObject>().Spawn();

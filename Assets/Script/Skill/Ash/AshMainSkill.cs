@@ -49,8 +49,8 @@ namespace AshGreen.Character.Skill
             //총알 발사
             float damage = damageCoefficient + (ChargingDamageCoefficient * chargeCnt);//데미지 설정
             Vector2 fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;//발사 방향 조정
-            Fire(holder._caster, bulletPrefab, AttackType.MainSkill, damage, fireDir,
-                holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
+            ProjectileFactory.Instance.RequestProjectileFire(holder._caster, bulletPrefab, AttackType.MainSkill, damage,
+                fireDir, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
 
 
             //시간 경과
