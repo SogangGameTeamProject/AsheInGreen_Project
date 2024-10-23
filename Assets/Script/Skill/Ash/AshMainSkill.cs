@@ -11,7 +11,6 @@ namespace AshGreen.Character.Skill
     {
         [Header("메인스킬 옵션")]
         public GameObject bulletPrefab;//투사체 프리펩
-        public int bulletPreIndex = 0;
         public float bulletSpeed = 200f;
         public float bulletDestroyTime = 2;
         public float chargingTime = 0.3f;//차징 단계별 시간
@@ -47,18 +46,11 @@ namespace AshGreen.Character.Skill
             // 차징 정도에 따른 에너지 충전
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease * chargeCnt; // 특수스킬 에너지 충전
 
-
-            // 서버에 총알 생성을 요청하는 RPC 호출
-            Vector3 firePointPosition = holder._caster.firePoint.position;//투사체 발사 위치 조정
-            Quaternion firePointRotation = holder._caster.firePoint.rotation;//투사체 회전 조정
-            NetworkObject owner = holder._caster.GetComponent<NetworkObject>();//공격자 설정
+            //총알 발사
             float damage = damageCoefficient + (ChargingDamageCoefficient * chargeCnt);//데미지 설정
             Vector2 fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;//발사 방향 조정
-
-            holder._caster._characterProjectileFactory.RequestProjectileFireServerRpc(
-               owner, bulletPreIndex, AttackType.MainSkill, damage, fireDir, 
-               firePointPosition, firePointRotation, bulletDestroyTime
-               );
+            Fire(holder._caster, bulletPrefab, AttackType.MainSkill, damage, fireDir,
+                holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
 
 
             //시간 경과

@@ -11,7 +11,6 @@ namespace AshGreen.Character.Skill
     {
         [Header("특수스킬 옵션")]
         public GameObject bulletPrefab;//투사체 프리펩
-        public int bulletPreIndex = 0;
         public float bulletSpeed = 200f;
         public float bulletDestroyTime = 2;
         public float fireDelay = 0.05f;
@@ -33,17 +32,10 @@ namespace AshGreen.Character.Skill
             //에너지 수치 만큼 총알 발싸
             for (int i = 0; i < nowEnergy; i++)
             {
-                // 서버에 총알 생성을 요청하는 RPC 호출
-                Vector3 firePointPosition = holder._caster.firePoint.position;//투사체 발사 위치 조정
-                Quaternion firePointRotation = holder._caster.firePoint.rotation;//투사체 회전 조정
-                NetworkObject owner = holder._caster.GetComponent<NetworkObject>();//공격자 설정
                 float damage = damageCoefficient;//데미지 설정
                 Vector2 fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;//발사 방향 조정
-
-                holder._caster._characterProjectileFactory.RequestProjectileFireServerRpc(
-                   owner, bulletPreIndex, AttackType.MainSkill, damage, fireDir,
-                   firePointPosition, firePointRotation, bulletDestroyTime
-                   );
+                Fire(holder._caster, bulletPrefab, AttackType.MainSkill, damage, fireDir,
+                    holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
 
                 yield return new WaitForSeconds(fireDelay);
             }

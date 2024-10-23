@@ -138,7 +138,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &605933011962898897
 MonoBehaviour:
@@ -231,7 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb6be638a9a4948408aba6e6b10e69ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   _isDontDestroy: 1
   m_loadingBackground: {fileID: 3418296095990228692}
   m_loadingStepTime: 0.01

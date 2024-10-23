@@ -21,11 +21,11 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     private GameObject m_deathUI;
 
     [SerializeField]
-    private Transform[] m_shipStartingPositions;
+    private Transform[] m_StartingPositions;
 
     private int m_numberOfPlayerConnected;
     private List<ulong> m_connectedClients = new List<ulong>();
-    private List<PlayerController> m_playerShips = new List<PlayerController>();
+    private List<PlayerController> m_player = new List<PlayerController>();
 
     private void OnEnable()
     {
@@ -70,7 +70,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     // Event to check when a player disconnects
     private void OnClientDisconnect(ulong clientId)
     {
-        foreach (var player in m_playerShips)
+        foreach (var player in m_player)
         {
             if (player != null)
             {
@@ -190,22 +190,23 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             {
                 if (data.GetClientId(clientId) == clientId)
                 {
-                    GameObject playerSpaceship =
+                    GameObject player =
                         NetworkObjectSpawner.SpawnNewNetworkObjectAsPlayerObject(
                             data.playerPre,
-                            m_shipStartingPositions[m_numberOfPlayerConnected].position,
+                            m_StartingPositions[m_numberOfPlayerConnected].position,
                             client,
                             true);
 
                     PlayerController playerController =
-                        playerSpaceship.GetComponent<PlayerController>();
+                        player.GetComponent<PlayerController>();
                     playerController.characterConfig = data;
                     playerController.gameplayManager = this;
 
-                    m_playerShips.Add(playerController);
-                    SetPlayerUIClientRpc(index, playerSpaceship.name);
+                    m_player.Add(playerController);
+                    //SetPlayerUIClientRpc(index, playerSpaceship.name);
 
                     m_numberOfPlayerConnected++;
+                    break;
                 }
 
                 index++;

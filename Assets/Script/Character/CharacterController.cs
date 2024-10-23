@@ -28,7 +28,6 @@ namespace AshGreen.Character
         public DamageReceiver _damageReceiver = null;
         public StatusEffectManager _statusEffectManager = null;
         public Animator _animator = null;
-        public CharacterProjectileFactory _characterProjectileFactory = null;
 
         private Rigidbody2D rBody = null;
 
@@ -371,9 +370,6 @@ namespace AshGreen.Character
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
-            Debug.Log(_characterProjectileFactory);
-            Debug.Log(characterConfig);
-            _characterProjectileFactory.projectileObjts = characterConfig.projectileObjects;//투사체 설정
 
             rBody = GetComponent<Rigidbody2D>();
 

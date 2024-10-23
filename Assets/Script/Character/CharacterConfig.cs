@@ -44,8 +44,6 @@ namespace AshGreen.Character
 
         [Header("스킬 설정")]
         public List<CharacterSkill> skills;
-        [Header("투사체 설정")]
-        public List<GameObject> projectileObjects = new List<GameObject>();
 
         [Header("아디")]
         //클라이언트 아이디

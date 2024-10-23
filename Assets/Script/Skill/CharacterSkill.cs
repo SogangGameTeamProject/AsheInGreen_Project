@@ -1,4 +1,8 @@
+using AshGreen.DamageObj;
+using System;
 using System.Collections;
+using Unity.Netcode;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 namespace AshGreen.Character.Skill
@@ -74,6 +78,32 @@ namespace AshGreen.Character.Skill
             yield return null;
         }
 
+
+        public void Fire(CharacterController caster, GameObject bulletPre, AttackType attackType, float damage, Vector2 fireDir,
+            Vector3 firePos, Quaternion fireRotation, float destroyTime = 0)
+        {
+            GameObject bullet = 
+                        NetworkObjectSpawner.SpawnNewNetworkObjectAsPlayerObject(
+                            bulletPre,
+                            firePos,
+                            NetworkManager.Singleton.LocalClientId,
+                            true);
+
+            // 시간 경과 후 총알 파괴
+            if (destroyTime > 0)
+                Destroy(bullet, destroyTime);
+
+            //투사체 설정
+            DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();
+
+            damageObj.caster = caster;
+            damageObj.dealType = attackType;
+            damageObj.damage = damage;
+
+            // 총알의 물리적 움직임 처리
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = fireDir; // 발사 방향 설정
+        }
     }
 }
 
