@@ -54,7 +54,7 @@ namespace AshGreen.Character{
 
             // 시간 경과 후 총알 파괴
             if (destroyTime > 0)
-                Destroy(bullet, destroyTime);
+                NetworkObject.Destroy(bullet, destroyTime);
 
             //투사체 설정
             DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();

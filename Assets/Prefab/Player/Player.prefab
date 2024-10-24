@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  _isDontDestroy: 0
   projectileObjts: []
 --- !u!1 &948538812523840910
 GameObject:

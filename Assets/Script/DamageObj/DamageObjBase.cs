@@ -20,14 +20,14 @@ namespace AshGreen.DamageObj
         {
             if (!NetworkObject.IsSpawned)
                 return;
-
-            NetworkObject.Despawn();
+            Debug.Log("IsOwner: "+IsOwner);
+            NetworkObject.Destroy(this.gameObject);
         }
 
         protected void OnTriggerEnter2D(Collider2D collision)
         {
             Debug.Log("충돌1");
-            if (!IsClient)
+            if (!IsOwner)
                 return;
             Debug.Log("충돌2");
             IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();

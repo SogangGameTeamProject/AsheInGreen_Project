@@ -21,21 +21,24 @@ namespace AshGreen.Character
         public void TakeDamage(float damage)
         {
             Debug.Log("피격: "+IsOwner);
-            if (!IsOwner) return;
 
             if(_character.runningCombatStateType != CombatStateType.Death)
             {
-                Debug.Log("피격: " + this.gameObject.name);
-                damage *= _character.TakenDamageCoefficient;
-                TakeDamageAction?.Invoke(damage);
+                TakeDamageRpc(damage);
             }
+        }
+
+        [Rpc(SendTo.Owner)]
+        public void TakeDamageRpc(float damage)
+        {
+            Debug.Log("피격: " + this.gameObject.name);
+            damage *= _character.TakenDamageCoefficient;
+            TakeDamageAction?.Invoke(damage);
         }
 
         //타격 처리 메서드
         public void DealDamage(CharacterController target, float damageCoefficient, AttackType attackType)
         {
-            if (!IsOwner) return;
-
             Debug.Log("타격: " + this.gameObject.name);
 
             //데미지 계산
