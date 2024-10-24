@@ -34,7 +34,8 @@ public class AudioManager : Singleton<AudioManager>
 
     public void PlaySoundEffect(AudioClip clip, float volume = 1f)
     {
-        m_sfxSource.PlayOneShot(clip, volume);
+        if(clip != null)
+            m_sfxSource.PlayOneShot(clip, volume);
     }
 
     // Play the music of the game without any effect
