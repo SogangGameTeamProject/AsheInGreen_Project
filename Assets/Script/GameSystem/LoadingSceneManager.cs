@@ -19,7 +19,7 @@ public enum SceneName : byte
     // Add more scenes states if needed
 };
 
-public class LoadingSceneManager : NetworkSingleton<LoadingSceneManager>
+public class LoadingSceneManager : Singleton<LoadingSceneManager>
 {
     public SceneName SceneActive => m_sceneActive;
 

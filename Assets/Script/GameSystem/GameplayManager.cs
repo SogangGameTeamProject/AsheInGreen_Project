@@ -21,27 +21,40 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     private GameObject m_deathUI;
 
     [SerializeField]
+    private GameObject m_clearUI;
+
+    [SerializeField]
     private Transform[] m_StartingPositions;
 
     private int m_numberOfPlayerConnected;
     private List<ulong> m_connectedClients = new List<ulong>();
     private List<PlayerController> m_player = new List<PlayerController>();
 
+
+    //승리 패배 관련 전역 변수
+    private int playerDefeatCnt = 0;
+    [SerializeField]
+    private GameObject playerDefeatPopup;
+    private int bossDefeatCnt = 0;
+    [SerializeField]
+    private GameObject bossDefeatPopup;
+
     private void OnEnable()
     {
+        OnPlayerDefeated += PlayerDeath;
+
         if (!IsServer)
             return;
 
-        OnPlayerDefeated += PlayerDeath;
         NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnect;
     }
 
     private void OnDisable()
     {
+        OnPlayerDefeated -= PlayerDeath;
+
         if (!IsServer)
             return;
-
-        OnPlayerDefeated -= PlayerDeath;
 
         // Since the NetworkManager could potentially be destroyed before this component, only
         // remove the subscriptions if that singleton still exists.
@@ -53,17 +66,12 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
     public void PlayerDeath(ulong clientId)
     {
+        Debug.Log("PlayerDeath");
         m_numberOfPlayerConnected--;
 
         if (m_numberOfPlayerConnected <= 0)
         {
-            LoadClientRpc();
-            LoadingSceneManager.Instance.LoadScene(SceneName.Defeat);
-        }
-        else
-        {
-            // Send a client rpc to check which client was defeated, and activate their death UI
-            ActivateDeathUIClientRpc(clientId);
+            ActivateDeathUIClientRpc();
         }
     }
 
@@ -83,12 +91,16 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     }
 
     [ClientRpc]
-    private void ActivateDeathUIClientRpc(ulong clientId)
+    private void ActivateDeathUIClientRpc()
     {
-        if (clientId == NetworkManager.Singleton.LocalClientId)
-        {
-            m_deathUI.SetActive(true);
-        }
+        Debug.Log("사망 팝업");
+        m_deathUI.SetActive(true);
+    }
+
+    [ClientRpc]
+    private void ActivateClearUIClientRpc()
+    {
+        m_clearUI.SetActive(true);
     }
 
     [ClientRpc]
@@ -150,8 +162,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
     public void BossDefeat()
     {
-        LoadClientRpc();
-        LoadingSceneManager.Instance.LoadScene(SceneName.Victory);
+        ActivateClearUIClientRpc();
     }
 
     public void ExitToMenu()

@@ -69,7 +69,7 @@ public class ClientConnection : NetworkSingleton<ClientConnection>
     }
 
     // In case the client is not allowed to enter, remove the client for the session
-    private void RemoveClient(ulong clientId)
+    public void RemoveClient(ulong clientId)
     {
         // Client should shutdown
         ClientRpcParams clientRpcParams = new ClientRpcParams

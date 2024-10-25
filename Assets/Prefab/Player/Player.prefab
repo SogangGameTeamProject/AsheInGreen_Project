@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8910177443412362998}
-  - component: {fileID: 4808559951109672692}
+  - component: {fileID: 5325209982190128559}
   m_Layer: 3
   m_Name: Death
   m_TagString: Untagged
@@ -126,7 +126,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1733162331067627674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4808559951109672692
+--- !u!114 &5325209982190128559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 948538812523840910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fea1a9097b4f264f9945ca815334c1b, type: 3}
+  m_Script: {fileID: 11500000, guid: 09229604af8eb9f4193ed7b36ff86f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   - type: 1
     state: {fileID: 1170719951875528351}
   - type: 2
-    state: {fileID: 4808559951109672692}
+    state: {fileID: 5325209982190128559}
   characterConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
   nowHp:
     m_InternalValue: 0

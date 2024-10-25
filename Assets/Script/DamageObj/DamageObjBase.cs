@@ -26,9 +26,6 @@ namespace AshGreen.DamageObj
 
         protected void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("충돌1");
-            
-            Debug.Log("충돌2");
             IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
 
             // 만약 인터페이스가 존재하면 실행
@@ -61,7 +58,6 @@ namespace AshGreen.DamageObj
                 if (isDestroy)
                     DestoryObj();
             }
-
         }
     }
 

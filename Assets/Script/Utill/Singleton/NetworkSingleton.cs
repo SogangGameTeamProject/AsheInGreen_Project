@@ -30,13 +30,12 @@ public class NetworkSingleton<T> : NetworkBehaviour where T : Component
         }
     }
 
-    public virtual void Awake()
+    public override void OnNetworkSpawn()
     {
-        //기존의 인스턴스가 없으면 인스턴스값 초기화
         if (_instance == null)
         {
             _instance = this as T;
-            if(_isDontDestroy)
+            if (_isDontDestroy)
                 DontDestroyOnLoad(gameObject);
         }
         else
@@ -44,4 +43,5 @@ public class NetworkSingleton<T> : NetworkBehaviour where T : Component
             Destroy(gameObject);
         }
     }
+
 }

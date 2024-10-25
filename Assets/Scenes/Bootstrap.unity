@@ -443,6 +443,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 336781374415063970, guid: 4b259888f3a13114890fe983e990511d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3545027487265963964, guid: 4b259888f3a13114890fe983e990511d, type: 3}
       propertyPath: m_Name
       value: LoadingManager
