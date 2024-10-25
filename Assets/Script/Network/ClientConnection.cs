@@ -2,6 +2,10 @@ using AshGreen.Obsever;
 using Unity.Netcode;
 using UnityEngine;
 using AshGreen.Character;
+using Unity.Services.Multiplayer;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
+
 
 public class ClientConnection : NetworkSingleton<ClientConnection>
 {
@@ -106,7 +110,6 @@ public class ClientConnection : NetworkSingleton<ClientConnection>
 
     private void Shutdown()
     {
-        Debug.Log("Shutdown");
         NetworkManager.Singleton.Shutdown();
         LoadingSceneManager.Instance.LoadScene(SceneName.Menu, false);
     }
