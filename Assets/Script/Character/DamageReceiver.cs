@@ -39,6 +39,7 @@ namespace AshGreen.Character
         //타격 처리 메서드
         public void DealDamage(CharacterController target, float damageCoefficient, AttackType attackType)
         {
+
             Debug.Log("타격: " + this.gameObject.name);
 
             //데미지 계산

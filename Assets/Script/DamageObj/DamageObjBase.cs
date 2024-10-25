@@ -27,14 +27,16 @@ namespace AshGreen.DamageObj
         protected void OnTriggerEnter2D(Collider2D collision)
         {
             Debug.Log("충돌1");
-            if (!IsOwner)
-                return;
+            
             Debug.Log("충돌2");
             IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
 
             // 만약 인터페이스가 존재하면 실행
             if (damageable != null)
             {
+                if (!collision.GetComponent<NetworkObject>().IsOwner)
+                    return;
+
                 Debug.Log("데미지 오브젝트 데미지 부여");
                 //넉백 여부에 따른 넉백
                 if (isNockback)
