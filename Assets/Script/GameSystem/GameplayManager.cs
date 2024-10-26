@@ -32,16 +32,15 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
     private int m_numberOfPlayerConnected;
     private List<ulong> m_connectedClients = new List<ulong>();
-    private List<PlayerController> m_player = new List<PlayerController>();
+    public List<PlayerController> m_player = new List<PlayerController>();
 
 
     //승리 패배 관련 전역 변수
-    private int playerDefeatCnt = 0;
     [SerializeField]
     private GameObject playerDefeatPopup;
-    private int bossDefeatCnt = 0;
     [SerializeField]
     private GameObject bossDefeatPopup;
+
 
     private void OnEnable()
     {
@@ -117,10 +116,12 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     }
 
     [ClientRpc]
-    private void SetPlayerUIClientRpc(int charIndex)
+    private void SetPlayerUIClientRpc(NetworkObjectReference playerObj)
     {
         //플레이어 UI 설정
-        PlayerController playerController = m_player[charIndex];
+        NetworkObject playerNetworkObj = null;
+        playerObj.TryGet(out playerNetworkObj);
+        PlayerController playerController = playerNetworkObj.GetComponent<PlayerController>();
         GameObject playerUI = Instantiate(playerUIPre, playerHUDPanel.transform);
         playerController.playerUI = playerUI.GetComponent<PlayerUI>();
         PlayerUI hud = playerController.playerUI;
@@ -130,10 +131,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         hud.playerHud.mainSkillIcon.sprite = config.skills[0].skillIcon;
         hud.playerHud.secondarySkillIcon.sprite = config.skills[1].skillIcon;
         hud.playerHud.specialSkillIcon.sprite = config.skills[2].skillIcon;
-
-
     }
-
     private IEnumerator HostShutdown()
     {
         // Tell the clients to shutdown
@@ -213,9 +211,8 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
                         player.GetComponent<PlayerController>();
                     playerController.characterConfig = data;
                     playerController.gameplayManager = this;
-
                     m_player.Add(playerController);
-                    SetPlayerUIClientRpc(index);
+                    SetPlayerUIClientRpc(playerController.GetComponent<NetworkObject>());
 
                     m_numberOfPlayerConnected++;
                     break;
@@ -225,4 +222,5 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             }
         }
     }
+
 }

@@ -44,7 +44,7 @@ namespace AshGreen.DamageObj
                         float nockBackForceX =
                         collision.gameObject.transform.position.x > this.transform.position.x ?
                         1 : -1;
-                        Vector2 nockBackForce = new Vector2(nockBackForceX, 1);
+                        Vector2 nockBackForce = new Vector2(0, 1);
 
                         movementController.ExcutNockBack(nockBackForce, nockbackPower, nockbackTime);
                     }
