@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using AshGreen.Character.Player;
+using Unity.VisualScripting;
 
 public class GameplayManager : NetworkSingleton<GameplayManager>
 {
@@ -15,7 +16,10 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     private CharacterConfig[] m_charactersData;
 
     [SerializeField]
-    private PlayerUI[] m_playersUI;
+    private GameObject playerHUDPanel;
+
+    [SerializeField]
+    private GameObject playerUIPre;
 
     [SerializeField]
     private GameObject m_deathUI;
@@ -113,24 +117,21 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     }
 
     [ClientRpc]
-    private void SetPlayerUIClientRpc(int charIndex, string playerShipName)
+    private void SetPlayerUIClientRpc(int charIndex)
     {
-        // Not optimal, but this is only called one time per ship
-        // We do this because we can not pass a GameObject in an RPC
-        GameObject playerSpaceship = GameObject.Find(playerShipName);
+        //플레이어 UI 설정
+        PlayerController playerController = m_player[charIndex];
+        GameObject playerUI = Instantiate(playerUIPre, playerHUDPanel.transform);
+        playerController.playerUI = playerUI.GetComponent<PlayerUI>();
+        PlayerUI hud = playerController.playerUI;
 
-        PlayerController playerController =
-            playerSpaceship.GetComponent<PlayerController>();
+        //스킬 아이콘 초기화
+        CharacterConfig config = playerController.characterConfig;
+        hud.playerHud.mainSkillIcon.sprite = config.skills[0].skillIcon;
+        hud.playerHud.secondarySkillIcon.sprite = config.skills[1].skillIcon;
+        hud.playerHud.specialSkillIcon.sprite = config.skills[2].skillIcon;
 
-        /*m_playersUI[m_charactersData[charIndex].playerId].SetUI(
-            m_charactersData[charIndex].playerId,
-            m_charactersData[charIndex].iconSprite,
-            m_charactersData[charIndex].iconDeathSprite,
-            playerController.nowHp.Value,
-            m_charactersData[charIndex].darkColor);*/
 
-        // Pass the UI to the player
-        //playerController.playerUI = m_playersUI[m_charactersData[charIndex].playerId];
     }
 
     private IEnumerator HostShutdown()
@@ -214,7 +215,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
                     playerController.gameplayManager = this;
 
                     m_player.Add(playerController);
-                    //SetPlayerUIClientRpc(index, playerSpaceship.name);
+                    SetPlayerUIClientRpc(index);
 
                     m_numberOfPlayerConnected++;
                     break;
