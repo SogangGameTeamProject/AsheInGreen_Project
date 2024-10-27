@@ -88,9 +88,9 @@ namespace AshGreen.Character
         //------스테이터스 관련 전역 변수 선언------
         public CharacterConfig characterConfig = null;//기본능력치가 저장되는 변수
         //레벨 관련
-        private NetworkVariable<int> LevelUpEx = new NetworkVariable<int>(0);
-        private NetworkVariable<int> level = new NetworkVariable<int>(1);
-        private NetworkVariable<int> experience = new NetworkVariable<int>(0);
+        protected NetworkVariable<int> LevelUpEx = new NetworkVariable<int>(0);
+        protected NetworkVariable<int> level = new NetworkVariable<int>(1);
+        protected NetworkVariable<int> experience = new NetworkVariable<int>(0);
 
         public int Experience
         {
@@ -111,10 +111,10 @@ namespace AshGreen.Character
         }
 
         //최대체력 관련 전역변수
-        private NetworkVariable<int> baseMaxHP = new NetworkVariable<int>(0);
-        private NetworkVariable<int> addMaxHp = new NetworkVariable<int>(0);
-        private NetworkVariable<int> GrowthMaxHP = new NetworkVariable<int>(0);
-        private NetworkVariable<float> GrowthPerMaxHP = new NetworkVariable<float>(0);
+        protected NetworkVariable<int> baseMaxHP = new NetworkVariable<int>(0);
+        protected NetworkVariable<int> addMaxHp = new NetworkVariable<int>(0);
+        protected NetworkVariable<int> GrowthMaxHP = new NetworkVariable<int>(0);
+        protected NetworkVariable<float> GrowthPerMaxHP = new NetworkVariable<float>(0);
         public int MaxHP
         {
             get
@@ -153,11 +153,11 @@ namespace AshGreen.Character
         }
 
         //공격력 관련 전역변수
-        private NetworkVariable<int> baseAttackPower = new NetworkVariable<int>(0);
-        private NetworkVariable<int> GrowthAttackPower = new NetworkVariable<int>(0);
-        private NetworkVariable<float> GrowthPerAttackPower = new NetworkVariable<float>(0);
-        private NetworkVariable<int> addAttackPower = new NetworkVariable<int>(0);
-        private NetworkVariable<float> addAttackPerPower = new NetworkVariable<float>(1);
+        protected NetworkVariable<int> baseAttackPower = new NetworkVariable<int>(0);
+        protected NetworkVariable<int> GrowthAttackPower = new NetworkVariable<int>(0);
+        protected NetworkVariable<float> GrowthPerAttackPower = new NetworkVariable<float>(0);
+        protected NetworkVariable<int> addAttackPower = new NetworkVariable<int>(0);
+        protected NetworkVariable<float> addAttackPerPower = new NetworkVariable<float>(1);
 
         public int AttackPower
         {
@@ -190,9 +190,9 @@ namespace AshGreen.Character
         }
 
         //이동속도 관련 변수
-        private NetworkVariable<float> baseMoveSpeed = new NetworkVariable<float>(0);
-        private NetworkVariable<float> addMoveSpeed = new NetworkVariable<float>(0);
-        private NetworkVariable<float> addMovePerSpeed = new NetworkVariable<float>(1);
+        protected NetworkVariable<float> baseMoveSpeed = new NetworkVariable<float>(0);
+        protected NetworkVariable<float> addMoveSpeed = new NetworkVariable<float>(0);
+        protected NetworkVariable<float> addMovePerSpeed = new NetworkVariable<float>(1);
         public float MoveSpeed
         {
             get
@@ -214,8 +214,8 @@ namespace AshGreen.Character
         }
 
         //점프파워 관련 변수
-        private NetworkVariable<float> baseJumpPower = new NetworkVariable<float>(0);
-        private NetworkVariable<float> addJumpPower = new NetworkVariable<float>(0);
+        protected NetworkVariable<float> baseJumpPower = new NetworkVariable<float>(0);
+        protected NetworkVariable<float> addJumpPower = new NetworkVariable<float>(0);
         public float JumpPower
         {
             get { 
@@ -223,8 +223,8 @@ namespace AshGreen.Character
             }
         }
         //점프 횟수 관련 변수
-        private NetworkVariable<int> baseJumMaxNum = new NetworkVariable<int>(0);
-        private NetworkVariable<int> addJumMaxNum =  new NetworkVariable<int>(0);
+        protected NetworkVariable<int> baseJumMaxNum = new NetworkVariable<int>(0);
+        protected NetworkVariable<int> addJumMaxNum =  new NetworkVariable<int>(0);
         public int JumMaxNum
         {
             get
@@ -416,11 +416,11 @@ namespace AshGreen.Character
 
         //캐릭터 스테이터스값 초기 설정
         [Rpc(SendTo.Server)]
-        private void OnSetStatusRpc()
+        protected virtual void OnSetStatusRpc()
         {
             if (characterConfig)
             {
-
+                Debug.Log("데이터 초기화");
                 LevelUpEx.Value = characterConfig.LevelUpEx;
                 baseMaxHP.Value = characterConfig.MaxHP;
                 nowHp.Value = baseMaxHP.Value;

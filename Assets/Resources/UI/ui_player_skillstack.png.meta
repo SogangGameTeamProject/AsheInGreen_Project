@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 9321cb15d52e3e345a7274153ebfff7f
+guid: f0812f22db8798349b5320dc8017e996
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4894362181663131971
-    second: ui_boss_hpbar_636x10_0
-  - first:
-      213: -7297282829879088721
-    second: ui_boss_hpbar_636x10_1
+      213: -7893017585760525588
+    second: ui_player_skillstack_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_boss_hpbar_636x10_0
+      name: ui_player_skillstack_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 10
-        width: 636
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 349032809744ce340800000000000000
-      internalID: 4894362181663131971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui_boss_hpbar_636x10_1
-      rect:
-        serializedVersion: 2
-        x: 2
         y: 0
-        width: 632
-        height: 10
+        width: 30
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa9ef7bcde7daba90800000000000000
-      internalID: -7297282829879088721
+      spriteID: ce225d2235e567290800000000000000
+      internalID: -7893017585760525588
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a466d7c0b41781a4295ed6a1920d0d72
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_boss_hpbar_636x10_0: 4894362181663131971
-      ui_boss_hpbar_636x10_1: -7297282829879088721
+      ui_player_skillstack_0: -7893017585760525588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

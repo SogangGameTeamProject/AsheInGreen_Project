@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 9321cb15d52e3e345a7274153ebfff7f
+guid: 70a819a03f4419046872e84667381149
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4894362181663131971
-    second: ui_boss_hpbar_636x10_0
+      213: -8316484224566059559
+    second: ui_player_controlnumber_16x12_0
   - first:
-      213: -7297282829879088721
-    second: ui_boss_hpbar_636x10_1
+      213: -5673671804420623978
+    second: ui_player_controlnumber_16x12_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_boss_hpbar_636x10_0
+      name: ui_player_controlnumber_16x12_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 10
-        width: 636
-        height: 10
+        y: 0
+        width: 15
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 349032809744ce340800000000000000
-      internalID: 4894362181663131971
+      spriteID: 9dd999e09a9e59c80800000000000000
+      internalID: -8316484224566059559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui_boss_hpbar_636x10_1
+      name: ui_player_controlnumber_16x12_1
       rect:
         serializedVersion: 2
-        x: 2
+        x: 15
         y: 0
-        width: 632
-        height: 10
+        width: 17
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa9ef7bcde7daba90800000000000000
-      internalID: -7297282829879088721
+      spriteID: 691fb55ed811341b0800000000000000
+      internalID: -5673671804420623978
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a466d7c0b41781a4295ed6a1920d0d72
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_boss_hpbar_636x10_0: 4894362181663131971
-      ui_boss_hpbar_636x10_1: -7297282829879088721
+      ui_player_controlnumber_16x12_0: -8316484224566059559
+      ui_player_controlnumber_16x12_1: -5673671804420623978
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

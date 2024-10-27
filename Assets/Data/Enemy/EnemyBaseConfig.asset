@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfc33b82498a37409503bd8a970b394, type: 3}
   m_Name: EnemyBaseConfig
   m_EditorClassIdentifier: 
-  animator: {fileID: 22100000, guid: 19058269b13cf744cabb1cf2f70e880f, type: 2}
+  characterName: BattleshipLobster
+  profileImg: {fileID: 0}
+  ingameImg: {fileID: 0}
+  iconSprite: {fileID: 0}
+  playerPre: {fileID: 0}
+  animator: {fileID: 9100000, guid: a744e170d51d42047bbdf1c171548603, type: 2}
   LevelUpEx: 0
   MaxHP: 1000
   GrowthMaxHP: 0
@@ -24,4 +29,3 @@ MonoBehaviour:
   JumpPower: 0
   JumMaxNum: 0
   skills: []
-  projectileObjects: []

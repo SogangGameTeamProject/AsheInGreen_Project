@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AshSpecialSkill
   m_EditorClassIdentifier: 
   skillName: "\uC5F4\uAE30 \uBC29\uCD9C"
+  skillType: 2
   activeTime: 0
   cooldownTime: 0
   maxChageCnt: 1
@@ -23,7 +24,6 @@ MonoBehaviour:
   isNotCancellation: 1
   skillCancel: 1
   multipleUse: 0
-  skillType: 0
   damageCoefficient: 1
   utillValue: 1
   utillTime: 1
@@ -31,7 +31,6 @@ MonoBehaviour:
   animationTrigger: 
   skillSound: {fileID: 0}
   bulletPrefab: {fileID: 7789176575942843153, guid: 6c00f569535ff7c40a937cfce63c775d, type: 3}
-  bulletPreIndex: 0
   bulletSpeed: 100
   bulletDestroyTime: 2
   fireDelay: 0.05

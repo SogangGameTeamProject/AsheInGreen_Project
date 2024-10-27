@@ -65,14 +65,18 @@ namespace AshGreen.Character.Skill
 
         public void Update()
         {
+            float realCooltime = coolTime * (100 / (100 + _caster.SkillAcceleration));
             //쿨타임 적용
-            if(nowChargeCnt < skill.maxChageCnt)
+            if (nowChargeCnt < skill.maxChageCnt)
             {
-                if (currentCoolTime < coolTime*(100/(100+_caster.SkillAcceleration)))
+                if (currentCoolTime < realCooltime)
+                {
                     currentCoolTime += Time.deltaTime;
+                }
                 else
                     NowChargeCnt++;
             }
+            _caster.SkillInfoUpdateHUDRPC(skill.skillType, NowChargeCnt > 0 ? 0 : realCooltime - currentCoolTime, skill.MinUseCoast, nowEnergy);
         }
 
         //스킬 차징 메서드

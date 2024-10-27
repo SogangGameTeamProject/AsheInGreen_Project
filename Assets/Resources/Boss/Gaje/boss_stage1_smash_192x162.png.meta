@@ -1,10 +1,28 @@
 fileFormatVersion: 2
-guid: 6ff6c601c43eaf74ea5c9befe2f5a0da
+guid: 716105e7739d4a9428232d2f9d8bdabf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8730143329655480732
-    second: platform_animation_brokenpier_128x64_0
+      213: -6640260510475112487
+    second: boss_stage1_smash_192x162_0
+  - first:
+      213: -4110621114997397977
+    second: boss_stage1_smash_192x162_1
+  - first:
+      213: 2084028277926723730
+    second: boss_stage1_smash_192x162_2
+  - first:
+      213: 8009652352112466050
+    second: boss_stage1_smash_192x162_3
+  - first:
+      213: -4679352401303372600
+    second: boss_stage1_smash_192x162_4
+  - first:
+      213: 3329208371452569883
+    second: boss_stage1_smash_192x162_5
+  - first:
+      213: -4162918615878367353
+    second: boss_stage1_smash_192x162_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_0
+      name: boss_stage1_smash_192x162_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 0
-        width: 128
-        height: 64
+        width: 168
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,140 +133,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c916c52aa13b72970800000000000000
-      internalID: 8730143329655480732
+      spriteID: 9dfa3115f3e09d3a0800000000000000
+      internalID: -6640260510475112487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_1
+      name: boss_stage1_smash_192x162_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 211
         y: 0
-        width: 128
-        height: 64
+        width: 160
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0c2fbbb5e0388a64bb5815957e6620fa
-      internalID: -1456244466
+      spriteID: 7262c5affd324f6c0800000000000000
+      internalID: -4110621114997397977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_2
+      name: boss_stage1_smash_192x162_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 64
+        x: 404
+        y: 1
+        width: 159
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ebeef527f2e0bf941aa82284fb5d6ef7
-      internalID: 307157371
+      spriteID: 29001b75da4fbec10800000000000000
+      internalID: 2084028277926723730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_3
+      name: boss_stage1_smash_192x162_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 64
+        x: 575
+        y: 1
+        width: 176
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 434981966a36653469344dbe928ef1e2
-      internalID: 1000237621
+      spriteID: 28819069060082f60800000000000000
+      internalID: 8009652352112466050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_4
+      name: boss_stage1_smash_192x162_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 770
         y: 0
-        width: 128
-        height: 64
+        width: 175
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2ac68cce8098d8640a7cb6e0670349d2
-      internalID: -392784556
+      spriteID: 8ccf07588c99f0fb0800000000000000
+      internalID: -4679352401303372600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_5
+      name: boss_stage1_smash_192x162_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 972
         y: 0
-        width: 128
-        height: 64
+        width: 167
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4d3ba9e7243ad5940b7eeb1840efffce
-      internalID: -1659080350
+      spriteID: b19efabff59b33e20800000000000000
+      internalID: 3329208371452569883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_6
+      name: boss_stage1_smash_192x162_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1163
         y: 0
-        width: 128
-        height: 64
+        width: 168
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 374b754a7a0b28042b3a45a58f231f30
-      internalID: -895458206
+      spriteID: 78785bf23975a36c0800000000000000
+      internalID: -4162918615878367353
       vertices: []
       indices: 
       edges: []
@@ -257,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ce022d09c65b674194ce7343b3bea62
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -267,13 +285,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      platform_animation_brokenpier_128x64_0: 8730143329655480732
-      platform_animation_brokenpier_128x64_1: -1456244466
-      platform_animation_brokenpier_128x64_2: 307157371
-      platform_animation_brokenpier_128x64_3: 1000237621
-      platform_animation_brokenpier_128x64_4: -392784556
-      platform_animation_brokenpier_128x64_5: -1659080350
-      platform_animation_brokenpier_128x64_6: -895458206
+      boss_stage1_smash_192x162_0: -6640260510475112487
+      boss_stage1_smash_192x162_1: -4110621114997397977
+      boss_stage1_smash_192x162_2: 2084028277926723730
+      boss_stage1_smash_192x162_3: 8009652352112466050
+      boss_stage1_smash_192x162_4: -4679352401303372600
+      boss_stage1_smash_192x162_5: 3329208371452569883
+      boss_stage1_smash_192x162_6: -4162918615878367353
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: Ash
   profileImg: {fileID: 491125644, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
   ingameImg: {fileID: 491125644, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
-  iconSprite: {fileID: 491125644, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
+  iconSprite: {fileID: 2784707058690089037, guid: 890a2d900a6be5d46a2ce199d4689f2d, type: 3}
   playerPre: {fileID: 9204871404527705347, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
   animator: {fileID: 22100000, guid: 19058269b13cf744cabb1cf2f70e880f, type: 2}
   LevelUpEx: 200
@@ -32,5 +32,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6d9b91f14b4da484d98a586995324083, type: 2}
   - {fileID: 11400000, guid: 35051a0c030e3cb47a5959a2d3afe5ae, type: 2}
   - {fileID: 11400000, guid: ba7a820b022b3bc4895adddfb754f892, type: 2}
-  projectileObjects:
-  - {fileID: 7789176575942843153, guid: 6c00f569535ff7c40a937cfce63c775d, type: 3}

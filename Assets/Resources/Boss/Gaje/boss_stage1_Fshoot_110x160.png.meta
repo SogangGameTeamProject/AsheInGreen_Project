@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 9321cb15d52e3e345a7274153ebfff7f
+guid: 74f0695c2b253e546adabcfd43395ec9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4894362181663131971
-    second: ui_boss_hpbar_636x10_0
+      213: -4639201575959851987
+    second: boss_stage1_Fshoot_110x160_0
   - first:
-      213: -7297282829879088721
-    second: ui_boss_hpbar_636x10_1
+      213: -7936911128283144681
+    second: boss_stage1_Fshoot_110x160_1
+  - first:
+      213: -8622623394258469113
+    second: boss_stage1_Fshoot_110x160_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,45 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_boss_hpbar_636x10_0
+      name: boss_stage1_Fshoot_110x160_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 10
-        width: 636
-        height: 10
+        x: 7
+        y: 0
+        width: 96
+        height: 143
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 349032809744ce340800000000000000
-      internalID: 4894362181663131971
+      spriteID: d2c0b770fbe3e9fb0800000000000000
+      internalID: -4639201575959851987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui_boss_hpbar_636x10_1
+      name: boss_stage1_Fshoot_110x160_1
       rect:
         serializedVersion: 2
-        x: 2
+        x: 117
         y: 0
-        width: 632
-        height: 10
+        width: 96
+        height: 148
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa9ef7bcde7daba90800000000000000
-      internalID: -7297282829879088721
+      spriteID: 71e96d0616d6ad190800000000000000
+      internalID: -7936911128283144681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_Fshoot_110x160_2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 0
+        width: 96
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f304125b9465880800000000000000
+      internalID: -8622623394258469113
       vertices: []
       indices: 
       edges: []
@@ -150,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a466d7c0b41781a4295ed6a1920d0d72
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_boss_hpbar_636x10_0: 4894362181663131971
-      ui_boss_hpbar_636x10_1: -7297282829879088721
+      boss_stage1_Fshoot_110x160_0: -4639201575959851987
+      boss_stage1_Fshoot_110x160_1: -7936911128283144681
+      boss_stage1_Fshoot_110x160_2: -8622623394258469113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

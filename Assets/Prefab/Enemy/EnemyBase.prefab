@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 5569701028295483103}
   - component: {fileID: 8112561213173010309}
   - component: {fileID: 6952470658650771724}
-  - component: {fileID: 3181452707113295431}
+  - component: {fileID: 4571093287936344998}
   - component: {fileID: 924884067952727375}
   - component: {fileID: 4814974705118643328}
   - component: {fileID: 55478811726622643}
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -133,11 +133,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1625722723
-  m_SortingLayer: 4
+  m_SortingLayerID: -1344509679
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 564201052, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -8073550910506408878, guid: 9e600f404cd55144bbcc4a68114f2126, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -157,7 +157,7 @@ Animator:
   m_GameObject: {fileID: 2026440609202315854}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7819097b6f64f0a4a866e365fae3e68a, type: 2}
+  m_Controller: {fileID: 9100000, guid: a744e170d51d42047bbdf1c171548603, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -230,17 +230,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.03873849, y: 1.6075686}
+  m_Offset: {x: -0.020891905, y: 0.027058601}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 3, y: 3.125}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.5, y: 10}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.9277196, y: 3.1835706}
+  m_Size: {x: 10.414686, y: 10.2976265}
   m_EdgeRadius: 0
 --- !u!114 &5569701028295483103
 MonoBehaviour:
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2809435671
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -316,30 +316,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  TransitionStateInfoList:
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -357476191
-    DestinationState: -1590825758
-    TransitionDuration: 0
-    TriggerNameHash: -1505326268
-    TransitionIndex: 2
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 1748754976
-    DestinationState: -1590825758
-    TransitionDuration: 0
-    TriggerNameHash: -1505326268
-    TransitionIndex: 2
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 125937960
-    DestinationState: -1590825758
-    TransitionDuration: 0
-    TriggerNameHash: -1505326268
-    TransitionIndex: 1
+  TransitionStateInfoList: []
   m_Animator: {fileID: 2311938511817404395}
---- !u!114 &3181452707113295431
+--- !u!114 &4571093287936344998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -348,14 +327,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2026440609202315854}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc58937b3a865bd4184dd59111ce7679, type: 3}
+  m_Script: {fileID: 11500000, guid: c31d07cf13835794f85479225d31275c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   _damageReceiver: {fileID: 924884067952727375}
   _statusEffectManager: {fileID: 4814974705118643328}
   _animator: {fileID: 2311938511817404395}
-  runningCombatStateType: -1
+  runningCombatStateType: 0
   combatStateList:
   - type: 0
     state: {fileID: 8391703562499923371}
@@ -406,8 +385,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026440609202315854}
   m_Enabled: 1
-  m_SortingLayerID: -1625722723
-  m_SortingLayer: 4
+  m_SortingLayerID: -1344509679
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!1 &2436293096249670835

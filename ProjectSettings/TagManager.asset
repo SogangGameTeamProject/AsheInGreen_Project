@@ -44,6 +44,9 @@ TagManager:
   - name: BackGround
     uniqueID: 2256657989
     locked: 0
+  - name: BackCharacter
+    uniqueID: 2950457617
+    locked: 0
   - name: Ground
     uniqueID: 2340238365
     locked: 0
@@ -58,6 +61,9 @@ TagManager:
     locked: 0
   - name: Effect
     uniqueID: 3433093033
+    locked: 0
+  - name: FrontGround
+    uniqueID: 441723163
     locked: 0
   m_RenderingLayers:
   - Default

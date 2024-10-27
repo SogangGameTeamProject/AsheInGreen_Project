@@ -126,11 +126,20 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         playerController.playerUI = playerUI.GetComponent<PlayerUI>();
         PlayerUI hud = playerController.playerUI;
 
+        hud.player = playerController;
+
+        int playerId = playerController.characterConfig.GetPlayerId(playerController.clientID);
+        if (NetworkManager.Singleton.LocalClientId == 0)
+            hud.playerHud.p1.SetActive(true);
+        else
+            hud.playerHud.p2.SetActive(true);
+
         //스킬 아이콘 초기화
         CharacterConfig config = playerController.characterConfig;
         hud.playerHud.mainSkillIcon.sprite = config.skills[0].skillIcon;
         hud.playerHud.secondarySkillIcon.sprite = config.skills[1].skillIcon;
         hud.playerHud.specialSkillIcon.sprite = config.skills[2].skillIcon;
+        hud.playerHud.playerIcon.sprite = config.iconSprite;
     }
     private IEnumerator HostShutdown()
     {
@@ -222,5 +231,4 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             }
         }
     }
-
 }

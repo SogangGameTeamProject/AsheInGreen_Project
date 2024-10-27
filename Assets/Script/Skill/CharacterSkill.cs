@@ -8,12 +8,13 @@ namespace AshGreen.Character.Skill
 {
     public enum SkillType
     {
-        Attack, Utill
+        MainSkill = 0, SecondarySkill = 1, SpecialSkill = 2
     }
 
     public abstract class CharacterSkill : ScriptableObject
     {
         public string skillName;   // 스킬 이름
+        public SkillType skillType;//스킬 타입
         public float activeTime;   // 스킬 사용 시간
         public float cooldownTime; // 스킬 쿨타임
         public int maxChageCnt = 1;// 최대 충전 수
@@ -30,7 +31,6 @@ namespace AshGreen.Character.Skill
         public bool skillCancel = false;       // 타 스킬 캔슬 여부
         public bool multipleUse = false;       // 다중 사용 가능 여부
 
-        public SkillType skillType;//스킬 타입
 
         //공격 스킬 시 설정
         public float damageCoefficient = 1; // 스킬 데미지 배수

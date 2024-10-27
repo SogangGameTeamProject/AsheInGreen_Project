@@ -1,10 +1,37 @@
 fileFormatVersion: 2
-guid: 6ff6c601c43eaf74ea5c9befe2f5a0da
+guid: f96473d85aebfab4da5228faa3c564a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8730143329655480732
-    second: platform_animation_brokenpier_128x64_0
+      213: -5265187081845094351
+    second: boss_stage1_absorb_176x160_0
+  - first:
+      213: 5126922321510369817
+    second: boss_stage1_absorb_176x160_1
+  - first:
+      213: 5510454850333908026
+    second: boss_stage1_absorb_176x160_2
+  - first:
+      213: 8204756254703567599
+    second: boss_stage1_absorb_176x160_3
+  - first:
+      213: -2743775754460723618
+    second: boss_stage1_absorb_176x160_4
+  - first:
+      213: 7249039063157604778
+    second: boss_stage1_absorb_176x160_5
+  - first:
+      213: -7250824533350471730
+    second: boss_stage1_absorb_176x160_6
+  - first:
+      213: 3529859401923829708
+    second: boss_stage1_absorb_176x160_7
+  - first:
+      213: -724174716971969529
+    second: boss_stage1_absorb_176x160_8
+  - first:
+      213: -3314019069643785044
+    second: boss_stage1_absorb_176x160_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_0
+      name: boss_stage1_absorb_176x160_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 64
+        width: 171
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,140 +142,206 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c916c52aa13b72970800000000000000
-      internalID: 8730143329655480732
+      spriteID: 138c5a6ce3c4ee6b0800000000000000
+      internalID: -5265187081845094351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_1
+      name: boss_stage1_absorb_176x160_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 180
         y: 0
-        width: 128
-        height: 64
+        width: 167
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0c2fbbb5e0388a64bb5815957e6620fa
-      internalID: -1456244466
+      spriteID: 91a85a410bc762740800000000000000
+      internalID: 5126922321510369817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_2
+      name: boss_stage1_absorb_176x160_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 357
         y: 0
-        width: 128
-        height: 64
+        width: 166
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ebeef527f2e0bf941aa82284fb5d6ef7
-      internalID: 307157371
+      spriteID: a3c1bf0ad71197c40800000000000000
+      internalID: 5510454850333908026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_3
+      name: boss_stage1_absorb_176x160_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 535
         y: 0
-        width: 128
-        height: 64
+        width: 164
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 434981966a36653469344dbe928ef1e2
-      internalID: 1000237621
+      spriteID: fe2454ec7562dd170800000000000000
+      internalID: 8204756254703567599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_4
+      name: boss_stage1_absorb_176x160_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 715
         y: 0
-        width: 128
-        height: 64
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2ac68cce8098d8640a7cb6e0670349d2
-      internalID: -392784556
+      spriteID: e560a0c0d762ce9d0800000000000000
+      internalID: -2743775754460723618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_5
+      name: boss_stage1_absorb_176x160_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 884
         y: 0
-        width: 128
-        height: 64
+        width: 167
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4d3ba9e7243ad5940b7eeb1840efffce
-      internalID: -1659080350
+      spriteID: aa18072fe92c99460800000000000000
+      internalID: 7249039063157604778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform_animation_brokenpier_128x64_6
+      name: boss_stage1_absorb_176x160_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1060
         y: 0
-        width: 128
-        height: 64
+        width: 167
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 374b754a7a0b28042b3a45a58f231f30
-      internalID: -895458206
+      spriteID: ec725f0e085ef5b90800000000000000
+      internalID: -7250824533350471730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_176x160_7
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 0
+        width: 166
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf1ebe8c649cf030800000000000000
+      internalID: 3529859401923829708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_176x160_8
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 0
+        width: 165
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70411978ee633f5f0800000000000000
+      internalID: -724174716971969529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_176x160_9
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 0
+        width: 172
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cacf20fe63d3202d0800000000000000
+      internalID: -3314019069643785044
       vertices: []
       indices: 
       edges: []
@@ -257,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ce022d09c65b674194ce7343b3bea62
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -267,13 +360,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      platform_animation_brokenpier_128x64_0: 8730143329655480732
-      platform_animation_brokenpier_128x64_1: -1456244466
-      platform_animation_brokenpier_128x64_2: 307157371
-      platform_animation_brokenpier_128x64_3: 1000237621
-      platform_animation_brokenpier_128x64_4: -392784556
-      platform_animation_brokenpier_128x64_5: -1659080350
-      platform_animation_brokenpier_128x64_6: -895458206
+      boss_stage1_absorb_176x160_0: -5265187081845094351
+      boss_stage1_absorb_176x160_1: 5126922321510369817
+      boss_stage1_absorb_176x160_2: 5510454850333908026
+      boss_stage1_absorb_176x160_3: 8204756254703567599
+      boss_stage1_absorb_176x160_4: -2743775754460723618
+      boss_stage1_absorb_176x160_5: 7249039063157604778
+      boss_stage1_absorb_176x160_6: -7250824533350471730
+      boss_stage1_absorb_176x160_7: 3529859401923829708
+      boss_stage1_absorb_176x160_8: -724174716971969529
+      boss_stage1_absorb_176x160_9: -3314019069643785044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
