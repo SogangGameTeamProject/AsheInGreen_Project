@@ -129,7 +129,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         hud.player = playerController;
 
         int playerId = playerController.characterConfig.GetPlayerId(playerController.clientID);
-        if (NetworkManager.Singleton.LocalClientId == 0)
+        if (playerHUDPanel.transform.childCount == 1)
             hud.playerHud.p1.SetActive(true);
         else
             hud.playerHud.p2.SetActive(true);
