@@ -498,5 +498,7 @@ namespace AshGreen.Character
                 combatStateContext.TransitionTo(state);
             }
         }
+
+        
     }
 }

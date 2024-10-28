@@ -14,6 +14,7 @@ namespace AshGreen.Character
     {
         [Header("Data")]
         public string characterName;            // 캐릭터명
+        public Sprite nameImg;
         public Sprite profileImg;
         public RuntimeAnimatorController propfileAni;
         public Sprite ingameImg;

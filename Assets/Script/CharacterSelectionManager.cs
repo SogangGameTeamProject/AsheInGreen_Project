@@ -37,7 +37,7 @@ public struct CharacterContainer
     public Image secondarySkillIcon;
     public Image spesialSkillIcon;
     public Animator selectAnimator;
-    public TextMeshProUGUI nameContainer;           // Character name container
+    public Image nameContainer;           // Character name container
     public Image playerIcon;                        // The background icon of the player (p1, p2)
     public GameObject waitingText;                  // The waiting text on the container were no client connected
     public GameObject backgroundCharacter;               // The background of the Character when not ready
@@ -183,7 +183,7 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
 
     void SetNonPlayableChar(int playerId)
     {
-        m_charactersContainers[playerId].nameContainer.text = "";
+        m_charactersContainers[playerId].nameContainer.gameObject.SetActive(false);
         m_charactersContainers[playerId].playerIcon.gameObject.SetActive(false);
         //m_charactersContainers[playerId].playerIcon.color = m_playerColor;
         m_charactersContainers[playerId].backgroundCharacter.SetActive(false);
@@ -225,8 +225,9 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
         m_charactersContainers[playerId].backgroundClientCharacterReadyImage.sprite =
             charactersData[characterSelected].ingameImg;
 
-        m_charactersContainers[playerId].nameContainer.text =
-            charactersData[characterSelected].characterName;
+        m_charactersContainers[playerId].nameContainer.gameObject.SetActive(true);
+        m_charactersContainers[playerId].nameContainer.sprite =
+            charactersData[characterSelected].nameImg;
 
         //SetCharacterColor(playerId, characterSelected);
     }

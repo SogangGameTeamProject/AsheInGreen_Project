@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using AshGreen.DamageObj;
+using WebSocketSharp;
 
 namespace AshGreen.Character.Skill
 {
@@ -19,6 +20,12 @@ namespace AshGreen.Character.Skill
         public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
         {
             Debug.Log("특수스킬 사용");
+            //스킬 애니메이션 처리
+            if (!animationTrigger.IsNullOrEmpty())
+            {
+                holder._caster.PlayerSkillAni(animationTrigger);
+            }
+
             Debug.Log("소모 에너지: " + holder.NowEnergy);
             int nowEnergy = holder.NowEnergy;
             holder.NowEnergy = 0;//에너지 비우기
@@ -33,7 +40,25 @@ namespace AshGreen.Character.Skill
             for (int i = 0; i < nowEnergy; i++)
             {
                 float damage = damageCoefficient;//데미지 설정
-                Vector2 fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;//발사 방향 조정
+                //보스 타겟
+                Vector2 fireDir = Vector2.zero;//발사 방향 조정
+                EnemyController target = GameObject.FindAnyObjectByType<EnemyController>();
+                if (target)
+                {
+                    Vector2 casterPos = (Vector2)holder._caster.gameObject.transform.position;
+                    Vector2 targetPos = (Vector2)target.gameObject.transform.position;
+                    fireDir = targetPos - casterPos;
+                    fireDir = fireDir.normalized * bulletSpeed;
+                    if (fireDir.x > 0)
+                        holder._caster.SetCharacterDirectionRpc(CharacterDirection.Right);
+                    else
+                        holder._caster.SetCharacterDirectionRpc(CharacterDirection.Left);
+                }
+                else
+                {
+                    fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;
+                }
+
                 ProjectileFactory.Instance.RequestProjectileFire(holder._caster, bulletPrefab, AttackType.MainSkill, damage,
                     fireDir, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
 

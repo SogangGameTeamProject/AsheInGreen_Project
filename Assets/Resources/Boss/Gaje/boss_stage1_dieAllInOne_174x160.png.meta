@@ -1,0 +1,1746 @@
+fileFormatVersion: 2
+guid: aca70920fb0d81c49a7ad7c6f7f7731a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4306772786151456357
+    second: boss_stage1_dieAllInOne_174x160_0
+  - first:
+      213: -7992563830257398488
+    second: boss_stage1_dieAllInOne_174x160_1
+  - first:
+      213: 2891147561184812172
+    second: boss_stage1_dieAllInOne_174x160_2
+  - first:
+      213: 7272225151205558635
+    second: boss_stage1_dieAllInOne_174x160_3
+  - first:
+      213: -9166557598634871117
+    second: boss_stage1_dieAllInOne_174x160_4
+  - first:
+      213: -1532755666145322013
+    second: boss_stage1_dieAllInOne_174x160_5
+  - first:
+      213: 3228689970033246096
+    second: boss_stage1_dieAllInOne_174x160_6
+  - first:
+      213: -1731200138009728137
+    second: boss_stage1_dieAllInOne_174x160_7
+  - first:
+      213: -11731269096299712
+    second: boss_stage1_dieAllInOne_174x160_8
+  - first:
+      213: -816824284591478232
+    second: boss_stage1_dieAllInOne_174x160_9
+  - first:
+      213: 7688878902222836872
+    second: boss_stage1_dieAllInOne_174x160_10
+  - first:
+      213: -4146070310555008675
+    second: boss_stage1_dieAllInOne_174x160_11
+  - first:
+      213: 6822141457735058818
+    second: boss_stage1_dieAllInOne_174x160_12
+  - first:
+      213: -7487510814682709009
+    second: boss_stage1_dieAllInOne_174x160_13
+  - first:
+      213: -1454455756525101424
+    second: boss_stage1_dieAllInOne_174x160_14
+  - first:
+      213: -505160824530513487
+    second: boss_stage1_dieAllInOne_174x160_15
+  - first:
+      213: -3273445734142730066
+    second: boss_stage1_dieAllInOne_174x160_16
+  - first:
+      213: 8203207158362956864
+    second: boss_stage1_dieAllInOne_174x160_17
+  - first:
+      213: -2826331676735954464
+    second: boss_stage1_dieAllInOne_174x160_18
+  - first:
+      213: -1795263600061108086
+    second: boss_stage1_dieAllInOne_174x160_19
+  - first:
+      213: -5972423613544595463
+    second: boss_stage1_dieAllInOne_174x160_20
+  - first:
+      213: -1663774974120427602
+    second: boss_stage1_dieAllInOne_174x160_21
+  - first:
+      213: 236236168013604671
+    second: boss_stage1_dieAllInOne_174x160_22
+  - first:
+      213: -7193333968401001731
+    second: boss_stage1_dieAllInOne_174x160_23
+  - first:
+      213: -352653592256823345
+    second: boss_stage1_dieAllInOne_174x160_24
+  - first:
+      213: -5013377020024995442
+    second: boss_stage1_dieAllInOne_174x160_25
+  - first:
+      213: 2269940325840382236
+    second: boss_stage1_dieAllInOne_174x160_26
+  - first:
+      213: -4005198423350266364
+    second: boss_stage1_dieAllInOne_174x160_27
+  - first:
+      213: -1317586897126539204
+    second: boss_stage1_dieAllInOne_174x160_28
+  - first:
+      213: 8239205070567150822
+    second: boss_stage1_dieAllInOne_174x160_29
+  - first:
+      213: 1696780856832548867
+    second: boss_stage1_dieAllInOne_174x160_30
+  - first:
+      213: -2754024522738908290
+    second: boss_stage1_dieAllInOne_174x160_31
+  - first:
+      213: -6223818576222876344
+    second: boss_stage1_dieAllInOne_174x160_32
+  - first:
+      213: 6823273689676130328
+    second: boss_stage1_dieAllInOne_174x160_33
+  - first:
+      213: -3575890042546367144
+    second: boss_stage1_dieAllInOne_174x160_34
+  - first:
+      213: 8717991336465702523
+    second: boss_stage1_dieAllInOne_174x160_35
+  - first:
+      213: -4290130530639620253
+    second: boss_stage1_dieAllInOne_174x160_36
+  - first:
+      213: -4508325105407218493
+    second: boss_stage1_dieAllInOne_174x160_37
+  - first:
+      213: 8966090401551913871
+    second: boss_stage1_dieAllInOne_174x160_38
+  - first:
+      213: 1774028870888767067
+    second: boss_stage1_dieAllInOne_174x160_39
+  - first:
+      213: 3747807731752353855
+    second: boss_stage1_dieAllInOne_174x160_40
+  - first:
+      213: 6597987650513888734
+    second: boss_stage1_dieAllInOne_174x160_41
+  - first:
+      213: -9028053114058835666
+    second: boss_stage1_dieAllInOne_174x160_42
+  - first:
+      213: 1774255422900451449
+    second: boss_stage1_dieAllInOne_174x160_43
+  - first:
+      213: 2459417216665343441
+    second: boss_stage1_dieAllInOne_174x160_44
+  - first:
+      213: -5223304033552353194
+    second: boss_stage1_dieAllInOne_174x160_45
+  - first:
+      213: 6138146337759182801
+    second: boss_stage1_dieAllInOne_174x160_46
+  - first:
+      213: -7624686899620945565
+    second: boss_stage1_dieAllInOne_174x160_47
+  - first:
+      213: 1126748055852860706
+    second: boss_stage1_dieAllInOne_174x160_48
+  - first:
+      213: -7110679405911212003
+    second: boss_stage1_dieAllInOne_174x160_49
+  - first:
+      213: -4662878232019868729
+    second: boss_stage1_dieAllInOne_174x160_50
+  - first:
+      213: 3386125868791354413
+    second: boss_stage1_dieAllInOne_174x160_51
+  - first:
+      213: 5299345985665877242
+    second: boss_stage1_dieAllInOne_174x160_52
+  - first:
+      213: -3815800164683182332
+    second: boss_stage1_dieAllInOne_174x160_53
+  - first:
+      213: -7658526397609632179
+    second: boss_stage1_dieAllInOne_174x160_54
+  - first:
+      213: 3396497760784580478
+    second: boss_stage1_dieAllInOne_174x160_55
+  - first:
+      213: -2685327063701380659
+    second: boss_stage1_dieAllInOne_174x160_56
+  - first:
+      213: 5310615120747947425
+    second: boss_stage1_dieAllInOne_174x160_57
+  - first:
+      213: -3724373194580008393
+    second: boss_stage1_dieAllInOne_174x160_58
+  - first:
+      213: -8241785016636106541
+    second: boss_stage1_dieAllInOne_174x160_59
+  - first:
+      213: -6265882935482922776
+    second: boss_stage1_dieAllInOne_174x160_60
+  - first:
+      213: -1098274746862057009
+    second: boss_stage1_dieAllInOne_174x160_61
+  - first:
+      213: 6543343538452506152
+    second: boss_stage1_dieAllInOne_174x160_62
+  - first:
+      213: -7676914398454461873
+    second: boss_stage1_dieAllInOne_174x160_63
+  - first:
+      213: 8737356055460202623
+    second: boss_stage1_dieAllInOne_174x160_64
+  - first:
+      213: 217872787922684591
+    second: boss_stage1_dieAllInOne_174x160_65
+  - first:
+      213: 7269551251567740893
+    second: boss_stage1_dieAllInOne_174x160_66
+  - first:
+      213: 4858200470169576452
+    second: boss_stage1_dieAllInOne_174x160_67
+  - first:
+      213: 8742794422846062965
+    second: boss_stage1_dieAllInOne_174x160_68
+  - first:
+      213: -7039801773331746587
+    second: boss_stage1_dieAllInOne_174x160_69
+  - first:
+      213: -6639637555453564543
+    second: boss_stage1_dieAllInOne_174x160_70
+  - first:
+      213: 598614664307068403
+    second: boss_stage1_dieAllInOne_174x160_71
+  - first:
+      213: -1678698798355584293
+    second: boss_stage1_dieAllInOne_174x160_72
+  - first:
+      213: -7558128242414556282
+    second: boss_stage1_dieAllInOne_174x160_73
+  - first:
+      213: 6857280757981421683
+    second: boss_stage1_dieAllInOne_174x160_74
+  - first:
+      213: -973500671374845460
+    second: boss_stage1_dieAllInOne_174x160_75
+  - first:
+      213: -1892458076925554479
+    second: boss_stage1_dieAllInOne_174x160_76
+  - first:
+      213: -3111169114991558590
+    second: boss_stage1_dieAllInOne_174x160_77
+  - first:
+      213: -796017202183359589
+    second: boss_stage1_dieAllInOne_174x160_78
+  - first:
+      213: -8975734426206845293
+    second: boss_stage1_dieAllInOne_174x160_79
+  - first:
+      213: 4503245442721750633
+    second: boss_stage1_dieAllInOne_174x160_80
+  - first:
+      213: -301274233737747035
+    second: boss_stage1_dieAllInOne_174x160_81
+  - first:
+      213: -7051288464417266540
+    second: boss_stage1_dieAllInOne_174x160_82
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e70eed70bb4cb30800000000000000
+      internalID: 4306772786151456357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1120
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d4fd4fa85b41190800000000000000
+      internalID: -7992563830257398488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_2
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1120
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c58a1936b6f1820800000000000000
+      internalID: 2891147561184812172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_3
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1120
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69c440ce322ce460800000000000000
+      internalID: 7272225151205558635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_4
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1120
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6f5383e68d9c080800000000000000
+      internalID: -9166557598634871117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_5
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1120
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ebd0ffa7de8abae0800000000000000
+      internalID: -1532755666145322013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_6
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1120
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fb2b1eb6c9ecc20800000000000000
+      internalID: 3228689970033246096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_7
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1120
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ba2d295aa89f7e0800000000000000
+      internalID: -1731200138009728137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04320c0197256dff0800000000000000
+      internalID: -11731269096299712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_9
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 960
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a230114ae0aa4f0800000000000000
+      internalID: -816824284591478232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_10
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 960
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 884dcf7cf9264ba60800000000000000
+      internalID: 7688878902222836872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_11
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 960
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d514395f4033676c0800000000000000
+      internalID: -4146070310555008675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_12
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 960
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28583c3b28d1dae50800000000000000
+      internalID: 6822141457735058818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_13
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 960
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe301f6a594071890800000000000000
+      internalID: -7487510814682709009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_14
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 960
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e9cca023cb0dbe0800000000000000
+      internalID: -1454455756525101424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_15
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 960
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b15a6318ee4df8f0800000000000000
+      internalID: -505160824530513487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0a7e0c2726292d0800000000000000
+      internalID: -3273445734142730066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_17
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 800
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0446a25b275a7d170800000000000000
+      internalID: 8203207158362956864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_18
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 800
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e128b6805ad6c8d0800000000000000
+      internalID: -2826331676735954464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_19
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 800
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a803b287441f517e0800000000000000
+      internalID: -1795263600061108086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_20
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 800
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fff482ed50bd1da0800000000000000
+      internalID: -5972423613544595463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_21
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 800
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaffd51e97519e8e0800000000000000
+      internalID: -1663774974120427602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_22
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 800
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37ec8d0b87474300800000000000000
+      internalID: 236236168013604671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_23
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 800
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df215be1ed42c2c90800000000000000
+      internalID: -7193333968401001731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf34c02d6f1b1bf0800000000000000
+      internalID: -352653592256823345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_25
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 640
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81cd4c8928ec6ab0800000000000000
+      internalID: -5013377020024995442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_26
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 640
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19ec0f13b2708f10800000000000000
+      internalID: 2269940325840382236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_27
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 640
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406b041214daa68c0800000000000000
+      internalID: -4005198423350266364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_28
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 640
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c30401ca2bdf6bde0800000000000000
+      internalID: -1317586897126539204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_29
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 640
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e490c6cb59875270800000000000000
+      internalID: 8239205070567150822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_30
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 640
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 300ef29033d2c8710800000000000000
+      internalID: 1696780856832548867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_31
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 640
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73ce6bb94db7c9d0800000000000000
+      internalID: -2754024522738908290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d02c9eafd80a9a0800000000000000
+      internalID: -6223818576222876344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_33
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 480
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8182a6ef44321be50800000000000000
+      internalID: 6823273689676130328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_34
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 480
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855da22c3f2ef5ec0800000000000000
+      internalID: -3575890042546367144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_35
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 480
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e98fc3ee68cf870800000000000000
+      internalID: 8717991336465702523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_36
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 480
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367da2133056674c0800000000000000
+      internalID: -4290130530639620253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_37
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 480
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc2a38e3363f61c0800000000000000
+      internalID: -4508325105407218493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_38
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 480
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f839a8047b3fd6c70800000000000000
+      internalID: 8966090401551913871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_39
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 480
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ebc9edbdd9e9810800000000000000
+      internalID: 1774028870888767067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f30cf897643e20430800000000000000
+      internalID: 3747807731752353855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_41
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 320
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed56b4d7fc2c09b50800000000000000
+      internalID: 6597987650513888734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_42
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 320
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29f9238689e5b280800000000000000
+      internalID: -9028053114058835666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_43
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 320
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 978bace18eb6f9810800000000000000
+      internalID: 1774255422900451449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_44
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 320
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d551d19dea912220800000000000000
+      internalID: 2459417216665343441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_45
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 320
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6583f3ed7a81387b0800000000000000
+      internalID: -5223304033552353194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_46
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 320
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df3089a2931f2550800000000000000
+      internalID: 6138146337759182801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_47
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 320
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361e48089abaf2690800000000000000
+      internalID: -7624686899620945565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225c874136303af00800000000000000
+      internalID: 1126748055852860706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_49
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 160
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d100afa11cac15d90800000000000000
+      internalID: -7110679405911212003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_50
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 160
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c3ed85f3f02a4fb0800000000000000
+      internalID: -4662878232019868729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_51
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 160
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24d116898fedfe20800000000000000
+      internalID: 3386125868791354413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_52
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 160
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4c189c81f0b8940800000000000000
+      internalID: 5299345985665877242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_53
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 160
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f8e2a97fd8b0bc0800000000000000
+      internalID: -3815800164683182332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_54
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 160
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e968761d277b590800000000000000
+      internalID: -7658526397609632179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_55
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 160
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f79ffc7b8c22f20800000000000000
+      internalID: 3396497760784580478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc12656534dcbbad0800000000000000
+      internalID: -2685327063701380659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_57
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5eff2c05813b940800000000000000
+      internalID: 5310615120747947425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_58
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7326216ef4e505cc0800000000000000
+      internalID: -3724373194580008393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_dieAllInOne_174x160_59
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 0
+        width: 174
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d89448b13c4f9d80800000000000000
+      internalID: -8241785016636106541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 16648c8dfef055c4d926fcfac8d75f4a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boss_stage1_dieAllInOne_174x160_0: 4306772786151456357
+      boss_stage1_dieAllInOne_174x160_1: -7992563830257398488
+      boss_stage1_dieAllInOne_174x160_10: 7688878902222836872
+      boss_stage1_dieAllInOne_174x160_11: -4146070310555008675
+      boss_stage1_dieAllInOne_174x160_12: 6822141457735058818
+      boss_stage1_dieAllInOne_174x160_13: -7487510814682709009
+      boss_stage1_dieAllInOne_174x160_14: -1454455756525101424
+      boss_stage1_dieAllInOne_174x160_15: -505160824530513487
+      boss_stage1_dieAllInOne_174x160_16: -3273445734142730066
+      boss_stage1_dieAllInOne_174x160_17: 8203207158362956864
+      boss_stage1_dieAllInOne_174x160_18: -2826331676735954464
+      boss_stage1_dieAllInOne_174x160_19: -1795263600061108086
+      boss_stage1_dieAllInOne_174x160_2: 2891147561184812172
+      boss_stage1_dieAllInOne_174x160_20: -5972423613544595463
+      boss_stage1_dieAllInOne_174x160_21: -1663774974120427602
+      boss_stage1_dieAllInOne_174x160_22: 236236168013604671
+      boss_stage1_dieAllInOne_174x160_23: -7193333968401001731
+      boss_stage1_dieAllInOne_174x160_24: -352653592256823345
+      boss_stage1_dieAllInOne_174x160_25: -5013377020024995442
+      boss_stage1_dieAllInOne_174x160_26: 2269940325840382236
+      boss_stage1_dieAllInOne_174x160_27: -4005198423350266364
+      boss_stage1_dieAllInOne_174x160_28: -1317586897126539204
+      boss_stage1_dieAllInOne_174x160_29: 8239205070567150822
+      boss_stage1_dieAllInOne_174x160_3: 7272225151205558635
+      boss_stage1_dieAllInOne_174x160_30: 1696780856832548867
+      boss_stage1_dieAllInOne_174x160_31: -2754024522738908290
+      boss_stage1_dieAllInOne_174x160_32: -6223818576222876344
+      boss_stage1_dieAllInOne_174x160_33: 6823273689676130328
+      boss_stage1_dieAllInOne_174x160_34: -3575890042546367144
+      boss_stage1_dieAllInOne_174x160_35: 8717991336465702523
+      boss_stage1_dieAllInOne_174x160_36: -4290130530639620253
+      boss_stage1_dieAllInOne_174x160_37: -4508325105407218493
+      boss_stage1_dieAllInOne_174x160_38: 8966090401551913871
+      boss_stage1_dieAllInOne_174x160_39: 1774028870888767067
+      boss_stage1_dieAllInOne_174x160_4: -9166557598634871117
+      boss_stage1_dieAllInOne_174x160_40: 3747807731752353855
+      boss_stage1_dieAllInOne_174x160_41: 6597987650513888734
+      boss_stage1_dieAllInOne_174x160_42: -9028053114058835666
+      boss_stage1_dieAllInOne_174x160_43: 1774255422900451449
+      boss_stage1_dieAllInOne_174x160_44: 2459417216665343441
+      boss_stage1_dieAllInOne_174x160_45: -5223304033552353194
+      boss_stage1_dieAllInOne_174x160_46: 6138146337759182801
+      boss_stage1_dieAllInOne_174x160_47: -7624686899620945565
+      boss_stage1_dieAllInOne_174x160_48: 1126748055852860706
+      boss_stage1_dieAllInOne_174x160_49: -7110679405911212003
+      boss_stage1_dieAllInOne_174x160_5: -1532755666145322013
+      boss_stage1_dieAllInOne_174x160_50: -4662878232019868729
+      boss_stage1_dieAllInOne_174x160_51: 3386125868791354413
+      boss_stage1_dieAllInOne_174x160_52: 5299345985665877242
+      boss_stage1_dieAllInOne_174x160_53: -3815800164683182332
+      boss_stage1_dieAllInOne_174x160_54: -7658526397609632179
+      boss_stage1_dieAllInOne_174x160_55: 3396497760784580478
+      boss_stage1_dieAllInOne_174x160_56: -2685327063701380659
+      boss_stage1_dieAllInOne_174x160_57: 5310615120747947425
+      boss_stage1_dieAllInOne_174x160_58: -3724373194580008393
+      boss_stage1_dieAllInOne_174x160_59: -8241785016636106541
+      boss_stage1_dieAllInOne_174x160_6: 3228689970033246096
+      boss_stage1_dieAllInOne_174x160_7: -1731200138009728137
+      boss_stage1_dieAllInOne_174x160_8: -11731269096299712
+      boss_stage1_dieAllInOne_174x160_9: -816824284591478232
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

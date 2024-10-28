@@ -66,5 +66,40 @@ namespace AshGreen.Character.Player
         {
             playerUI.UpdateSkill(skillType, coolTime, minUseCoast, nowEnergy);
         }
+
+        //애니메이션 동기화 함수
+        public void PlayerSkillAni(string paraName)
+        {
+            _animator.SetLayerWeight(0, 0);
+            _animator.SetLayerWeight(1, 1);
+            _animator.SetTrigger(paraName);
+
+            PlayerSkillAniRpc(paraName);
+        }
+
+        [Rpc(SendTo.ClientsAndHost)]
+        private void PlayerSkillAniRpc(string paraName)
+        {
+            if (IsOwner) return;
+
+            _animator.SetLayerWeight(0, 0);
+            _animator.SetLayerWeight(1, 1);
+            _animator.SetTrigger(paraName);
+        }
+
+        public void EndSkillAni()
+        {
+            _animator.SetLayerWeight(0, 1);
+            _animator.SetLayerWeight(1, 0);
+        }
+
+        [Rpc(SendTo.ClientsAndHost)]
+        private void EndSkillAniRpc()
+        {
+            if (IsOwner) return;
+
+            _animator.SetLayerWeight(0, 1);
+            _animator.SetLayerWeight(1, 0);
+        }
     }
 }

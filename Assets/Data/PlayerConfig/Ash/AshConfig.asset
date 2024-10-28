@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: AshConfig
   m_EditorClassIdentifier: 
   characterName: Ash
+  nameImg: {fileID: 6589326869098336999, guid: 03f0761384077da40a367ba47d74ebe2, type: 3}
   profileImg: {fileID: 491125644, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
   propfileAni: {fileID: 9100000, guid: 7612068d7bd48804c942bf428a2ce0f0, type: 2}
   ingameImg: {fileID: 491125644, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
   iconSprite: {fileID: 2784707058690089037, guid: 890a2d900a6be5d46a2ce199d4689f2d, type: 3}
   playerPre: {fileID: 9204871404527705347, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
-  animator: {fileID: 22100000, guid: 19058269b13cf744cabb1cf2f70e880f, type: 2}
+  animator: {fileID: 9100000, guid: 7819097b6f64f0a4a866e365fae3e68a, type: 2}
   LevelUpEx: 200
   MaxHP: 4
   GrowthMaxHP: 1

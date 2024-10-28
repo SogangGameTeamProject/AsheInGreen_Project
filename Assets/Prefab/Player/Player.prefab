@@ -141,6 +141,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
   stateAni: IsHeart
+  deathEventTimer: 0.5
 --- !u!1 &1285062107557988456
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 5432634746265272841}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.759, y: 1.397, z: 0}
+  m_LocalPosition: {x: 1.238, y: 1.576, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1078,6 +1079,20 @@ MonoBehaviour:
     DestinationState: -1590825758
     TransitionDuration: 0
     TriggerNameHash: -1505326268
+    TransitionIndex: 1
+  - IsCrossFadeExit: 0
+    Layer: 1
+    OriginatingState: -357476191
+    DestinationState: 863064705
+    TransitionDuration: 0
+    TriggerNameHash: -1600451671
+    TransitionIndex: 0
+  - IsCrossFadeExit: 0
+    Layer: 1
+    OriginatingState: -357476191
+    DestinationState: 1162320651
+    TransitionDuration: 0
+    TriggerNameHash: 1488937403
     TransitionIndex: 1
   m_Animator: {fileID: 5141303237562480953}
 --- !u!114 &776473998259894186

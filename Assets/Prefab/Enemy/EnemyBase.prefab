@@ -46,7 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   stateSoundClip: {fileID: 0}
-  stateAni: IsHeart
+  stateAni: IsDeath
+  deathEventTimer: 3.4
 --- !u!1 &2026440609202315854
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -316,7 +317,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  TransitionStateInfoList: []
+  TransitionStateInfoList:
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 2081823275
+    DestinationState: -1319424928
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 0
   m_Animator: {fileID: 2311938511817404395}
 --- !u!114 &4571093287936344998
 MonoBehaviour:

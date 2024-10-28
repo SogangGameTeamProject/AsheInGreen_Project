@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: AshMainSkill
   m_EditorClassIdentifier: 
   skillName: "\uD640\uB4DC \uACF5\uACA9"
-  activeTime: 0.05
-  cooldownTime: 1
+  skillType: 0
+  activeTime: 0.25
+  cooldownTime: 0.5
   maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
@@ -23,15 +24,13 @@ MonoBehaviour:
   isNotCancellation: 0
   skillCancel: 0
   multipleUse: 0
-  skillType: 0
   damageCoefficient: 0.5
   utillValue: 1
   utillTime: 1
   skillIcon: {fileID: -5097126423132373131, guid: 6a7f203aea1788d40b09992cb567b653, type: 3}
-  animationTrigger: 
+  animationTrigger: MainSkill
   skillSound: {fileID: 0}
   bulletPrefab: {fileID: 7789176575942843153, guid: 6c00f569535ff7c40a937cfce63c775d, type: 3}
-  bulletPreIndex: 0
   bulletSpeed: 100
   bulletDestroyTime: 2
   chargingTime: 0.5

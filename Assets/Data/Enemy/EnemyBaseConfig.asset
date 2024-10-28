@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfc33b82498a37409503bd8a970b394, type: 3}
   m_Name: EnemyBaseConfig
   m_EditorClassIdentifier: 
-  characterName: BattleshipLobster
+  characterName: "\uC804\uD568\uAC00\uC81C"
+  nameImg: {fileID: 0}
   profileImg: {fileID: 0}
+  propfileAni: {fileID: 0}
   ingameImg: {fileID: 0}
   iconSprite: {fileID: 0}
   playerPre: {fileID: 0}

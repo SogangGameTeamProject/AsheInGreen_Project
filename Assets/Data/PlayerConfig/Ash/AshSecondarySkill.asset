@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: AshSecondarySkill
   m_EditorClassIdentifier: 
   skillName: "\uB300\uC26C"
+  skillType: 1
   activeTime: 0.15
-  cooldownTime: 2
+  cooldownTime: 5
   maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
@@ -23,7 +24,6 @@ MonoBehaviour:
   isNotCancellation: 0
   skillCancel: 0
   multipleUse: 1
-  skillType: 1
   damageCoefficient: 1
   utillValue: 1
   utillTime: 1
