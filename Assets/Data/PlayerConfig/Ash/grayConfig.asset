@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Gray
   profileImg: {fileID: 3908490776561538671, guid: 7edc6d1d9cdd8044a9a5f0986821dc1d, type: 3}
+  propfileAni: {fileID: 22100000, guid: 799b52ebc701ade4caa889ae37e7aaae, type: 2}
   ingameImg: {fileID: 3908490776561538671, guid: 7edc6d1d9cdd8044a9a5f0986821dc1d, type: 3}
   iconSprite: {fileID: -4082298381797475129, guid: 890a2d900a6be5d46a2ce199d4689f2d, type: 3}
   playerPre: {fileID: 9204871404527705347, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}

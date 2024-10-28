@@ -33,11 +33,11 @@ public struct PlayerConnectionState
 [Serializable]
 public struct CharacterContainer
 {
-    public Image imageContainer;                    // The image of the character container
+    public Image mainSkillIcon;
+    public Image secondarySkillIcon;
+    public Image spesialSkillIcon;
+    public Animator selectAnimator;
     public TextMeshProUGUI nameContainer;           // Character name container
-    public GameObject border;                       // The border of the character container when not ready
-    public GameObject borderReady;                  // The border of the character container when ready
-    public GameObject borderClient;                 // Client border of the character container
     public Image playerIcon;                        // The background icon of the player (p1, p2)
     public GameObject waitingText;                  // The waiting text on the container were no client connected
     public GameObject backgroundCharacter;               // The background of the Character when not ready
@@ -70,11 +70,11 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     [SerializeField]
     SceneName m_nextScene = SceneName.Gameplay;
 
-    [SerializeField]
+    /*[SerializeField]
     Color m_clientColor;
 
     [SerializeField]
-    Color m_playerColor;
+    Color m_playerColor;*/
 
     [SerializeField]
     PlayerConnectionState[] m_playerStates;
@@ -92,7 +92,6 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     bool m_isTimerOn;
     float m_timer;
 
-    private readonly Color k_selectedColor = new Color32(74, 74, 74, 255);
 
     void Start()
     {
@@ -184,14 +183,9 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
 
     void SetNonPlayableChar(int playerId)
     {
-        m_charactersContainers[playerId].imageContainer.sprite = null;
-        m_charactersContainers[playerId].imageContainer.color = new Color(1f, 1f, 1f, 0f);
         m_charactersContainers[playerId].nameContainer.text = "";
-        m_charactersContainers[playerId].border.SetActive(true);
-        m_charactersContainers[playerId].borderClient.SetActive(false);
-        m_charactersContainers[playerId].borderReady.SetActive(false);
         m_charactersContainers[playerId].playerIcon.gameObject.SetActive(false);
-        m_charactersContainers[playerId].playerIcon.color = m_playerColor;
+        //m_charactersContainers[playerId].playerIcon.color = m_playerColor;
         m_charactersContainers[playerId].backgroundCharacter.SetActive(false);
         m_charactersContainers[playerId].backgroundCharacterReady.SetActive(false);
         m_charactersContainers[playerId].backgroundClientCharacterReady.SetActive(false);
@@ -207,20 +201,20 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     {
         if (charactersData[characterSelected].isSelectedForPlayerId(playerId))
         {
-            m_charactersContainers[playerId].imageContainer.color = k_selectedColor;
-            m_charactersContainers[playerId].nameContainer.color = k_selectedColor;
+            //m_charactersContainers[playerId].imageContainer.color = k_selectedColor;
+            //m_charactersContainers[playerId].nameContainer.color = k_selectedColor;
         }
         else
         {
-            m_charactersContainers[playerId].imageContainer.color = Color.white;
-            m_charactersContainers[playerId].nameContainer.color = Color.white;
+            /*m_charactersContainers[playerId].imageContainer.color = Color.white;
+            m_charactersContainers[playerId].nameContainer.color = Color.white;*/
         }
     }
 
     public void SetCharacterUI(int playerId, int characterSelected)
     {
-        m_charactersContainers[playerId].imageContainer.sprite =
-            charactersData[characterSelected].profileImg;
+        m_charactersContainers[playerId].selectAnimator.runtimeAnimatorController
+            = charactersData[characterSelected].propfileAni;
 
         m_charactersContainers[playerId].backgroundCharacterImage.sprite =
             charactersData[characterSelected].ingameImg;
@@ -234,27 +228,21 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
         m_charactersContainers[playerId].nameContainer.text =
             charactersData[characterSelected].characterName;
 
-        SetCharacterColor(playerId, characterSelected);
+        //SetCharacterColor(playerId, characterSelected);
     }
 
     public void SetPlayebleChar(int playerId, int characterSelected, bool isClientOwner)
     {
         SetCharacterUI(playerId, characterSelected);
         m_charactersContainers[playerId].playerIcon.gameObject.SetActive(true);
-        if (isClientOwner)
+        /*if (isClientOwner)
         {
-            m_charactersContainers[playerId].borderClient.SetActive(true);
-            m_charactersContainers[playerId].border.SetActive(false);
-            m_charactersContainers[playerId].borderReady.SetActive(false);
             m_charactersContainers[playerId].playerIcon.color = m_clientColor;
         }
         else
         {
-            m_charactersContainers[playerId].border.SetActive(true);
-            m_charactersContainers[playerId].borderReady.SetActive(false);
-            m_charactersContainers[playerId].borderClient.SetActive(false);
             m_charactersContainers[playerId].playerIcon.color = m_playerColor;
-        }
+        }*/
 
         m_charactersContainers[playerId].backgroundCharacter.SetActive(true);
         m_charactersContainers[playerId].waitingText.SetActive(false);
@@ -393,6 +381,7 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
         {
             m_readyButton.SetActive(false);
             m_cancelButton.SetActive(true);
+
         }
         else if (!isReady && charactersData[characterSelected].isSelectedForClientId(NetworkManager.Singleton.LocalClientId))
         {
@@ -413,6 +402,7 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
         charactersData[characterSelected].SetClientId(clientId);
         charactersData[characterSelected].SetPlayerId(clientId, playerId);
         m_playerStates[playerId].playerState = ConnectionState.ready;
+        m_charactersContainers[playerId].selectAnimator.SetBool("IsReady", true);
 
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
@@ -421,8 +411,6 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
         }
         else
         {
-            m_charactersContainers[playerId].border.SetActive(false);
-            m_charactersContainers[playerId].borderReady.SetActive(true);
             m_charactersContainers[playerId].backgroundCharacter.SetActive(false);
             m_charactersContainers[playerId].backgroundCharacterReady.SetActive(true);
         }
@@ -446,18 +434,15 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
     void PlayerNotReadyClientRpc(ulong clientId, int playerId, int characterSelected)
     {
         charactersData[characterSelected].SetClientId(clientId, true);
+        m_charactersContainers[playerId].selectAnimator.SetBool("IsReady", false);
 
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
-            m_charactersContainers[playerId].borderClient.SetActive(true);
             m_charactersContainers[playerId].backgroundClientCharacterReady.SetActive(false);
             m_charactersContainers[playerId].backgroundCharacter.SetActive(true);
         }
         else
         {
-            m_charactersContainers[playerId].border.SetActive(true);
-            m_charactersContainers[playerId].borderReady.SetActive(false);
-            m_charactersContainers[playerId].borderClient.SetActive(false);
             m_charactersContainers[playerId].backgroundCharacter.SetActive(true);
             m_charactersContainers[playerId].backgroundCharacterReady.SetActive(false);
         }

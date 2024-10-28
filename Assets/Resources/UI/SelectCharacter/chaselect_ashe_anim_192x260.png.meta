@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1ff4c3a5707e9424793e93339f48cb95
+guid: b8cef04b0a089b74f973a39807fc8c70
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -99,7 +99,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,7 +120,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -151,9 +151,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 192
+        width: 184
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,9 +173,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_1
       rect:
         serializedVersion: 2
-        x: 192
+        x: 197
         y: 0
-        width: 192
+        width: 182
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -195,9 +195,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_2
       rect:
         serializedVersion: 2
-        x: 384
+        x: 389
         y: 0
-        width: 192
+        width: 182
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -239,9 +239,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_4
       rect:
         serializedVersion: 2
-        x: 768
+        x: 769
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -261,9 +261,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_5
       rect:
         serializedVersion: 2
-        x: 960
+        x: 961
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -283,9 +283,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_6
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 1153
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -305,9 +305,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_7
       rect:
         serializedVersion: 2
-        x: 1344
+        x: 1345
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -327,9 +327,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_8
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1537
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -349,9 +349,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_9
       rect:
         serializedVersion: 2
-        x: 1728
+        x: 1729
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -371,9 +371,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_10
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 1921
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -393,9 +393,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_11
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 2113
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -415,9 +415,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_12
       rect:
         serializedVersion: 2
-        x: 2304
+        x: 2305
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -437,9 +437,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_13
       rect:
         serializedVersion: 2
-        x: 2496
+        x: 2497
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -459,9 +459,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_14
       rect:
         serializedVersion: 2
-        x: 2688
+        x: 2689
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -481,9 +481,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_15
       rect:
         serializedVersion: 2
-        x: 2880
+        x: 2881
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -503,9 +503,9 @@ TextureImporter:
       name: chaselect_ashe_anim_192x260_16
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 3073
         y: 0
-        width: 192
+        width: 190
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -525,7 +525,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 37229d91c3528ef479f08b26d37d3e37
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 

@@ -15,6 +15,7 @@ namespace AshGreen.Character
         [Header("Data")]
         public string characterName;            // 캐릭터명
         public Sprite profileImg;
+        public RuntimeAnimatorController propfileAni;
         public Sprite ingameImg;
         public Sprite iconSprite;          // 캐릭터 icon
         public GameObject playerPre; //플레이어 프리펩
