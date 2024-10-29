@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 8905731360636476965}
   - component: {fileID: 1845433819012142964}
   - component: {fileID: 2413336476260039809}
+  - component: {fileID: 7095473417415495779}
   m_Layer: 5
   m_Name: Leave Session
   m_TagString: Untagged
@@ -221,7 +222,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8905731360636476965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7095473417415495779}
+        m_TargetAssemblyTypeName: AshGreen.UI.BtnController, Assembly-CSharp
+        m_MethodName: OnShutdown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2413336476260039809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +249,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SessionLeft:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7095473417415495779}
+        m_TargetAssemblyTypeName: AshGreen.UI.BtnController, Assembly-CSharp
+        m_MethodName: OnShutdown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7095473417415495779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934194548313821817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145a85e000008640b8638030e7fe11d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3171209713384652359
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +423,7 @@ GameObject:
   - component: {fileID: 449052562118874240}
   - component: {fileID: 248055580953529382}
   - component: {fileID: 5726609022971554539}
+  - component: {fileID: 3691305225682045503}
   m_Layer: 5
   m_Name: Leave Session
   m_TagString: Untagged
@@ -494,7 +532,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 449052562118874240}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7095473417415495779}
+        m_TargetAssemblyTypeName: AshGreen.UI.BtnController, Assembly-CSharp
+        m_MethodName: OnShutdown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5726609022971554539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,7 +559,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SessionLeft:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7095473417415495779}
+        m_TargetAssemblyTypeName: AshGreen.UI.BtnController, Assembly-CSharp
+        m_MethodName: OnShutdown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3691305225682045503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385171970686024247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2145a85e000008640b8638030e7fe11d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4691623064576002340
 GameObject:
   m_ObjectHideFlags: 0
