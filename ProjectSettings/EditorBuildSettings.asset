@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victory.unity
     guid: bdb70b43d6568764687cb282be495bd2
+  - enabled: 1
+    path: Assets/Widgets/Scenes/WidgetsQuickstart.unity
+    guid: c74d08495c5066c499e63d519040d5fd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b1409dc58847d0248a973629abc7df87, type: 3}
   m_UseUCBPForAssetBundles: 0

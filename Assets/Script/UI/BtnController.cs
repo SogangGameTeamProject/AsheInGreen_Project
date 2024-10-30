@@ -7,14 +7,14 @@ namespace AshGreen.UI
     {
         private ulong clientId;
 
-        private void Start()
+        private void OnEnable()
         {
             clientId = NetworkManager.Singleton.LocalClientId;
+            Debug.Log("Start clientId: " + clientId);
         }
 
         public void OnShutdown()
         {
-            
             ClientConnection.Instance.RemoveClient(clientId);
         }
     } 

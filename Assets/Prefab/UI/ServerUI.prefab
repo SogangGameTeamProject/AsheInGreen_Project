@@ -1599,6 +1599,7 @@ GameObject:
   - component: {fileID: 3703077814617484270}
   - component: {fileID: 6656251026323825875}
   - component: {fileID: 7772671233778810112}
+  - component: {fileID: 8166542295797325551}
   m_Layer: 5
   m_Name: Leave Session
   m_TagString: Untagged
@@ -1622,7 +1623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1386, y: -101}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1606421154064205428
@@ -1670,7 +1671,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8651279485118988984}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1722,6 +1723,19 @@ MonoBehaviour:
   SessionLeft:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8166542295797325551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8651279485118988984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03011aa0d1f46be4ca8f380967901056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leaveSessionBtn: {fileID: 6656251026323825875}
 --- !u!1 &8984923930964923483
 GameObject:
   m_ObjectHideFlags: 0

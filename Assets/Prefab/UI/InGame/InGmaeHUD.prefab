@@ -250,7 +250,7 @@ MonoBehaviour:
   SessionLeft:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7095473417415495779}
+      - m_Target: {fileID: 3691305225682045503}
         m_TargetAssemblyTypeName: AshGreen.UI.BtnController, Assembly-CSharp
         m_MethodName: OnShutdown
         m_Mode: 1
@@ -560,7 +560,7 @@ MonoBehaviour:
   SessionLeft:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7095473417415495779}
+      - m_Target: {fileID: 3691305225682045503}
         m_TargetAssemblyTypeName: AshGreen.UI.BtnController, Assembly-CSharp
         m_MethodName: OnShutdown
         m_Mode: 1

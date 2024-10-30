@@ -5,7 +5,7 @@ using AshGreen.Character;
 using Unity.Services.Multiplayer;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
-
+using Unity.Multiplayer.Widgets;
 
 public class ClientConnection : NetworkSingleton<ClientConnection>
 {
@@ -14,6 +14,33 @@ public class ClientConnection : NetworkSingleton<ClientConnection>
 
     [SerializeField]
     private CharacterConfig[] m_characterDatas;
+
+    private NetworkManager m_networkManager;
+
+    private void Start()
+    {
+        m_networkManager = NetworkManager.Singleton;
+        if (m_networkManager)
+        {
+            m_networkManager.OnClientDisconnectCallback += OnServerDisconnected;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (m_networkManager)
+        {
+            m_networkManager.OnClientDisconnectCallback -= OnServerDisconnected;
+        }
+    }
+
+    private void OnServerDisconnected(ulong clientId)
+    {
+        if(clientId == NetworkManager.Singleton.LocalClientId)
+        {
+            Shutdown();
+        }
+    }
 
     // This is a check for some script that depends on the client where it leaves
     // to check if this was a client that should no be allowed an there for the code should not run
@@ -83,7 +110,8 @@ public class ClientConnection : NetworkSingleton<ClientConnection>
                 TargetClientIds = new ulong[] { clientId }
             }
         };
-
+        Debug.Log("clientId: " + clientId);
+        Debug.Log("Send: "+clientRpcParams.Send);
         // Only send the rpc to the client that will be shutdown
         ShutdownClientRpc(clientRpcParams);
     }
@@ -105,11 +133,13 @@ public class ClientConnection : NetworkSingleton<ClientConnection>
     [ClientRpc]
     private void ShutdownClientRpc(ClientRpcParams clientRpcParams = default)
     {
+        Debug.Log("ShutdownRpc");
         Shutdown();
     }
 
     private void Shutdown()
     {
+        Debug.Log("Shutdown");
         NetworkManager.Singleton.Shutdown();
         LoadingSceneManager.Instance.LoadScene(SceneName.Menu, false);
     }
