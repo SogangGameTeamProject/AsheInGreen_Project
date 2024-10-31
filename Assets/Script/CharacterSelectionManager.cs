@@ -228,6 +228,13 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
         m_charactersContainers[playerId].nameContainer.gameObject.SetActive(true);
         m_charactersContainers[playerId].nameContainer.sprite =
             charactersData[characterSelected].nameImg;
+        //스킬 아이콘 설정
+        m_charactersContainers[playerId].mainSkillIcon.sprite =
+            charactersData[characterSelected].skills[0].skillIcon;
+        m_charactersContainers[playerId].secondarySkillIcon.sprite =
+            charactersData[characterSelected].skills[1].skillIcon;
+        m_charactersContainers[playerId].spesialSkillIcon.sprite =
+            charactersData[characterSelected].skills[2].skillIcon;
 
         //SetCharacterColor(playerId, characterSelected);
     }
