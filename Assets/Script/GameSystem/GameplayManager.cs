@@ -31,6 +31,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     private Transform[] m_StartingPositions;
 
     private int m_numberOfPlayerConnected;
+    [SerializeField]
     private List<ulong> m_connectedClients = new List<ulong>();
     public List<PlayerController> m_player = new List<PlayerController>();
 
@@ -195,20 +196,18 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     {
         // Save the clients 
         m_connectedClients.Add(clientId);
-
         // Check if is the last client
         if (m_connectedClients.Count < NetworkManager.Singleton.ConnectedClients.Count)
             return;
-
         // For each client spawn and set UI
         foreach (var client in m_connectedClients)
         {
             int index = 0;
-
             foreach (CharacterConfig data in m_charactersData)
             {
-                if (data.GetClientId(clientId) == clientId)
+                if (data.GetClientId(clientId) == client)
                 {
+                    
                     GameObject player =
                         NetworkObjectSpawner.SpawnNewNetworkObjectAsPlayerObject(
                             data.playerPre,
@@ -218,7 +217,6 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
                     PlayerController playerController =
                         player.GetComponent<PlayerController>();
-                    playerController.characterConfig = data;
                     playerController.gameplayManager = this;
                     m_player.Add(playerController);
                     SetPlayerUIClientRpc(playerController.GetComponent<NetworkObject>());

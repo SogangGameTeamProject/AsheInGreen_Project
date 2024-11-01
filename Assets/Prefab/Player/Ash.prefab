@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 6167815754311996577}
   - component: {fileID: 1540418265607757292}
   m_Layer: 3
-  m_Name: Player
+  m_Name: Ash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -95,6 +95,7 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
     // Here we set up what to do for each scene, like changing the music
     private void OnLoadComplete(ulong clientId, string sceneName, LoadSceneMode loadSceneMode)
     {
+        Debug.Log("OnLoadComplete clientId: " + clientId);
         // We only care the host/server is loading because every manager handles
         // their information and behavior on the server runtime
         if (!NetworkManager.Singleton.IsServer)
@@ -115,6 +116,7 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
 
             // When a client/host connects tell the manager to create the ship and change the music
             case SceneName.Gameplay:
+                Debug.Log("Gameplay Init: "+ clientId);
                 GameplayManager.Instance.ServerSceneInit(clientId);
                 break;
 
