@@ -189,7 +189,7 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
         m_charactersContainers[playerId].backgroundCharacter.SetActive(false);
         m_charactersContainers[playerId].backgroundCharacterReady.SetActive(false);
         m_charactersContainers[playerId].backgroundClientCharacterReady.SetActive(false);
-        m_charactersContainers[playerId].waitingText.SetActive(true);
+        //m_charactersContainers[playerId].waitingText.SetActive(true);
     }
 
     public bool IsReady(int playerId)

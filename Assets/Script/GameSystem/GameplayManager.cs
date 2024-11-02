@@ -196,18 +196,26 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     {
         // Save the clients 
         m_connectedClients.Add(clientId);
+        
         // Check if is the last client
         if (m_connectedClients.Count < NetworkManager.Singleton.ConnectedClients.Count)
             return;
         // For each client spawn and set UI
         foreach (var client in m_connectedClients)
         {
+            Debug.Log("client: " + client + ", m_connectedClients: " + m_connectedClients.Count);
             int index = 0;
             foreach (CharacterConfig data in m_charactersData)
             {
-                if (data.GetClientId(clientId) == client)
+                Debug.Log("선택 클라이언트 ID 추력");
+                foreach (var val in data.selectClientIds)
                 {
-                    
+                    Debug.Log(val.Key + ", " + val.Value);
+                }
+                Debug.Log("data.GetClientId(clientId): " + data.GetClientId(client) + " client: " + client);
+                if (data.GetClientId(client) == client)
+                {
+                    Debug.Log("캐릭터 찾음: " + client);
                     GameObject player =
                         NetworkObjectSpawner.SpawnNewNetworkObjectAsPlayerObject(
                             data.playerPre,

@@ -105,17 +105,12 @@ public class PlayerCharSelection : NetworkBehaviour
                 }
                 else
                 {
-                    // if selected check if is selected by me
-                    if (CharacterSelectionManager.Instance.IsSelectedByPlayer(
-                            m_playerId.Value, m_charSelected.Value))
-                    {
-                        // If it's selected by me, de-select
-                        CharacterSelectionManager.Instance.SetPlayerReadyUIButtons(
-                            false,
-                            m_charSelected.Value);
+                    // If it's selected by me, de-select
+                    CharacterSelectionManager.Instance.SetPlayerReadyUIButtons(
+                        false,
+                        m_charSelected.Value);
 
-                        NotReadyServerRpc();
-                    }
+                    NotReadyServerRpc();
                 }
             }
 

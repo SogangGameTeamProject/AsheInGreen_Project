@@ -7,6 +7,7 @@ using System.Collections;
 using Unity.Netcode;
 using static UnityEngine.Rendering.DebugUI;
 using Newtonsoft.Json.Linq;
+
 namespace AshGreen.Character
 {
     [CreateAssetMenu(fileName = "CharacterConfig", menuName = "Scriptable Objects/Character/CharacterConfig")]
@@ -58,7 +59,7 @@ namespace AshGreen.Character
 
         public ulong GetClientId(ulong clientId)
         {
-            ulong id = 0;
+            ulong id = 9999;
 
             ulong localId = clientId;
             if (selectClientIds.ContainsKey(localId))
