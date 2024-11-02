@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -350,7 +350,6 @@ MonoBehaviour:
     state: {fileID: 6300172891334614720}
   - type: 2
     state: {fileID: 1540876525215466226}
-  characterConfig: {fileID: 11400000, guid: 2ed7ea5876deeeb4cbc67290001e283f, type: 2}
   nowHp:
     m_InternalValue: 0
   takenDamageCoefficient:
@@ -360,6 +359,7 @@ MonoBehaviour:
   projectilesLayer:
     serializedVersion: 2
     m_Bits: 128
+  enemyConfig: {fileID: 11400000, guid: 90c884179e428f74cb9f959591dbc34d, type: 2}
 --- !u!114 &924884067952727375
 MonoBehaviour:
   m_ObjectHideFlags: 0

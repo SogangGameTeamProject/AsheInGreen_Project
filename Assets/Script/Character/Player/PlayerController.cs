@@ -17,6 +17,9 @@ namespace AshGreen.Character.Player
         public CharacterSkillManager _characterSkillManager = null;
         public Transform firePoint = null;
 
+
+        public CharacterConfig characterConfig = null;//기본능력치가 저장되는 변수
+
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
@@ -26,6 +29,11 @@ namespace AshGreen.Character.Player
             nowHp.OnValueChanged += NowHpUpdateHUDRPC;
 
             MaxHpUpdateHUDRPC(MaxHP, MaxHP);
+
+            if (IsOwner)
+            {
+                OnSetStatusRpc();//스테이터스 값 초기화
+            }
         }
 
         public override void OnNetworkDespawn()
@@ -35,6 +43,25 @@ namespace AshGreen.Character.Player
             level.OnValueChanged -= LevelUpdateHUDRPC;
             addMaxHp.OnValueChanged -= MaxHpUpdateHUDRPC;
             nowHp.OnValueChanged -= NowHpUpdateHUDRPC;
+        }
+
+        //캐릭터 스테이터스값 초기 설정
+        [Rpc(SendTo.Server)]
+        private void OnSetStatusRpc()
+        {
+            if (characterConfig)
+            {
+                Debug.Log("데이터 초기화");
+                LevelUpEx.Value = characterConfig.LevelUpEx;
+                baseMaxHP.Value = characterConfig.MaxHP;
+                nowHp.Value = baseMaxHP.Value;
+                GrowthAttackPower.Value = characterConfig.GrowthAttackPower;
+                GrowthPerAttackPower.Value = characterConfig.GrowthPerAttackPower;
+                baseAttackPower.Value = characterConfig.AttackPower;
+                baseMoveSpeed.Value = characterConfig.MoveSpeed;
+                baseJumpPower.Value = characterConfig.JumpPower;
+                baseJumMaxNum.Value = characterConfig.JumMaxNum;
+            }
         }
 
         //UI 업데이트 함수들

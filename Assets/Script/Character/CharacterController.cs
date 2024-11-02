@@ -86,7 +86,6 @@ namespace AshGreen.Character
         }
 
         //------스테이터스 관련 전역 변수 선언------
-        public CharacterConfig characterConfig = null;//기본능력치가 저장되는 변수
         //레벨 관련
         protected NetworkVariable<int> LevelUpEx = new NetworkVariable<int>(0);
         protected NetworkVariable<int> level = new NetworkVariable<int>(1);
@@ -120,7 +119,8 @@ namespace AshGreen.Character
             get
             {
                 int maxHp =
-                    (int)(baseMaxHP.Value + addMaxHp.Value + (level.Value * GrowthMaxHP.Value) * (level.Value * GrowthPerMaxHP.Value));
+                    (int)(baseMaxHP.Value + addMaxHp.Value + (level.Value * GrowthMaxHP.Value));
+                maxHp += (int)(maxHp * (level.Value * GrowthPerMaxHP.Value));
                 return maxHp > 0 ? maxHp : 1;
             }
         }
@@ -164,12 +164,8 @@ namespace AshGreen.Character
             get
             {   
                 float attackPower = baseAttackPower.Value + (level.Value * GrowthAttackPower.Value) + addAttackPower.Value;
-                Debug.Log(baseAttackPower.Value);
-                Debug.Log((level.Value * GrowthAttackPower.Value));
-                Debug.Log(addAttackPower.Value);
-                Debug.Log(attackPower);
                 if(GrowthPerAttackPower.Value > 0)
-                    attackPower *= GrowthPerAttackPower.Value;
+                    attackPower += attackPower * (level.Value * GrowthPerAttackPower.Value);
                 if(addAttackPerPower.Value > 0)
                     attackPower *= addAttackPerPower.Value;
 
@@ -375,6 +371,9 @@ namespace AshGreen.Character
 
             combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성
 
+            if(IsOwner)
+                CombatStateTransitionRpc(CombatStateType.Idle);
+
             //캐릭터 방향 값 변경 시 처리
             characterDirection.OnValueChanged += OnFlipRpc;
 
@@ -384,16 +383,6 @@ namespace AshGreen.Character
             //피격 타격 액션 설정
             _damageReceiver.TakeDamageAction += TakeDamage;
             _damageReceiver.DealDamageAction += DealDamage;
-
-
-            _animator.runtimeAnimatorController = characterConfig.animator;
-
-            if (IsOwner)
-            {
-                OnSetStatusRpc();//스테이터스 값 초기화
-
-                CombatStateTransitionRpc(CombatStateType.Idle);
-            }
         }
 
         public override void OnNetworkDespawn()
@@ -414,24 +403,7 @@ namespace AshGreen.Character
                 combatStateContext.StateUpdate();
         }
 
-        //캐릭터 스테이터스값 초기 설정
-        [Rpc(SendTo.Server)]
-        protected virtual void OnSetStatusRpc()
-        {
-            if (characterConfig)
-            {
-                Debug.Log("데이터 초기화");
-                LevelUpEx.Value = characterConfig.LevelUpEx;
-                baseMaxHP.Value = characterConfig.MaxHP;
-                nowHp.Value = baseMaxHP.Value;
-                GrowthAttackPower.Value = characterConfig.GrowthAttackPower;
-                GrowthPerAttackPower.Value = characterConfig.GrowthPerAttackPower;
-                baseAttackPower.Value = characterConfig.AttackPower;
-                baseMoveSpeed.Value = characterConfig.MoveSpeed;
-                baseJumpPower.Value = characterConfig.JumpPower;
-                baseJumMaxNum.Value = characterConfig.JumMaxNum;
-            }
-        }
+        
 
         /// <summary>
         /// 피격 타격 처리 메서드

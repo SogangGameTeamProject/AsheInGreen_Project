@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 
 namespace AshGreen.Character
 {
-    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "Scriptable Objects/Character/CharacterConfig")]
+    [CreateAssetMenu(fileName = "CharacterConfig", menuName = "Scriptable Objects/Character/PlayerConfig")]
     public class CharacterConfig : ScriptableObject
     {
         [Header("Data")]
@@ -21,8 +21,6 @@ namespace AshGreen.Character
         public Sprite ingameImg;
         public Sprite iconSprite;          // 캐릭터 icon
         public GameObject playerPre; //플레이어 프리펩
-        [Header("애니메이션 설정")]
-        public RuntimeAnimatorController animator;
         [Header("초기 스테이터스")]
         [Tooltip("레벨업에 필요한 경험치")]
         public int LevelUpEx = 200;
