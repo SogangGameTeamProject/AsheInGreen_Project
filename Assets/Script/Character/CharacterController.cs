@@ -397,7 +397,7 @@ namespace AshGreen.Character
 
         }
 
-        private void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             if (IsSpawned)
                 combatStateContext.StateUpdate();
