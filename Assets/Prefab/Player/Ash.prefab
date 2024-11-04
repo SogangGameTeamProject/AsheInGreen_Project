@@ -1119,7 +1119,6 @@ MonoBehaviour:
     state: {fileID: 1170719951875528351}
   - type: 2
     state: {fileID: 5325209982190128559}
-  characterConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
   nowHp:
     m_InternalValue: 0
   takenDamageCoefficient:
@@ -1135,6 +1134,7 @@ MonoBehaviour:
   _movementController: {fileID: 491064707563821348}
   _characterSkillManager: {fileID: 5175599678637926579}
   firePoint: {fileID: 5105890872324677893}
+  characterConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
 --- !u!114 &491064707563821348
 MonoBehaviour:
   m_ObjectHideFlags: 0

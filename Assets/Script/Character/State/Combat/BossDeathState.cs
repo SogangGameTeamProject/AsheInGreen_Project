@@ -13,6 +13,7 @@ namespace AshGreen.Character
 
         private void DeathEvent()
         {
+            NetworkObject.Despawn(this.gameObject);
             GameplayManager.Instance.BossDefeat();
         }
     }

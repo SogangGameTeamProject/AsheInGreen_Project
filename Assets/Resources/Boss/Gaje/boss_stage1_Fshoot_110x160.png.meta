@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,12 +109,12 @@ TextureImporter:
       name: boss_stage1_Fshoot_110x160_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 96
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 110
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: boss_stage1_Fshoot_110x160_1
       rect:
         serializedVersion: 2
-        x: 117
+        x: 110
         y: 0
-        width: 96
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 110
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: boss_stage1_Fshoot_110x160_2
       rect:
         serializedVersion: 2
-        x: 227
+        x: 220
         y: 0
-        width: 96
-        height: 151
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 110
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ecedbf56c8d07fe469a6ffd3556cdf34
     internalID: 0
     vertices: []
     indices: 

@@ -62,9 +62,8 @@ namespace AshGreen.Character
             }
         }
 
-        //-----전투 상태 과련 함수----
         //전투 상태 변환 함수
-        [Rpc(SendTo.ClientsAndHost)]
+        [Rpc(SendTo.Server)]
         public void PatteurnStateTransitionRpc(int index)
         {
             IState<EnemyController> state = null;
@@ -73,6 +72,37 @@ namespace AshGreen.Character
             patteurnStateContext.TransitionTo(state);
         }
 
+        //---------서버에서의 애니메이션 파라미터 설정을 하는 메서드들-------------
+
+        //Float타입의 파라미터를 변경하는 메서드
+        [Rpc(SendTo.ClientsAndHost)]
+        public void SetFloatAniParaRpc(string paraName, float setValue)
+        {
+            _animator.SetFloat(paraName, setValue);
+        }
+
+        //Int타입의 파라미터를 변경하는 메서드
+        [Rpc(SendTo.ClientsAndHost)]
+        public void SetIntAniParaRpc(string paraName, int setValue)
+        {
+            _animator.SetInteger(paraName, setValue);
+        }
+
+        //Bool타입의 파라미터를 변경하는 메서드
+        [Rpc(SendTo.ClientsAndHost)]
+        public void SetBoolAniParaRpc(string paraName, bool setValue)
+        {
+            _animator.SetBool(paraName, setValue);
+        }
+
+        //Trigger타입의 파라미터를 변경하는 메서드
+        [Rpc(SendTo.ClientsAndHost)]
+        public void SetTriggerAniParaRpc(string paraName)
+        {
+            _animator.SetTrigger(paraName);
+        }
+
+        //보스 체력 바 업데이트 메서드
         [Rpc(SendTo.ClientsAndHost)]
         private void UpdateHpHUDRPC(int previousValue, int newValue)
         {

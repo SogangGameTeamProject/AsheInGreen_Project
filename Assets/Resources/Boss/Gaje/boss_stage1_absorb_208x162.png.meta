@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 2da07d06cc13bb844a0d8a588a64c5de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6158263271864830770
+    second: boss_stage1_absorb_208x162_0
+  - first:
+      213: 5001214666788362776
+    second: boss_stage1_absorb_208x162_1
+  - first:
+      213: -1740688884351174673
+    second: boss_stage1_absorb_208x162_2
+  - first:
+      213: 4448855238419793683
+    second: boss_stage1_absorb_208x162_3
+  - first:
+      213: -6752605196423450048
+    second: boss_stage1_absorb_208x162_4
+  - first:
+      213: 1089169467670018147
+    second: boss_stage1_absorb_208x162_5
+  - first:
+      213: 1909457835913934165
+    second: boss_stage1_absorb_208x162_6
+  - first:
+      213: 1069927682544536548
+    second: boss_stage1_absorb_208x162_7
+  - first:
+      213: 7360791747514248499
+    second: boss_stage1_absorb_208x162_8
+  - first:
+      213: -3641598955447153228
+    second: boss_stage1_absorb_208x162_9
+  - first:
+      213: -6682939503608373981
+    second: boss_stage1_absorb_208x162_10
+  - first:
+      213: 6018367416717490778
+    second: boss_stage1_absorb_208x162_11
+  - first:
+      213: -4630346844619357335
+    second: boss_stage1_absorb_208x162_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 486
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b86d061db867550800000000000000
+      internalID: 6158263271864830770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 486
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ad46bed32e76540800000000000000
+      internalID: 5001214666788362776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 486
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7f6c7aea4d7d7e0800000000000000
+      internalID: -1740688884351174673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 486
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317c52fa4428dbd30800000000000000
+      internalID: 4448855238419793683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 324
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04239b6c95de942a0800000000000000
+      internalID: -6752605196423450048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_5
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 324
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3683ca43cd18d1f00800000000000000
+      internalID: 1089169467670018147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_6
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 324
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5557c37f8c1cf7a10800000000000000
+      internalID: 1909457835913934165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_7
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 324
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb8c6dfe8529de00800000000000000
+      internalID: 1069927682544536548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 162
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33da6306819c62660800000000000000
+      internalID: 7360791747514248499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 162
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd83264b01767dc0800000000000000
+      internalID: -3641598955447153228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_10
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 162
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d5fffdded6143a0800000000000000
+      internalID: -6682939503608373981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_11
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 162
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a3b316749858350800000000000000
+      internalID: 6018367416717490778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stage1_absorb_208x162_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963cc93d314bdbfb0800000000000000
+      internalID: -4630346844619357335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b066e4c3e97b0454aaea4d50daf10a18
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boss_stage1_absorb_208x162_0: 6158263271864830770
+      boss_stage1_absorb_208x162_1: 5001214666788362776
+      boss_stage1_absorb_208x162_10: -6682939503608373981
+      boss_stage1_absorb_208x162_11: 6018367416717490778
+      boss_stage1_absorb_208x162_12: -4630346844619357335
+      boss_stage1_absorb_208x162_2: -1740688884351174673
+      boss_stage1_absorb_208x162_3: 4448855238419793683
+      boss_stage1_absorb_208x162_4: -6752605196423450048
+      boss_stage1_absorb_208x162_5: 1089169467670018147
+      boss_stage1_absorb_208x162_6: 1909457835913934165
+      boss_stage1_absorb_208x162_7: 1069927682544536548
+      boss_stage1_absorb_208x162_8: 7360791747514248499
+      boss_stage1_absorb_208x162_9: -3641598955447153228
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -18,9 +18,6 @@ namespace AshGreen.Character
 
     public interface IDamageable
     {
-        public event Action<float> TakeDamageAction;
-        public event Action<CharacterController, float, AttackType, bool> DealDamageAction;
-
         //피격 처리 메서드
         public void TakeDamage(float damage);
 
