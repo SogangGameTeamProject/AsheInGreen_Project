@@ -34,7 +34,6 @@ namespace AshGreen.DamageObj
                 if (!collision.GetComponent<NetworkObject>().IsOwner)
                     return;
 
-                Debug.Log("데미지 오브젝트 데미지 부여");
                 //넉백 여부에 따른 넉백
                 if (isNockback)
                 {
@@ -50,7 +49,7 @@ namespace AshGreen.DamageObj
                     }
                 }
 
-                if (caster == null)
+                if (caster == null || dealType == AttackType.Enemy)
                     damageable.TakeDamage(damage);
                 else
                     caster.GetComponent<DamageReceiver>().DealDamage(collision.GetComponent<CharacterController>(), damage, dealType);

@@ -17,6 +17,8 @@ namespace AshGreen.Character
         public List<EnemyPatteurnStateInit> patteurnStateList//상태 관리를 위한 리스트
             = new List<EnemyPatteurnStateInit>();
         private int runningPatteurnStateIndex = -1;
+        [SerializeField]
+        private int startPatteurnIndex = 0;//시작할 패턴
 
         public override void OnNetworkSpawn()
         {

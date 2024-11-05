@@ -10,7 +10,7 @@ namespace AshGreen.Platform
 {
     public enum PlatformStateType
     {
-        IDLE = 0, HIT, DESTROY, MOVE, APPEARED
+        IDLE = 0, HIT, DESTROY, MOVE
     }
 
     public class PlatformController : NetworkBehaviour, IDamageable
@@ -26,11 +26,13 @@ namespace AshGreen.Platform
         }
         public List<StateData> stateList//상태 관리를 위한 리스트
             = new List<StateData>();
+        [SerializeField]
+        private PlatformStateType startState = PlatformStateType.IDLE;
 
 
         //HP 관련 설정값
-        protected NetworkVariable<int> maxHp = new NetworkVariable<int>();
-        protected NetworkVariable<int> nowHp = new NetworkVariable<int>();
+        protected NetworkVariable<int> maxHp = new NetworkVariable<int>(1);
+        protected NetworkVariable<int> nowHp = new NetworkVariable<int>(1);
         protected int NowHp
         {
             get
@@ -51,9 +53,18 @@ namespace AshGreen.Platform
             NowHp = value;
         }
 
+        public override void OnNetworkSpawn()
+        {
+            base.OnNetworkSpawn();
+            stateContext = new StateContext<PlatformController>(this);
+            //상태 초기화
+            if (IsServer)
+                StateTransitionRpc(startState);
+        }
+
         //--------상태 패턴------------
         [Rpc(SendTo.ClientsAndHost)]
-        public void StateTransitionRpc(CombatStateType type)
+        public void StateTransitionRpc(PlatformStateType type)
         {
             IState<PlatformController> state = null;
             StateData findState = stateList.Find(state => state.type.Equals(type));
@@ -72,9 +83,14 @@ namespace AshGreen.Platform
             
         }
 
+        //플렛폼 피격 쳐리
         public void TakeDamage(float damage)
         {
-            
+            SetNowHpRpc(NowHp - 1);
+            if (NowHp - 1 > 0)
+                StateTransitionRpc(PlatformStateType.HIT);
+            else
+                StateTransitionRpc(PlatformStateType.DESTROY);
         }
     }
 }

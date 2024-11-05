@@ -12,7 +12,7 @@ namespace AshGreen.Character
         protected SoundManager _soundManager = null;
         protected Coroutine runningCoroutine = null;
         [SerializeField]
-        private int nextPatteurnIndex = 0;
+        private int nextPatteurnIndex = 0;//다음 패턴 인덱스 번호
 
         public virtual void Enter(EnemyController controller)
         {
@@ -26,15 +26,27 @@ namespace AshGreen.Character
             runningCoroutine = StartCoroutine(ExePatteurn());
         }
 
-        public abstract void StateUpdate();
-
-        public virtual void Exit()
+        public virtual void StateUpdate()
         {
-            _enemy.
+            //사망시 패턴 강제 종료
+            if(_enemy.runningCombatStateType == CombatStateType.Death)
+            {
+                StopCoroutine(runningCoroutine);
+                runningCoroutine = null;
+            }
         }
 
+        public abstract void Exit();
+
         //보스 패턴을 실질적으로 구현할 추상 코루틴
-        protected abstract IEnumerator ExePatteurn();
+        protected virtual IEnumerator ExePatteurn()
+        {
+            
+            //다음 패턴 전환
+            runningCoroutine = null;
+            _enemy.PatteurnStateTransitionRpc(nextPatteurnIndex);
+            yield return null;
+        }
 
         /// <summary>
         /// 플레이어의 위치를 구하는 메서드

@@ -5,12 +5,12 @@ using UnityEngine.TextCore.Text;
 
 namespace AshGreen.Platform
 {
-    public class PlatformStateInit : MonoBehaviour, IState<PlatformController>
+    public abstract class PlatformStateInit : NetworkBehaviour, IState<PlatformController>
     {
         protected PlatformController _controller = null;
         protected Animator _animator = null;
 
-        public void Enter(PlatformController context)
+        public virtual void Enter(PlatformController context)
         {
 
             //플레이어 초기화
@@ -21,16 +21,9 @@ namespace AshGreen.Platform
                 _animator = _controller.GetComponent<Animator>();
         }
 
-        public void Exit()
-        {
+        public abstract void Exit();
 
-        }
-
-        public void StateUpdate()
-        {
-
-        }
-
+        public abstract void StateUpdate();
 
     }
 }
