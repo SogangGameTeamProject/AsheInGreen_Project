@@ -1,6 +1,8 @@
+using AshGreen.Character.Player;
 using AshGreen.Sound;
 using AshGreen.State;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -13,6 +15,7 @@ namespace AshGreen.Character
         protected Coroutine runningCoroutine = null;
         [SerializeField]
         private int nextPatteurnIndex = 0;//다음 패턴 인덱스 번호
+        protected Rigidbody2D _rbody = null;
 
         public virtual void Enter(EnemyController controller)
         {
@@ -22,7 +25,9 @@ namespace AshGreen.Character
             //사운드 매니저 초기화
             if (_soundManager == null)
                 _soundManager = SoundManager.Instance;
-            
+            if(_rbody == null)
+                _rbody = _enemy.GetComponent<Rigidbody2D>();
+
             runningCoroutine = StartCoroutine(ExePatteurn());
         }
 
@@ -41,7 +46,6 @@ namespace AshGreen.Character
         //보스 패턴을 실질적으로 구현할 추상 코루틴
         protected virtual IEnumerator ExePatteurn()
         {
-            
             //다음 패턴 전환
             runningCoroutine = null;
             _enemy.PatteurnStateTransitionRpc(nextPatteurnIndex);
@@ -55,10 +59,45 @@ namespace AshGreen.Character
         /// <returns>플레이어 위치</returns>
         protected Vector2 GetPlayerPos(int findType)
         {
-            Vector2 playerPos = Vector2.zero;
+            Vector2 returnPos = Vector2.zero;
+            Vector2 thisPos = _enemy.gameObject.transform.position;
+            //모든 플레이어 컨트롤러 리스트로 저장
+            List<PlayerController> players = new List<PlayerController>(FindObjectsOfType<PlayerController>());
 
-            return playerPos;
+            //죽은 플레이어 리스트에서 삭제
+            foreach (var player in players)
+            {
+                if(player.runningCombatStateType == CombatStateType.Death)
+                    players.Remove(player);
+            }
+            //가까운 플레이어 찾기
+            if(findType == 0)
+            {
+                float distance = 99999;
+
+                foreach (var player in players)
+                {
+                    Vector2 pPos = (Vector2)player.transform.position;
+                    float dis = Vector2.Distance(pPos, thisPos);
+                    if (dis < distance)
+                    {
+                        distance = dis;
+                        returnPos = pPos;
+                    }
+                }
+            }
+            //랜덤 플레이어 찾기
+            else
+            {
+                // 랜덤 인덱스를 사용하여 리스트에서 랜덤 값 추출
+                int randomIndex = Random.Range(0, players.Count);
+
+                returnPos = players[randomIndex].gameObject.transform.position;
+            }
+
+            return returnPos;
         }
+
     }
 }
 

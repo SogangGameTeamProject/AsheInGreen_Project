@@ -31,8 +31,8 @@ namespace AshGreen.Platform
 
 
         //HP 관련 설정값
-        protected NetworkVariable<int> maxHp = new NetworkVariable<int>(1);
-        protected NetworkVariable<int> nowHp = new NetworkVariable<int>(1);
+        protected NetworkVariable<int> maxHp = new NetworkVariable<int>(2);
+        protected NetworkVariable<int> nowHp = new NetworkVariable<int>(2);
         protected int NowHp
         {
             get
@@ -56,10 +56,19 @@ namespace AshGreen.Platform
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
+            PlatformManager.Instance.platformList.Add(this);
+
             stateContext = new StateContext<PlatformController>(this);
             //상태 초기화
             if (IsServer)
                 StateTransitionRpc(startState);
+        }
+
+        public override void OnNetworkDespawn()
+        {
+            base.OnNetworkDespawn();
+
+            PlatformManager.Instance.platformList.Remove(this);
         }
 
         //--------상태 패턴------------

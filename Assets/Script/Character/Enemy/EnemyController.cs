@@ -26,8 +26,9 @@ namespace AshGreen.Character
 
             patteurnStateContext = new StateContext<EnemyController>(this);//콘텍스트 생성
 
-            if (IsOwner)
+            if (IsServer)
             {
+                PatteurnStateTransitionRpc(startPatteurnIndex);
                 OnSetStatusRpc();//스테이터스 값 초기화
             }
 
@@ -68,6 +69,7 @@ namespace AshGreen.Character
         [Rpc(SendTo.Server)]
         public void PatteurnStateTransitionRpc(int index)
         {
+            Debug.Log(index + "패턴 전환");
             IState<EnemyController> state = null;
             state = patteurnStateList[index].GetComponent<IState<EnemyController>>();
             runningPatteurnStateIndex = index;

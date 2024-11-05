@@ -326,6 +326,62 @@ MonoBehaviour:
     TransitionDuration: 0
     TriggerNameHash: 569220492
     TransitionIndex: 0
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 2081823275
+    DestinationState: -559594639
+    TransitionDuration: 0
+    TriggerNameHash: -518574389
+    TransitionIndex: 1
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 2081823275
+    DestinationState: 2125664144
+    TransitionDuration: 0
+    TriggerNameHash: 2044225590
+    TransitionIndex: 3
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 2081823275
+    DestinationState: -77122487
+    TransitionDuration: 0
+    TriggerNameHash: 1120429326
+    TransitionIndex: 4
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: -77122487
+    DestinationState: 646380074
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 0
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 2125664144
+    DestinationState: 646380074
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 0
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: -559594639
+    DestinationState: 646380074
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 0
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 310428712
+    DestinationState: 646380074
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 0
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 646380074
+    DestinationState: -1319424928
+    TransitionDuration: 0
+    TriggerNameHash: 569220492
+    TransitionIndex: 0
   m_Animator: {fileID: 2311938511817404395}
 --- !u!114 &4571093287936344998
 MonoBehaviour:
@@ -365,7 +421,7 @@ MonoBehaviour:
   - {fileID: 6956655952139360711}
   - {fileID: 8876423003236570222}
   - {fileID: 6016399103329859746}
-  - {fileID: 4765542301234746447}
+  - {fileID: 7891250084811313987}
   startPatteurnIndex: 0
 --- !u!114 &924884067952727375
 MonoBehaviour:
@@ -494,7 +550,7 @@ GameObject:
   - component: {fileID: 5252657126197029762}
   - component: {fileID: 6016399103329859746}
   m_Layer: 6
-  m_Name: AbsorbShootDownAttackPattern
+  m_Name: ShootDownAttackPattern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  nextPatteurnIndex: 0
+  nextPatteurnIndex: 3
 --- !u!1 &4629084896471371428
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  nextPatteurnIndex: 0
+  nextPatteurnIndex: 2
 --- !u!1 &5349994358136966372
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +743,7 @@ Transform:
   - {fileID: 1479064756659473538}
   - {fileID: 8556535882090308588}
   - {fileID: 5252657126197029762}
-  - {fileID: 7738939021958748605}
+  - {fileID: 7162939116043868967}
   m_Father: {fileID: 6716363405069832563}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7094228208666484993
@@ -721,7 +777,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6716363405069832563}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8526628619758342207
+--- !u!1 &7641967363428705700
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -729,22 +785,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7738939021958748605}
-  - component: {fileID: 4765542301234746447}
+  - component: {fileID: 5884069109075039510}
   m_Layer: 6
-  m_Name: SeagullShootDownAttackPattern
+  m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7738939021958748605
+--- !u!4 &5884069109075039510
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8526628619758342207}
+  m_GameObject: {fileID: 7641967363428705700}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1479064756659473538}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7762570901697893220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7162939116043868967}
+  - component: {fileID: 7891250084811313987}
+  m_Layer: 6
+  m_Name: WavesSaturation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7162939116043868967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7762570901697893220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -753,16 +840,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7357167355659675838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4765542301234746447
+--- !u!114 &7891250084811313987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8526628619758342207}
+  m_GameObject: {fileID: 7762570901697893220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5942ca781f53c2c4687fa73840653926, type: 3}
+  m_Script: {fileID: 11500000, guid: fa2319153881efc41a72f82dd0e0a71f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
@@ -796,7 +883,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5884069109075039510}
   m_Father: {fileID: 7357167355659675838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6956655952139360711
@@ -812,4 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  nextPatteurnIndex: 0
+  nextPatteurnIndex: 1
+  attackNum: 3
+  attackSpeed: 50
+  fistDealay: 2
