@@ -642,7 +642,7 @@ MonoBehaviour:
   howitzerInterval: 2
   howitzerY: 12
   howitzerFireNum: 2
-  howitzerCnt: 3
+  howitzerCnt: 4
   fireFirstDelay: 0.35
   fireLastDelay: 2
 --- !u!1 &5349994358136966372
