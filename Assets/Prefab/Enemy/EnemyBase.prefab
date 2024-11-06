@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -632,6 +632,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   nextPatteurnIndex: 2
+  moveSpeed: 100
+  oriPos: {x: 0, y: 0}
+  centerPos: {x: -1.5, y: -6.1}
+  howitzerPre: {fileID: 5003110354222387133, guid: a778f1a846ab8b1499d0dcab40f5dced, type: 3}
+  howitzerSpeed: 50
+  howitzerLifeTime: 2
+  attackCofficient: 1
+  howitzerInterval: 2
+  howitzerY: 12
+  howitzerFireNum: 2
+  howitzerCnt: 3
+  fireFirstDelay: 0.35
+  fireLastDelay: 2
 --- !u!1 &5349994358136966372
 GameObject:
   m_ObjectHideFlags: 0

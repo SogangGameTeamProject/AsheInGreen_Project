@@ -348,6 +348,8 @@ MonoBehaviour:
   - type: 2
     state: {fileID: 9130216585230316321}
   startState: 0
+  nowHp:
+    m_InternalValue: 2
 --- !u!1 &2921167619712257523
 GameObject:
   m_ObjectHideFlags: 0
