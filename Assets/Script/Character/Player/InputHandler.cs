@@ -79,6 +79,8 @@ namespace AshGreen.Character.Player
         //메인 스킬 입력 처리
         public void OnMainSkill(InputAction.CallbackContext context)
         {
+            if (_player.runningCombatStateType == CombatStateType.Death)
+                return;
             if (context.started)
             {
                 _player._characterSkillManager.PresseSkill(0);
@@ -92,6 +94,8 @@ namespace AshGreen.Character.Player
         //보조스킬 입력 처리
         public void OnSecondarySkill(InputAction.CallbackContext context)
         {
+            if (_player.runningCombatStateType == CombatStateType.Death)
+                return;
             if (context.started)
             {
                 _player._characterSkillManager.PresseSkill(1);
@@ -105,6 +109,8 @@ namespace AshGreen.Character.Player
         //특수스킬 입력 처리
         public void OnSpecialSkill(InputAction.CallbackContext context)
         {
+            if (_player.runningCombatStateType == CombatStateType.Death)
+                return;
             if (context.started)
             {
                 _player._characterSkillManager.PresseSkill(2);

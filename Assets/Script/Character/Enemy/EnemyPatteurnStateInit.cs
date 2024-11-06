@@ -15,7 +15,6 @@ namespace AshGreen.Character
         protected Coroutine runningCoroutine = null;
         [SerializeField]
         private int nextPatteurnIndex = 0;//다음 패턴 인덱스 번호
-        protected Rigidbody2D _rbody = null;
 
         public virtual void Enter(EnemyController controller)
         {
@@ -25,8 +24,6 @@ namespace AshGreen.Character
             //사운드 매니저 초기화
             if (_soundManager == null)
                 _soundManager = SoundManager.Instance;
-            if(_rbody == null)
-                _rbody = _enemy.GetComponent<Rigidbody2D>();
 
             runningCoroutine = StartCoroutine(ExePatteurn());
         }

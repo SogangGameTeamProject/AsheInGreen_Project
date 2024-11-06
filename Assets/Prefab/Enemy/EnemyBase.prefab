@@ -423,6 +423,7 @@ MonoBehaviour:
   - {fileID: 6016399103329859746}
   - {fileID: 7891250084811313987}
   startPatteurnIndex: 0
+  startDelayTime: 1
 --- !u!114 &924884067952727375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,7 +803,7 @@ Transform:
   m_GameObject: {fileID: 7641967363428705700}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 0, z: 0}
+  m_LocalPosition: {x: -3.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -902,5 +903,11 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   nextPatteurnIndex: 1
   attackNum: 3
+  attackCofficient: 1
   attackSpeed: 50
-  fistDealay: 2
+  minTargetingRange: 3.5
+  oriPos: {x: 0, y: 0}
+  firstDealay: 0.35
+  lastDealay: 0.5
+  attackPoint: {fileID: 5884069109075039510}
+  attackPre: {fileID: 235773664981108953, guid: 3bc4a91c965d84a4494cd3fbbf740db3, type: 3}

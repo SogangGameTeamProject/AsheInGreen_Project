@@ -19,7 +19,9 @@ namespace AshGreen.Platform
             if (!IsServer) return;
             currentTime += Time.deltaTime;
             if (currentTime > destroyDelayTime)
+            {
                 NetworkObject.Despawn(this.gameObject);
+            }  
         }
 
         public override void Exit()

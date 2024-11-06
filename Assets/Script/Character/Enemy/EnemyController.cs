@@ -19,6 +19,8 @@ namespace AshGreen.Character
         private int runningPatteurnStateIndex = -1;
         [SerializeField]
         private int startPatteurnIndex = 0;//시작할 패턴
+        [SerializeField]
+        private float startDelayTime = 1;
 
         public override void OnNetworkSpawn()
         {
@@ -28,7 +30,7 @@ namespace AshGreen.Character
 
             if (IsServer)
             {
-                PatteurnStateTransitionRpc(startPatteurnIndex);
+                Invoke("PatteurnStateInitRpc", startDelayTime);
                 OnSetStatusRpc();//스테이터스 값 초기화
             }
 
@@ -65,7 +67,16 @@ namespace AshGreen.Character
             }
         }
 
-        //전투 상태 변환 함수
+        //패턴 상태 초기화 함수
+        [Rpc(SendTo.Server)]
+        public void PatteurnStateInitRpc()
+        {
+            IState<EnemyController> state = null;
+            state = patteurnStateList[startPatteurnIndex].GetComponent<IState<EnemyController>>();
+            runningPatteurnStateIndex = startPatteurnIndex;
+            patteurnStateContext.TransitionTo(state);
+        }
+        //패턴 상태 변환 함수
         [Rpc(SendTo.Server)]
         public void PatteurnStateTransitionRpc(int index)
         {
