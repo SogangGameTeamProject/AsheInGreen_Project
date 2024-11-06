@@ -101,7 +101,6 @@ namespace AshGreen.Platform
         //플렛폼 피격 쳐리
         public void TakeDamage(float damage)
         {
-            
             if (NowHp - 1 > 0)
                 StateTransitionRpc(PlatformStateType.HIT);
             else
