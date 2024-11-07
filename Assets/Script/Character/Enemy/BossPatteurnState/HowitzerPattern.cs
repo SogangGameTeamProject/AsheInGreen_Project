@@ -1,5 +1,6 @@
 using AshGreen.Platform;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace AshGreen.Character{
@@ -28,9 +29,9 @@ namespace AshGreen.Character{
         [SerializeField]
         private int howitzerCnt = 3;//곡사포 한번 발사시 소환할 곡사포 수
         [SerializeField]
-        private float fireFirstDelay = 0.35f;
+        private float fireFirstDelay = 2f;
         [SerializeField]
-        private float fireLastDelay = 2f;
+        private float fireLastDelay = 0.35f;
 
         public override void Enter(EnemyController controller)
         {
@@ -69,6 +70,7 @@ namespace AshGreen.Character{
             for(int i = 0; i < howitzerFireNum; i++)
             {
                 Debug.Log("곡사포 발사");
+                yield return new WaitForSeconds(fireFirstDelay);
                 //랜덤 플레이어 위치와 가장 가까운 플랫폼 선택
                 Vector2 randomP = GetPlayerPos(1);
                 Vector2 targetP = _enemy.transform.position;
@@ -87,18 +89,26 @@ namespace AshGreen.Character{
 
                 //타겟 공격
                 float startX = targetP.x - (((int)howitzerCnt / 2) * howitzerInterval);
-                yield return new WaitForSeconds(fireFirstDelay);
+                List<Vector2> firePoints = new List<Vector2>();
                 for (int j = 0; j < howitzerCnt; j++)
                 {
+                    startX += howitzerInterval;
+                    firePoints.Add(new Vector2(startX, howitzerY));
+                }
+
+                for (int j = 0; j < howitzerCnt; j++)
+                {
+                    _enemy.SetTriggerAniParaRpc("IsFshoot");
+                    yield return new WaitForSeconds(fireLastDelay);
+
+                    int randomIndex = Random.Range(0, firePoints.Count-1);
+                    Vector2 firePoint = firePoints[randomIndex];
+                    firePoints.RemoveAt(randomIndex);
                     Debug.Log($"포탄{j}");
-                    _enemy.SetTriggerAniParaRpc("IsShooting");
                     CharacterController character = _enemy.GetComponent<CharacterController>();
                     ProjectileFactory.Instance.RequestProjectileFire(character, howitzerPre, AttackType.Enemy, attackCofficient
-                        , Vector2.down* howitzerSpeed, new Vector2(startX, howitzerY), Quaternion.identity, howitzerLifeTime);
-
-                    startX += howitzerInterval;
+                        , Vector2.down * howitzerSpeed, firePoint, Quaternion.identity, howitzerLifeTime);
                 }
-                yield return new WaitForSeconds(fireLastDelay);
             }
 
             //원위치로 이동

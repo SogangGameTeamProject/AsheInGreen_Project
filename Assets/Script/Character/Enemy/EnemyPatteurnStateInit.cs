@@ -87,7 +87,7 @@ namespace AshGreen.Character
             else
             {
                 // 랜덤 인덱스를 사용하여 리스트에서 랜덤 값 추출
-                int randomIndex = Random.Range(0, players.Count);
+                int randomIndex = Random.Range(0, players.Count-1);
 
                 returnPos = players[randomIndex].gameObject.transform.position;
             }

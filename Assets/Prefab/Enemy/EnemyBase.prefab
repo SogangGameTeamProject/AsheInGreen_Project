@@ -643,8 +643,8 @@ MonoBehaviour:
   howitzerY: 12
   howitzerFireNum: 2
   howitzerCnt: 4
-  fireFirstDelay: 0.35
-  fireLastDelay: 2
+  fireFirstDelay: 2
+  fireLastDelay: 0.35
 --- !u!1 &5349994358136966372
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,6 +921,6 @@ MonoBehaviour:
   minTargetingRange: 3.5
   oriPos: {x: 0, y: 0}
   firstDealay: 0.35
-  lastDealay: 0.5
+  lastDealay: 1
   attackPoint: {fileID: 5884069109075039510}
   attackPre: {fileID: 235773664981108953, guid: 3bc4a91c965d84a4494cd3fbbf740db3, type: 3}

@@ -14,15 +14,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 374883715091431986, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: m_Size.y
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 374883715091431986, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 374883715091431986, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: m_Offset.x
-      value: -1
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 374883715091431986, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: m_Offset.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 374883715091431986, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
@@ -50,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 1237649821
+      value: 2477959908
       objectReference: {fileID: 0}
     - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
