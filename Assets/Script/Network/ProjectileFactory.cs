@@ -1,5 +1,6 @@
 using AshGreen.DamageObj;
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
@@ -68,6 +69,77 @@ namespace AshGreen.Character{
             // 총알의 물리적 움직임 처리
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.linearVelocity = fireDir; // 발사 방향 설정
+        }
+
+        /// <summary>
+        /// 서버에서 투사체 조준 발사 요청 메서드
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="index">사용할 프리펩 인덱스</param>
+        /// <param name="attackType"></param>
+        /// <param name="damage"></param>
+        /// <param name="targetPos">타겟 위치</param>
+        /// <param name="firePos"></param>
+        /// <param name="fireRotation"></param>
+        /// <param name="destroyTime"></param>
+        public void RequestProjectileTargetFire
+            (CharacterController owner, GameObject pre, AttackType attackType, float damage, Vector2 targetPos,
+            Vector3 firePos, Quaternion fireRotation)
+        {
+            int index = projectileObjts.IndexOf(pre);
+
+            NetworkObject networkOwer = owner.GetComponent<NetworkObject>();
+            if (projectileObjts != null)
+                ProjectileTargetFireRpc(networkOwer, index, attackType, damage, targetPos, firePos, fireRotation);
+        }
+
+        /// <summary>
+        /// 투사체 발사 메서드
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="attackType"></param>
+        /// <param name="damage"></param>
+        /// <param name="targetPos">타겟 위치</param>
+        /// <param name="firePos"></param>
+        /// <param name="fireRotation"></param>
+        /// <param name="destroyTime"></param>
+        [Rpc(SendTo.Server)]
+        private void ProjectileTargetFireRpc
+            (NetworkObjectReference owner, int index, AttackType attackType, float damage, Vector2 targetPos,
+            Vector3 firePos, Quaternion fireRotation)
+        {
+            Debug.Log("IsServer: " + IsServer);
+            GameObject bullet = Instantiate(projectileObjts[index], firePos, fireRotation);
+
+            bullet.GetComponent<NetworkObject>().Spawn();
+
+            //투사체 설정
+            DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();
+
+            NetworkObject ownerObj = null;
+            owner.TryGet(out ownerObj);
+            CharacterController ownerController = ownerObj.GetComponent<CharacterController>();
+            damageObj.caster = ownerController;
+            damageObj.dealType = attackType;
+            damageObj.damage = damage;
+            damageObj.isTarget = true;
+            damageObj.targetPos = targetPos;
+        }
+
+
+
+        public void RequestPlatformSpawn(GameObject pre, Vector3 spawnPoint, float destroyTime = 0)
+        {
+            int index = projectileObjts.IndexOf(pre);
+
+            PlatformSpawnServerRpc(index, spawnPoint, destroyTime);
+        }
+        [ServerRpc]
+        public void PlatformSpawnServerRpc(int preIndex, Vector3 spawnPoint, float destroyTime = 0)
+        {
+            GameObject platform = Instantiate(projectileObjts[preIndex], spawnPoint, Quaternion.identity);
+
+            platform.GetComponent<NetworkObject>().Spawn();
         }
     }
 }

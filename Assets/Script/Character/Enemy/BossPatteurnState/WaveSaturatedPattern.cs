@@ -21,17 +21,15 @@ namespace AshGreen.Character{
 
         protected override IEnumerator ExePatteurn()
         {
-            //가운데로 이동
+            //가운데로 위치 이동
 
-            //넉백이 강한 파도 소환
+            //파도 소환
 
-            //기존 바닥 플렛폼 소환
+            //갈메기 소환
 
-            //갈메기 플렛폼 소환
+            //갈메기 연속 공격
 
-            //갈메기 공격
-
-            //원위치 이동
+            //원래 위치로 이동
 
             yield return base.ExePatteurn();
         }

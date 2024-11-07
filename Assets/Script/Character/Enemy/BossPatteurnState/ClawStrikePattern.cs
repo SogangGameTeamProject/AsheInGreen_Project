@@ -63,14 +63,14 @@ namespace AshGreen.Character{
                 //타겟 위치로 이동
                 while (true)
                 {
-                    float distance = Mathf.Abs(_enemy.transform.position.x - targetP.x);
-                    if (distance <= minTargetingRange)
+                    float distance = Mathf.Abs(_enemy.transform.position.x - (targetP.x + minTargetingRange));
+                    if (distance <= 0.1f)
                         break;
 
                     float t = Mathf.Clamp(1 / (distance + 1), 0.01f, 1f);
 
-                    _enemy.transform.position
-                        = Vector2.Lerp(_enemy.transform.position, targetP, t * Time.deltaTime * attackSpeed);
+                    _enemy.transform.position  = Vector2.Lerp(_enemy.transform.position, 
+                        new Vector2(targetP.x + minTargetingRange, targetP.y), t * Time.deltaTime * attackSpeed);
 
                     yield return null;
                 }
@@ -82,21 +82,21 @@ namespace AshGreen.Character{
                 ProjectileFactory.Instance.RequestProjectileFire(character, attackPre, AttackType.Enemy, attackCofficient
                     , Vector2.zero, attackPoint.position, attackPoint.rotation, 0.1f);
                 yield return new WaitForSeconds(lastDealay);
+            }
 
-                //원래 위치로 이동
-                while (true)
-                {
-                    float distance = Mathf.Abs(_enemy.transform.position.x - oriPos.x);
-                    if (distance <= 0.05f)
-                        break;
+            //원래 위치로 이동
+            while (true)
+            {
+                float distance = Mathf.Abs(_enemy.transform.position.x - oriPos.x);
+                if (distance <= 0.05f)
+                    break;
 
-                    float t = Mathf.Clamp(1 / (distance + 1), 0.01f, 1f);
+                float t = Mathf.Clamp(1 / (distance + 1), 0.01f, 1f);
 
-                    _enemy.transform.position
-                        = Vector2.Lerp(_enemy.transform.position, oriPos, t * Time.deltaTime * attackSpeed);
+                _enemy.transform.position
+                    = Vector2.Lerp(_enemy.transform.position, oriPos, t * Time.deltaTime * attackSpeed);
 
-                    yield return null;
-                }
+                yield return null;
             }
 
             yield return base.ExePatteurn();

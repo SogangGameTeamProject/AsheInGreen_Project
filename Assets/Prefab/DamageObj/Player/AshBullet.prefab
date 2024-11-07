@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2900697886
+  GlobalObjectIdHash: 1674314881
   InScenePlacedSourceGlobalObjectIdHash: 1976491790
   DeferredDespawnTick: 0
   Ownership: 1
@@ -175,6 +175,9 @@ MonoBehaviour:
   nockbackPower: 100
   nockbackTime: 0.2
   isDestroy: 1
+  isTarget: 0
+  targetPos: {x: 0, y: 0}
+  trackingSpeed: 100
 --- !u!50 &7443469594877686487
 Rigidbody2D:
   serializedVersion: 5
@@ -346,7 +349,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.41037738, b: 0.41037738, a: 1}
+      key0: {r: 0.41176474, g: 0.7492844, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

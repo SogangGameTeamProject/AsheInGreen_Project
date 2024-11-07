@@ -104,7 +104,7 @@ namespace AshGreen.Character{
                     int randomIndex = Random.Range(0, firePoints.Count-1);
                     Vector2 firePoint = firePoints[randomIndex];
                     firePoints.RemoveAt(randomIndex);
-                    Debug.Log($"포탄{j}");
+
                     CharacterController character = _enemy.GetComponent<CharacterController>();
                     ProjectileFactory.Instance.RequestProjectileFire(character, howitzerPre, AttackType.Enemy, attackCofficient
                         , Vector2.down * howitzerSpeed, firePoint, Quaternion.identity, howitzerLifeTime);

@@ -31,6 +31,7 @@ namespace AshGreen.Platform
 
 
         //HP 관련 설정값
+        [SerializeField]
         protected NetworkVariable<int> maxHp = new NetworkVariable<int>(2);
         [SerializeField]
         protected NetworkVariable<int> nowHp = new NetworkVariable<int>(2);
@@ -81,6 +82,7 @@ namespace AshGreen.Platform
         [Rpc(SendTo.ClientsAndHost)]
         public void StateTransitionRpc(PlatformStateType type)
         {
+            Debug.Log("플렛폼 상태 전환: " + type);
             IState<PlatformController> state = null;
             StateData findState = stateList.Find(state => state.type.Equals(type));
             if (findState != null)
@@ -101,11 +103,11 @@ namespace AshGreen.Platform
         //플렛폼 피격 쳐리
         public void TakeDamage(float damage)
         {
-            if (NowHp - 1 > 0)
+            if (NowHp - damage > 0)
                 StateTransitionRpc(PlatformStateType.HIT);
             else
                 StateTransitionRpc(PlatformStateType.DESTROY);
-            SetNowHpRpc(NowHp - 1);
+            SetNowHpRpc(NowHp - (int)damage);
         }
     }
 }

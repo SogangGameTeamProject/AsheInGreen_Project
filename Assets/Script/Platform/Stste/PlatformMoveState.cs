@@ -8,12 +8,13 @@ namespace AshGreen.Platform
         protected Vector2 moveVec = Vector2.zero;
         [SerializeField]
         protected float moveSpeed = 10f;
-        private Rigidbody2D rbody;
+        private Rigidbody2D rbody = null;
         public override void Enter(PlatformController context)
         {
             base.Enter(context);
             if(rbody == null)
                 rbody = _controller.GetComponent<Rigidbody2D>();
+            Debug.Log("rbody: " + rbody);
         }
 
         public override void StateUpdate()
