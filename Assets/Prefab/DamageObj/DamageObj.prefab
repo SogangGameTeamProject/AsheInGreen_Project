@@ -185,3 +185,8 @@ MonoBehaviour:
   isTarget: 0
   targetPos: {x: 0, y: 0}
   trackingSpeed: 100
+  isExplosion: 0
+  explosionRadius: 4
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0

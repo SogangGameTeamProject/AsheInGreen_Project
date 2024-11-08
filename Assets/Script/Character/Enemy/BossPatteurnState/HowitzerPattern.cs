@@ -86,7 +86,6 @@ namespace AshGreen.Character{
                     }
                 }
 
-
                 //타겟 공격
                 float startX = targetP.x - (((int)howitzerCnt / 2) * howitzerInterval);
                 List<Vector2> firePoints = new List<Vector2>();

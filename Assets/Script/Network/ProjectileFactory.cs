@@ -126,8 +126,6 @@ namespace AshGreen.Character{
             damageObj.targetPos = targetPos;
         }
 
-
-
         public void RequestPlatformSpawn(GameObject pre, Vector3 spawnPoint, float destroyTime = 0)
         {
             int index = projectileObjts.IndexOf(pre);

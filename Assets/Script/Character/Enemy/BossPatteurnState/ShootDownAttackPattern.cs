@@ -27,7 +27,11 @@ namespace AshGreen.Character{
         [SerializeField]
         private Transform firePoint = null;
         [SerializeField]
+        private int attackNum = 6;
+        [SerializeField]
         private float attackCofficient = 1;
+        [SerializeField]
+        private float patternStartDealy = 2f;
         [SerializeField]
         private float seagullFirePatternDealy = 5f;
         [SerializeField]
@@ -53,6 +57,9 @@ namespace AshGreen.Character{
 
         protected override IEnumerator ExePatteurn()
         {
+
+            yield return new WaitForSeconds(patternStartDealy);
+
             //흡수공격 처리 오브젝트 활성화
             SetDamageAreaRpc(true);
 
@@ -69,9 +76,12 @@ namespace AshGreen.Character{
 
             yield return new WaitForSeconds(seagullFirePatternDealy);
 
+
             //갈메기 플렛폼 공격
-            while (true)
+            int fireNum = 0;
+            while (fireNum < attackNum)
             {
+                fireNum++;
                 //공격 할 플렛폼 탐색
                 bool isFind = false;
                 Vector2 targetP = Vector2.zero;
