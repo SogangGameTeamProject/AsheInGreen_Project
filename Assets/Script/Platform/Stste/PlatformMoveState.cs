@@ -14,7 +14,6 @@ namespace AshGreen.Platform
             base.Enter(context);
             if(rbody == null)
                 rbody = _controller.GetComponent<Rigidbody2D>();
-            Debug.Log("rbody: " + rbody);
         }
 
         public override void StateUpdate()

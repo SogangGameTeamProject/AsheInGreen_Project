@@ -35,9 +35,13 @@ namespace AshGreen.Character{
         [SerializeField]
         private float seagullFirePatternDealy = 5f;
         [SerializeField]
+        private float fireFirstDelay = 1f;
+        [SerializeField]
         private float fireDelay = 1.6f;
         [SerializeField]
         private float lastDeay = 2f;
+        [SerializeField]
+        private GameObject projectileWring = null;
 
         public override void Enter(EnemyController controller)
         {
@@ -84,7 +88,7 @@ namespace AshGreen.Character{
                 fireNum++;
                 //공격 할 플렛폼 탐색
                 bool isFind = false;
-                Vector2 targetP = Vector2.zero;
+                Transform target = null;
                 Vector2 playerP = GetPlayerPos(1);
                 float minDistance = 999;
                 foreach(var platform in platformManager.platformList)
@@ -94,17 +98,20 @@ namespace AshGreen.Character{
                     {
                         isFind = true;
                         minDistance = distance;
-                        targetP = platform.transform.position;
+                        target = platform.transform;
                     }
                 }
 
                 //타겟을 못찾으면 브레이크
                 if (!isFind)
                     break;
+                //경고 표시 설정
+                ProjectileFactory.Instance.RequestObjectSpawn(projectileWring, target.position, 0, target);
+                yield return new WaitForSeconds(fireFirstDelay);
 
                 //타겟 공격
                 ProjectileFactory.Instance.RequestProjectileTargetFire(_enemy, bulletPre, AttackType.Enemy, attackCofficient,
-                    targetP, firePoint.position, Quaternion.identity);
+                    target.position, firePoint.position, Quaternion.identity);
 
                 yield return new WaitForSeconds(fireDelay);
             }
@@ -127,7 +134,7 @@ namespace AshGreen.Character{
             {
                 spawnCnt++;
 
-                ProjectileFactory.Instance.RequestPlatformSpawn(seagullPre, seagullSpawnPoint[seagullIndex]);
+                ProjectileFactory.Instance.RequestObjectSpawn(seagullPre, seagullSpawnPoint[seagullIndex]);
 
                 if (spawnCnt >= seagullSpawnNum)
                     break;

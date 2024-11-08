@@ -32,6 +32,8 @@ namespace AshGreen.Character{
         private float fireFirstDelay = 2f;
         [SerializeField]
         private float fireLastDelay = 0.35f;
+        [SerializeField]
+        private GameObject projectileWring = null;
 
         public override void Enter(EnemyController controller)
         {
@@ -94,19 +96,29 @@ namespace AshGreen.Character{
                     startX += howitzerInterval;
                     firePoints.Add(new Vector2(startX, howitzerY));
                 }
-
+                List<Vector2> getRandomFirePoints = new List<Vector2>();
+                //경고 표시 발사
                 for (int j = 0; j < howitzerCnt; j++)
                 {
                     _enemy.SetTriggerAniParaRpc("IsFshoot");
-                    yield return new WaitForSeconds(fireLastDelay);
-
-                    int randomIndex = Random.Range(0, firePoints.Count-1);
+                    
+                    int randomIndex = Random.Range(0, firePoints.Count - 1);
                     Vector2 firePoint = firePoints[randomIndex];
+                    getRandomFirePoints.Add(firePoint);
                     firePoints.RemoveAt(randomIndex);
+                    
+                    ProjectileFactory.Instance.RequestWaringTargetFire(projectileWring, Vector2.down * howitzerSpeed, firePoint, fireLastDelay*3);
+                    yield return new WaitForSeconds(fireLastDelay);
+                }
 
+                //투사체 발사
+                for (int j = 0; j < howitzerCnt; j++)
+                {
+                    
                     CharacterController character = _enemy.GetComponent<CharacterController>();
                     ProjectileFactory.Instance.RequestProjectileFire(character, howitzerPre, AttackType.Enemy, attackCofficient
-                        , Vector2.down * howitzerSpeed, firePoint, Quaternion.identity, howitzerLifeTime);
+                        , Vector2.down * howitzerSpeed, getRandomFirePoints[j], Quaternion.identity, howitzerLifeTime);
+                    yield return new WaitForSeconds(fireLastDelay);
                 }
             }
 

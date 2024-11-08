@@ -126,18 +126,88 @@ namespace AshGreen.Character{
             damageObj.targetPos = targetPos;
         }
 
-        public void RequestPlatformSpawn(GameObject pre, Vector3 spawnPoint, float destroyTime = 0)
+        
+        public void RequestWaringTargetFire
+            (GameObject pre, Vector2 fireDir, Vector3 firePos, float destroyTime = 0)
         {
             int index = projectileObjts.IndexOf(pre);
 
-            PlatformSpawnServerRpc(index, spawnPoint, destroyTime);
+            if (projectileObjts != null)
+                ProjectileWaringFireRpc(index, fireDir, firePos, destroyTime);
         }
-        [ServerRpc]
-        public void PlatformSpawnServerRpc(int preIndex, Vector3 spawnPoint, float destroyTime = 0)
-        {
-            GameObject platform = Instantiate(projectileObjts[preIndex], spawnPoint, Quaternion.identity);
 
-            platform.GetComponent<NetworkObject>().Spawn();
+        
+        [Rpc(SendTo.Server)]
+        private void ProjectileWaringFireRpc
+            (int index, Vector2 fireDir, Vector3 firePos, float destroyTime = 0)
+        {
+            GameObject bullet = Instantiate(projectileObjts[index], firePos, Quaternion.identity);
+
+            bullet.GetComponent<NetworkObject>().Spawn();
+
+            if (destroyTime > 0)
+                NetworkObject.Destroy(bullet, destroyTime);
+
+            // 총알의 물리적 움직임 처리
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = fireDir; // 발사 방향 설정
+        }
+
+        public void RequestObjectSpawn(GameObject pre, Vector3 spawnPoint, float destroyTime = 0, Transform parent = null)
+        {
+            int index = projectileObjts.IndexOf(pre);
+            if(parent != null)
+                ObjectSpawnInParentServerRpc(index, spawnPoint, parent.GetComponent<NetworkObject>(), destroyTime);
+            else
+                ObjectSpawnServerRpc(index, spawnPoint, destroyTime);
+        }
+
+        [ServerRpc]
+        public void ObjectSpawnServerRpc(int preIndex, Vector3 spawnPoint, float destroyTime = 0)
+        {
+            GameObject obj = Instantiate(projectileObjts[preIndex], spawnPoint, Quaternion.identity);
+
+            obj.GetComponent<NetworkObject>().Spawn();// 시간 경과 후 총알 파괴
+
+            if (destroyTime > 0)
+                NetworkObject.Destroy(obj, destroyTime);
+        }
+
+        [ServerRpc]
+        public void ObjectSpawnInParentServerRpc(int preIndex, Vector3 spawnPoint, NetworkObjectReference parent
+            ,float destroyTime = 0)
+        {
+            NetworkObject parentNetObj;
+            Transform parentT = null;
+            if (parent.TryGet(out parentNetObj))
+                parentT = parentNetObj.GetComponent<Transform>();
+            GameObject obj = Instantiate(projectileObjts[preIndex], spawnPoint, Quaternion.identity
+                , parentT);
+            obj.GetComponent<NetworkObject>().Spawn();// 시간 경과 후 총알 파괴
+
+            // 모든 클라이언트에서 부모 설정을 다시 수행하도록 ClientRpc 호출
+            if (parentT != null)
+            {
+                NetworkObject netObj = obj.GetComponent<NetworkObject>();
+                SetParentClientRpc(netObj.NetworkObjectId, parentNetObj.NetworkObjectId);
+            }
+
+            if (destroyTime > 0)
+                NetworkObject.Destroy(obj, destroyTime);
+        }
+
+        [ClientRpc]
+        private void SetParentClientRpc(ulong objectID, ulong parentID)
+        {
+            // 네트워크 오브젝트와 부모 오브젝트 찾기
+            NetworkObject netObj = NetworkManager.SpawnManager.SpawnedObjects[objectID];
+            NetworkObject parentObj = NetworkManager.SpawnManager.SpawnedObjects[parentID];
+
+            // 부모 설정
+            if (netObj != null && parentObj != null)
+            {
+                netObj.transform.SetParent(parentObj.transform);
+            }
         }
     }
 }

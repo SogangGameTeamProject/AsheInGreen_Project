@@ -1,3 +1,5 @@
+using System.Linq;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace AshGreen.Platform
@@ -20,6 +22,14 @@ namespace AshGreen.Platform
             currentTime += Time.deltaTime;
             if (currentTime > destroyDelayTime)
             {
+                //자식 네트워크 오브젝트도 같이 디스폰
+                NetworkObject[] childNetworkObjs = _controller.transform.GetComponentsInChildren<NetworkObject>()
+                                                    .Where(obj => obj != _controller.GetComponent<NetworkObject>())
+                                                    .ToArray();
+                foreach (var netObj in childNetworkObjs)
+                {
+                    netObj.Despawn();
+                }
                 NetworkObject.Despawn(this.gameObject);
             }  
         }

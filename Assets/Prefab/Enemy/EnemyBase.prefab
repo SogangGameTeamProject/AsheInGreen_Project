@@ -677,8 +677,8 @@ MonoBehaviour:
   - {x: -18, y: -3}
   - {x: -18, y: 0}
   - {x: -18, y: 3}
-  seagullSpawnDelay: 1.6
-  seagullSpawnNum: 10
+  seagullSpawnDelay: 1.25
+  seagullSpawnNum: 15
   bulletPre: {fileID: 5003110354222387133, guid: c8d3f1ef709eec34293b2a90dbcff317, type: 3}
   firePoint: {fileID: 3058831636576320614}
   attackNum: 6
@@ -687,6 +687,7 @@ MonoBehaviour:
   seagullFirePatternDealy: 5
   fireDelay: 2
   lastDeay: 1
+  projectileWring: {fileID: 2778535370038897001, guid: 172a3598530d7404ab5b078bb05ae226, type: 3}
 --- !u!1 &4629084896471371428
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +747,7 @@ MonoBehaviour:
   howitzerCnt: 4
   fireFirstDelay: 2
   fireLastDelay: 0.35
+  projectileWring: {fileID: 2169703801096383763, guid: f39ffc0b98ad70045967075e680ad252, type: 3}
 --- !u!1 &5349994358136966372
 GameObject:
   m_ObjectHideFlags: 0

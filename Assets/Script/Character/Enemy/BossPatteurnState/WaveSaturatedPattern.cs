@@ -86,7 +86,7 @@ namespace AshGreen.Character{
             //갈메기 소환
             foreach(var seagull in seagullSpawnPoints)
             {
-                ProjectileFactory.Instance.RequestPlatformSpawn(seagullPre, seagull);
+                ProjectileFactory.Instance.RequestObjectSpawn(seagullPre, seagull);
             }
 
             yield return new WaitForSeconds(fireFirstDelay);
@@ -108,7 +108,7 @@ namespace AshGreen.Character{
 
             foreach (var platform in platformSpawnPoints)
             {
-                ProjectileFactory.Instance.RequestPlatformSpawn(platformPre, platform);
+                ProjectileFactory.Instance.RequestObjectSpawn(platformPre, platform);
             }
 
             //원위치로 이동
