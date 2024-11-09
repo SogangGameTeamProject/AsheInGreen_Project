@@ -36,7 +36,7 @@ namespace AshGreen.Character{
 
         public override void Exit()
         {
-            
+            base.Exit();
         }
 
         protected override IEnumerator ExePatteurn()

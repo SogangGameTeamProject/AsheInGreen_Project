@@ -10,9 +10,12 @@ namespace AshGreen.Character
 {
     public abstract class EnemyPatteurnStateInit : NetworkBehaviour, IState<EnemyController>
     {
+        protected Animator _animator;
         protected EnemyController _enemy = null;
         protected SoundManager _soundManager = null;
         protected Coroutine runningCoroutine = null;
+        [SerializeField]
+        protected int patternLayerNum = 1;
         [SerializeField]
         private int nextPatteurnIndex = 0;//다음 패턴 인덱스 번호
 
@@ -21,9 +24,12 @@ namespace AshGreen.Character
             //플레이어 초기화
             if (_enemy == null)
                 _enemy = controller;
+            if(_animator ==  null)
+                _animator= _enemy.GetComponent<Animator>();
             //사운드 매니저 초기화
             if (_soundManager == null)
                 _soundManager = SoundManager.Instance;
+            SetAnimatorLayerRpc(true);
 
             runningCoroutine = StartCoroutine(ExePatteurn());
         }
@@ -33,12 +39,16 @@ namespace AshGreen.Character
             //사망시 패턴 강제 종료
             if(_enemy.runningCombatStateType == CombatStateType.Death)
             {
+                SetAnimatorLayerRpc(false);
                 StopCoroutine(runningCoroutine);
                 runningCoroutine = null;
             }
         }
 
-        public abstract void Exit();
+        public virtual void Exit()
+        {
+            SetAnimatorLayerRpc(false);
+        }
 
         //보스 패턴을 실질적으로 구현할 추상 코루틴
         protected virtual IEnumerator ExePatteurn()
@@ -95,6 +105,21 @@ namespace AshGreen.Character
             return returnPos;
         }
 
+        //애니메이션 레이어 설정
+        [Rpc(SendTo.ClientsAndHost)]
+        protected void SetAnimatorLayerRpc(bool value)
+        {
+            if (value)
+            {
+                _animator.SetLayerWeight(patternLayerNum, 2);
+                Debug.Log("Layer "+ patternLayerNum + " : "+_animator.GetLayerWeight(patternLayerNum));
+            }
+            else
+            {
+                _animator.SetLayerWeight(patternLayerNum, 0);
+                Debug.Log("Layer " + patternLayerNum + " : " + _animator.GetLayerWeight(patternLayerNum));
+            }
+        }
     }
 }
 

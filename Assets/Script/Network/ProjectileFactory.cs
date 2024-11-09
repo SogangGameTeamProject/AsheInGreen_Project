@@ -108,7 +108,6 @@ namespace AshGreen.Character{
             (NetworkObjectReference owner, int index, AttackType attackType, float damage, Vector2 targetPos,
             Vector3 firePos, Quaternion fireRotation)
         {
-            Debug.Log("IsServer: " + IsServer);
             GameObject bullet = Instantiate(projectileObjts[index], firePos, fireRotation);
 
             bullet.GetComponent<NetworkObject>().Spawn();

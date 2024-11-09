@@ -58,7 +58,7 @@ namespace AshGreen.Character{
 
         public override void Exit()
         {
-
+            base.Exit();
         }
 
         protected override IEnumerator ExePatteurn()
@@ -94,6 +94,7 @@ namespace AshGreen.Character{
             //갈메기 격추
             for(int i = 0; i < seagullSpawnPoints.Count/2; i++)
             {
+                _enemy.SetTriggerAniParaRpc("IsFshoot");
                 //왼쪽 타겟 공격
                 ProjectileFactory.Instance.RequestProjectileTargetFire(_enemy, bulletPre, AttackType.Enemy, attackCofficient,
                     seagullSpawnPoints[i], leftFirePoint.position, Quaternion.identity);

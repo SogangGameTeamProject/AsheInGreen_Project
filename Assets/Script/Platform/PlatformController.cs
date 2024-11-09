@@ -82,7 +82,6 @@ namespace AshGreen.Platform
         [Rpc(SendTo.ClientsAndHost)]
         public void StateTransitionRpc(PlatformStateType type)
         {
-            Debug.Log("플렛폼 상태 전환: " + type);
             IState<PlatformController> state = null;
             StateData findState = stateList.Find(state => state.type.Equals(type));
             if (findState != null)

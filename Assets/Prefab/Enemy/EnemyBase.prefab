@@ -317,60 +317,32 @@ MonoBehaviour:
     TriggerNameHash: 569220492
     TransitionIndex: 0
   - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 2081823275
-    DestinationState: -559594639
-    TransitionDuration: 0
-    TriggerNameHash: -518574389
-    TransitionIndex: 1
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 2081823275
+    Layer: 1
+    OriginatingState: -357476191
     DestinationState: 2125664144
     TransitionDuration: 0
     TriggerNameHash: 2044225590
-    TransitionIndex: 3
+    TransitionIndex: 0
   - IsCrossFadeExit: 0
-    Layer: 0
+    Layer: 2
+    OriginatingState: -607338754
+    DestinationState: -559594639
+    TransitionDuration: 0
+    TriggerNameHash: -518574389
+    TransitionIndex: 0
+  - IsCrossFadeExit: 0
+    Layer: 3
     OriginatingState: 2081823275
     DestinationState: -77122487
     TransitionDuration: 0
     TriggerNameHash: 1120429326
-    TransitionIndex: 4
+    TransitionIndex: 1
   - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -77122487
-    DestinationState: 646380074
+    Layer: 4
+    OriginatingState: -607338754
+    DestinationState: -559594639
     TransitionDuration: 0
-    TriggerNameHash: 569220492
-    TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 2125664144
-    DestinationState: 646380074
-    TransitionDuration: 0
-    TriggerNameHash: 569220492
-    TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -559594639
-    DestinationState: 646380074
-    TransitionDuration: 0
-    TriggerNameHash: 569220492
-    TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 310428712
-    DestinationState: 646380074
-    TransitionDuration: 0
-    TriggerNameHash: 569220492
-    TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: 646380074
-    DestinationState: -1319424928
-    TransitionDuration: 0
-    TriggerNameHash: 569220492
+    TriggerNameHash: -518574389
     TransitionIndex: 0
   m_Animator: {fileID: 2311938511817404395}
 --- !u!114 &4571093287936344998
@@ -670,13 +642,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  patternLayerNum: 3
   nextPatteurnIndex: 3
+  movePlatformWringPre: {fileID: 13175258949483166, guid: 6914c5791b6e9374796b7f19c92ea633, type: 3}
+  movePlatformWingPoint: {x: 0, y: -7.5}
   damageArea: {fileID: 4683794564671375384}
   seagullPre: {fileID: 6067252972294321342, guid: 4d9eba8f0455e504aabc4f761bea78eb, type: 3}
   seagullSpawnPoint:
-  - {x: -18, y: -3}
-  - {x: -18, y: 0}
-  - {x: -18, y: 3}
+  - {x: -20, y: -3}
+  - {x: -20, y: 0}
+  - {x: -20, y: 3}
   seagullSpawnDelay: 1.25
   seagullSpawnNum: 15
   bulletPre: {fileID: 5003110354222387133, guid: c8d3f1ef709eec34293b2a90dbcff317, type: 3}
@@ -684,9 +659,10 @@ MonoBehaviour:
   attackNum: 6
   attackCofficient: 1
   patternStartDealy: 2
-  seagullFirePatternDealy: 5
-  fireDelay: 2
-  lastDeay: 1
+  seagullFirePatternDealy: 3
+  fireFirstDelay: 1
+  fireDelay: 1.5
+  lastDeay: 1.5
   projectileWring: {fileID: 2778535370038897001, guid: 172a3598530d7404ab5b078bb05ae226, type: 3}
 --- !u!1 &4629084896471371428
 GameObject:
@@ -733,6 +709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  patternLayerNum: 2
   nextPatteurnIndex: 2
   moveSpeed: 100
   oriPos: {x: 0, y: 0}
@@ -973,6 +950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  patternLayerNum: 4
   nextPatteurnIndex: 0
   moveSpeed: 100
   centerPos: {x: 0, y: -6.1}
@@ -1053,6 +1031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  patternLayerNum: 1
   nextPatteurnIndex: 1
   attackNum: 3
   attackCofficient: 1

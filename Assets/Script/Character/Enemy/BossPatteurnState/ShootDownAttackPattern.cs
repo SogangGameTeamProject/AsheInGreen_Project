@@ -7,6 +7,12 @@ using UnityEngine;
 namespace AshGreen.Character{
     public class ShootDownAttackPattern : EnemyPatteurnStateInit
     {
+        //플랫폼 이동 경고 표시
+        [SerializeField]
+        private GameObject movePlatformWringPre = null;
+        [SerializeField]
+        private Vector2 movePlatformWingPoint = Vector2.zero;
+
         //흡수공격
         [SerializeField]
         private GameObject damageArea;
@@ -56,15 +62,16 @@ namespace AshGreen.Character{
 
         public override void Exit()
         {
-
+            base.Exit();
         }
 
         protected override IEnumerator ExePatteurn()
         {
-
+            ProjectileFactory.Instance.RequestObjectSpawn(movePlatformWringPre, movePlatformWingPoint, patternStartDealy);
             yield return new WaitForSeconds(patternStartDealy);
 
             //흡수공격 처리 오브젝트 활성화
+            _enemy.SetBoolAniParaRpc("IsAbsorb", true);
             SetDamageAreaRpc(true);
 
             //플랫폼 이동
@@ -82,6 +89,8 @@ namespace AshGreen.Character{
 
 
             //갈메기 플렛폼 공격
+            _enemy.SetBoolAniParaRpc("IsAbsorb", false);
+            SetDamageAreaRpc(false);//흡수공격 처리 오브젝트 비활성화
             int fireNum = 0;
             while (fireNum < attackNum)
             {
@@ -110,14 +119,12 @@ namespace AshGreen.Character{
                 yield return new WaitForSeconds(fireFirstDelay);
 
                 //타겟 공격
+                _enemy.SetTriggerAniParaRpc("IsShooting");
                 ProjectileFactory.Instance.RequestProjectileTargetFire(_enemy, bulletPre, AttackType.Enemy, attackCofficient,
                     target.position, firePoint.position, Quaternion.identity);
 
                 yield return new WaitForSeconds(fireDelay);
             }
-
-            //흡수공격 처리 오브젝트 비활성화
-            SetDamageAreaRpc(false);
 
             yield return new WaitForSeconds(lastDeay);
 
