@@ -89,7 +89,7 @@ namespace AshGreen.Character{
                 }
 
                 //타겟 공격
-                float startX = targetP.x - ((((int)howitzerCnt / 2) + (howitzerCnt % 2 == 0 ? -1 : 0)) * howitzerInterval);
+                float startX = targetP.x - (howitzerCnt-1) * howitzerInterval/2;
                 List<Vector2> firePoints = new List<Vector2>();
                 for (int j = 0; j < howitzerCnt; j++)
                 {
