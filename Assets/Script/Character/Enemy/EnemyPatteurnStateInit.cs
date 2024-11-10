@@ -109,6 +109,7 @@ namespace AshGreen.Character
         [Rpc(SendTo.ClientsAndHost)]
         protected void SetAnimatorLayerRpc(bool value)
         {
+            _animator = _enemy.GetComponent<Animator>();
             if (value)
             {
                 _animator.SetLayerWeight(patternLayerNum, 2);

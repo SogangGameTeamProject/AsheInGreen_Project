@@ -30,7 +30,7 @@ namespace AshGreen.Character
             {
                 _character.SetCharacterDirectionRpc(CharacterDirection.Left);
             }
-
+            //(_character)._movementController.groundChecker.IsTouchingLayers(groundLayer)
             //이동 상태 종료 체크
             if (rBody.linearVelocityX == 0 && ((PlayerController)_character)._movementController.isGrounded)
             {
