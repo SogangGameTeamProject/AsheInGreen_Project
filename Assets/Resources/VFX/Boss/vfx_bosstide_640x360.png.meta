@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: 672cee7bb614a7d4faddaadd9e288df4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7628387767886258103
+    second: vfx_bosstide_640x360_0
+  - first:
+      213: -8583279172894555795
+    second: vfx_bosstide_640x360_1
+  - first:
+      213: -7268442762590984113
+    second: vfx_bosstide_640x360_2
+  - first:
+      213: 6296085779132245365
+    second: vfx_bosstide_640x360_3
+  - first:
+      213: 4823773218454690785
+    second: vfx_bosstide_640x360_4
+  - first:
+      213: -5480401512048095284
+    second: vfx_bosstide_640x360_5
+  - first:
+      213: 3219052057088455351
+    second: vfx_bosstide_640x360_6
+  - first:
+      213: -9075276847882691049
+    second: vfx_bosstide_640x360_7
+  - first:
+      213: -1520798053930177957
+    second: vfx_bosstide_640x360_8
+  - first:
+      213: -9151557705579108067
+    second: vfx_bosstide_640x360_9
+  - first:
+      213: -1802064631725066543
+    second: vfx_bosstide_640x360_10
+  - first:
+      213: -952526773789714528
+    second: vfx_bosstide_640x360_11
+  - first:
+      213: 209048274383473153
+    second: vfx_bosstide_640x360_12
+  - first:
+      213: -5901569204790084159
+    second: vfx_bosstide_640x360_13
+  - first:
+      213: 657987507921532276
+    second: vfx_bosstide_640x360_14
+  - first:
+      213: 1129958914616577803
+    second: vfx_bosstide_640x360_15
+  - first:
+      213: 3982458798634374531
+    second: vfx_bosstide_640x360_16
+  - first:
+      213: 2825592726128245935
+    second: vfx_bosstide_640x360_17
+  - first:
+      213: 740612605815679223
+    second: vfx_bosstide_640x360_18
+  - first:
+      213: 1556324445600079891
+    second: vfx_bosstide_640x360_19
+  - first:
+      213: -4128735858292792014
+    second: vfx_bosstide_640x360_20
+  - first:
+      213: 1699806400597037952
+    second: vfx_bosstide_640x360_21
+  - first:
+      213: -6244031217416141658
+    second: vfx_bosstide_640x360_22
+  - first:
+      213: -8517715960494436761
+    second: vfx_bosstide_640x360_23
+  - first:
+      213: 7544570202846012315
+    second: vfx_bosstide_640x360_24
+  - first:
+      213: 4027179996224901658
+    second: vfx_bosstide_640x360_25
+  - first:
+      213: 8499660067758718838
+    second: vfx_bosstide_640x360_26
+  - first:
+      213: -6755223758481722564
+    second: vfx_bosstide_640x360_27
+  - first:
+      213: 3535690262485916416
+    second: vfx_bosstide_640x360_28
+  - first:
+      213: 7156147720648495553
+    second: vfx_bosstide_640x360_29
+  - first:
+      213: 350344128972516169
+    second: vfx_bosstide_640x360_30
+  - first:
+      213: -8030433596517082622
+    second: vfx_bosstide_640x360_31
+  - first:
+      213: 7990826664337546967
+    second: vfx_bosstide_640x360_32
+  - first:
+      213: -6635272114476241358
+    second: vfx_bosstide_640x360_33
+  - first:
+      213: -6113754350223543698
+    second: vfx_bosstide_640x360_34
+  - first:
+      213: 8963088877356816893
+    second: vfx_bosstide_640x360_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vfx_bosstide_640x360_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 640
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf9bc9024a7dd960800000000000000
+      internalID: 7628387767886258103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vfx_bosstide_640x360_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 720
+        width: 640
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e43abf06fb3b844bb74e4715afb1fe1
+      internalID: -8583279172894555795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vfx_bosstide_640x360_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 720
+        width: 640
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9c5a8bc88674040930b3d76d00d8c2
+      internalID: -7268442762590984113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vfx_bosstide_640x360_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 640
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320e82517cd1b1948ab89ccd99957f8d
+      internalID: 6296085779132245365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vfx_bosstide_640x360_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 360
+        width: 640
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afd3e03c009c374e928108723f4c0be
+      internalID: 4823773218454690785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vfx_bosstide_640x360_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 360
+        width: 640
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8472d3cad19baa8419f708137b585a3a
+      internalID: -5480401512048095284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vfx_bosstide_640x360_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79cbc923b1ca9d8408c86868c7f70793
+      internalID: 3219052057088455351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vfx_bosstide_640x360_7
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d957f488da5b7464aad7734b1ad8b6aa
+      internalID: -9075276847882691049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1c04049a656a1bc438c00f8b2ae5b526
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vfx_bosstide_640x360_0: 7628387767886258103
+      vfx_bosstide_640x360_1: -8583279172894555795
+      vfx_bosstide_640x360_2: -7268442762590984113
+      vfx_bosstide_640x360_3: 6296085779132245365
+      vfx_bosstide_640x360_4: 4823773218454690785
+      vfx_bosstide_640x360_5: -5480401512048095284
+      vfx_bosstide_640x360_6: 3219052057088455351
+      vfx_bosstide_640x360_7: -9075276847882691049
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

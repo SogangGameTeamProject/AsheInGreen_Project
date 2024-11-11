@@ -10,15 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 105662116455278102, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 105662116455278102, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 61e105108780a2040870949d66064aad, type: 2}
     - target: {fileID: 1476244167206806401, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: m_Name
       value: Seagulll2
       objectReference: {fileID: 0}
     - target: {fileID: 1708315938844623642, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 3991418117
+      value: 1961420753
       objectReference: {fileID: 0}
     - target: {fileID: 1708315938844623642, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
