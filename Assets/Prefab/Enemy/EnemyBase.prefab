@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2809435671
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -662,7 +662,7 @@ MonoBehaviour:
   seagullFirePatternDealy: 3
   fireFirstDelay: 1
   fireDelay: 1.5
-  lastDeay: 1.5
+  lastDeay: 1
   projectileWring: {fileID: 2778535370038897001, guid: 172a3598530d7404ab5b078bb05ae226, type: 3}
 --- !u!1 &4629084896471371428
 GameObject:
@@ -1056,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 4571093287936344998}
     - target: {fileID: 2586144754718405124, guid: dcc98264e98531b48832201a540c748c, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 1091684877
+      value: 2211658964
       objectReference: {fileID: 0}
     - target: {fileID: 2586144754718405124, guid: dcc98264e98531b48832201a540c748c, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
@@ -1147,7 +1147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2586144754718405124, guid: dcc98264e98531b48832201a540c748c, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 3887592907
+      value: 3221496215
       objectReference: {fileID: 0}
     - target: {fileID: 2586144754718405124, guid: dcc98264e98531b48832201a540c748c, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash

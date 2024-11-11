@@ -8,17 +8,22 @@ namespace AshGreen.Character
         public MovementStateType onJumpType = MovementStateType.Jump;//바닥에서 떨어질 시 전환할 상태
         public MovementStateType onMoveType = MovementStateType.Move;
 
+        private PlayerController _player = null;
+        private MovementController _movement = null;
         private Rigidbody2D rBody = null;
 
         public override void Enter(CharacterController character)
         {
             base.Enter(character);
+            if (_player == null)
+                _player = (PlayerController)_character;
+            if (_movement == null)
+                _movement = _player._movementController;
             rBody = _character.GetComponent<Rigidbody2D>();
         }
 
         public override void StateUpdate()
         {
-
             if (!IsOwner)
                 return;
 
@@ -29,10 +34,19 @@ namespace AshGreen.Character
                 return;
             }
 
-
+            //플랫폼 정보 가져오기
+            Collider2D collisionPlatform =
+                Physics2D.OverlapPoint(_movement.groundChecker.bounds.center, _movement.platformLayer);
+            float platformVecX = 0;
+            if (collisionPlatform != null)
+                platformVecX = collisionPlatform.gameObject.GetComponent<Rigidbody2D>().linearVelocityX;
+            float playerVecX = rBody.linearVelocityX - platformVecX;
+            Debug.Log("정지 상태");
             //이동 체크
-            if (Mathf.Clamp(rBody.linearVelocityX, -0.2f, 0.2f) != 0)
-                ((PlayerController)_character)._movementController.MovementStateTransitionRpc(onMoveType);
+            if (Mathf.Round(playerVecX) != 0)
+            {
+                _movement.MovementStateTransitionRpc(onMoveType);
+            }
         }
 
         public override void Exit()

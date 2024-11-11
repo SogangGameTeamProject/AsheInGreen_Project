@@ -6,14 +6,21 @@ namespace AshGreen.Character
 {
     public class MoveState : CharacterStateBase
     {
+        private PlayerController _player = null;
+        private MovementController _movement = null;
         public MovementStateType onChangeType = MovementStateType.Idle;//이동 종료 시 전환할 상태타입
         private Rigidbody2D rBody = null;
 
         public override void Enter(CharacterController character)
         {
             base.Enter(character);
-            if(rBody == null)
+            if (_player == null)
+                _player = (PlayerController)_character;
+            if (_movement == null)
+                _movement = _player._movementController;
+            if (rBody == null)
                 rBody = _character.GetComponent<Rigidbody2D>();
+            _animator.SetBool("IsMove", true);
         }
 
         public override void StateUpdate()
@@ -30,20 +37,27 @@ namespace AshGreen.Character
             {
                 _character.SetCharacterDirectionRpc(CharacterDirection.Left);
             }
-            //(_character)._movementController.groundChecker.IsTouchingLayers(groundLayer)
+
+            //플랫폼 정보 가져오기
+            Collider2D collisionPlatform =
+                Physics2D.OverlapPoint(_movement.groundChecker.bounds.center, _movement.platformLayer);
+            float platformVecX = 0;
+            if (collisionPlatform != null)
+                platformVecX = collisionPlatform.gameObject.GetComponent<Rigidbody2D>().linearVelocityX;
+            float playerVecX = rBody.linearVelocityX - platformVecX;
+
             //이동 상태 종료 체크
-            if (rBody.linearVelocityX == 0 && ((PlayerController)_character)._movementController.isGrounded)
+            if (Mathf.Round(playerVecX) == 0 && _movement.isGrounded)
             {
-                ((PlayerController)_character)._movementController.MovementStateTransitionRpc(onChangeType);
+                
+                _movement.MovementStateTransitionRpc(onChangeType);
                 return;
             }
-                
-            
         }
 
         public override void Exit()
         {
-            
+            _animator.SetBool("IsMove", false);
         }
     }
 }

@@ -171,7 +171,14 @@ namespace AshGreen.Character
         {
             if (rBody)
             {
-                rBody.linearVelocityX = moveVec.x * moveSpeed;
+                //플랫폼 정보 가져오기
+                Collider2D collisionPlatform =
+                    Physics2D.OverlapPoint(groundChecker.bounds.center, platformLayer);
+                float platformVecX = 0;
+                if (collisionPlatform != null)
+                    platformVecX = collisionPlatform.gameObject.GetComponent<Rigidbody2D>().linearVelocityX;
+
+                rBody.linearVelocityX = ((moveVec.x) * moveSpeed) + platformVecX;
             }
         }
 

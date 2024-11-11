@@ -68,6 +68,8 @@ namespace AshGreen.Character{
         protected override IEnumerator ExePatteurn()
         {
             ProjectileFactory.Instance.RequestObjectSpawn(movePlatformWringPre, movePlatformWingPoint, patternStartDealy);
+            //갈매기 소환 코루틴 호출
+            StartCoroutine(SpawnSeagull());
             yield return new WaitForSeconds(patternStartDealy);
 
             //흡수공격 처리 오브젝트 활성화
@@ -80,10 +82,6 @@ namespace AshGreen.Character{
             {
                 platform.StateTransitionRpc(PlatformStateType.MOVE);
             }
-
-
-            //갈매기 소환 코루틴 호출
-            StartCoroutine(SpawnSeagull());
 
             yield return new WaitForSeconds(seagullFirePatternDealy);
 
