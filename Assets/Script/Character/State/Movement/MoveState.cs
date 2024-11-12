@@ -48,12 +48,10 @@ namespace AshGreen.Character
                 platformVecX = collisionPlatform.gameObject.GetComponent<Rigidbody2D>().linearVelocityX;
             float playerVecX = rBody.linearVelocityX - platformVecX;
 
-            Debug.Log($"platformVecX: {platformVecX}, playerVecX: {playerVecX}");
 
             //이동 상태 종료 체크
             if (Mathf.Round(playerVecX) == 0 && _movement.isGrounded)
             {
-                Debug.Log("이동 종료");
                 _movement.MovementStateTransitionRpc(onChangeType);
                 return;
             }
