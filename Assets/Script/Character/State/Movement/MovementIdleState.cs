@@ -36,7 +36,8 @@ namespace AshGreen.Character
 
             //플랫폼 정보 가져오기
             Collider2D collisionPlatform =
-                Physics2D.OverlapPoint(_movement.groundChecker.bounds.center, _movement.platformLayer);
+                Physics2D.OverlapBox(_movement.groundChecker.bounds.center, _movement.groundChecker.bounds.size, 0,
+                _movement.platformLayer);
             float platformVecX = 0;
             if (collisionPlatform != null)
                 platformVecX = collisionPlatform.gameObject.GetComponent<Rigidbody2D>().linearVelocityX;

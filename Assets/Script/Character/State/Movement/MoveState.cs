@@ -40,16 +40,20 @@ namespace AshGreen.Character
 
             //플랫폼 정보 가져오기
             Collider2D collisionPlatform =
-                Physics2D.OverlapPoint(_movement.groundChecker.bounds.center, _movement.platformLayer);
+                Physics2D.OverlapBox(_movement.groundChecker.bounds.center, _movement.groundChecker.bounds.size, 0,
+                _movement.platformLayer);
+
             float platformVecX = 0;
             if (collisionPlatform != null)
                 platformVecX = collisionPlatform.gameObject.GetComponent<Rigidbody2D>().linearVelocityX;
             float playerVecX = rBody.linearVelocityX - platformVecX;
 
+            Debug.Log($"platformVecX: {platformVecX}, playerVecX: {playerVecX}");
+
             //이동 상태 종료 체크
             if (Mathf.Round(playerVecX) == 0 && _movement.isGrounded)
             {
-                
+                Debug.Log("이동 종료");
                 _movement.MovementStateTransitionRpc(onChangeType);
                 return;
             }
