@@ -81,10 +81,16 @@ namespace AshGreen.Character{
             //파도소환
             SetDamageAreaRpc(true);
             yield return new WaitForSeconds(waveAttactLastDelay);
-            SetDamageAreaRpc(false);
+            SetDamageAreaRpc(false);//플렛폼 소환
+
+            foreach (var platform in platformSpawnPoints)
+            {
+                ProjectileFactory.Instance.RequestObjectSpawn(platformPre, platform);
+            }
+
 
             //갈메기 소환
-            foreach(var seagull in seagullSpawnPoints)
+            foreach (var seagull in seagullSpawnPoints)
             {
                 ProjectileFactory.Instance.RequestObjectSpawn(seagullPre, seagull);
             }
@@ -105,12 +111,7 @@ namespace AshGreen.Character{
                 yield return new WaitForSeconds(fireDelay);
             }
 
-            //플렛폼 소환
-
-            foreach (var platform in platformSpawnPoints)
-            {
-                ProjectileFactory.Instance.RequestObjectSpawn(platformPre, platform);
-            }
+            
 
             //원위치로 이동
             while (true)
@@ -136,6 +137,12 @@ namespace AshGreen.Character{
         [Rpc(SendTo.ClientsAndHost)]
         private void SetDamageAreaRpc(bool value)
         {
+            if (IsServer)
+            {
+                NetworkObject netObj = waveAttackArea.GetComponent<NetworkObject>();
+                if(!netObj.IsSpawned)
+                    netObj.Spawn();
+            }
             waveAttackArea.SetActive(value);
         }
     }
