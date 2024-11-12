@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# --- Material 파일 허용 설정 ---
+# .mat 파일은 버전 관리에 포함되도록 설정
+!*.mat
