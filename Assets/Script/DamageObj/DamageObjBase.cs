@@ -34,11 +34,11 @@ namespace AshGreen.DamageObj
 
                 float distance = Vector2.Distance(transform.position, targetPos);
                 if (distance <= 0.1f)
-                    DestoryObj();
+                    DestoryObjRpc();
             }
         }
-
-        protected void DestoryObj()
+        [Rpc(SendTo.Server)]
+        protected void DestoryObjRpc()
         {
             if (!NetworkObject.IsSpawned)
                 return;
@@ -114,7 +114,7 @@ namespace AshGreen.DamageObj
                     caster.GetComponent<DamageReceiver>().DealDamage(collision.GetComponent<CharacterController>(), damage, dealType);
 
                 if (isDestroy)
-                    DestoryObj();
+                    DestoryObjRpc();
             }
         }
     }

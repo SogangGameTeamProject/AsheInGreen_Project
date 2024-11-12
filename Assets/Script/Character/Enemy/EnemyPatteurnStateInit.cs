@@ -29,17 +29,18 @@ namespace AshGreen.Character
             //사운드 매니저 초기화
             if (_soundManager == null)
                 _soundManager = SoundManager.Instance;
-            SetAnimatorLayerRpc(true);
+            SetAnimatorLayer(true);
 
-            runningCoroutine = StartCoroutine(ExePatteurn());
+            if(IsServer)
+                runningCoroutine = StartCoroutine(ExePatteurn());
         }
 
         public virtual void StateUpdate()
         {
             //사망시 패턴 강제 종료
-            if(_enemy.runningCombatStateType == CombatStateType.Death)
+            if(_enemy.runningCombatStateType == CombatStateType.Death && runningCoroutine != null)
             {
-                SetAnimatorLayerRpc(false);
+                SetAnimatorLayer(false);
                 StopCoroutine(runningCoroutine);
                 runningCoroutine = null;
             }
@@ -47,7 +48,7 @@ namespace AshGreen.Character
 
         public virtual void Exit()
         {
-            SetAnimatorLayerRpc(false);
+            SetAnimatorLayer(false);
         }
 
         //보스 패턴을 실질적으로 구현할 추상 코루틴
@@ -72,13 +73,18 @@ namespace AshGreen.Character
             List<PlayerController> players = new List<PlayerController>(FindObjectsOfType<PlayerController>());
 
             //죽은 플레이어 리스트에서 삭제
+            // 죽은 플레이어 리스트에서 삭제
+            players.RemoveAll(player => player.runningCombatStateType == CombatStateType.Death);
+
+
+            //죽은 플레이어 리스트에서 삭제
             foreach (var player in players)
             {
-                if(player.runningCombatStateType == CombatStateType.Death)
-                    players.Remove(player);
+                Debug.LogWarning(player);
+                
             }
             //가까운 플레이어 찾기
-            if(findType == 0)
+            if (findType == 0)
             {
                 float distance = 99999;
 
@@ -98,7 +104,7 @@ namespace AshGreen.Character
             {
                 // 랜덤 인덱스를 사용하여 리스트에서 랜덤 값 추출
                 int randomIndex = Random.Range(0, players.Count-1);
-
+                Debug.LogWarning(randomIndex);
                 returnPos = players[randomIndex].gameObject.transform.position;
             }
 
@@ -106,19 +112,15 @@ namespace AshGreen.Character
         }
 
         //애니메이션 레이어 설정
-        [Rpc(SendTo.ClientsAndHost)]
-        protected void SetAnimatorLayerRpc(bool value)
+        protected void SetAnimatorLayer(bool value)
         {
-            _animator = _enemy.GetComponent<Animator>();
             if (value)
             {
                 _animator.SetLayerWeight(patternLayerNum, 2);
-                Debug.Log("Layer "+ patternLayerNum + " : "+_animator.GetLayerWeight(patternLayerNum));
             }
             else
             {
                 _animator.SetLayerWeight(patternLayerNum, 0);
-                Debug.Log("Layer " + patternLayerNum + " : " + _animator.GetLayerWeight(patternLayerNum));
             }
         }
     }

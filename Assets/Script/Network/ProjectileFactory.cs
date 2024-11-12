@@ -188,15 +188,15 @@ namespace AshGreen.Character{
             if (parentT != null)
             {
                 NetworkObject netObj = obj.GetComponent<NetworkObject>();
-                SetParentClientRpc(netObj.NetworkObjectId, parentNetObj.NetworkObjectId);
+                SetParentServerRpc(netObj.NetworkObjectId, parentNetObj.NetworkObjectId);
             }
 
             if (destroyTime > 0)
                 NetworkObject.Destroy(obj, destroyTime);
         }
 
-        [ClientRpc]
-        private void SetParentClientRpc(ulong objectID, ulong parentID)
+        [ServerRpc]
+        private void SetParentServerRpc(ulong objectID, ulong parentID)
         {
             // 네트워크 오브젝트와 부모 오브젝트 찾기
             NetworkObject netObj = NetworkManager.SpawnManager.SpawnedObjects[objectID];

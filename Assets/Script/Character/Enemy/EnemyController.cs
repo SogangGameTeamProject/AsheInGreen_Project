@@ -68,7 +68,7 @@ namespace AshGreen.Character
         }
 
         //패턴 상태 초기화 함수
-        [Rpc(SendTo.Server)]
+        [Rpc(SendTo.ClientsAndHost)]
         public void PatteurnStateInitRpc()
         {
             IState<EnemyController> state = null;
