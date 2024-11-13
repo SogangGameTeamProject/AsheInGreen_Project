@@ -459,14 +459,12 @@ namespace AshGreen.Character
         [Rpc(SendTo.ClientsAndHost)]
         public void CombatStateTransitionRpc(CombatStateType type)
         {
-            Debug.Log("상태전환: " + type);
             IState<CharacterController> state = null;
             CombatStateData findState = combatStateList.Find(state => state.type.Equals(type));
             if (findState != null)
             {
                 state = findState.state.GetComponent<IState<CharacterController>>();
                 runningCombatStateType = findState.type;
-                Debug.Log(runningCombatStateType);
                 combatStateContext.TransitionTo(state);
             }
         }

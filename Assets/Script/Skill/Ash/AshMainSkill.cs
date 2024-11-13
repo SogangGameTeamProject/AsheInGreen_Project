@@ -22,14 +22,12 @@ namespace AshGreen.Character.Skill
 
         public override IEnumerator Charging(SkillHolder holder)
         {
-            Debug.Log("스킬 차징");
             
             return base.Charging(holder);
         }
 
         public override IEnumerator Use(SkillHolder holder, float chargeTime = 0)
         {
-            Debug.Log("메인스킬 사용");
 
             //스킬 애니메이션 처리
             if (!animationTrigger.IsNullOrEmpty())
@@ -47,8 +45,6 @@ namespace AshGreen.Character.Skill
             int chargeCnt = 
                 Mathf.Clamp((int)(chargeTime / (chargingTime*100f/(100f+holder._caster.SkillAcceleration)))
                 , 0, maxChargingCnt); 
-
-            Debug.Log("충전량: " + chargeCnt);
 
             // 차징 정도에 따른 에너지 충전
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease * chargeCnt; // 특수스킬 에너지 충전

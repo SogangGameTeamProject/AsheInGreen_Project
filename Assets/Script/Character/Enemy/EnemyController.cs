@@ -57,7 +57,6 @@ namespace AshGreen.Character
         {
             if (enemyConfig)
             {
-                Debug.Log("데이터 초기화");
                 baseMaxHP.Value = enemyConfig.MaxHP;
                 nowHp.Value = baseMaxHP.Value;
                 GrowthAttackPower.Value = enemyConfig.GrowthAttackPower;
@@ -121,7 +120,6 @@ namespace AshGreen.Character
         [Rpc(SendTo.ClientsAndHost)]
         private void UpdateHpHUDRPC(int previousValue, int newValue)
         {
-            Debug.Log($"MaxHP: {MaxHP} newValue: {newValue}");
             EnemyUIController.Instance.HpUpdate(MaxHP, newValue);
         }
     }

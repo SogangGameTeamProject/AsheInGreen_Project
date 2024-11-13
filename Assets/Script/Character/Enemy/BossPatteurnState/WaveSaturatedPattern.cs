@@ -111,7 +111,7 @@ namespace AshGreen.Character{
                 yield return new WaitForSeconds(fireDelay);
             }
 
-            
+            yield return new WaitForSeconds(lsatDelay);
 
             //원위치로 이동
             while (true)
@@ -127,8 +127,6 @@ namespace AshGreen.Character{
 
                 yield return null;
             }
-
-            yield return new WaitForSeconds(lsatDelay);
 
             yield return base.ExePatteurn();
         }

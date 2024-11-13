@@ -94,7 +94,10 @@ namespace AshGreen.Character
         void Update()
         {
             if (IsOwner)
+            {
                 MoveAniUpdate();
+            }
+
             CheckIfGrounded();
             movementStateContext.StateUpdate();
         }

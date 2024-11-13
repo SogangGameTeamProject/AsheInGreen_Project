@@ -26,7 +26,6 @@ namespace AshGreen.Character{
             Vector3 firePos, Quaternion fireRotation, float destroyTime = 0)
         {
             int index = projectileObjts.IndexOf(pre);
-            Debug.Log("index: " + index);
             NetworkObject networkOwer = owner.GetComponent<NetworkObject>();
             if (projectileObjts != null)
                 ProjectileFireRpc(networkOwer, index, attackType, damage, fireDir, firePos, fireRotation, destroyTime);
@@ -107,7 +106,6 @@ namespace AshGreen.Character{
             (NetworkObjectReference owner, int index, AttackType attackType, float damage, Vector2 targetPos,
             Vector3 firePos, Quaternion fireRotation)
         {
-            Debug.LogWarning("preIndex: " + index);
             GameObject bullet = Instantiate(projectileObjts[index], firePos, fireRotation);
 
             bullet.GetComponent<NetworkObject>().Spawn();
@@ -140,7 +138,6 @@ namespace AshGreen.Character{
         private void ProjectileWaringFireRpc
             (int index, Vector2 fireDir, Vector3 firePos, float destroyTime = 0)
         {
-            Debug.LogWarning("preIndex: " + index);
             GameObject bullet = Instantiate(projectileObjts[index], firePos, Quaternion.identity);
 
             bullet.GetComponent<NetworkObject>().Spawn();
@@ -177,7 +174,6 @@ namespace AshGreen.Character{
         public void ObjectSpawnInParentServerRpc(int preIndex, Vector3 spawnPoint, NetworkObjectReference parent
             ,float destroyTime = 0)
         {
-            Debug.LogWarning("preIndex: " + preIndex);
             NetworkObject parentNetObj;
             Transform parentT = null;
             if (parent.TryGet(out parentNetObj))

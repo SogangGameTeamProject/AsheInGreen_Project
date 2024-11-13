@@ -19,14 +19,12 @@ namespace AshGreen.Character.Skill
 
         public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
         {
-            Debug.Log("특수스킬 사용");
             //스킬 애니메이션 처리
             if (!animationTrigger.IsNullOrEmpty())
             {
                 holder._caster.PlayerSkillAni(animationTrigger);
             }
 
-            Debug.Log("소모 에너지: " + holder.NowEnergy);
             int nowEnergy = holder.NowEnergy;
             holder.NowEnergy = 0;//에너지 비우기
 

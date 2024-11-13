@@ -42,6 +42,7 @@ namespace AshGreen.Character
             if (collisionPlatform != null)
                 platformVecX = collisionPlatform.gameObject.GetComponent<Rigidbody2D>().linearVelocityX;
             float playerVecX = rBody.linearVelocityX - platformVecX;
+
             //이동 체크
             if (Mathf.Round(playerVecX) != 0)
             {

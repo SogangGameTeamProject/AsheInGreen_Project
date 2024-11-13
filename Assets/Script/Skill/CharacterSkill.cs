@@ -70,7 +70,6 @@ namespace AshGreen.Character.Skill
         //스킬 종료 처리
         public virtual IEnumerator End(SkillHolder holder)
         {
-            Debug.Log("종료");
             holder._caster.EndSkillAni();
             holder.state = SkillHolder.SkillState.Idle;
 

@@ -88,7 +88,6 @@ namespace AshGreen.Character.Skill
         //스킬 사용 메서드
         public void Use()
         {
-            Debug.Log("스킬 쿨타임"+coolTime * (100 / (100 + _caster.SkillAcceleration)));
             NowChargeCnt--;
             if (state == SkillState.Idle)
                 holderCorutine = _caster.StartCoroutine(skill.Use(this));

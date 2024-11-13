@@ -41,8 +41,6 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
     // Coroutine for the loading effect. It use an alpha in out effect
     private IEnumerator Loading(SceneName sceneToLoad, bool isNetworkSessionActive)
     {
-
-        Debug.Log("페이드 인");
         LoadingFadeEffect.Instance.FadeIn();
 
         // Here the player still sees the black screen
@@ -62,7 +60,6 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
         // In case the scene is heavy instead we should use additive loading to wait for the
         // scene to load before we continue
         yield return new WaitForSeconds(1f);
-        Debug.Log("페이드 아웃");
         LoadingFadeEffect.Instance.FadeOut();
     }
 
@@ -95,7 +92,6 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
     // Here we set up what to do for each scene, like changing the music
     private void OnLoadComplete(ulong clientId, string sceneName, LoadSceneMode loadSceneMode)
     {
-        Debug.Log("OnLoadComplete clientId: " + clientId);
         // We only care the host/server is loading because every manager handles
         // their information and behavior on the server runtime
         if (!NetworkManager.Singleton.IsServer)
