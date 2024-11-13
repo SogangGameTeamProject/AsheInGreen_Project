@@ -155,12 +155,6 @@ namespace AshGreen.Character{
         [Rpc(SendTo.ClientsAndHost)]
         private void SetDamageAreaRpc(bool value)
         {
-            if (IsServer)
-            {
-                NetworkObject netObj = damageArea.GetComponent<NetworkObject>();
-                if (!netObj.IsSpawned)
-                    netObj.Spawn();
-            }
             damageArea.SetActive(value);
         }
     }

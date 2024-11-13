@@ -76,13 +76,6 @@ namespace AshGreen.Character
             // 죽은 플레이어 리스트에서 삭제
             players.RemoveAll(player => player.runningCombatStateType == CombatStateType.Death);
 
-
-            //죽은 플레이어 리스트에서 삭제
-            foreach (var player in players)
-            {
-                Debug.LogWarning(player);
-                
-            }
             //가까운 플레이어 찾기
             if (findType == 0)
             {

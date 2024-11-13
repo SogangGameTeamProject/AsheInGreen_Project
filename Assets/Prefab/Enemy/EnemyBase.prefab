@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -713,7 +713,7 @@ MonoBehaviour:
   nextPatteurnIndex: 2
   moveSpeed: 100
   oriPos: {x: 0, y: 0}
-  centerPos: {x: 0, y: -6.1}
+  centerPos: {x: 0, y: -5.1}
   howitzerPre: {fileID: 5003110354222387133, guid: a778f1a846ab8b1499d0dcab40f5dced, type: 3}
   howitzerSpeed: 50
   howitzerLifeTime: 2
@@ -953,7 +953,7 @@ MonoBehaviour:
   patternLayerNum: 4
   nextPatteurnIndex: 0
   moveSpeed: 100
-  centerPos: {x: 0, y: -6.1}
+  centerPos: {x: 0, y: -5.1}
   oriPos: {x: 19, y: -6.1}
   waveAttackArea: {fileID: 4810495670329335752}
   waveAttactLastDelay: 0.3
@@ -1096,7 +1096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234449268170238005, guid: cff2e68bc6f4aa4419c8843197bc7454, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 3887592907
+      value: 2148058052
       objectReference: {fileID: 0}
     - target: {fileID: 5545434532015841314, guid: cff2e68bc6f4aa4419c8843197bc7454, type: 3}
       propertyPath: m_Name
@@ -1131,11 +1131,7 @@ PrefabInstance:
       objectReference: {fileID: 4571093287936344998}
     - target: {fileID: 2586144754718405124, guid: dcc98264e98531b48832201a540c748c, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 1091684877
-      objectReference: {fileID: 0}
-    - target: {fileID: 2586144754718405124, guid: dcc98264e98531b48832201a540c748c, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 2668537264
+      value: 2148058052
       objectReference: {fileID: 0}
     - target: {fileID: 4332348715267254155, guid: dcc98264e98531b48832201a540c748c, type: 3}
       propertyPath: m_LocalPosition.x

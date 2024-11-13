@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 7794821624441942867}
   - component: {fileID: 8410320173421250804}
   - component: {fileID: 5131402238213218215}
-  - component: {fileID: 2586144754718405124}
-  - component: {fileID: 692185379576798068}
+  - component: {fileID: 9200403200101826366}
   m_Layer: 7
   m_Name: 'AbsorptionAttack '
   m_TagString: Untagged
@@ -164,7 +163,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5, y: 3}
   m_EdgeRadius: 0
---- !u!114 &2586144754718405124
+--- !u!114 &9200403200101826366
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,48 +172,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6184931628955269651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Script: {fileID: 11500000, guid: a7aba6d66295e904db19d5a0f77acf84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4036903548
-  InScenePlacedSourceGlobalObjectIdHash: 1976491790
-  DeferredDespawnTick: 0
-  Ownership: 1
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
-  SyncOwnerTransformWhenParented: 1
-  AllowOwnerToParent: 0
---- !u!114 &692185379576798068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6184931628955269651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ae210d57835164b9cacbc0cf9c47b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
   caster: {fileID: 0}
   damage: 2
   dealType: 401
   isCritical: 0
   isNockback: 1
   nockbackPower: 100
-  nockbackTime: 0.2
-  isDestroy: 0
-  isTarget: 0
-  targetPos: {x: 0, y: 0}
-  trackingSpeed: 100
-  isExplosion: 0
-  explosionRadius: 2
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  nockbackTime: 0.3

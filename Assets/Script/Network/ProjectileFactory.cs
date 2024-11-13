@@ -47,7 +47,6 @@ namespace AshGreen.Character{
             (NetworkObjectReference owner, int index, AttackType attackType, float damage, Vector2 fireDir,
             Vector3 firePos, Quaternion fireRotation, float destroyTime = 0)
         {
-            Debug.Log("IsServer: "+IsServer);
             GameObject bullet = Instantiate(projectileObjts[index], firePos, fireRotation);
 
             bullet.GetComponent<NetworkObject>().Spawn();
@@ -57,7 +56,7 @@ namespace AshGreen.Character{
                 NetworkObject.Destroy(bullet, destroyTime);
 
             //투사체 설정
-            DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();
+            NetworkDamageObj damageObj = bullet.GetComponent<NetworkDamageObj>();
 
             NetworkObject ownerObj = null;
             owner.TryGet(out ownerObj);
@@ -108,12 +107,13 @@ namespace AshGreen.Character{
             (NetworkObjectReference owner, int index, AttackType attackType, float damage, Vector2 targetPos,
             Vector3 firePos, Quaternion fireRotation)
         {
+            Debug.LogWarning("preIndex: " + index);
             GameObject bullet = Instantiate(projectileObjts[index], firePos, fireRotation);
 
             bullet.GetComponent<NetworkObject>().Spawn();
 
             //투사체 설정
-            DamageObjBase damageObj = bullet.GetComponent<DamageObjBase>();
+            NetworkDamageObj damageObj = bullet.GetComponent<NetworkDamageObj>();
 
             NetworkObject ownerObj = null;
             owner.TryGet(out ownerObj);
@@ -140,6 +140,7 @@ namespace AshGreen.Character{
         private void ProjectileWaringFireRpc
             (int index, Vector2 fireDir, Vector3 firePos, float destroyTime = 0)
         {
+            Debug.LogWarning("preIndex: " + index);
             GameObject bullet = Instantiate(projectileObjts[index], firePos, Quaternion.identity);
 
             bullet.GetComponent<NetworkObject>().Spawn();
@@ -176,6 +177,7 @@ namespace AshGreen.Character{
         public void ObjectSpawnInParentServerRpc(int preIndex, Vector3 spawnPoint, NetworkObjectReference parent
             ,float destroyTime = 0)
         {
+            Debug.LogWarning("preIndex: " + preIndex);
             NetworkObject parentNetObj;
             Transform parentT = null;
             if (parent.TryGet(out parentNetObj))

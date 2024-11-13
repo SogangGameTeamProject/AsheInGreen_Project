@@ -5,7 +5,7 @@ using CharacterController = AshGreen.Character.CharacterController;
 
 namespace AshGreen.DamageObj
 {
-    public class DamageObjBase : NetworkBehaviour
+    public class NetworkDamageObj : NetworkBehaviour
     {
         public CharacterController caster = null;
         public float damage = 1;
