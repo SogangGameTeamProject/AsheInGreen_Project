@@ -178,9 +178,9 @@ MonoBehaviour:
   damage: 1
   dealType: 0
   isCritical: 0
-  isNockback: 1
-  nockbackPower: 100
-  nockbackTime: 0.2
+  isKnockback: 0
+  knockbackPower: 100
+  knockbackTime: 0.3
   isDestroy: 1
   isTarget: 0
   targetPos: {x: 0, y: 0}

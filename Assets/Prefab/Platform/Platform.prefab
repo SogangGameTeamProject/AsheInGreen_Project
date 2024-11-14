@@ -403,6 +403,8 @@ MonoBehaviour:
   - type: 2
     state: {fileID: 9130216585230316321}
   startState: 0
+  syncVelocity:
+    m_InternalValue: {x: 0, y: 0}
   maxHp:
     m_InternalValue: 2
   nowHp:
