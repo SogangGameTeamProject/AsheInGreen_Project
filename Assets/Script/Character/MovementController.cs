@@ -9,6 +9,7 @@ using Unity.Netcode.Components;
 using System.Collections;
 using AshGreen.State;
 using Unity.VisualScripting;
+using AshGreen.Platform;
 
 namespace AshGreen.Character
 {
@@ -180,7 +181,7 @@ namespace AshGreen.Character
                 platformLayer);
                 float platformVecX = 0;
                 if (collisionPlatform != null)
-                    platformVecX = collisionPlatform.gameObject.GetComponent<Rigidbody2D>().linearVelocityX;
+                    platformVecX = collisionPlatform.gameObject.GetComponent<PlatformController>().syncVelocity.Value.x;
 
                 rBody.linearVelocityX = ((moveVec.x) * moveSpeed) + platformVecX;
             }

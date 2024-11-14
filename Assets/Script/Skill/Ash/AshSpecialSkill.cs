@@ -48,9 +48,9 @@ namespace AshGreen.Character.Skill
                     fireDir = targetPos - casterPos;
                     fireDir = fireDir.normalized * bulletSpeed;
                     if (fireDir.x > 0)
-                        holder._caster.SetCharacterDirectionRpc(CharacterDirection.Right);
+                        holder._caster.RequsetOnFlipRpc(CharacterDirection.Right);
                     else
-                        holder._caster.SetCharacterDirectionRpc(CharacterDirection.Left);
+                        holder._caster.RequsetOnFlipRpc(CharacterDirection.Left);
                 }
                 else
                 {

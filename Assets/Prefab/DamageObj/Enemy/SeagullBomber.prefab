@@ -151,7 +151,7 @@ MonoBehaviour:
   UseHalfFloatPrecision: 0
   InLocalSpace: 0
   SwitchTransformSpaceWhenParented: 0
-  Interpolate: 0
+  Interpolate: 1
   SlerpPosition: 0
 --- !u!114 &7012094651723624340
 MonoBehaviour:
@@ -170,15 +170,15 @@ MonoBehaviour:
   damage: 1
   dealType: 0
   isCritical: 0
-  isNockback: 1
-  nockbackPower: 100
-  nockbackTime: 0.2
+  isKnockback: 1
+  knockbackPower: 100
+  knockbackTime: 0.3
   isDestroy: 1
   isTarget: 0
   targetPos: {x: 0, y: 0}
   trackingSpeed: 100
-  isExplosion: 0
-  explosionRadius: 2
+  isExplosion: 1
+  explosionRadius: 3
   targetLayer:
     serializedVersion: 2
     m_Bits: 2056

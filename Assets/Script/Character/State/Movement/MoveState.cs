@@ -1,4 +1,5 @@
 using AshGreen.Character.Player;
+using AshGreen.Platform;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,18 +26,18 @@ namespace AshGreen.Character
 
         public override void StateUpdate()
         {
-            if (!IsOwner)
-                return;
-
             //이동 방향에 따른 방향 전환
             if (rBody.linearVelocityX > 0.1f && _character.CharacterDirection == CharacterDirection.Left)
             {
-                _character.SetCharacterDirectionRpc(CharacterDirection.Right);
+                _character.CharacterDirection = CharacterDirection.Right;
             }
             else if (rBody.linearVelocityX < -0.1f && _character.CharacterDirection == CharacterDirection.Right)
             {
-                _character.SetCharacterDirectionRpc(CharacterDirection.Left);
+                _character.CharacterDirection = CharacterDirection.Left;
             }
+
+            if (!IsOwner)
+                return;
 
             //플랫폼 정보 가져오기
             Collider2D collisionPlatform =
@@ -45,12 +46,14 @@ namespace AshGreen.Character
 
             float platformVecX = 0;
             if (collisionPlatform != null)
-                platformVecX = collisionPlatform.gameObject.GetComponent<Rigidbody2D>().linearVelocityX;
+            {
+                platformVecX = collisionPlatform.gameObject.GetComponent<PlatformController>().syncVelocity.Value.x;
+            }
             float playerVecX = rBody.linearVelocityX - platformVecX;
 
-
             //이동 상태 종료 체크
-            if (Mathf.Round(playerVecX) == 0 && _movement.isGrounded)
+            if ((playerVecX <= 0.5f && playerVecX >= -0.5f)
+                && _movement.isGrounded)
             {
                 _movement.MovementStateTransitionRpc(onChangeType);
                 return;

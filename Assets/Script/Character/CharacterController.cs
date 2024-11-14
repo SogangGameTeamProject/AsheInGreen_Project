@@ -47,41 +47,39 @@ namespace AshGreen.Character
             = new List<CombatStateData>();
 
         //캐릭터 방향 관련
-        private NetworkVariable<CharacterDirection> characterDirection = 
-            new NetworkVariable< CharacterDirection>(CharacterDirection.Right);
+        private CharacterDirection characterDirection = CharacterDirection.Right;
 
         public CharacterDirection CharacterDirection
         {
             get
             {
-                return characterDirection.Value;
+                return characterDirection;
             }
 
-            private set
+            set
             {
-                characterDirection.Value = value;
+                OnFlip(value);
+                characterDirection = value;
             }
         }
 
-        [Rpc(SendTo.Server)]
-        public void SetCharacterDirectionRpc(CharacterDirection chageDirection)
-        {
-            characterDirection.Value = chageDirection;
-        }
-
-        //방향 전환 매서드
+        //서버에 방향 전환 요청 메서드
         [Rpc(SendTo.ClientsAndHost)]
-        private void OnFlipRpc(CharacterDirection previousValue, CharacterDirection newValue)
+        public void RequsetOnFlipRpc(CharacterDirection newValue)
+        {
+            CharacterDirection = newValue;
+        }
+        //방향 전환 매서드
+        private void OnFlip(CharacterDirection newValue)
         {
             if (runningCombatStateType == CombatStateType.Death)
                 return;
 
             Vector3 flipScale = transform.localScale;
-            if (CharacterDirection == CharacterDirection.Left)
+            if (newValue == CharacterDirection.Left)
                 flipScale.x = Mathf.Abs(flipScale.x) * -1;
             else
                 flipScale.x = Mathf.Abs(flipScale.x);
-
             transform.localScale = flipScale;
         }
 
@@ -136,7 +134,6 @@ namespace AshGreen.Character
             private set
             {
                 nowHp.Value = Mathf.Clamp(value, 0, MaxHP);
-                Debug.Log("현재체력: " + nowHp.Value + ", " + isDamageImmunity.Value);
             }
         }
 
@@ -374,9 +371,6 @@ namespace AshGreen.Character
             if(IsOwner)
                 CombatStateTransitionRpc(CombatStateType.Idle);
 
-            //캐릭터 방향 값 변경 시 처리
-            characterDirection.OnValueChanged += OnFlipRpc;
-
             //피해 면역 처리
             isDamageImmunity.OnValueChanged += DamageImmunityRpc;
 
@@ -390,7 +384,6 @@ namespace AshGreen.Character
             base.OnNetworkDespawn();
 
             //델리게이터 제거
-            characterDirection.OnValueChanged -= OnFlipRpc;
             isDamageImmunity.OnValueChanged -= DamageImmunityRpc;
             _damageReceiver.TakeDamageAction -= TakeDamage;
             _damageReceiver.DealDamageAction -= DealDamage;
@@ -413,7 +406,6 @@ namespace AshGreen.Character
         {
             if (runningCombatStateType != CombatStateType.Death)
             {
-                Debug.Log("플레이어 피격 처리");
 
                 if (nowHp.Value-damage > 0)
                     CombatStateTransitionRpc(CombatStateType.Hit);
@@ -430,7 +422,6 @@ namespace AshGreen.Character
         /// 
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
         {
-            Debug.Log("타겟"+target);
             target._damageReceiver.TakeDamage(damage);
         }
 

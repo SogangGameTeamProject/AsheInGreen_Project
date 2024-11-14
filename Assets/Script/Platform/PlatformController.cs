@@ -3,6 +3,7 @@ using AshGreen.State;
 using System;
 using System.Collections.Generic;
 using Unity.Netcode;
+using Unity.Netcode.Components;
 using UnityEngine;
 using static AshGreen.Character.CharacterController;
 
@@ -29,6 +30,7 @@ namespace AshGreen.Platform
         [SerializeField]
         private PlatformStateType startState = PlatformStateType.IDLE;
 
+        public NetworkVariable<Vector2> syncVelocity = new NetworkVariable<Vector2>(Vector2.zero);
 
         //HP 관련 설정값
         [SerializeField]
@@ -58,6 +60,7 @@ namespace AshGreen.Platform
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
+
             PlatformManager.Instance.platformList.Add(this);
 
             stateContext = new StateContext<PlatformController>(this);
@@ -76,6 +79,10 @@ namespace AshGreen.Platform
         private void Update()
         {
             stateContext.StateUpdate();
+            if (IsServer)
+            {
+                syncVelocity.Value = GetComponent<Rigidbody2D>().linearVelocity;
+            }
         }
 
         //--------상태 패턴------------

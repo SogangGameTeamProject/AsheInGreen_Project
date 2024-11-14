@@ -11,9 +11,9 @@ namespace AshGreen.DamageObj
         public float damage = 1;
         public AttackType dealType = AttackType.None;
         public bool isCritical = false;
-        public bool isNockback = false;
-        public float nockbackPower = 100f;
-        public float nockbackTime = 0.3f;
+        public bool isKnockback = false;
+        public float knockbackPower = 100f;
+        public float knockbackTime = 0.3f;
         public bool isDestroy = false;
         //타겟 추적 관련
         public bool isTarget = false;
@@ -30,83 +30,76 @@ namespace AshGreen.DamageObj
             //타겟 추적 상태일 시 타겟을 향해 날라감
             if (isTarget)
             {
-                transform.position = Vector2.Lerp(transform.position, targetPos, trackingSpeed * Time.deltaTime);
-
-                float distance = Vector2.Distance(transform.position, targetPos);
-                if (distance <= 0.1f)
-                    DestoryObjRpc();
+                TrackTarget();
             }
         }
+
+        private void TrackTarget()
+        {
+            transform.position = Vector2.Lerp(transform.position, targetPos, trackingSpeed * Time.deltaTime);
+
+            if (Vector2.Distance(transform.position, targetPos) <= 0.1f)
+                DestroyObjRpc();
+        }
+
         [Rpc(SendTo.Server)]
-        protected void DestoryObjRpc()
+        protected void DestroyObjRpc()
         {
             if (!NetworkObject.IsSpawned)
                 return;
 
-            //폭발 여부에 따른 추가 피해
-            // 폭발 중심점에서 explosionRadius 반경 내의 콜라이더 탐색
+            if (isExplosion)
+                ApplyExplosionDamage();
+
+            NetworkObject.Destroy(this.gameObject);
+        }
+
+        private void ApplyExplosionDamage()
+        {
             Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, explosionRadius, targetLayer);
 
             foreach (Collider2D target in targets)
             {
-                IDamageable damageable = target.gameObject.GetComponent<IDamageable>();
-
-                // 만약 인터페이스가 존재하면 실행
-                if (damageable != null)
-                {
-                    if (!target.GetComponent<NetworkObject>().IsOwner)
-                        return;
-
-                    //넉백 여부에 따른 넉백
-                    if (isNockback)
-                    {
-                        MovementController movementController = target.gameObject.GetComponent<MovementController>();
-                        if (movementController)
-                        {
-                            float nockBackForceX =
-                            target.gameObject.transform.position.x > this.transform.position.x ?
-                            1 : -1;
-                            Vector2 nockBackForce = new Vector2(0, 1);
-
-                            movementController.ExcutNockBack(nockBackForce, nockbackPower, nockbackTime);
-                        }
-                    }
-
-                    if (caster == null || dealType == AttackType.Enemy)
-                        damageable.TakeDamage(damage);
-                    else
-                        caster.GetComponent<DamageReceiver>().DealDamage(target.GetComponent<CharacterController>(), damage, dealType);
-
-                }
+                ApplyDamage(target);
             }
+        }
 
-            NetworkObject.Destroy(this.gameObject);
+        private void ApplyDamage(Collider2D target)
+        {
+            IDamageable damageable = target.gameObject.GetComponent<IDamageable>();
+            bool isDamageImmunity = 
+                target.gameObject?.GetComponent<CharacterController>()?.isDamageImmunity?.Value ?? false;
+            Debug.Log("isDamageImmunity: " + isDamageImmunity);
+            if (damageable != null && target.GetComponent<NetworkObject>().IsOwner && !isDamageImmunity)
+            {
+                if (isKnockback)
+                    ApplyKnockback(target);
+
+                if (caster == null || dealType == AttackType.Enemy)
+                    damageable.TakeDamage(damage);
+                else
+                    caster.GetComponent<DamageReceiver>().DealDamage(target.GetComponent<CharacterController>(), damage, dealType);
+            }
+        }
+
+        private void ApplyKnockback(Collider2D target)
+        {
+            MovementController movementController = target.gameObject?.GetComponent<MovementController>();
+            if (movementController)
+            {
+                Vector2 knockBackForce = new Vector2(0, 1);
+                movementController.ExcutNockBack(knockBackForce, knockbackPower, knockbackTime);
+            }
         }
 
         protected void OnTriggerEnter2D(Collider2D collision)
         {
             IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
 
-            // 만약 인터페이스가 존재하면 실행
-            if (damageable != null)
+            if (damageable != null && collision.GetComponent<NetworkObject>().IsOwner)
             {
-                if (!collision.GetComponent<NetworkObject>().IsOwner)
-                    return;
-
-                //넉백 여부에 따른 넉백
-                if (isNockback)
-                {
-                    MovementController movementController = collision.gameObject.GetComponent<MovementController>();
-                    if (movementController)
-                    {
-                        float nockBackForceX =
-                        collision.gameObject.transform.position.x > this.transform.position.x ?
-                        1 : -1;
-                        Vector2 nockBackForce = new Vector2(0, 1);
-
-                        movementController.ExcutNockBack(nockBackForce, nockbackPower, nockbackTime);
-                    }
-                }
+                if (isKnockback)
+                    ApplyKnockback(collision);
 
                 if (caster == null || dealType == AttackType.Enemy)
                     damageable.TakeDamage(damage);
@@ -114,9 +107,8 @@ namespace AshGreen.DamageObj
                     caster.GetComponent<DamageReceiver>().DealDamage(collision.GetComponent<CharacterController>(), damage, dealType);
 
                 if (isDestroy)
-                    DestoryObjRpc();
+                    DestroyObjRpc();
             }
         }
     }
-
 }

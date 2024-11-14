@@ -19,18 +19,18 @@ namespace AshGreen.Character
 
         public override void StateUpdate()
         {
-            if(!IsOwner) 
-                return;
-
             //이동 방향에 따른 방향 전환
             if (rBody.linearVelocityX > 0.1f && _character.CharacterDirection == CharacterDirection.Left)
             {
-                _character.SetCharacterDirectionRpc(CharacterDirection.Right);
+                _character.CharacterDirection = CharacterDirection.Right;
             }
             else if (rBody.linearVelocityX < -0.1f && _character.CharacterDirection == CharacterDirection.Right)
             {
-                _character.SetCharacterDirectionRpc(CharacterDirection.Left);
+                _character.CharacterDirection = CharacterDirection.Left;
             }
+
+            if (!IsOwner) 
+                return;
 
             if (((PlayerController)_character)._movementController.isGrounded)
                 ((PlayerController)_character)._movementController.MovementStateTransitionRpc(onChangeType);

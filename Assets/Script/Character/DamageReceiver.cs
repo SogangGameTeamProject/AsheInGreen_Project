@@ -20,7 +20,6 @@ namespace AshGreen.Character
         //피격 처리 메서드
         public void TakeDamage(float damage)
         {
-            Debug.Log("피격: "+IsOwner);
 
             if(_character.runningCombatStateType != CombatStateType.Death)
             {
@@ -31,7 +30,6 @@ namespace AshGreen.Character
         [Rpc(SendTo.Owner)]
         public void TakeDamageRpc(float damage)
         {
-            Debug.Log("피격: " + this.gameObject.name);
             damage *= _character.TakenDamageCoefficient;
             TakeDamageAction?.Invoke(damage);
         }

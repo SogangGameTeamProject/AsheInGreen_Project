@@ -1,5 +1,6 @@
 using AshGreen.Platform;
 using System.Collections;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -20,10 +21,10 @@ namespace AshGreen.Character{
         private float firstDealay = 0.5f;//공격 선딜
         [SerializeField]
         private float lastDealay = 0.5f;//공격 후딜
+
+        //근접공격
         [SerializeField]
-        private Transform attackPoint = null;
-        [SerializeField]
-        private GameObject attackPre = null;
+        private GameObject damageArea;
         public override void Enter(EnemyController controller)
         {
             base.Enter(controller);
@@ -78,10 +79,9 @@ namespace AshGreen.Character{
                 //타겟 공격
                 _enemy.SetTriggerAniParaRpc("IsSmash");
                 yield return new WaitForSeconds(firstDealay);
-                CharacterController character = _enemy.GetComponent<CharacterController>();
-                ProjectileFactory.Instance.RequestProjectileFire(character, attackPre, AttackType.Enemy, attackCofficient
-                    , Vector2.zero, attackPoint.position, attackPoint.rotation, 0.1f);
+                SetDamageAreaRpc(true);
                 yield return new WaitForSeconds(lastDealay);
+                SetDamageAreaRpc(false);
             }
 
             //원래 위치로 이동
@@ -100,6 +100,12 @@ namespace AshGreen.Character{
             }
 
             yield return base.ExePatteurn();
+        }
+
+        [Rpc(SendTo.ClientsAndHost)]
+        private void SetDamageAreaRpc(bool value)
+        {
+            damageArea.SetActive(value);
         }
     }
 }

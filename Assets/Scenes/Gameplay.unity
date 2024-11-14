@@ -224,11 +224,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: dealType
+      value: 401
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: isDestroy
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: isKnockback
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: nockbackPower
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: knockbackPower
       value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
@@ -325,11 +337,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: dealType
+      value: 401
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: isDestroy
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: isKnockback
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: nockbackPower
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: knockbackPower
       value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
@@ -781,7 +805,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10.1015625
+  orthographic size: 11.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1126,11 +1150,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: dealType
+      value: 401
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: isDestroy
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: isKnockback
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
       propertyPath: nockbackPower
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448967465036515041, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
+      propertyPath: knockbackPower
       value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7054441411763482513, guid: 4cd185d771dc6ba4d874d0b8cb4b9de6, type: 3}
