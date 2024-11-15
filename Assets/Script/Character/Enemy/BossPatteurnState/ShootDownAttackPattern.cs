@@ -118,7 +118,8 @@ namespace AshGreen.Character{
 
                 //타겟 공격
                 _enemy.SetTriggerAniParaRpc("IsShooting");
-                ProjectileFactory.Instance.RequestProjectileTargetFire(_enemy, bulletPre, AttackType.Enemy, attackCofficient,
+                if(target != null)
+                    ProjectileFactory.Instance.RequestProjectileTargetFire(_enemy, bulletPre, AttackType.Enemy, attackCofficient,
                     target.position, firePoint.position, Quaternion.identity);
 
                 yield return new WaitForSeconds(fireDelay);

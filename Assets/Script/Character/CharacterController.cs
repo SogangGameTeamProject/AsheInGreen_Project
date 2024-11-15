@@ -59,15 +59,18 @@ namespace AshGreen.Character
             set
             {
                 OnFlip(value);
+                RequsetOnFlipRpc(value);
                 characterDirection = value;
             }
         }
 
         //서버에 방향 전환 요청 메서드
         [Rpc(SendTo.ClientsAndHost)]
-        public void RequsetOnFlipRpc(CharacterDirection newValue)
+        private void RequsetOnFlipRpc(CharacterDirection newValue)
         {
-            CharacterDirection = newValue;
+            if (IsOwner)
+                return;
+            OnFlip(newValue);
         }
         //방향 전환 매서드
         private void OnFlip(CharacterDirection newValue)

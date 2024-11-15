@@ -26,6 +26,9 @@ namespace AshGreen.Character
 
         public override void StateUpdate()
         {
+            if (!IsOwner)
+                return;
+
             //이동 방향에 따른 방향 전환
             if (rBody.linearVelocityX > 0.1f && _character.CharacterDirection == CharacterDirection.Left)
             {
@@ -35,9 +38,6 @@ namespace AshGreen.Character
             {
                 _character.CharacterDirection = CharacterDirection.Left;
             }
-
-            if (!IsOwner)
-                return;
 
             //플랫폼 정보 가져오기
             Collider2D collisionPlatform =

@@ -25,6 +25,14 @@ namespace AshGreen.DamageObj
         public float explosionRadius = 4;
         public LayerMask targetLayer;
 
+        public override void OnNetworkDespawn()
+        {
+            base.OnNetworkDespawn();
+
+            if (isExplosion)
+                ApplyExplosionDamage();
+        }
+
         private void Update()
         {
             //타겟 추적 상태일 시 타겟을 향해 날라감
@@ -47,9 +55,6 @@ namespace AshGreen.DamageObj
         {
             if (!NetworkObject.IsSpawned)
                 return;
-
-            if (isExplosion)
-                ApplyExplosionDamage();
 
             NetworkObject.Destroy(this.gameObject);
         }
