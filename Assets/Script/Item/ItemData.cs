@@ -2,9 +2,11 @@ using UnityEngine;
 
 namespace AshGreen.Item
 {
-    [CreateAssetMenu(fileName = "NewItem", menuName = "Item/ItemData")]
+    [CreateAssetMenu(fileName = "NewItem", menuName = "Scriptable Objects/Item/ItemData")]
     public class ItemData : ScriptableObject
     {
+        public int itemID;//아이템 ID
+        public GameObject itemObj;//아이템 오브젝트
         public string itemName;//아이템 명
         public string description;//설명
         public Sprite icon;// 아이콘

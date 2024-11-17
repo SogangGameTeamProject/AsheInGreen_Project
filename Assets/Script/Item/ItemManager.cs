@@ -8,11 +8,14 @@ namespace AshGreen.Item
     // 아이템 관리자
     public class ItemManager : NetworkBehaviour
     {
-        private Dictionary<int, ItemEffectInit> itemInventory = new Dictionary<int, ItemEffectInit>();
+        public ItemDataList itemDataList;
+        private List<ItemData> itemList = new List<ItemData>();
+        public Dictionary<int, ItemEffectInit> itemInventory = new Dictionary<int, ItemEffectInit>();
         private PlayerController playerController;
 
         private void Awake()
         {
+            itemList = itemDataList.dataList;
             playerController = GetComponentInParent<PlayerController>();
         }
 
@@ -20,7 +23,16 @@ namespace AshGreen.Item
         [Rpc(SendTo.ClientsAndHost) ]
         public void AddItemRpc(int itemID)
         {
-            itemInventory[itemID].AddEffect(playerController);
+            //아이템 체크 후 있으면 스택 추가 없으면 오브젝트 생성
+            if(itemInventory.ContainsKey(itemID))
+                itemInventory[itemID].AddEffect();
+            else
+            {
+                GameObject itemObj = Instantiate(itemList[itemID].itemObj, transform);
+                ItemEffectInit itemEffect = itemObj.GetComponent<ItemEffectInit>();
+                itemInventory.Add(itemID, itemEffect);
+                itemEffect.ApplyEffect(playerController);//아이템 효과 적용
+            }
         }
 
         // 아이템 제거
