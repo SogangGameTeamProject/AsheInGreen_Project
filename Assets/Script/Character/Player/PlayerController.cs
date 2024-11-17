@@ -1,5 +1,6 @@
 using AshGreen.Character;
 using AshGreen.Character.Skill;
+using AshGreen.Item;
 using System;
 using Unity.Netcode;
 using UnityEngine;
@@ -13,6 +14,8 @@ namespace AshGreen.Character.Player
         public PlayerUI playerUI;//플레이어 UI
         public ulong clientID;
 
+        [SerializeField ]
+        private ItemManager itemManager;//아이템 매니저
         public MovementController _movementController = null;
         public CharacterSkillManager _characterSkillManager = null;
         public Transform firePoint = null;
