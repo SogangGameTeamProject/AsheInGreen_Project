@@ -62,7 +62,7 @@ namespace AshGreen.Character
                 GrowthAttackPower.Value = enemyConfig.GrowthAttackPower;
                 GrowthPerAttackPower.Value = enemyConfig.GrowthPerAttackPower;
                 baseAttackPower.Value = enemyConfig.AttackPower;
-                EnemyUIController.Instance.enemyHud.Name.text = enemyConfig.characterName;
+                SetEnemyNameRpc(enemyConfig.characterName);
             }
         }
 
@@ -114,6 +114,13 @@ namespace AshGreen.Character
         public void SetTriggerAniParaRpc(string paraName)
         {
             _animator.SetTrigger(paraName);
+        }
+
+        //보스 이름 설정 메서드
+        [Rpc(SendTo.ClientsAndHost)]
+        private void SetEnemyNameRpc(string name)
+        {
+            EnemyUIController.Instance.enemyHud.Name.text = name;
         }
 
         //보스 체력 바 업데이트 메서드

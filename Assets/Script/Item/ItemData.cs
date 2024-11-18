@@ -9,6 +9,7 @@ namespace AshGreen.Item
         public GameObject itemObj;//아이템 오브젝트
         public string itemName;//아이템 명
         public string description;//설명
+        public int price;//가격
         public Sprite icon;// 아이콘
         public bool hasCooldown;//쿨다운이 있는지
         public float cooldownTime;//쿨다운 시간

@@ -35,13 +35,9 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     private List<ulong> m_connectedClients = new List<ulong>();
     public List<PlayerController> m_player = new List<PlayerController>();
 
-
-    //승리 패배 관련 전역 변수
+    //상점 팝업 과련 전역 변수
     [SerializeField]
-    private GameObject playerDefeatPopup;
-    [SerializeField]
-    private GameObject bossDefeatPopup;
-
+    private List<ulong> m_readyPlayer = new List<ulong>();//상점 준비 완료 플레이어
 
     private void OnEnable()
     {
@@ -203,19 +199,11 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         // For each client spawn and set UI
         foreach (var client in m_connectedClients)
         {
-            Debug.Log("client: " + client + ", m_connectedClients: " + m_connectedClients.Count);
             int index = 0;
             foreach (CharacterConfig data in m_charactersData)
             {
-                Debug.Log("선택 클라이언트 ID 추력");
-                foreach (var val in data.selectClientIds)
-                {
-                    Debug.Log(val.Key + ", " + val.Value);
-                }
-                Debug.Log("data.GetClientId(clientId): " + data.GetClientId(client) + " client: " + client);
                 if (data.GetClientId(client) == client)
                 {
-                    Debug.Log("캐릭터 찾음: " + client);
                     GameObject player =
                         NetworkObjectSpawner.SpawnNewNetworkObjectAsPlayerObject(
                             data.playerPre,
@@ -236,5 +224,34 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
                 index++;
             }
         }
+    }
+
+    //플레이어 준비 완료 요청 메서드
+    public void RequestPlayerReady()
+    {
+        PlayerReadyRpc(NetworkManager.Singleton.LocalClientId);
+    }
+
+    //플레이어 준비 취소 요청 메서드
+    public void RequestPlayerNotReady()
+    {
+        PlayerNotReadyRpc(NetworkManager.Singleton.LocalClientId);
+    }
+
+    //플레이어 준비 완료 처리 메서드
+    [Rpc(SendTo.ClientsAndHost)]
+    private void PlayerReadyRpc(ulong playerID)
+    {
+        m_readyPlayer.Add(playerID);
+        //모든 플레이어 준비 완료 시 다음 스테이지 시작
+        if (m_readyPlayer.Count == m_numberOfPlayerConnected)
+            LoadingSceneManager.Instance.LoadScene(SceneName.Gameplay);
+    }
+
+    //플레이어 준비 취소 처리 메서드
+    [Rpc(SendTo.ClientsAndHost)]
+    private void PlayerNotReadyRpc(ulong playerID)
+    {
+        m_readyPlayer.Remove(playerID);
     }
 }
