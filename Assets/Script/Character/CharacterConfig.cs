@@ -22,6 +22,8 @@ namespace AshGreen.Character
         public Sprite iconSprite;          // 캐릭터 icon
         public GameObject playerPre; //플레이어 프리펩
         [Header("초기 스테이터스")]
+        [Tooltip("초기 자금")]
+        public int startMoney = 1000;
         [Tooltip("레벨업에 필요한 경험치")]
         public int LevelUpEx = 200;
         [Tooltip("최대체력")]

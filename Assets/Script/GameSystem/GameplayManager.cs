@@ -7,6 +7,7 @@ using Unity.Netcode;
 using UnityEngine;
 using AshGreen.Character.Player;
 using Unity.VisualScripting;
+using System.Linq;
 
 public class GameplayManager : NetworkSingleton<GameplayManager>
 {
@@ -196,33 +197,44 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         // Check if is the last client
         if (m_connectedClients.Count < NetworkManager.Singleton.ConnectedClients.Count)
             return;
+
+        
+
         // For each client spawn and set UI
         foreach (var client in m_connectedClients)
         {
-            int index = 0;
-            foreach (CharacterConfig data in m_charactersData)
+            //오너 캐릭터가 이미 있는지 체크
+            GameObject player = GameObject.FindGameObjectsWithTag("Player")
+                .Select(p => p.GetComponent<NetworkObject>())
+                .FirstOrDefault(n => n != null &&
+                n.OwnerClientId == client)?.gameObject;
+
+            //오너 캐릭터가 없을 시 새로운 캐릭터 생성
+            if(player == null)
             {
-                if (data.GetClientId(client) == client)
+                foreach (CharacterConfig data in m_charactersData)
                 {
-                    GameObject player =
-                        NetworkObjectSpawner.SpawnNewNetworkObjectAsPlayerObject(
-                            data.playerPre,
-                            m_StartingPositions[m_numberOfPlayerConnected].position,
-                            client,
-                            true);
-
-                    PlayerController playerController =
-                        player.GetComponent<PlayerController>();
-                    playerController.gameplayManager = this;
-                    m_player.Add(playerController);
-                    SetPlayerUIClientRpc(playerController.GetComponent<NetworkObject>());
-
-                    m_numberOfPlayerConnected++;
-                    break;
+                    if (data.GetClientId(client) == client)
+                    {
+                        player =
+                            NetworkObjectSpawner.SpawnNewNetworkObjectAsPlayerObject(
+                                data.playerPre,
+                                m_StartingPositions[m_numberOfPlayerConnected].position,
+                                client,
+                                true);
+                    }
                 }
-
-                index++;
             }
+
+            //플레이어 컨트롤러 설정
+            PlayerController playerController =
+                            player.GetComponent<PlayerController>();
+            playerController.gameplayManager = this;
+            m_player.Add(playerController);
+            SetPlayerUIClientRpc(playerController.GetComponent<NetworkObject>());
+
+            m_numberOfPlayerConnected++;
+            break;
         }
     }
 
