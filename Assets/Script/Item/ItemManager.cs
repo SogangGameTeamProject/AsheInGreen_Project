@@ -23,6 +23,7 @@ namespace AshGreen.Item
         [Rpc(SendTo.ClientsAndHost) ]
         public void AddItemRpc(int itemID)
         {
+            Debug.Log($"AddItemRpc: {itemID}");
             //아이템 체크 후 있으면 스택 추가 없으면 오브젝트 생성
             if(itemInventory.ContainsKey(itemID))
                 itemInventory[itemID].AddEffect();

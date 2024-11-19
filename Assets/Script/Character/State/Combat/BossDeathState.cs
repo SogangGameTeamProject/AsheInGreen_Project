@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.Netcode;
 
 namespace AshGreen.Character
 {
@@ -13,7 +14,8 @@ namespace AshGreen.Character
 
         private void DeathEvent()
         {
-            NetworkObject.Despawn(this.gameObject);
+            if(IsServer)
+                NetworkObject.Despawn(this.gameObject);
             GameplayManager.Instance.BossDefeat();
         }
     }

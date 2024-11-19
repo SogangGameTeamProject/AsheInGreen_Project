@@ -112,7 +112,6 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
 
             // When a client/host connects tell the manager to create the ship and change the music
             case SceneName.Gameplay:
-                Debug.Log("Gameplay Init: "+ clientId);
                 GameplayManager.Instance.ServerSceneInit(clientId);
                 break;
 

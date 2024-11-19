@@ -26,6 +26,8 @@ namespace AshGreen.Item
             // 예: 버튼 컨트롤러에 아이템 데이터 설정
             for (int i = 0; i < m_btnControllerList.Count; i++)
             {
+                if (randomItemDataList.Count <= i)
+                    break;
                 m_btnControllerList[i].SetItemData(randomItemDataList[i]);
             }
         }

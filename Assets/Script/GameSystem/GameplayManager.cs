@@ -94,7 +94,6 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     [ClientRpc]
     private void ActivateDeathUIClientRpc()
     {
-        Debug.Log("사망 팝업");
         m_deathUI.SetActive(true);
     }
 
@@ -198,8 +197,6 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         if (m_connectedClients.Count < NetworkManager.Singleton.ConnectedClients.Count)
             return;
 
-        
-
         // For each client spawn and set UI
         foreach (var client in m_connectedClients)
         {
@@ -208,7 +205,6 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
                 .Select(p => p.GetComponent<NetworkObject>())
                 .FirstOrDefault(n => n != null &&
                 n.OwnerClientId == client)?.gameObject;
-
             //오너 캐릭터가 없을 시 새로운 캐릭터 생성
             if(player == null)
             {
@@ -222,6 +218,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
                                 m_StartingPositions[m_numberOfPlayerConnected].position,
                                 client,
                                 true);
+                        break;
                     }
                 }
             }
@@ -234,7 +231,6 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             SetPlayerUIClientRpc(playerController.GetComponent<NetworkObject>());
 
             m_numberOfPlayerConnected++;
-            break;
         }
     }
 
