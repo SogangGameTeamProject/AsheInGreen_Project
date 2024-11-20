@@ -26,7 +26,10 @@ namespace AshGreen.Character.Player
         public int Money
         {
             get => m_money.Value;
-            set => SetMoneyServerRpc(Mathf.Clamp(m_money.Value + value, 0, 999999));
+            set
+            {
+                SetMoneyServerRpc(Mathf.Clamp(value, 0, 999999));
+            }
         }
         
         //현재 돈 값을 수정하는 원격프로토콜 함수

@@ -10,7 +10,7 @@ namespace AshGreen.Item
 {
     public class ItemBtnController : MonoBehaviour
     {
-        private PlayerController m_playerController;//로컬 플레이어 컨트롤러
+        public PlayerController m_playerController;//로컬 플레이어 컨트롤러
         private ItemData m_itemData;//아이템 데이터
         private bool isCreate = false;//아이템 생성 여부
         [SerializeField]
@@ -25,10 +25,10 @@ namespace AshGreen.Item
         private TextMeshProUGUI itemPrice;//아이템 가격
 
         //아이템 데이터 설정
-        public void SetItemData(ItemData itemData)
+        public void SetItemData(ItemData itemData, PlayerController player)
         {
             Debug.Log($"아이템 설정: {itemData}");
-            m_playerController = FindLocalPlayer();
+            m_playerController = player;
             m_itemData = itemData;
             itemImg.sprite = m_itemData.icon;
             itemImg.gameObject.SetActive(true);
@@ -48,19 +48,6 @@ namespace AshGreen.Item
             m_playerController.itemManager.AddItemRpc(m_itemData.itemID);//아이템 추가
         }
 
-        // 클라이언트의 플레이어 컨트롤러 찾기
-        private PlayerController FindLocalPlayer()
-        {
-            //오너 캐릭터가 이미 있는지 체크
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            Debug.Log($"플레이어 개수: {players.Length}");
-
-            GameObject player = players
-                .Select(p => p.GetComponent<NetworkObject>())
-                .FirstOrDefault(n => n != null &&
-                n.OwnerClientId == NetworkManager.Singleton.LocalClientId)?.gameObject;
-
-            return player?.GetComponent<PlayerController>();
-        }
+        
     }
 }
