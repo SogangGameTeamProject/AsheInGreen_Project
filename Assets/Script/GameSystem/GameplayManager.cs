@@ -39,6 +39,8 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     //상점 팝업 과련 전역 변수
     [SerializeField]
     private List<ulong> m_readyPlayer = new List<ulong>();//상점 준비 완료 플레이어
+    [SerializeField]
+    private GameObject m_readyWaitingPanel;//상점 준비 패널
 
     private void OnEnable()
     {
@@ -190,21 +192,28 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     // for every client connected 
     public void ServerSceneInit(ulong clientId)
     {
+        Debug.Log("서버 초기화1");
         // Save the clients 
         m_connectedClients.Add(clientId);
-        
+
+        Debug.Log("서버 초기화2");
         // Check if is the last client
         if (m_connectedClients.Count < NetworkManager.Singleton.ConnectedClients.Count)
             return;
 
+        Debug.Log("서버 초기화3: " + m_connectedClients.Count);
         // For each client spawn and set UI
         foreach (var client in m_connectedClients)
         {
             //오너 캐릭터가 이미 있는지 체크
-            GameObject player = GameObject.FindGameObjectsWithTag("Player")
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            Debug.Log($"플레이어 개수: {players.Length}");
+
+            GameObject player = players
                 .Select(p => p.GetComponent<NetworkObject>())
-                .FirstOrDefault(n => n != null &&
-                n.OwnerClientId == client)?.gameObject;
+                .FirstOrDefault(n => n != null && n.OwnerClientId == client)?.gameObject;
+
+            Debug.Log($"player 체크: {client}, {player}");
             //오너 캐릭터가 없을 시 새로운 캐릭터 생성
             if(player == null)
             {
@@ -237,6 +246,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     //플레이어 준비 완료 요청 메서드
     public void RequestPlayerReady()
     {
+        m_readyWaitingPanel.SetActive(true);
         PlayerReadyRpc(NetworkManager.Singleton.LocalClientId);
     }
 
@@ -251,6 +261,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     private void PlayerReadyRpc(ulong playerID)
     {
         m_readyPlayer.Add(playerID);
+        Debug.Log($"m_readyPlayer: {m_readyPlayer.Count}, {m_numberOfPlayerConnected}");
         //모든 플레이어 준비 완료 시 다음 스테이지 시작
         if (m_readyPlayer.Count == m_numberOfPlayerConnected)
             LoadingSceneManager.Instance.LoadScene(SceneName.Gameplay);

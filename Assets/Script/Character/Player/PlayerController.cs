@@ -22,12 +22,13 @@ namespace AshGreen.Character.Player
         public CharacterConfig characterConfig = null;//기본능력치가 저장되는 변수
 
         //돈관련
-        private NetworkVariable<int> m_money = new NetworkVariable<int>(0);
+        public NetworkVariable<int> m_money = new NetworkVariable<int>(0);
         public int Money
         {
             get => m_money.Value;
-            set => SetMoneyServerRpc(Mathf.Clamp(m_money.Value+value, 0, 999999));
+            set => SetMoneyServerRpc(Mathf.Clamp(m_money.Value + value, 0, 999999));
         }
+        
         //현재 돈 값을 수정하는 원격프로토콜 함수
         [ServerRpc]
         private void SetMoneyServerRpc(int value)
@@ -38,6 +39,8 @@ namespace AshGreen.Character.Player
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
+
+            DontDestroyOnLoad(gameObject); // 씬 전환 시 파괴되지 않도록 설정
 
             level.OnValueChanged += LevelUpdateHUDRPC;
             addMaxHp.OnValueChanged += MaxHpUpdateHUDRPC;
@@ -68,6 +71,7 @@ namespace AshGreen.Character.Player
             {
                 Debug.Log("데이터 초기화");
                 m_money.Value = characterConfig.startMoney;
+                Debug.Log($"m_money: {m_money.Value}");
                 LevelUpEx.Value = characterConfig.LevelUpEx;
                 baseMaxHP.Value = characterConfig.MaxHP;
                 nowHp.Value = baseMaxHP.Value;

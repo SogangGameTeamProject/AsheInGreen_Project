@@ -81,7 +81,6 @@ public class LoadingSceneManager : Singleton<LoadingSceneManager>
     private void LoadSceneNetwork(SceneName sceneToLoad)
     {
         string SceneName = sceneToLoad.ToString();
-        Debug.Log($"{SceneName}: {SceneName == "CharacterSelection"}");
 
         NetworkManager.Singleton.SceneManager.LoadScene(
             SceneName,

@@ -10,24 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9210f604d57eac468c2c91bb84b442c, type: 3}
-  m_Name: SteroidItem
+  m_Name: 103Accelerant_CommonItem
   m_EditorClassIdentifier: 
-  itemID: 101
+  itemID: 103
   type: 0
   itemObj: {fileID: 6709337981346824141, guid: 0440ff87f3f50694b916660d3460d7ac, type: 3}
-  itemName: "\uC2A4\uD14C\uB85C\uC774\uB4DC"
-  description: "\uCD5C\uB300 \uCCB4\uB825 -{{BaseVal[0]}}(\uC911\uCCA9\uB2F9 {StackIncVal[0]}),
-    \uC2A4\uD0AC\uAC00\uC18D +{BaseVal[1]}%(\uC911\uCCA9\uB2F9 +{StackIncVal[1]}%),
-    \uCE58\uBA85\uD0C0\uD655\uB960 +{BaseVal[2]}%(\uC911\uCCA9\uB2F9 +{StackIncVal[2]}%)"
+  itemName: "\uC0AC\uACE0\uCD09\uC9C4\uC81C"
+  description: "\uC2A4\uD0AC\uAC00\uC18D +{BaseVal[0]}(\uC911\uCCA9\uB2F9 +{StackIncVal})
+    \uC99D\uAC00"
   price: 15
-  icon: {fileID: -8877056252984190028, guid: 1b892e54e4427184ea66feaf2ab12978, type: 3}
+  icon: {fileID: -5097518086732344020, guid: 1b892e54e4427184ea66feaf2ab12978, type: 3}
   hasCooldown: 0
   cooldownTime: 0
   baseVal:
-  - -1
-  - 10
   - 10
   stackIncVal:
-  - -1
-  - 5
   - 5

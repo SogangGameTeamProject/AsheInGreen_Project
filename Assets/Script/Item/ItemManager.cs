@@ -23,13 +23,13 @@ namespace AshGreen.Item
         [Rpc(SendTo.ClientsAndHost) ]
         public void AddItemRpc(int itemID)
         {
-            Debug.Log($"AddItemRpc: {itemID}");
             //아이템 체크 후 있으면 스택 추가 없으면 오브젝트 생성
             if(itemInventory.ContainsKey(itemID))
                 itemInventory[itemID].AddEffect();
             else
             {
-                GameObject itemObj = Instantiate(itemList[itemID].itemObj, transform);
+                ItemData itemData = itemList.Find(item => item.itemID == itemID);
+                GameObject itemObj = Instantiate(itemData.itemObj, transform);
                 ItemEffectInit itemEffect = itemObj.GetComponent<ItemEffectInit>();
                 itemInventory.Add(itemID, itemEffect);
                 itemEffect.ApplyEffect(playerController);//아이템 효과 적용

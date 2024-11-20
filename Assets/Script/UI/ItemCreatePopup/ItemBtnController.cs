@@ -2,6 +2,7 @@ using AshGreen.Character.Player;
 using System.Linq;
 using TMPro;
 using Unity.Netcode;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,7 +32,7 @@ namespace AshGreen.Item
             m_itemData = itemData;
             itemImg.sprite = m_itemData.icon;
             itemImg.gameObject.SetActive(true);
-            itemName.text = m_itemData.name;
+            itemName.text = m_itemData.itemName;
             itemPrice.text = m_itemData.price.ToString();
         }
 
@@ -41,7 +42,6 @@ namespace AshGreen.Item
             //아이템 제작 가능여부 제크
             if (isCreate && m_playerController.Money >= m_itemData.price)
                 return;
-            Debug.Log($"CreateItem: {m_itemData.name}");
             m_playerController.Money -= m_itemData.price;//돈 차감
             itemImg.sprite = soldOutImg;//아이템 판매 완료 이미지로 변경
             isCreate = true;//아이템 생성 완료
@@ -51,10 +51,14 @@ namespace AshGreen.Item
         // 클라이언트의 플레이어 컨트롤러 찾기
         private PlayerController FindLocalPlayer()
         {
-            GameObject player = GameObject.FindGameObjectsWithTag("Player")
-            .Select(p => p.GetComponent<NetworkObject>())
-            .FirstOrDefault(n => n != null &&
-            n.OwnerClientId == NetworkManager.Singleton.LocalClientId)?.gameObject;
+            //오너 캐릭터가 이미 있는지 체크
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            Debug.Log($"플레이어 개수: {players.Length}");
+
+            GameObject player = players
+                .Select(p => p.GetComponent<NetworkObject>())
+                .FirstOrDefault(n => n != null &&
+                n.OwnerClientId == NetworkManager.Singleton.LocalClientId)?.gameObject;
 
             return player?.GetComponent<PlayerController>();
         }
