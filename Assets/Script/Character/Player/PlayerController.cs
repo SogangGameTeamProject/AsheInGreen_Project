@@ -114,6 +114,7 @@ namespace AshGreen.Character.Player
         [Rpc(SendTo.ClientsAndHost)]
         public void SkillInfoUpdateHUDRPC(SkillType skillType, float coolTime, int minUseCoast, int nowEnergy)
         {
+            if(playerUI == null) return;
             playerUI.UpdateSkill(skillType, coolTime, minUseCoast, nowEnergy);
         }
 

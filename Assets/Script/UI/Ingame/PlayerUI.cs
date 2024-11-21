@@ -73,6 +73,7 @@ public class PlayerUI : MonoBehaviour
 
     public void UpdateSkill(SkillType skillType , float coolTime, int minUseCoast, int nowEnergy)
     {
+        if(player == null) return;
         GameObject timer = null;
         TextMeshProUGUI timeTxt = null;
 
