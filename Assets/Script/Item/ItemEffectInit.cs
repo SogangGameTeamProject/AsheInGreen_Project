@@ -16,6 +16,7 @@ namespace AshGreen.Item
         public virtual void ApplyEffect(PlayerController player)
         {
             _playerController = player;
+            Debug.Log($"ItemEffectTxt: {itemData.Description}");
         }
 
         // 아이템 효과 추가

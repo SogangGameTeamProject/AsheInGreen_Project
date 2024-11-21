@@ -41,7 +41,7 @@ namespace AshGreen.Item
             //아이템 제작 가능여부 제크
             if (isCreate && m_playerController.Money >= m_itemData.price)
                 return;
-            m_playerController.Money -= m_itemData.price;//돈 차감
+            m_playerController.AddMoneyServerRpc(-m_itemData.price);//돈 차감
             itemImg.sprite = soldOutImg;//아이템 판매 완료 이미지로 변경
             isCreate = true;//아이템 생성 완료
             m_playerController.itemManager.AddItemRpc(m_itemData.itemID);//아이템 추가

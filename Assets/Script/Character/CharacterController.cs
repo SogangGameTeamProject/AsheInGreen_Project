@@ -92,7 +92,7 @@ namespace AshGreen.Character
         protected NetworkVariable<int> level = new NetworkVariable<int>(1);
         protected NetworkVariable<int> experience = new NetworkVariable<int>(0);
 
-        //경험치 관련 전역변수
+        //경험치 관련 전역 프로퍼티
         public int Experience
         {
             get
@@ -113,6 +113,7 @@ namespace AshGreen.Character
 
         //최대체력 관련 전역변수
         protected NetworkVariable<int> baseMaxHP = new NetworkVariable<int>(0);
+        [SerializeField]
         protected NetworkVariable<int> addMaxHp = new NetworkVariable<int>(0);
         protected NetworkVariable<int> GrowthMaxHP = new NetworkVariable<int>(0);
         protected NetworkVariable<float> GrowthPerMaxHP = new NetworkVariable<float>(0);
@@ -147,9 +148,10 @@ namespace AshGreen.Character
         /// <param name="addNowHp">증감 체력값</param>
         /// <param name="addMaxHp">증감할 최대체력 값</param>
         [Rpc(SendTo.Server)]
-        public void SetHpRpc(int addNowHp, int addMaxHp = 0)
+        public void AddHpRpc(int addNowHp, int addMaxHp = 0)
         {
-            this.addMaxHp.Value += addMaxHp;
+            if(MaxHP > -addMaxHp)
+                this.addMaxHp.Value += addMaxHp;
             NowHP += addNowHp;
         }
 
@@ -180,9 +182,9 @@ namespace AshGreen.Character
         /// <param name="addAttackPower">증감할 공격력(고정)</param>
         /// <param name="addAttackPowerPer">증감할 공격력(%)</param>
         [Rpc(SendTo.Server)]
-        public void SetAttackpowerRpc(int addAttackPower, float addAttackPerPower = 0)
+        public void AddAttackpowerRpc(int addAttackPower, float addAttackPerPower = 0)
         {
-            this.addAttackPower.Value += addAttackPower;
+            this.addAttackPower.Value = Mathf.Max(this.addAttackPower.Value + addAttackPower, 0);
             this.addAttackPerPower.Value += addAttackPerPower;
         }
 
@@ -204,7 +206,7 @@ namespace AshGreen.Character
         /// <param name="addMoveSpeed">증감할 이동속도(고정)</param>
         /// <param name="addMovePerSpeed">증감할 이동속도(%)</param>
         [Rpc(SendTo.Server)]
-        public void SetMovespeedRpc(float addMoveSpeed, float addMovePerSpeed = 0)
+        public void AddMovespeedRpc(float addMoveSpeed, float addMovePerSpeed = 0)
         {
             this.addMoveSpeed.Value += addMoveSpeed;
             this.addMovePerSpeed.Value += addMovePerSpeed;
@@ -235,10 +237,10 @@ namespace AshGreen.Character
         /// <param name="addJumMaxNum"></param>
         /// <param name="addJumpPower"></param>
         [Rpc(SendTo.Server)]
-        public void SetJumpRpc(int addJumMaxNum, float addJumpPower = 0)
+        public void AddJumpRpc(int addJumMaxNum, float addJumpPower = 0)
         {
-            this.addJumMaxNum.Value += addJumMaxNum;
-            this.addJumpPower.Value += addJumpPower;
+            this.addJumMaxNum.Value = Mathf.Max(this.addJumMaxNum.Value + addJumMaxNum, 0);
+            this.addJumpPower.Value = Mathf.Max(this.addJumpPower.Value + addJumpPower, 1);
         }
 
         public int jumCnt { get; set; }
@@ -265,7 +267,7 @@ namespace AshGreen.Character
         /// <param name="addSkillAcceleration">증감할 스킬 가속</param>
         /// <param name="addItemAcceleration">증감할 아이템 가속</param>
         [Rpc(SendTo.Server)]
-        public void SetAccelerationRpc(float addSkillAcceleration, float addItemAcceleration = 0)
+        public void AddAccelerationRpc(float addSkillAcceleration, float addItemAcceleration = 0)
         {
             this.addSkillAcceleration.Value += addSkillAcceleration;
             this.addItemAcceleration.Value += addItemAcceleration;
@@ -290,7 +292,7 @@ namespace AshGreen.Character
             get
             {
                 float damage = baseCriticalDamage.Value + addCriticalDamage.Value;
-                damage = Mathf.Clamp(damage, 1, 99);
+                damage = Mathf.Max(damage, 1);
                 return damage;
             }
         }
@@ -300,7 +302,7 @@ namespace AshGreen.Character
         /// <param name="addCriticalChance">증감 치명타 확률</param>
         /// <param name="addCriticalDamage">증감 치명타 데미지</param>
         [Rpc(SendTo.Server)]
-        public void SetCriticalRpc(float addCriticalChance, float addCriticalDamage = 0)
+        public void AddCriticalRpc(float addCriticalChance, float addCriticalDamage = 0)
         {
             this.addCriticalChance.Value += addCriticalChance;
             this.addCriticalDamage.Value += addCriticalDamage;
@@ -316,9 +318,9 @@ namespace AshGreen.Character
             }
         }
         [Rpc(SendTo.Server)]
-        public void SetTakenDamageCoefficientRpc(float value)
+        public void AddTakenDamageCoefficientRpc(float value)
         {
-            takenDamageCoefficient.Value = Mathf.Clamp(takenDamageCoefficient.Value + value, 0, 10);
+            takenDamageCoefficient.Value = Mathf.Max(takenDamageCoefficient.Value + value, 0);
         }
 
         //가하는 데미지 증가 
@@ -331,9 +333,9 @@ namespace AshGreen.Character
             }
         }
         [Rpc(SendTo.Server)]
-        public void SetDealDamageCoefficientRpc(float value)
+        public void AddDealDamageCoefficientRpc(float value)
         {
-            dealDamageCoefficient.Value = Mathf.Clamp(dealDamageCoefficient.Value + value, 0, 10);
+            dealDamageCoefficient.Value = Mathf.Max(dealDamageCoefficient.Value + value, 0);
         }
 
         //피해 면역 관련 
@@ -416,7 +418,7 @@ namespace AshGreen.Character
                 else
                     CombatStateTransitionRpc(CombatStateType.Death);
 
-                SetHpRpc(-(int)damage);
+                AddHpRpc(-(int)damage);
             }
         }
 
