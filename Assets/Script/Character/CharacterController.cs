@@ -92,6 +92,7 @@ namespace AshGreen.Character
         protected NetworkVariable<int> level = new NetworkVariable<int>(1);
         protected NetworkVariable<int> experience = new NetworkVariable<int>(0);
 
+        //경험치 관련 전역변수
         public int Experience
         {
             get

@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9210f604d57eac468c2c91bb84b442c, type: 3}
-  m_Name: 103Accelerant_CommonItem
+  m_Name: 102_MilitaryKnife_CommonItem
   m_EditorClassIdentifier: 
-  itemID: 103
+  itemID: 102
   type: 0
-  itemObj: {fileID: 6709337981346824141, guid: 0440ff87f3f50694b916660d3460d7ac, type: 3}
-  itemName: "\uC0AC\uACE0\uCD09\uC9C4\uC81C"
-  description: "\uC2A4\uD0AC\uAC00\uC18D +{BaseVal[0]}(\uC911\uCCA9\uB2F9 +{StackIncVal})
+  itemObj: {fileID: 7021502869875470856, guid: 727771ff26d543841adc8da43b953f1f, type: 3}
+  itemName: "\uAD70\uC6A9 \uB098\uC774\uD504"
+  description: "\uACF5\uACA9\uB825 +{BaseVal[0]}(\uC911\uCCA9\uB2F9 +{StackIncVal})
     \uC99D\uAC00"
   price: 15
-  icon: {fileID: -5097518086732344020, guid: 1b892e54e4427184ea66feaf2ab12978, type: 3}
+  icon: {fileID: 3643366360394810884, guid: 92ea01a90f971524fa102f813d009f78, type: 3}
   hasCooldown: 0
   cooldownTime: 0
   baseVal:
-  - 10
-  stackIncVal:
   - 5
+  stackIncVal:
+  - 4

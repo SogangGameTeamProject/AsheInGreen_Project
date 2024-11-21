@@ -15,7 +15,7 @@ namespace AshGreen.Item
 
         private void Awake()
         {
-            itemList = itemDataList.dataList;
+            itemList = itemDataList.DataList;
             playerController = GetComponentInParent<PlayerController>();
         }
 

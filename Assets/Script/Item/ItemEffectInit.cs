@@ -8,7 +8,7 @@ namespace AshGreen.Item
     public abstract class ItemEffectInit : MonoBehaviour
     {
         public ItemData itemData;
-        private PlayerController _playerController;
+        protected PlayerController _playerController;
         [HideInInspector]
         public int _stacks = 0;
 

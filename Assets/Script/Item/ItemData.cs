@@ -11,7 +11,8 @@ namespace AshGreen.Item
         Common,//일반
         Rare,//희귀
         Epic,//에픽
-        Legendary//전설
+        Legendary,//전설
+        Other//기타
     }
     [CreateAssetMenu(fileName = "NewItem", menuName = "Scriptable Objects/Item/ItemData")]
     public class ItemData : ScriptableObject

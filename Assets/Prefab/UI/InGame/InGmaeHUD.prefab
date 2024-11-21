@@ -1728,10 +1728,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDataList: {fileID: 11400000, guid: 677724e3be8e3ba4d8c0cb97783296dd, type: 2}
   m_btnControllerList:
+  - {fileID: 3297559827803311549}
   - {fileID: 6964128181603324479}
   - {fileID: 1668593438221939959}
   - {fileID: 6455239528161744943}
   - {fileID: 4452309146147543416}
+  healItemData: {fileID: 11400000, guid: e3ccc424d0e5a354cae9cf523184df03, type: 2}
   m_haveMoney: {fileID: 44153769058299193}
 --- !u!1 &6124655618799647503
 GameObject:
@@ -2974,6 +2976,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2637d307f31d7548bf1f5a555b0d640, type: 3}
+--- !u!114 &3297559827803311549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7805297943860161589, guid: d2637d307f31d7548bf1f5a555b0d640, type: 3}
+  m_PrefabInstance: {fileID: 4725036944643301768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49d78c42b545f7418ab8152b6f71ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6422453096579982443 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1779932309572437475, guid: d2637d307f31d7548bf1f5a555b0d640, type: 3}

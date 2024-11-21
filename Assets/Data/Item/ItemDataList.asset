@@ -12,8 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f4a9df698fb954fa58f5051d8cdbae, type: 3}
   m_Name: ItemDataList
   m_EditorClassIdentifier: 
-  dataList:
+  commonItemList:
   - {fileID: 11400000, guid: fb2137c02329b78468a472541dcfb355, type: 2}
   - {fileID: 11400000, guid: f58be34bdbe1d544da304d0e3616b6a3, type: 2}
   - {fileID: 11400000, guid: 3a120949226e8aa47aa139ffede7123a, type: 2}
   - {fileID: 11400000, guid: f8eaafa5272248841a58c09fd67d0e61, type: 2}
+  commonItemRate: 1
+  rareItemList: []
+  rareItemRate: 0
+  epicItemList: []
+  epicItemRate: 0
+  legendaryList: []
+  legendaryItemRate: 0
+  otherList:
+  - {fileID: 11400000, guid: e3ccc424d0e5a354cae9cf523184df03, type: 2}

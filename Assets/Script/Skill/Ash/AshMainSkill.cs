@@ -37,9 +37,12 @@ namespace AshGreen.Character.Skill
 
             //스킬 시작 처리
             holder._caster._movementController.isUnableMove = true;//이동 불가
-            Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
-            casterRbody.linearVelocity = Vector2.zero;
-            casterRbody.gravityScale = 0;//중력 설정
+            if (!holder._caster._movementController.isGrounded)
+            {
+                Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
+                casterRbody.linearVelocity = Vector2.zero;
+                casterRbody.gravityScale = 0;//중력 설정
+            }
 
             // 차징 단계 구하기
             int chargeCnt = 
@@ -83,8 +86,10 @@ namespace AshGreen.Character.Skill
         {
             //스킬 종료 처리
             holder._caster._movementController.isUnableMove = false;//이동 가능
+
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
-            casterRbody.gravityScale = casterGrvity;//중력 설정
+            if (casterRbody.gravityScale != casterGrvity)
+                casterRbody.gravityScale = casterGrvity;//중력 설정
 
             return base.End(holder);
         }

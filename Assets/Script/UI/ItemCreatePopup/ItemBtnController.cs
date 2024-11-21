@@ -27,7 +27,6 @@ namespace AshGreen.Item
         //아이템 데이터 설정
         public void SetItemData(ItemData itemData, PlayerController player)
         {
-            Debug.Log($"아이템 설정: {itemData}");
             m_playerController = player;
             m_itemData = itemData;
             itemImg.sprite = m_itemData.icon;
@@ -47,7 +46,5 @@ namespace AshGreen.Item
             isCreate = true;//아이템 생성 완료
             m_playerController.itemManager.AddItemRpc(m_itemData.itemID);//아이템 추가
         }
-
-        
     }
 }
