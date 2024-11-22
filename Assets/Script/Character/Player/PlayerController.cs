@@ -39,6 +39,21 @@ namespace AshGreen.Character.Player
             m_money.Value += value;
         }
 
+        //중력관련 전역 변수
+        private NetworkVariable<float> _gravity = new NetworkVariable<float>(5);
+        public float Gravity
+        {
+            get => _gravity.Value;
+            private set=> _gravity.Value = value;
+        }
+        //중력값을 수정하는 원격프로토콜 함수
+        [ServerRpc]
+        public void AddGravityServerRpc(float value)
+        {
+            _gravity.Value += value;
+            _gravity.Value = Mathf.Max(_gravity.Value, 0.1f);
+        }
+
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
@@ -84,6 +99,7 @@ namespace AshGreen.Character.Player
                 baseMoveSpeed.Value = characterConfig.MoveSpeed;
                 baseJumpPower.Value = characterConfig.JumpPower;
                 baseJumMaxNum.Value = characterConfig.JumMaxNum;
+                _gravity.Value = this.GetComponent<Rigidbody2D>().gravityScale;
             }
         }
 

@@ -18,7 +18,6 @@ namespace AshGreen.Character.Skill
         public int maxChargingCnt = 3;//최대 차징 횟수
         public int energyIncrease = 1; //충전 량
         public float ChargingDamageCoefficient = 0.2f;//차징별 데미지 계수
-        public float casterGrvity = 5; // 캐릭터 중력
 
         public override IEnumerator Charging(SkillHolder holder)
         {
@@ -88,8 +87,8 @@ namespace AshGreen.Character.Skill
             holder._caster._movementController.isUnableMove = false;//이동 가능
 
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
-            if (casterRbody.gravityScale != casterGrvity)
-                casterRbody.gravityScale = casterGrvity;//중력 설정
+            if (casterRbody.gravityScale != holder._caster.Gravity)
+                casterRbody.gravityScale = holder._caster.Gravity;//중력 설정
 
             return base.End(holder);
         }

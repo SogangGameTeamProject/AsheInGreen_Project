@@ -9,7 +9,6 @@ namespace AshGreen.Character.Skill
     {
         public float dashPower = 100;
         public int energyIncrease = 1;
-        public float casterGrvity = 5;
         public override IEnumerator Use(SkillHolder holder, float chargeTime = 0)
         {
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease;//특수스킬 에너지 충전
@@ -38,7 +37,7 @@ namespace AshGreen.Character.Skill
             //스킬 종료 시 처리
             holder._caster.SetDamageimmunity(false);//무적
             holder._caster._movementController.isUnableMove = false;//이동 가능
-            holder._caster.GetComponent<Rigidbody2D>().gravityScale = casterGrvity;
+            holder._caster.GetComponent<Rigidbody2D>().gravityScale = holder._caster.Gravity;
             holder._caster.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             yield return base.End(holder);
         }

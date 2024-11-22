@@ -15,7 +15,6 @@ namespace AshGreen.Character.Skill
         public float bulletSpeed = 200f;
         public float bulletDestroyTime = 2;
         public float fireDelay = 0.05f;
-        public float casterGrvity = 5;
 
         public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
         {
@@ -74,8 +73,8 @@ namespace AshGreen.Character.Skill
             //스킬 종료 처리
             holder._caster._movementController.isUnableMove = false;//이동 가능
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
-            if (casterRbody.gravityScale != casterGrvity)
-                casterRbody.gravityScale = casterGrvity;//중력 설정
+            if (casterRbody.gravityScale != holder._caster.Gravity)
+                casterRbody.gravityScale = holder._caster.Gravity;//중력 설정
 
             return base.End(holder);
         }
