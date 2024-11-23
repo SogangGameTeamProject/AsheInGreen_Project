@@ -16,10 +16,10 @@ MonoBehaviour:
   type: 0
   itemObj: {fileID: 7021502869875470856, guid: 8f2b796a318e8cf4889561d91171799b, type: 3}
   itemName: "\uD1B5\uC870\uB9BC"
-  description: "\uCD5C\uB300\uCCB4\uB825 +{BaseVal[0]}(\uC911\uCCA9\uB2F9 +{StackIncVal})
+  description: "\uCD5C\uB300\uCCB4\uB825 +{baseVal[0]}(\uC911\uCCA9\uB2F9 +{stackIncVal[0]})
     \uC99D\uAC00"
   price: 15
-  icon: {fileID: -1227344420054340127, guid: 1b892e54e4427184ea66feaf2ab12978, type: 3}
+  icon: {fileID: 713819044, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 0
   cooldownTime: 0
   baseVal:

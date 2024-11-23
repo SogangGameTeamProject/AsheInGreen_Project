@@ -52,6 +52,13 @@ namespace AshGreen.Character.Player
         {
             _gravity.Value += value;
             _gravity.Value = Mathf.Max(_gravity.Value, 0.1f);
+            UpdateGravityClientRpc();
+        }
+
+        [ClientRpc]
+        private void UpdateGravityClientRpc()
+        {
+           this.GetComponent<Rigidbody2D>().gravityScale = Gravity;
         }
 
         public override void OnNetworkSpawn()

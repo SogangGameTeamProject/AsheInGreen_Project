@@ -19,7 +19,7 @@ MonoBehaviour:
   description: "\uD50C\uB808\uC774\uC5B4\uC758 \uCCB4\uB825\uC744 {BaseVal}\uB9CC\uD07C
     \uD68C\uBCF5\uD55C\uB2E4."
   price: 15
-  icon: {fileID: -5097518086732344020, guid: 1b892e54e4427184ea66feaf2ab12978, type: 3}
+  icon: {fileID: 1565754074, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 0
   cooldownTime: 0
   baseVal:

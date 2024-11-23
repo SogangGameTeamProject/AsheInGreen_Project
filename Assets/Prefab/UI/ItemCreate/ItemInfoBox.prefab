@@ -91,7 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49d78c42b545f7418ab8152b6f71ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soldOutImg: {fileID: -5935022371867488918, guid: 1b892e54e4427184ea66feaf2ab12978, type: 3}
+  m_playerController: {fileID: 0}
+  soldOutImg: {fileID: 3643366360394810884, guid: 92ea01a90f971524fa102f813d009f78, type: 3}
   itemImg: {fileID: 5023432544463912429}
   itemName: {fileID: 1137541431858547078}
   itemPrice: {fileID: 6622539332604070127}

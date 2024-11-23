@@ -1134,6 +1134,8 @@ MonoBehaviour:
     state: {fileID: 1170719951875528351}
   - type: 2
     state: {fileID: 5325209982190128559}
+  addMaxHp:
+    m_InternalValue: 0
   nowHp:
     m_InternalValue: 0
   takenDamageCoefficient:
