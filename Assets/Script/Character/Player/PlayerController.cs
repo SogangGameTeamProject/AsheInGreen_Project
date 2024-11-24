@@ -47,18 +47,18 @@ namespace AshGreen.Character.Player
             private set=> _gravity.Value = value;
         }
         //중력값을 수정하는 원격프로토콜 함수
-        [ServerRpc]
+        [ServerRpc(RequireOwnership = false)]
         public void AddGravityServerRpc(float value)
         {
             _gravity.Value += value;
             _gravity.Value = Mathf.Max(_gravity.Value, 0.1f);
-            UpdateGravityClientRpc();
+            UpdateGravityClientRpc(_gravity.Value);
         }
 
         [ClientRpc]
-        private void UpdateGravityClientRpc()
+        private void UpdateGravityClientRpc(float gravity)
         {
-           this.GetComponent<Rigidbody2D>().gravityScale = Gravity;
+           this.GetComponent<Rigidbody2D>().gravityScale = gravity;
         }
 
         public override void OnNetworkSpawn()

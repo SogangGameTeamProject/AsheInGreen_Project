@@ -23,7 +23,6 @@ namespace AshGreen.Item
         public override void RemoveEffect()
         {
             _playerController.itemManager.itemInventory.Remove(itemData.itemID);
-            Destroy(gameObject);
         }
     }
 

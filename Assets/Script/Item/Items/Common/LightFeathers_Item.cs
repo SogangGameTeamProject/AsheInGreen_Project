@@ -8,6 +8,7 @@ namespace AshGreen.Item
         public override void ApplyEffect(PlayerController player)
         {
             base.ApplyEffect(player);
+            if (!_playerController.IsOwner) return;
             _playerController.AddMovespeedRpc(0, (int)itemData.baseVal[0]);
             _playerController.AddGravityServerRpc(-(int)itemData.baseVal[0]);
         }
@@ -15,6 +16,8 @@ namespace AshGreen.Item
         // 아이템 효과를 추가하는 함수
         public override void AddEffect()
         {
+            base.AddEffect();
+            if (!_playerController.IsOwner) return;
             _playerController.AddMovespeedRpc(0, (int)itemData.stackIncVal[0]);
             _playerController.AddGravityServerRpc(-(int)itemData.stackIncVal[0]);
         }
@@ -22,8 +25,9 @@ namespace AshGreen.Item
         // 아이템 효과를 제거하는 함수
         public override void RemoveEffect()
         {
-            _stacks--;
-            if(_stacks > 0)
+            base.RemoveEffect();
+            if (!_playerController.IsOwner) return;
+            if (_stacks > 0)
             {
                 _playerController.AddMovespeedRpc(0, -(int)itemData.stackIncVal[0]);
                 _playerController.AddGravityServerRpc(itemData.stackIncVal[0]);

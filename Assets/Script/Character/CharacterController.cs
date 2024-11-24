@@ -159,7 +159,9 @@ namespace AshGreen.Character
         protected NetworkVariable<int> baseAttackPower = new NetworkVariable<int>(0);
         protected NetworkVariable<int> GrowthAttackPower = new NetworkVariable<int>(0);
         protected NetworkVariable<float> GrowthPerAttackPower = new NetworkVariable<float>(0);
+        [SerializeField]
         protected NetworkVariable<int> addAttackPower = new NetworkVariable<int>(0);
+        [SerializeField]
         protected NetworkVariable<float> addAttackPerPower = new NetworkVariable<float>(1);
 
         public int AttackPower
@@ -191,6 +193,7 @@ namespace AshGreen.Character
         //이동속도 관련 변수
         protected NetworkVariable<float> baseMoveSpeed = new NetworkVariable<float>(0);
         protected NetworkVariable<float> addMoveSpeed = new NetworkVariable<float>(0);
+        [SerializeField]
         protected NetworkVariable<float> addMovePerSpeed = new NetworkVariable<float>(1);
         public float MoveSpeed
         {
@@ -245,6 +248,7 @@ namespace AshGreen.Character
 
         public int jumCnt { get; set; }
         //스킬가속 관련 변수
+        [SerializeField]
         private NetworkVariable<float> addSkillAcceleration =  new NetworkVariable<float>(50);
         public float SkillAcceleration {
             get
@@ -253,6 +257,7 @@ namespace AshGreen.Character
             }
         }
         //아이템가속 관련 변수
+        [SerializeField]
         private NetworkVariable<float> addItemAcceleration =  new NetworkVariable<float>(0);
         public float ItemAcceleration
         {
@@ -274,6 +279,7 @@ namespace AshGreen.Character
         }
         //치명타 확률
         private NetworkVariable<float> baseCriticalChance = new NetworkVariable<float>(0);
+        [SerializeField]
         private NetworkVariable<float> addCriticalChance =  new NetworkVariable<float>(0);
         public float CriticalChance
         {
@@ -286,6 +292,7 @@ namespace AshGreen.Character
         }
         //치명타 데미지
         private NetworkVariable<float> baseCriticalDamage = new NetworkVariable<float>(1.2f);
+        [SerializeField]
         private NetworkVariable<float> addCriticalDamage  = new NetworkVariable<float>(0);
         public float CriticalDamage
         {

@@ -15,14 +15,20 @@ namespace AshGreen.Item
         //아이템 효과 적용
         public virtual void ApplyEffect(PlayerController player)
         {
-            _playerController = player;
-            Debug.Log($"ItemEffectTxt: {itemData.Description}");
+            if(_playerController == null)
+                _playerController = player;
         }
 
         // 아이템 효과 추가
-        public abstract void AddEffect();
+        public virtual void AddEffect()
+        {
+            _stacks++;
+        }
 
         // 아이템 효과 제거
-        public abstract void RemoveEffect();
+        public virtual void RemoveEffect()
+        {
+            _stacks--;
+        }
     }
 }

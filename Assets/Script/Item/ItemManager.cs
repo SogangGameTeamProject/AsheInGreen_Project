@@ -40,7 +40,11 @@ namespace AshGreen.Item
         [Rpc(SendTo.ClientsAndHost)]
         public void RemoveItemRpc(int itemID)
         {
-            itemInventory[itemID].RemoveEffect();
+            if (itemInventory.ContainsKey(itemID))
+            {
+                itemInventory[itemID].RemoveEffect();
+                itemInventory.Remove(itemID);
+            }
         }
     }
 }
