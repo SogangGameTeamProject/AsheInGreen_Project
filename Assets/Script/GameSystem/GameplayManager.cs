@@ -192,28 +192,23 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     // for every client connected 
     public void ServerSceneInit(ulong clientId)
     {
-        Debug.Log("서버 초기화1");
         // Save the clients 
         m_connectedClients.Add(clientId);
 
-        Debug.Log("서버 초기화2");
         // Check if is the last client
         if (m_connectedClients.Count < NetworkManager.Singleton.ConnectedClients.Count)
             return;
 
-        Debug.Log("서버 초기화3: " + m_connectedClients.Count);
         // For each client spawn and set UI
         foreach (var client in m_connectedClients)
         {
             //오너 캐릭터가 이미 있는지 체크
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            Debug.Log($"플레이어 개수: {players.Length}");
 
             GameObject player = players
                 .Select(p => p.GetComponent<NetworkObject>())
                 .FirstOrDefault(n => n != null && n.OwnerClientId == client)?.gameObject;
 
-            Debug.Log($"player 체크: {client}, {player}");
             //오너 캐릭터가 없을 시 새로운 캐릭터 생성
             if(player == null)
             {
@@ -236,6 +231,13 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             PlayerController playerController =
                             player.GetComponent<PlayerController>();
             playerController.gameplayManager = this;
+            playerController.gameObject.transform.position = 
+                m_StartingPositions[m_numberOfPlayerConnected].position;
+            playerController.CombatStateTransitionRpc(CombatStateType.Idle);
+            if(playerController.NowHP <= 0)
+            {
+                playerController.AddHpRpc(1);
+            }
             m_player.Add(playerController);
             SetPlayerUIClientRpc(playerController.GetComponent<NetworkObject>());
 

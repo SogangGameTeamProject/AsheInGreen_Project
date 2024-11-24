@@ -1138,6 +1138,20 @@ MonoBehaviour:
     m_InternalValue: 0
   nowHp:
     m_InternalValue: 0
+  addAttackPower:
+    m_InternalValue: 0
+  addAttackPerPower:
+    m_InternalValue: 1
+  addMovePerSpeed:
+    m_InternalValue: 1
+  addSkillAcceleration:
+    m_InternalValue: 50
+  addItemAcceleration:
+    m_InternalValue: 0
+  addCriticalChance:
+    m_InternalValue: 0
+  addCriticalDamage:
+    m_InternalValue: 0
   takenDamageCoefficient:
     m_InternalValue: 1
   isDamageImmunity:

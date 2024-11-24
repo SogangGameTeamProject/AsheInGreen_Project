@@ -26,8 +26,8 @@ MonoBehaviour:
   baseVal:
   - -1
   - 10
-  - 10
+  - 0.1
   stackIncVal:
   - -1
   - 5
-  - 5
+  - 0.05

@@ -381,9 +381,6 @@ namespace AshGreen.Character
 
             combatStateContext = new StateContext<CharacterController>(this);//콘텍스트 생성
 
-            if(IsOwner)
-                CombatStateTransitionRpc(CombatStateType.Idle);
-
             //피해 면역 처리
             isDamageImmunity.OnValueChanged += DamageImmunityRpc;
 

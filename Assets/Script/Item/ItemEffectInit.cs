@@ -17,12 +17,15 @@ namespace AshGreen.Item
         {
             if(_playerController == null)
                 _playerController = player;
+            _stacks++;
+            Debug.Log(itemData.Description);
         }
 
         // 아이템 효과 추가
         public virtual void AddEffect()
         {
             _stacks++;
+            Debug.Log(itemData.Description);
         }
 
         // 아이템 효과 제거
