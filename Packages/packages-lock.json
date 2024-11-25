@@ -321,7 +321,7 @@
     },
     "com.unity.services.authentication": {
       "version": "3.3.3",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
