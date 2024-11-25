@@ -31,7 +31,8 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     [SerializeField]
     private Transform[] m_StartingPositions;
 
-    private int m_numberOfPlayerConnected;
+    private int m_numberOfPlayerConnected = 0;
+    private int m_numberOfDeathPlayer = 0;// 죽은 플레이어 수
     [SerializeField]
     private List<ulong> m_connectedClients = new List<ulong>();
     public List<PlayerController> m_player = new List<PlayerController>();
@@ -70,9 +71,9 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     public void PlayerDeath(ulong clientId)
     {
         Debug.Log("PlayerDeath");
-        m_numberOfPlayerConnected--;
+        m_numberOfDeathPlayer++;
 
-        if (m_numberOfPlayerConnected <= 0)
+        if (m_numberOfPlayerConnected - m_numberOfDeathPlayer <= 0)
         {
             ActivateDeathUIClientRpc();
         }

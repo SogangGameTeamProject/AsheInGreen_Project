@@ -9,8 +9,8 @@ namespace AshGreen.Item
         {
             base.ApplyEffect(player);
             if (!_playerController.IsOwner) return;
-            _playerController.AddMovespeedRpc(0, (int)itemData.baseVal[0]);
-            _playerController.AddGravityServerRpc(-(int)itemData.baseVal[0]);
+            _playerController.AddMovespeedRpc(0, itemData.baseVal[0]);
+            _playerController.AddGravityServerRpc(-itemData.baseVal[0]);
         }
 
         // 아이템 효과를 추가하는 함수
@@ -18,8 +18,8 @@ namespace AshGreen.Item
         {
             base.AddEffect();
             if (!_playerController.IsOwner) return;
-            _playerController.AddMovespeedRpc(0, (int)itemData.stackIncVal[0]);
-            _playerController.AddGravityServerRpc(-(int)itemData.stackIncVal[0]);
+            _playerController.AddMovespeedRpc(0, itemData.stackIncVal[0]);
+            _playerController.AddGravityServerRpc(-itemData.stackIncVal[0]);
         }
 
         // 아이템 효과를 제거하는 함수
@@ -29,12 +29,12 @@ namespace AshGreen.Item
             if (!_playerController.IsOwner) return;
             if (_stacks > 0)
             {
-                _playerController.AddMovespeedRpc(0, -(int)itemData.stackIncVal[0]);
+                _playerController.AddMovespeedRpc(0, -itemData.stackIncVal[0]);
                 _playerController.AddGravityServerRpc(itemData.stackIncVal[0]);
             }
             else
             {
-                _playerController.AddMovespeedRpc(0, -(int)itemData.baseVal[0]);
+                _playerController.AddMovespeedRpc(0, -itemData.baseVal[0]);
                 _playerController.AddGravityServerRpc(itemData.baseVal[0]);
             }
         }
