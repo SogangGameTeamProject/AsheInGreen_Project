@@ -26,7 +26,6 @@ namespace AshGreen.Character
     {
         //외부 컨트롤러들
         public DamageReceiver _damageReceiver = null;
-        public StatusEffectManager _statusEffectManager = null;
         public Animator _animator = null;
 
         private Rigidbody2D rBody = null;
