@@ -7,7 +7,10 @@ namespace AshGreen.Buff
 {
     public class BuffManager : NetworkBehaviour
     {
-        private Dictionary<BuffType, Buff> activeBuffs = new Dictionary<BuffType, Buff>();
+        [SerializeField]
+        private List<BuffData> buffDatas = new List<BuffData>();// 버프 데이터를 저장하는 리스트
+        private Dictionary<BuffType, Buff> activeBuffs =
+            new Dictionary<BuffType, Buff>(); // 활성화된 버프를 저장하는 딕셔너리
 
         [ServerRpc]
         private void AddBuffServerRpc(BuffType buffType)
@@ -25,11 +28,14 @@ namespace AshGreen.Buff
                     activeBuffs[buffType].Refresh();
                 }
             }
-            UpdateBuffsClientRpc();
+            else
+            {
+                
+            }
         }
 
-        [ClientRpc]
-        private void UpdateBuffsClientRpc()
+        
+        private void UpdateBuffsC()
         {
             // 클라이언트에서 버프 상태를 업데이트하는 로직 추가
         }
@@ -53,8 +59,6 @@ namespace AshGreen.Buff
                 {
                     activeBuffs.Remove(buffType);
                 }
-
-                UpdateBuffsClientRpc();
             }
         }
 
@@ -67,7 +71,6 @@ namespace AshGreen.Buff
                 {
                     activeBuffs.Remove(buffType);
                 }
-                UpdateBuffsClientRpc();
             }
         }
     }

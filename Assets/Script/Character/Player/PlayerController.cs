@@ -1,3 +1,4 @@
+using AshGreen.Buff;
 using AshGreen.Character;
 using AshGreen.Character.Skill;
 using AshGreen.Item;
@@ -15,6 +16,7 @@ namespace AshGreen.Character.Player
         public ulong clientID;
 
         public ItemManager itemManager;//아이템 매니저
+        public BuffManager buffManager;//버프 매니저
         public MovementController _movementController = null;
         public CharacterSkillManager _characterSkillManager = null;
         public Transform firePoint = null;
