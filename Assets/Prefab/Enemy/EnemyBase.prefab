@@ -66,7 +66,6 @@ GameObject:
   - component: {fileID: 6952470658650771724}
   - component: {fileID: 4571093287936344998}
   - component: {fileID: 924884067952727375}
-  - component: {fileID: 4814974705118643328}
   - component: {fileID: 55478811726622643}
   m_Layer: 6
   m_Name: EnemyBase
@@ -89,6 +88,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8222472081722561548}
+  - {fileID: 119233307829702758}
   - {fileID: 7357167355659675838}
   - {fileID: 2528669580427623095}
   - {fileID: 1407973278392425528}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -359,7 +359,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   _damageReceiver: {fileID: 924884067952727375}
-  _statusEffectManager: {fileID: 4814974705118643328}
   _animator: {fileID: 2311938511817404395}
   runningCombatStateType: 0
   combatStateList:
@@ -379,6 +378,8 @@ MonoBehaviour:
     m_InternalValue: 1
   addMovePerSpeed:
     m_InternalValue: 1
+  addJumpPower:
+    m_InternalValue: 0
   addSkillAcceleration:
     m_InternalValue: 50
   addItemAcceleration:
@@ -395,6 +396,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   enemyConfig: {fileID: 11400000, guid: 90c884179e428f74cb9f959591dbc34d, type: 2}
+  debuffManager: {fileID: 5059905563285192805}
   patteurnStateList:
   - {fileID: 6956655952139360711}
   - {fileID: 8876423003236570222}
@@ -415,18 +417,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
---- !u!114 &4814974705118643328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026440609202315854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f9cb4b2abafdd2448d669d6edf3e43d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!210 &55478811726622643
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -970,6 +960,52 @@ MonoBehaviour:
   - {x: 0, y: -7}
   - {x: 10, y: -7}
   platformPre: {fileID: 1476244167206806401, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
+--- !u!1 &8218678996622511140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 119233307829702758}
+  - component: {fileID: 5059905563285192805}
+  m_Layer: 6
+  m_Name: DebuffManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &119233307829702758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218678996622511140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6716363405069832563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5059905563285192805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218678996622511140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf34a65b585533d4bb132f08482a87ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  debuffDatas: []
 --- !u!1 &9156856431767155232
 GameObject:
   m_ObjectHideFlags: 0

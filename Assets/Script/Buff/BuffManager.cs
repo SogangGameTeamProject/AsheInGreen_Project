@@ -32,8 +32,14 @@ namespace AshGreen.Buff
                 BuffData buff = buffDatas.FirstOrDefault(x => x.buffType == buffType);
                 activeBuffs[buffType] = new Buff(buff, playerController, stack, baseVal, stackVal);
             }
+            else
+            {
+                if(IsOwner)
+                    activeBuffs[buffType].Remove();
+            }
             // 버프 적용
-            activeBuffs[buffType].Apply();
+            if(IsOwner)
+                activeBuffs[buffType].Apply();
         }
 
         // 버프 제거 메서드

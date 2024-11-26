@@ -1,3 +1,4 @@
+using AshGreen.Debuff;
 using AshGreen.State;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
@@ -11,6 +12,7 @@ namespace AshGreen.Character
         [SerializeField]
         private EnemyConfig enemyConfig;
 
+        public DebuffManager debuffManager = null;
 
         private StateContext<EnemyController> patteurnStateContext = null;
 

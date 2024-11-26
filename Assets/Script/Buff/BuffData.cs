@@ -32,5 +32,4 @@ namespace AshGreen.Buff
         // 버프 제거 메서드
         public abstract void RemoveBuff(PlayerController player, Buff buff);
     }
-
 }

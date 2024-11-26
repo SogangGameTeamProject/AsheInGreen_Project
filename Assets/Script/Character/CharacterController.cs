@@ -216,6 +216,7 @@ namespace AshGreen.Character
 
         //점프파워 관련 변수
         protected NetworkVariable<float> baseJumpPower = new NetworkVariable<float>(0);
+        [SerializeField]
         protected NetworkVariable<float> addJumpPower = new NetworkVariable<float>(0);
         public float JumpPower
         {
