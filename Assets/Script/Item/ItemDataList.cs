@@ -70,7 +70,9 @@ namespace AshGreen.Item
                     {
                         int itemIndex = random.Next(selectedList.Count);
                         selectedItem = selectedList[itemIndex];
-                    } while (usedItems.Contains(selectedItem) && usedItems.Count < DataList.Count);
+                    }
+                    //while (usedItems.Contains(selectedItem) && usedItems.Count < DataList.Count);
+                    while (false);
 
                     if (!usedItems.Contains(selectedItem))
                     {

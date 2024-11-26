@@ -24,15 +24,13 @@ namespace AshGreen.Buff
         public BuffType buffType;// 버프 타입
         public BuffDurationType durationType;// 버프 지속 시간 타입
         public float duration; // 버프 지속 시간 (Timed 타입일 경우)
-        public int maxStacks; // 최대 스택 수 (StackBased 타입일 경우)
-        public bool isStackable; // 중첩 가능 여부
 
         // 버프 적용 메서드
-        public abstract void ApplyBuff(PlayerController player, int stack);
+        public abstract void ApplyBuff(PlayerController player, Buff buff);
         // 버프 업데이트 메서드
-        public abstract void UpdateBuff(PlayerController player, int stack, float elapsedTime);
+        public abstract void UpdateBuff(PlayerController player, Buff buff);
         // 버프 제거 메서드
-        public abstract void RemoveBuff(PlayerController player, int stack);
+        public abstract void RemoveBuff(PlayerController player, Buff buff);
     }
 
 }

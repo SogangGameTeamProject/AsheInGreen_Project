@@ -2,75 +2,57 @@ using UnityEngine;
 using Unity.Netcode;
 using AshGreen.Obsever;
 using System.Collections.Generic;
+using AshGreen.Character.Player;
+using System.Linq;
+using System;
 
 namespace AshGreen.Buff
 {
     public class BuffManager : NetworkBehaviour
     {
+        private PlayerController playerController;// 플레이어 컨트롤러
         [SerializeField]
         private List<BuffData> buffDatas = new List<BuffData>();// 버프 데이터를 저장하는 리스트
-        private Dictionary<BuffType, Buff> activeBuffs =
+        public Dictionary<BuffType, Buff> activeBuffs =
             new Dictionary<BuffType, Buff>(); // 활성화된 버프를 저장하는 딕셔너리
 
-        [ServerRpc]
-        private void AddBuffServerRpc(BuffType buffType)
+        public override void OnNetworkSpawn()
         {
-            if (activeBuffs.ContainsKey(buffType))
-            {
-                if (activeBuffs[buffType].buffData.isStackable)
-                {
-                    // 중첩 가능한 버프의 경우 효과 강화 로직 추가
-                    // 예: activeBuffs[buffType].Stack();
-                }
-                else
-                {
-                    // 중첩 불가능한 버프의 경우 지속 시간 갱신
-                    activeBuffs[buffType].Refresh();
-                }
-            }
-            else
-            {
-                
-            }
+            base.OnNetworkSpawn();
+            playerController = transform.parent?.GetComponent<PlayerController>();// 플레이어 컨트롤러 컴포넌트를 가져옴
         }
 
-        
-        private void UpdateBuffsC()
+        // 버프 추가 메서드
+        [Rpc(SendTo.ClientsAndHost)]
+        public void AddBuffRpc(BuffType buffType, int stack, float baseVal = 0, float stackVal = 0)
         {
-            // 클라이언트에서 버프 상태를 업데이트하는 로직 추가
-        }
-
-        public void UpdateBuffs(float deltaTime)
-        {
-            if (IsServer)
+            // 버프 딕셔너리에 해당 버프가 없다면 추가
+            if (!activeBuffs.ContainsKey(buffType))
             {
-                List<BuffType> expiredBuffs = new List<BuffType>();
-
-                foreach (var buff in activeBuffs.Values)
-                {
-                    buff.Update(deltaTime);
-                    if (buff.IsExpired())
-                    {
-                        expiredBuffs.Add(buff.buffData.buffType);
-                    }
-                }
-
-                foreach (var buffType in expiredBuffs)
-                {
-                    activeBuffs.Remove(buffType);
-                }
+                BuffData buff = buffDatas.FirstOrDefault(x => x.buffType == buffType);
+                activeBuffs[buffType] = new Buff(buff, playerController, stack, baseVal, stackVal);
             }
+            // 버프 적용
+            activeBuffs[buffType].Apply();
         }
 
-        public void DecreaseBuffStack(BuffType buffType)
+        // 버프 제거 메서드
+        [Rpc(SendTo.ClientsAndHost)]
+        public void RemoveBuffRpc(BuffType buffType)
         {
-            if (IsServer && activeBuffs.ContainsKey(buffType))
+            if(IsOwner)
+                activeBuffs[buffType].Remove();
+            activeBuffs.Remove(buffType);
+        }
+
+        private void Update()
+        {
+            // activeBuffs.Values를 복사하여 새로운 리스트를 만듭니다.
+            var buffsToUpdate = activeBuffs.Values.ToList();
+
+            foreach (var buff in buffsToUpdate)
             {
-                activeBuffs[buffType].DecreaseStack();
-                if (activeBuffs[buffType].IsExpired())
-                {
-                    activeBuffs.Remove(buffType);
-                }
+                buff.Update(Time.deltaTime);
             }
         }
     }

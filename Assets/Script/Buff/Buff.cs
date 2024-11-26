@@ -10,32 +10,28 @@ namespace AshGreen.Buff
         public BuffData buffData;// 버프 데이터
         public float remainingDuration;// 남은 지속 시간
         public int currentStacks;// 현재 중첩 수
+        public float baseVal = 0;
+        public float stackVal = 0;
 
-        public Buff(BuffData data, PlayerController targetPlayer)
+        // 버프 생성자
+        public Buff(BuffData data, PlayerController targetPlayer, int stack, float baseVal = 0, float stackVal = 0)
         {
             buffData = data;
-            if (data.durationType == BuffDurationType.Timed)
-            {
-                remainingDuration = data.duration;
-            }
-            else if (data.durationType == BuffDurationType.StackBased)
-            {
-                currentStacks = data.maxStacks;
-            }
-
             _targetPlayer = targetPlayer;
+            currentStacks = stack;
+            this.baseVal = baseVal;
+            this.stackVal = stackVal;
         }
 
-        public void Refresh()
+        public void Apply()
         {
-            if (buffData.durationType == BuffDurationType.Timed)
-            {
-                remainingDuration = buffData.duration;
-            }
-            else if (buffData.durationType == BuffDurationType.StackBased)
-            {
-                currentStacks = buffData.maxStacks;
-            }
+            remainingDuration = buffData.duration;
+            buffData.ApplyBuff(_targetPlayer, this);
+        }
+
+        public void Remove()
+        {
+            buffData.RemoveBuff(_targetPlayer, this);
         }
 
         public void Update(float deltaTime)
@@ -43,27 +39,8 @@ namespace AshGreen.Buff
             if (buffData.durationType == BuffDurationType.Timed)
             {
                 remainingDuration -= deltaTime;
-            }
-        }
-
-        public bool IsExpired()
-        {
-            if (buffData.durationType == BuffDurationType.Timed)
-            {
-                return remainingDuration <= 0;
-            }
-            else if (buffData.durationType == BuffDurationType.StackBased)
-            {
-                return currentStacks <= 0;
-            }
-            return false;
-        }
-
-        public void DecreaseStack()
-        {
-            if (buffData.durationType == BuffDurationType.StackBased)
-            {
-                currentStacks--;
+                if (remainingDuration <= 0)
+                    _targetPlayer.buffManager.RemoveBuffRpc(buffData.buffType);
             }
         }
     }

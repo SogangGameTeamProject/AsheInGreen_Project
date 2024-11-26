@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_playerController: {fileID: 0}
-  soldOutImg: {fileID: 3643366360394810884, guid: 92ea01a90f971524fa102f813d009f78, type: 3}
+  soldOutImg: {fileID: 6359830732681797833, guid: cd61589430f26c0478a09da8f1ffcf3f, type: 3}
   itemImg: {fileID: 5023432544463912429}
   itemName: {fileID: 1137541431858547078}
   itemPrice: {fileID: 6622539332604070127}
