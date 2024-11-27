@@ -14,17 +14,16 @@ namespace AshGreen.Debuff
         breakdown// 붕괴
     }
 
-    public enum DeuffDurationType
+    public enum DebuffDurationType
     {
         Timed, // 지속 시간에 따른 버프
         StackBased // 특정 행동 시 스택이 감소하는 버프
     }
 
-    [CreateAssetMenu(fileName = "DebuffData", menuName = "Scriptable Objects/DebuffData")]
     public abstract class DebuffData : ScriptableObject
     {
         public DebuffType debuffType;// 버프 타입
-        public DeuffDurationType durationType;// 버프 지속 시간 타입
+        public DebuffDurationType durationType;// 버프 지속 시간 타입
         public float duration; // 버프 지속 시간 (Timed 타입일 경우)
 
         // 버프 적용 메서드

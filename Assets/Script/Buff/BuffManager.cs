@@ -33,21 +33,16 @@ namespace AshGreen.Buff
                 activeBuffs[buffType] = new Buff(buff, playerController, stack, baseVal, stackVal);
             }
             else
-            {
-                if(IsOwner)
-                    activeBuffs[buffType].Remove();
-            }
+                activeBuffs[buffType].Remove();
             // 버프 적용
-            if(IsOwner)
-                activeBuffs[buffType].Apply();
+            activeBuffs[buffType].Apply();
         }
 
         // 버프 제거 메서드
         [Rpc(SendTo.ClientsAndHost)]
         public void RemoveBuffRpc(BuffType buffType)
         {
-            if(IsOwner)
-                activeBuffs[buffType].Remove();
+            activeBuffs[buffType].Remove();
             activeBuffs.Remove(buffType);
         }
 
