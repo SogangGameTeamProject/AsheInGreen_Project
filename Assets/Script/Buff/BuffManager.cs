@@ -24,7 +24,7 @@ namespace AshGreen.Buff
 
         // 버프 추가 메서드
         [Rpc(SendTo.ClientsAndHost)]
-        public void AddBuffRpc(BuffType buffType, int stack, float baseVal = 0, float stackVal = 0)
+        public void AddBuffRpc(BuffType buffType, int stack, float[] baseVal, float[] stackVal)
         {
             // 버프 딕셔너리에 해당 버프가 없다면 추가
             if (!activeBuffs.ContainsKey(buffType))
