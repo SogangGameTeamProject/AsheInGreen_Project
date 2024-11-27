@@ -8,6 +8,7 @@ using UnityEngine;
 using AshGreen.Character.Player;
 using Unity.VisualScripting;
 using System.Linq;
+using AshGreen.EventBus;
 
 public class GameplayManager : NetworkSingleton<GameplayManager>
 {
@@ -244,6 +245,9 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
             m_numberOfPlayerConnected++;
         }
+
+        //모든 플레이어가 생성되면 게임 시작
+        GameFlowEventBus.Publish(GameFlowType.StageStart);
     }
 
     //플레이어 준비 완료 요청 메서드

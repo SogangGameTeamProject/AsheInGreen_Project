@@ -331,6 +331,7 @@ namespace AshGreen.Character
         }
 
         //가하는 데미지 증가 
+        [SerializeField]
         private NetworkVariable<float> dealDamageCoefficient = new NetworkVariable<float>(1);
         public float DealDamageCoefficient
         {

@@ -42,8 +42,11 @@ namespace AshGreen.Buff
         [Rpc(SendTo.ClientsAndHost)]
         public void RemoveBuffRpc(BuffType buffType)
         {
-            activeBuffs[buffType].Remove();
-            activeBuffs.Remove(buffType);
+            if (activeBuffs.ContainsKey(buffType))
+            {
+                activeBuffs[buffType]?.Remove();
+                activeBuffs.Remove(buffType);
+            }
         }
 
         private void Update()

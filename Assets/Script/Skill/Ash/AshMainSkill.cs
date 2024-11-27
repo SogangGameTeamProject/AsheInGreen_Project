@@ -52,7 +52,8 @@ namespace AshGreen.Character.Skill
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease * chargeCnt; // 특수스킬 에너지 충전
 
             //총알 발사
-            float damage = damageCoefficient + (ChargingDamageCoefficient * chargeCnt);//데미지 설정
+            float damage = (damageCoefficient + (ChargingDamageCoefficient * chargeCnt))
+                *holder._caster.MainSkillDamageConfig;//데미지 설정
             //보스 타겟
             Vector2 fireDir = Vector2.zero;//발사 방향 조정
             EnemyController target = GameObject.FindAnyObjectByType<EnemyController>();

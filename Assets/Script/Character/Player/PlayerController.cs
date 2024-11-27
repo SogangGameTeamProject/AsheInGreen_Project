@@ -23,8 +23,21 @@ namespace AshGreen.Character.Player
 
         public CharacterConfig characterConfig = null;//기본능력치가 저장되는 변수
 
+        private NetworkVariable<float> mainSkillDamageConfig = new NetworkVariable<float>(1);
+        public float MainSkillDamageConfig
+        {
+            get => mainSkillDamageConfig.Value;
+            private set => mainSkillDamageConfig.Value = value;
+        }
+
+        [ServerRpc]
+        public void AddMainSkillDamageConfigServerRpc(float value)
+        {
+            MainSkillDamageConfig += value;
+        }
+
         //돈관련
-        public NetworkVariable<int> m_money = new NetworkVariable<int>(0);
+        private NetworkVariable<int> m_money = new NetworkVariable<int>(0);
         public int Money
         {
             get => m_money.Value;
