@@ -37,6 +37,8 @@ namespace AshGreen.Item
             {
                 // 스테이지 시작 시 버프 적용 이벤트 제거
                 GameFlowEventBus.Unsubscribe(GameFlowType.StageStart, ApplyBuff);
+                // 피격 시 버프 제거 이벤트 제거
+                _playerController._damageReceiver.TakeDamageAction -= RemoveBuff;
             }
         }
 

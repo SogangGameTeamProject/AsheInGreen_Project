@@ -24,11 +24,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a1f0d5357445fe6478dd5e35cee12b64, type: 2}
   - {fileID: 11400000, guid: 0b22ea52f8b4496429cc80f3f05a4947, type: 2}
   - {fileID: 11400000, guid: 0b22ea52f8b4496429cc80f3f05a4947, type: 2}
-  - {fileID: 11400000, guid: 0b22ea52f8b4496429cc80f3f05a4947, type: 2}
-  - {fileID: 11400000, guid: 0b22ea52f8b4496429cc80f3f05a4947, type: 2}
-  rareItemRate: 1
-  epicItemList: []
-  epicItemRate: 0
+  rareItemRate: 0
+  epicItemList:
+  - {fileID: 11400000, guid: c89c664cbfb324a47be9fabdf635b2bc, type: 2}
+  - {fileID: 11400000, guid: c89c664cbfb324a47be9fabdf635b2bc, type: 2}
+  - {fileID: 11400000, guid: c89c664cbfb324a47be9fabdf635b2bc, type: 2}
+  - {fileID: 11400000, guid: c89c664cbfb324a47be9fabdf635b2bc, type: 2}
+  epicItemRate: 1
   legendaryList: []
   legendaryItemRate: 0
   otherList:

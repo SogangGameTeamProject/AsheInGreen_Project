@@ -5,6 +5,7 @@ using AshGreen.Item;
 using System;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace AshGreen.Character.Player
 {
@@ -23,6 +24,8 @@ namespace AshGreen.Character.Player
 
         public CharacterConfig characterConfig = null;//기본능력치가 저장되는 변수
 
+        // 메인 스킬 데미지 증가량
+        [SerializeField]
         private NetworkVariable<float> mainSkillDamageConfig = new NetworkVariable<float>(1);
         public float MainSkillDamageConfig
         {
@@ -34,6 +37,27 @@ namespace AshGreen.Character.Player
         public void AddMainSkillDamageConfigServerRpc(float value)
         {
             MainSkillDamageConfig += value;
+        }
+
+        // 메인 스킬 데미지 증가량
+        public event EventHandler UseMainSkillEvent;
+        public void OnUseMainSkillEvent()
+        {
+            UseMainSkillEvent?.Invoke(this, EventArgs.Empty);
+        }
+
+        //서브 스킬 사용 이벤트
+        public event EventHandler UseSubSkillEvent;
+        public void OnUseSubSkillEvent()
+        {
+            UseSubSkillEvent?.Invoke(this, EventArgs.Empty);
+        }
+
+        //특수 스킬 사용 이벤트
+        public event EventHandler UseSpecialSkillEvent;
+        public void OnUseSpecialSkillEvent()
+        {
+            UseSpecialSkillEvent?.Invoke(this, EventArgs.Empty);
         }
 
         //돈관련

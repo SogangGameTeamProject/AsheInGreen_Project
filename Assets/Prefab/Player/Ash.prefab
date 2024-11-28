@@ -666,6 +666,7 @@ MonoBehaviour:
   buffDatas:
   - {fileID: 11400000, guid: f0a5a1d7b5b348842a5085b99ab626aa, type: 2}
   - {fileID: 11400000, guid: 04672c89c5c5be24e82a9d28131a2d3a, type: 2}
+  - {fileID: 11400000, guid: d7d0b67afc8d62448a8517703df58e76, type: 2}
 --- !u!1 &7209223838676355000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 608348716
+  GlobalObjectIdHash: 3471441096
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1203,6 +1204,8 @@ MonoBehaviour:
     m_InternalValue: 0
   takenDamageCoefficient:
     m_InternalValue: 1
+  dealDamageCoefficient:
+    m_InternalValue: 1
   isDamageImmunity:
     m_InternalValue: 0
   projectilesLayer:
@@ -1217,8 +1220,6 @@ MonoBehaviour:
   _characterSkillManager: {fileID: 5175599678637926579}
   firePoint: {fileID: 5105890872324677893}
   characterConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
-  m_money:
-    m_InternalValue: 0
 --- !u!114 &491064707563821348
 MonoBehaviour:
   m_ObjectHideFlags: 0

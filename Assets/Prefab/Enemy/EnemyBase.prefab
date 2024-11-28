@@ -390,6 +390,8 @@ MonoBehaviour:
     m_InternalValue: 0
   takenDamageCoefficient:
     m_InternalValue: 1
+  dealDamageCoefficient:
+    m_InternalValue: 1
   isDamageImmunity:
     m_InternalValue: 0
   projectilesLayer:

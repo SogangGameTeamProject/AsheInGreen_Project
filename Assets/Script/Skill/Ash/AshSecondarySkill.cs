@@ -27,6 +27,8 @@ namespace AshGreen.Character.Skill
             casterRbody.linearVelocity = Vector2.zero;
             casterRbody.AddForceX(dashVecX*dashPower, ForceMode2D.Impulse);
 
+            holder._caster.OnUseSubSkillEvent();//서브스킬 사용 이벤트 호출
+
             yield return new WaitForSeconds(activeTime);
 
             yield return base.Use(holder);

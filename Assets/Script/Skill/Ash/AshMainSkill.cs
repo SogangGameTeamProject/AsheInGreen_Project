@@ -76,6 +76,8 @@ namespace AshGreen.Character.Skill
                 fireDir, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
 
 
+            holder._caster.OnUseMainSkillEvent();//메인스킬 사용 이벤트 호출
+
             //시간 경과
             yield return new WaitForSeconds(activeTime);
 
