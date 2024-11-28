@@ -1220,6 +1220,8 @@ MonoBehaviour:
   _characterSkillManager: {fileID: 5175599678637926579}
   firePoint: {fileID: 5105890872324677893}
   characterConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
+  mainSkillDamageConfig:
+    m_InternalValue: 1
 --- !u!114 &491064707563821348
 MonoBehaviour:
   m_ObjectHideFlags: 0

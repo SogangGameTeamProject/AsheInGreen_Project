@@ -7,10 +7,10 @@ namespace AshGreen.DamageObj
 {
     public class NetworkDamageObj : NetworkBehaviour
     {
+        public bool isFire = false;
         public CharacterController caster = null;
-        public float damage = 1;
         public AttackType dealType = AttackType.None;
-        public bool isCritical = false;
+        public float damage = 1;
         public bool isKnockback = false;
         public float knockbackPower = 100f;
         public float knockbackTime = 0.3f;
@@ -36,7 +36,7 @@ namespace AshGreen.DamageObj
         private void Update()
         {
             //타겟 추적 상태일 시 타겟을 향해 날라감
-            if (isTarget)
+            if (isFire && isTarget)
             {
                 TrackTarget();
             }
@@ -71,10 +71,12 @@ namespace AshGreen.DamageObj
 
         private void ApplyDamage(Collider2D target)
         {
+            if (!isFire) return;
+
             IDamageable damageable = target.gameObject.GetComponent<IDamageable>();
-            bool isDamageImmunity = 
+            bool isDamageImmunity =
                 target.gameObject?.GetComponent<CharacterController>()?.isDamageImmunity?.Value ?? false;
-            Debug.Log("isDamageImmunity: " + isDamageImmunity);
+
             if (damageable != null && target.GetComponent<NetworkObject>().IsOwner && !isDamageImmunity)
             {
                 if (isKnockback)
@@ -99,20 +101,31 @@ namespace AshGreen.DamageObj
 
         protected void OnTriggerEnter2D(Collider2D collision)
         {
-            IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+            ApplyDamage(collision);
+        }
 
-            if (damageable != null && collision.GetComponent<NetworkObject>().IsOwner)
+        // 
+        [Rpc(SendTo.ClientsAndHost)]
+        public void FireRpc(NetworkObjectReference caster, AttackType dealType, float damage,
+            Vector2 bulletPos, bool isTarget = false)
+        {
+            this.isFire = true;
+            NetworkObject casterObj = null;
+            caster.TryGet(out casterObj);
+            CharacterController casterController = casterObj.GetComponent<CharacterController>();
+            this.caster = casterController.GetComponent<CharacterController>();
+            this.dealType = dealType;
+            this.damage = damage;
+
+            // 소유자일 경우에만 총알 발사 설정
+            if (IsOwner)
             {
-                if (isKnockback)
-                    ApplyKnockback(collision);
-
-                if (caster == null || dealType == AttackType.Enemy)
-                    damageable.TakeDamage(damage);
+                //타겟 추적 여부 설정
+                this.isTarget = isTarget;
+                if (this.isTarget)
+                    this.targetPos = bulletPos;
                 else
-                    caster.GetComponent<DamageReceiver>().DealDamage(collision.GetComponent<CharacterController>(), damage, dealType);
-
-                if (isDestroy)
-                    DestroyObjRpc();
+                    this.GetComponent<Rigidbody2D>().linearVelocity = bulletPos;
             }
         }
     }

@@ -48,21 +48,13 @@ namespace AshGreen.Character{
         {
             GameObject bullet = Instantiate(projectileObjts[index], firePos, fireRotation);
 
-            //투사체 설정
-            NetworkDamageObj damageObj = bullet.GetComponent<NetworkDamageObj>();
-
             NetworkObject ownerObj = null;
             owner.TryGet(out ownerObj);
-            CharacterController ownerController = ownerObj.GetComponent<CharacterController>();
-            damageObj.caster = ownerController;
-            damageObj.dealType = attackType;
-            damageObj.damage = damage;
-
-            // 총알의 물리적 움직임 처리
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.linearVelocity = fireDir; // 발사 방향 설정
 
             bullet.GetComponent<NetworkObject>().SpawnWithOwnership(ownerObj.OwnerClientId);
+            //투사체 설정
+            NetworkDamageObj damageObj = bullet.GetComponent<NetworkDamageObj>();
+            damageObj.FireRpc(owner, attackType, damage, fireDir);
 
             // 시간 경과 후 총알 파괴
             if (destroyTime > 0)
@@ -108,19 +100,14 @@ namespace AshGreen.Character{
         {
             GameObject bullet = Instantiate(projectileObjts[index], firePos, fireRotation);
 
-            //투사체 설정
-            NetworkDamageObj damageObj = bullet.GetComponent<NetworkDamageObj>();
-
             NetworkObject ownerObj = null;
             owner.TryGet(out ownerObj);
-            CharacterController ownerController = ownerObj.GetComponent<CharacterController>();
-            damageObj.caster = ownerController;
-            damageObj.dealType = attackType;
-            damageObj.damage = damage;
-            damageObj.isTarget = true;
-            damageObj.targetPos = targetPos;
 
             bullet.GetComponent<NetworkObject>().SpawnWithOwnership(ownerObj.OwnerClientId);
+
+            //투사체 설정
+            NetworkDamageObj damageObj = bullet.GetComponent<NetworkDamageObj>();
+            damageObj.FireRpc(owner, attackType, damage, targetPos, true);
         }
 
         
