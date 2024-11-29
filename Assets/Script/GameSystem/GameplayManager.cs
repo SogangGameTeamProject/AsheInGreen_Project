@@ -246,6 +246,12 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             m_numberOfPlayerConnected++;
         }
 
+        ClientSeceInitRpc();
+    }
+
+    [Rpc(SendTo.ClientsAndHost)]
+    private void ClientSeceInitRpc()
+    {
         //모든 플레이어가 생성되면 게임 시작
         GameFlowEventBus.Publish(GameFlowType.StageStart);
     }
