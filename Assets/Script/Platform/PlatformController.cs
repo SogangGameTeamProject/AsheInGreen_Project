@@ -101,13 +101,14 @@ namespace AshGreen.Platform
 
         //------------피격 처리-----------
         //일단 안씀
-        public void DealDamage(Character.CharacterController target, float damageCoefficient, AttackType attackType)
+        public void DealDamageRpc(NetworkObjectReference target, float damageCoefficient, AttackType attackType)
         {
             
         }
 
         //플렛폼 피격 쳐리
-        public void TakeDamage(float damage)
+        [Rpc(SendTo.Owner)]
+        public void TakeDamageRpc(float damage)
         {
             if (NowHp - damage > 0)
                 StateTransitionRpc(PlatformStateType.HIT);

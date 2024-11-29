@@ -41,9 +41,9 @@ namespace AshGreen.DamageObj
                 }
 
                 if (caster == null || dealType == AttackType.Enemy)
-                    damageable.TakeDamage(damage);
+                    damageable.TakeDamageRpc(damage);
                 else
-                    caster.GetComponent<DamageReceiver>().DealDamage(collision.GetComponent<CharacterController>(), damage, dealType);
+                    caster.GetComponent<DamageReceiver>().DealDamageRpc(collision.GetComponent<NetworkObjectReference>(), damage, dealType);
             }
         }
     }

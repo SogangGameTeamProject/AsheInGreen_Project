@@ -89,7 +89,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             {
                 if (player.characterConfig.GetClientId(clientId) == clientId)
                 {
-                    player._damageReceiver.TakeDamage(999); // Do critical damage
+                    player._damageReceiver.TakeDamageRpc(999); // Do critical damage
                 }
             }
         }

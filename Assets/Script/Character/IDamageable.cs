@@ -1,4 +1,5 @@
 using System;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace AshGreen.Character
@@ -19,9 +20,9 @@ namespace AshGreen.Character
     public interface IDamageable
     {
         //피격 처리 메서드
-        public void TakeDamage(float damage);
+        public void TakeDamageRpc(float damage);
 
         //타격 처리 메서드
-        public void DealDamage(CharacterController target, float damageCoefficient, AttackType attackType);
+        public void DealDamageRpc(NetworkObjectReference target, float damageCoefficient, AttackType attackType);
     }
 }

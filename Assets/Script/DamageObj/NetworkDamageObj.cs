@@ -69,9 +69,9 @@ namespace AshGreen.DamageObj
             }
         }
 
-        private void ApplyDamage(Collider2D target)
+        private bool ApplyDamage(Collider2D target)
         {
-            if (!isFire) return;
+            if (!isFire) return false;
 
             IDamageable damageable = target.gameObject.GetComponent<IDamageable>();
             bool isDamageImmunity =
@@ -83,10 +83,16 @@ namespace AshGreen.DamageObj
                     ApplyKnockback(target);
 
                 if (caster == null || dealType == AttackType.Enemy)
-                    damageable.TakeDamage(damage);
+                    damageable.TakeDamageRpc(damage);
                 else
-                    caster.GetComponent<DamageReceiver>().DealDamage(target.GetComponent<CharacterController>(), damage, dealType);
+                {
+                    NetworkObject targetNobj = target.GetComponent<NetworkObject>();
+                    caster.GetComponent<DamageReceiver>().DealDamageRpc(targetNobj, damage, dealType);
+                }
+                return true;
             }
+
+            return false;
         }
 
         private void ApplyKnockback(Collider2D target)
@@ -101,7 +107,8 @@ namespace AshGreen.DamageObj
 
         protected void OnTriggerEnter2D(Collider2D collision)
         {
-            ApplyDamage(collision);
+            if (ApplyDamage(collision) && isDestroy)
+                DestroyObjRpc();
         }
 
         // 

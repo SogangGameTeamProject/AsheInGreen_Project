@@ -167,10 +167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  isFire: 0
   caster: {fileID: 0}
-  damage: 1
   dealType: 0
-  isCritical: 0
+  damage: 1
   isKnockback: 1
   knockbackPower: 100
   knockbackTime: 0.3

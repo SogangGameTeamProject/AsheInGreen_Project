@@ -17,25 +17,20 @@ namespace AshGreen.Character
             _character = GetComponent<CharacterController>();
         }
 
-        //피격 처리 메서드
-        public void TakeDamage(float damage)
-        {
-
-            if(_character.runningCombatStateType != CombatStateType.Death)
-            {
-                TakeDamageRpc(damage);
-            }
-        }
-
         [Rpc(SendTo.Owner)]
         public void TakeDamageRpc(float damage)
         {
+            //피격 예외 처리
+            if (_character.runningCombatStateType == CombatStateType.Death
+                || _character.isDamageImmunity.Value) return;
+
             damage *= _character.TakenDamageCoefficient;
             TakeDamageAction?.Invoke(damage);
         }
 
         //타격 처리 메서드
-        public void DealDamage(CharacterController target, float damageCoefficient, AttackType attackType)
+        [Rpc(SendTo.Owner)]
+        public void DealDamageRpc(NetworkObjectReference target, float damageCoefficient, AttackType attackType)
         {
 
             Debug.Log("타격: " + this.gameObject.name);
@@ -46,8 +41,11 @@ namespace AshGreen.Character
             Debug.Log("AttackPower: " + _character.AttackPower + " damageCoefficient: "+ damageCoefficient + " DealDamageCoefficient:" + _character.DealDamageCoefficient);
             damage = _character.AttackPower * damageCoefficient * _character.DealDamageCoefficient;
 
-
-            DealDamageAction?.Invoke(target, damage, attackType, isCriticale);
+            //타격 대상 설정
+            NetworkObject targetObject;
+            target.TryGet(out targetObject);
+            CharacterController targetController = targetObject.GetComponent<CharacterController>();
+            DealDamageAction?.Invoke(targetController, damage, attackType, isCriticale);
         }
     }
 }

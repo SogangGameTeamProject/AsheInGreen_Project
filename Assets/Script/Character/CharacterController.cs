@@ -433,7 +433,7 @@ namespace AshGreen.Character
         /// 
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
         {
-            target._damageReceiver.TakeDamage(damage);
+            target._damageReceiver.TakeDamageRpc(damage);
         }
 
         /// <summary>
