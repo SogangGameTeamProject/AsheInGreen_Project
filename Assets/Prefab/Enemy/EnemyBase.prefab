@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1007,7 +1007,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  debuffDatas: []
+  debuffDatas:
+  - {fileID: 11400000, guid: 7f137874cd09e8f40a59914e1e88a08d, type: 2}
+  - {fileID: 11400000, guid: 83f2d73f5f25ba647a41a5d9092da616, type: 2}
+  - {fileID: 11400000, guid: 2df7940ce5b1c484ea2c1beef5eef932, type: 2}
+  - {fileID: 11400000, guid: 4a0ae33530be31a4585a5f943079da09, type: 2}
+  - {fileID: 11400000, guid: 4fba81660cd335a4980eeda872d475cb, type: 2}
 --- !u!1 &9156856431767155232
 GameObject:
   m_ObjectHideFlags: 0

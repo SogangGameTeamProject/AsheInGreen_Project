@@ -21,9 +21,9 @@ namespace AshGreen.Debuff
             enemy = transform.parent?.GetComponent<EnemyController>();// 플레이어 컨트롤러 컴포넌트를 가져옴
         }
 
-        // 버프 추가 메서드
+        // 디버프 추가 메서드
         [Rpc(SendTo.ClientsAndHost)]
-        public void AddDebuffRpc(DebuffType debuffType, int stack, float baseVal = 0, float stackVal = 0)
+        public void AddDebuffRpc(DebuffType debuffType, int stack, float[] baseVal, float[] stackVal)
         {
             // 버프 딕셔너리에 해당 버프가 없다면 추가
             if (!activeDebuffs.ContainsKey(debuffType))
@@ -32,22 +32,20 @@ namespace AshGreen.Debuff
                 activeDebuffs[debuffType] = new Debuff(debuff, enemy, stack, baseVal, stackVal);
             }
             else
-            {
-                if (IsOwner)
-                    activeDebuffs[debuffType].Remove();
-            }
+                activeDebuffs[debuffType].Reapply(stack);
             // 버프 적용
-            if (IsOwner)
-                activeDebuffs[debuffType].Apply();
+            activeDebuffs[debuffType].Apply();
         }
 
         // 버프 제거 메서드
         [Rpc(SendTo.ClientsAndHost)]
         public void RemoveDebuffRpc(DebuffType debuffType)
         {
-            if (IsOwner)
+            if (activeDebuffs.ContainsKey(debuffType))
+            {
                 activeDebuffs[debuffType].Remove();
-            activeDebuffs.Remove(debuffType);
+                activeDebuffs.Remove(debuffType);
+            }
         }
 
         private void Update()

@@ -1,5 +1,6 @@
 using AshGreen.Character;
 using AshGreen.Character.Player;
+using AshGreen.Debuff;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -27,7 +28,6 @@ namespace AshGreen.Buff
 
         public void Apply()
         {
-            Debug.Log("Apply");
             remainingDuration = buffData.duration;
             currentTimer = 0;
             if(_targetPlayer.IsOwner)
@@ -36,9 +36,27 @@ namespace AshGreen.Buff
 
         public void Remove()
         {
-            Debug.Log("Remove");
             if (_targetPlayer.IsOwner)
                 buffData.RemoveBuff(_targetPlayer, this);
+        }
+
+        // 버프 재적용
+        public void Reapply(int stack)
+        {
+            if(currentStacks >= stack)
+            {
+                currentStacks = stack;
+
+                if (_targetPlayer.IsOwner)
+                {
+                    buffData.RemoveBuff(_targetPlayer, this);
+                    buffData.ApplyBuff(_targetPlayer, this);
+                }
+            }
+            else
+            {
+                remainingDuration = buffData.duration;
+            }
         }
 
         public void Update(float deltaTime)
