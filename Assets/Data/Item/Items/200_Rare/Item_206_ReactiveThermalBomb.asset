@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 206
   type: 1
-  itemObj: {fileID: 0}
+  itemObj: {fileID: 6709337981346824141, guid: 87a916818b827664cbcb5fc137045363, type: 3}
   itemName: "\uBC18\uC751\uD615 \uC5F4\uC0C1\uD0C4"
   description: "\uBA54\uC778 \uC2A4\uD0AC \uC801\uC911 \uC2DC, 30% \uD655\uB960\uB85C
     \uBD80\uC704\uD30C\uAD34 \uBD80\uC5EC"
@@ -24,5 +24,6 @@ MonoBehaviour:
   cooldownTime: 0
   cntNum: 0
   baseVal:
-  - 20
-  stackIncVal: []
+  - 0.2
+  stackIncVal:
+  - 0.1

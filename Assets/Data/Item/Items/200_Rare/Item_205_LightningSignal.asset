@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 205
   type: 1
-  itemObj: {fileID: 0}
+  itemObj: {fileID: 7021502869875470856, guid: 93f7a8f9c467bb64199214ecdd8ada6a, type: 3}
   itemName: "\uC804\uACA9 \uC2E0\uD638\uAE30"
   description: "\uB514\uBC84\uD504\uAC00 \uC801\uC6A9\uB418\uC5B4\uC788\uB294 \uC801\uC774
     \uC874\uC7AC\uD558\uBA74 \uC2A4\uD0AC\uAC00\uC18D {baseVal[0]}(\uC911\uCCA9\uB2F9

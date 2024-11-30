@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 304
   type: 2
-  itemObj: {fileID: 0}
+  itemObj: {fileID: 6709337981346824141, guid: 7718d0888fd34174fbf13264b9966b75, type: 3}
   itemName: "\uD30C\uC77C \uB4DC\uB77C\uC774\uBC84"
   description: "\uC2A4\uD0AC\uAC00\uC18D +{baseVal[0]}(\uC911\uCCA9\uB2F9 +{stackIncVal[0]}),
     \uBA54\uC778 \uC2A4\uD0AC\uC744 \uC77C\uC815 \uD69F\uC218 \uC801\uC911 \uC2DC
