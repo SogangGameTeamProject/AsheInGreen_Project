@@ -30,7 +30,6 @@ MonoBehaviour:
   rareItemRate: 0.25
   epicItemList:
   - {fileID: 11400000, guid: c89c664cbfb324a47be9fabdf635b2bc, type: 2}
-  - {fileID: 11400000, guid: 481fe484c9284d149bbd643e99d7a922, type: 2}
   - {fileID: 11400000, guid: 6e374f61754151c4cacba4d009db3c44, type: 2}
   - {fileID: 11400000, guid: 7d4026a401200b5449e77a8a2dee95a2, type: 2}
   epicItemRate: 0.1

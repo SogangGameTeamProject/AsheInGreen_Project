@@ -31,11 +31,11 @@ namespace AshGreen.Buff
             {
                 BuffData buff = buffDatas.FirstOrDefault(x => x.buffType == buffType);
                 activeBuffs[buffType] = new Buff(buff, playerController, stack, baseVal, stackVal);
+                // 버프 적용
+                activeBuffs[buffType].Apply();
             }
             else
                 activeBuffs[buffType].Reapply(stack);
-            // 버프 적용
-            activeBuffs[buffType].Apply();
         }
 
         // 버프 제거 메서드

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 205
   type: 1
-  itemObj: {fileID: 7021502869875470856, guid: 93f7a8f9c467bb64199214ecdd8ada6a, type: 3}
+  itemObj: {fileID: 6709337981346824141, guid: 4340ab2352a30684ea4a924f774f5a04, type: 3}
   itemName: "\uC804\uACA9 \uC2E0\uD638\uAE30"
   description: "\uB514\uBC84\uD504\uAC00 \uC801\uC6A9\uB418\uC5B4\uC788\uB294 \uC801\uC774
     \uC874\uC7AC\uD558\uBA74 \uC2A4\uD0AC\uAC00\uC18D {baseVal[0]}(\uC911\uCCA9\uB2F9
@@ -23,7 +23,7 @@ MonoBehaviour:
   icon: {fileID: 263563930, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 0
   cooldownTime: 0
-  cntNum: 0
+  activeNum: 0
   baseVal:
   - 0.25
   stackIncVal:

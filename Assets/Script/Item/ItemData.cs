@@ -61,7 +61,7 @@ namespace AshGreen.Item
         public Sprite icon;// 아이콘
         public bool hasCooldown;//쿨다운이 있는지
         public float cooldownTime;//쿨다운 시간
-        public int cntNum = 0;//발동 조건 횟수
+        public int activeNum = 0;//발동 조건
         public List<float> baseVal = new List<float>();//기본 효과 값
         public List<float> stackIncVal = new List<float>();//스택당 증가 효과 값
     }

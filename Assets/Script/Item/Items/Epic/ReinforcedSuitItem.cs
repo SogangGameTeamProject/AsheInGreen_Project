@@ -47,7 +47,7 @@ namespace AshGreen.Item
         {
             //보조스킬 ?회 사용시 버프 부여
             subSkillCount++;
-            if(subSkillCount >= itemData.cntNum)
+            if(subSkillCount >= itemData.activeNum)
             {
                 _playerController.buffManager.AddBuffRpc(BuffType.UtteranceZ,
                 _stacks, itemData.baseVal.ToArray(), itemData.stackIncVal.ToArray());

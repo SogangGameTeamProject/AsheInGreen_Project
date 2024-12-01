@@ -37,9 +37,17 @@ namespace AshGreen.Character
 
             //데미지 계산
             float damage = 0;
-            bool isCriticale = UnityEngine.Random.value <= _character.CriticalChance;
-            Debug.Log("AttackPower: " + _character.AttackPower + " damageCoefficient: "+ damageCoefficient + " DealDamageCoefficient:" + _character.DealDamageCoefficient);
-            damage = _character.AttackPower * damageCoefficient * _character.DealDamageCoefficient;
+            bool isCriticale = false;
+            if (attackType != AttackType.Item)
+            {
+                isCriticale = UnityEngine.Random.value <= _character.CriticalChance;
+                Debug.Log("AttackPower: " + _character.AttackPower + " damageCoefficient: " + damageCoefficient + " DealDamageCoefficient:" + _character.DealDamageCoefficient);
+                damage = _character.AttackPower * damageCoefficient * _character.DealDamageCoefficient;
+            }
+            else
+            {
+                damage = damageCoefficient;
+            }
 
             //타격 대상 설정
             NetworkObject targetObject;

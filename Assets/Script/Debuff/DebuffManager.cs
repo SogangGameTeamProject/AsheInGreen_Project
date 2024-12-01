@@ -30,11 +30,11 @@ namespace AshGreen.Debuff
             {
                 DebuffData debuff = debuffDatas.FirstOrDefault(x => x.debuffType == debuffType);
                 activeDebuffs[debuffType] = new Debuff(debuff, enemy, stack, baseVal, stackVal);
+                // 버프 적용
+                activeDebuffs[debuffType].Apply();
             }
             else
                 activeDebuffs[debuffType].Reapply(stack);
-            // 버프 적용
-            activeDebuffs[debuffType].Apply();
         }
 
         // 버프 제거 메서드
