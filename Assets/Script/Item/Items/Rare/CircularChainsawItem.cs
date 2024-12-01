@@ -45,13 +45,14 @@ namespace AshGreen.Item
 
             // 아이템 사용 시 데미지 오브젝트 생성
             currentTime += Time.deltaTime;
-            if(currentTime >= (itemData.cooldownTime / (100 + _playerController.ItemAcceleration)))
+            if(currentTime >= itemData.cooldownTime * (100 / (100 + _playerController.ItemAcceleration)))
             {
                 currentTime = 0;
                 
                 float damage = itemData.baseVal[0] + (itemData.stackIncVal[0] * (_stacks-1));
+                Vector2 spawnPos = _playerController.transform.position;
                 ProjectileFactory.Instance.RequestProjectileFire
-                    (_playerController, damageObj, AttackType.Item, damage, Vector2.zero, _playerController.transform.position, Quaternion.identity, lifeTime);
+                    (_playerController, damageObj, AttackType.Item, damage, Vector2.zero, spawnPos, Quaternion.identity, lifeTime);
             }
         }
     }
