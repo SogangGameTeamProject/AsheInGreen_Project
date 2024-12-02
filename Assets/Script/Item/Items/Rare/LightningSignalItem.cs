@@ -54,12 +54,12 @@ namespace AshGreen.Item
             if (isDebuff && !isStatusUp && _stacks > 0)
             {
                 isStatusUp = true;
-                _playerController.AddAccelerationRpc(acceleration);
+                _playerController.AddSkillAccelerationRpc(0, acceleration);
             }
-            else if(isStatusUp)
+            else if(!isDebuff && isStatusUp)
             {
                 isStatusUp = false;
-                _playerController.AddAccelerationRpc(-acceleration);
+                _playerController.AddSkillAccelerationRpc(0, -acceleration);
             }
         }
     }

@@ -13,7 +13,7 @@ namespace AshGreen.Item
         [SerializeField]
         private GameObject damageObj;
         [SerializeField]
-        private float lifeTime = 0.1f;
+        private float lifeTime = 0.25f;
         private float currentTime = 0;
 
         //아이템 효과를 적용하는 함수

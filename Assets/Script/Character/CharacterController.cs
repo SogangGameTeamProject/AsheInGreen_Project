@@ -217,11 +217,11 @@ namespace AshGreen.Character
         //점프파워 관련 변수
         protected NetworkVariable<float> baseJumpPower = new NetworkVariable<float>(0);
         [SerializeField]
-        protected NetworkVariable<float> addJumpPower = new NetworkVariable<float>(0);
+        protected NetworkVariable<float> addJumpPerPower = new NetworkVariable<float>(1);
         public float JumpPower
         {
             get { 
-                return baseJumpPower.Value + addJumpPower.Value; 
+                return baseJumpPower.Value * addJumpPerPower.Value; 
             }
         }
         //점프 횟수 관련 변수
@@ -240,43 +240,53 @@ namespace AshGreen.Character
         /// <param name="addJumMaxNum"></param>
         /// <param name="addJumpPower"></param>
         [Rpc(SendTo.Server)]
-        public void AddJumpRpc(int addJumMaxNum, float addJumpPower = 0)
+        public void AddJumpRpc(int addJumMaxNum, float addJumpPerPower = 0)
         {
             this.addJumMaxNum.Value = Mathf.Max(this.addJumMaxNum.Value + addJumMaxNum, 0);
-            this.addJumpPower.Value = Mathf.Max(this.addJumpPower.Value + addJumpPower, 1);
+            this.addJumpPerPower.Value = Mathf.Max(this.addJumpPerPower.Value + addJumpPerPower, 1);
         }
 
         public int jumCnt { get; set; }
         //스킬가속 관련 변수
         [SerializeField]
         private NetworkVariable<float> addSkillAcceleration =  new NetworkVariable<float>(50);
+        [SerializeField]
+        private NetworkVariable<float> addSkillPerAcceleration = new NetworkVariable<float>(1);
         public float SkillAcceleration {
             get
             {
-                return addSkillAcceleration.Value;
+                return addSkillAcceleration.Value * addSkillPerAcceleration.Value;
             }
+        }
+        /// <summary>
+        /// [스킬] 가속 스탯 증감 조정 메서드
+        [Rpc(SendTo.Server)]
+        public void AddSkillAccelerationRpc(float addSkillAcceleration, float addSkillPerAcceleration = 0)
+        {
+            this.addSkillAcceleration.Value += addSkillAcceleration;
+            this.addSkillPerAcceleration.Value += addSkillPerAcceleration;
         }
         //아이템가속 관련 변수
         [SerializeField]
         private NetworkVariable<float> addItemAcceleration =  new NetworkVariable<float>(0);
+        [SerializeField]
+        private NetworkVariable<float> addItemPerAcceleration = new NetworkVariable<float>(1);
         public float ItemAcceleration
         {
             get
             {
-                return addItemAcceleration.Value;
+                return addItemAcceleration.Value * addItemPerAcceleration.Value;
             }
         }
         /// <summary>
-        /// [스킬, 아이템] 가속 스탯 증감 조정 메서드
-        /// </summary>
-        /// <param name="addSkillAcceleration">증감할 스킬 가속</param>
-        /// <param name="addItemAcceleration">증감할 아이템 가속</param>
+        /// [아이템] 가속 스탯 증감 조정 메서드
         [Rpc(SendTo.Server)]
-        public void AddAccelerationRpc(float addSkillAcceleration, float addItemAcceleration = 0)
+        public void AddItemAccelerationRpc(float addItemAcceleration, float addItemPerAcceleration = 0)
         {
-            this.addSkillAcceleration.Value += addSkillAcceleration;
             this.addItemAcceleration.Value += addItemAcceleration;
+            this.addItemPerAcceleration.Value += addItemPerAcceleration;
         }
+
         //치명타 확률
         private NetworkVariable<float> baseCriticalChance = new NetworkVariable<float>(0);
         [SerializeField]
@@ -433,6 +443,7 @@ namespace AshGreen.Character
         /// 
         public void DealDamage(CharacterController target, float damage, AttackType attackType, bool isCritical = false)
         {
+            Debug.Log("damage: " + damage);
             target._damageReceiver.TakeDamageRpc(damage);
         }
 

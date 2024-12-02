@@ -22,7 +22,7 @@ namespace AshGreen.Debuff
             // 디버프 활성화 주기가 되면 적에게 데미지를 입힘
             if (debuff.currentTimer >= activationCycle)
             {
-                float damage = debuff.baseVal[0] * (debuff.stackVal[0] * (debuff.currentStacks - 1));
+                float damage = debuff.baseVal[0] + (debuff.stackVal[0] * (debuff.currentStacks - 1));
                 NetworkObject networkObject = enemy.gameObject?.GetComponent<NetworkObject>();
                 enemy.gameObject?.GetComponent<IDamageable>()?.DealDamageRpc(networkObject, damage, AttackType.Debuff);
 

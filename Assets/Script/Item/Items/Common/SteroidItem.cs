@@ -10,7 +10,7 @@ namespace AshGreen.Item
             base.ApplyEffect(player);
             if (!_playerController.IsOwner) return;
             _playerController.AddHpRpc(0, (int)itemData.baseVal[0]);
-            _playerController.AddAccelerationRpc(itemData.baseVal[1]);
+            _playerController.AddSkillAccelerationRpc(itemData.baseVal[1]);
             _playerController.AddCriticalRpc(itemData.baseVal[2]);
         }
 
@@ -20,7 +20,7 @@ namespace AshGreen.Item
             base.AddEffect();
             if (!_playerController.IsOwner) return;
             _playerController.AddHpRpc(0, (int)itemData.stackIncVal[0]);
-            _playerController.AddAccelerationRpc(itemData.stackIncVal[1]);
+            _playerController.AddSkillAccelerationRpc(itemData.stackIncVal[1]);
             _playerController.AddCriticalRpc(itemData.stackIncVal[2]);
         }
 
@@ -31,12 +31,12 @@ namespace AshGreen.Item
             if (!_playerController.IsOwner) return;
             if (_stacks > 0)
             {
-                _playerController.AddAccelerationRpc(-itemData.stackIncVal[1]);
+                _playerController.AddSkillAccelerationRpc(-itemData.stackIncVal[1]);
                 _playerController.AddCriticalRpc(-itemData.stackIncVal[2]);
             }
             else
             {
-                _playerController.AddAccelerationRpc(-itemData.baseVal[1]);
+                _playerController.AddSkillAccelerationRpc(-itemData.baseVal[1]);
                 _playerController.AddCriticalRpc(-itemData.baseVal[2]);
             }
         }

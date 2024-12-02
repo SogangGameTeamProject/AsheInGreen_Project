@@ -25,7 +25,7 @@ namespace AshGreen.Debuff
         public DebuffType debuffType;// 디버프 타입
         public DebuffDurationType durationType;// 디버프 지속 시간 타입
         public float duration; // 디버프 지속 시간 (Timed 타입일 경우)
-        public int activationCycle = 0;// 디버프 활성화 주기
+        public float activationCycle = 0;// 디버프 활성화 주기
 
         // 디버프 적용 메서드
         public abstract void ApplyDebuff(EnemyController enemy, Debuff debuff);

@@ -1144,8 +1144,8 @@ MonoBehaviour:
     m_InternalValue: 1
   addMovePerSpeed:
     m_InternalValue: 1
-  addJumpPower:
-    m_InternalValue: 0
+  addJumpPerPower:
+    m_InternalValue: 1
   addSkillAcceleration:
     m_InternalValue: 50
   addItemAcceleration:

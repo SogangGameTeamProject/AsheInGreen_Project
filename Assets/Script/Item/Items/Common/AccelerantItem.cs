@@ -9,7 +9,8 @@ namespace AshGreen.Item
         {
             base.ApplyEffect(player);
             if (!_playerController.IsOwner) return;
-            _playerController.AddAccelerationRpc((int)itemData.baseVal[0], (int)itemData.baseVal[1]);
+            _playerController.AddSkillAccelerationRpc((int)itemData.baseVal[0]);
+            _playerController.AddItemAccelerationRpc((int)itemData.baseVal[1]);
         }
 
         // 아이템 효과를 추가하는 함수
@@ -17,7 +18,8 @@ namespace AshGreen.Item
         {
             base.AddEffect();
             if (!_playerController.IsOwner) return;
-            _playerController.AddAccelerationRpc((int)itemData.stackIncVal[0], (int)itemData.stackIncVal[1]);
+            _playerController.AddSkillAccelerationRpc((int)itemData.stackIncVal[0]);
+            _playerController.AddItemAccelerationRpc((int)itemData.stackIncVal[1]);
         }
 
         // 아이템 효과를 제거하는 함수
@@ -27,11 +29,13 @@ namespace AshGreen.Item
             if (!_playerController.IsOwner) return;
             if (_stacks > 0)
             {
-                _playerController.AddAccelerationRpc(-(int)itemData.stackIncVal[0], -(int)itemData.stackIncVal[1]);
+                _playerController.AddSkillAccelerationRpc(-(int)itemData.stackIncVal[0]);
+                _playerController.AddItemAccelerationRpc(-(int)itemData.stackIncVal[1]);
             }
             else
             {
-                _playerController.AddAccelerationRpc(-(int)itemData.baseVal[0], -(int)itemData.baseVal[1]);
+                _playerController.AddSkillAccelerationRpc(-(int)itemData.baseVal[0]);
+                _playerController.AddItemAccelerationRpc(-(int)itemData.baseVal[1]);
             }
         }
     }

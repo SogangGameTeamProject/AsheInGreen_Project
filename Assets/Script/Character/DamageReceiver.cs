@@ -38,7 +38,7 @@ namespace AshGreen.Character
             //데미지 계산
             float damage = 0;
             bool isCriticale = false;
-            if (attackType != AttackType.Item)
+            if (attackType != AttackType.Item && attackType != AttackType.Debuff)
             {
                 isCriticale = UnityEngine.Random.value <= _character.CriticalChance;
                 Debug.Log("AttackPower: " + _character.AttackPower + " damageCoefficient: " + damageCoefficient + " DealDamageCoefficient:" + _character.DealDamageCoefficient);

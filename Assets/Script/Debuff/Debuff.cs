@@ -67,6 +67,9 @@ namespace AshGreen.Debuff
                 if (remainingDuration <= 0)
                     _targetEnemy.debuffManager.RemoveDebuffRpc(debuffData.debuffType);
             }
+
+            if (_targetEnemy.IsOwner)
+                debuffData.UpdateDebuff(_targetEnemy, this);
         }
 
         public void saveDamage(float damage)

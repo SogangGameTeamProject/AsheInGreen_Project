@@ -16,7 +16,7 @@ namespace AshGreen.Item
         {
             base.ApplyEffect(player);
             if (!_playerController.IsOwner) return;
-            currentTime = 0;
+            currentTime = itemData.cooldownTime;
 
             _playerController._damageReceiver.DealDamageAction += ApplyDebuff;
         }
@@ -49,8 +49,8 @@ namespace AshGreen.Item
         private void ApplyDebuff
             (Character.CharacterController controller, float damage, Character.AttackType type, bool isCriticale)
         {
-            if (currentTime >= (itemData.cooldownTime / (100 + _playerController.ItemAcceleration))) return;
-
+            if (currentTime < itemData.cooldownTime * (100 / (100 + _playerController.ItemAcceleration))) return;
+            currentTime = 0;
             EnemyController enemy = controller as EnemyController;
             if (enemy)
                 enemy.debuffManager.AddDebuffRpc(DebuffType.Corruption,

@@ -9,8 +9,9 @@ namespace AshGreen.Item
         public override void ApplyEffect(PlayerController player)
         {
             base.ApplyEffect(player);
-            _playerController.AddHpRpc((int)itemData.baseVal[0]);// 체력 회복
             _playerController.itemManager.RemoveItemRpc(itemData.itemID);// 아이템 제거
+            if(!_playerController.IsOwner) return;
+            _playerController.AddHpRpc((int)itemData.baseVal[0]);// 체력 회복
         }
 
         // 아이템 효과를 추가하는 함수

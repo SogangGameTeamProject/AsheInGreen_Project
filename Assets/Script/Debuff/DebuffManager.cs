@@ -53,9 +53,9 @@ namespace AshGreen.Debuff
             // activeBuffs.Values를 복사하여 새로운 리스트를 만듭니다.
             var debuffsToUpdate = activeDebuffs.Values.ToList();
 
-            foreach (var buff in debuffsToUpdate)
+            foreach (var debuff in debuffsToUpdate)
             {
-                buff.Update(Time.deltaTime);
+                debuff.Update(Time.deltaTime);
             }
         }
     }
