@@ -8,12 +8,12 @@ namespace AshGreen.Debuff
     {
         public override void ApplyDebuff(EnemyController enemy, Debuff debuff)
         {
-            enemy.AddTakenDamageCoefficientRpc(debuff.baseVal[0] * (debuff.stackVal[0] * (debuff.currentStacks - 1)));
+            enemy.AddTakenDamageCoefficientRpc(debuff.stackVal[1]);
         }
 
         public override void RemoveDebuff(EnemyController enemy, Debuff debuff)
         {
-            enemy.AddTakenDamageCoefficientRpc(-(debuff.baseVal[0] * (debuff.stackVal[0] * (debuff.currentStacks - 1))));
+            enemy.AddTakenDamageCoefficientRpc(-debuff.stackVal[1]);
         }
 
         public override void UpdateDebuff(EnemyController enemy, Debuff debuff)

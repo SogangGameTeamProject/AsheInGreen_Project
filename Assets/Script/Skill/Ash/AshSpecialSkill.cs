@@ -59,7 +59,7 @@ namespace AshGreen.Character.Skill
                     fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;
                 }
 
-                ProjectileFactory.Instance.RequestProjectileFire(holder._caster, bulletPrefab, AttackType.MainSkill, damage,
+                ProjectileFactory.Instance.RequestProjectileFire(holder._caster, bulletPrefab, AttackType.SpecialSkill, damage,
                     fireDir, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
 
                 holder._caster.OnUseSpecialSkillEvent();//특수스킬 사용 이벤트 호출

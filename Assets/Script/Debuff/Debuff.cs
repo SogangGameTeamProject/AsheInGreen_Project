@@ -42,7 +42,7 @@ namespace AshGreen.Debuff
         // 버프 재적용
         public void Reapply(int stack)
         {
-            if (currentStacks >= stack)
+            if (currentStacks < stack)
             {
                 currentStacks = stack;
 

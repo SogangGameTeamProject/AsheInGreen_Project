@@ -49,6 +49,8 @@ namespace AshGreen.Item
         private void ApplyDebuff
             (Character.CharacterController controller, float damage, Character.AttackType type, bool isCriticale)
         {
+            if(type != AttackType.SpecialSkill) return;
+            Debug.Log(itemData.cooldownTime * (100 / (100 + _playerController.ItemAcceleration)));
             if (currentTime < itemData.cooldownTime * (100 / (100 + _playerController.ItemAcceleration))) return;
             currentTime = 0;
             EnemyController enemy = controller as EnemyController;

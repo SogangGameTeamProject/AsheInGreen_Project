@@ -382,8 +382,12 @@ MonoBehaviour:
     m_InternalValue: 1
   addSkillAcceleration:
     m_InternalValue: 50
+  addSkillPerAcceleration:
+    m_InternalValue: 1
   addItemAcceleration:
     m_InternalValue: 0
+  addItemPerAcceleration:
+    m_InternalValue: 1
   addCriticalChance:
     m_InternalValue: 0
   addCriticalDamage:

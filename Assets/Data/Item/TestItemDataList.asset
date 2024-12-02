@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7817f688aefcc8742ad489bf7e6b78f9, type: 2}
   - {fileID: 11400000, guid: ccf015ddc1dfbcd4898d45f9fbb4dd00, type: 2}
   - {fileID: 11400000, guid: 6e374f61754151c4cacba4d009db3c44, type: 2}
-  - {fileID: 11400000, guid: 72a449ab703886747b6321f34fc2db74, type: 2}
+  - {fileID: 11400000, guid: 7d4026a401200b5449e77a8a2dee95a2, type: 2}
   rareItemRate: 1
   epicItemList: []
   epicItemRate: 0

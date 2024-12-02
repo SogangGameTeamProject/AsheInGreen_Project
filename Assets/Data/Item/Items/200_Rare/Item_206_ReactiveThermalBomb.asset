@@ -20,9 +20,9 @@ MonoBehaviour:
     \uBD80\uC704\uD30C\uAD34 \uBD80\uC5EC"
   price: 15
   icon: {fileID: 1117589288, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
-  hasCooldown: 0
+  hasCooldown: 1
   cooldownTime: 0
-  cntNum: 0
+  activeNum: 0
   baseVal:
   - 0.2
   stackIncVal:

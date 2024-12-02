@@ -23,10 +23,10 @@ MonoBehaviour:
   icon: {fileID: 401666745, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 0
   cooldownTime: 0
-  cntNum: 0
+  activeNum: 0
   baseVal:
   - 10
   - 15
   stackIncVal:
   - 5
-  - 1
+  - 0.2

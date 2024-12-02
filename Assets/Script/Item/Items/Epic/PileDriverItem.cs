@@ -48,8 +48,10 @@ namespace AshGreen.Item
             (Character.CharacterController controller, float damage, Character.AttackType type, bool isCriticale)
         {
             activeCnt++;
-            if (activeCnt >= (itemData.baseVal[0]- itemData.baseVal[0]*(1-(2/(_stacks))))) return;
-
+            Debug.Log((itemData.baseVal[1] - itemData.baseVal[1] * (1 - 1 / Mathf.Sqrt(_stacks))));
+            if (activeCnt < (itemData.baseVal[1]- itemData.baseVal[1] * (1 - 1 / Mathf.Sqrt(_stacks)))) return;
+            Debug.Log(activeCnt);
+            activeCnt = 0;
             EnemyController enemy = controller as EnemyController;
             if (enemy)
                 enemy.debuffManager.AddDebuffRpc(DebuffType.Wound,
