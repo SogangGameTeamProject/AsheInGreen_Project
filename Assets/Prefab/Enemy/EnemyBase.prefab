@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1091,7 +1091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2684011154188418490, guid: cff2e68bc6f4aa4419c8843197bc7454, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.96
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 2684011154188418490, guid: cff2e68bc6f4aa4419c8843197bc7454, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1132,6 +1132,10 @@ PrefabInstance:
     - target: {fileID: 5545434532015841314, guid: cff2e68bc6f4aa4419c8843197bc7454, type: 3}
       propertyPath: m_Name
       value: NockBackAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5545434532015841314, guid: cff2e68bc6f4aa4419c8843197bc7454, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1207,6 +1211,10 @@ PrefabInstance:
     - target: {fileID: 6184931628955269651, guid: dcc98264e98531b48832201a540c748c, type: 3}
       propertyPath: m_Name
       value: 'AbsorptionAttack '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184931628955269651, guid: dcc98264e98531b48832201a540c748c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
