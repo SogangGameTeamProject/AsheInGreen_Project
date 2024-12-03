@@ -77,11 +77,9 @@ namespace AshGreen.Character{
                 }
 
                 //타겟 공격
-                _enemy.SetTriggerAniParaRpc("IsSmash");
                 yield return new WaitForSeconds(firstDealay);
-                SetDamageAreaRpc(true);
+                _enemy.SetTriggerAniParaRpc("IsSmash");
                 yield return new WaitForSeconds(lastDealay);
-                SetDamageAreaRpc(false);
             }
 
             //원래 위치로 이동
@@ -100,12 +98,6 @@ namespace AshGreen.Character{
             }
 
             yield return base.ExePatteurn();
-        }
-
-        [Rpc(SendTo.ClientsAndHost)]
-        private void SetDamageAreaRpc(bool value)
-        {
-            damageArea.SetActive(value);
         }
     }
 }

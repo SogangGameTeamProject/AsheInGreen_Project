@@ -74,7 +74,6 @@ namespace AshGreen.Character{
 
             //흡수공격 처리 오브젝트 활성화
             _enemy.SetBoolAniParaRpc("IsAbsorb", true);
-            SetDamageAreaRpc(true);
 
             //플랫폼 이동
             PlatformManager platformManager = PlatformManager.Instance;
@@ -88,7 +87,6 @@ namespace AshGreen.Character{
 
             //갈메기 플렛폼 공격
             _enemy.SetBoolAniParaRpc("IsAbsorb", false);
-            SetDamageAreaRpc(false);//흡수공격 처리 오브젝트 비활성화
             int fireNum = 0;
             while (fireNum < attackNum)
             {
@@ -151,12 +149,6 @@ namespace AshGreen.Character{
                 
                 yield return new WaitForSeconds(seagullSpawnDelay);
             }
-        }
-
-        [Rpc(SendTo.ClientsAndHost)]
-        private void SetDamageAreaRpc(bool value)
-        {
-            damageArea.SetActive(value);
         }
     }
 }
