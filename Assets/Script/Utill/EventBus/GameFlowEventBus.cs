@@ -8,9 +8,11 @@ namespace AshGreen.EventBus
     public enum GameFlowType
     {
         StageStart,
-        StageEnd,
+        StageClear,
         GameOver,
         GameClear,
+        GamePurge,
+        GameResume,
     }
     public class GameFlowEventBus : MonoBehaviour
     {
