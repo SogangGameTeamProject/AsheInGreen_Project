@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac96e7182c047994eb561c5318b2baf3, type: 3}
+  m_Name: GrayMainSkill
+  m_EditorClassIdentifier: 
+  skillName: "\uB808\uC774\uC800 \uACF5\uACA9"
+  skillType: 0
+  activeTime: 0.5
+  cooldownTime: 1
+  maxChageCnt: 0
+  MaxHaveEnergy: 0
+  MinUseCoast: 0
+  charging: 0
+  chargingMoveSpeed: 0.75
+  isNotCancellation: 0
+  skillCancel: 0
+  multipleUse: 0
+  damageCoefficient: 0.8
+  utillValue: 1
+  utillTime: 1
+  skillIcon: {fileID: -5097126423132373131, guid: 6a7f203aea1788d40b09992cb567b653, type: 3}
+  animationTrigger: MainSkill
+  skillSound: {fileID: 0}
+  bulletPrefab: {fileID: 7789176575942843153, guid: f7bf0547f6310294aa7d4572e31f92fb, type: 3}
+  bulletSpeed: 200
+  bulletDestroyTime: 2

@@ -2,25 +2,43 @@ using UnityEngine;
 using AshGreen.Character;
 using Unity.Netcode;
 using CharacterController = AshGreen.Character.CharacterController;
+using UnityEngine.WSA;
 
 namespace AshGreen.DamageObj
 {
     public class NetworkDamageObj : NetworkBehaviour
     {
+        [Header("기본설정 관련")]
+        [HideInInspector]
         public bool isFire = false;
+        [HideInInspector]
         public CharacterController caster = null;
         public AttackType dealType = AttackType.None;
         public float damage = 1;
+        [Header("넉백 관련")]
         public bool isKnockback = false;
         public float knockbackPower = 100f;
         public float knockbackTime = 0.3f;
         public bool isDestroy = false;
         //타겟 추적 관련
+        [Header("위치 타겟팅 관련")]
         public bool isTarget = false;
         public Vector2 targetPos = Vector2.zero;
         public float trackingSpeed = 100f;
+        [SerializeField]
+        private bool isParabola = false;//포물선 여부
+
+        //추가타 오브젝트
+        [Header("추가타 관련")]
+        [SerializeField]
+        private GameObject addMoreObj = null;
+        [SerializeField]
+        private float addMoreDamage = 0.3f;
+        [SerializeField]
+        private float addMoreLifeTime = 0.3f;
 
         //폭발 피해 관련
+        [Header("폭발 관련")]
         public bool isExplosion = false;
         public float explosionRadius = 4;
         public LayerMask targetLayer;
@@ -88,6 +106,16 @@ namespace AshGreen.DamageObj
                 {
                     NetworkObject targetNobj = target.GetComponent<NetworkObject>();
                     caster.GetComponent<DamageReceiver>().DealDamageRpc(targetNobj, damage, dealType);
+                }
+
+                if(addMoreObj)
+                {
+                    //총알 발사
+                    float damage = addMoreDamage;//데미지 설정
+
+                    Vector2 fireDir = Vector2.zero;//발사 방향 조정
+                    ProjectileFactory.Instance.RequestProjectileFire(caster, addMoreObj, AttackType.MainSkill, damage,
+                    fireDir, target.transform.position, Quaternion.identity, addMoreLifeTime);
                 }
                 return true;
             }

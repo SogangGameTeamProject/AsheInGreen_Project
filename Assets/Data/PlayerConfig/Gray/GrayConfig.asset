@@ -19,7 +19,7 @@ MonoBehaviour:
   ingameImg: {fileID: 3908490776561538671, guid: 7edc6d1d9cdd8044a9a5f0986821dc1d, type: 3}
   iconSprite: {fileID: -4082298381797475129, guid: 890a2d900a6be5d46a2ce199d4689f2d, type: 3}
   playerPre: {fileID: 6290146047174413212, guid: 62a71e998a5d58d4a8c65827590b58cc, type: 3}
-  animator: {fileID: 9100000, guid: 7819097b6f64f0a4a866e365fae3e68a, type: 2}
+  startMoney: 1000
   LevelUpEx: 200
   MaxHP: 4
   GrowthMaxHP: 1
@@ -31,6 +31,6 @@ MonoBehaviour:
   JumpPower: 150
   JumMaxNum: 1
   skills:
-  - {fileID: 11400000, guid: 6d9b91f14b4da484d98a586995324083, type: 2}
-  - {fileID: 11400000, guid: 35051a0c030e3cb47a5959a2d3afe5ae, type: 2}
-  - {fileID: 11400000, guid: ba7a820b022b3bc4895adddfb754f892, type: 2}
+  - {fileID: 11400000, guid: 6597bf7713fbcef40a0af04a63f7110e, type: 2}
+  - {fileID: 11400000, guid: 621c1b96af6a7d640a6ca46a3fcd5764, type: 2}
+  - {fileID: 11400000, guid: 54ebef822ba3e4a49b6618ac130ec933, type: 2}

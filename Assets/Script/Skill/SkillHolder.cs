@@ -36,7 +36,9 @@ namespace AshGreen.Character.Skill
         private int nowChargeCnt = 0;//현재 스킬 충전 횟수
         public int maxHaveEnergy = 0;//최대 충전 에너지
         public int minUseCoast = 0;//사용시 최소 소모 코스트
+        public bool isReuse = false;//재사용 가능 여부
         private int nowEnergy = 0;//현재 에너지 량
+        
         public int NowEnergy
         {
             get

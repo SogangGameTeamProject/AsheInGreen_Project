@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ad5f19e5c1e5648b733825da1eeb38, type: 3}
+  m_Name: GraySecondarySkill
+  m_EditorClassIdentifier: 
+  skillName: "\uC0C1\uC2B9 \uBD80\uC2A4\uD130"
+  skillType: 1
+  activeTime: 0
+  cooldownTime: 0
+  maxChageCnt: 0
+  MaxHaveEnergy: 0
+  MinUseCoast: 0
+  charging: 0
+  chargingMoveSpeed: 0.75
+  isNotCancellation: 0
+  skillCancel: 0
+  multipleUse: 0
+  damageCoefficient: 0.2
+  utillValue: 1
+  utillTime: 1
+  skillIcon: {fileID: 0}
+  animationTrigger: 
+  skillSound: {fileID: 0}
+  jumpPower: 300
+  jumpUpFDelay: 0.2
+  jumpUpTime: 0.2
