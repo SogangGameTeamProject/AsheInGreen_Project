@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5983408177861757924}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.74, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,7 +77,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 2
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -94,6 +94,15 @@ TrailRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.17000306
+        inSlope: -0.072868496
+        outSlope: -0.072868496
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.22077987
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -170,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 7789176575942843153}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.75, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -244,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3107986166
+  GlobalObjectIdHash: 969720364
   InScenePlacedSourceGlobalObjectIdHash: 1976491790
   DeferredDespawnTick: 0
   Ownership: 1
@@ -317,9 +326,8 @@ MonoBehaviour:
   isTarget: 0
   targetPos: {x: 0, y: 0}
   trackingSpeed: 100
-  addMoreObj: {fileID: 7789176575942843153, guid: 06ce9f220a29d31478c1ba264d5b375d, type: 3}
-  addMoreDamage: 0.3
-  addMoreLifeTime: 0.3
+  isParabola: 0
+  height: 5
   isExplosion: 0
   explosionRadius: 4
   targetLayer:

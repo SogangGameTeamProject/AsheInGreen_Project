@@ -185,6 +185,8 @@ MonoBehaviour:
   isTarget: 0
   targetPos: {x: 0, y: 0}
   trackingSpeed: 100
+  isParabola: 0
+  height: 5
   isExplosion: 0
   explosionRadius: 4
   targetLayer:

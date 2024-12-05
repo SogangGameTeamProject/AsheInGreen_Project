@@ -30,8 +30,8 @@ MonoBehaviour:
   skillIcon: {fileID: 255780606, guid: 6a7f203aea1788d40b09992cb567b653, type: 3}
   animationTrigger: SpecialSkill
   skillSound: {fileID: 0}
-  bulletPrefab: {fileID: 7789176575942843153, guid: 6c00f569535ff7c40a937cfce63c775d, type: 3}
+  bulletUpPrefab: {fileID: 7789176575942843153, guid: 6b204e89b511cb343972a64bd5ae611e, type: 3}
+  bulletDownPrefab: {fileID: 7789176575942843153, guid: 8adf9e730d1be9942b63507df68b09b4, type: 3}
   bulletSpeed: 100
   bulletDestroyTime: 2
   fireDelay: 0.05
-  casterGrvity: 5

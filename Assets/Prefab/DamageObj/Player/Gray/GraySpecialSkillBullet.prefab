@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2150987043
+  GlobalObjectIdHash: 4254992172
   InScenePlacedSourceGlobalObjectIdHash: 1976491790
   DeferredDespawnTick: 0
   Ownership: 1
@@ -327,9 +327,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0}
   trackingSpeed: 100
   isParabola: 0
-  addMoreObj: {fileID: 7789176575942843153, guid: 06ce9f220a29d31478c1ba264d5b375d, type: 3}
-  addMoreDamage: 0.3
-  addMoreLifeTime: 0.3
+  height: 5
   isExplosion: 1
   explosionRadius: 4
   targetLayer:

@@ -27,21 +27,18 @@ namespace AshGreen.DamageObj
         public float trackingSpeed = 100f;
         [SerializeField]
         private bool isParabola = false;//포물선 여부
-
-        //추가타 오브젝트
-        [Header("추가타 관련")]
         [SerializeField]
-        private GameObject addMoreObj = null;
-        [SerializeField]
-        private float addMoreDamage = 0.3f;
-        [SerializeField]
-        private float addMoreLifeTime = 0.3f;
+        private bool isReversParabola = false;//역포물선 여부
+        public float height = 5f; // 포물선 높이
 
         //폭발 피해 관련
         [Header("폭발 관련")]
         public bool isExplosion = false;
         public float explosionRadius = 4;
         public LayerMask targetLayer;
+
+        private Vector2 startPos;
+        private float parabolaTime;
 
         public override void OnNetworkDespawn()
         {
@@ -56,7 +53,14 @@ namespace AshGreen.DamageObj
             //타겟 추적 상태일 시 타겟을 향해 날라감
             if (isFire && isTarget)
             {
-                TrackTarget();
+                if (isParabola)
+                {
+                    TrackParabolaTarget();
+                }
+                else
+                {
+                    TrackTarget();
+                }
             }
         }
 
@@ -65,6 +69,18 @@ namespace AshGreen.DamageObj
             transform.position = Vector2.Lerp(transform.position, targetPos, trackingSpeed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, targetPos) <= 0.1f)
+                DestroyObjRpc();
+        }
+
+        private void TrackParabolaTarget()
+        {
+            parabolaTime += Time.deltaTime * trackingSpeed;
+            float parabolaHeight =
+                Mathf.Sin(Mathf.PI * parabolaTime) * (isReversParabola ? -height : height);
+            Vector2 currentPos = Vector2.Lerp(startPos, targetPos, parabolaTime);
+            transform.position = new Vector3(currentPos.x, currentPos.y + parabolaHeight, transform.position.z);
+
+            if (parabolaTime >= 1f)
                 DestroyObjRpc();
         }
 
@@ -107,16 +123,6 @@ namespace AshGreen.DamageObj
                     NetworkObject targetNobj = target.GetComponent<NetworkObject>();
                     caster.GetComponent<DamageReceiver>().DealDamageRpc(targetNobj, damage, dealType);
                 }
-
-                if(addMoreObj)
-                {
-                    //총알 발사
-                    float damage = addMoreDamage;//데미지 설정
-
-                    Vector2 fireDir = Vector2.zero;//발사 방향 조정
-                    ProjectileFactory.Instance.RequestProjectileFire(caster, addMoreObj, AttackType.MainSkill, damage,
-                    fireDir, target.transform.position, Quaternion.identity, addMoreLifeTime);
-                }
                 return true;
             }
 
@@ -139,10 +145,9 @@ namespace AshGreen.DamageObj
                 DestroyObjRpc();
         }
 
-        // 
         [Rpc(SendTo.ClientsAndHost)]
         public void FireRpc(NetworkObjectReference caster, AttackType dealType, float damage,
-            Vector2 bulletPos, bool isTarget = false)
+            Vector2 bulletPos, bool isTarget = false, float trackingSpeed = 0)
         {
             this.isFire = true;
             NetworkObject casterObj = null;
@@ -158,9 +163,15 @@ namespace AshGreen.DamageObj
                 //타겟 추적 여부 설정
                 this.isTarget = isTarget;
                 if (this.isTarget)
+                {
                     this.targetPos = bulletPos;
+                    this.trackingSpeed = trackingSpeed > 0 ? trackingSpeed/20 : this.trackingSpeed;
+                    this.startPos = transform.position;
+                }
                 else
+                {
                     this.GetComponent<Rigidbody2D>().linearVelocity = bulletPos;
+                }
             }
         }
     }

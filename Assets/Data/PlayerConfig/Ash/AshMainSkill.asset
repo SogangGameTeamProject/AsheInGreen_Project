@@ -37,4 +37,3 @@ MonoBehaviour:
   maxChargingCnt: 3
   energyIncrease: 1
   ChargingDamageCoefficient: 0.45
-  casterGrvity: 5

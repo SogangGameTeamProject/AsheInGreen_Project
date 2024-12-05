@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1633873690358807157}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2388687, y: -2.3326054, z: -0.04491548}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3287003651
+  GlobalObjectIdHash: 4271119702
   InScenePlacedSourceGlobalObjectIdHash: 1161714258
   DeferredDespawnTick: 0
   Ownership: 1
@@ -74,7 +74,8 @@ MonoBehaviour:
   _isDontDestroy: 0
   projectileObjts:
   - {fileID: 7789176575942843153, guid: 6c00f569535ff7c40a937cfce63c775d, type: 3}
-  - {fileID: 235773664981108953, guid: 3bc4a91c965d84a4494cd3fbbf740db3, type: 3}
+  - {fileID: 7789176575942843153, guid: 6b204e89b511cb343972a64bd5ae611e, type: 3}
+  - {fileID: 7789176575942843153, guid: 8adf9e730d1be9942b63507df68b09b4, type: 3}
   - {fileID: 5003110354222387133, guid: a778f1a846ab8b1499d0dcab40f5dced, type: 3}
   - {fileID: 6067252972294321342, guid: 4d9eba8f0455e504aabc4f761bea78eb, type: 3}
   - {fileID: 6067252972294321342, guid: f3bf040cd1fce054e88b7c9ea2727a8f, type: 3}
@@ -84,3 +85,6 @@ MonoBehaviour:
   - {fileID: 2169703801096383763, guid: f39ffc0b98ad70045967075e680ad252, type: 3}
   - {fileID: 13175258949483166, guid: 6914c5791b6e9374796b7f19c92ea633, type: 3}
   - {fileID: 7789176575942843153, guid: 63a4ea07ee68d2d429a5c9c0518f242e, type: 3}
+  - {fileID: 7789176575942843153, guid: 06ce9f220a29d31478c1ba264d5b375d, type: 3}
+  - {fileID: 7789176575942843153, guid: f7bf0547f6310294aa7d4572e31f92fb, type: 3}
+  - {fileID: 7789176575942843153, guid: a7a6efe8bb1f50a4e96931d2e8421938, type: 3}

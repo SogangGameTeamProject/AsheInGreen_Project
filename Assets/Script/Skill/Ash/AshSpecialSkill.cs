@@ -11,7 +11,8 @@ namespace AshGreen.Character.Skill
     public class AshSpecialSkill : CharacterSkill
     {
         [Header("특수스킬 옵션")]
-        public GameObject bulletPrefab;//투사체 프리펩
+        public GameObject bulletUpPrefab;//투사체 프리펩
+        public GameObject bulletDownPrefab;//투사체 프리펩
         public float bulletSpeed = 200f;
         public float bulletDestroyTime = 2;
         public float fireDelay = 0.05f;
@@ -40,15 +41,16 @@ namespace AshGreen.Character.Skill
             for (int i = 0; i < nowEnergy; i++)
             {
                 float damage = damageCoefficient;//데미지 설정
+                GameObject bulletPrefab = i%2 == 0 ? bulletUpPrefab : bulletDownPrefab; //총알 설정
                 //보스 타겟
                 Vector2 fireDir = Vector2.zero;//발사 방향 조정
+                Vector2 targetPos;
                 EnemyController target = GameObject.FindAnyObjectByType<EnemyController>();
                 if (target)
                 {
                     Vector2 casterPos = (Vector2)holder._caster.gameObject.transform.position;
-                    Vector2 targetPos = (Vector2)target.gameObject.transform.position;
+                    targetPos = (Vector2)target.gameObject.transform.position;
                     fireDir = targetPos - casterPos;
-                    fireDir = fireDir.normalized * bulletSpeed;
                     if (fireDir.x > 0)
                         holder._caster.CharacterDirection = CharacterDirection.Right;
                     else
@@ -56,11 +58,14 @@ namespace AshGreen.Character.Skill
                 }
                 else
                 {
-                    fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;
+                    Vector2 casterPos = (Vector2)holder._caster.gameObject.transform.position;
+                    targetPos = new Vector2(casterPos.x + ((int)holder._caster.CharacterDirection * 10), casterPos.y);
                 }
 
-                ProjectileFactory.Instance.RequestProjectileFire(holder._caster, bulletPrefab, AttackType.SpecialSkill, damage,
-                    fireDir, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
+
+                ProjectileFactory.Instance.RequestProjectileTargetFire
+                    (holder._caster, bulletPrefab, AttackType.MainSkill, damage,
+                targetPos, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletSpeed);
 
                 holder._caster.OnUseSpecialSkillEvent();//특수스킬 사용 이벤트 호출
 

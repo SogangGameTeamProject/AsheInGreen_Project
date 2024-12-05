@@ -13,8 +13,6 @@ namespace AshGreen.Character.Skill
         public float jumpUpFDelay = 0.2f;//점프 시작 딜레이
         public float jumpUpTime = 0.5f;//점프 시간
 
-
-
         public override IEnumerator Use(SkillHolder holder, float chargeTime = 0)
         {
             //스킬 시작 시 처리

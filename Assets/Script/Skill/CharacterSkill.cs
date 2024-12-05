@@ -8,7 +8,7 @@ namespace AshGreen.Character.Skill
 {
     public enum SkillType
     {
-        MainSkill = 0, SecondarySkill = 1, SpecialSkill = 2
+        MainSkill = 0, SecondarySkill = 1, SpecialSkill = 2, PassiveSkill = 3
     }
 
     public abstract class CharacterSkill : ScriptableObject

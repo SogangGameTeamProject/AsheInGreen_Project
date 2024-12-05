@@ -74,13 +74,13 @@ namespace AshGreen.Character{
         /// <param name="destroyTime"></param>
         public void RequestProjectileTargetFire
             (CharacterController owner, GameObject pre, AttackType attackType, float damage, Vector2 targetPos,
-            Vector3 firePos, Quaternion fireRotation)
+            Vector3 firePos, Quaternion fireRotation, float speed = 0)
         {
             int index = projectileObjts.IndexOf(pre);
 
             NetworkObject networkOwer = owner.GetComponent<NetworkObject>();
             if (projectileObjts != null)
-                ProjectileTargetFireRpc(networkOwer, index, attackType, damage, targetPos, firePos, fireRotation);
+                ProjectileTargetFireRpc(networkOwer, index, attackType, damage, targetPos, firePos, fireRotation, speed);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace AshGreen.Character{
         [Rpc(SendTo.Server)]
         private void ProjectileTargetFireRpc
             (NetworkObjectReference owner, int index, AttackType attackType, float damage, Vector2 targetPos,
-            Vector3 firePos, Quaternion fireRotation)
+            Vector3 firePos, Quaternion fireRotation, float speed = 0)
         {
             GameObject bullet = Instantiate(projectileObjts[index], firePos, fireRotation);
 
@@ -107,7 +107,7 @@ namespace AshGreen.Character{
 
             //투사체 설정
             NetworkDamageObj damageObj = bullet.GetComponent<NetworkDamageObj>();
-            damageObj.FireRpc(owner, attackType, damage, targetPos, true);
+            damageObj.FireRpc(owner, attackType, damage, targetPos, true, speed);
         }
 
         
