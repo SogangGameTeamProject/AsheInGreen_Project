@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1674314881
+  GlobalObjectIdHash: 2900697886
   InScenePlacedSourceGlobalObjectIdHash: 1976491790
   DeferredDespawnTick: 0
   Ownership: 1
@@ -179,6 +179,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0}
   trackingSpeed: 100
   isParabola: 0
+  isReversParabola: 0
   height: 5
   isExplosion: 0
   explosionRadius: 4

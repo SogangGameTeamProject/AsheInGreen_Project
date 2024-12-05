@@ -16,7 +16,7 @@ MonoBehaviour:
   skillType: 1
   activeTime: 0
   cooldownTime: 0
-  maxChageCnt: 0
+  maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
   charging: 0
@@ -30,6 +30,7 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   animationTrigger: 
   skillSound: {fileID: 0}
+  fireDelay: 0.5
   jumpPower: 300
   jumpUpFDelay: 0.2
   jumpUpTime: 0.2

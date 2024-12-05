@@ -16,7 +16,7 @@ MonoBehaviour:
   skillType: 0
   activeTime: 0.5
   cooldownTime: 1
-  maxChageCnt: 0
+  maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
   charging: 0

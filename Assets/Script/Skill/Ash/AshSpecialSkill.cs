@@ -64,7 +64,7 @@ namespace AshGreen.Character.Skill
 
 
                 ProjectileFactory.Instance.RequestProjectileTargetFire
-                    (holder._caster, bulletPrefab, AttackType.MainSkill, damage,
+                    (holder._caster, bulletPrefab, AttackType.SpecialSkill, damage,
                 targetPos, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletSpeed);
 
                 holder._caster.OnUseSpecialSkillEvent();//특수스킬 사용 이벤트 호출

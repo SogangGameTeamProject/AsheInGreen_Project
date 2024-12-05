@@ -77,7 +77,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.2
+  m_Time: 0.1
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4254992172
+  GlobalObjectIdHash: 2150987043
   InScenePlacedSourceGlobalObjectIdHash: 1976491790
   DeferredDespawnTick: 0
   Ownership: 1
@@ -326,8 +326,9 @@ MonoBehaviour:
   isTarget: 0
   targetPos: {x: 0, y: 0}
   trackingSpeed: 100
-  isParabola: 0
-  height: 5
+  isParabola: 1
+  isReversParabola: 0
+  height: 10
   isExplosion: 1
   explosionRadius: 4
   targetLayer:
@@ -367,7 +368,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7789176575942843153}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

@@ -26,15 +26,6 @@ namespace AshGreen.Character.Skill
                 holder._caster.PlayerSkillAni(animationTrigger);
             }
 
-            //스킬 시작 처리
-            holder._caster._movementController.isUnableMove = true;//이동 불가
-            if (!holder._caster._movementController.isGrounded)
-            {
-                Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
-                casterRbody.linearVelocity = Vector2.zero;
-                casterRbody.gravityScale = 0;//중력 설정
-            }
-
            
             //총알 발사
             float damage = (damageCoefficient)

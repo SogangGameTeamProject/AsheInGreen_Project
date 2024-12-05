@@ -26,28 +26,18 @@ namespace AshGreen.Character.Skill
                 holder._caster.PlayerSkillAni(animationTrigger);
             }
 
-            //스킬 시작 처리
-            holder._caster._movementController.isUnableMove = true;//이동 불가
-            if (!holder._caster._movementController.isGrounded)
-            {
-                Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
-                casterRbody.linearVelocity = Vector2.zero;
-                casterRbody.gravityScale = 0;//중력 설정
-            }
-
-
             //총알 발사
             float damage = (damageCoefficient)
                 * holder._caster.MainSkillDamageConfig;//데미지 설정
             //보스 타겟
             Vector2 fireDir = Vector2.zero;//발사 방향 조정
+            Vector2 targetPos;
             EnemyController target = GameObject.FindAnyObjectByType<EnemyController>();
             if (target)
             {
                 Vector2 casterPos = (Vector2)holder._caster.gameObject.transform.position;
-                Vector2 targetPos = (Vector2)target.gameObject.transform.position;
+                targetPos = (Vector2)target.gameObject.transform.position;
                 fireDir = targetPos - casterPos;
-                fireDir = fireDir.normalized * bulletSpeed;
                 if (fireDir.x > 0)
                     holder._caster.CharacterDirection = CharacterDirection.Right;
                 else
@@ -55,11 +45,14 @@ namespace AshGreen.Character.Skill
             }
             else
             {
-                fireDir = new Vector2((int)holder._caster.CharacterDirection, 0) * bulletSpeed;
+                Vector2 casterPos = (Vector2)holder._caster.gameObject.transform.position;
+                targetPos = new Vector2(casterPos.x + ((int)holder._caster.CharacterDirection * 10), casterPos.y);
             }
-            ProjectileFactory.Instance.RequestProjectileFire(holder._caster, bulletPrefab, AttackType.MainSkill, damage,
-                fireDir, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
 
+
+            ProjectileFactory.Instance.RequestProjectileTargetFire
+                (holder._caster, bulletPrefab, AttackType.SpecialSkill, damage,
+            targetPos, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletSpeed);
 
             holder._caster.OnUseMainSkillEvent();//메인스킬 사용 이벤트 호출
 

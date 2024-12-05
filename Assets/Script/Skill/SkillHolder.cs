@@ -19,9 +19,6 @@ namespace AshGreen.Character.Skill
             state = SkillState.Idle;
             maxHaveEnergy = skill.MaxHaveEnergy;
             minUseCoast = skill.MinUseCoast;
-
-            if (this.skill.skillType == SkillType.PassiveSkill)
-                Use();
         }
 
         public PlayerController _caster = null;
