@@ -60,7 +60,7 @@ namespace AshGreen.Character.Skill
             }
         }
         public float coolTime = 0;
-        public float currentCoolTime { get; private set; }//지속 쿨타임 
+        public float currentCoolTime { get; set; }//지속 쿨타임 
         public SkillState state;//스킬 상태
         
         public Coroutine holderCorutine = null;

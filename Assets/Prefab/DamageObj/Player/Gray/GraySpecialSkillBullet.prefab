@@ -328,7 +328,7 @@ MonoBehaviour:
   trackingSpeed: 100
   isParabola: 1
   isReversParabola: 0
-  height: 10
+  height: 5
   isExplosion: 1
   explosionRadius: 4
   targetLayer:

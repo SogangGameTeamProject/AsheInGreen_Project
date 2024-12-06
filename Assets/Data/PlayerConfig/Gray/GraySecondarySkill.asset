@@ -14,22 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uC0C1\uC2B9 \uBD80\uC2A4\uD130"
   skillType: 1
-  activeTime: 0
+  activeTime: 0.5
   cooldownTime: 0
   maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
   charging: 0
   chargingMoveSpeed: 0.75
-  isNotCancellation: 0
+  isNotCancellation: 1
   skillCancel: 0
-  multipleUse: 0
+  multipleUse: 1
   damageCoefficient: 0.2
-  utillValue: 1
+  utillValue: 0.3
   utillTime: 1
   skillIcon: {fileID: 0}
   animationTrigger: 
   skillSound: {fileID: 0}
+  bulletPrefab: {fileID: 0}
   fireDelay: 0.5
   jumpPower: 300
   jumpUpFDelay: 0.2

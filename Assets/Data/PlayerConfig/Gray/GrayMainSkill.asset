@@ -21,9 +21,9 @@ MonoBehaviour:
   MinUseCoast: 0
   charging: 0
   chargingMoveSpeed: 0.75
-  isNotCancellation: 0
+  isNotCancellation: 1
   skillCancel: 0
-  multipleUse: 0
+  multipleUse: 1
   damageCoefficient: 0.8
   utillValue: 1
   utillTime: 1
