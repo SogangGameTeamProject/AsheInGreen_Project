@@ -242,8 +242,8 @@ namespace AshGreen.Character
         [Rpc(SendTo.Server)]
         public void AddJumpRpc(int addJumMaxNum, float addJumpPerPower = 0)
         {
-            this.addJumMaxNum.Value = Mathf.Max(this.addJumMaxNum.Value + addJumMaxNum, 0);
-            this.addJumpPerPower.Value = Mathf.Max(this.addJumpPerPower.Value + addJumpPerPower, 1);
+            this.addJumMaxNum.Value = Mathf.Max(this.addJumMaxNum.Value + addJumMaxNum, 1);
+            this.addJumpPerPower.Value = Mathf.Max(this.addJumpPerPower.Value + addJumpPerPower, 0.1f);
         }
 
         public int jumCnt { get; set; }

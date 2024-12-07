@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uC0C1\uC2B9 \uBD80\uC2A4\uD130"
   skillType: 1
-  activeTime: 0.5
-  cooldownTime: 0
+  activeTime: 0.2
+  cooldownTime: 10
   maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
@@ -30,8 +30,9 @@ MonoBehaviour:
   skillIcon: {fileID: 0}
   animationTrigger: 
   skillSound: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 7789176575942843153, guid: 50532b400a0922e44b02329bbbcf4aa1, type: 3}
   fireDelay: 0.5
+  bulletSpeed: 200
   jumpPower: 300
-  jumpUpFDelay: 0.2
-  jumpUpTime: 0.2
+  jumpUpFDelay: 0.1
+  addGravity: 3

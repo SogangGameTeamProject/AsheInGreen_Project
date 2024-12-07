@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uD2B9\uC774\uC810 \uD3ED\uBC1C"
   skillType: 2
-  activeTime: 0
+  activeTime: 0.3
   cooldownTime: 10
   maxChageCnt: 1
   MaxHaveEnergy: 0

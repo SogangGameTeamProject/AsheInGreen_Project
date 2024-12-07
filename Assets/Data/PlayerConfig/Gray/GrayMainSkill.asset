@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uB808\uC774\uC800 \uACF5\uACA9"
   skillType: 0
-  activeTime: 0.5
-  cooldownTime: 1
+  activeTime: 0.3
+  cooldownTime: 2
   maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
   isNotCancellation: 1
   skillCancel: 0
   multipleUse: 1
-  damageCoefficient: 0.8
+  damageCoefficient: 1.2
   utillValue: 1
   utillTime: 1
   skillIcon: {fileID: -5097126423132373131, guid: 6a7f203aea1788d40b09992cb567b653, type: 3}

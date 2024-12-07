@@ -19,6 +19,12 @@ namespace AshGreen.Character.Skill
         {
             //스킬 시작 시 처리
             holder._caster._movementController.isUnableMove = true;//이동 불가
+            if (!holder._caster._movementController.isGrounded)
+            {
+                Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
+                casterRbody.linearVelocity = Vector2.zero;
+                casterRbody.gravityScale = 0;//중력 설정
+            }
 
             //스킬 애니메이션 처리
             if (!animationTrigger.IsNullOrEmpty())
@@ -46,7 +52,7 @@ namespace AshGreen.Character.Skill
             else
             {
                 Vector2 casterPos = (Vector2)holder._caster.gameObject.transform.position;
-                targetPos = new Vector2(casterPos.x + ((int)holder._caster.CharacterDirection * 10), casterPos.y);
+                targetPos = new Vector2(casterPos.x + ((int)holder._caster.CharacterDirection * 20), casterPos.y);
             }
 
 
@@ -66,6 +72,9 @@ namespace AshGreen.Character.Skill
         {
             //스킬 종료 처리
             holder._caster._movementController.isUnableMove = false;//이동 가능
+            Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();
+            if (casterRbody.gravityScale != holder._caster.Gravity)
+                casterRbody.gravityScale = holder._caster.Gravity;//중력 설정
 
             return base.End(holder);
         }

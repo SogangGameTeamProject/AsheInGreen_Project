@@ -39,7 +39,8 @@ namespace AshGreen.Character.Skill
             {
                 // 랜덤값을 통해 특이점 폭발 쿨초기화 여부 결정
                 var random = new System.Random();
-                if (random.NextDouble() > _player.characterConfig.skills[2].utillValue) return;
+                if (type == AttackType.SecondarySkill && random.NextDouble() > 0.05f) return;
+                if (type == AttackType.MainSkill && random.NextDouble() > 0.2f) return;
                 // 특이점 폭발 쿨초기화
                 _player._characterSkillManager.skillList[2].NowChargeCnt = 1;
                 _player._characterSkillManager.skillList[2].currentCoolTime = 0;

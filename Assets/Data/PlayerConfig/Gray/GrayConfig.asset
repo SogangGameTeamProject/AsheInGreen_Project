@@ -28,7 +28,7 @@ MonoBehaviour:
   GrowthAttackPower: 8
   GrowthPerAttackPower: 0
   MoveSpeed: 10
-  JumpPower: 150
+  JumpPower: 200
   JumMaxNum: 1
   skills:
   - {fileID: 11400000, guid: 6597bf7713fbcef40a0af04a63f7110e, type: 2}
