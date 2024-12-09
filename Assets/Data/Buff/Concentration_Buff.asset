@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Concentration_Buff
   m_EditorClassIdentifier: 
   buffType: 2
+  buffIcon: {fileID: -87438467, guid: 89c79107e4d52e6458fcbf217ac663e8, type: 3}
   durationType: 1
   duration: 0

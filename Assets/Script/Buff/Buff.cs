@@ -1,6 +1,7 @@
 using AshGreen.Character;
 using AshGreen.Character.Player;
 using AshGreen.Debuff;
+using AshGreen.UI;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ namespace AshGreen.Buff
         public float[] baseVal;
         public float[] stackVal;
 
+        private GameObject buffTimer = null;
+
         // 버프 생성자
         public Buff(BuffData data, PlayerController targetPlayer, int stack, float[] baseVal, float[] stackVal)
         {
@@ -30,12 +33,19 @@ namespace AshGreen.Buff
         {
             remainingDuration = buffData.duration;
             currentTimer = 0;
-            if(_targetPlayer.IsOwner)
+
+            // 디버프 타이머 UI 생성
+            buffTimer = GameObject.Instantiate(_targetPlayer.buffManager._buffIconPre,
+                _targetPlayer.buffManager._buffUICanvas);
+            buffTimer?.GetComponent<BuffTimer>().SetDebuff(this);
+
+            if (_targetPlayer.IsOwner)
                 buffData.ApplyBuff(_targetPlayer, this);
         }
 
         public void Remove()
         {
+            GameObject.Destroy(buffTimer);// 디버프 타이머 UI 제거
             if (_targetPlayer.IsOwner)
                 buffData.RemoveBuff(_targetPlayer, this);
         }

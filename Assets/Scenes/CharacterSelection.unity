@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 777933013287635922, guid: d3fdb3e357421874e90f97f05dcdf41a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7819097b6f64f0a4a866e365fae3e68a, type: 2}
     - target: {fileID: 5330810516567253745, guid: d3fdb3e357421874e90f97f05dcdf41a, type: 3}
       propertyPath: m_Name
       value: CanvasCharacterSelection

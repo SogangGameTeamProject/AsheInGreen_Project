@@ -21,7 +21,6 @@ namespace AshGreen.Character.Skill
 
         public override IEnumerator Charging(SkillHolder holder)
         {
-            
             return base.Charging(holder);
         }
 

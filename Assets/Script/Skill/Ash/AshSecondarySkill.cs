@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using WebSocketSharp;
 
 namespace AshGreen.Character.Skill
 {
@@ -11,6 +12,12 @@ namespace AshGreen.Character.Skill
         public int energyIncrease = 1;
         public override IEnumerator Use(SkillHolder holder, float chargeTime = 0)
         {
+            //스킬 애니메이션 처리
+            if (!animationTrigger.IsNullOrEmpty())
+            {
+                holder._caster.PlayerSkillAni(animationTrigger);
+            }
+
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease;//특수스킬 에너지 충전
             //스킬 시작 시 처리
             holder._caster.SetDamageimmunity(true);//무적

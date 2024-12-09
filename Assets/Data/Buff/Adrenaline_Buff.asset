@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Adrenaline_Buff
   m_EditorClassIdentifier: 
   buffType: 0
+  buffIcon: {fileID: -54681391834580028, guid: 89c79107e4d52e6458fcbf217ac663e8, type: 3}
   durationType: 0
   duration: 3
-  maxStacks: 10
-  isStackable: 1

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Corruption_Debuff
   m_EditorClassIdentifier: 
   debuffType: 1
+  debuffIcon: {fileID: 2001923654, guid: 0aa003b11cbaae24696192603919d892, type: 3}
   durationType: 0
   duration: 8
   activationCycle: 0

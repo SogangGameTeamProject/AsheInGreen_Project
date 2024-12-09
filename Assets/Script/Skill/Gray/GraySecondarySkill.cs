@@ -14,6 +14,7 @@ namespace AshGreen.Character.Skill
         public float bulletSpeed = 80f;
         public float jumpPower = 150;//점프 파워
         public float jumpUpFDelay = 0.2f;//점프 시작 딜레이
+        public float jumpDownDelay = 0.25f;//점프 종료 딜레이
         public float addGravity = 2f;//중력값
 
         public override IEnumerator Use(SkillHolder holder, float chargeTime = 0)
@@ -53,6 +54,12 @@ namespace AshGreen.Character.Skill
                 holder._caster.OnUseSubSkillEvent();//서브스킬 사용 이벤트 호출
 
                 holder._caster._movementController.isUnableMove = false;//이동 가능
+
+                //스킬 애니메이션 처리
+                if (!animationTrigger.IsNullOrEmpty())
+                {
+                    holder._caster.PlayerSkillAni(animationTrigger);
+                }
 
                 //총알 발사
                 float currentTimer = 0;
@@ -118,6 +125,8 @@ namespace AshGreen.Character.Skill
 
         public override IEnumerator End(SkillHolder holder)
         {
+            holder._caster._movementController.isUnableMove = true;//이동 불가
+            yield return new WaitForSeconds(jumpDownDelay);//종료 딜레이(애니메이션 처리를 위해
             //스킬 종료 시 처리
             holder._caster._movementController.isUnableMove = false;//이동 가능
 
@@ -132,10 +141,6 @@ namespace AshGreen.Character.Skill
                 //쿨타임 조정
                 holder.currentCoolTime = 0;
                 holder.NowChargeCnt = 0;
-            }
-            else
-            {
-
             }
 
             yield return base.End(holder);

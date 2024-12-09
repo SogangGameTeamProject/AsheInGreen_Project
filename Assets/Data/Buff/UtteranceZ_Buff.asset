@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: UtteranceZ_Buff
   m_EditorClassIdentifier: 
   buffType: 1
+  buffIcon: {fileID: -1164322366, guid: 89c79107e4d52e6458fcbf217ac663e8, type: 3}
   durationType: 1
   duration: 0

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BreakDown_Debuff
   m_EditorClassIdentifier: 
   debuffType: 4
+  debuffIcon: {fileID: 503562758, guid: 0aa003b11cbaae24696192603919d892, type: 3}
   durationType: 0
   duration: 5
   activationCycle: 0

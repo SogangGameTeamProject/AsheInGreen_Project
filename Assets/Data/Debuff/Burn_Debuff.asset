@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Burn_Debuff
   m_EditorClassIdentifier: 
   debuffType: 0
+  debuffIcon: {fileID: -2394810128318672781, guid: 0aa003b11cbaae24696192603919d892, type: 3}
   durationType: 0
   duration: 5
   activationCycle: 1

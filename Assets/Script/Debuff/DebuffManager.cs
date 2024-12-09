@@ -9,6 +9,8 @@ namespace AshGreen.Debuff
 {
     public class DebuffManager : NetworkBehaviour
     {
+        public Transform _debuffUICanvas;// 디버프 캔버스
+        public GameObject _debuffIconPre;// 디버프 아이콘 프리팹
         private EnemyController enemy;// 플레이어 컨트롤러
         [SerializeField]
         private List<DebuffData> debuffDatas = new List<DebuffData>();// 버프 데이터를 저장하는 리스트

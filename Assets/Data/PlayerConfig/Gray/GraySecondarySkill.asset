@@ -27,8 +27,8 @@ MonoBehaviour:
   damageCoefficient: 0.2
   utillValue: 0.3
   utillTime: 1
-  skillIcon: {fileID: 0}
-  animationTrigger: 
+  skillIcon: {fileID: -42545410, guid: a1c13794f93aeb542be407a44b32eb6c, type: 3}
+  animationTrigger: SecondarySkill
   skillSound: {fileID: 0}
   bulletPrefab: {fileID: 7789176575942843153, guid: 50532b400a0922e44b02329bbbcf4aa1, type: 3}
   fireDelay: 0.5

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 namespace AshGreen.Character
 {
@@ -8,6 +9,7 @@ namespace AshGreen.Character
         public override void Enter(CharacterController character)
         {
             base.Enter(character);
+            _character.SetDamageimmunity(true);
             _animator.SetTrigger(stateAni);
         }
 
@@ -18,7 +20,7 @@ namespace AshGreen.Character
 
         public override void Exit()
         {
-            
+            _character.SetDamageimmunity(false);
         }
     }
 }

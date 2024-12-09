@@ -22,6 +22,7 @@ namespace AshGreen.Buff
     public abstract class BuffData : ScriptableObject
     {
         public BuffType buffType;// 버프 타입
+        public Sprite buffIcon;// 버프 아이콘
         public BuffDurationType durationType;// 버프 지속 시간 타입
         public float duration; // 버프 지속 시간 (Timed 타입일 경우)
 

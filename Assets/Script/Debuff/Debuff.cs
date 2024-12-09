@@ -1,6 +1,7 @@
 using AshGreen.Buff;
 using AshGreen.Character;
 using AshGreen.Character.Player;
+using AshGreen.UI;
 using UnityEngine;
 
 namespace AshGreen.Debuff
@@ -16,6 +17,8 @@ namespace AshGreen.Debuff
         public float[] baseVal;
         public float[] stackVal;
 
+        private GameObject debuffTimer = null;
+
         // 버프 생성자
         public Debuff(DebuffData data, EnemyController targetEnemy, int stack, float[] baseVal, float[] stackVal)
         {
@@ -24,6 +27,11 @@ namespace AshGreen.Debuff
             currentStacks = stack;
             this.baseVal = baseVal;
             this.stackVal = stackVal;
+
+            // 디버프 타이머 UI 생성
+            debuffTimer = GameObject.Instantiate(_targetEnemy.debuffManager._debuffIconPre,
+                _targetEnemy.debuffManager._debuffUICanvas);
+            debuffTimer?.GetComponent<DebuffTimer>().SetDebuff(this);
         }
 
         public void Apply()
@@ -37,6 +45,7 @@ namespace AshGreen.Debuff
         public void Remove()
         {
             debuffData.RemoveDebuff(_targetEnemy, this);
+            GameObject.Destroy(debuffTimer);// 디버프 타이머 UI 제거
         }
 
         // 버프 재적용

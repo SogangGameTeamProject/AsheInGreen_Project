@@ -10,6 +10,8 @@ namespace AshGreen.Buff
 {
     public class BuffManager : NetworkBehaviour
     {
+        public Transform _buffUICanvas;// 버프 캔버스
+        public GameObject _buffIconPre;// 버프 아이콘 프리팹
         private PlayerController playerController;// 플레이어 컨트롤러
         [SerializeField]
         private List<BuffData> buffDatas = new List<BuffData>();// 버프 데이터를 저장하는 리스트
