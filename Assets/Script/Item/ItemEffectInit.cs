@@ -18,6 +18,7 @@ namespace AshGreen.Item
             if(_playerController == null)
                 _playerController = player;
             _stacks++;
+            _playerController.playerUI.AddItemUI(this);
             Debug.Log(itemData.Description);
         }
 
@@ -25,6 +26,7 @@ namespace AshGreen.Item
         public virtual void AddEffect()
         {
             _stacks++;
+            _playerController.playerUI.AddItemUI(this);
             Debug.Log(itemData.Description);
         }
 
@@ -32,6 +34,15 @@ namespace AshGreen.Item
         public virtual void RemoveEffect()
         {
             _stacks--;
+            if (_stacks <= 0)
+            {
+                _playerController.playerUI.RemoveItemUI(this);
+                Destroy(gameObject);
+            }
+            else
+            {
+                _playerController.playerUI.UpdateItemUI(this);
+            }
         }
     }
 }

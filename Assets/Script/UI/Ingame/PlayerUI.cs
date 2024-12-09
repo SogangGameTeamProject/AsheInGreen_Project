@@ -6,6 +6,10 @@ using Unity.Netcode;
 using AshGreen.Obsever;
 using AshGreen.Character.Player;
 using AshGreen.Character.Skill;
+using NUnit.Framework;
+using AshGreen.UI;
+using System.Collections.Generic;
+using AshGreen.Item;
 
 
 public class PlayerUI : MonoBehaviour
@@ -35,12 +39,15 @@ public class PlayerUI : MonoBehaviour
         public TextMeshProUGUI specialSkillEnergyTxt;
         public GameObject specialSkillTimer;
         public TextMeshProUGUI specialSkillTimeTxt;
+        public GameObject itemUIPanel;
     }
     
     public HUD playerHud;
     [HideInInspector]
     public PlayerController player;
-
+    [SerializeField]
+    private GameObject itemUIPre;//아이템 UI 프리팹
+    private List<ItemUI> itemUIList = new List<ItemUI>();//아이템 UI 리스트
     private void Start()
     {
         UpdateHp(player.MaxHP, player.NowHP);
@@ -122,5 +129,26 @@ public class PlayerUI : MonoBehaviour
         {
             skillEnergy.SetActive(false);
         }
+    }
+
+    //아이템 UI 추가
+    public void AddItemUI(ItemEffectInit item)
+    {
+        GameObject itemUI = Instantiate(itemUIPre, playerHud.itemUIPanel.transform);
+        ItemUI itemui = itemUI.GetComponent<ItemUI>();
+        itemui.SetItemUI(item);
+        itemUIList.Add(itemui);
+    }
+
+    public void UpdateItemUI(ItemEffectInit item)
+    {
+        ItemUI findItemUI = itemUIList.Find(itemUI => itemUI._item == item);
+        findItemUI?.UpdateStack();
+    }
+
+    public void RemoveItemUI(ItemEffectInit item)
+    {
+        ItemUI findItemUI = itemUIList.Find(itemUI => itemUI._item == item);
+        findItemUI?.RemoveItemUI();
     }
 }

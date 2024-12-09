@@ -141,6 +141,12 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         hud.playerHud.secondarySkillIcon.sprite = config.skills[1].skillIcon;
         hud.playerHud.specialSkillIcon.sprite = config.skills[2].skillIcon;
         hud.playerHud.playerIcon.sprite = config.iconSprite;
+
+        //아이템 UI 초기화
+        foreach(var item in playerController.itemManager.itemInventory)
+        {
+            playerController.playerUI.AddItemUI(item.Value);
+        }
     }
     private IEnumerator HostShutdown()
     {
