@@ -44,6 +44,8 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     [SerializeField]
     private GameObject m_readyWaitingPanel;//상점 준비 패널
 
+    private float stageStartTime = 0;//스테이지 시작 시간
+
     private void OnEnable()
     {
         OnPlayerDefeated += PlayerDeath;
@@ -105,6 +107,20 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     private void ActivateClearUIClientRpc()
     {
         m_clearUI.SetActive(true);
+    }
+
+    private void GiveClearMoney()
+    {
+        float clearTime = Time.time - stageStartTime;
+        
+        if(clearTime < 30)
+            m_player.ForEach(p => p.AddMoneyServerRpc(200));
+        else if (clearTime < 60)
+            m_player.ForEach(p => p.AddMoneyServerRpc(175));
+        else if (clearTime < 90)
+            m_player.ForEach(p => p.AddMoneyServerRpc(150));
+        else
+            m_player.ForEach(p => p.AddMoneyServerRpc(125));
     }
 
     [ClientRpc]
@@ -177,7 +193,8 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
     public void BossDefeat()
     {
-        ActivateClearUIClientRpc();
+        ActivateClearUIClientRpc();// 클리어 UI 활성화
+        GiveClearMoney();// 클리어 보상
     }
 
     public void ExitToMenu()
@@ -252,6 +269,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             m_numberOfPlayerConnected++;
         }
 
+        stageStartTime = Time.time;
         ClientSeceInitRpc();
     }
 

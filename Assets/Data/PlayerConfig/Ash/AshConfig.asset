@@ -19,7 +19,7 @@ MonoBehaviour:
   ingameImg: {fileID: 491125644, guid: 535d66ba44a374a4793a6ae5a03a97ad, type: 3}
   iconSprite: {fileID: 2784707058690089037, guid: 890a2d900a6be5d46a2ce199d4689f2d, type: 3}
   playerPre: {fileID: 9204871404527705347, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
-  startMoney: 1000
+  startMoney: 200
   LevelUpEx: 200
   MaxHP: 4
   GrowthMaxHP: 1

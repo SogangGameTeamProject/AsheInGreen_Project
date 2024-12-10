@@ -26,7 +26,7 @@ namespace AshGreen.Item
         public virtual void AddEffect()
         {
             _stacks++;
-            _playerController.playerUI.AddItemUI(this);
+            _playerController.playerUI.UpdateItemUI(this);
             Debug.Log(itemData.Description);
         }
 

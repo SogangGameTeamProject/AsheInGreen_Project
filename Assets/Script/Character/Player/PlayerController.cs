@@ -61,6 +61,7 @@ namespace AshGreen.Character.Player
         }
 
         //돈관련
+        [SerializeField]
         private NetworkVariable<int> m_money = new NetworkVariable<int>(0);
         public int Money
         {
