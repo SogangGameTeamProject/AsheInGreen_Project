@@ -88,6 +88,7 @@ namespace AshGreen.Character
         //------스테이터스 관련 전역 변수 선언------
         //레벨 관련
         protected NetworkVariable<int> LevelUpEx = new NetworkVariable<int>(0);
+        [SerializeField]
         protected NetworkVariable<int> level = new NetworkVariable<int>(1);
         protected NetworkVariable<int> experience = new NetworkVariable<int>(0);
 

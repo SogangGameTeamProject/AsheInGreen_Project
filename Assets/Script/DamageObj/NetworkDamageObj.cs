@@ -2,7 +2,6 @@ using UnityEngine;
 using AshGreen.Character;
 using Unity.Netcode;
 using CharacterController = AshGreen.Character.CharacterController;
-using UnityEngine.WSA;
 
 namespace AshGreen.DamageObj
 {

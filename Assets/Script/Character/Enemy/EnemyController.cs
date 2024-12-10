@@ -59,8 +59,11 @@ namespace AshGreen.Character
         {
             if (enemyConfig)
             {
+                level.Value = PlayerPrefs.GetInt("StageID");
                 baseMaxHP.Value = enemyConfig.MaxHP;
-                nowHp.Value = baseMaxHP.Value;
+                GrowthMaxHP.Value = enemyConfig.GrowthMaxHP;
+                GrowthPerMaxHP.Value = enemyConfig.GrowthPerMaxHP;
+                nowHp.Value = MaxHP;
                 GrowthAttackPower.Value = enemyConfig.GrowthAttackPower;
                 GrowthPerAttackPower.Value = enemyConfig.GrowthPerAttackPower;
                 baseAttackPower.Value = enemyConfig.AttackPower;
