@@ -11,6 +11,7 @@ namespace AshGreen.Character.Player
 {
     public class PlayerController : CharacterController
     {
+        public Animator _playerSignAnimator = null;
         [HideInInspector]
         public GameplayManager gameplayManager;//게임플레이 메니저
         public PlayerUI playerUI;//플레이어 UI

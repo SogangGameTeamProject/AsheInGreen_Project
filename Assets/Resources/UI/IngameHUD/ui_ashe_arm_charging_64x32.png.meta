@@ -1,0 +1,1703 @@
+fileFormatVersion: 2
+guid: 152e78972067a9248ac18f0ec23aafbf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2982081129072694953
+    second: ui_ashe_arm_charging_64x32_0
+  - first:
+      213: 2808451292848789265
+    second: ui_ashe_arm_charging_64x32_1
+  - first:
+      213: -5386879104574887281
+    second: ui_ashe_arm_charging_64x32_2
+  - first:
+      213: -7491218729881067254
+    second: ui_ashe_arm_charging_64x32_3
+  - first:
+      213: 2393621588776613785
+    second: ui_ashe_arm_charging_64x32_4
+  - first:
+      213: -6834134737789163171
+    second: ui_ashe_arm_charging_64x32_5
+  - first:
+      213: -926312939477569754
+    second: ui_ashe_arm_charging_64x32_6
+  - first:
+      213: 3114737277837575888
+    second: ui_ashe_arm_charging_64x32_7
+  - first:
+      213: -9110923466538894622
+    second: ui_ashe_arm_charging_64x32_8
+  - first:
+      213: -3955485214976331159
+    second: ui_ashe_arm_charging_64x32_9
+  - first:
+      213: 2675286732605605389
+    second: ui_ashe_arm_charging_64x32_10
+  - first:
+      213: 4890981916786786761
+    second: ui_ashe_arm_charging_64x32_11
+  - first:
+      213: 1317952188344824824
+    second: ui_ashe_arm_charging_64x32_12
+  - first:
+      213: 8718910158040515091
+    second: ui_ashe_arm_charging_64x32_13
+  - first:
+      213: 2962300755753953130
+    second: ui_ashe_arm_charging_64x32_14
+  - first:
+      213: -596686414880873091
+    second: ui_ashe_arm_charging_64x32_15
+  - first:
+      213: 5587103641830529077
+    second: ui_ashe_arm_charging_64x32_16
+  - first:
+      213: -6831781281173158857
+    second: ui_ashe_arm_charging_64x32_17
+  - first:
+      213: 3005292945884005680
+    second: ui_ashe_arm_charging_64x32_18
+  - first:
+      213: 517612273218223046
+    second: ui_ashe_arm_charging_64x32_19
+  - first:
+      213: 8757788030946496780
+    second: ui_ashe_arm_charging_64x32_20
+  - first:
+      213: -5546101132437360358
+    second: ui_ashe_arm_charging_64x32_21
+  - first:
+      213: -6999724723360188077
+    second: ui_ashe_arm_charging_64x32_22
+  - first:
+      213: 299131299580522232
+    second: ui_ashe_arm_charging_64x32_23
+  - first:
+      213: 4446021764664128120
+    second: ui_ashe_arm_charging_64x32_24
+  - first:
+      213: -513377038817753903
+    second: ui_ashe_arm_charging_64x32_25
+  - first:
+      213: -1268421081103912303
+    second: ui_ashe_arm_charging_64x32_26
+  - first:
+      213: -3822223124531692695
+    second: ui_ashe_arm_charging_64x32_27
+  - first:
+      213: -8659540989007749277
+    second: ui_ashe_arm_charging_64x32_28
+  - first:
+      213: 562212938918414123
+    second: ui_ashe_arm_charging_64x32_29
+  - first:
+      213: -4296466488232142226
+    second: ui_ashe_arm_charging_64x32_30
+  - first:
+      213: 840073111298061563
+    second: ui_ashe_arm_charging_64x32_31
+  - first:
+      213: 6920058065390182042
+    second: ui_ashe_arm_charging_64x32_32
+  - first:
+      213: 2433633102882204383
+    second: ui_ashe_arm_charging_64x32_33
+  - first:
+      213: 3911153920638887065
+    second: ui_ashe_arm_charging_64x32_34
+  - first:
+      213: -7122807159886495036
+    second: ui_ashe_arm_charging_64x32_35
+  - first:
+      213: 8622413190128066335
+    second: ui_ashe_arm_charging_64x32_36
+  - first:
+      213: 985487262375133937
+    second: ui_ashe_arm_charging_64x32_37
+  - first:
+      213: 9082955584612201437
+    second: ui_ashe_arm_charging_64x32_38
+  - first:
+      213: 7237966440589894873
+    second: ui_ashe_arm_charging_64x32_39
+  - first:
+      213: -3875406154603890746
+    second: ui_ashe_arm_charging_64x32_40
+  - first:
+      213: 3315554299586669740
+    second: ui_ashe_arm_charging_64x32_41
+  - first:
+      213: -2020091321936416301
+    second: ui_ashe_arm_charging_64x32_42
+  - first:
+      213: 509312771665445229
+    second: ui_ashe_arm_charging_64x32_43
+  - first:
+      213: 3451101026636308551
+    second: ui_ashe_arm_charging_64x32_44
+  - first:
+      213: -5028598641844572633
+    second: ui_ashe_arm_charging_64x32_45
+  - first:
+      213: 5749638346702888730
+    second: ui_ashe_arm_charging_64x32_46
+  - first:
+      213: -7236047438705991891
+    second: ui_ashe_arm_charging_64x32_47
+  - first:
+      213: -7064275131054747695
+    second: ui_ashe_arm_charging_64x32_48
+  - first:
+      213: 2372616226294472182
+    second: ui_ashe_arm_charging_64x32_49
+  - first:
+      213: 5264179141825028607
+    second: ui_ashe_arm_charging_64x32_50
+  - first:
+      213: 4038845821200314873
+    second: ui_ashe_arm_charging_64x32_51
+  - first:
+      213: 2536052654702739785
+    second: ui_ashe_arm_charging_64x32_52
+  - first:
+      213: 2869075365166392305
+    second: ui_ashe_arm_charging_64x32_53
+  - first:
+      213: -1759111218920200988
+    second: ui_ashe_arm_charging_64x32_54
+  - first:
+      213: 2574029414913990849
+    second: ui_ashe_arm_charging_64x32_55
+  - first:
+      213: -7184678936821550795
+    second: ui_ashe_arm_charging_64x32_56
+  - first:
+      213: 5297564358695593805
+    second: ui_ashe_arm_charging_64x32_57
+  - first:
+      213: -6365134525285407067
+    second: ui_ashe_arm_charging_64x32_58
+  - first:
+      213: -1300556523226385992
+    second: ui_ashe_arm_charging_64x32_59
+  - first:
+      213: -6928155314867076872
+    second: ui_ashe_arm_charging_64x32_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139543309510e88498940a47298ca1f3
+      internalID: 1920452651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5760bd7b7cc4d194eab7139cb1959905
+      internalID: -1901931445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26383497d2cdf2e42b50207337a054e8
+      internalID: -1686986506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17e17f6ba865664daa3c3d9d14b83ef
+      internalID: 827774444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f6afa8115cf0e4882d4e1e5834e8ca
+      internalID: 116497721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 224
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c787a4ea06e719c4f9ecf73e582dff39
+      internalID: -1253205438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9828178e5900cc04bb7156a2025b2f48
+      internalID: 311145663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 224
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ade69f22b49594baaa39161b167195
+      internalID: -472943613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f6c56fc2f80304cb40f9d9e1fda61f
+      internalID: -1832173858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaaabcb38168fec47ad9fd9a99f44330
+      internalID: -2110179708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec388284ce66f83478d9de6d48bcf465
+      internalID: -1716317867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3845b87872f3464aac134a0033abd3d
+      internalID: 1457495697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cdc9618132f9040b7caebf97a1f953
+      internalID: 1454936504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16332a0187605bc48bba857c0cd39656
+      internalID: -1146884523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30afb34d7d2ca7b40beaf8d871b706f5
+      internalID: 438880279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cdad2345344d0245a6909d359dbd1a3
+      internalID: -1740354920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a59f448b8680f41b11f222469e525b
+      internalID: -827557828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9097feb570d2d4bb866ef8306616ae
+      internalID: -774970769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac668d430dfd564ab554765f0ef9f68
+      internalID: -572968753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379ca3143d6d5ac4285c8e7ea6a5cdb5
+      internalID: -1440533036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08101f4c5a53c434baddaa12e45ce1e8
+      internalID: 1122659852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b938f53e540775e4a80ae21163f7188f
+      internalID: -876655922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22d68d42e702784b8c973e576bff287
+      internalID: 1559980829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_23
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 160
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6feeeef63aa8c44895d05e1a9b7963
+      internalID: -1094927737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9befcbfb3f6a4fc41aa0a3e4acefa1a6
+      internalID: 1816426745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa89ade4130465d4680210e1e8b36b8f
+      internalID: 1593743027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213d6ccadf1ea3846aaa2a5475df715f
+      internalID: -604169858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ff283a1a702ba4e984a7d1c6276978
+      internalID: -346438143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f81ccefff002f34cb9af56c891bc09f
+      internalID: 1238634417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae74de92252b7ea4cab3dcfc3bdc088d
+      internalID: -1956011233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d20bdd1e90c4e04ca3a9bb0874cf5d6
+      internalID: 1805215223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a396e2e0d7fcbbd4d869599cb681b4e1
+      internalID: 620903581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d628188e4679cbb46bb31fd2c6aa1925
+      internalID: 1974086751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa16db28088f944587d8a832f276021
+      internalID: 673621208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af2d0b86f419e844967bbf2f52eeb9d
+      internalID: -38392084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_35
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68742e88bfe0dbf49beb3d63fd64dc33
+      internalID: 180030519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b675edf11f5ca14396cc4a3cc13120f
+      internalID: 1391953936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_37
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a30c4a7ea8b0b743ba856eb2a3038e0
+      internalID: -273937253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_38
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a275631d0f6a9634b8e062b9bb36396a
+      internalID: 808520598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_39
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9ae2325e0a4bd46998bc103ee30b7d
+      internalID: -691019084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11e8f5857705a64d85bae90167332c5
+      internalID: -992984289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_41
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac79ead7be47c146a81dce2c3192b2c
+      internalID: -2038581214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757495a5958faf94db5cfabd2084bbbd
+      internalID: 838995913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf13dd04851ee074b8caece88e11ba0e
+      internalID: 1419337112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2455de69ffb354ab2b2b16d677aa14
+      internalID: 1069471418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_45
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5adc48b123ee6f04fbf72844ff36f756
+      internalID: -678897897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_46
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e620f30a0905844a196fcdfb9a93b9
+      internalID: -1707359289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_47
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949381e361d7336448bc585dcb2b354d
+      internalID: -1884047653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec968ecffc9160748aff81a0d655b8ed
+      internalID: -1261725180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115d4233ffd172641a8a4f45bce57865
+      internalID: -104737900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd9283a647c3134bba26d525ffe1563
+      internalID: 522037380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38909f9daaf40cb408bbc628d765c2a0
+      internalID: -1309901848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082631d81ddb0504fa520f358efdd38e
+      internalID: 133069666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_53
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2a58d1128ab7740b5e7a29e3c6e98b
+      internalID: 1096560781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_54
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122c3cdda038f8948aeec4721e3ee0cf
+      internalID: 1408291030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_55
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 32
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09f190a60967a642af2de41d8f3f569
+      internalID: -1227475354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede4120ecf98bf445a0c12ae978b1576
+      internalID: -1647201262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4dfe6d099c8574f91aa72524172bc6
+      internalID: 1155746601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_58
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683d2d1a2f060c14b82e71c67e803ba0
+      internalID: 216379068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_59
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87258dee6cebb145b7295868e47c9b2
+      internalID: 1935940030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_ashe_arm_charging_64x32_60
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4e42ef16bad4048a319e3eb72c8bd4
+      internalID: 65575254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b8793ce59d14ddf4faa2d2b4ea42f579
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ui_ashe_arm_charging_64x32_0: 1920452651
+      ui_ashe_arm_charging_64x32_1: -1901931445
+      ui_ashe_arm_charging_64x32_10: -1716317867
+      ui_ashe_arm_charging_64x32_11: 1457495697
+      ui_ashe_arm_charging_64x32_12: 1454936504
+      ui_ashe_arm_charging_64x32_13: -1146884523
+      ui_ashe_arm_charging_64x32_14: 438880279
+      ui_ashe_arm_charging_64x32_15: -1740354920
+      ui_ashe_arm_charging_64x32_16: -827557828
+      ui_ashe_arm_charging_64x32_17: -774970769
+      ui_ashe_arm_charging_64x32_18: -572968753
+      ui_ashe_arm_charging_64x32_19: -1440533036
+      ui_ashe_arm_charging_64x32_2: -1686986506
+      ui_ashe_arm_charging_64x32_20: 1122659852
+      ui_ashe_arm_charging_64x32_21: -876655922
+      ui_ashe_arm_charging_64x32_22: 1559980829
+      ui_ashe_arm_charging_64x32_23: -1094927737
+      ui_ashe_arm_charging_64x32_24: 1816426745
+      ui_ashe_arm_charging_64x32_25: 1593743027
+      ui_ashe_arm_charging_64x32_26: -604169858
+      ui_ashe_arm_charging_64x32_27: -346438143
+      ui_ashe_arm_charging_64x32_28: 1238634417
+      ui_ashe_arm_charging_64x32_29: -1956011233
+      ui_ashe_arm_charging_64x32_3: 827774444
+      ui_ashe_arm_charging_64x32_30: 1805215223
+      ui_ashe_arm_charging_64x32_31: 620903581
+      ui_ashe_arm_charging_64x32_32: 1974086751
+      ui_ashe_arm_charging_64x32_33: 673621208
+      ui_ashe_arm_charging_64x32_34: -38392084
+      ui_ashe_arm_charging_64x32_35: 180030519
+      ui_ashe_arm_charging_64x32_36: 1391953936
+      ui_ashe_arm_charging_64x32_37: -273937253
+      ui_ashe_arm_charging_64x32_38: 808520598
+      ui_ashe_arm_charging_64x32_39: -691019084
+      ui_ashe_arm_charging_64x32_4: 116497721
+      ui_ashe_arm_charging_64x32_40: -992984289
+      ui_ashe_arm_charging_64x32_41: -2038581214
+      ui_ashe_arm_charging_64x32_42: 838995913
+      ui_ashe_arm_charging_64x32_43: 1419337112
+      ui_ashe_arm_charging_64x32_44: 1069471418
+      ui_ashe_arm_charging_64x32_45: -678897897
+      ui_ashe_arm_charging_64x32_46: -1707359289
+      ui_ashe_arm_charging_64x32_47: -1884047653
+      ui_ashe_arm_charging_64x32_48: -1261725180
+      ui_ashe_arm_charging_64x32_49: -104737900
+      ui_ashe_arm_charging_64x32_5: -1253205438
+      ui_ashe_arm_charging_64x32_50: 522037380
+      ui_ashe_arm_charging_64x32_51: -1309901848
+      ui_ashe_arm_charging_64x32_52: 133069666
+      ui_ashe_arm_charging_64x32_53: 1096560781
+      ui_ashe_arm_charging_64x32_54: 1408291030
+      ui_ashe_arm_charging_64x32_55: -1227475354
+      ui_ashe_arm_charging_64x32_56: -1647201262
+      ui_ashe_arm_charging_64x32_57: 1155746601
+      ui_ashe_arm_charging_64x32_58: 216379068
+      ui_ashe_arm_charging_64x32_59: 1935940030
+      ui_ashe_arm_charging_64x32_6: 311145663
+      ui_ashe_arm_charging_64x32_60: 65575254
+      ui_ashe_arm_charging_64x32_7: -472943613
+      ui_ashe_arm_charging_64x32_8: -1832173858
+      ui_ashe_arm_charging_64x32_9: -2110179708
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

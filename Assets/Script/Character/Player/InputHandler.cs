@@ -37,7 +37,7 @@ namespace AshGreen.Character.Player
             //이동 입력예외 처리 후 커맨드 호출
             if (!_player._movementController.isUnableMove
                 && _moveVec != Vector2.zero &&
-                (_player.runningCombatStateType != CombatStateType.Death || _player.runningCombatStateType != CombatStateType.Stop))
+                (_player.runningCombatStateType != CombatStateType.Death && _player.runningCombatStateType != CombatStateType.Stop))
             {
                 _player._movementController.ExecuteMove(_moveVec, _player.MoveSpeed);
             }
@@ -56,7 +56,7 @@ namespace AshGreen.Character.Player
             //예외처리
             if (context.started &&
                 !_player._movementController.isUnableMove &&
-                (_player.runningCombatStateType != CombatStateType.Death || _player.runningCombatStateType != CombatStateType.Stop) &&
+                (_player.runningCombatStateType != CombatStateType.Death && _player.runningCombatStateType != CombatStateType.Stop) &&
                 (_player._movementController.isGrounded || (!_player._movementController.isGrounded && _player.JumMaxNum > _player.jumCnt))
                 )
             {
@@ -69,7 +69,7 @@ namespace AshGreen.Character.Player
         {
             //예외처리
             if (context.started &&
-                (_player.runningCombatStateType != CombatStateType.Death || _player.runningCombatStateType != CombatStateType.Stop) &&
+                (_player.runningCombatStateType != CombatStateType.Death && _player.runningCombatStateType != CombatStateType.Stop) &&
                 (_runningMovementType == MovementStateType.Idle || _runningMovementType == MovementStateType.Move)&&
                 _player._movementController.isPlatformed
                 )

@@ -24,6 +24,9 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     private GameObject playerUIPre;
 
     [SerializeField]
+    private RuntimeAnimatorController[] m_playerSignAnimators;
+
+    [SerializeField]
     private GameObject m_deathUI;
 
     [SerializeField]
@@ -156,9 +159,16 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
         int playerId = playerController.characterConfig.GetPlayerId(playerController.clientID);
         if (playerHUDPanel.transform.childCount == 1)
+        {
+
             hud.playerHud.p1.SetActive(true);
+            playerController._playerSignAnimator.runtimeAnimatorController = m_playerSignAnimators[0];
+        }
         else
+        {
             hud.playerHud.p2.SetActive(true);
+            playerController._playerSignAnimator.runtimeAnimatorController = m_playerSignAnimators[1];
+        }
 
         //스킬 아이콘 초기화
         CharacterConfig config = playerController.characterConfig;
@@ -205,6 +215,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         ActivateClearUIClientRpc();// 클리어 UI 활성화
         GiveClearMoney();// 클리어 보상
         AllStop();// 모든 플레이어 멈춤
+        PlayerPrefs.SetInt("StageID", PlayerPrefs.GetInt("StageID") +1);// 다음 스테이지로 설정
     }
 
     public void ExitToMenu()
@@ -247,6 +258,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             //오너 캐릭터가 없을 시 새로운 캐릭터 생성
             if(player == null)
             {
+                PlayerPrefs.SetInt("StageID", 1);
                 foreach (CharacterConfig data in m_charactersData)
                 {
                     if (data.GetClientId(client) == client)
