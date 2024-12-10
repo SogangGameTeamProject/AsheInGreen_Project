@@ -10,7 +10,6 @@ namespace AshGreen.Character.Skill
     public class CharacterSkillManager : NetworkBehaviour
     {
         public PlayerController _player = null;
-
         public enum CharacterSkillStatetype
         {
             Idle, Charge, Use

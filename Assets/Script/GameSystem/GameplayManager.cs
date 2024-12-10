@@ -123,6 +123,15 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             m_player.ForEach(p => p.AddMoneyServerRpc(125));
     }
 
+    //
+    private void AllStop()
+    {
+        foreach (var player in m_player)
+        {
+            player.CombatStateTransitionRpc(CombatStateType.Stop);
+        }
+    }
+
     [ClientRpc]
     private void LoadClientRpc()
     {
@@ -195,6 +204,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     {
         ActivateClearUIClientRpc();// 클리어 UI 활성화
         GiveClearMoney();// 클리어 보상
+        AllStop();// 모든 플레이어 멈춤
     }
 
     public void ExitToMenu()

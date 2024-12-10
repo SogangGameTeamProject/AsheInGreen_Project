@@ -508,6 +508,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9135078203353011336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5328313596461484648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1886953888636068606}
+  - component: {fileID: 2095049740458579409}
+  m_Layer: 3
+  m_Name: Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1886953888636068606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5328313596461484648}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1733162331067627674}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2095049740458579409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5328313596461484648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b441d0c70e1ac5f4fb386fe2d032245b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  stateSoundClip: {fileID: 0}
 --- !u!1 &5390099488426859179
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +741,7 @@ Transform:
   - {fileID: 3103259856483584245}
   - {fileID: 981529334382131006}
   - {fileID: 8910177443412362998}
+  - {fileID: 1886953888636068606}
   m_Father: {fileID: 9135078203353011336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7068584290211311237
@@ -1270,6 +1317,8 @@ MonoBehaviour:
     state: {fileID: 1170719951875528351}
   - type: 2
     state: {fileID: 5325209982190128559}
+  - type: 3
+    state: {fileID: 2095049740458579409}
   addMaxHp:
     m_InternalValue: 0
   nowHp:
@@ -1314,6 +1363,8 @@ MonoBehaviour:
   characterConfig: {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
   mainSkillDamageConfig:
     m_InternalValue: 1
+  m_money:
+    m_InternalValue: 0
 --- !u!114 &491064707563821348
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ namespace AshGreen.Character
     //전투 상태 타입
     public enum CombatStateType
     {
-        Null = -1, Idle = 0, Hit = 1, Death = 2, 
+        Null = -1, Idle = 0, Hit = 1, Death = 2, Stop = 3
     }
 
     public class CharacterController : Subject

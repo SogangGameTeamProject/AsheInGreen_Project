@@ -37,7 +37,7 @@ namespace AshGreen.Character.Player
             //이동 입력예외 처리 후 커맨드 호출
             if (!_player._movementController.isUnableMove
                 && _moveVec != Vector2.zero &&
-                _runningCombatType != CombatStateType.Death)
+                (_player.runningCombatStateType != CombatStateType.Death || _player.runningCombatStateType != CombatStateType.Stop))
             {
                 _player._movementController.ExecuteMove(_moveVec, _player.MoveSpeed);
             }
@@ -56,7 +56,7 @@ namespace AshGreen.Character.Player
             //예외처리
             if (context.started &&
                 !_player._movementController.isUnableMove &&
-                _runningCombatType != CombatStateType.Death &&
+                (_player.runningCombatStateType != CombatStateType.Death || _player.runningCombatStateType != CombatStateType.Stop) &&
                 (_player._movementController.isGrounded || (!_player._movementController.isGrounded && _player.JumMaxNum > _player.jumCnt))
                 )
             {
@@ -69,7 +69,7 @@ namespace AshGreen.Character.Player
         {
             //예외처리
             if (context.started &&
-                _runningCombatType != CombatStateType.Death &&
+                (_player.runningCombatStateType != CombatStateType.Death || _player.runningCombatStateType != CombatStateType.Stop) &&
                 (_runningMovementType == MovementStateType.Idle || _runningMovementType == MovementStateType.Move)&&
                 _player._movementController.isPlatformed
                 )
@@ -79,7 +79,7 @@ namespace AshGreen.Character.Player
         //메인 스킬 입력 처리
         public void OnMainSkill(InputAction.CallbackContext context)
         {
-            if (_player.runningCombatStateType == CombatStateType.Death)
+            if (_player.runningCombatStateType == CombatStateType.Death || _player.runningCombatStateType == CombatStateType.Stop)
                 return;
             if (context.started)
             {
@@ -94,7 +94,7 @@ namespace AshGreen.Character.Player
         //보조스킬 입력 처리
         public void OnSecondarySkill(InputAction.CallbackContext context)
         {
-            if (_player.runningCombatStateType == CombatStateType.Death)
+            if (_player.runningCombatStateType == CombatStateType.Death || _player.runningCombatStateType == CombatStateType.Stop)
                 return;
             if (context.started)
             {
@@ -109,7 +109,7 @@ namespace AshGreen.Character.Player
         //특수스킬 입력 처리
         public void OnSpecialSkill(InputAction.CallbackContext context)
         {
-            if (_player.runningCombatStateType == CombatStateType.Death)
+            if (_player.runningCombatStateType == CombatStateType.Death || _player.runningCombatStateType == CombatStateType.Stop)
                 return;
             if (context.started)
             {
