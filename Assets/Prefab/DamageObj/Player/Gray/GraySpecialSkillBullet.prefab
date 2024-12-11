@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4254992172
+  GlobalObjectIdHash: 2150987043
   InScenePlacedSourceGlobalObjectIdHash: 1976491790
   DeferredDespawnTick: 0
   Ownership: 1
@@ -334,6 +334,8 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
+  destroyEffect: {fileID: 3714052874210164334, guid: ccf35ea0d544bed478e2d49a630a1a20, type: 3}
+  lifeTime: 0.25
 --- !u!50 &7443469594877686487
 Rigidbody2D:
   serializedVersion: 5

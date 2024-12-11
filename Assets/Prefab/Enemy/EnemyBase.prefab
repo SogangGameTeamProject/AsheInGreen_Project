@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -368,6 +368,8 @@ MonoBehaviour:
     state: {fileID: 6300172891334614720}
   - type: 2
     state: {fileID: 1540876525215466226}
+  level:
+    m_InternalValue: 1
   addMaxHp:
     m_InternalValue: 0
   nowHp:
@@ -666,7 +668,7 @@ MonoBehaviour:
   - {x: -20, y: 3}
   seagullSpawnDelay: 1.25
   seagullSpawnNum: 15
-  bulletPre: {fileID: 5003110354222387133, guid: c8d3f1ef709eec34293b2a90dbcff317, type: 3}
+  bulletPre: {fileID: 5003110354222387133, guid: bb37a504b7cc43240b881e24b78e1af3, type: 3}
   firePoint: {fileID: 3058831636576320614}
   attackNum: 6
   attackCofficient: 1

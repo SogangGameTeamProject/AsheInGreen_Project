@@ -38,6 +38,9 @@ namespace AshGreen.DamageObj
 
         private Vector2 startPos;
         private float parabolaTime;
+        [Header("이펙트 관련")]
+        public GameObject destroyEffect = null;
+        public float lifeTime = 0.5f;
 
         public override void OnNetworkDespawn()
         {
@@ -45,6 +48,13 @@ namespace AshGreen.DamageObj
 
             if (isExplosion)
                 ApplyExplosionDamage();
+
+            //폭발 이펙트 생성
+            if (destroyEffect)
+            {
+                GameObject effect = GameObject.Instantiate(destroyEffect, transform.position, Quaternion.identity);
+                GameObject.Destroy(effect, lifeTime);
+            }
         }
 
         private void Update()

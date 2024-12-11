@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 608348716
+  GlobalObjectIdHash: 3471441096
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1430,6 +1430,8 @@ MonoBehaviour:
     state: {fileID: 5325209982190128559}
   - type: 3
     state: {fileID: 2095049740458579409}
+  level:
+    m_InternalValue: 1
   addMaxHp:
     m_InternalValue: 0
   nowHp:

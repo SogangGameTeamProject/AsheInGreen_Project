@@ -37,6 +37,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
     private int m_numberOfPlayerConnected = 0;
     private int m_numberOfDeathPlayer = 0;// 죽은 플레이어 수
+    private bool isGameOver = false;// 게임 오버 여부
     [SerializeField]
     private List<ulong> m_connectedClients = new List<ulong>();
     public List<PlayerController> m_player = new List<PlayerController>();
@@ -81,6 +82,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
         if (m_numberOfPlayerConnected - m_numberOfDeathPlayer <= 0)
         {
+            isGameOver = true;
             ActivateDeathUIClientRpc();
         }
     }
@@ -212,10 +214,13 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
     public void BossDefeat()
     {
-        ActivateClearUIClientRpc();// 클리어 UI 활성화
-        GiveClearMoney();// 클리어 보상
-        AllStop();// 모든 플레이어 멈춤
-        PlayerPrefs.SetInt("StageID", PlayerPrefs.GetInt("StageID") +1);// 다음 스테이지로 설정
+        if (!isGameOver)
+        {
+            ActivateClearUIClientRpc();// 클리어 UI 활성화
+            GiveClearMoney();// 클리어 보상
+            AllStop();// 모든 플레이어 멈춤
+            PlayerPrefs.SetInt("StageID", PlayerPrefs.GetInt("StageID") + 1);// 다음 스테이지로 설정
+        }
     }
 
     public void ExitToMenu()
