@@ -20,7 +20,7 @@ namespace AshGreen.Character.Skill
         public SkillType skillType;//스킬 타입
         public string skillDescription; // 스킬 설명
         //설명을 반환하는 메소드
-        public string DescriptionTxt(int stack)
+        public string DescriptionTxt()
         {
             string returnDeco = skillDescription;
             FieldInfo[] fields = this.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
@@ -41,8 +41,6 @@ namespace AshGreen.Character.Skill
                     fieldValues[field.Name] = value?.ToString();
                 }
             }
-
-            fieldValues["stack"] = stack.ToString();
 
             // 연산식을 찾기 위한 정규식
             string operationPattern = @"{([^{}]+)}";
