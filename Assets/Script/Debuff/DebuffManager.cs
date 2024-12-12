@@ -25,13 +25,13 @@ namespace AshGreen.Debuff
 
         // 디버프 추가 메서드
         [Rpc(SendTo.ClientsAndHost)]
-        public void AddDebuffRpc(DebuffType debuffType, int stack, float[] baseVal, float[] stackVal)
+        public void AddDebuffRpc(DebuffType debuffType, int stack)
         {
             // 버프 딕셔너리에 해당 버프가 없다면 추가
             if (!activeDebuffs.ContainsKey(debuffType))
             {
                 DebuffData debuff = debuffDatas.FirstOrDefault(x => x.debuffType == debuffType);
-                activeDebuffs[debuffType] = new Debuff(debuff, enemy, stack, baseVal, stackVal);
+                activeDebuffs[debuffType] = new Debuff(debuff, enemy, stack);
                 // 버프 적용
                 activeDebuffs[debuffType].Apply();
             }

@@ -29,7 +29,7 @@ namespace AshGreen.Debuff
 
         public void BreakDownDamage(EnemyController enemy, Debuff debuff)
         {
-            float damage = debuff.baseVal[0];
+            float damage = baseVal[0];
             NetworkObject networkObject = enemy.gameObject?.GetComponent<NetworkObject>();
             enemy.gameObject?.GetComponent<IDamageable>()?.DealDamageRpc(networkObject, damage, AttackType.Debuff);
         }

@@ -334,6 +334,8 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
+  destroyEffect: {fileID: 0}
+  lifeTime: 0.5
 --- !u!50 &7443469594877686487
 Rigidbody2D:
   serializedVersion: 5

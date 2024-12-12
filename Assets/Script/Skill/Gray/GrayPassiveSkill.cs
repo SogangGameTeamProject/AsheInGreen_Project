@@ -68,7 +68,7 @@ namespace AshGreen.Character.Skill
                 var random = new System.Random();
                 if (random.NextDouble() > _player.characterConfig.skills[1].utillValue) return;
                 float[] baseVal = new float[] {20};
-                ((EnemyController)target).debuffManager.AddDebuffRpc(DebuffType.breakdown, 1, baseVal, null);
+                ((EnemyController)target).debuffManager.AddDebuffRpc(DebuffType.breakdown, 1);
             }
         }
     }

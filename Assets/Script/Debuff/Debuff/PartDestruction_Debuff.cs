@@ -15,7 +15,7 @@ namespace AshGreen.Debuff
         public override void RemoveDebuff(EnemyController enemy, Debuff debuff)
         {
             // 디버프가 해제될 때 적에게 누적데미지의 비례한 추가 데미지를 입힘
-            float damage = debuff.currentDamage * (debuff.baseVal[0] + (debuff.stackVal[0] * (debuff.currentStacks - 1)));
+            float damage = debuff.currentDamage * (baseVal[0] + (stackIncVal[0] * (debuff.currentStacks - 1)));
             NetworkObject networkObject = enemy.gameObject?.GetComponent<NetworkObject>();
             enemy.gameObject?.GetComponent<IDamageable>()?.DealDamageRpc(networkObject, damage, AttackType.Debuff);
 

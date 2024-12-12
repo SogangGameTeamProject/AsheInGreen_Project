@@ -47,8 +47,7 @@ namespace AshGreen.Item
             {
                 EnemyController enemy = controller as EnemyController;
                 if (enemy)
-                    enemy.debuffManager.AddDebuffRpc(DebuffType.PartDestruction,
-                        _stacks, itemData.baseVal.ToArray(), itemData.stackIncVal.ToArray());
+                    enemy.debuffManager.AddDebuffRpc(DebuffType.PartDestruction, _stacks);
             }
         }
     }

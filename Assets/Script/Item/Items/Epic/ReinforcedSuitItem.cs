@@ -50,7 +50,7 @@ namespace AshGreen.Item
             if(subSkillCount >= itemData.activeNum)
             {
                 _playerController.buffManager.AddBuffRpc(BuffType.UtteranceZ,
-                _stacks, itemData.baseVal.ToArray(), itemData.stackIncVal.ToArray());
+                _stacks);
                 subSkillCount = 0;
             }
         }

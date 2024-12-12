@@ -13,7 +13,16 @@ MonoBehaviour:
   m_Name: Corruption_Debuff
   m_EditorClassIdentifier: 
   debuffType: 1
+  debuffName: "\uBD80\uD328"
   debuffIcon: {fileID: 2001923654, guid: 0aa003b11cbaae24696192603919d892, type: 3}
+  debuffDescription: "\uC9C0\uC18D\uC2DC\uAC04 \uC885\uB8CC \uC2DC \uB300\uC0C1\uC5D0\uAC8C
+    \uAC78\uB824\uC788\uB294 \uB514\uBC84\uD504 \uC885\uB958 \uD558\uB098\uB2F9 50(50+\uC911\uCCA9\uB2F9*25)\uC758
+    \uACE0\uC815 \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4. \uC9C0\uC18D\uC2DC\uAC04
+    8\uCD08"
   durationType: 0
   duration: 8
   activationCycle: 0
+  baseVal:
+  - 50
+  stackIncVal:
+  - 25

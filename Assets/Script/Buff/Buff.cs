@@ -14,19 +14,15 @@ namespace AshGreen.Buff
         public float remainingDuration;// 남은 지속 시간
         public float currentTimer;// 현재 타이머
         public int currentStacks;// 현재 중첩 수
-        public float[] baseVal;
-        public float[] stackVal;
 
         private GameObject buffTimer = null;
 
         // 버프 생성자
-        public Buff(BuffData data, PlayerController targetPlayer, int stack, float[] baseVal, float[] stackVal)
+        public Buff(BuffData data, PlayerController targetPlayer, int stack)
         {
             buffData = data;
             _targetPlayer = targetPlayer;
             currentStacks = stack;
-            this.baseVal = baseVal;
-            this.stackVal = stackVal;
         }
 
         public void Apply()

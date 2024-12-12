@@ -45,7 +45,7 @@ namespace AshGreen.Item
         private void ApplyBuff()
         {
             _playerController.buffManager.AddBuffRpc(BuffType.Concentration,
-                _stacks, itemData.baseVal.ToArray(), itemData.stackIncVal.ToArray());
+                _stacks);
         }
 
         private void RemoveBuff(float damage)

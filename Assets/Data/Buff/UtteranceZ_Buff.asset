@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: UtteranceZ_Buff
   m_EditorClassIdentifier: 
   buffType: 1
+  buffName: "\uBC1C\uD654Z"
   buffIcon: {fileID: -1164322366, guid: 89c79107e4d52e6458fcbf217ac663e8, type: 3}
+  buffDescription: "\uB2E4\uC74C\uC5D0 \uC0AC\uC6A9\uD558\uB294 \uBA54\uC778 \uC2A4\uD0AC\uC740
+    \uD53C\uD574\uB7C9 50%(50%+\uC911\uCCA9\uB2F9*30%) \uC99D\uAC00\uD569\uB2C8\uB2E4.
+    \uC9C0\uC18D\uC2DC\uAC04 \uBB34\uD55C"
   durationType: 1
   duration: 0
+  baseVal:
+  - 0.5
+  stackIncVal:
+  - 0.3

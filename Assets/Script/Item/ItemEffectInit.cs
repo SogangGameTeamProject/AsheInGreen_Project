@@ -19,7 +19,7 @@ namespace AshGreen.Item
                 _playerController = player;
             _stacks++;
             _playerController.playerUI.AddItemUI(this);
-            Debug.Log(itemData.Description);
+            Debug.Log(itemData.DescriptionTxt(_stacks));
         }
 
         // 아이템 효과 추가
@@ -27,7 +27,7 @@ namespace AshGreen.Item
         {
             _stacks++;
             _playerController.playerUI.UpdateItemUI(this);
-            Debug.Log(itemData.Description);
+            Debug.Log(itemData.DescriptionTxt(_stacks));
         }
 
         // 아이템 효과 제거

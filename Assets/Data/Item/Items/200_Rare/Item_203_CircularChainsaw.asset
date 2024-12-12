@@ -16,9 +16,10 @@ MonoBehaviour:
   type: 1
   itemObj: {fileID: 6709337981346824141, guid: c8e8cb2e1fe16ff4fb86c681262cd3c2, type: 3}
   itemName: "\uC6D0\uD615 \uC804\uAE30\uD1B1"
-  description: "{cooldownTime}\uCD08\uC758 \uCFE8\uD0C0\uC784 \uB9C8\uB2E4 \uCE90\uB9AD\uD130
-    \uC8FC\uBCC0 \uBC18\uACBD\uC744 \uBCA0\uC5B4 {baseVal[0]}(\uC911\uCCA9\uB2F9
-    +{stackIncVal[0]}\uC758 \uD53C\uD574\uB97C \uC90C"
+  description: "10\uCD08\uB9C8\uB2E4 \uCE90\uB9AD\uD130 \uC8FC\uBCC0 \uBC18\uACBD\uC744
+    \uBCA0\uC5B4 100(100+\uC911\uCCA9\uB2F9*50)\uC758 \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+  buffData: {fileID: 0}
+  debuffData: {fileID: 0}
   price: 15
   icon: {fileID: 2049791958, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 1

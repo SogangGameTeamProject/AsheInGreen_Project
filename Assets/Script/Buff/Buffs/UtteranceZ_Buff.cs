@@ -10,7 +10,7 @@ namespace AshGreen.Buff
         {
             // 메인 스킬 데미지 증가량 적용
             player.AddMainSkillDamageConfigServerRpc
-                (buff.baseVal[0] + (buff.stackVal[0] * (buff.currentStacks-1)));
+                (baseVal[0] + (stackIncVal[0] * (buff.currentStacks-1)));
         }
 
         // 버프 업데이트 메서드
@@ -24,7 +24,7 @@ namespace AshGreen.Buff
         {
             // 메인 스킬 데미지 증가량 제거
             player.AddMainSkillDamageConfigServerRpc
-                (-(buff.baseVal[0] + (buff.stackVal[0] * (buff.currentStacks - 1))));
+                (-(baseVal[0] + (stackIncVal[0] * (buff.currentStacks - 1))));
         }
     }
 

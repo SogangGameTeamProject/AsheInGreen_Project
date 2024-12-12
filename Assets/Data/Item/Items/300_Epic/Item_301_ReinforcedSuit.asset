@@ -16,15 +16,14 @@ MonoBehaviour:
   type: 2
   itemObj: {fileID: 6709337981346824141, guid: e3d7df9a45bb2c048b4f70d870341905, type: 3}
   itemName: "\uC678\uACE8\uACA9\uAC15\uD654\uC288\uD2B8"
-  description: "\uBCF4\uC870\uC2A4\uD0AC\uC744 2\uD68C \uC0AC\uC6A9\uD558\uBA74 \uB2E4\uC74C\uC5D0
-    \uC0AC\uC6A9\uD558\uB294 \uBA54\uC778\uC2A4\uD0AC\uC758 \uD53C\uD574\uB7C9\uC774
-    {baseVal[0]}%(\uC911\uCCA9\uB2F9 +{stackIncVal[0]})\uC99D\uAC00"
+  description: "\uBCF4\uC870\uC2A4\uD0AC 2\uD68C \uC0AC\uC6A9\uB9C8\uB2E4 \uBC1C\uD654Z\uB97C
+    \uC5BB\uC2B5\uB2C8\uB2E4."
+  buffData: {fileID: 11400000, guid: d7d0b67afc8d62448a8517703df58e76, type: 2}
+  debuffData: {fileID: 0}
   price: 15
   icon: {fileID: 1251226290, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 0
   cooldownTime: 0
-  cntNum: 2
-  baseVal:
-  - 0.5
-  stackIncVal:
-  - 0.3
+  activeNum: 0
+  baseVal: []
+  stackIncVal: []

@@ -26,13 +26,13 @@ namespace AshGreen.Buff
 
         // 버프 추가 메서드
         [Rpc(SendTo.ClientsAndHost)]
-        public void AddBuffRpc(BuffType buffType, int stack, float[] baseVal, float[] stackVal)
+        public void AddBuffRpc(BuffType buffType, int stack)
         {
             // 버프 딕셔너리에 해당 버프가 없다면 추가
             if (!activeBuffs.ContainsKey(buffType))
             {
                 BuffData buff = buffDatas.FirstOrDefault(x => x.buffType == buffType);
-                activeBuffs[buffType] = new Buff(buff, playerController, stack, baseVal, stackVal);
+                activeBuffs[buffType] = new Buff(buff, playerController, stack);
                 // 버프 적용
                 activeBuffs[buffType].Apply();
             }

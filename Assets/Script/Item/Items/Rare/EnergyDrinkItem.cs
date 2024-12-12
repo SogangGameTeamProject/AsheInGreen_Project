@@ -36,7 +36,7 @@ namespace AshGreen.Item
         private void ApplyBuff(Character.CharacterController controller, float arg2, Character.AttackType type, bool arg4)
         {
             _playerController.buffManager.AddBuffRpc(BuffType.Adrenaline,
-                _stacks, itemData.baseVal.ToArray(), itemData.stackIncVal.ToArray());
+                _stacks);
         }
     }
 }

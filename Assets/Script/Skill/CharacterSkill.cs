@@ -1,6 +1,9 @@
 using AshGreen.DamageObj;
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -15,6 +18,46 @@ namespace AshGreen.Character.Skill
     {
         public string skillName;   // 스킬 이름
         public SkillType skillType;//스킬 타입
+        public string skillDescription; // 스킬 설명
+        //설명을 반환하는 메소드
+        public string DescriptionTxt(int stack)
+        {
+            string returnDeco = skillDescription;
+            FieldInfo[] fields = this.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+            Dictionary<string, string> fieldValues = new Dictionary<string, string>();
+
+            foreach (FieldInfo field in fields)
+            {
+                object value = field.GetValue(this);
+                if (value is IList<float> list)
+                {
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        fieldValues[$"{field.Name}[{i}]"] = list[i].ToString();
+                    }
+                }
+                else
+                {
+                    fieldValues[field.Name] = value?.ToString();
+                }
+            }
+
+            fieldValues["stack"] = stack.ToString();
+
+            // 연산식을 찾기 위한 정규식
+            string operationPattern = @"{([^{}]+)}";
+            Match operationMatch = Regex.Match(returnDeco, operationPattern);
+            while (operationMatch.Success)
+            {
+                string expression = operationMatch.Groups[1].Value;
+                string evaluatedExpression = EvaluateExpression(expression, fieldValues);
+                returnDeco = returnDeco.Replace(operationMatch.Value, evaluatedExpression);
+                operationMatch = operationMatch.NextMatch();
+            }
+
+            return returnDeco;
+        }
+
         public float activeTime;   // 스킬 사용 시간
         public float cooldownTime; // 스킬 쿨타임
         public int maxChageCnt = 1;// 최대 충전 수
@@ -74,6 +117,19 @@ namespace AshGreen.Character.Skill
             holder.state = SkillHolder.SkillState.Idle;
 
             yield return null;
+        }
+
+        private string EvaluateExpression(string expression, Dictionary<string, string> fieldValues)
+        {
+            foreach (var field in fieldValues)
+            {
+                expression = expression.Replace(field.Key, field.Value);
+            }
+
+            // DataTable을 사용하여 수식을 계산
+            var dataTable = new System.Data.DataTable();
+            var result = dataTable.Compute(expression, null);
+            return result.ToString();
         }
     }
 }

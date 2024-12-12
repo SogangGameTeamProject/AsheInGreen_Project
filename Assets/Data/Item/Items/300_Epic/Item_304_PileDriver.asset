@@ -16,9 +16,12 @@ MonoBehaviour:
   type: 2
   itemObj: {fileID: 6709337981346824141, guid: 7718d0888fd34174fbf13264b9966b75, type: 3}
   itemName: "\uD30C\uC77C \uB4DC\uB77C\uC774\uBC84"
-  description: "\uC2A4\uD0AC\uAC00\uC18D +{baseVal[0]}(\uC911\uCCA9\uB2F9 +{stackIncVal[0]}),
-    \uBA54\uC778 \uC2A4\uD0AC\uC744 \uC77C\uC815 \uD69F\uC218 \uC801\uC911 \uC2DC
-    \uC0C1\uCC98 \uBD80\uC5EC"
+  description: "\uC2A4\uD0AC\uAC00\uC18D\uC744 10(10+\uC911\uCCA9\uB2F9*5) \uC5BB\uC2B5\uB2C8\uB2E4.
+    \uBA54\uC778\uC2A4\uD0AC 15\uD68C \uC801\uC911\uB9C8\uB2E4 \uC0C1\uCC98\uB97C
+    \uBD80\uC5EC\uD569\uB2C8\uB2E4. \uC911\uCCA9\uB2F9 \uD69F\uC218\uC870\uAC74\uC774
+    \uC644\uD654\uB429\uB2C8\uB2E4."
+  buffData: {fileID: 0}
+  debuffData: {fileID: 11400000, guid: 4fba81660cd335a4980eeda872d475cb, type: 2}
   price: 15
   icon: {fileID: 401666745, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 0
@@ -29,4 +32,3 @@ MonoBehaviour:
   - 15
   stackIncVal:
   - 5
-  - 0.2

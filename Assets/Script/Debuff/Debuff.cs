@@ -14,19 +14,15 @@ namespace AshGreen.Debuff
         public float currentTimer;// 현재 타이머
         public int currentStacks;// 현재 중첩 수
         public int currentDamage; //
-        public float[] baseVal;
-        public float[] stackVal;
 
         private GameObject debuffTimer = null;
 
         // 버프 생성자
-        public Debuff(DebuffData data, EnemyController targetEnemy, int stack, float[] baseVal, float[] stackVal)
+        public Debuff(DebuffData data, EnemyController targetEnemy, int stack)
         {
             debuffData = data;
             _targetEnemy = targetEnemy;
             currentStacks = stack;
-            this.baseVal = baseVal;
-            this.stackVal = stackVal;
 
             // 디버프 타이머 UI 생성
             debuffTimer = GameObject.Instantiate(_targetEnemy.debuffManager._debuffIconPre,

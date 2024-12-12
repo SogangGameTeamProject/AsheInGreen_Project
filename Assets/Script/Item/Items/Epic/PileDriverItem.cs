@@ -55,7 +55,7 @@ namespace AshGreen.Item
             EnemyController enemy = controller as EnemyController;
             if (enemy)
                 enemy.debuffManager.AddDebuffRpc(DebuffType.Wound,
-                    _stacks, itemData.baseVal.ToArray(), itemData.stackIncVal.ToArray());
+                    _stacks);
         }
     }
 }

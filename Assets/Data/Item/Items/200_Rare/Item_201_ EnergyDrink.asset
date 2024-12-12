@@ -16,13 +16,14 @@ MonoBehaviour:
   type: 1
   itemObj: {fileID: 6709337981346824141, guid: 1063f56b98c10014780dfceeab98fca5, type: 3}
   itemName: "\uC5D0\uB108\uC9C0 \uB4DC\uB9C1\uD06C"
-  description: "\uC774\uB3D9\uC18D\uB3C4, \uC810\uD504\uB825 {baseVal}%(\uC911\uCCA9\uB2F9
-    +{StackIncVal}) \uC99D\uAC00"
+  description: "\uC2A4\uD0AC\uACF5\uACA9 \uC801\uC911\uC2DC \uC544\uB4DC\uB808\uB0A0\uB9B0\uC744
+    \uC5BB\uC2B5\uB2C8\uB2E4."
+  buffData: {fileID: 11400000, guid: f0a5a1d7b5b348842a5085b99ab626aa, type: 2}
+  debuffData: {fileID: 0}
   price: 15
   icon: {fileID: -1352079398, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 0
   cooldownTime: 0
-  baseVal:
-  - 0.1
-  stackIncVal:
-  - 0.05
+  activeNum: 0
+  baseVal: []
+  stackIncVal: []
