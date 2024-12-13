@@ -48,7 +48,7 @@ namespace AshGreen.Character
         //캐릭터 방향 관련
         private CharacterDirection characterDirection = CharacterDirection.Right;
 
-        public CharacterDirection CharacterDirection
+        public virtual CharacterDirection CharacterDirection
         {
             get
             {
@@ -72,7 +72,7 @@ namespace AshGreen.Character
             OnFlip(newValue);
         }
         //방향 전환 매서드
-        private void OnFlip(CharacterDirection newValue)
+        protected virtual void OnFlip(CharacterDirection newValue)
         {
             if (runningCombatStateType == CombatStateType.Death)
                 return;

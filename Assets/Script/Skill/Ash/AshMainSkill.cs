@@ -21,12 +21,13 @@ namespace AshGreen.Character.Skill
 
         public override IEnumerator Charging(SkillHolder holder)
         {
+            holder._caster.SetGaugeObjActiveRpc(true);
             return base.Charging(holder);
         }
 
         public override IEnumerator Use(SkillHolder holder, float chargeTime = 0)
         {
-
+            holder._caster.SetGaugeObjActiveRpc(false);
             //스킬 애니메이션 처리
             if (!animationTrigger.IsNullOrEmpty())
             {
@@ -86,6 +87,7 @@ namespace AshGreen.Character.Skill
         public override IEnumerator End(SkillHolder holder)
         {
             //스킬 종료 처리
+            holder._caster.SetGaugeObjActiveRpc(false);
             holder._caster._movementController.isUnableMove = false;//이동 가능
 
             Rigidbody2D casterRbody = holder._caster.GetComponent<Rigidbody2D>();

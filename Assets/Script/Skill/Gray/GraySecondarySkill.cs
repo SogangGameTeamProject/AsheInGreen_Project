@@ -77,11 +77,6 @@ namespace AshGreen.Character.Skill
                         {
                             Vector2 casterPos = (Vector2)holder._caster.gameObject.transform.position;
                             targetPos = (Vector2)target.gameObject.transform.position;
-                            fireDir = targetPos - casterPos;
-                            if (fireDir.x > 0)
-                                holder._caster.CharacterDirection = CharacterDirection.Right;
-                            else
-                                holder._caster.CharacterDirection = CharacterDirection.Left;
                         }
                         else
                         {
@@ -101,6 +96,12 @@ namespace AshGreen.Character.Skill
             //보조 스킬 내려가기
             else
             {
+                //스킬 애니메이션 처리
+                if (!animationTrigger.IsNullOrEmpty())
+                {
+                    holder._caster.PlayerSkillAni(animationTrigger);
+                }
+
                 holder.isReuse = false;
                 //중력값 조정
                 holder._caster.AddGravityServerRpc(addGravity);

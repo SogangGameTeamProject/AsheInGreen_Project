@@ -102,6 +102,8 @@ namespace AshGreen.Character.Player
            this.GetComponent<Rigidbody2D>().gravityScale = gravity;
         }
 
+        public GameObject _gaugeObj = null;
+
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
@@ -215,6 +217,21 @@ namespace AshGreen.Character.Player
 
             _animator.SetLayerWeight(0, 1);
             _animator.SetLayerWeight(1, 0);
+        }
+
+        //플레이어 표시 방향 전환시 같이 전환
+        protected override void OnFlip(CharacterDirection newValue)
+        {
+            base.OnFlip(newValue);
+
+            _playerSignAnimator.gameObject.transform.localScale = new Vector3((int)newValue, 1, 1);
+        }
+
+        //차치 오브젝트 비/활성화 함수
+        [Rpc(SendTo.ClientsAndHost)]
+        public void SetGaugeObjActiveRpc(bool active)
+        {
+            _gaugeObj.SetActive(active);
         }
     }
 }

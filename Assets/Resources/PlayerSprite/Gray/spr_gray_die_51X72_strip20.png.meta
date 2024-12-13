@@ -1,0 +1,669 @@
+fileFormatVersion: 2
+guid: 2b5027cb33dd43849a5631b3b7db0f9b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1115723961526470334
+    second: spr_gray_die_51X72_strip20_0
+  - first:
+      213: 4257969207462462261
+    second: spr_gray_die_51X72_strip20_1
+  - first:
+      213: -832506186152310324
+    second: spr_gray_die_51X72_strip20_2
+  - first:
+      213: -4433486556700476111
+    second: spr_gray_die_51X72_strip20_3
+  - first:
+      213: 8690080494796466468
+    second: spr_gray_die_51X72_strip20_4
+  - first:
+      213: -7275096607029698595
+    second: spr_gray_die_51X72_strip20_5
+  - first:
+      213: -5989135387187553909
+    second: spr_gray_die_51X72_strip20_6
+  - first:
+      213: -7288088502476711812
+    second: spr_gray_die_51X72_strip20_7
+  - first:
+      213: 8692132285836632809
+    second: spr_gray_die_51X72_strip20_8
+  - first:
+      213: 5993508908856885947
+    second: spr_gray_die_51X72_strip20_9
+  - first:
+      213: 1349026101571741625
+    second: spr_gray_die_51X72_strip20_10
+  - first:
+      213: -9197891453904074188
+    second: spr_gray_die_51X72_strip20_11
+  - first:
+      213: -8405414411862782491
+    second: spr_gray_die_51X72_strip20_12
+  - first:
+      213: -4256011720421842560
+    second: spr_gray_die_51X72_strip20_13
+  - first:
+      213: -1273945488625489092
+    second: spr_gray_die_51X72_strip20_14
+  - first:
+      213: -8561881314231454909
+    second: spr_gray_die_51X72_strip20_15
+  - first:
+      213: -163048425857157688
+    second: spr_gray_die_51X72_strip20_16
+  - first:
+      213: -2579784515889873130
+    second: spr_gray_die_51X72_strip20_17
+  - first:
+      213: 8340303886731405263
+    second: spr_gray_die_51X72_strip20_18
+  - first:
+      213: 598385494052136070
+    second: spr_gray_die_51X72_strip20_19
+  - first:
+      213: 2814688079938500797
+    second: spr_gray_die_51X72_strip20_20
+  - first:
+      213: -970343221055378572
+    second: spr_gray_die_51X72_strip20_21
+  - first:
+      213: -7116258208670123007
+    second: spr_gray_die_51X72_strip20_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb64d2a1809db7f00800000000000000
+      internalID: 1115723961526470334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5330a5b3f68571b30800000000000000
+      internalID: 4257969207462462261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc98315d8085274f0800000000000000
+      internalID: -832506186152310324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_3
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13df56f57771972c0800000000000000
+      internalID: -4433486556700476111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_4
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 429e4e10b2e599870800000000000000
+      internalID: 8690080494796466468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf58575e2aa90b90800000000000000
+      internalID: -7275096607029698595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_6
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89d6fed81152eca0800000000000000
+      internalID: -5989135387187553909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_7
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c785446fe128bda90800000000000000
+      internalID: -7288088502476711812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_8
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e22ff5d248a0a870800000000000000
+      internalID: 8692132285836632809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_9
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb2cd8ef8983d2350800000000000000
+      internalID: 5993508908856885947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_10
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7e9e88714b8b210800000000000000
+      internalID: 1349026101571741625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_11
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a427784768a5080800000000000000
+      internalID: -9197891453904074188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_12
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed48fe4028f95b80800000000000000
+      internalID: -8405414411862782491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_13
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0816b5cb3eb9fe4c0800000000000000
+      internalID: -4256011720421842560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_14
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b2447e359025ee0800000000000000
+      internalID: -1273945488625489092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_15
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343fd28be461e2980800000000000000
+      internalID: -8561881314231454909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_16
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5f89f025cbcbdf0800000000000000
+      internalID: -163048425857157688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_17
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61fb45da6a3c23cd0800000000000000
+      internalID: -2579784515889873130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_18
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc76f673236beb370800000000000000
+      internalID: 8340303886731405263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_19
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 0
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68469bbbf64ed4800800000000000000
+      internalID: 598385494052136070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_gray_die_51X72_strip20_20
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 49
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e66c4c68f9cca41a3c94c652f1889e
+      internalID: -1558248492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 46d7062a3e0995248861930c48ac123f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spr_gray_die_51X72_strip20_0: 1115723961526470334
+      spr_gray_die_51X72_strip20_1: 4257969207462462261
+      spr_gray_die_51X72_strip20_10: 1349026101571741625
+      spr_gray_die_51X72_strip20_11: -9197891453904074188
+      spr_gray_die_51X72_strip20_12: -8405414411862782491
+      spr_gray_die_51X72_strip20_13: -4256011720421842560
+      spr_gray_die_51X72_strip20_14: -1273945488625489092
+      spr_gray_die_51X72_strip20_15: -8561881314231454909
+      spr_gray_die_51X72_strip20_16: -163048425857157688
+      spr_gray_die_51X72_strip20_17: -2579784515889873130
+      spr_gray_die_51X72_strip20_18: 8340303886731405263
+      spr_gray_die_51X72_strip20_19: 598385494052136070
+      spr_gray_die_51X72_strip20_2: -832506186152310324
+      spr_gray_die_51X72_strip20_20: -1558248492
+      spr_gray_die_51X72_strip20_3: -4433486556700476111
+      spr_gray_die_51X72_strip20_4: 8690080494796466468
+      spr_gray_die_51X72_strip20_5: -7275096607029698595
+      spr_gray_die_51X72_strip20_6: -5989135387187553909
+      spr_gray_die_51X72_strip20_7: -7288088502476711812
+      spr_gray_die_51X72_strip20_8: 8692132285836632809
+      spr_gray_die_51X72_strip20_9: 5993508908856885947
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

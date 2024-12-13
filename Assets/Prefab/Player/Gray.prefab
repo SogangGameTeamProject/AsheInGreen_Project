@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 894c28b0da6ea7a4384105ac56f683b1, type: 2}
+    - target: {fileID: 5325209982190128559, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
+      propertyPath: deathEventTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7446970713708843973, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
       propertyPath: m_Sprite
       value: 

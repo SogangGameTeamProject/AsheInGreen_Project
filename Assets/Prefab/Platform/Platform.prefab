@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  destroyDelayTime: 1.5
+  destroyDelayTime: 0.55
   destroyAniParam: IsDeath
 --- !u!1 &781758254173434972
 GameObject:
