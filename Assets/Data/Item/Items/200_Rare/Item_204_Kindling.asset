@@ -19,7 +19,7 @@ MonoBehaviour:
   description: "\uBA54\uC778 \uC2A4\uD0AC \uC801\uC911 \uC2DC \uD654\uC0C1 \uBD80\uC5EC"
   buffData: {fileID: 0}
   debuffData: {fileID: 11400000, guid: 83f2d73f5f25ba647a41a5d9092da616, type: 2}
-  price: 15
+  price: 150
   icon: {fileID: 1034405257, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 0
   cooldownTime: 0

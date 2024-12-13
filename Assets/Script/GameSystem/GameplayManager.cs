@@ -9,6 +9,7 @@ using AshGreen.Character.Player;
 using Unity.VisualScripting;
 using System.Linq;
 using AshGreen.EventBus;
+using AshGreen.UI;
 
 public class GameplayManager : NetworkSingleton<GameplayManager>
 {
@@ -175,8 +176,13 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         //스킬 아이콘 초기화
         CharacterConfig config = playerController.characterConfig;
         hud.playerHud.mainSkillIcon.sprite = config.skills[0].skillIcon;
+        hud.playerHud.mainSkillIcon.gameObject.GetComponent<OpenSkillTooltipPopup>().skil = config.skills[0];
+
         hud.playerHud.secondarySkillIcon.sprite = config.skills[1].skillIcon;
+        hud.playerHud.secondarySkillIcon.gameObject.GetComponent<OpenSkillTooltipPopup>().skil = config.skills[1];
+
         hud.playerHud.specialSkillIcon.sprite = config.skills[2].skillIcon;
+        hud.playerHud.specialSkillIcon.gameObject.GetComponent<OpenSkillTooltipPopup>().skil = config.skills[2];
         hud.playerHud.playerIcon.sprite = config.iconSprite;
 
         //아이템 UI 초기화

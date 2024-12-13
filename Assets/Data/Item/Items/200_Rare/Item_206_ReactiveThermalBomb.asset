@@ -20,7 +20,7 @@ MonoBehaviour:
     \uBD80\uC704\uD30C\uAD34\uB97C \uBD80\uC5EC\uD569\uB2C8\uB2E4."
   buffData: {fileID: 0}
   debuffData: {fileID: 0}
-  price: 15
+  price: 150
   icon: {fileID: 1117589288, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 1
   cooldownTime: 0

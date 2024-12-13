@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 0751d86a09f37e14e930d31015e46fb4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _skillTooltipPopup: {fileID: 1111664610105104745, guid: a4d36a209e2d27042a4429b7fcd735f2, type: 3}
+  - skil: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

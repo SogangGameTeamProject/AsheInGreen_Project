@@ -804,6 +804,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1425999979631600035}
     m_Modifications:
+    - target: {fileID: 740553013832679255, guid: 1c5d1787f99f9724aa59ea414edfb81d, type: 3}
+      propertyPath: _offset.x
+      value: -350
+      objectReference: {fileID: 0}
     - target: {fileID: 1427763127345078904, guid: 1c5d1787f99f9724aa59ea414edfb81d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -916,6 +920,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4856205106446353964, guid: 1c5d1787f99f9724aa59ea414edfb81d, type: 3}
+      propertyPath: _offset.x
+      value: -350
+      objectReference: {fileID: 0}
     - target: {fileID: 5003356313004102879, guid: 1c5d1787f99f9724aa59ea414edfb81d, type: 3}
       propertyPath: m_Name
       value: CharContainerP2
@@ -923,6 +931,10 @@ PrefabInstance:
     - target: {fileID: 5916201119652011372, guid: 1c5d1787f99f9724aa59ea414edfb81d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572806038231686329, guid: 1c5d1787f99f9724aa59ea414edfb81d, type: 3}
+      propertyPath: _offset.x
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 6965040789200397838, guid: 1c5d1787f99f9724aa59ea414edfb81d, type: 3}
       propertyPath: m_Pivot.x

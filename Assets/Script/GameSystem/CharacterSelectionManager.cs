@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using AshGreen.Character;
 using System.Collections.Generic;
+using AshGreen.UI;
 
 /*
 * Singleton to control the changes on the char sprites and the flow of the scene
@@ -231,10 +232,18 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
         //스킬 아이콘 설정
         m_charactersContainers[playerId].mainSkillIcon.sprite =
             charactersData[characterSelected].skills[0].skillIcon;
+        m_charactersContainers[playerId].mainSkillIcon.gameObject.GetComponent<OpenSkillTooltipPopup>().skil
+            = charactersData[characterSelected].skills[0];
+
         m_charactersContainers[playerId].secondarySkillIcon.sprite =
             charactersData[characterSelected].skills[1].skillIcon;
+        m_charactersContainers[playerId].secondarySkillIcon.gameObject.GetComponent<OpenSkillTooltipPopup>().skil
+            = charactersData[characterSelected].skills[1];
+
         m_charactersContainers[playerId].spesialSkillIcon.sprite =
             charactersData[characterSelected].skills[2].skillIcon;
+        m_charactersContainers[playerId].spesialSkillIcon.gameObject.GetComponent<OpenSkillTooltipPopup>().skil
+            = charactersData[characterSelected].skills[2];
 
         //SetCharacterColor(playerId, characterSelected);
     }

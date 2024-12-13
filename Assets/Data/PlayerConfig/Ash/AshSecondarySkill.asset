@@ -33,5 +33,7 @@ MonoBehaviour:
   skillIcon: {fileID: 58631284, guid: 6a7f203aea1788d40b09992cb567b653, type: 3}
   animationTrigger: SecondarySkill
   skillSound: {fileID: 0}
+  buffData: {fileID: 0}
+  debuffData: {fileID: 0}
   dashPower: 200
   energyIncrease: 1

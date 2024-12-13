@@ -20,7 +20,7 @@ MonoBehaviour:
     10(10+\uC911\uCCA9\uB2F9*5) \uC5C5\uC2B5\uB2C8\uB2E4."
   buffData: {fileID: 0}
   debuffData: {fileID: 0}
-  price: 15
+  price: 150
   icon: {fileID: 994848228, guid: cce05d46911c32942aae03fdeb9679dd, type: 3}
   hasCooldown: 0
   cooldownTime: 0

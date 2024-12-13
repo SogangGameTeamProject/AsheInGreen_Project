@@ -601,6 +601,7 @@ GameObject:
   - component: {fileID: 7880597796116572109}
   - component: {fileID: 5708587093877814065}
   - component: {fileID: 7684308333669193825}
+  - component: {fileID: 4856205106446353964}
   m_Layer: 5
   m_Name: SpecialSkillImg
   m_TagString: Untagged
@@ -665,6 +666,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4856205106446353964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317956942301437961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0751d86a09f37e14e930d31015e46fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillTooltipPopup: {fileID: 1111664610105104745, guid: a4d36a209e2d27042a4429b7fcd735f2, type: 3}
+  _offset: {x: 350, y: 75}
+  skil: {fileID: 0}
 --- !u!1 &4642074730055710390
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +767,7 @@ GameObject:
   - component: {fileID: 1641334152589778933}
   - component: {fileID: 8093247027143687216}
   - component: {fileID: 4291759486616633136}
+  - component: {fileID: 6572806038231686329}
   m_Layer: 5
   m_Name: SecondarySkillImg
   m_TagString: Untagged
@@ -815,6 +832,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6572806038231686329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796363047471792505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0751d86a09f37e14e930d31015e46fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillTooltipPopup: {fileID: 1111664610105104745, guid: a4d36a209e2d27042a4429b7fcd735f2, type: 3}
+  _offset: {x: 350, y: 75}
+  skil: {fileID: 0}
 --- !u!1 &5003356313004102879
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,15 +877,15 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1427763127345078904}
   - {fileID: 6965040789200397838}
+  - {fileID: 1427763127345078904}
   - {fileID: 2513388106227304517}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -325.3186, y: 0}
-  m_SizeDelta: {x: 73, y: 900}
+  m_SizeDelta: {x: 725, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1062065072651602175
 CanvasRenderer:
@@ -1057,6 +1089,7 @@ GameObject:
   - component: {fileID: 2959800479969181410}
   - component: {fileID: 6845426788695503333}
   - component: {fileID: 9193394097515986631}
+  - component: {fileID: 740553013832679255}
   m_Layer: 5
   m_Name: MainSkillImg
   m_TagString: Untagged
@@ -1121,6 +1154,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &740553013832679255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438205427719574444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0751d86a09f37e14e930d31015e46fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillTooltipPopup: {fileID: 1111664610105104745, guid: a4d36a209e2d27042a4429b7fcd735f2, type: 3}
+  _offset: {x: 350, y: 75}
+  skil: {fileID: 0}
 --- !u!1 &5916201119652011372
 GameObject:
   m_ObjectHideFlags: 0

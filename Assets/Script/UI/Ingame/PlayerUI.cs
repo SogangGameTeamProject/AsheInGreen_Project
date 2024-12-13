@@ -112,7 +112,7 @@ public class PlayerUI : MonoBehaviour
         if (coolTime > 0f)
         {
             timer.SetActive(true);
-            timeTxt.text = Mathf.Ceil(coolTime).ToString();
+            timeTxt.text = coolTime.ToString("F1");
         }
         else
         {

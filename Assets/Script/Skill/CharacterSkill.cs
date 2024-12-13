@@ -1,4 +1,6 @@
+using AshGreen.Buff;
 using AshGreen.DamageObj;
+using AshGreen.Debuff;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -84,6 +86,9 @@ namespace AshGreen.Character.Skill
         public Sprite skillIcon;   // 스킬 아이콘
         public string animationTrigger; // 스킬 발동 시 애니메이션 트리거
         public AudioClip skillSound;    // 스킬 발동 소리
+
+        public BuffData buffData; // 버프 데이터
+        public DebuffData debuffData; // 디버프 데이터
 
         //스킬 차징
         public virtual IEnumerator Charging(SkillHolder holder)

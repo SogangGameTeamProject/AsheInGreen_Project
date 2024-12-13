@@ -38,8 +38,6 @@ namespace AshGreen.UI
             itemData = data;
             itemNameTxt.text = itemData.itemName;
             itemCoolTimeTxt.text = itemData.cooldownTime > 0 ? itemData.cooldownTime.ToString() : "없음";
-            int stc = stacks > 0 ? stacks : 1;
-            Debug.Log(stc);
             itemDecoTxt.text = itemData.DescriptionTxt(stacks > 0 ? stacks : 1);
 
             if(itemData.buffData != null)
