@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  destroyDelayTime: 0
+  destroyDelayTime: 1.5
+  destroyAniParam: IsDeath
 --- !u!1 &781758254173434972
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  hurtAniParam: IsHurt
 --- !u!1 &1476244167206806401
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2299830508
+  GlobalObjectIdHash: 6400000
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1

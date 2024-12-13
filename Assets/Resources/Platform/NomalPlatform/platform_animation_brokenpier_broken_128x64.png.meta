@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: dcf79d08e3f19ee4d9c8a09ce47ec1f0
+guid: dee6ec8848471c74daecc1dad443d122
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8897412628083913832
-    second: gal_fly_256x32_0
+      213: 2289740984680223601
+    second: platform_animation_brokenpier_broken_128x64_0
   - first:
-      213: 991856060916723701
-    second: gal_fly_256x32_1
+      213: -5583406716653558893
+    second: platform_animation_brokenpier_broken_128x64_1
   - first:
-      213: -6823619450255378291
-    second: gal_fly_256x32_2
+      213: -7778757725304556679
+    second: platform_animation_brokenpier_broken_128x64_2
   - first:
-      213: 5780473598229829072
-    second: gal_fly_256x32_3
+      213: -613770841629496325
+    second: platform_animation_brokenpier_broken_128x64_3
+  - first:
+      213: -2672076216080384565
+    second: platform_animation_brokenpier_broken_128x64_4
+  - first:
+      213: 5105543696556668182
+    second: platform_animation_brokenpier_broken_128x64_5
+  - first:
+      213: -98736106722569094
+    second: platform_animation_brokenpier_broken_128x64_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gal_fly_256x32_0
+      name: platform_animation_brokenpier_broken_128x64_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 64
-        height: 20
+        y: 128
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,42 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89bcbf2fa5a068480800000000000000
-      internalID: -8897412628083913832
+      spriteID: 17394834b4bc6cf10800000000000000
+      internalID: 2289740984680223601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gal_fly_256x32_1
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 3
-        width: 63
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ff624315d7c3cd00800000000000000
-      internalID: 991856060916723701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gal_fly_256x32_2
+      name: platform_animation_brokenpier_broken_128x64_1
       rect:
         serializedVersion: 2
         x: 128
-        y: 2
-        width: 64
-        height: 20
+        y: 128
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d88f4195342ad41a0800000000000000
-      internalID: -6823619450255378291
+      spriteID: 393a5516c21c382b0800000000000000
+      internalID: -5583406716653558893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gal_fly_256x32_3
+      name: platform_animation_brokenpier_broken_128x64_2
       rect:
         serializedVersion: 2
-        x: 194
-        y: 2
-        width: 62
-        height: 23
+        x: 256
+        y: 128
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +177,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0d553008c1e583050800000000000000
-      internalID: 5780473598229829072
+      spriteID: 973756dff0d4c0490800000000000000
+      internalID: -7778757725304556679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_broken_128x64_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb6e23eba27b77f0800000000000000
+      internalID: -613770841629496325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_broken_128x64_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd32c7b6d0eaead0800000000000000
+      internalID: -2672076216080384565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_broken_128x64_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615be7211f88ad640800000000000000
+      internalID: 5105543696556668182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_broken_128x64_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74db48b80831aef0800000000000000
+      internalID: -98736106722569094
       vertices: []
       indices: 
       edges: []
@@ -200,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aba2e17c952dc8c47a6b7648e8a786be
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +285,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gal_fly_256x32_0: -8897412628083913832
-      gal_fly_256x32_1: 991856060916723701
-      gal_fly_256x32_2: -6823619450255378291
-      gal_fly_256x32_3: 5780473598229829072
+      platform_animation_brokenpier_broken_128x64_0: 2289740984680223601
+      platform_animation_brokenpier_broken_128x64_1: -5583406716653558893
+      platform_animation_brokenpier_broken_128x64_2: -7778757725304556679
+      platform_animation_brokenpier_broken_128x64_3: -613770841629496325
+      platform_animation_brokenpier_broken_128x64_4: -2672076216080384565
+      platform_animation_brokenpier_broken_128x64_5: 5105543696556668182
+      platform_animation_brokenpier_broken_128x64_6: -98736106722569094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

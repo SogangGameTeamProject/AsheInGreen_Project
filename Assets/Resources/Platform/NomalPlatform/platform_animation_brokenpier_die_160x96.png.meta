@@ -1,0 +1,2241 @@
+fileFormatVersion: 2
+guid: d3dc4aa604c684945b0b2ecb49b95c9b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4959720779595827219
+    second: platform_animation_brokenpier_die_160x96_0
+  - first:
+      213: 2396534540254366290
+    second: platform_animation_brokenpier_die_160x96_1
+  - first:
+      213: 8728417364759511628
+    second: platform_animation_brokenpier_die_160x96_2
+  - first:
+      213: 7593892094094677318
+    second: platform_animation_brokenpier_die_160x96_3
+  - first:
+      213: -7745183091771786308
+    second: platform_animation_brokenpier_die_160x96_4
+  - first:
+      213: 1973887093827319222
+    second: platform_animation_brokenpier_die_160x96_5
+  - first:
+      213: -2600112798821252170
+    second: platform_animation_brokenpier_die_160x96_6
+  - first:
+      213: -331270216499049076
+    second: platform_animation_brokenpier_die_160x96_7
+  - first:
+      213: -6209008995912085224
+    second: platform_animation_brokenpier_die_160x96_8
+  - first:
+      213: 8116577838257107628
+    second: platform_animation_brokenpier_die_160x96_9
+  - first:
+      213: 1644247326415398777
+    second: platform_animation_brokenpier_die_160x96_10
+  - first:
+      213: -5116180224787998732
+    second: platform_animation_brokenpier_die_160x96_11
+  - first:
+      213: -7984806877245429604
+    second: platform_animation_brokenpier_die_160x96_12
+  - first:
+      213: -7829625130178237940
+    second: platform_animation_brokenpier_die_160x96_13
+  - first:
+      213: 1249370143616003900
+    second: platform_animation_brokenpier_die_160x96_14
+  - first:
+      213: -9210399135107573397
+    second: platform_animation_brokenpier_die_160x96_15
+  - first:
+      213: 8461318416621988018
+    second: platform_animation_brokenpier_die_160x96_16
+  - first:
+      213: -4042746974153189600
+    second: platform_animation_brokenpier_die_160x96_17
+  - first:
+      213: 6332010344877727434
+    second: platform_animation_brokenpier_die_160x96_18
+  - first:
+      213: 2055968868442672362
+    second: platform_animation_brokenpier_die_160x96_19
+  - first:
+      213: -1280760278354321552
+    second: platform_animation_brokenpier_die_160x96_20
+  - first:
+      213: 590684180114847014
+    second: platform_animation_brokenpier_die_160x96_21
+  - first:
+      213: -5748851399150338518
+    second: platform_animation_brokenpier_die_160x96_22
+  - first:
+      213: 8666950615216421041
+    second: platform_animation_brokenpier_die_160x96_23
+  - first:
+      213: 3545859523551612237
+    second: platform_animation_brokenpier_die_160x96_24
+  - first:
+      213: -7928526728989815160
+    second: platform_animation_brokenpier_die_160x96_25
+  - first:
+      213: 356813199836566654
+    second: platform_animation_brokenpier_die_160x96_26
+  - first:
+      213: 2963654911997971710
+    second: platform_animation_brokenpier_die_160x96_27
+  - first:
+      213: -8995402894019698018
+    second: platform_animation_brokenpier_die_160x96_28
+  - first:
+      213: 8724557094799526177
+    second: platform_animation_brokenpier_die_160x96_29
+  - first:
+      213: 940884932543348449
+    second: platform_animation_brokenpier_die_160x96_30
+  - first:
+      213: -3373394073169648411
+    second: platform_animation_brokenpier_die_160x96_31
+  - first:
+      213: 1705333897864333735
+    second: platform_animation_brokenpier_die_160x96_32
+  - first:
+      213: 8029724706661890882
+    second: platform_animation_brokenpier_die_160x96_33
+  - first:
+      213: -3234828958788371282
+    second: platform_animation_brokenpier_die_160x96_34
+  - first:
+      213: -4619235145655784483
+    second: platform_animation_brokenpier_die_160x96_35
+  - first:
+      213: -8220019192534966531
+    second: platform_animation_brokenpier_die_160x96_36
+  - first:
+      213: 2495420944540231965
+    second: platform_animation_brokenpier_die_160x96_37
+  - first:
+      213: -7471816977545468582
+    second: platform_animation_brokenpier_die_160x96_38
+  - first:
+      213: 9028926222289121333
+    second: platform_animation_brokenpier_die_160x96_39
+  - first:
+      213: -2482434315445483118
+    second: platform_animation_brokenpier_die_160x96_40
+  - first:
+      213: -7076374775734561395
+    second: platform_animation_brokenpier_die_160x96_41
+  - first:
+      213: 8979706456679760099
+    second: platform_animation_brokenpier_die_160x96_42
+  - first:
+      213: 468825731806275096
+    second: platform_animation_brokenpier_die_160x96_43
+  - first:
+      213: 4598969737137971040
+    second: platform_animation_brokenpier_die_160x96_44
+  - first:
+      213: 7237858556399874059
+    second: platform_animation_brokenpier_die_160x96_45
+  - first:
+      213: -2185197601615360954
+    second: platform_animation_brokenpier_die_160x96_46
+  - first:
+      213: 3255519985084825979
+    second: platform_animation_brokenpier_die_160x96_47
+  - first:
+      213: 3850233282107235376
+    second: platform_animation_brokenpier_die_160x96_48
+  - first:
+      213: 879705112515282224
+    second: platform_animation_brokenpier_die_160x96_49
+  - first:
+      213: 4193320461420678361
+    second: platform_animation_brokenpier_die_160x96_50
+  - first:
+      213: -6221379330448801717
+    second: platform_animation_brokenpier_die_160x96_51
+  - first:
+      213: -8616450543457273156
+    second: platform_animation_brokenpier_die_160x96_52
+  - first:
+      213: 4408299693345569101
+    second: platform_animation_brokenpier_die_160x96_53
+  - first:
+      213: 8743895877473207641
+    second: platform_animation_brokenpier_die_160x96_54
+  - first:
+      213: 4442511590374935519
+    second: platform_animation_brokenpier_die_160x96_55
+  - first:
+      213: -2651538294284941975
+    second: platform_animation_brokenpier_die_160x96_56
+  - first:
+      213: -2185458203775526324
+    second: platform_animation_brokenpier_die_160x96_57
+  - first:
+      213: -7826332887228336279
+    second: platform_animation_brokenpier_die_160x96_58
+  - first:
+      213: -1876327708502419384
+    second: platform_animation_brokenpier_die_160x96_59
+  - first:
+      213: -7283150356260668131
+    second: platform_animation_brokenpier_die_160x96_60
+  - first:
+      213: 4292594095664290360
+    second: platform_animation_brokenpier_die_160x96_61
+  - first:
+      213: 8948462459333427216
+    second: platform_animation_brokenpier_die_160x96_62
+  - first:
+      213: 1539204965533708107
+    second: platform_animation_brokenpier_die_160x96_63
+  - first:
+      213: -4696781839588043470
+    second: platform_animation_brokenpier_die_160x96_64
+  - first:
+      213: 3652692600986627326
+    second: platform_animation_brokenpier_die_160x96_65
+  - first:
+      213: -490310867283968875
+    second: platform_animation_brokenpier_die_160x96_66
+  - first:
+      213: -2886805919241706385
+    second: platform_animation_brokenpier_die_160x96_67
+  - first:
+      213: -742125693668733588
+    second: platform_animation_brokenpier_die_160x96_68
+  - first:
+      213: 7436905523668447946
+    second: platform_animation_brokenpier_die_160x96_69
+  - first:
+      213: 8359851503912008693
+    second: platform_animation_brokenpier_die_160x96_70
+  - first:
+      213: -2220966704864954494
+    second: platform_animation_brokenpier_die_160x96_71
+  - first:
+      213: -3828800312239632315
+    second: platform_animation_brokenpier_die_160x96_72
+  - first:
+      213: 5356291864741354680
+    second: platform_animation_brokenpier_die_160x96_73
+  - first:
+      213: 6333246145177927148
+    second: platform_animation_brokenpier_die_160x96_74
+  - first:
+      213: 812611851608862228
+    second: platform_animation_brokenpier_die_160x96_75
+  - first:
+      213: -3477453182946214575
+    second: platform_animation_brokenpier_die_160x96_76
+  - first:
+      213: 135273774383590248
+    second: platform_animation_brokenpier_die_160x96_77
+  - first:
+      213: -7010516713935878037
+    second: platform_animation_brokenpier_die_160x96_78
+  - first:
+      213: -3853753150834135843
+    second: platform_animation_brokenpier_die_160x96_79
+  - first:
+      213: 2213189225096390612
+    second: platform_animation_brokenpier_die_160x96_80
+  - first:
+      213: 89010339973647449
+    second: platform_animation_brokenpier_die_160x96_81
+  - first:
+      213: -8215917109969789173
+    second: platform_animation_brokenpier_die_160x96_82
+  - first:
+      213: 8758181615241367701
+    second: platform_animation_brokenpier_die_160x96_83
+  - first:
+      213: 404562610849610453
+    second: platform_animation_brokenpier_die_160x96_84
+  - first:
+      213: -617642801574449362
+    second: platform_animation_brokenpier_die_160x96_85
+  - first:
+      213: 7910707963718523528
+    second: platform_animation_brokenpier_die_160x96_86
+  - first:
+      213: 5237427646043408994
+    second: platform_animation_brokenpier_die_160x96_87
+  - first:
+      213: 5805174851421705580
+    second: platform_animation_brokenpier_die_160x96_88
+  - first:
+      213: -6373318804582775314
+    second: platform_animation_brokenpier_die_160x96_89
+  - first:
+      213: -7681636285410856250
+    second: platform_animation_brokenpier_die_160x96_90
+  - first:
+      213: -1487626213153605752
+    second: platform_animation_brokenpier_die_160x96_91
+  - first:
+      213: 2104782569046656389
+    second: platform_animation_brokenpier_die_160x96_92
+  - first:
+      213: 8172712184258728110
+    second: platform_animation_brokenpier_die_160x96_93
+  - first:
+      213: 2468891527027314302
+    second: platform_animation_brokenpier_die_160x96_94
+  - first:
+      213: 3208901840171537546
+    second: platform_animation_brokenpier_die_160x96_95
+  - first:
+      213: -8918530733655833365
+    second: platform_animation_brokenpier_die_160x96_96
+  - first:
+      213: 5113172316136440020
+    second: platform_animation_brokenpier_die_160x96_97
+  - first:
+      213: -6208443215000446028
+    second: platform_animation_brokenpier_die_160x96_98
+  - first:
+      213: 3780994797564089345
+    second: platform_animation_brokenpier_die_160x96_99
+  - first:
+      213: -2575338534789636650
+    second: platform_animation_brokenpier_die_160x96_100
+  - first:
+      213: -5427073981155601590
+    second: platform_animation_brokenpier_die_160x96_101
+  - first:
+      213: -2673407768401798115
+    second: platform_animation_brokenpier_die_160x96_102
+  - first:
+      213: -4257695626317047794
+    second: platform_animation_brokenpier_die_160x96_103
+  - first:
+      213: 296166662123014689
+    second: platform_animation_brokenpier_die_160x96_104
+  - first:
+      213: 3682238399395119036
+    second: platform_animation_brokenpier_die_160x96_105
+  - first:
+      213: -3927867154848540883
+    second: platform_animation_brokenpier_die_160x96_106
+  - first:
+      213: 3117264846135622460
+    second: platform_animation_brokenpier_die_160x96_107
+  - first:
+      213: 6539857933275664854
+    second: platform_animation_brokenpier_die_160x96_108
+  - first:
+      213: 5323833018686630486
+    second: platform_animation_brokenpier_die_160x96_109
+  - first:
+      213: -5019512483755396291
+    second: platform_animation_brokenpier_die_160x96_110
+  - first:
+      213: -6599497903316724679
+    second: platform_animation_brokenpier_die_160x96_111
+  - first:
+      213: -7606277439000022074
+    second: platform_animation_brokenpier_die_160x96_112
+  - first:
+      213: 2666202368261906547
+    second: platform_animation_brokenpier_die_160x96_113
+  - first:
+      213: -2677095479648798273
+    second: platform_animation_brokenpier_die_160x96_114
+  - first:
+      213: -6264570108330570370
+    second: platform_animation_brokenpier_die_160x96_115
+  - first:
+      213: -8346752549275487460
+    second: platform_animation_brokenpier_die_160x96_116
+  - first:
+      213: -1906928211259718920
+    second: platform_animation_brokenpier_die_160x96_117
+  - first:
+      213: 8709419295839023883
+    second: platform_animation_brokenpier_die_160x96_118
+  - first:
+      213: -57915448973616746
+    second: platform_animation_brokenpier_die_160x96_119
+  - first:
+      213: 3632326599353116044
+    second: platform_animation_brokenpier_die_160x96_120
+  - first:
+      213: 1334056045603019015
+    second: platform_animation_brokenpier_die_160x96_121
+  - first:
+      213: 323698306114922167
+    second: platform_animation_brokenpier_die_160x96_122
+  - first:
+      213: -5201718869379981518
+    second: platform_animation_brokenpier_die_160x96_123
+  - first:
+      213: 3204597018420892581
+    second: platform_animation_brokenpier_die_160x96_124
+  - first:
+      213: 451648888796505353
+    second: platform_animation_brokenpier_die_160x96_125
+  - first:
+      213: 8077767588524527574
+    second: platform_animation_brokenpier_die_160x96_126
+  - first:
+      213: -1423258218118393216
+    second: platform_animation_brokenpier_die_160x96_127
+  - first:
+      213: 7288197968026848439
+    second: platform_animation_brokenpier_die_160x96_128
+  - first:
+      213: 8398926513055050999
+    second: platform_animation_brokenpier_die_160x96_129
+  - first:
+      213: 3041936790665771663
+    second: platform_animation_brokenpier_die_160x96_130
+  - first:
+      213: -4947738574107833216
+    second: platform_animation_brokenpier_die_160x96_131
+  - first:
+      213: 6401410686326152481
+    second: platform_animation_brokenpier_die_160x96_132
+  - first:
+      213: -6007698302464482889
+    second: platform_animation_brokenpier_die_160x96_133
+  - first:
+      213: -8708160789128743881
+    second: platform_animation_brokenpier_die_160x96_134
+  - first:
+      213: 2851484327595304518
+    second: platform_animation_brokenpier_die_160x96_135
+  - first:
+      213: 4240422372681876131
+    second: platform_animation_brokenpier_die_160x96_136
+  - first:
+      213: -8493171865190238790
+    second: platform_animation_brokenpier_die_160x96_137
+  - first:
+      213: -8275816283416172300
+    second: platform_animation_brokenpier_die_160x96_138
+  - first:
+      213: -1864894725963780279
+    second: platform_animation_brokenpier_die_160x96_139
+  - first:
+      213: -6399695693202160098
+    second: platform_animation_brokenpier_die_160x96_140
+  - first:
+      213: 5802087557905306765
+    second: platform_animation_brokenpier_die_160x96_141
+  - first:
+      213: 3360714966503991120
+    second: platform_animation_brokenpier_die_160x96_142
+  - first:
+      213: 297197445780955275
+    second: platform_animation_brokenpier_die_160x96_143
+  - first:
+      213: 5482517694405778537
+    second: platform_animation_brokenpier_die_160x96_144
+  - first:
+      213: 8696858287113851999
+    second: platform_animation_brokenpier_die_160x96_145
+  - first:
+      213: 4846247213258689655
+    second: platform_animation_brokenpier_die_160x96_146
+  - first:
+      213: -87794309951908502
+    second: platform_animation_brokenpier_die_160x96_147
+  - first:
+      213: 5984395090889607506
+    second: platform_animation_brokenpier_die_160x96_148
+  - first:
+      213: 2587398488656799143
+    second: platform_animation_brokenpier_die_160x96_149
+  - first:
+      213: 7632819943215875599
+    second: platform_animation_brokenpier_die_160x96_150
+  - first:
+      213: -1695368008801125837
+    second: platform_animation_brokenpier_die_160x96_151
+  - first:
+      213: 4579802766470890351
+    second: platform_animation_brokenpier_die_160x96_152
+  - first:
+      213: -1815246775659178906
+    second: platform_animation_brokenpier_die_160x96_153
+  - first:
+      213: -9209322945712455902
+    second: platform_animation_brokenpier_die_160x96_154
+  - first:
+      213: 1114192010597376239
+    second: platform_animation_brokenpier_die_160x96_155
+  - first:
+      213: -850197699000900314
+    second: platform_animation_brokenpier_die_160x96_156
+  - first:
+      213: -4320186700472824326
+    second: platform_animation_brokenpier_die_160x96_157
+  - first:
+      213: -384401477606423189
+    second: platform_animation_brokenpier_die_160x96_158
+  - first:
+      213: 5601155397198739199
+    second: platform_animation_brokenpier_die_160x96_159
+  - first:
+      213: -8709783837443538056
+    second: platform_animation_brokenpier_die_160x96_160
+  - first:
+      213: -7428403068397434922
+    second: platform_animation_brokenpier_die_160x96_161
+  - first:
+      213: 1495450714963459816
+    second: platform_animation_brokenpier_die_160x96_162
+  - first:
+      213: -1127948780617710137
+    second: platform_animation_brokenpier_die_160x96_163
+  - first:
+      213: -3746575203568497563
+    second: platform_animation_brokenpier_die_160x96_164
+  - first:
+      213: -7249120921617412462
+    second: platform_animation_brokenpier_die_160x96_165
+  - first:
+      213: 1237546553316106033
+    second: platform_animation_brokenpier_die_160x96_166
+  - first:
+      213: 8569417709372082325
+    second: platform_animation_brokenpier_die_160x96_167
+  - first:
+      213: -3231423407030809297
+    second: platform_animation_brokenpier_die_160x96_168
+  - first:
+      213: -4901087110366635671
+    second: platform_animation_brokenpier_die_160x96_169
+  - first:
+      213: 7071197483797993947
+    second: platform_animation_brokenpier_die_160x96_170
+  - first:
+      213: -1426244263086213683
+    second: platform_animation_brokenpier_die_160x96_171
+  - first:
+      213: -7805650239867133830
+    second: platform_animation_brokenpier_die_160x96_172
+  - first:
+      213: -1309792049869013715
+    second: platform_animation_brokenpier_die_160x96_173
+  - first:
+      213: 4346677142822284054
+    second: platform_animation_brokenpier_die_160x96_174
+  - first:
+      213: -9093089778501460605
+    second: platform_animation_brokenpier_die_160x96_175
+  - first:
+      213: 2292983862071386234
+    second: platform_animation_brokenpier_die_160x96_176
+  - first:
+      213: 3016119814066812244
+    second: platform_animation_brokenpier_die_160x96_177
+  - first:
+      213: 4316212245837002290
+    second: platform_animation_brokenpier_die_160x96_178
+  - first:
+      213: 6480006990215948301
+    second: platform_animation_brokenpier_die_160x96_179
+  - first:
+      213: 3331017973030192751
+    second: platform_animation_brokenpier_die_160x96_180
+  - first:
+      213: 7634558765465859856
+    second: platform_animation_brokenpier_die_160x96_181
+  - first:
+      213: 3721167976572147973
+    second: platform_animation_brokenpier_die_160x96_182
+  - first:
+      213: 5895891375533822480
+    second: platform_animation_brokenpier_die_160x96_183
+  - first:
+      213: -2287832072249704902
+    second: platform_animation_brokenpier_die_160x96_184
+  - first:
+      213: 3046443111101280560
+    second: platform_animation_brokenpier_die_160x96_185
+  - first:
+      213: 7169453083278025936
+    second: platform_animation_brokenpier_die_160x96_186
+  - first:
+      213: -8784492150648407811
+    second: platform_animation_brokenpier_die_160x96_187
+  - first:
+      213: 7019215755051024143
+    second: platform_animation_brokenpier_die_160x96_188
+  - first:
+      213: 2249453274947766623
+    second: platform_animation_brokenpier_die_160x96_189
+  - first:
+      213: 4756715318126996551
+    second: platform_animation_brokenpier_die_160x96_190
+  - first:
+      213: -432396603317020336
+    second: platform_animation_brokenpier_die_160x96_191
+  - first:
+      213: 7197324573270512038
+    second: platform_animation_brokenpier_die_160x96_192
+  - first:
+      213: 270168900527919666
+    second: platform_animation_brokenpier_die_160x96_193
+  - first:
+      213: 1304025658159441650
+    second: platform_animation_brokenpier_die_160x96_194
+  - first:
+      213: -2540311936953438299
+    second: platform_animation_brokenpier_die_160x96_195
+  - first:
+      213: -1508886024474292381
+    second: platform_animation_brokenpier_die_160x96_196
+  - first:
+      213: -6425622112467505471
+    second: platform_animation_brokenpier_die_160x96_197
+  - first:
+      213: -1821606808456697682
+    second: platform_animation_brokenpier_die_160x96_198
+  - first:
+      213: -8499473285843125162
+    second: platform_animation_brokenpier_die_160x96_199
+  - first:
+      213: 2044930030134934084
+    second: platform_animation_brokenpier_die_160x96_200
+  - first:
+      213: 5076115972296919729
+    second: platform_animation_brokenpier_die_160x96_201
+  - first:
+      213: 3694060366552558511
+    second: platform_animation_brokenpier_die_160x96_202
+  - first:
+      213: -6940658137907499183
+    second: platform_animation_brokenpier_die_160x96_203
+  - first:
+      213: 2791272802981685581
+    second: platform_animation_brokenpier_die_160x96_204
+  - first:
+      213: 4589367136955058284
+    second: platform_animation_brokenpier_die_160x96_205
+  - first:
+      213: -6940718454488803187
+    second: platform_animation_brokenpier_die_160x96_206
+  - first:
+      213: 5504912016830928613
+    second: platform_animation_brokenpier_die_160x96_207
+  - first:
+      213: -7992655358201745788
+    second: platform_animation_brokenpier_die_160x96_208
+  - first:
+      213: -7122336055708653637
+    second: platform_animation_brokenpier_die_160x96_209
+  - first:
+      213: -6441967277928086491
+    second: platform_animation_brokenpier_die_160x96_210
+  - first:
+      213: -6554458520899793378
+    second: platform_animation_brokenpier_die_160x96_211
+  - first:
+      213: -6498936165028482443
+    second: platform_animation_brokenpier_die_160x96_212
+  - first:
+      213: -442173531069879823
+    second: platform_animation_brokenpier_die_160x96_213
+  - first:
+      213: -222613470046591261
+    second: platform_animation_brokenpier_die_160x96_214
+  - first:
+      213: 2221518598614757206
+    second: platform_animation_brokenpier_die_160x96_215
+  - first:
+      213: 6862386449763272620
+    second: platform_animation_brokenpier_die_160x96_216
+  - first:
+      213: -7839499727789742236
+    second: platform_animation_brokenpier_die_160x96_217
+  - first:
+      213: 1904439334961287391
+    second: platform_animation_brokenpier_die_160x96_218
+  - first:
+      213: 6016492627344847400
+    second: platform_animation_brokenpier_die_160x96_219
+  - first:
+      213: 861878240059024952
+    second: platform_animation_brokenpier_die_160x96_220
+  - first:
+      213: -8408801170229653251
+    second: platform_animation_brokenpier_die_160x96_221
+  - first:
+      213: -1548965366174258171
+    second: platform_animation_brokenpier_die_160x96_222
+  - first:
+      213: -7088615330376233725
+    second: platform_animation_brokenpier_die_160x96_223
+  - first:
+      213: -5321506152050627518
+    second: platform_animation_brokenpier_die_160x96_224
+  - first:
+      213: 3418568913265930589
+    second: platform_animation_brokenpier_die_160x96_225
+  - first:
+      213: -7398411386057748246
+    second: platform_animation_brokenpier_die_160x96_226
+  - first:
+      213: -6615033711213052465
+    second: platform_animation_brokenpier_die_160x96_227
+  - first:
+      213: 8994260110787844940
+    second: platform_animation_brokenpier_die_160x96_228
+  - first:
+      213: -3577936035197651864
+    second: platform_animation_brokenpier_die_160x96_229
+  - first:
+      213: 164887596882203011
+    second: platform_animation_brokenpier_die_160x96_230
+  - first:
+      213: -455147517647847419
+    second: platform_animation_brokenpier_die_160x96_231
+  - first:
+      213: -1880322573351567022
+    second: platform_animation_brokenpier_die_160x96_232
+  - first:
+      213: 785161467829175632
+    second: platform_animation_brokenpier_die_160x96_233
+  - first:
+      213: 2133617893788067082
+    second: platform_animation_brokenpier_die_160x96_234
+  - first:
+      213: 1195945915727887329
+    second: platform_animation_brokenpier_die_160x96_235
+  - first:
+      213: 2937318809561205934
+    second: platform_animation_brokenpier_die_160x96_236
+  - first:
+      213: -6563435993117707321
+    second: platform_animation_brokenpier_die_160x96_237
+  - first:
+      213: -8415065507131351305
+    second: platform_animation_brokenpier_die_160x96_238
+  - first:
+      213: -3282019635065210704
+    second: platform_animation_brokenpier_die_160x96_239
+  - first:
+      213: -8234729234475751265
+    second: platform_animation_brokenpier_die_160x96_240
+  - first:
+      213: -5304083541025164963
+    second: platform_animation_brokenpier_die_160x96_241
+  - first:
+      213: 2640193600766135578
+    second: platform_animation_brokenpier_die_160x96_242
+  - first:
+      213: 4761477889126883701
+    second: platform_animation_brokenpier_die_160x96_243
+  - first:
+      213: -5520030525256490929
+    second: platform_animation_brokenpier_die_160x96_244
+  - first:
+      213: 8889120435370122175
+    second: platform_animation_brokenpier_die_160x96_245
+  - first:
+      213: 7112751929380089273
+    second: platform_animation_brokenpier_die_160x96_246
+  - first:
+      213: -782790624113763526
+    second: platform_animation_brokenpier_die_160x96_247
+  - first:
+      213: 8193881421364771273
+    second: platform_animation_brokenpier_die_160x96_248
+  - first:
+      213: 6817710048423266424
+    second: platform_animation_brokenpier_die_160x96_249
+  - first:
+      213: -1992319200521090145
+    second: platform_animation_brokenpier_die_160x96_250
+  - first:
+      213: 5621641769739179087
+    second: platform_animation_brokenpier_die_160x96_251
+  - first:
+      213: 5198910404945615417
+    second: platform_animation_brokenpier_die_160x96_252
+  - first:
+      213: -2369529475047295636
+    second: platform_animation_brokenpier_die_160x96_253
+  - first:
+      213: 4866988474441865196
+    second: platform_animation_brokenpier_die_160x96_254
+  - first:
+      213: -2745533709699038390
+    second: platform_animation_brokenpier_die_160x96_255
+  - first:
+      213: 9009362676174621485
+    second: platform_animation_brokenpier_die_160x96_256
+  - first:
+      213: -3127847571592882950
+    second: platform_animation_brokenpier_die_160x96_257
+  - first:
+      213: -6335554386107291693
+    second: platform_animation_brokenpier_die_160x96_258
+  - first:
+      213: -7950354619203672433
+    second: platform_animation_brokenpier_die_160x96_259
+  - first:
+      213: -5566606431087779065
+    second: platform_animation_brokenpier_die_160x96_260
+  - first:
+      213: -1760193529215896407
+    second: platform_animation_brokenpier_die_160x96_261
+  - first:
+      213: -3546984902533533509
+    second: platform_animation_brokenpier_die_160x96_262
+  - first:
+      213: 4081675352415629348
+    second: platform_animation_brokenpier_die_160x96_263
+  - first:
+      213: -272002828354884999
+    second: platform_animation_brokenpier_die_160x96_264
+  - first:
+      213: 5426333790649792426
+    second: platform_animation_brokenpier_die_160x96_265
+  - first:
+      213: -298764466991416085
+    second: platform_animation_brokenpier_die_160x96_266
+  - first:
+      213: -1300356318882225624
+    second: platform_animation_brokenpier_die_160x96_267
+  - first:
+      213: -7884908948252309212
+    second: platform_animation_brokenpier_die_160x96_268
+  - first:
+      213: -4841776087072317770
+    second: platform_animation_brokenpier_die_160x96_269
+  - first:
+      213: 6034962450745262369
+    second: platform_animation_brokenpier_die_160x96_270
+  - first:
+      213: -7972292827373998125
+    second: platform_animation_brokenpier_die_160x96_271
+  - first:
+      213: -6472524714456940440
+    second: platform_animation_brokenpier_die_160x96_272
+  - first:
+      213: -1242471419056665914
+    second: platform_animation_brokenpier_die_160x96_273
+  - first:
+      213: -4015351532883336192
+    second: platform_animation_brokenpier_die_160x96_274
+  - first:
+      213: 73040527909137238
+    second: platform_animation_brokenpier_die_160x96_275
+  - first:
+      213: -490243777953815536
+    second: platform_animation_brokenpier_die_160x96_276
+  - first:
+      213: -3488271531261578565
+    second: platform_animation_brokenpier_die_160x96_277
+  - first:
+      213: -1314586671689883587
+    second: platform_animation_brokenpier_die_160x96_278
+  - first:
+      213: 5871870692535532972
+    second: platform_animation_brokenpier_die_160x96_279
+  - first:
+      213: -3472453873725092950
+    second: platform_animation_brokenpier_die_160x96_280
+  - first:
+      213: -8798708143145750784
+    second: platform_animation_brokenpier_die_160x96_281
+  - first:
+      213: -2804712847854310210
+    second: platform_animation_brokenpier_die_160x96_282
+  - first:
+      213: 3269627805282255728
+    second: platform_animation_brokenpier_die_160x96_283
+  - first:
+      213: 6144386000792517055
+    second: platform_animation_brokenpier_die_160x96_284
+  - first:
+      213: -4105440119265497481
+    second: platform_animation_brokenpier_die_160x96_285
+  - first:
+      213: -6576689643089898294
+    second: platform_animation_brokenpier_die_160x96_286
+  - first:
+      213: 101016320803391978
+    second: platform_animation_brokenpier_die_160x96_287
+  - first:
+      213: 9176841562459194011
+    second: platform_animation_brokenpier_die_160x96_288
+  - first:
+      213: -2387772067862840808
+    second: platform_animation_brokenpier_die_160x96_289
+  - first:
+      213: 6708386722557154714
+    second: platform_animation_brokenpier_die_160x96_290
+  - first:
+      213: -416332462108033558
+    second: platform_animation_brokenpier_die_160x96_291
+  - first:
+      213: -8284762295574539627
+    second: platform_animation_brokenpier_die_160x96_292
+  - first:
+      213: -7657954387272110705
+    second: platform_animation_brokenpier_die_160x96_293
+  - first:
+      213: -1351375154424699107
+    second: platform_animation_brokenpier_die_160x96_294
+  - first:
+      213: 2126542011148224365
+    second: platform_animation_brokenpier_die_160x96_295
+  - first:
+      213: -6321135009778093034
+    second: platform_animation_brokenpier_die_160x96_296
+  - first:
+      213: 5022546060532200235
+    second: platform_animation_brokenpier_die_160x96_297
+  - first:
+      213: -8598340936428349669
+    second: platform_animation_brokenpier_die_160x96_298
+  - first:
+      213: -4992243279435298333
+    second: platform_animation_brokenpier_die_160x96_299
+  - first:
+      213: 3721387762402862037
+    second: platform_animation_brokenpier_die_160x96_300
+  - first:
+      213: 1621417097665605680
+    second: platform_animation_brokenpier_die_160x96_301
+  - first:
+      213: -408908362640060165
+    second: platform_animation_brokenpier_die_160x96_302
+  - first:
+      213: -4765137270198435149
+    second: platform_animation_brokenpier_die_160x96_303
+  - first:
+      213: 3642733329049023916
+    second: platform_animation_brokenpier_die_160x96_304
+  - first:
+      213: 4299348548294063508
+    second: platform_animation_brokenpier_die_160x96_305
+  - first:
+      213: 3703042302855593168
+    second: platform_animation_brokenpier_die_160x96_306
+  - first:
+      213: -3750163747052048648
+    second: platform_animation_brokenpier_die_160x96_307
+  - first:
+      213: 4629181949636167123
+    second: platform_animation_brokenpier_die_160x96_308
+  - first:
+      213: 3762729531057709283
+    second: platform_animation_brokenpier_die_160x96_309
+  - first:
+      213: 3399684830919829189
+    second: platform_animation_brokenpier_die_160x96_310
+  - first:
+      213: -7753253116601325860
+    second: platform_animation_brokenpier_die_160x96_311
+  - first:
+      213: -2263141909111666088
+    second: platform_animation_brokenpier_die_160x96_312
+  - first:
+      213: 6600378058997626647
+    second: platform_animation_brokenpier_die_160x96_313
+  - first:
+      213: 8237665405408502598
+    second: platform_animation_brokenpier_die_160x96_314
+  - first:
+      213: -8790620440118399061
+    second: platform_animation_brokenpier_die_160x96_315
+  - first:
+      213: -4933041842075939593
+    second: platform_animation_brokenpier_die_160x96_316
+  - first:
+      213: -5704589752160145447
+    second: platform_animation_brokenpier_die_160x96_317
+  - first:
+      213: -1111686408721956485
+    second: platform_animation_brokenpier_die_160x96_318
+  - first:
+      213: -4639919336951498822
+    second: platform_animation_brokenpier_die_160x96_319
+  - first:
+      213: -8270253366479926437
+    second: platform_animation_brokenpier_die_160x96_320
+  - first:
+      213: 3100643433192078876
+    second: platform_animation_brokenpier_die_160x96_321
+  - first:
+      213: -3528495697569131094
+    second: platform_animation_brokenpier_die_160x96_322
+  - first:
+      213: 5179107896510237492
+    second: platform_animation_brokenpier_die_160x96_323
+  - first:
+      213: 8796500950196799262
+    second: platform_animation_brokenpier_die_160x96_324
+  - first:
+      213: -353042777783385844
+    second: platform_animation_brokenpier_die_160x96_325
+  - first:
+      213: -4868575050198959897
+    second: platform_animation_brokenpier_die_160x96_326
+  - first:
+      213: 4254928889256672261
+    second: platform_animation_brokenpier_die_160x96_327
+  - first:
+      213: 5161688556434391330
+    second: platform_animation_brokenpier_die_160x96_328
+  - first:
+      213: -111302628833190861
+    second: platform_animation_brokenpier_die_160x96_329
+  - first:
+      213: 1789185320234128039
+    second: platform_animation_brokenpier_die_160x96_330
+  - first:
+      213: 3199305486685569550
+    second: platform_animation_brokenpier_die_160x96_331
+  - first:
+      213: -2151331825834276478
+    second: platform_animation_brokenpier_die_160x96_332
+  - first:
+      213: 1520736118985108049
+    second: platform_animation_brokenpier_die_160x96_333
+  - first:
+      213: -5267910871537910490
+    second: platform_animation_brokenpier_die_160x96_334
+  - first:
+      213: -2566159357458010102
+    second: platform_animation_brokenpier_die_160x96_335
+  - first:
+      213: 2882570665964000887
+    second: platform_animation_brokenpier_die_160x96_336
+  - first:
+      213: -248746299563024052
+    second: platform_animation_brokenpier_die_160x96_337
+  - first:
+      213: -197033281151798095
+    second: platform_animation_brokenpier_die_160x96_338
+  - first:
+      213: -7394557738005089659
+    second: platform_animation_brokenpier_die_160x96_339
+  - first:
+      213: 4221695355983506433
+    second: platform_animation_brokenpier_die_160x96_340
+  - first:
+      213: 7845603121214212434
+    second: platform_animation_brokenpier_die_160x96_341
+  - first:
+      213: -4186398305442303845
+    second: platform_animation_brokenpier_die_160x96_342
+  - first:
+      213: -1027250827708952574
+    second: platform_animation_brokenpier_die_160x96_343
+  - first:
+      213: -7373175161661881637
+    second: platform_animation_brokenpier_die_160x96_344
+  - first:
+      213: 4323274692562213251
+    second: platform_animation_brokenpier_die_160x96_345
+  - first:
+      213: -8588655166994712742
+    second: platform_animation_brokenpier_die_160x96_346
+  - first:
+      213: -6617826006558970803
+    second: platform_animation_brokenpier_die_160x96_347
+  - first:
+      213: 6104938254901165609
+    second: platform_animation_brokenpier_die_160x96_348
+  - first:
+      213: 7052993536354052021
+    second: platform_animation_brokenpier_die_160x96_349
+  - first:
+      213: 2805651364977662874
+    second: platform_animation_brokenpier_die_160x96_350
+  - first:
+      213: 7665322863367410535
+    second: platform_animation_brokenpier_die_160x96_351
+  - first:
+      213: -7918585398568290024
+    second: platform_animation_brokenpier_die_160x96_352
+  - first:
+      213: -3371651650872463172
+    second: platform_animation_brokenpier_die_160x96_353
+  - first:
+      213: -8055160228284245076
+    second: platform_animation_brokenpier_die_160x96_354
+  - first:
+      213: -8281250701131315763
+    second: platform_animation_brokenpier_die_160x96_355
+  - first:
+      213: 7004509656804346276
+    second: platform_animation_brokenpier_die_160x96_356
+  - first:
+      213: -350864002454548302
+    second: platform_animation_brokenpier_die_160x96_357
+  - first:
+      213: -4436083871008259909
+    second: platform_animation_brokenpier_die_160x96_358
+  - first:
+      213: 8907370088128746637
+    second: platform_animation_brokenpier_die_160x96_359
+  - first:
+      213: 8473840945711459257
+    second: platform_animation_brokenpier_die_160x96_360
+  - first:
+      213: -1438975771086262976
+    second: platform_animation_brokenpier_die_160x96_361
+  - first:
+      213: -1478599438630479043
+    second: platform_animation_brokenpier_die_160x96_362
+  - first:
+      213: -4996030793027672307
+    second: platform_animation_brokenpier_die_160x96_363
+  - first:
+      213: -230652821621380029
+    second: platform_animation_brokenpier_die_160x96_364
+  - first:
+      213: 1060542761468873837
+    second: platform_animation_brokenpier_die_160x96_365
+  - first:
+      213: -1332511821468852603
+    second: platform_animation_brokenpier_die_160x96_366
+  - first:
+      213: -4466514611295252835
+    second: platform_animation_brokenpier_die_160x96_367
+  - first:
+      213: 1303766162460994525
+    second: platform_animation_brokenpier_die_160x96_368
+  - first:
+      213: -8335233111866138489
+    second: platform_animation_brokenpier_die_160x96_369
+  - first:
+      213: -2499285750240877422
+    second: platform_animation_brokenpier_die_160x96_370
+  - first:
+      213: -7859331296423613727
+    second: platform_animation_brokenpier_die_160x96_371
+  - first:
+      213: 6379455077021802850
+    second: platform_animation_brokenpier_die_160x96_372
+  - first:
+      213: 4469989136799553039
+    second: platform_animation_brokenpier_die_160x96_373
+  - first:
+      213: -1907958273576372943
+    second: platform_animation_brokenpier_die_160x96_374
+  - first:
+      213: 5769040411708680372
+    second: platform_animation_brokenpier_die_160x96_375
+  - first:
+      213: -2899536722044596212
+    second: platform_animation_brokenpier_die_160x96_376
+  - first:
+      213: -1476037352422199234
+    second: platform_animation_brokenpier_die_160x96_377
+  - first:
+      213: -5727834406231001442
+    second: platform_animation_brokenpier_die_160x96_378
+  - first:
+      213: -4816336127788561994
+    second: platform_animation_brokenpier_die_160x96_379
+  - first:
+      213: -6972255292678751939
+    second: platform_animation_brokenpier_die_160x96_380
+  - first:
+      213: -4958854340531555006
+    second: platform_animation_brokenpier_die_160x96_381
+  - first:
+      213: -3318536336936668498
+    second: platform_animation_brokenpier_die_160x96_382
+  - first:
+      213: 4497941016119305323
+    second: platform_animation_brokenpier_die_160x96_383
+  - first:
+      213: -7289752841830285253
+    second: platform_animation_brokenpier_die_160x96_384
+  - first:
+      213: 625231068032423978
+    second: platform_animation_brokenpier_die_160x96_385
+  - first:
+      213: -3972945629616492058
+    second: platform_animation_brokenpier_die_160x96_386
+  - first:
+      213: 2410921082215329555
+    second: platform_animation_brokenpier_die_160x96_387
+  - first:
+      213: 7428642485692615659
+    second: platform_animation_brokenpier_die_160x96_388
+  - first:
+      213: -860401636962630680
+    second: platform_animation_brokenpier_die_160x96_389
+  - first:
+      213: -7830416600298429642
+    second: platform_animation_brokenpier_die_160x96_390
+  - first:
+      213: 198123215675595573
+    second: platform_animation_brokenpier_die_160x96_391
+  - first:
+      213: -24872196752395152
+    second: platform_animation_brokenpier_die_160x96_392
+  - first:
+      213: 1326522765343255541
+    second: platform_animation_brokenpier_die_160x96_393
+  - first:
+      213: -2740446996104650763
+    second: platform_animation_brokenpier_die_160x96_394
+  - first:
+      213: 5360460908919040377
+    second: platform_animation_brokenpier_die_160x96_395
+  - first:
+      213: 352959951559866995
+    second: platform_animation_brokenpier_die_160x96_396
+  - first:
+      213: 1606032380906492043
+    second: platform_animation_brokenpier_die_160x96_397
+  - first:
+      213: 3234123262325158434
+    second: platform_animation_brokenpier_die_160x96_398
+  - first:
+      213: -4590726206713004460
+    second: platform_animation_brokenpier_die_160x96_399
+  - first:
+      213: 7479365484064178453
+    second: platform_animation_brokenpier_die_160x96_400
+  - first:
+      213: -5357795598232726643
+    second: platform_animation_brokenpier_die_160x96_401
+  - first:
+      213: -8004301114716873255
+    second: platform_animation_brokenpier_die_160x96_402
+  - first:
+      213: 9175382457931517235
+    second: platform_animation_brokenpier_die_160x96_403
+  - first:
+      213: 7551011812730348300
+    second: platform_animation_brokenpier_die_160x96_404
+  - first:
+      213: 6806801024378932979
+    second: platform_animation_brokenpier_die_160x96_405
+  - first:
+      213: 7364012571342498970
+    second: platform_animation_brokenpier_die_160x96_406
+  - first:
+      213: 7709242682938580602
+    second: platform_animation_brokenpier_die_160x96_407
+  - first:
+      213: 781797433423025926
+    second: platform_animation_brokenpier_die_160x96_408
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7311b8a388b2bb0800000000000000
+      internalID: -4959720779595827219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ac0db8773324120800000000000000
+      internalID: 2396534540254366290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4287dd1951912970800000000000000
+      internalID: 8728417364759511628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645192b10ace26960800000000000000
+      internalID: 7593892094094677318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbbb4968305938490800000000000000
+      internalID: -7745183091771786308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b53e4e8ad7a46b10800000000000000
+      internalID: 1973887093827319222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b3005a7f2b8aebd0800000000000000
+      internalID: -2600112798821252170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8d48e44e77176bf0800000000000000
+      internalID: -331270216499049076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8119477073b25d9a0800000000000000
+      internalID: -6209008995912085224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca27f195a80e3a070800000000000000
+      internalID: 8116577838257107628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97720e55b3a81d610800000000000000
+      internalID: 1644247326415398777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f712a6313daff8b0800000000000000
+      internalID: -5116180224787998732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_12
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98a0b15374403190800000000000000
+      internalID: -7984806877245429604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a214f5d65975390800000000000000
+      internalID: -7829625130178237940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3fe533b687a65110800000000000000
+      internalID: 1249370143616003900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69195019c61e2080800000000000000
+      internalID: -9210399135107573397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_16
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8693a1544ac6570800000000000000
+      internalID: 8461318416621988018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_17
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02750d0eb0745e7c0800000000000000
+      internalID: -4042746974153189600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_18
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace19883cd1dfd750800000000000000
+      internalID: 6332010344877727434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec89c8fac4488c10800000000000000
+      internalID: 2055968868442672362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_20
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f92460053d93ee0800000000000000
+      internalID: -1280760278354321552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625303ad128823800800000000000000
+      internalID: 590684180114847014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ef2277c1af730b0800000000000000
+      internalID: -5748851399150338518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8f3d14aa1374870800000000000000
+      internalID: 8666950615216421041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_24
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4dcabc237c653130800000000000000
+      internalID: 3545859523551612237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_25
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e4f5672f638f190800000000000000
+      internalID: -7928526728989815160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_26
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74dd6bf6b7a3f400800000000000000
+      internalID: 356813199836566654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_27
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc0b7ab074012920800000000000000
+      internalID: 2963654911997971710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e926f624ab8e92380800000000000000
+      internalID: -8995402894019698018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129c32af37ad31970800000000000000
+      internalID: 8724557094799526177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_30
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee73c27cd1be0d00800000000000000
+      internalID: 940884932543348449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_31
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4a055a6fb4f21d0800000000000000
+      internalID: -3373394073169648411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_32
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9c2a515209aa710800000000000000
+      internalID: 1705333897864333735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_33
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b72c0d3105f6f60800000000000000
+      internalID: 8029724706661890882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_34
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eacb54a63349b13d0800000000000000
+      internalID: -3234828958788371282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbef29db1e25efb0800000000000000
+      internalID: -4619235145655784483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_36
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe5f0e8810aced80800000000000000
+      internalID: -8220019192534966531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_37
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19e364b02481a220800000000000000
+      internalID: 2495420944540231965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_brokenpier_die_160x96_38
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a556baadb06ce4890800000000000000
+      internalID: -7471816977545468582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 735f488ddd804664aa52cc1d6746d5f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      platform_animation_brokenpier_die_160x96_0: -4959720779595827219
+      platform_animation_brokenpier_die_160x96_1: 2396534540254366290
+      platform_animation_brokenpier_die_160x96_10: 1644247326415398777
+      platform_animation_brokenpier_die_160x96_11: -5116180224787998732
+      platform_animation_brokenpier_die_160x96_12: -7984806877245429604
+      platform_animation_brokenpier_die_160x96_13: -7829625130178237940
+      platform_animation_brokenpier_die_160x96_14: 1249370143616003900
+      platform_animation_brokenpier_die_160x96_15: -9210399135107573397
+      platform_animation_brokenpier_die_160x96_16: 8461318416621988018
+      platform_animation_brokenpier_die_160x96_17: -4042746974153189600
+      platform_animation_brokenpier_die_160x96_18: 6332010344877727434
+      platform_animation_brokenpier_die_160x96_19: 2055968868442672362
+      platform_animation_brokenpier_die_160x96_2: 8728417364759511628
+      platform_animation_brokenpier_die_160x96_20: -1280760278354321552
+      platform_animation_brokenpier_die_160x96_21: 590684180114847014
+      platform_animation_brokenpier_die_160x96_22: -5748851399150338518
+      platform_animation_brokenpier_die_160x96_23: 8666950615216421041
+      platform_animation_brokenpier_die_160x96_24: 3545859523551612237
+      platform_animation_brokenpier_die_160x96_25: -7928526728989815160
+      platform_animation_brokenpier_die_160x96_26: 356813199836566654
+      platform_animation_brokenpier_die_160x96_27: 2963654911997971710
+      platform_animation_brokenpier_die_160x96_28: -8995402894019698018
+      platform_animation_brokenpier_die_160x96_29: 8724557094799526177
+      platform_animation_brokenpier_die_160x96_3: 7593892094094677318
+      platform_animation_brokenpier_die_160x96_30: 940884932543348449
+      platform_animation_brokenpier_die_160x96_31: -3373394073169648411
+      platform_animation_brokenpier_die_160x96_32: 1705333897864333735
+      platform_animation_brokenpier_die_160x96_33: 8029724706661890882
+      platform_animation_brokenpier_die_160x96_34: -3234828958788371282
+      platform_animation_brokenpier_die_160x96_35: -4619235145655784483
+      platform_animation_brokenpier_die_160x96_36: -8220019192534966531
+      platform_animation_brokenpier_die_160x96_37: 2495420944540231965
+      platform_animation_brokenpier_die_160x96_38: -7471816977545468582
+      platform_animation_brokenpier_die_160x96_4: -7745183091771786308
+      platform_animation_brokenpier_die_160x96_5: 1973887093827319222
+      platform_animation_brokenpier_die_160x96_6: -2600112798821252170
+      platform_animation_brokenpier_die_160x96_7: -331270216499049076
+      platform_animation_brokenpier_die_160x96_8: -6209008995912085224
+      platform_animation_brokenpier_die_160x96_9: 8116577838257107628
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

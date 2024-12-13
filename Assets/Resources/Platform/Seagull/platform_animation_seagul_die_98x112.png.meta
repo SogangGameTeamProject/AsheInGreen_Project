@@ -1,0 +1,742 @@
+fileFormatVersion: 2
+guid: 91710c81812e5d14e8042ccc22f148f8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5453538018014949925
+    second: platform_animation_seagul_die_98x112_0
+  - first:
+      213: -4152409434435542384
+    second: platform_animation_seagul_die_98x112_1
+  - first:
+      213: 9076500311891409474
+    second: platform_animation_seagul_die_98x112_2
+  - first:
+      213: -2149549238043065689
+    second: platform_animation_seagul_die_98x112_3
+  - first:
+      213: -553016470930332218
+    second: platform_animation_seagul_die_98x112_4
+  - first:
+      213: 3861437486334210126
+    second: platform_animation_seagul_die_98x112_5
+  - first:
+      213: -3584774957481482922
+    second: platform_animation_seagul_die_98x112_6
+  - first:
+      213: 373962680573445889
+    second: platform_animation_seagul_die_98x112_7
+  - first:
+      213: 8411853699797073572
+    second: platform_animation_seagul_die_98x112_8
+  - first:
+      213: -8519083609618447548
+    second: platform_animation_seagul_die_98x112_9
+  - first:
+      213: 8361884835247951019
+    second: platform_animation_seagul_die_98x112_10
+  - first:
+      213: -1625716629769806893
+    second: platform_animation_seagul_die_98x112_11
+  - first:
+      213: -2312825680219060242
+    second: platform_animation_seagul_die_98x112_12
+  - first:
+      213: 1555212434885890635
+    second: platform_animation_seagul_die_98x112_13
+  - first:
+      213: 539065126454317635
+    second: platform_animation_seagul_die_98x112_14
+  - first:
+      213: 7775569669537672460
+    second: platform_animation_seagul_die_98x112_15
+  - first:
+      213: 5379127146920601541
+    second: platform_animation_seagul_die_98x112_16
+  - first:
+      213: -2572177049428239315
+    second: platform_animation_seagul_die_98x112_17
+  - first:
+      213: -2599927146540331812
+    second: platform_animation_seagul_die_98x112_18
+  - first:
+      213: -5273688449246601388
+    second: platform_animation_seagul_die_98x112_19
+  - first:
+      213: -2836668888491528890
+    second: platform_animation_seagul_die_98x112_20
+  - first:
+      213: -1724550994016117085
+    second: platform_animation_seagul_die_98x112_21
+  - first:
+      213: -8556379848888843139
+    second: platform_animation_seagul_die_98x112_22
+  - first:
+      213: 8569029339538450798
+    second: platform_animation_seagul_die_98x112_23
+  - first:
+      213: -376543545564224129
+    second: platform_animation_seagul_die_98x112_24
+  - first:
+      213: 1181636413469397246
+    second: platform_animation_seagul_die_98x112_25
+  - first:
+      213: 581455186913009203
+    second: platform_animation_seagul_die_98x112_26
+  - first:
+      213: -7671353079067103300
+    second: platform_animation_seagul_die_98x112_27
+  - first:
+      213: -843786980941674675
+    second: platform_animation_seagul_die_98x112_28
+  - first:
+      213: 5915087588608129960
+    second: platform_animation_seagul_die_98x112_29
+  - first:
+      213: -1331200585936340676
+    second: platform_animation_seagul_die_98x112_30
+  - first:
+      213: 6638623488337598184
+    second: platform_animation_seagul_die_98x112_31
+  - first:
+      213: -1455897787304568552
+    second: platform_animation_seagul_die_98x112_32
+  - first:
+      213: -8128597648424913892
+    second: platform_animation_seagul_die_98x112_33
+  - first:
+      213: 5191431677442779025
+    second: platform_animation_seagul_die_98x112_34
+  - first:
+      213: 258683534668381471
+    second: platform_animation_seagul_die_98x112_35
+  - first:
+      213: 3304710778923562799
+    second: platform_animation_seagul_die_98x112_36
+  - first:
+      213: -6667896431681845329
+    second: platform_animation_seagul_die_98x112_37
+  - first:
+      213: 4562100641773313001
+    second: platform_animation_seagul_die_98x112_38
+  - first:
+      213: 8910939170401269826
+    second: platform_animation_seagul_die_98x112_39
+  - first:
+      213: 7536216769021396949
+    second: platform_animation_seagul_die_98x112_40
+  - first:
+      213: 6642061922979617342
+    second: platform_animation_seagul_die_98x112_41
+  - first:
+      213: -3943684395197040725
+    second: platform_animation_seagul_die_98x112_42
+  - first:
+      213: -5974592433257933123
+    second: platform_animation_seagul_die_98x112_43
+  - first:
+      213: 8384105222440667110
+    second: platform_animation_seagul_die_98x112_44
+  - first:
+      213: -728196229302003692
+    second: platform_animation_seagul_die_98x112_45
+  - first:
+      213: 3345110851550194221
+    second: platform_animation_seagul_die_98x112_46
+  - first:
+      213: 8647326997550804693
+    second: platform_animation_seagul_die_98x112_47
+  - first:
+      213: 3371749075026454658
+    second: platform_animation_seagul_die_98x112_48
+  - first:
+      213: -5978670135481293918
+    second: platform_animation_seagul_die_98x112_49
+  - first:
+      213: -240919817088522266
+    second: platform_animation_seagul_die_98x112_50
+  - first:
+      213: 5855326767503033832
+    second: platform_animation_seagul_die_98x112_51
+  - first:
+      213: -860328274871950166
+    second: platform_animation_seagul_die_98x112_52
+  - first:
+      213: 7278745977730690979
+    second: platform_animation_seagul_die_98x112_53
+  - first:
+      213: 4978944733319554701
+    second: platform_animation_seagul_die_98x112_54
+  - first:
+      213: -7114972655692595584
+    second: platform_animation_seagul_die_98x112_55
+  - first:
+      213: 5497202054038629148
+    second: platform_animation_seagul_die_98x112_56
+  - first:
+      213: -1015827709515791583
+    second: platform_animation_seagul_die_98x112_57
+  - first:
+      213: 8426276397723756544
+    second: platform_animation_seagul_die_98x112_58
+  - first:
+      213: -1874699257795588294
+    second: platform_animation_seagul_die_98x112_59
+  - first:
+      213: -5462203022486681084
+    second: platform_animation_seagul_die_98x112_60
+  - first:
+      213: -2233049033967762644
+    second: platform_animation_seagul_die_98x112_61
+  - first:
+      213: 2957070786168222544
+    second: platform_animation_seagul_die_98x112_62
+  - first:
+      213: -1119977725392570718
+    second: platform_animation_seagul_die_98x112_63
+  - first:
+      213: 5655923639201387264
+    second: platform_animation_seagul_die_98x112_64
+  - first:
+      213: -7520403459406545002
+    second: platform_animation_seagul_die_98x112_65
+  - first:
+      213: -3982072537210291013
+    second: platform_animation_seagul_die_98x112_66
+  - first:
+      213: -3092168194691519486
+    second: platform_animation_seagul_die_98x112_67
+  - first:
+      213: -1380626606725746370
+    second: platform_animation_seagul_die_98x112_68
+  - first:
+      213: -1278121110741609960
+    second: platform_animation_seagul_die_98x112_69
+  - first:
+      213: 6300614226453233816
+    second: platform_animation_seagul_die_98x112_70
+  - first:
+      213: 2080663441779003100
+    second: platform_animation_seagul_die_98x112_71
+  - first:
+      213: -3309457808469936182
+    second: platform_animation_seagul_die_98x112_72
+  - first:
+      213: 3503141606871087920
+    second: platform_animation_seagul_die_98x112_73
+  - first:
+      213: -949337873409546643
+    second: platform_animation_seagul_die_98x112_74
+  - first:
+      213: -2380857361382957712
+    second: platform_animation_seagul_die_98x112_75
+  - first:
+      213: 7171023370539064533
+    second: platform_animation_seagul_die_98x112_76
+  - first:
+      213: -1116620547197757595
+    second: platform_animation_seagul_die_98x112_77
+  - first:
+      213: 7211868708584881410
+    second: platform_animation_seagul_die_98x112_78
+  - first:
+      213: -1716461559990589761
+    second: platform_animation_seagul_die_98x112_79
+  - first:
+      213: -1622146047608809868
+    second: platform_animation_seagul_die_98x112_80
+  - first:
+      213: 9162976648413999031
+    second: platform_animation_seagul_die_98x112_81
+  - first:
+      213: -8790407240518432973
+    second: platform_animation_seagul_die_98x112_82
+  - first:
+      213: -3033518773194231767
+    second: platform_animation_seagul_die_98x112_83
+  - first:
+      213: -7243608810106286351
+    second: platform_animation_seagul_die_98x112_84
+  - first:
+      213: 6345289933210834061
+    second: platform_animation_seagul_die_98x112_85
+  - first:
+      213: -1257333269670611851
+    second: platform_animation_seagul_die_98x112_86
+  - first:
+      213: -4032566045323440121
+    second: platform_animation_seagul_die_98x112_87
+  - first:
+      213: 1533025747802011556
+    second: platform_animation_seagul_die_98x112_88
+  - first:
+      213: -5599557427485995346
+    second: platform_animation_seagul_die_98x112_89
+  - first:
+      213: -5200827072835685126
+    second: platform_animation_seagul_die_98x112_90
+  - first:
+      213: -3248346432981657018
+    second: platform_animation_seagul_die_98x112_91
+  - first:
+      213: -3750890461912336908
+    second: platform_animation_seagul_die_98x112_92
+  - first:
+      213: -7797898810120469680
+    second: platform_animation_seagul_die_98x112_93
+  - first:
+      213: 8424430247239622819
+    second: platform_animation_seagul_die_98x112_94
+  - first:
+      213: 8310164099544556594
+    second: platform_animation_seagul_die_98x112_95
+  - first:
+      213: 4657972412669455632
+    second: platform_animation_seagul_die_98x112_96
+  - first:
+      213: 6069167831279641113
+    second: platform_animation_seagul_die_98x112_97
+  - first:
+      213: 5616686724666555356
+    second: platform_animation_seagul_die_98x112_98
+  - first:
+      213: -8126423766679243992
+    second: platform_animation_seagul_die_98x112_99
+  - first:
+      213: -4729726350305109162
+    second: platform_animation_seagul_die_98x112_100
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5227edceeebdeab40800000000000000
+      internalID: 5453538018014949925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 336
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0922d7aae9daf56c0800000000000000
+      internalID: -4152409434435542384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 336
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a720eb1f436fd70800000000000000
+      internalID: 9076500311891409474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 336
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a24b375b544b22e0800000000000000
+      internalID: -2149549238043065689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c5e14f137a4358f0800000000000000
+      internalID: -553016470930332218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 224
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40f35f5fe4969530800000000000000
+      internalID: 3861437486334210126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_6
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 224
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655a99b4b22504ec0800000000000000
+      internalID: -3584774957481482922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_7
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 224
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10745de9315903500800000000000000
+      internalID: 373962680573445889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aeb5fe3f58ecb470800000000000000
+      internalID: 8411853699797073572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_9
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 112
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44307d4d79226c980800000000000000
+      internalID: -8519083609618447548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_10
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 112
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac0ea954f16b0470800000000000000
+      internalID: 8361884835247951019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_11
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 112
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db1021b65b4079e0800000000000000
+      internalID: -1625716629769806893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee744273c4137efd0800000000000000
+      internalID: -2312825680219060242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform_animation_seagul_die_98x112_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b42d4ab3879359510800000000000000
+      internalID: 1555212434885890635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 30342301794273a4da7f92c8982cf610
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      platform_animation_seagul_die_98x112_0: 5453538018014949925
+      platform_animation_seagul_die_98x112_1: -4152409434435542384
+      platform_animation_seagul_die_98x112_10: 8361884835247951019
+      platform_animation_seagul_die_98x112_11: -1625716629769806893
+      platform_animation_seagul_die_98x112_12: -2312825680219060242
+      platform_animation_seagul_die_98x112_13: 1555212434885890635
+      platform_animation_seagul_die_98x112_2: 9076500311891409474
+      platform_animation_seagul_die_98x112_3: -2149549238043065689
+      platform_animation_seagul_die_98x112_4: -553016470930332218
+      platform_animation_seagul_die_98x112_5: 3861437486334210126
+      platform_animation_seagul_die_98x112_6: -3584774957481482922
+      platform_animation_seagul_die_98x112_7: 373962680573445889
+      platform_animation_seagul_die_98x112_8: 8411853699797073572
+      platform_animation_seagul_die_98x112_9: -8519083609618447548
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

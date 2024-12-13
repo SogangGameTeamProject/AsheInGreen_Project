@@ -8,11 +8,14 @@ namespace AshGreen.Platform
     {
         [SerializeField]
         private float destroyDelayTime = 0.5f;
+        [SerializeField]
+        private string destroyAniParam = "IsDeath";
         private float currentTime = 0;
         
         public override void Enter(PlatformController context)
         {
             base.Enter(context);
+            context.GetComponent<Animator>().SetTrigger(destroyAniParam);
             currentTime = 0;
         }
 
