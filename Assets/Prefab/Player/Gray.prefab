@@ -14,10 +14,14 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: ba449e0da3f9d564eabec2970e5912ed, type: 2}
     - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
       propertyPath: TransitionStateInfoList.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
       propertyPath: TransitionStateInfoList.Array.data[6].Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[7].Layer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
@@ -37,6 +41,10 @@ PrefabInstance:
       value: -653670431
       objectReference: {fileID: 0}
     - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[7].TriggerNameHash
+      value: -653670431
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
       propertyPath: TransitionStateInfoList.Array.data[3].DestinationState
       value: -1600451671
       objectReference: {fileID: 0}
@@ -50,10 +58,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
       propertyPath: TransitionStateInfoList.Array.data[6].DestinationState
-      value: 1564723483
+      value: 79779155
       objectReference: {fileID: 0}
     - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
       propertyPath: TransitionStateInfoList.Array.data[6].OriginatingState
+      value: 1564723483
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[7].DestinationState
+      value: 1564723483
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[7].OriginatingState
       value: 312531433
       objectReference: {fileID: 0}
     - target: {fileID: 1605096689833728447, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}

@@ -1,4 +1,5 @@
 using AshGreen.Character.Player;
+using AshGreen.Platform;
 using System.Collections;
 using UnityEngine;
 
@@ -18,6 +19,15 @@ namespace AshGreen.Character
                 player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
                 player.GetComponent<Rigidbody2D>().gravityScale = 0;
                 player._movementController.isUnableMove = true;
+            }
+
+            //플랫폼 멈춤 설정
+            if (IsServer)
+            {
+                foreach (var platform in PlatformManager.Instance.platformList)
+                {
+                    platform.StateTransitionRpc(PlatformStateType.IDLE);
+                }
             }
         }
 

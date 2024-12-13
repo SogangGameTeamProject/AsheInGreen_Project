@@ -16,6 +16,7 @@ namespace AshGreen.Character.Skill
         public float bulletSpeed = 200f;
         public float bulletDestroyTime = 2;
         public float fireDelay = 0.05f;
+        public float lastDelay = 0.15f;
 
         public override IEnumerator Use(SkillHolder holder, float chageTime = 0)
         {
@@ -71,6 +72,14 @@ namespace AshGreen.Character.Skill
 
                 yield return new WaitForSeconds(fireDelay);
             }
+
+            //스킬 애니메이션 처리
+            if (!animationTrigger.IsNullOrEmpty())
+            {
+                holder._caster.PlayerSkillAni(animationTrigger);
+            }
+
+            yield return new WaitForSeconds(lastDelay);
 
             yield return End(holder);
         }

@@ -10,6 +10,7 @@ using Unity.VisualScripting;
 using System.Linq;
 using AshGreen.EventBus;
 using AshGreen.UI;
+using AshGreen.Platform;
 
 public class GameplayManager : NetworkSingleton<GameplayManager>
 {
@@ -334,7 +335,17 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         Debug.Log($"m_readyPlayer: {m_readyPlayer.Count}, {m_numberOfPlayerConnected}");
         //모든 플레이어 준비 완료 시 다음 스테이지 시작
         if (m_readyPlayer.Count == m_numberOfPlayerConnected)
+        {
+            if (IsServer)
+            {
+                foreach (var platform in PlatformManager.Instance.platformList)
+                {
+                    platform.StateTransitionRpc(PlatformStateType.DESTROY);
+                }
+            }
+
             LoadingSceneManager.Instance.LoadScene(SceneName.Gameplay);
+        }
     }
 
     //플레이어 준비 취소 처리 메서드
