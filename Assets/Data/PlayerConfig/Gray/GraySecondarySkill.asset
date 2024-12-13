@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uC0C1\uC2B9 \uBD80\uC2A4\uD130"
   skillType: 1
+  skillDescription: "\uACF5\uC911\uC73C\uB85C \uB0A0\uC544\uC624\uB974\uACE0 \uCCB4\uACF5\uC2DC\uAC04\uC774
+    30% \uC99D\uAC00\uD569\uB2C8\uB2E4.\v\uCCB4\uACF5\uC911\uC5D0\uB294 0.5\uCD08\uB9C8\uB2E4
+    0.2*\uACF5\uACA9\uB825\uC758 \uD53C\uD574\uB97C \uC8FC\uB294 \uBBF8\uC0AC\uC77C\uC744
+    \uBC1C\uC0AC\uD569\uB2C8\uB2E4.\v\uBBF8\uC0AC\uC77C\uC740 20%\uC758 \uD655\uB960\uB85C
+    \uBD95\uAD34 \uB514\uBC84\uD504\uB97C \uBD80\uC5EC\uD569\uB2C8\uB2E4.\v\uCCB4\uACF5\uC911\uC5D0
+    \uC2A4\uD0AC\uC744 \uB2E4\uC2DC \uC0AC\uC6A9\uD558\uBA74 \uC544\uB798\uB85C \uB3CC\uC9C4\uD569\uB2C8\uB2E4.\r"
   activeTime: 0.2
-  cooldownTime: 10
+  cooldownTime: 3
   maxChageCnt: 1
   MaxHaveEnergy: 0
   MinUseCoast: 0
@@ -35,4 +41,5 @@ MonoBehaviour:
   bulletSpeed: 200
   jumpPower: 300
   jumpUpFDelay: 0.1
+  jumpDownDelay: 0.25
   addGravity: 3

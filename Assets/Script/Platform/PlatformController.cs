@@ -72,7 +72,6 @@ namespace AshGreen.Platform
         public override void OnNetworkDespawn()
         {
             base.OnNetworkDespawn();
-
             PlatformManager.Instance.platformList.Remove(this);
         }
 

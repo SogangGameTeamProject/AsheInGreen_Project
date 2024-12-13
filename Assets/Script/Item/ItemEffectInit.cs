@@ -18,16 +18,17 @@ namespace AshGreen.Item
             if(_playerController == null)
                 _playerController = player;
             _stacks++;
-            _playerController.playerUI.AddItemUI(this);
-            Debug.Log(itemData.DescriptionTxt(_stacks));
+
+            if (itemData.itemID != 901)
+                _playerController.playerUI.AddItemUI(this);
         }
 
         // 아이템 효과 추가
         public virtual void AddEffect()
         {
             _stacks++;
-            _playerController.playerUI.UpdateItemUI(this);
-            Debug.Log(itemData.DescriptionTxt(_stacks));
+            if(itemData.itemID != 901)
+                _playerController.playerUI.UpdateItemUI(this);
         }
 
         // 아이템 효과 제거

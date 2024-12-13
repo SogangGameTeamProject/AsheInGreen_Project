@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6852757268542056238}
   - component: {fileID: 5204350167875837525}
   - component: {fileID: 2633992833459823024}
+  - component: {fileID: 2920906174927829559}
   m_Layer: 5
   m_Name: ItemUIBox
   m_TagString: Untagged
@@ -38,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6852757268542056238
 CanvasRenderer:
@@ -93,6 +94,23 @@ MonoBehaviour:
   _item: {fileID: 0}
   _itemImage: {fileID: 5204350167875837525}
   _stackTxt: {fileID: 5964228006040796708}
+  _openTooltip: {fileID: 2920906174927829559}
+--- !u!114 &2920906174927829559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72669017893851167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a92e74e3b0aeec40b686d54dc3278b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemTooltipPopup: {fileID: 1111664610105104745, guid: ccc6148fe9aef404d8530a9c5c433b62, type: 3}
+  _offset: {x: 0, y: 200}
+  itemData: {fileID: 0}
+  itemStack: 0
 --- !u!1 &7527363780622536358
 GameObject:
   m_ObjectHideFlags: 0

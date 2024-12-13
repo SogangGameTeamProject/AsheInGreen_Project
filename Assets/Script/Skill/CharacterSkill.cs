@@ -18,6 +18,7 @@ namespace AshGreen.Character.Skill
     {
         public string skillName;   // 스킬 이름
         public SkillType skillType;//스킬 타입
+        [TextArea(3, 10)]
         public string skillDescription; // 스킬 설명
         //설명을 반환하는 메소드
         public string DescriptionTxt()

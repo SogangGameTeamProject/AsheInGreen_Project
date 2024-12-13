@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uD2B9\uC774\uC810 \uD3ED\uBC1C"
   skillType: 2
+  skillDescription: "\uD3ED\uD0C4\uC744 \uBC1C\uC0AC\uD558\uC5EC 1.8*\uACF5\uACA9\uB825\uC758
+    \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\v\uB300\uC0C1\uC5D0\uAC8C \uB514\uBC84\uD504\uAC00
+    \uAC78\uB824\uC788\uB2E4\uBA74 \uC804\uACA9\uC744 \uD3ED\uBC1C\uC2DC\uCF1C 0.3*\uACF5\uACA9\uB825\uC758
+    \uCD94\uAC00\uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\v\uB2E4\uB978 \uC2A4\uD0AC\uC774
+    \uC801\uC911\uB420 \uB54C\uB9C8\uB2E4 5% \uD655\uB960\uB85C \uCFE8\uD0C0\uC784\uC774
+    \uCD08\uAE30\uD654 \uB429\uB2C8\uB2E4.\r"
   activeTime: 0.3
   cooldownTime: 10
   maxChageCnt: 1
@@ -24,7 +30,7 @@ MonoBehaviour:
   isNotCancellation: 1
   skillCancel: 0
   multipleUse: 1
-  damageCoefficient: 3
+  damageCoefficient: 1.8
   utillValue: 0.05
   utillTime: 1
   skillIcon: {fileID: -434217722, guid: a1c13794f93aeb542be407a44b32eb6c, type: 3}

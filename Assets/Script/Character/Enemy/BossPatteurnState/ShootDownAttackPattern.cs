@@ -49,6 +49,8 @@ namespace AshGreen.Character{
         [SerializeField]
         private GameObject projectileWring = null;
 
+        private Coroutine seagullCoroutine = null;
+
         public override void Enter(EnemyController controller)
         {
             base.Enter(controller);
@@ -63,13 +65,18 @@ namespace AshGreen.Character{
         public override void Exit()
         {
             base.Exit();
+            if(seagullCoroutine != null)
+            {
+                StopCoroutine(seagullCoroutine);
+                seagullCoroutine = null;
+            }
         }
 
         protected override IEnumerator ExePatteurn()
         {
             ProjectileFactory.Instance.RequestObjectSpawn(movePlatformWringPre, movePlatformWingPoint, patternStartDealy);
             //갈매기 소환 코루틴 호출
-            StartCoroutine(SpawnSeagull());
+            seagullCoroutine = StartCoroutine(SpawnSeagull());
             yield return new WaitForSeconds(patternStartDealy);
 
             //흡수공격 처리 오브젝트 활성화

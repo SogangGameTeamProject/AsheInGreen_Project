@@ -1,4 +1,5 @@
 using AshGreen.Character.Player;
+using AshGreen.UI;
 using System.Linq;
 using TMPro;
 using Unity.Netcode;
@@ -23,6 +24,9 @@ namespace AshGreen.Item
         [SerializeField]
         private TextMeshProUGUI itemPrice;//아이템 가격
 
+        [SerializeField]
+        private OpenItemTooltipPopup _openItemTooltipPopup;
+
         //아이템 데이터 설정
         public void SetItemData(ItemData itemData, PlayerController player)
         {
@@ -32,6 +36,16 @@ namespace AshGreen.Item
             itemImg.gameObject.SetActive(true);
             itemName.text = m_itemData.itemName;
             itemPrice.text = m_itemData.price.ToString();
+
+            _openItemTooltipPopup.itemData = m_itemData;//아이템 툴팁 데이터 설정
+
+            //해당 아이템 스텍 구하기
+            int itemStack = 0;
+            if (player.itemManager.itemInventory.ContainsKey(itemData.itemID))
+            {
+                itemStack = player.itemManager.itemInventory[itemData.itemID]._stacks;
+            }
+            _openItemTooltipPopup.itemStack = itemStack;//아이템 스텍 설정
         }
 
         //아이템 제작

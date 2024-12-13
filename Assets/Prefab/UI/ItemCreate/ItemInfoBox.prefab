@@ -96,6 +96,7 @@ MonoBehaviour:
   itemImg: {fileID: 5023432544463912429}
   itemName: {fileID: 1137541431858547078}
   itemPrice: {fileID: 6622539332604070127}
+  _openItemTooltipPopup: {fileID: 2575610570206553856}
 --- !u!1 &4012047777379860890
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +456,7 @@ GameObject:
   - component: {fileID: 8287886543361343909}
   - component: {fileID: 8833510438956148723}
   - component: {fileID: 3102892877554726514}
+  - component: {fileID: 2575610570206553856}
   m_Layer: 5
   m_Name: itemBtn
   m_TagString: Untagged
@@ -576,6 +578,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2575610570206553856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6964031064806473961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a92e74e3b0aeec40b686d54dc3278b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemTooltipPopup: {fileID: 1111664610105104745, guid: ccc6148fe9aef404d8530a9c5c433b62, type: 3}
+  _offset: {x: 375, y: 50}
+  itemData: {fileID: 0}
 --- !u!1 &8266827975310328674
 GameObject:
   m_ObjectHideFlags: 0

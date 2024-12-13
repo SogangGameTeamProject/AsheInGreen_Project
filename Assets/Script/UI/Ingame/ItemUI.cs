@@ -12,12 +12,17 @@ namespace AshGreen.UI
         private Image _itemImage;//아이템 이미지
         [SerializeField]
         private TextMeshProUGUI _stackTxt;//아이템 스택 텍스트
+        [SerializeField]
+        private OpenItemTooltipPopup _openTooltip;//아이템 스택 텍스트
 
         public void SetItemUI(ItemEffectInit item)
         {
             _item = item;
             _itemImage.sprite = item.itemData.icon;
             _stackTxt.text = item._stacks.ToString();
+
+            _openTooltip.itemData = item.itemData;
+            _openTooltip.itemStack = item._stacks;
         }
 
         public void UpdateStack()
