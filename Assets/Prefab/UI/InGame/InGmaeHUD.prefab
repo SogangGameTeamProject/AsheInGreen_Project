@@ -929,6 +929,7 @@ GameObject:
   - component: {fileID: 248055580953529382}
   - component: {fileID: 5726609022971554539}
   - component: {fileID: 3691305225682045503}
+  - component: {fileID: 4143000197608630512}
   m_Layer: 5
   m_Name: Leave Session
   m_TagString: Untagged
@@ -1037,13 +1038,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AshGreen.UI.BtnController, Assembly-CSharp
-        m_MethodName: OnShutdown
-        m_Mode: 1
+      - m_Target: {fileID: 4143000197608630512}
+        m_TargetAssemblyTypeName: UtillButtonController, Assembly-CSharp
+        m_MethodName: OnClickSound
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1086,6 +1087,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2145a85e000008640b8638030e7fe11d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4143000197608630512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385171970686024247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102e530a62ec40540888a7edffabcc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4252882204710090635

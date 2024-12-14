@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -51,8 +52,21 @@ namespace AshGreen.Sound
             bgmSource.Play();
         }
 
+        [Rpc(SendTo.ClientsAndHost)]
+        public void PlayBGMRpc(AudioClip bgmClip)
+        {
+            bgmSource.clip = bgmClip;
+            bgmSource.Play();
+        }
+
         // SFX 재생
         public void PlaySFX(AudioClip sfxClip)
+        {
+            sfxSource.PlayOneShot(sfxClip);
+        }
+
+        [Rpc(SendTo.ClientsAndHost)]
+        public void PlaySFXRpc(AudioClip sfxClip)
         {
             sfxSource.PlayOneShot(sfxClip);
         }

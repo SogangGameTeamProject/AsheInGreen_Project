@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2668537264
+  GlobalObjectIdHash: 2148058052
   InScenePlacedSourceGlobalObjectIdHash: 2668537264
   DeferredDespawnTick: 0
   Ownership: 1
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  stateSoundClip: {fileID: 0}
+  stateSoundClip: {fileID: 8300000, guid: 130cfa3c82a4a3241870a986c637e4c0, type: 3}
   hitTIme: 0.6
   flashCycle: 0.05
 --- !u!1 &3518912508865885275
@@ -678,6 +678,7 @@ MonoBehaviour:
   fireDelay: 1.5
   lastDeay: 1
   projectileWring: {fileID: 2778535370038897001, guid: 172a3598530d7404ab5b078bb05ae226, type: 3}
+  attactSound: {fileID: 8300000, guid: db960328ba9e1e24d8828fe8d017b309, type: 3}
 --- !u!1 &4629084896471371428
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +740,7 @@ MonoBehaviour:
   fireFirstDelay: 2
   fireLastDelay: 0.35
   projectileWring: {fileID: 2169703801096383763, guid: f39ffc0b98ad70045967075e680ad252, type: 3}
+  attactSound: {fileID: 8300000, guid: 2ab82cf48da76d84298381b1b5a95b0c, type: 3}
 --- !u!1 &5349994358136966372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,6 +1075,7 @@ MonoBehaviour:
   attackCofficient: 1
   leftFirePoint: {fileID: 4978997798616143980}
   rightFirePoint: {fileID: 4656526018296139468}
+  attactSound: {fileID: 0}
   seagullSpawnPoints:
   - {x: -12, y: 6}
   - {x: -6, y: 6}
@@ -1203,6 +1206,7 @@ MonoBehaviour:
   oriPos: {x: 0, y: 0}
   firstDealay: 0.35
   lastDealay: 1
+  attactSound: {fileID: 8300000, guid: e2820777f88156f4f89d6784f2d10872, type: 3}
   damageArea: {fileID: 2852270302727266509}
 --- !u!1001 &1024295138349154282
 PrefabInstance:

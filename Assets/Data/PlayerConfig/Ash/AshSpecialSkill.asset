@@ -32,7 +32,7 @@ MonoBehaviour:
   utillTime: 1
   skillIcon: {fileID: 255780606, guid: 6a7f203aea1788d40b09992cb567b653, type: 3}
   animationTrigger: SpecialSkill
-  skillSound: {fileID: 0}
+  skillSound: {fileID: 8300000, guid: 225bc9e0464f4c046ac47044f56e3af8, type: 3}
   buffData: {fileID: 0}
   debuffData: {fileID: 0}
   bulletUpPrefab: {fileID: 7789176575942843153, guid: 6b204e89b511cb343972a64bd5ae611e, type: 3}

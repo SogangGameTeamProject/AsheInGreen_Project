@@ -35,7 +35,9 @@ MonoBehaviour:
   utillTime: 1
   skillIcon: {fileID: -42545410, guid: a1c13794f93aeb542be407a44b32eb6c, type: 3}
   animationTrigger: SecondarySkill
-  skillSound: {fileID: 0}
+  skillSound: {fileID: 8300000, guid: 6bfb70e41507f5c438320fc99a6eee49, type: 3}
+  buffData: {fileID: 0}
+  debuffData: {fileID: 0}
   bulletPrefab: {fileID: 7789176575942843153, guid: 50532b400a0922e44b02329bbbcf4aa1, type: 3}
   fireDelay: 0.5
   bulletSpeed: 200
@@ -43,3 +45,4 @@ MonoBehaviour:
   jumpUpFDelay: 0.1
   jumpDownDelay: 0.25
   addGravity: 3
+  attackSound: {fileID: 8300000, guid: ac291e00b6fab5141a700b0e857f19fe, type: 3}

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using AshGreen.Character;
 using System.Collections.Generic;
 using AshGreen.UI;
+using AshGreen.Sound;
 
 /*
 * Singleton to control the changes on the char sprites and the flow of the scene
@@ -444,7 +445,7 @@ public class CharacterSelectionManager : NetworkSingleton<CharacterSelectionMana
             }
         }
 
-        AudioManager.Instance.PlaySoundEffect(m_confirmClip);
+        SoundManager.Instance.PlaySFXRpc(m_confirmClip);
     }
 
     [ClientRpc]

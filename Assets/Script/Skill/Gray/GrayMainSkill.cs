@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using AshGreen.DamageObj;
 using WebSocketSharp;
+using AshGreen.Sound;
 
 namespace AshGreen.Character.Skill
 {
@@ -25,6 +26,10 @@ namespace AshGreen.Character.Skill
                 casterRbody.linearVelocity = Vector2.zero;
                 casterRbody.gravityScale = 0;//중력 설정
             }
+
+            //스킬 사운드 처리
+            if (skillSound)
+                SoundManager.Instance.PlaySFXRpc(skillSound);
 
             //스킬 애니메이션 처리
             if (!animationTrigger.IsNullOrEmpty())

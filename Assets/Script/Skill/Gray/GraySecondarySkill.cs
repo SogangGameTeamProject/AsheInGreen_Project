@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using WebSocketSharp;
+using AshGreen.Sound;
 
 namespace AshGreen.Character.Skill
 {
@@ -16,6 +17,7 @@ namespace AshGreen.Character.Skill
         public float jumpUpFDelay = 0.2f;//점프 시작 딜레이
         public float jumpDownDelay = 0.25f;//점프 종료 딜레이
         public float addGravity = 2f;//중력값
+        public AudioClip attackSound;//공격 사운드
 
         public override IEnumerator Use(SkillHolder holder, float chargeTime = 0)
         {
@@ -27,6 +29,10 @@ namespace AshGreen.Character.Skill
             {
                 holder._caster.PlayerSkillAni(animationTrigger);
             }
+
+            //스킬 사운드 처리
+            if (skillSound)
+                SoundManager.Instance.PlaySFXRpc(skillSound);
 
             //보조 스킬 올라가기
             if (!holder.isReuse)
@@ -68,6 +74,8 @@ namespace AshGreen.Character.Skill
                     currentTimer+=Time.deltaTime;
                     if(currentTimer >= fireDelay)
                     {
+                        if (attackSound)
+                            SoundManager.Instance.PlaySFXRpc(attackSound);//발사 사운드
                         currentTimer = 0;
                         //보스 타겟
                         Vector2 fireDir = Vector2.zero;//발사 방향 조정

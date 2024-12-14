@@ -2,6 +2,7 @@ using UnityEngine;
 using AshGreen.Character;
 using Unity.Netcode;
 using CharacterController = AshGreen.Character.CharacterController;
+using AshGreen.Sound;
 
 namespace AshGreen.DamageObj
 {
@@ -42,9 +43,18 @@ namespace AshGreen.DamageObj
         public GameObject destroyEffect = null;
         public float lifeTime = 0.5f;
 
+        [SerializeField]
+        private AudioClip startAudio = null;
+        [SerializeField]
+        private AudioClip destroyAudio = null;
+
         public override void OnNetworkDespawn()
         {
             base.OnNetworkDespawn();
+
+
+            if (destroyAudio)
+                SoundManager.Instance.PlaySFXRpc(destroyAudio);
 
             if (isExplosion)
                 ApplyExplosionDamage();
@@ -152,12 +162,20 @@ namespace AshGreen.DamageObj
         {
             if (ApplyDamage(collision) && isDestroy)
                 DestroyObjRpc();
+
+            if(collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                DestroyObjRpc();
+            }
         }
 
         [Rpc(SendTo.ClientsAndHost)]
         public void FireRpc(NetworkObjectReference caster, AttackType dealType, float damage,
             Vector2 bulletPos, bool isTarget = false, float trackingSpeed = 0)
         {
+            if(startAudio)
+                SoundManager.Instance.PlaySFXRpc(startAudio);
+
             this.isFire = true;
             NetworkObject casterObj = null;
             caster.TryGet(out casterObj);

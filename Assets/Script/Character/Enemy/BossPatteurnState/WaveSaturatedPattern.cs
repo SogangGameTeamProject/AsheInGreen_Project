@@ -1,3 +1,4 @@
+using AshGreen.Sound;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,8 @@ namespace AshGreen.Character{
         private Transform leftFirePoint= null;
         [SerializeField]
         private Transform rightFirePoint= null;
+        [SerializeField]
+        private AudioClip attactSound = null;
 
         //플렛폼 소환 관련
         [SerializeField]
@@ -100,6 +103,9 @@ namespace AshGreen.Character{
             //갈메기 격추
             for(int i = 0; i < seagullSpawnPoints.Count/2; i++)
             {
+                if(attactSound)
+                    SoundManager.Instance.PlaySFXRpc(attactSound);
+
                 _enemy.SetTriggerAniParaRpc("IsFshoot");
                 //왼쪽 타겟 공격
                 ProjectileFactory.Instance.RequestProjectileTargetFire(_enemy, bulletPre, AttackType.Enemy, attackCofficient,

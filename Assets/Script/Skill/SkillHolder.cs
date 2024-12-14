@@ -1,4 +1,5 @@
 using AshGreen.Character.Player;
+using AshGreen.Sound;
 using NUnit.Framework;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -92,7 +93,9 @@ namespace AshGreen.Character.Skill
         {
             NowChargeCnt--;
             if (state == SkillState.Idle)
+            {
                 holderCorutine = _caster.StartCoroutine(skill.Use(this));
+            }
             else
                 state = SkillState.active;
         }

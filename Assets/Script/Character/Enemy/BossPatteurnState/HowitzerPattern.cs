@@ -1,4 +1,5 @@
 using AshGreen.Platform;
+using AshGreen.Sound;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,6 +35,8 @@ namespace AshGreen.Character{
         private float fireLastDelay = 0.35f;
         [SerializeField]
         private GameObject projectileWring = null;
+        [SerializeField]
+        private AudioClip attactSound = null;
 
         public override void Enter(EnemyController controller)
         {
@@ -71,7 +74,6 @@ namespace AshGreen.Character{
             //곡사포 발사
             for(int i = 0; i < howitzerFireNum; i++)
             {
-                Debug.Log("곡사포 발사");
                 yield return new WaitForSeconds(fireFirstDelay);
                 //랜덤 플레이어 위치와 가장 가까운 플랫폼 선택
                 Vector2 randomP = GetPlayerPos(1);
@@ -100,6 +102,9 @@ namespace AshGreen.Character{
                 //경고 표시 발사
                 for (int j = 0; j < howitzerCnt; j++)
                 {
+
+                    if (attactSound)
+                        SoundManager.Instance.PlaySFXRpc(attactSound);
                     _enemy.SetTriggerAniParaRpc("IsFshoot");
                     
                     int randomIndex = Random.Range(0, firePoints.Count - 1);

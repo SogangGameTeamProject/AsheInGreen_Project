@@ -1,6 +1,7 @@
 using AshGreen.Buff;
 using AshGreen.DamageObj;
 using AshGreen.Debuff;
+using AshGreen.Sound;
 using System;
 using System.Collections;
 using System.Collections.Generic;
