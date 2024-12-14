@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "\uC804\uD568 \uAC00\uC81C"
   iconSprite: {fileID: 0}
-  MaxHP: 100
+  MaxHP: 1000
   GrowthMaxHP: 0
   GrowthPerMaxHP: 0.5
   AttackPower: 1
