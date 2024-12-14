@@ -16,7 +16,7 @@ MonoBehaviour:
   type: 0
   itemObj: {fileID: 7021502869875470856, guid: 1497ea573f6c7d44da9040039840b3ce, type: 3}
   itemName: "\uBABB \uBC15\uD78C \uBABD\uB465\uC774"
-  description: "\uCE58\uBA85\uD0C0\uD655\uB960\uC744 10%(10%+\uC911\uCCA9\uB2F9*10%)
+  description: "\uCE58\uBA85\uD0C0\uD655\uB960\uC744 <color=#38f4b8>{baseVal[0]*100}</color>%<color=#aaaaaa>(+\uC911\uCCA9\uB2F9*{stackIncVal[0]*100}%)</color>
     \uC5BB\uC2B5\uB2C8\uB2E4."
   buffData: {fileID: 0}
   debuffData: {fileID: 0}

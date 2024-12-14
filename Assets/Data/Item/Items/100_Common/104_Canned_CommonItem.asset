@@ -16,7 +16,8 @@ MonoBehaviour:
   type: 0
   itemObj: {fileID: 7021502869875470856, guid: 8f2b796a318e8cf4889561d91171799b, type: 3}
   itemName: "\uD1B5\uC870\uB9BC"
-  description: "\uCD5C\uB300\uCCB4\uB825\uC744 1(1+\uC911\uCCA9\uB2F9*1) \uC5BB\uC2B5\uB2C8\uB2E4."
+  description: "\uCD5C\uB300\uCCB4\uB825\uC744 <color=#38f4b8>{baseVal[0]}</color><color=#aaaaaa>(+\uC911\uCCA9\uB2F9*{stackIncVal[0]})</color>
+    \uC5BB\uC2B5\uB2C8\uB2E4."
   buffData: {fileID: 0}
   debuffData: {fileID: 0}
   price: 150
