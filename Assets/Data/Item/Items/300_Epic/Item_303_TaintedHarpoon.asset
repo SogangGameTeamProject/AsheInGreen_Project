@@ -16,7 +16,8 @@ MonoBehaviour:
   type: 2
   itemObj: {fileID: 6709337981346824141, guid: 12ae09ca17cc7dc4db8803c9e140ea69, type: 3}
   itemName: "\uC624\uC5FC\uB41C \uC791\uC0B4"
-  description: "\uD2B9\uC218 \uC2A4\uD0AC \uC801\uC911 \uC2DC \uBD80\uD328 \uBD80\uC5EC"
+  description: "\uD2B9\uC218 \uC2A4\uD0AC \uC801\uC911 \uC2DC <color=\"red\">\uBD80\uD328</color>
+    \uBD80\uC5EC"
   buffData: {fileID: 0}
   debuffData: {fileID: 11400000, guid: 2df7940ce5b1c484ea2c1beef5eef932, type: 2}
   price: 150
