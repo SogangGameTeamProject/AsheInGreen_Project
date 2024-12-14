@@ -15,7 +15,7 @@ MonoBehaviour:
   buffType: 0
   buffName: "\uC544\uB4DC\uB808\uB0A0\uB9B0"
   buffIcon: {fileID: -54681391834580028, guid: 89c79107e4d52e6458fcbf217ac663e8, type: 3}
-  buffDescription: "\uC774\uB3D9\uC18D\uB3C4\uC640 \uC810\uD504\uB825\uC774 10%(10+\uC911\uCCA9\uB2F9*5%)
+  buffDescription: "\uC774\uB3D9\uC18D\uB3C4\uC640 \uC810\uD504\uB825\uC774 <color=#38f4b8>{baseVal[0]*100}</color>%<color=#aaaaaa>(+\uC911\uCCA9\uB2F9*{stackIncVal[0]*100})</color>
     \uC99D\uAC00 \uD569\uB2C8\uB2E4. \uC9C0\uC18D\uC2DC\uAC04 3\uCD08"
   durationType: 0
   duration: 3

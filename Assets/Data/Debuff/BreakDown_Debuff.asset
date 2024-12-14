@@ -15,8 +15,8 @@ MonoBehaviour:
   debuffType: 4
   debuffName: "\uBD95\uAD34"
   debuffIcon: {fileID: 503562758, guid: 0aa003b11cbaae24696192603919d892, type: 3}
-  debuffDescription: "\uC989\uC2DC {baseVal[0]}\uC758 \uACE0\uC815\uB41C \uD53C\uD574\uB97C
-    \uC90C"
+  debuffDescription: "\uC989\uC2DC <color=\"red\">{baseVal[0]}</color>\uC758 \uACE0\uC815\uB41C
+    \uD53C\uD574\uB97C \uC90C"
   durationType: 0
   duration: 5
   activationCycle: 0
