@@ -195,3 +195,5 @@ MonoBehaviour:
     m_Bits: 0
   destroyEffect: {fileID: 0}
   lifeTime: 0.5
+  startAudio: {fileID: 0}
+  destroyAudio: {fileID: 0}

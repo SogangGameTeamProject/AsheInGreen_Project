@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1708315938844623642, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 1002990721
+      value: 1917068267
       objectReference: {fileID: 0}
     - target: {fileID: 1708315938844623642, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
@@ -143,6 +143,10 @@ PrefabInstance:
     - target: {fileID: 7815973034142518900, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130216585230316321, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
+      propertyPath: isStop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9130216585230316321, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: destroyDelayTime
