@@ -1,4 +1,5 @@
 using AshGreen.Platform;
+using AshGreen.Sound;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -48,6 +49,8 @@ namespace AshGreen.Character{
         private float lastDeay = 2f;
         [SerializeField]
         private GameObject projectileWring = null;
+        [SerializeField]
+        private AudioClip attactSound = null;
 
         private Coroutine seagullCoroutine = null;
 
@@ -117,9 +120,13 @@ namespace AshGreen.Character{
                 //타겟을 못찾으면 브레이크
                 if (!isFind)
                     break;
+
                 //경고 표시 설정
                 ProjectileFactory.Instance.RequestObjectSpawn(projectileWring, target.position, 0, target);
                 yield return new WaitForSeconds(fireFirstDelay);
+
+                if (attactSound)
+                    SoundManager.Instance.PlaySFXRpc(attactSound);
 
                 //타겟 공격
                 _enemy.SetTriggerAniParaRpc("IsShooting");

@@ -1,3 +1,4 @@
+using AshGreen.Sound;
 using UnityEngine;
 
 public class UtillButtonController : MonoBehaviour
@@ -21,5 +22,11 @@ public class UtillButtonController : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
+    }
+
+    public void OnClickSound(AudioClip audioClip)
+    {
+        if(audioClip)
+            SoundManager.Instance.PlaySFXRpc(audioClip);
     }
 }

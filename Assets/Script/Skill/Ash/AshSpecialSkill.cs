@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using AshGreen.DamageObj;
 using WebSocketSharp;
+using AshGreen.Sound;
 
 namespace AshGreen.Character.Skill
 {
@@ -41,6 +42,9 @@ namespace AshGreen.Character.Skill
             //에너지 수치 만큼 총알 발싸
             for (int i = 0; i < nowEnergy; i++)
             {
+                if (skillSound)
+                    SoundManager.Instance.PlaySFXRpc(skillSound);
+
                 float damage = damageCoefficient;//데미지 설정
                 GameObject bulletPrefab = i%2 == 0 ? bulletUpPrefab : bulletDownPrefab; //총알 설정
                 //보스 타겟

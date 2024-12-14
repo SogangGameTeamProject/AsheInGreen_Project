@@ -336,6 +336,8 @@ MonoBehaviour:
     m_Bits: 64
   destroyEffect: {fileID: 3714052874210164334, guid: ccf35ea0d544bed478e2d49a630a1a20, type: 3}
   lifeTime: 0.25
+  startAudio: {fileID: 0}
+  destroyAudio: {fileID: 0}
 --- !u!50 &7443469594877686487
 Rigidbody2D:
   serializedVersion: 5

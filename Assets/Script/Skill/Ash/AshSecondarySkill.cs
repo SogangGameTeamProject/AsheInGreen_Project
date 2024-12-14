@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using WebSocketSharp;
+using AshGreen.Sound;
 
 namespace AshGreen.Character.Skill
 {
@@ -17,6 +18,10 @@ namespace AshGreen.Character.Skill
             {
                 holder._caster.PlayerSkillAni(animationTrigger);
             }
+
+            //스킬 사운드 처리
+            if (skillSound)
+                SoundManager.Instance.PlaySFXRpc(skillSound);
 
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease;//특수스킬 에너지 충전
             //스킬 시작 시 처리

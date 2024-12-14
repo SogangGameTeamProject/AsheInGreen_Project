@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 792534716
+  GlobalObjectIdHash: 3870163030
   InScenePlacedSourceGlobalObjectIdHash: 4188246512
   DeferredDespawnTick: 0
   Ownership: 1
@@ -76,11 +76,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d6f2eea1d6669c34d8a9896e027def29, type: 2}
   - {fileID: 11400000, guid: ba449e0da3f9d564eabec2970e5912ed, type: 2}
   m_charactersContainers:
-  - imageContainer: {fileID: 0}
+  - mainSkillIcon: {fileID: 0}
+    secondarySkillIcon: {fileID: 0}
+    spesialSkillIcon: {fileID: 0}
+    selectAnimator: {fileID: 0}
     nameContainer: {fileID: 0}
-    border: {fileID: 0}
-    borderReady: {fileID: 0}
-    borderClient: {fileID: 0}
     playerIcon: {fileID: 0}
     waitingText: {fileID: 0}
     backgroundCharacter: {fileID: 0}
@@ -89,11 +89,11 @@ MonoBehaviour:
     backgroundCharacterReadyImage: {fileID: 0}
     backgroundClientCharacterReady: {fileID: 0}
     backgroundClientCharacterReadyImage: {fileID: 0}
-  - imageContainer: {fileID: 0}
+  - mainSkillIcon: {fileID: 0}
+    secondarySkillIcon: {fileID: 0}
+    spesialSkillIcon: {fileID: 0}
+    selectAnimator: {fileID: 0}
     nameContainer: {fileID: 0}
-    border: {fileID: 0}
-    borderReady: {fileID: 0}
-    borderClient: {fileID: 0}
     playerIcon: {fileID: 0}
     waitingText: {fileID: 0}
     backgroundCharacter: {fileID: 0}
@@ -104,10 +104,9 @@ MonoBehaviour:
     backgroundClientCharacterReadyImage: {fileID: 0}
   m_readyButton: {fileID: 0}
   m_cancelButton: {fileID: 0}
+  sessionCode: {fileID: 0}
   m_timeToStartGame: 1
   m_nextScene: 4
-  m_clientColor: {r: 1, g: 0.8720887, b: 0, a: 0}
-  m_playerColor: {r: 0.14651251, g: 1, b: 0, a: 0}
   m_playerStates:
   - playerState: 1
     playerObject: {fileID: 0}
@@ -118,5 +117,5 @@ MonoBehaviour:
     playerName: 
     clientId: 0
   m_playerPrefab: {fileID: 6173499564743004011, guid: baa5072b3a4c9234580ee4452bc1a79b, type: 3}
-  m_confirmClip: {fileID: 0}
+  m_confirmClip: {fileID: 8300000, guid: d61f0d06f8c44d040ac73ab64d4aaec1, type: 3}
   m_cancelClip: {fileID: 0}

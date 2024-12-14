@@ -1,4 +1,5 @@
 using AshGreen.Platform;
+using AshGreen.Sound;
 using System.Collections;
 using Unity.Netcode;
 using Unity.VisualScripting;
@@ -21,6 +22,8 @@ namespace AshGreen.Character{
         private float firstDealay = 0.5f;//공격 선딜
         [SerializeField]
         private float lastDealay = 0.5f;//공격 후딜
+        [SerializeField]
+        private AudioClip attactSound = null;
 
         //근접공격
         [SerializeField]
@@ -76,8 +79,10 @@ namespace AshGreen.Character{
                     yield return null;
                 }
 
-                //타겟 공격
                 yield return new WaitForSeconds(firstDealay);
+                //타겟 공격
+                if (attactSound)
+                    SoundManager.Instance.PlaySFXRpc(attactSound);
                 _enemy.SetTriggerAniParaRpc("IsSmash");
                 yield return new WaitForSeconds(lastDealay);
             }

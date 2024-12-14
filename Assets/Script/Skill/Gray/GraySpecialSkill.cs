@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using AshGreen.DamageObj;
 using WebSocketSharp;
+using AshGreen.Sound;
 
 namespace AshGreen.Character.Skill
 {
@@ -31,6 +32,10 @@ namespace AshGreen.Character.Skill
             {
                 holder._caster.PlayerSkillAni(animationTrigger);
             }
+
+            //스킬 사운드 처리
+            if (skillSound)
+                SoundManager.Instance.PlaySFXRpc(skillSound);
 
             //총알 발사
             float damage = (damageCoefficient)
