@@ -10,7 +10,6 @@ namespace AshGreen.UI
         private void OnEnable()
         {
             clientId = NetworkManager.Singleton.LocalClientId;
-            Debug.Log("Start clientId: " + clientId);
         }
 
         public void OnShutdown()

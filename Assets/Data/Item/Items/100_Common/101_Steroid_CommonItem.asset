@@ -16,9 +16,11 @@ MonoBehaviour:
   type: 0
   itemObj: {fileID: 6709337981346824141, guid: 0440ff87f3f50694b916660d3460d7ac, type: 3}
   itemName: "\uC2A4\uD14C\uB85C\uC774\uB4DC"
-  description: "\uCD5C\uB300\uCCB4\uB825\uC774 {baseVal[0]+(stack*stackIncVal[0])}\uAC10\uC18C\uD558\uACE0,
-    \uC2A4\uD0AC\uAC00\uC18D\uC744 10(10+\uC911\uCCA9\uB2F9*5), \uCE58\uBA85\uD0C0\uD655\uB960\uC744
-    10%(10%+\uC911\uCCA9\uB2F9*5%) \uC5BB\uC2B5\uB2C8\uB2E4."
+  description: "\uCD5C\uB300\uCCB4\uB825\uC774 <color=blue>{baseVal[0]}</color><color=#808080>(+\uC911\uCCA9\uB2F9*
+    {stackIncVal[0]})</color>\uAC10\uC18C\uD558\uACE0, \uC2A4\uD0AC\uAC00\uC18D\uC744
+    <color=blue>{baseVal[1]}</color><color=#808080>(+\uC911\uCCA9\uB2F9* {stackIncVal[1]})</color>,
+    \uCE58\uBA85\uD0C0\uD655\uB960\uC744 <color=blue>{baseVal[2]*100}</color>%<color=#808080>(+\uC911\uCCA9\uB2F9*{stackIncVal[2]*100}%)</color>
+    \uC5BB\uC2B5\uB2C8\uB2E4."
   buffData: {fileID: 0}
   debuffData: {fileID: 0}
   price: 150

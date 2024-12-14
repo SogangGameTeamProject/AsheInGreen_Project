@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a1c13794f93aeb542be407a44b32eb6c
+guid: 30fdfed0cd141e549a9682ef491fdf3d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6607086935382519386
-    second: ui_grey_skillicon_28x28_0
+      213: -1020547912262865324
+    second: ui_popup_clientbutton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,67 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_grey_skillicon_28x28_0
+      name: ui_popup_clientbutton_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
-        height: 28
+        width: 101
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 93ec05134dce75a42b1ffefc6531f675
-      internalID: 211208533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui_grey_skillicon_28x28_1
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a101caaafdbbec409cf25dfd724aeb0
-      internalID: -42545410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ui_grey_skillicon_28x28_2
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 362c655a4650b084f86e669dee77aff0
-      internalID: -434217722
+      spriteID: 45e2e45b41946d1f0800000000000000
+      internalID: -1020547912262865324
       vertices: []
       indices: 
       edges: []
@@ -169,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6f382d0d15474034a96241f1b1c667c1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -179,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_grey_skillicon_28x28_0: 211208533
-      ui_grey_skillicon_28x28_1: -42545410
-      ui_grey_skillicon_28x28_2: -434217722
+      ui_popup_clientbutton_0: -1020547912262865324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

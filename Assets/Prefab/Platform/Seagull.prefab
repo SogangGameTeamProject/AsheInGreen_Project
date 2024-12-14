@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1708315938844623642, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 1002990721
+      value: 1917068267
       objectReference: {fileID: 0}
     - target: {fileID: 1708315938844623642, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7146602131469084259, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: m_Size.y
-      value: 0.72565174
+      value: 0.32559204
       objectReference: {fileID: 0}
     - target: {fileID: 7146602131469084259, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: m_Offset.x
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7146602131469084259, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.13471222
+      value: -0.06531763
       objectReference: {fileID: 0}
     - target: {fileID: 7146602131469084259, guid: 6ebd2e0ab213b624daa1472d1afd2c8e, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x

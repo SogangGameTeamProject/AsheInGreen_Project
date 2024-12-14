@@ -1517,6 +1517,13 @@ MonoBehaviour:
     TransitionIndex: 2
   - IsCrossFadeExit: 0
     Layer: 1
+    OriginatingState: 863064705
+    DestinationState: 1162320651
+    TransitionDuration: 0
+    TriggerNameHash: 1488937403
+    TransitionIndex: 1
+  - IsCrossFadeExit: 0
+    Layer: 1
     OriginatingState: 1162320651
     DestinationState: 1323900183
     TransitionDuration: 0

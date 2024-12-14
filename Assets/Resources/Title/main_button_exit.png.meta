@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: a1c13794f93aeb542be407a44b32eb6c
+guid: 9353b98fb5073364aa9be603c5d7adbb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6607086935382519386
-    second: ui_grey_skillicon_28x28_0
+      213: -7942070923768978199
+    second: main_button_exit_0
+  - first:
+      213: -4028435337550611409
+    second: main_button_exit_1
+  - first:
+      213: -7091789931278432101
+    second: main_button_exit_2
+  - first:
+      213: 3934081255424450812
+    second: main_button_exit_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,12 +109,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_grey_skillicon_28x28_0
+      name: main_button_exit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
+        width: 65
         height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -113,54 +122,76 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 93ec05134dce75a42b1ffefc6531f675
-      internalID: 211208533
+      spriteID: 9e4aacfd29818c190800000000000000
+      internalID: -7942070923768978199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui_grey_skillicon_28x28_1
+      name: main_button_exit_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 0
-        width: 28
-        height: 28
+        x: 2
+        y: 4
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5a101caaafdbbec409cf25dfd724aeb0
-      internalID: -42545410
+      spriteID: f2c3aa0776f1818c0800000000000000
+      internalID: -4028435337550611409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui_grey_skillicon_28x28_2
+      name: main_button_exit_2
       rect:
         serializedVersion: 2
-        x: 56
-        y: 0
-        width: 28
-        height: 28
+        x: 17
+        y: 4
+        width: 19
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 362c655a4650b084f86e669dee77aff0
-      internalID: -434217722
+      spriteID: b980574a1a6e49d90800000000000000
+      internalID: -7091789931278432101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_button_exit_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 4
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf0e813ee0aa89630800000000000000
+      internalID: 3934081255424450812
       vertices: []
       indices: 
       edges: []
@@ -169,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6f382d0d15474034a96241f1b1c667c1
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -179,9 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_grey_skillicon_28x28_0: 211208533
-      ui_grey_skillicon_28x28_1: -42545410
-      ui_grey_skillicon_28x28_2: -434217722
+      main_button_exit_0: -7942070923768978199
+      main_button_exit_1: -4028435337550611409
+      main_button_exit_2: -7091789931278432101
+      main_button_exit_3: 3934081255424450812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: a1c13794f93aeb542be407a44b32eb6c
+guid: f2daf3d82c0eb334d9ee1d989edbf07d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6607086935382519386
-    second: ui_grey_skillicon_28x28_0
+      213: 797490432575035627
+    second: main_button_start_0
+  - first:
+      213: 7144070734251467791
+    second: main_button_start_1
+  - first:
+      213: 3352735606469858083
+    second: main_button_start_2
+  - first:
+      213: -7942318526503396106
+    second: main_button_start_3
+  - first:
+      213: 3641672544202171192
+    second: main_button_start_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,67 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_grey_skillicon_28x28_0
+      name: main_button_start_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
-        height: 28
+        width: 80
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 93ec05134dce75a42b1ffefc6531f675
-      internalID: 211208533
+      spriteID: be85869b251411b00800000000000000
+      internalID: 797490432575035627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui_grey_skillicon_28x28_1
+      name: main_button_start_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 4
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04a25d5b76d42360800000000000000
+      internalID: 7144070734251467791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_button_start_2
       rect:
         serializedVersion: 2
         x: 28
-        y: 0
-        width: 28
-        height: 28
+        y: 4
+        width: 19
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5a101caaafdbbec409cf25dfd724aeb0
-      internalID: -42545410
+      spriteID: 3239071454f478e20800000000000000
+      internalID: 3352735606469858083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui_grey_skillicon_28x28_2
+      name: main_button_start_3
       rect:
         serializedVersion: 2
-        x: 56
-        y: 0
-        width: 28
-        height: 28
+        x: 46
+        y: 5
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 362c655a4650b084f86e669dee77aff0
-      internalID: -434217722
+      spriteID: 6fcd2ce516737c190800000000000000
+      internalID: -7942318526503396106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_button_start_4
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 4
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833a67172e1d98230800000000000000
+      internalID: 3641672544202171192
       vertices: []
       indices: 
       edges: []
@@ -169,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6f382d0d15474034a96241f1b1c667c1
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -179,9 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_grey_skillicon_28x28_0: 211208533
-      ui_grey_skillicon_28x28_1: -42545410
-      ui_grey_skillicon_28x28_2: -434217722
+      main_button_start_0: 797490432575035627
+      main_button_start_1: 7144070734251467791
+      main_button_start_2: 3352735606469858083
+      main_button_start_3: -7942318526503396106
+      main_button_start_4: 3641672544202171192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
