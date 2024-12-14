@@ -34,10 +34,12 @@ MonoBehaviour:
   skillIcon: {fileID: -5097126423132373131, guid: 6a7f203aea1788d40b09992cb567b653, type: 3}
   animationTrigger: MainSkill
   skillSound: {fileID: 0}
+  buffData: {fileID: 0}
+  debuffData: {fileID: 0}
   bulletPrefab: {fileID: 7789176575942843153, guid: 6c00f569535ff7c40a937cfce63c775d, type: 3}
   bulletSpeed: 100
   bulletDestroyTime: 2
   chargingTime: 0.5
-  maxChargingCnt: 3
+  maxChargingCnt: 2
   energyIncrease: 1
-  ChargingDamageCoefficient: 0.45
+  ChargingDamageCoefficient: 1

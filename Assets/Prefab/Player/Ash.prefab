@@ -1515,6 +1515,20 @@ MonoBehaviour:
     TransitionDuration: 0
     TriggerNameHash: -1600451671
     TransitionIndex: 2
+  - IsCrossFadeExit: 0
+    Layer: 1
+    OriginatingState: 1162320651
+    DestinationState: 1323900183
+    TransitionDuration: 0
+    TriggerNameHash: 1488937403
+    TransitionIndex: 0
+  - IsCrossFadeExit: 0
+    Layer: 1
+    OriginatingState: 1621389219
+    DestinationState: 1162320651
+    TransitionDuration: 0
+    TriggerNameHash: 1488937403
+    TransitionIndex: 1
   m_Animator: {fileID: 5141303237562480953}
 --- !u!114 &776473998259894186
 MonoBehaviour:

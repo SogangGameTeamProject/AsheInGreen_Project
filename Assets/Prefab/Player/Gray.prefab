@@ -41,6 +41,10 @@ PrefabInstance:
       value: -653670431
       objectReference: {fileID: 0}
     - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
+      propertyPath: TransitionStateInfoList.Array.data[7].TransitionIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345663172694577561, guid: 3388a76b246130744abc5eb5df39a9fe, type: 3}
       propertyPath: TransitionStateInfoList.Array.data[7].TriggerNameHash
       value: -653670431
       objectReference: {fileID: 0}

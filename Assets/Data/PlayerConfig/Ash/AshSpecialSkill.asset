@@ -27,7 +27,7 @@ MonoBehaviour:
   isNotCancellation: 1
   skillCancel: 1
   multipleUse: 0
-  damageCoefficient: 1
+  damageCoefficient: 0.5
   utillValue: 1
   utillTime: 1
   skillIcon: {fileID: 255780606, guid: 6a7f203aea1788d40b09992cb567b653, type: 3}
