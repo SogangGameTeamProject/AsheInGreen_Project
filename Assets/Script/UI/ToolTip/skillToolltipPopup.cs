@@ -61,7 +61,7 @@ namespace AshGreen.UI
                 effectIconImg.sprite = skill.buffData.buffIcon;
                 effectDurationTxt.text = skill.buffData.duration > 0 ?
                     skill.buffData.duration.ToString() : "없음";
-                effectDecoTxt.text = skill.buffData.buffDescription;
+                effectDecoTxt.text = skill.buffData.DescriptionTxt();
             }
             else if(skill.debuffData != null)
             {
@@ -69,7 +69,7 @@ namespace AshGreen.UI
                 effectIconImg.sprite = skill.debuffData.debuffIcon;
                 effectDurationTxt.text = skill.debuffData.duration > 0 ?
                     skill.debuffData.duration.ToString() : "없음";
-                effectDecoTxt.text = skill.debuffData.debuffDescription;
+                effectDecoTxt.text = skill.debuffData.DescriptionTxt();
             }
             else
             {

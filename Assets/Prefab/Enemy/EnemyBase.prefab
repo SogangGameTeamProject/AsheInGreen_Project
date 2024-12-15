@@ -410,7 +410,7 @@ MonoBehaviour:
   - {fileID: 8876423003236570222}
   - {fileID: 6016399103329859746}
   - {fileID: 7079636359096295151}
-  startPatteurnIndex: 2
+  startPatteurnIndex: 0
   startDelayTime: 3
 --- !u!114 &924884067952727375
 MonoBehaviour:
@@ -735,9 +735,9 @@ MonoBehaviour:
   attackCofficient: 1
   howitzerInterval: 2
   howitzerY: 12
-  howitzerFireNum: 2
+  howitzerFireNum: 4
   howitzerCnt: 4
-  fireFirstDelay: 2
+  fireFirstDelay: 1
   fireLastDelay: 0.35
   projectileWring: {fileID: 2169703801096383763, guid: f39ffc0b98ad70045967075e680ad252, type: 3}
   attactSound: {fileID: 8300000, guid: 2ab82cf48da76d84298381b1b5a95b0c, type: 3}

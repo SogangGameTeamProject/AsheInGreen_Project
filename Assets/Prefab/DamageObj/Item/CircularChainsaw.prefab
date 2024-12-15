@@ -188,7 +188,7 @@ MonoBehaviour:
     m_Bits: 0
   destroyEffect: {fileID: 0}
   lifeTime: 0.5
-  startAudio: {fileID: 0}
+  startAudio: {fileID: 8300000, guid: f650f67a1bcc7bb4e92831fd214eea5e, type: 3}
   destroyAudio: {fileID: 0}
 --- !u!50 &7443469594877686487
 Rigidbody2D:

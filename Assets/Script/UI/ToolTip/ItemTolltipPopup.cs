@@ -46,7 +46,7 @@ namespace AshGreen.UI
                 effectIconImg.sprite = itemData.buffData.buffIcon;
                 effectDurationTxt.text = itemData.buffData.duration > 0 ?
                     itemData.buffData.duration.ToString() : "없음";
-                effectDecoTxt.text = itemData.buffData.buffDescription;
+                effectDecoTxt.text = itemData.buffData.DescriptionTxt();
             }
             else if(itemData.debuffData != null)
             {
@@ -54,7 +54,7 @@ namespace AshGreen.UI
                 effectIconImg.sprite = itemData.debuffData.debuffIcon;
                 effectDurationTxt.text = itemData.debuffData.duration > 0 ?
                     itemData.debuffData.duration.ToString() : "없음";
-                effectDecoTxt.text = itemData.debuffData.debuffDescription;
+                effectDecoTxt.text = itemData.debuffData.DescriptionTxt();
             }
             else
             {

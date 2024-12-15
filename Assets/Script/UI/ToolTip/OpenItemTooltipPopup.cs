@@ -39,8 +39,10 @@ namespace AshGreen.UI
                 tooltip = null;
             }
 
-            tooltip = Instantiate(_itemTooltipPopup, transform.position + (Vector3)_offset, Quaternion.identity, transform.parent.parent.parent.parent);
-            
+            tooltip = Instantiate(_itemTooltipPopup, transform);
+            tooltip.transform.localPosition = _offset;
+            tooltip.transform.parent = transform.parent.parent.parent.parent.parent;
+
             //아이템 툴팁 설정
             tooltip.GetComponent<ItemTolltipPopup>().SetItemTooltip(itemData, itemStack);
         }

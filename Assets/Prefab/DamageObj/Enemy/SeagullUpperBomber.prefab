@@ -151,7 +151,7 @@ MonoBehaviour:
   UseHalfFloatPrecision: 0
   InLocalSpace: 0
   SwitchTransformSpaceWhenParented: 0
-  Interpolate: 1
+  Interpolate: 0
   SlerpPosition: 0
 --- !u!114 &7012094651723624340
 MonoBehaviour:
@@ -176,10 +176,10 @@ MonoBehaviour:
   isDestroy: 1
   isTarget: 0
   targetPos: {x: 0, y: 0}
-  trackingSpeed: 7.5
+  trackingSpeed: 10
   isParabola: 1
   isReversParabola: 0
-  height: 10
+  height: 7.5
   isExplosion: 1
   explosionRadius: 3
   targetLayer:

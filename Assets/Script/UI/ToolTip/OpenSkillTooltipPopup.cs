@@ -40,7 +40,8 @@ namespace AshGreen.UI
 
             tooltip = Instantiate(_skillTooltipPopup, transform);
             tooltip.transform.localPosition = _offset;
-            
+            tooltip.transform.parent = transform.parent.parent.parent.parent;
+
             //아이템 툴팁 설정
             tooltip.GetComponent<SkillToolltipPopup>().SetSkillTooltip(skil);
         }

@@ -1,4 +1,5 @@
 using AshGreen.Character.Player;
+using AshGreen.Sound;
 using AshGreen.UI;
 using System.Linq;
 using TMPro;
@@ -15,6 +16,9 @@ namespace AshGreen.Item
         private bool isCreate = false;//아이템 생성 여부
         [SerializeField]
         private Sprite soldOutImg = null;//아이템 판매 완료 이미지
+        
+        [SerializeField]
+        private AudioClip createSound = null;
 
         //아이템 UI
         [SerializeField]
@@ -54,6 +58,8 @@ namespace AshGreen.Item
             //아이템 제작 가능여부 제크
             if (isCreate || m_playerController.Money < m_itemData.price)
                 return;
+            if(createSound)
+                SoundManager.Instance.PlaySFX(createSound);//아이템 제작 사운드
             m_playerController.AddMoneyServerRpc(-m_itemData.price);//돈 차감
             itemImg.sprite = soldOutImg;//아이템 판매 완료 이미지로 변경
             isCreate = true;//아이템 생성 완료

@@ -30,9 +30,9 @@ namespace AshGreen.Debuff
         public string debuffName;// 디버프 이름
         public Sprite debuffIcon;// 디버프 아이콘
         [SerializeField, TextArea]
-        public string debuffDescription;// 디버프 설명
+        private string debuffDescription;// 디버프 설명
         //설명을 반환하는 메소드
-        public string DescriptionTxt(int stack)
+        public string DescriptionTxt()
         {
             string returnDeco = debuffDescription;
             FieldInfo[] fields = this.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
@@ -53,8 +53,6 @@ namespace AshGreen.Debuff
                     fieldValues[field.Name] = value?.ToString();
                 }
             }
-
-            fieldValues["stack"] = stack.ToString();
 
             // 연산식을 찾기 위한 정규식
             string operationPattern = @"{([^{}]+)}";
