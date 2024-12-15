@@ -16,7 +16,7 @@ MonoBehaviour:
   skillType: 1
   skillDescription: "\uCE90\uB9AD\uD130\uC758 \uC804\uBC29\uC73C\uB85C \uC9E7\uAC8C
     \uB3CC\uC9C4 \uD569\uB2C8\uB2E4. \uC9E7\uC740\uC2DC\uAC04 \uB3D9\uC548 \uBB34\uC801\uC774
-    \uB429\uB2C8\uB2E4. <color=#FFC000>\uC5F4\uAE30</color>\uB97C <color=#FFC000>{energyIncrease}</>
+    \uB429\uB2C8\uB2E4. <color=#FFC000>\uC5F4\uAE30</color>\uB97C <color=#FFC000>{energyIncrease}</color>
     \uCD95\uC801\uD569\uB2C8\uB2E4.\r"
   activeTime: 0.35
   cooldownTime: 1.5

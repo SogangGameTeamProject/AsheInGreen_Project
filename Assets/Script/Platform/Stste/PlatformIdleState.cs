@@ -7,7 +7,6 @@ namespace AshGreen.Platform
         public override void Enter(PlatformController context)
         {
             base.Enter(context);
-            context.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         }
 
         public override void StateUpdate()

@@ -340,6 +340,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             {
                 foreach (var platform in PlatformManager.Instance.platformList)
                 {
+                    platform.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
                     platform.StateTransitionRpc(PlatformStateType.DESTROY);
                 }
             }
