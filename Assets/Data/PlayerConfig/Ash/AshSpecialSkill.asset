@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uC5F4\uAE30 \uBC29\uCD9C"
   skillType: 2
-  skillDescription: "\uC751\uCD95\uB41C \uBAA8\uB4E0 \uC5F4\uAE30\uB97C \uBC29\uCD9C\uD558\uC5EC
-    \uC5F4\uAE30 1 \uB2F9 0.5*\uACF5\uACA9\uB825\uC758 \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\v\uC5F4\uAE30\uB294
-    \uCD5C\uB300 10 \uAE4C\uC9C0 \uCD95\uC801 \uAC00\uB2A5\uD569\uB2C8\uB2E4.\r"
+  skillDescription: "\uC751\uCD95\uB41C \uBAA8\uB4E0 <color=#FFC000>\uC5F4\uAE30</color>\uB97C
+    \uBC29\uCD9C\uD558\uC5EC <color=#FFC000>\uC5F4\uAE30 1</color> \uB2F9 <color=#FF0066>{damageCoefficient}*\uACF5\uACA9\uB825</color>\uC758
+    \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\r\n<color=#FF0066>\uC5F4\uAE30</color>\uB294
+    \uCD5C\uB300 <color=#FF0066>{maxHaveEnergy}</color> \uAE4C\uC9C0 \uCD95\uC801
+    \uAC00\uB2A5\uD569\uB2C8\uB2E4.\r"
   activeTime: 0
   cooldownTime: 0
   maxChageCnt: 1

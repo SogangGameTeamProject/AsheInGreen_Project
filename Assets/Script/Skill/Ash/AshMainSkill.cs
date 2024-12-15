@@ -18,7 +18,7 @@ namespace AshGreen.Character.Skill
         public float chargingTime = 0.3f;//차징 단계별 시간
         public int maxChargingCnt = 3;//최대 차징 횟수
         public int energyIncrease = 1; //충전 량
-        public float ChargingDamageCoefficient = 0.2f;//차징별 데미지 계수
+        public float chargingDamageCoefficient = 0.2f;//차징별 데미지 계수
 
         public override IEnumerator Charging(SkillHolder holder)
         {
@@ -57,7 +57,7 @@ namespace AshGreen.Character.Skill
             holder._caster._characterSkillManager.skillList[2].NowEnergy += energyIncrease * chargeCnt; // 특수스킬 에너지 충전
 
             //총알 발사
-            float damage = (damageCoefficient + (ChargingDamageCoefficient * chargeCnt))
+            float damage = (damageCoefficient + (chargingDamageCoefficient * chargeCnt))
                 *holder._caster.MainSkillDamageConfig;//데미지 설정
             //보스 타겟
             Vector2 fireDir = Vector2.zero;//발사 방향 조정
@@ -79,7 +79,6 @@ namespace AshGreen.Character.Skill
             }
             ProjectileFactory.Instance.RequestProjectileFire(holder._caster, bulletPrefab, AttackType.MainSkill, damage,
                 fireDir, holder._caster.firePoint.position, holder._caster.firePoint.rotation, bulletDestroyTime);
-
 
             holder._caster.OnUseMainSkillEvent();//메인스킬 사용 이벤트 호출
 
