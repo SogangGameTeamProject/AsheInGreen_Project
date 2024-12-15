@@ -1,4 +1,5 @@
 using AshGreen.Obsever;
+using AshGreen.Sound;
 using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
@@ -77,15 +78,15 @@ public class PlayerCharSelection : NetworkBehaviour
     {
         if (IsOwner && CharacterSelectionManager.Instance.GetConnectionState(m_playerId.Value) != ConnectionState.ready)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 ChangeCharacterSelection(-1);
-                AudioManager.Instance.PlaySoundEffect(_changedCharacterClip);
+                SoundManager.Instance.PlaySFX(_changedCharacterClip);
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 ChangeCharacterSelection(1);
-                AudioManager.Instance.PlaySoundEffect(_changedCharacterClip);
+                SoundManager.Instance.PlaySFX(_changedCharacterClip);
             }
         }
 

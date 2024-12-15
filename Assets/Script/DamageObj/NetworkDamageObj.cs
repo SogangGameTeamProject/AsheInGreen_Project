@@ -43,6 +43,7 @@ namespace AshGreen.DamageObj
         public GameObject destroyEffect = null;
         public float lifeTime = 0.5f;
 
+        [Header("사운드 관련")]
         [SerializeField]
         private AudioClip startAudio = null;
         [SerializeField]
@@ -60,11 +61,8 @@ namespace AshGreen.DamageObj
                 ApplyExplosionDamage();
 
             //폭발 이펙트 생성
-            if (destroyEffect)
-            {
-                GameObject effect = GameObject.Instantiate(destroyEffect, transform.position, Quaternion.identity);
-                GameObject.Destroy(effect, lifeTime);
-            }
+            if(IsServer)
+                SpawnEffectRpc(this.transform.position);
         }
 
         private void Update()
@@ -199,6 +197,16 @@ namespace AshGreen.DamageObj
                 {
                     this.GetComponent<Rigidbody2D>().linearVelocity = bulletPos;
                 }
+            }
+        }
+
+        [Rpc(SendTo.ClientsAndHost)]
+        private void SpawnEffectRpc(Vector2 pos)
+        {
+            if (destroyEffect)
+            {
+                GameObject effect = GameObject.Instantiate(destroyEffect, pos, Quaternion.identity);
+                GameObject.Destroy(effect, lifeTime);
             }
         }
     }

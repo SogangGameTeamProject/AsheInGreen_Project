@@ -75,4 +75,4 @@ MonoBehaviour:
     m_InternalValue: -1
   m_playerId:
     m_InternalValue: -1
-  _changedCharacterClip: {fileID: 0}
+  _changedCharacterClip: {fileID: 8300000, guid: 289eb994e1c5f7548a8a4a7e3865e258, type: 3}

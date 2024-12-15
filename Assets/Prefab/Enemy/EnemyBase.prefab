@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  stateSoundClip: {fileID: 0}
+  stateSoundClip: {fileID: 8300000, guid: 4aeb153951b545d45bdf56759d08a370, type: 3}
   stateAni: IsDeath
   deathEventTimer: 3.4
 --- !u!1 &2026440609202315854
@@ -708,7 +708,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 16322843298524036}
   m_Father: {fileID: 7357167355659675838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8876423003236570222
@@ -729,6 +730,8 @@ MonoBehaviour:
   moveSpeed: 100
   oriPos: {x: 0, y: 0}
   centerPos: {x: 0, y: -6.1}
+  fireHowitzerPre: {fileID: 5003110354222387133, guid: 1146db0aac92ff94da623e75c359add5, type: 3}
+  fireHowitzerPoint: {fileID: 16322843298524036}
   howitzerPre: {fileID: 5003110354222387133, guid: a778f1a846ab8b1499d0dcab40f5dced, type: 3}
   howitzerSpeed: 50
   howitzerLifeTime: 2
@@ -1151,6 +1154,37 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2df7940ce5b1c484ea2c1beef5eef932, type: 2}
   - {fileID: 11400000, guid: 4a0ae33530be31a4585a5f943079da09, type: 2}
   - {fileID: 11400000, guid: 4fba81660cd335a4980eeda872d475cb, type: 2}
+--- !u!1 &8554468607648883496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16322843298524036}
+  m_Layer: 6
+  m_Name: HowitzerFirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &16322843298524036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554468607648883496}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8556535882090308588}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9156856431767155232
 GameObject:
   m_ObjectHideFlags: 0

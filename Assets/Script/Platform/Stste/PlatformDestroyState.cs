@@ -1,3 +1,4 @@
+using AshGreen.Sound;
 using System.Linq;
 using Unity.Netcode;
 using UnityEngine;
@@ -6,6 +7,8 @@ namespace AshGreen.Platform
 {
     public class PlatformDestroyState : PlatformStateInit
     {
+        [SerializeField]
+        private AudioClip destroySound = null;
         [SerializeField]
         private bool isStop = false;
         [SerializeField]
@@ -17,6 +20,9 @@ namespace AshGreen.Platform
         public override void Enter(PlatformController context)
         {
             base.Enter(context);
+
+            if(destroySound)
+                SoundManager.Instance.PlaySFXRpc(destroySound);
 
             if(isStop)
                 context.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;

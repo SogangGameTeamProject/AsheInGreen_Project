@@ -190,8 +190,11 @@ namespace AshGreen.Character
         //점프 구현 함수
         private void OnJump(float power)
         {
-            if(!isGrounded)
+            if (!isGrounded)
+            {
                 _character.jumCnt++;
+                AniTriggerRpc("IsDoubleJump");
+            }
 
             if (rBody)
             {
@@ -200,6 +203,11 @@ namespace AshGreen.Character
             }
         }
 
+        [Rpc(SendTo.ClientsAndHost)]
+        private void AniTriggerRpc(string triggerName)
+        {
+            _networkAnimator.SetTrigger(triggerName);
+        }
 
         //다운 점프 구현 함수
         private void OnDownJump(float power)

@@ -14,6 +14,10 @@ namespace AshGreen.Character{
         [SerializeField] 
         private Vector2 centerPos;
         [SerializeField]
+        private GameObject fireHowitzerPre = null;
+        [SerializeField]
+        private Transform fireHowitzerPoint = null;
+        [SerializeField]
         private GameObject howitzerPre = null;
         [SerializeField]
         private float howitzerSpeed = 50f;
@@ -106,7 +110,12 @@ namespace AshGreen.Character{
                     if (attactSound)
                         SoundManager.Instance.PlaySFXRpc(attactSound);
                     _enemy.SetTriggerAniParaRpc("IsFshoot");
-                    
+
+                    //공격 포탄 발사
+                    ProjectileFactory.Instance.RequestWaringTargetFire(fireHowitzerPre, Vector2.up * howitzerSpeed * 2,
+                        fireHowitzerPoint.position, 2f);
+
+                    //경고 표시 발사
                     int randomIndex = Random.Range(0, firePoints.Count - 1);
                     Vector2 firePoint = firePoints[randomIndex];
                     getRandomFirePoints.Add(firePoint);
@@ -115,6 +124,7 @@ namespace AshGreen.Character{
                     ProjectileFactory.Instance.RequestWaringTargetFire(projectileWring, Vector2.down * howitzerSpeed*2,
                         firePoint, fireLastDelay*4);
                     yield return new WaitForSeconds(fireLastDelay);
+
                 }
 
                 //투사체 발사
