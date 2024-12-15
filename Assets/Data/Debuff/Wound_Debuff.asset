@@ -15,13 +15,14 @@ MonoBehaviour:
   debuffType: 3
   debuffName: "\uC0C1\uCC98"
   debuffIcon: {fileID: 1377607475, guid: 0aa003b11cbaae24696192603919d892, type: 3}
-  debuffDescription: "\uBC1B\uC740 \uD53C\uD574\uC758 20%(20%+\uC911\uCCA9\uB2F9*10%)
-    \uB97C \uCD95\uC801\uD569\uB2C8\uB2E4. \uC9C0\uC18D\uC2DC\uAC04 \uC885\uB8CC
-    \uC2DC \uCD95\uC801\uB41C \uB370\uBBF8\uC9C0\uB9CC\uD07C \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.
+  debuffDescription: "\uBC1B\uC740 \uD53C\uD574\uC758 <color=\"red\">{baseVal[0]*100}</color>%<color=#aaaaaa>(+\uC911\uCCA9\uB2F9*{stackIncVal[0]*100})</color>\uB97C
+    \uCD95\uC801\uD569\uB2C8\uB2E4. \uC9C0\uC18D\uC2DC\uAC04 \uC885\uB8CC \uC2DC
+    \uCD95\uC801\uB41C \uB370\uBBF8\uC9C0\uB9CC\uD07C \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.
     \uC9C0\uC18D\uC2DC\uAC04 5\uCD08"
   durationType: 0
   duration: 5
   activationCycle: 0
   baseVal:
   - 0.2
-  stackIncVal: []
+  stackIncVal:
+  - 0.1

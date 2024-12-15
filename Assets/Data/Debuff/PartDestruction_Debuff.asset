@@ -15,8 +15,8 @@ MonoBehaviour:
   debuffType: 2
   debuffName: "\uBD80\uC704\uD30C"
   debuffIcon: {fileID: -1242624893, guid: 0aa003b11cbaae24696192603919d892, type: 3}
-  debuffDescription: "\uBC1B\uB294 \uD53C\uD574\uAC00 20% \uC99D\uAC00\uD569\uB2C8\uB2E4.
-    \uC9C0\uC18D\uC2DC\uAC04 5\uCD08"
+  debuffDescription: "\uBC1B\uB294 \uD53C\uD574\uAC00 <color=\"red\">{baseVal[0]*100}</color>%<color=#aaaaaa>(+\uC911\uCCA9\uB2F9*{stackIncVal[0]*100})</color>
+    \uC99D\uAC00\uD569\uB2C8\uB2E4. \uC9C0\uC18D\uC2DC\uAC04 5\uCD08"
   durationType: 0
   duration: 5
   activationCycle: 0
