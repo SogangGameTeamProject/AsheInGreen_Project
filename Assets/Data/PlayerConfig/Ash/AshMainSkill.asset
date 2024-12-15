@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uD640\uB4DC \uACF5\uACA9"
   skillType: 0
-  skillDescription: "\uD0C4\uC744 \uBC1C\uC0AC\uD558\uC5EC 0.5~2.5*\uACF5\uACA9\uB825\uC758
-    \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\v\uC5F4\uAE30\uB97C 0~2 \uCD95\uC801\uD569\uB2C8\uB2E4.\v\uD640\uB4DC\uD55C
-    \uC2DC\uAC04\uC5D0 \uB530\uB77C \uD53C\uD574\uB7C9\uACFC \uC5F4\uAE30 \uCD95\uC801\uB7C9\uC774
-    \uC99D\uAC00\uD569\uB2C8\uB2E4.\r"
+  skillDescription: "\uD0C4\uC744 \uBC1C\uC0AC\uD558\uC5EC <color=#FF0066>{damageCoefficient}~{damageCoefficient+(chargingDamageCoefficient*maxChargingCnt)}*\uACF5\uACA9\uB825</color>\uC758
+    \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4.\r\n<color=#FFC000>\uC5F4\uAE30</color>\uB97C
+    <color=#FFC000>0~{maxChargingCnt*energyIncrease}</color> \uCD95\uC801\uD569\uB2C8\uB2E4.\r\n\uD640\uB4DC\uD55C
+    \uC2DC\uAC04\uC5D0 \uB530\uB77C <color=#FF0066>\uD53C\uD574\uB7C9</color>\uACFC
+    <color=#FFC000>\uC5F4\uAE30</color> \uCD95\uC801\uB7C9\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4."
   activeTime: 0.25
   cooldownTime: 0.5
   maxChageCnt: 1
@@ -42,4 +43,4 @@ MonoBehaviour:
   chargingTime: 0.5
   maxChargingCnt: 2
   energyIncrease: 1
-  ChargingDamageCoefficient: 1
+  chargingDamageCoefficient: 0.2
