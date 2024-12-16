@@ -1314,6 +1314,10 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7091752236652780375, guid: cff2e68bc6f4aa4419c8843197bc7454, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6057acc6f351a684f93354ff8bb07f5a, type: 3}
     - target: {fileID: 7896895353974854341, guid: cff2e68bc6f4aa4419c8843197bc7454, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 2112

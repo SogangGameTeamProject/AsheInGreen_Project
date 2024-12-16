@@ -2,6 +2,7 @@ using UnityEngine;
 using AshGreen.Character;
 using Unity.Netcode;
 using CharacterController = AshGreen.Character.CharacterController;
+using AshGreen.Sound;
 
 namespace AshGreen.DamageObj
 {
@@ -14,6 +15,14 @@ namespace AshGreen.DamageObj
         public bool isNockback = false;
         public float nockbackPower = 100f;
         public float nockbackTime = 0.3f;
+
+        public AudioClip clip;// 효과음
+
+        private void OnEnable()
+        {
+            if(clip)
+                SoundManager.Instance.PlaySFX(clip);
+        }
 
         protected void OnTriggerEnter2D(Collider2D collision)
         {
