@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8eaafa5272248841a58c09fd67d0e61, type: 2}
   - {fileID: 11400000, guid: 388054ee25c65af4b96344b164738f7d, type: 2}
   - {fileID: 11400000, guid: ae2e56fc2dbb89841a45f71189dc0d79, type: 2}
-  commonItemRate: 0.6
+  commonItemRate: 0.55
   rareItemList:
   - {fileID: 11400000, guid: 0b22ea52f8b4496429cc80f3f05a4947, type: 2}
   - {fileID: 11400000, guid: a1f0d5357445fe6478dd5e35cee12b64, type: 2}
@@ -27,12 +27,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 72a449ab703886747b6321f34fc2db74, type: 2}
   - {fileID: 11400000, guid: 7817f688aefcc8742ad489bf7e6b78f9, type: 2}
   - {fileID: 11400000, guid: ccf015ddc1dfbcd4898d45f9fbb4dd00, type: 2}
-  rareItemRate: 0.25
+  rareItemRate: 0.3
   epicItemList:
   - {fileID: 11400000, guid: c89c664cbfb324a47be9fabdf635b2bc, type: 2}
   - {fileID: 11400000, guid: 6e374f61754151c4cacba4d009db3c44, type: 2}
   - {fileID: 11400000, guid: 7d4026a401200b5449e77a8a2dee95a2, type: 2}
-  epicItemRate: 0.1
+  epicItemRate: 0.15
   legendaryList: []
   legendaryItemRate: 0
   otherList:

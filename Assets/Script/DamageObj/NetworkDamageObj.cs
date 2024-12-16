@@ -205,7 +205,7 @@ namespace AshGreen.DamageObj
         {
             if (destroyEffect)
             {
-                GameObject effect = GameObject.Instantiate(destroyEffect, pos, Quaternion.identity);
+                GameObject effect = GameObject.Instantiate(destroyEffect, pos, destroyEffect.transform.rotation);
                 GameObject.Destroy(effect, lifeTime);
             }
         }
