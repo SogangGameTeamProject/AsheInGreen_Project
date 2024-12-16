@@ -208,6 +208,7 @@ namespace AshGreen.Character.Player
         {
             _animator.SetLayerWeight(0, 1);
             _animator.SetLayerWeight(1, 0);
+            EndSkillAniRpc();
         }
 
         [Rpc(SendTo.ClientsAndHost)]

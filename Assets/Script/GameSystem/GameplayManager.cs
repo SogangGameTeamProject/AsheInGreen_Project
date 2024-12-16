@@ -259,6 +259,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         // For each client spawn and set UI
         foreach (var client in m_connectedClients)
         {
+            m_numberOfPlayerConnected = 0;
             //오너 캐릭터가 이미 있는지 체크
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
