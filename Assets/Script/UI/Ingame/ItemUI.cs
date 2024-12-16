@@ -22,7 +22,6 @@ namespace AshGreen.UI
             _stackTxt.text = item._stacks.ToString();
 
             _openTooltip.itemData = item.itemData;
-            _openTooltip.itemStack = item._stacks;
         }
 
         public void UpdateStack()

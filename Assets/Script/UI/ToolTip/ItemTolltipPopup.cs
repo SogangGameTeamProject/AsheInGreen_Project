@@ -33,12 +33,12 @@ namespace AshGreen.UI
         private TextMeshProUGUI effectDecoTxt;
 
 
-        public void SetItemTooltip(ItemData data, int stacks)
+        public void SetItemTooltip(ItemData data)
         {
             itemData = data;
             itemNameTxt.text = itemData.itemName;
             itemCoolTimeTxt.text = itemData.cooldownTime > 0 ? itemData.cooldownTime.ToString() : "없음";
-            itemDecoTxt.text = itemData.DescriptionTxt(stacks > 0 ? stacks : 1);
+            itemDecoTxt.text = itemData.DescriptionTxt();
 
             if(itemData.buffData != null)
             {

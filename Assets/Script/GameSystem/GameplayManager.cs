@@ -79,7 +79,6 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
 
     public void PlayerDeath(ulong clientId)
     {
-        Debug.Log("PlayerDeath");
         m_numberOfDeathPlayer++;
 
         if (m_numberOfPlayerConnected - m_numberOfDeathPlayer <= 0)

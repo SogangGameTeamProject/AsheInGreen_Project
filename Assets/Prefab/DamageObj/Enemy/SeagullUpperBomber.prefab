@@ -181,7 +181,7 @@ MonoBehaviour:
   isReversParabola: 0
   height: 7.5
   isExplosion: 1
-  explosionRadius: 3
+  explosionRadius: 5
   targetLayer:
     serializedVersion: 2
     m_Bits: 2056

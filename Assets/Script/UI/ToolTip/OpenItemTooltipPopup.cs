@@ -16,8 +16,6 @@ namespace AshGreen.UI
         //아이템 데이터
         [HideInInspector]
         public ItemData itemData;
-        [HideInInspector]
-        public int itemStack;
         //아이템 툴팁
         private GameObject tooltip = null;
 
@@ -41,10 +39,10 @@ namespace AshGreen.UI
 
             tooltip = Instantiate(_itemTooltipPopup, transform);
             tooltip.transform.localPosition = _offset;
-            tooltip.transform.parent = transform.parent.parent.parent.parent.parent;
+            tooltip.transform.parent = transform.parent.parent.parent.parent;
 
             //아이템 툴팁 설정
-            tooltip.GetComponent<ItemTolltipPopup>().SetItemTooltip(itemData, itemStack);
+            tooltip.GetComponent<ItemTolltipPopup>().SetItemTooltip(itemData);
         }
 
         public void CloseItemTooltip()

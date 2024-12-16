@@ -42,14 +42,6 @@ namespace AshGreen.Item
             itemPrice.text = m_itemData.price.ToString();
 
             _openItemTooltipPopup.itemData = m_itemData;//아이템 툴팁 데이터 설정
-
-            //해당 아이템 스텍 구하기
-            int itemStack = 0;
-            if (player.itemManager.itemInventory.ContainsKey(itemData.itemID))
-            {
-                itemStack = player.itemManager.itemInventory[itemData.itemID]._stacks;
-            }
-            _openItemTooltipPopup.itemStack = itemStack;//아이템 스텍 설정
         }
 
         //아이템 제작

@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -110,7 +110,6 @@ MonoBehaviour:
   _itemTooltipPopup: {fileID: 1111664610105104745, guid: ccc6148fe9aef404d8530a9c5c433b62, type: 3}
   _offset: {x: 0, y: 200}
   itemData: {fileID: 0}
-  itemStack: 0
 --- !u!1 &7527363780622536358
 GameObject:
   m_ObjectHideFlags: 0

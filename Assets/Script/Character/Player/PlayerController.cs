@@ -74,7 +74,7 @@ namespace AshGreen.Character.Player
         }
         
         //현재 돈 값을 수정하는 원격프로토콜 함수
-        [ServerRpc]
+        [ServerRpc(RequireOwnership = false)]
         public void AddMoneyServerRpc(int value)
         {
             m_money.Value += value;
