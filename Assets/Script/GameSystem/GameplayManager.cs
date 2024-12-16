@@ -249,6 +249,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     // for every client connected 
     public void ServerSceneInit(ulong clientId)
     {
+        m_numberOfPlayerConnected = 0;
         // Save the clients 
         m_connectedClients.Add(clientId);
 
@@ -259,7 +260,6 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
         // For each client spawn and set UI
         foreach (var client in m_connectedClients)
         {
-            m_numberOfPlayerConnected = 0;
             //오너 캐릭터가 이미 있는지 체크
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
