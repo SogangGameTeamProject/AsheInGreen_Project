@@ -234,5 +234,11 @@ namespace AshGreen.Character.Player
         {
             _gaugeObj.SetActive(active);
         }
+
+        [Rpc(SendTo.Owner)]
+        public void SetPositionRpc(Vector3 position)
+        {
+            this.transform.position = position;
+        }
     }
 }

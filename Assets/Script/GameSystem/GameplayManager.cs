@@ -249,7 +249,6 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
     // for every client connected 
     public void ServerSceneInit(ulong clientId)
     {
-        m_numberOfPlayerConnected = 0;
         // Save the clients 
         m_connectedClients.Add(clientId);
 
@@ -290,8 +289,7 @@ public class GameplayManager : NetworkSingleton<GameplayManager>
             PlayerController playerController =
                             player.GetComponent<PlayerController>();
             playerController.gameplayManager = this;
-            playerController.gameObject.transform.position = 
-                m_StartingPositions[m_numberOfPlayerConnected].position;
+            playerController.SetPositionRpc(m_StartingPositions[m_numberOfPlayerConnected].position);
             playerController.CombatStateTransitionRpc(CombatStateType.Idle);
             if(playerController.NowHP <= 0)
             {
