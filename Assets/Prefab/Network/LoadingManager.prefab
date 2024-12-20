@@ -233,4 +233,4 @@ MonoBehaviour:
   _isDontDestroy: 1
   m_loadingBackground: {fileID: 3418296095990228692}
   m_loadingStepTime: 0.01
-  m_loadingStepValue: 0.05
+  m_loadingStepValue: 0.1

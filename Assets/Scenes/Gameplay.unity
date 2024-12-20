@@ -130,6 +130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InvisibleWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2899202409861329560, guid: 060f7bd39baaa7b499565b3d5721d76e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3309262339039269575, guid: 060f7bd39baaa7b499565b3d5721d76e, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 2048
@@ -817,7 +821,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 11.25
+  orthographic size: 10.6875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2650,6 +2654,10 @@ PrefabInstance:
     - target: {fileID: 2899202409861329560, guid: 060f7bd39baaa7b499565b3d5721d76e, type: 3}
       propertyPath: m_Name
       value: InvisibleWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899202409861329560, guid: 060f7bd39baaa7b499565b3d5721d76e, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3309262339039269575, guid: 060f7bd39baaa7b499565b3d5721d76e, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
