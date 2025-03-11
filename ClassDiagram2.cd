@@ -361,21 +361,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ClientNetworkAnimator" Collapsed="true">
-    <Position X="38" Y="1.5" Width="1.5" />
+    <Position X="37.5" Y="1.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Script\Network\ClientNetworkAnimator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConnectionManager" Collapsed="true">
-    <Position X="39.75" Y="1.5" Width="1.5" />
+    <Position X="39.5" Y="1.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAgAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Assets\Script\Network\ConnectionManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DisconnectSession" Collapsed="true">
-    <Position X="38" Y="2.5" Width="1.5" />
+    <Position X="38" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Script\Network\DisconnectSession.cs</FileName>
@@ -466,7 +466,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="UtillButtonController" Collapsed="true">
-    <Position X="46.75" Y="6.5" Width="1.5" />
+    <Position X="46.75" Y="6.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAABAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Assets\Script\UI\UtillButtonController.cs</FileName>
@@ -487,7 +487,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DummyPrefabInstanceHandler" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="39.75" Y="2.5" Width="1.5" />
+    <Position X="34.75" Y="3.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAABAABAAAAABAAAAAAA=</HashCode>
       <FileName>Assets\Script\Utill\NetworkObjectPool.cs</FileName>
@@ -749,7 +749,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="AshGreen.Character.Skill.CharacterSkillManager" Collapsed="true">
-    <Position X="50.25" Y="0.5" Width="1.5" />
+    <Position X="50.25" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAUAAAAAAAAAAAAAAAAACAAAAAAAAQABCAAAAAAQAAA=</HashCode>
       <FileName>Assets\Script\Skill\CharacterSkillManager.cs</FileName>
@@ -791,7 +791,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="AshGreen.Sound.BGMPlayerController" Collapsed="true">
-    <Position X="39.75" Y="0.5" Width="1.5" />
+    <Position X="39.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Script\Sound\BGMPlayerController.cs</FileName>
@@ -870,7 +870,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="AshGreen.EventBus.GameFlowEventBus" Collapsed="true">
-    <Position X="43.25" Y="2.5" Width="1.5" />
+    <Position X="43.25" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAgACAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Assets\Script\Utill\EventBus\GameFlowEventBus.cs</FileName>

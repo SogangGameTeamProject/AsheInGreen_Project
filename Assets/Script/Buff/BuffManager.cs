@@ -1,6 +1,5 @@
 using UnityEngine;
 using Unity.Netcode;
-using AshGreen.Obsever;
 using System.Collections.Generic;
 using AshGreen.Character.Player;
 using System.Linq;
