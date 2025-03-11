@@ -1,0 +1,1070 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AshGreen.Buff.Buff" Collapsed="true">
+    <Position X="43.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAABAIAAAAAEQABAAAAAAAAADAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Buff\Buff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Buff.BuffData" Collapsed="true">
+    <Position X="3.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIgAAAAgIABAgAgAEABAACIAAAAAIBAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Buff\BuffData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Buff.BuffManager" Collapsed="true">
+    <Position X="45" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAgCAAAAAAAABACABQAAAQgAA=</HashCode>
+      <FileName>Assets\Script\Buff\BuffManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Buff.Adrenaline_Buff" Collapsed="true">
+    <Position X="0.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAACAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Buff\Buffs\Adrenaline_Buff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Buff.Concentration_Buff" Collapsed="true">
+    <Position X="2.75" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAACAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Buff\Buffs\Concentration_Buff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Buff.OverflowingPower_Buff" Collapsed="true">
+    <Position X="5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAACAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Buff\Buffs\OverflowingPower_Buff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Buff.UtteranceZ_Buff" Collapsed="true">
+    <Position X="7.25" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAACAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Buff\Buffs\UtteranceZ_Buff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.CharacterConfig" Collapsed="true">
+    <Position X="48.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgABABQAACAJgAQEAMuBAGEAAAAAAIEQAAAAACIAA=</HashCode>
+      <FileName>Assets\Script\Character\CharacterConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.CharacterController" Collapsed="true">
+    <Position X="11.5" Y="18" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCKCJCbgSgISABgTQgAqGDwCkREICEEYaSpAgIZARAI=</HashCode>
+      <FileName>Assets\Script\Character\CharacterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.DamageReceiver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="45" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAEAAAAAAQAAAAAAAAAAAAAAAAIAACAA=</HashCode>
+      <FileName>Assets\Script\Character\DamageReceiver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AshGreen.Character.ClawStrikePattern" Collapsed="true">
+    <Position X="12.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAAAAGAAAAEgAAAAAAAAEAAKAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\Enemy\BossPatteurnState\ClawStrikePattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.HowitzerPattern" Collapsed="true">
+    <Position X="14.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ghAAAAgCEAAACAAAAFAAAAgFAAAEAAAAIAACIAEAggA=</HashCode>
+      <FileName>Assets\Script\Character\Enemy\BossPatteurnState\HowitzerPattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.NullPattern" Collapsed="true">
+    <Position X="17" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAEAAAAAAAAAAAAAAEAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\Enemy\BossPatteurnState\NullPattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.ShootDownAttackPattern" Collapsed="true">
+    <Position X="19.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAABACAAACCAAAQEgEAACEAAAEAAAAYJACQIACAgA=</HashCode>
+      <FileName>Assets\Script\Character\Enemy\BossPatteurnState\ShootDownAttackPattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.WaveSaturatedPattern" Collapsed="true">
+    <Position X="21.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAAARADEAAACAEAAEAAAECEAAAEAAAAIBAAQAJAAgA=</HashCode>
+      <FileName>Assets\Script\Character\Enemy\BossPatteurnState\WaveSaturatedPattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.EnemyConfig" Collapsed="true">
+    <Position X="41.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAgAAAAImAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Character\Enemy\EnemyConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.EnemyController" Collapsed="true">
+    <Position X="12.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAICgAAACCAEABhAAAAAAAAAAQASkQAgAAIAAI=</HashCode>
+      <FileName>Assets\Script\Character\Enemy\EnemyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.EnemyPatteurnStateInit" Collapsed="true">
+    <Position X="17" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgACAAAAAAAAAEAABAAAgAAFAAAAIAAAAgACAgA=</HashCode>
+      <FileName>Assets\Script\Character\Enemy\EnemyPatteurnStateInit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AshGreen.Character.MovementController" Collapsed="true">
+    <Position X="38" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAICQBIECAAAwAAiAAARCJEKEIDAIAFIAgACI=</HashCode>
+      <FileName>Assets\Script\Character\MovementController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.CharacterStateBase" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAEAAAAAAAAAAAAAEAAAEIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\State\CharacterStateBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AshGreen.Character.BossDeathState" Collapsed="true">
+    <Position X="3.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEABAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Character\State\Combat\BossDeathState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.CombatIdleState" Collapsed="true">
+    <Position X="1" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\State\Combat\CombatIdleState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.DeathState" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAEAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\State\Combat\DeathState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.HitState" Collapsed="true">
+    <Position X="7.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAABCACAAAAAAAAAAAUAAAAIAgAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\State\Combat\HitState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.InvincibilityWhenHitState" Collapsed="true">
+    <Position X="7.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Character\State\Combat\InvincibilityWhenHitState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.PlayerDeathState" Collapsed="true">
+    <Position X="5.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEABAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Character\State\Combat\PlayerDeathState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.StopState" Collapsed="true">
+    <Position X="10" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\State\Combat\StopState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.JumpState" Collapsed="true">
+    <Position X="12.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAEAAAAIAIAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\State\Movement\JumpState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.MovementIdleState" Collapsed="true">
+    <Position X="14.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAACQAAAAAEAAAAIAIAAQAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\State\Movement\MovementIdleState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.MoveState" Collapsed="true">
+    <Position X="16.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACQACAAAEAAAAIAIAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\State\Movement\MoveState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.UnableState" Collapsed="true">
+    <Position X="19" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Character\State\Movement\UnableState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.ProjectileFactory" Collapsed="true">
+    <Position X="22.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAAAAAAAAAAQAQBAAAAAQAAAAAACAAAAEAAAAEAAhA=</HashCode>
+      <FileName>Assets\Script\Network\ProjectileFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Player.InputHandler" Collapsed="true">
+    <Position X="50.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAEAACAAABAAAAAACAEACAAAEAAAAIAAAAAAACA=</HashCode>
+      <FileName>Assets\Script\Character\Player\InputHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Player.PlayerController" Collapsed="true">
+    <Position X="10.25" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQFVAACAAAAIAAEAFAABQBIACABEAEEICEAlxoAmECo=</HashCode>
+      <FileName>Assets\Script\Character\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.DamageObj.DamageObj" Collapsed="true">
+    <Position X="43.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIAAAAAAAAAgAQAAAAAAAAAAUAAAAAiAAAAAAAADAA=</HashCode>
+      <FileName>Assets\Script\DamageObj\DamageObj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.DamageObj.NetworkDamageObj" Collapsed="true">
+    <Position X="39.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAYBAwAAAAAgwAcAQAAIoAAAAEIoAAAEAAwQQAEBBAs=</HashCode>
+      <FileName>Assets\Script\DamageObj\NetworkDamageObj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Debuff.BreakDown_Debuff" Collapsed="true">
+    <Position X="0.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAgAAAAAAAAAAYAAAACAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Debuff\Debuff\BreakDown_Debuff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Debuff.Burn_Debuff" Collapsed="true">
+    <Position X="2.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAgAAAAAAAAAAYAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Debuff\Debuff\Burn_Debuff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Debuff.Corruption_Debuff" Collapsed="true">
+    <Position X="5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAgAAAAAAAAAAYAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Debuff\Debuff\Corruption_Debuff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Debuff.PartDestruction_Debuff" Collapsed="true">
+    <Position X="7.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAgAAAAAAAAAAYAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Debuff\Debuff\PartDestruction_Debuff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Debuff.Wound_Debuff" Collapsed="true">
+    <Position X="9.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAgAAAAAAAAAAYAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Debuff\Debuff\Wound_Debuff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Debuff.Debuff" Collapsed="true">
+    <Position X="46.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABxAAAEAABAIAAIAAEAABAAAAAAAAACAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Script\Debuff\Debuff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Debuff.DebuffData" Collapsed="true">
+    <Position X="5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAQAIAQEAAgIABAwAQAAABAAAIYAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Debuff\DebuffData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Debuff.DebuffManager" Collapsed="true">
+    <Position X="48.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAEAAAAAAAAAgBgAAAAAAAAAAACAAAAABAAAI=</HashCode>
+      <FileName>Assets\Script\Debuff\DebuffManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterSelectionManager" Collapsed="true">
+    <Position X="15.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQGIBgAACQACgAAAgAAoQGgSAAAgGBIKGCAEAAQCSQ=</HashCode>
+      <FileName>Assets\Script\GameSystem\CharacterSelectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControlsManager" Collapsed="true">
+    <Position X="41.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAAAAQAACAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\GameSystem\ControlsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameplayManager" Collapsed="true">
+    <Position X="17.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAkgIAAAAYAECIQAACGEDQCAQQAAATAZYAAAgQQACAA=</HashCode>
+      <FileName>Assets\Script\GameSystem\GameplayManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadingSceneManager" Collapsed="true">
+    <Position X="5.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEAAAAAAAAgACIAAAAIAQAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Script\GameSystem\LoadingSceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerScore" Collapsed="true">
+    <Position X="46.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABiACACAAAABAAAAAAIAAQAAAAACAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Script\GameSystem\PlayerScore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoSessionLeave" Collapsed="true">
+    <Position X="38" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\Network\AutoSessionLeave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientConnection" Collapsed="true">
+    <Position X="20" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAAQAECAAAIAAAAgAAQAAAAAAAAASBgAACAAAAAA=</HashCode>
+      <FileName>Assets\Script\Network\ClientConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientNetworkAnimator" Collapsed="true">
+    <Position X="38" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Network\ClientNetworkAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConnectionManager" Collapsed="true">
+    <Position X="39.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Network\ConnectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DisconnectSession" Collapsed="true">
+    <Position X="38" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Network\DisconnectSession.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkObjectDespawner" Collapsed="true">
+    <Position X="41.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Network\NetworkObjectDespawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkObjectSpawner" Collapsed="true">
+    <Position X="45" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAABCAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Network\NetworkObjectSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkUserInfo" Collapsed="true">
+    <Position X="46.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Network\NetworkUserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoToMenu" Collapsed="true">
+    <Position X="45" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Other\GoToMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadingFadeEffect" Collapsed="true">
+    <Position X="3" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADBAAIAAACAAAAAAAAAAAgAAAAAACAAAEACAAACAAA=</HashCode>
+      <FileName>Assets\Script\Other\LoadingFadeEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSpawner" Collapsed="true">
+    <Position X="48.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Script\Other\PlayerSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManager" Collapsed="true">
+    <Position X="7.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAAAAAAAAAEAEAAAAAABACgEAFEAAABAA=</HashCode>
+      <FileName>Assets\Script\Sound\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthColor" Collapsed="true">
+    <Position X="48.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAQAAAQAABAAMAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\HealthColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyUIController" Collapsed="true">
+    <Position X="9.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAABAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\UI\Ingame\EnemyUIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerUI" Collapsed="true">
+    <Position X="50.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAACAEAAAACAAMAAAAAAAABQAAAAABAEAA=</HashCode>
+      <FileName>Assets\Script\UI\Ingame\PlayerUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuManager" Collapsed="true">
+    <Position X="50.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICQAAAECAAAAgAAAAAACAAAAIAACAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\MenuManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerCharSelection" Collapsed="true">
+    <Position X="45" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAAWAAAAQAIABAGQkAQAAEAAAYAAAAABAACAA=</HashCode>
+      <FileName>Assets\Script\UI\PlayerCharSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UtillButtonController" Collapsed="true">
+    <Position X="46.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Script\UI\UtillButtonController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OnButtonPress" Collapsed="true">
+    <Position X="38" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Utill\Components\OnButtonPress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkObjectPool" Collapsed="true">
+    <Position X="43.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAABQQAAAAAAAAAAEEgAAAAEAQAAAAAAAAAAAAAAFA=</HashCode>
+      <FileName>Assets\Script\Utill\NetworkObjectPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DummyPrefabInstanceHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="39.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAABAABAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Utill\NetworkObjectPool.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="NetworkSingleton&lt;T&gt;" Collapsed="true">
+    <Position X="18.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAABAAAAAAAAAAAAAAAASAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Utill\Singleton\NetworkSingleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Singleton&lt;T&gt;" Collapsed="true">
+    <Position X="6.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\Utill\Singleton\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.ItemData" Collapsed="true">
+    <Position X="39.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBABAAIABACAgKAAIAAAAAABAAAJAABAQQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\ItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.ItemDataList" Collapsed="true">
+    <Position X="41.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAEAAAAAAAAAAABAAIAAAAAQQAAAIAAwIA=</HashCode>
+      <FileName>Assets\Script\Item\ItemDataList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.ItemEffectInit" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAEAAAAAACAACAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\ItemEffectInit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.ItemManager" Collapsed="true">
+    <Position X="43.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAIAAAACAAAAAAAAAAAQAAAAAAABAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\Item\ItemManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.AccelerantItem" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Common\AccelerantItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.CannedItem" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Common\CannedItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.LightFeathers_Item" Collapsed="true">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Common\LightFeathers_Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.MilitaryKnifeItem" Collapsed="true">
+    <Position X="17.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Common\MilitaryKnifeItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.NailStuddedClubItem_Item" Collapsed="true">
+    <Position X="19.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Common\NailStuddedClubItem_Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.SteroidItem" Collapsed="true">
+    <Position X="22" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Common\SteroidItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.PileDriverItem" Collapsed="true">
+    <Position X="24.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAAAAAYAAAAAAAAAAACAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Epic\PileDriverItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.ReinforcedSuitItem" Collapsed="true">
+    <Position X="26.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAgAAAAACAAAAAAAIAAEAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Epic\ReinforcedSuitItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.TaintedHarpoonItem" Collapsed="true">
+    <Position X="28.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAYAAAAAAAAAAACAAIACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Epic\TaintedHarpoonItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.HealItem" Collapsed="true">
+    <Position X="31" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\HealItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.CircularChainsawItem" Collapsed="true">
+    <Position X="33.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAQYAAAAAAAAAAECAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Rare\CircularChainsawItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.ConcentrationItem" Collapsed="true">
+    <Position X="35.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAgAAAAACAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Rare\ConcentrationItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.EnergyDrinkItem" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAACAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Rare\EnergyDrinkItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.KindlingItem" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAACAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Rare\KindlingItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.LightningSignalItem" Collapsed="true">
+    <Position X="10.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAYAAAAAAAAAAACAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Rare\LightningSignalItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.ReactiveThermalBombItem" Collapsed="true">
+    <Position X="15.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAQAAAAAAAACAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\Items\Rare\ReactiveThermalBombItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.ItemBtnController" Collapsed="true">
+    <Position X="38" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAABGgEAAAAAAAAAAAAAAAAwAAAAAACAQAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\ItemCreatePopup\ItemBtnController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Item.ItemSelectManager" Collapsed="true">
+    <Position X="45" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAIABAIAAAgAAAAAAgAAAACAA=</HashCode>
+      <FileName>Assets\Script\UI\ItemCreatePopup\ItemSelectManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.RandomPositionPlayerSpawner" Collapsed="true">
+    <Position X="38" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABQAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAACEI=</HashCode>
+      <FileName>Assets\Script\Other\PositionPlayerSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Platform.PlatformController" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="43.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQQACAAAAAAAgAAAIAAQCAAAAAAAAAIiAAAAIBAAAI=</HashCode>
+      <FileName>Assets\Script\Platform\PlatformController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AshGreen.Platform.PlatformManager" Collapsed="true">
+    <Position X="12" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Platform\PlatformManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Platform.PlatformStateInit" Collapsed="true">
+    <Position X="18.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAEAAAgA=</HashCode>
+      <FileName>Assets\Script\Platform\PlatformStateInit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AshGreen.Platform.PlatformDestroyState" Collapsed="true">
+    <Position X="22.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAgAAAAAAIAAAEAACAIgAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Platform\Stste\PlatformDestroyState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Platform.PlatformHitState" Collapsed="true">
+    <Position X="15.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAACAIAAgAAAAAkA=</HashCode>
+      <FileName>Assets\Script\Platform\Stste\PlatformHitState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Platform.PlatformIdleState" Collapsed="true">
+    <Position X="17.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Platform\Stste\PlatformIdleState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Platform.PlatformMoveState" Collapsed="true">
+    <Position X="20" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAIABAAAAAAEAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Platform\Stste\PlatformMoveState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.AshMainSkill" Collapsed="true">
+    <Position X="0.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAABAAAAQAABAAAAAAACAAAAEIAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Skill\Ash\AshMainSkill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.AshSecondarySkill" Collapsed="true">
+    <Position X="3" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\Skill\Ash\AshSecondarySkill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.AshSpecialSkill" Collapsed="true">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAABCAAAAAABAAAAAQAAAQAAEAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Skill\Ash\AshSpecialSkill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.CharacterSkill" Collapsed="true">
+    <Position X="6.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JLIAACBAAAIBiKgAIBAAAEAgACAEAADEAAAAADAAAAA=</HashCode>
+      <FileName>Assets\Script\Skill\CharacterSkill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.CharacterSkillManager" Collapsed="true">
+    <Position X="50.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAAAAAAAAAAAACAAAAAAAAQABCAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Script\Skill\CharacterSkillManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.GrayMainSkill" Collapsed="true">
+    <Position X="7.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAABAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Skill\Gray\GrayMainSkill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.GrayPassiveSkill" Collapsed="true">
+    <Position X="46.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAgACAAAEAAAAAAACAAAABAAAAI=</HashCode>
+      <FileName>Assets\Script\Skill\Gray\GrayPassiveSkill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.GraySecondarySkill" Collapsed="true">
+    <Position X="9.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAAICAAAACABAAAAAAABAAAAEAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Skill\Gray\GraySecondarySkill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.GraySpecialSkill" Collapsed="true">
+    <Position X="12" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAABAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Skill\Gray\GraySpecialSkill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Character.Skill.SkillHolder" Collapsed="true">
+    <Position X="39.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAwAgBAAAAAAAAAAAAgAAAAAAQBEAAEOIEAAAAAgAAA=</HashCode>
+      <FileName>Assets\Script\Skill\SkillHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Sound.BGMPlayerController" Collapsed="true">
+    <Position X="39.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Sound\BGMPlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Sound.SoundManager" Collapsed="true">
+    <Position X="0.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAKAAAAAAAAEAIgAAUAAAAAAIAAIAQAAAAAA=</HashCode>
+      <FileName>Assets\Script\Sound\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Sound.tmp" Collapsed="true">
+    <Position X="45" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAACCCAAAAACAAAAAgAAAAAAAAAAAAQAAAACACA=</HashCode>
+      <FileName>Assets\Script\Sound\tmp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.UI.BtnController" Collapsed="true">
+    <Position X="41.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\UI\BtnController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.UI.BuffTimer" Collapsed="true">
+    <Position X="46.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAACAAAAAAAAAAgAAAAAAAAAAACAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\Ingame\BuffTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.UI.DebuffTimer" Collapsed="true">
+    <Position X="50.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQRAAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAABAAAA=</HashCode>
+      <FileName>Assets\Script\UI\Ingame\DebuffTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.UI.ItemUI" Collapsed="true">
+    <Position X="48.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAEICAAAAARAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\Ingame\ItemUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.UI.ItemTolltipPopup" Collapsed="true">
+    <Position X="46.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABAAAAAAAAAAAIAQAAAAAQAAAABAAACAQAACAAAgAA=</HashCode>
+      <FileName>Assets\Script\UI\ToolTip\ItemTolltipPopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.UI.OpenItemTooltipPopup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="39.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAACIAAAAAAAAAAgAAACCAAAAQAAACA=</HashCode>
+      <FileName>Assets\Script\UI\ToolTip\OpenItemTooltipPopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AshGreen.UI.OpenSkillTooltipPopup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="41.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAIAAAAAAAAAAgAAAACQAAAQIAACA=</HashCode>
+      <FileName>Assets\Script\UI\ToolTip\OpenSkillTooltipPopup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AshGreen.UI.SkillToolltipPopup" Collapsed="true">
+    <Position X="41.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAABEAAAAEAQIAAAAAAAQAAAAAAIAAAAAACAAAgAA=</HashCode>
+      <FileName>Assets\Script\UI\ToolTip\skillToolltipPopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.EventBus.GameFlowEventBus" Collapsed="true">
+    <Position X="43.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAgACAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Utill\EventBus\GameFlowEventBus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.ObjectPool.ObjectPool&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="48.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAABAAAAAAAAQAAAAAAAAAAAAEBAAAAA=</HashCode>
+      <FileName>Assets\Script\Utill\ObjectPool\ObjectPool.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AshGreen.Obsever.Observer" Collapsed="true">
+    <Position X="50.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Utill\Observer\Observer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.Obsever.Subject" Collapsed="true">
+    <Position X="11.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAQgAAA=</HashCode>
+      <FileName>Assets\Script\Utill\Observer\Subject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AshGreen.State.StateContext&lt;T&gt;" Collapsed="true">
+    <Position X="43.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABQAAAAAAACAAAAAAAABAAAAAAAAAAiA=</HashCode>
+      <FileName>Assets\Script\Utill\State\StateContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="PlayerConnectionState" Collapsed="true">
+    <Position X="39.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAEAAAAAAAAAAAAAkAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\GameSystem\CharacterSelectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CharacterContainer" Collapsed="true">
+    <Position X="38" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAEAAEAgQAAAAAgAFAAAAAAASAABAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Script\GameSystem\CharacterSelectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PoolConfigObject" Collapsed="true">
+    <Position X="41.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Utill\NetworkObjectPool.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="AshGreen.Character.IDamageable" Collapsed="true">
+    <Position X="38" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Script\Character\IDamageable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AshGreen.ObjectPool.IObjectPool&lt;T&gt;" Collapsed="true">
+    <Position X="39.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\Script\Utill\ObjectPool\IObjectPool.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AshGreen.State.IState&lt;T&gt;" Collapsed="true">
+    <Position X="41.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Script\Utill\State\IState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="AshGreen.Buff.BuffType" Collapsed="true">
+    <Position X="41.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAACAAQAAIAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Script\Buff\BuffData.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Buff.BuffDurationType" Collapsed="true">
+    <Position X="39.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Buff\BuffData.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Character.CharacterDirection" Collapsed="true">
+    <Position X="45" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Character\CharacterController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Character.CombatStateType" Collapsed="true">
+    <Position X="46.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAIAAAAAAAAAAAAgIAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Character\CharacterController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Character.AttackType" Collapsed="true">
+    <Position X="38" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAgAAAIAAAEAAAAAAAAAEAAAAAAAAAAAAAAEABAA=</HashCode>
+      <FileName>Assets\Script\Character\IDamageable.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Character.MovementStateType" Collapsed="true">
+    <Position X="43.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAoAAAAAAAAgAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Character\MovementController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Debuff.DebuffType" Collapsed="true">
+    <Position X="38" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAECAAAAAEAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Debuff\DebuffData.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Debuff.DebuffDurationType" Collapsed="true">
+    <Position X="50.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Debuff\DebuffData.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ConnectionState" Collapsed="true">
+    <Position X="48.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAQAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\GameSystem\CharacterSelectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SceneName" Collapsed="true">
+    <Position X="46.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAIAAgAgAAgAgIAAAA=</HashCode>
+      <FileName>Assets\Script\GameSystem\LoadingSceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ButtonActions" Collapsed="true">
+    <Position X="43.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Utill\Components\OnButtonPress.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Item.ItemType" Collapsed="true">
+    <Position X="41.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAAAAAAAAAAAAAQAAAAAAAQAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\ItemData.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.SpawnMethod" Collapsed="true">
+    <Position X="38" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Other\PositionPlayerSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Platform.PlatformStateType" Collapsed="true">
+    <Position X="45" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAgIA=</HashCode>
+      <FileName>Assets\Script\Platform\PlatformController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Character.Skill.SkillType" Collapsed="true">
+    <Position X="48.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAABBA=</HashCode>
+      <FileName>Assets\Script\Skill\CharacterSkill.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.Sound.Sound" Collapsed="true">
+    <Position X="50.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAgAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Sound\Sound.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AshGreen.EventBus.GameFlowType" Collapsed="true">
+    <Position X="39.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAABEAAAA=</HashCode>
+      <FileName>Assets\Script\Utill\EventBus\GameFlowEventBus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
